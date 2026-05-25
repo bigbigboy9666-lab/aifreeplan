@@ -1,0 +1,19 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const title = '404 | AIFreePlan';
+const description = 'Page not found';
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  locale="en"
+  canonical="https://aifreeplan.com/404"
+>
+  <div style="text-align:center;padding:80px 20px;">
+    <h1>404</h1>
+    <p>Page not found</p>
+    <a href="/en" style="color:var(--accent);">← Back to home</a>
+  </div>
+</BaseLayout>

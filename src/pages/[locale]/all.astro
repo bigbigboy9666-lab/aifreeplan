@@ -1,0 +1,66 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ToolCard from '@/components/ToolCard.astro';
+import GuideCard from '@/components/GuideCard.astro';
+import { CATEGORIES } from '@/utils/categories';
+
+export async function getStaticPaths() {
+  return [
+    { params: { locale: 'zh' } },
+    { params: { locale: 'en' } },
+  ];
+}
+
+const { locale } = Astro.params;
+const isZh = locale === 'zh';
+
+const tools = await getCollection('tools');
+const guides = await getCollection('guides');
+
+const title = isZh ? 'AI工具免费额度大全 | AIFreePlan' : 'All AI Tools Free Tier | AIFreePlan';
+const description = isZh
+  ? `${tools.length}个AI工具 + ${guides.length}篇攻略，一站式查看所有免费额度`
+  : `${tools.length} AI tools + ${guides.length} guides — all free tiers in one place`;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  locale={locale}
+  canonical={`https://aifreeplan.com/${locale}/all`}
+  currentPath={`/${locale}/all`}
+>
+  <header class="guide-header">
+    <h1>{isZh ? '🔍 AI工具免费额度大全' : '🔍 All AI Tools Free Tier'}</h1>
+    <div class="hub-stats">
+      <span>{tools.length} {isZh ? '个工具' : 'tools'}</span>
+      <span>·</span>
+      <span>{guides.length} {isZh ? '篇攻略' : 'guides'}</span>
+    </div>
+  </header>
+
+  {Object.entries(CATEGORIES).map(([cat, info]) => {
+    const catTools = tools.filter((t) => t.data.category === cat);
+    if (catTools.length === 0) return null;
+    return (
+      <section class="category-section">
+        <h2>{info.emoji} {isZh ? info.zh : info.en}（{catTools.length}）</h2>
+        <div class="tools-grid">
+          {catTools.map((tool) => (
+            <ToolCard tool={tool.data} locale={locale} />
+          ))}
+        </div>
+      </section>
+    );
+  })}
+
+  <section class="category-section">
+    <h2>📚 {isZh ? '使用攻略' : 'Guides'}</h2>
+    <div class="tools-grid">
+      {guides.map((guide) => (
+        <GuideCard guide={guide.data} locale={locale} />
+      ))}
+    </div>
+  </section>
+</BaseLayout>

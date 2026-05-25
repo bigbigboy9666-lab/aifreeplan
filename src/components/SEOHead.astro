@@ -1,0 +1,75 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  locale: string;
+  canonical: string;
+  ogImage?: string;
+  jsonLd?: Record<string, any>[];
+}
+
+const {
+  title,
+  description,
+  locale,
+  canonical,
+  ogImage = 'https://aifreeplan.com/og-default.png',
+  jsonLd = [],
+} = Astro.props;
+
+const ogLocale = locale === 'zh' ? 'zh_CN' : 'en_US';
+const xDefault = 'en';
+---
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="baidu-site-verification" content="codeva-P0P3esmiMd" />
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content={ogLocale} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:site_name" content="AIFreePlan" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
+
+  <!-- Robots -->
+  <meta name="robots" content="index, follow" />
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="zh" href={canonical.replace(`/${locale}/`, '/zh/')} />
+  <link rel="alternate" hreflang="en" href={canonical.replace(`/${locale}/`, '/en/')} />
+  <link rel="alternate" hreflang="x-default" href={canonical.replace(`/${locale}/`, `/${xDefault}/`)} />
+
+  <!-- JSON-LD -->
+  {jsonLd.map((script) => (
+    <script type="application/ld+json" set:html={JSON.stringify(script)} />
+  ))}
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYW0F8RL7R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PYW0F8RL7R');
+  </script>
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="/global.css" />
+</head>

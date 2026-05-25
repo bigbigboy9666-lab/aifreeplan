@@ -1,0 +1,55 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import ToolCard from '@/components/ToolCard.astro';
+import { CATEGORIES } from '@/utils/categories';
+
+export async function getStaticPaths() {
+  const categories = Object.keys(CATEGORIES);
+  const locales = ['zh', 'en'];
+  const tools = await getCollection('tools');
+
+  return locales.flatMap((locale) =>
+    categories.map((category) => ({
+      params: { locale, category },
+      props: {
+        tools: tools.filter((t) => t.data.category === category),
+        category,
+        locale,
+      },
+    }))
+  );
+}
+
+const { tools, category, locale } = Astro.props;
+const isZh = locale === 'zh';
+const catInfo = CATEGORIES[category] || { zh: category, en: category, emoji: '📦' };
+const catName = isZh ? catInfo.zh : catInfo.en;
+
+const title = `${catName} | AIFreePlan`;
+const description = isZh
+  ? `${catName}免费额度对比，${tools.length}个工具实测`
+  : `${catName} free tier comparison, ${tools.length} tools tested`;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  locale={locale}
+  canonical={`https://aifreeplan.com/${locale}/${category}`}
+  currentPath={`/${locale}/${category}`}
+>
+  <Breadcrumb items={[{ label: catName }]} locale={locale} />
+
+  <header class="guide-header">
+    <h1>{catInfo.emoji} {catName}</h1>
+    <p>{isZh ? `共 ${tools.length} 个工具` : `${tools.length} tools`}</p>
+  </header>
+
+  <div class="tools-grid">
+    {tools.map((tool) => (
+      <ToolCard tool={tool.data} locale={locale} />
+    ))}
+  </div>
+</BaseLayout>

@@ -1,0 +1,70 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ToolCard from '@/components/ToolCard.astro';
+import GuideCard from '@/components/GuideCard.astro';
+import { CATEGORIES } from '@/utils/categories';
+
+export async function getStaticPaths() {
+  return [
+    { params: { locale: 'zh' } },
+    { params: { locale: 'en' } },
+  ];
+}
+
+const { locale } = Astro.params;
+const isZh = locale === 'zh';
+
+const tools = await getCollection('tools');
+const guides = await getCollection('guides');
+
+const title = isZh ? 'AIFreePlan - AI工具免费额度汇总' : 'AIFreePlan - Free AI Tool Credits Hub';
+const description = isZh
+  ? '帮你找到所有AI工具的免费额度，视频生成、图片生成、AI大模型、编程助手，一站聚合。'
+  : 'Find free tiers for every AI tool. Video generation, image generation, LLMs, coding assistants — all in one place.';
+
+// Group tools by category
+const byCategory: Record<string, typeof tools> = {};
+for (const tool of tools) {
+  const cat = tool.data.category;
+  if (!byCategory[cat]) byCategory[cat] = [];
+  byCategory[cat].push(tool);
+}
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  locale={locale}
+  canonical={`https://aifreeplan.com/${locale}`}
+  currentPath={`/${locale}`}
+>
+  <section class="hero">
+    <h1>{isZh ? '所有AI工具的免费额度一张表看全' : 'Every AI Tool\'s Free Tier, One Page'}</h1>
+    <p class="hero-sub">{isZh ? `${tools.length} 个工具 · ${guides.length} 篇攻略` : `${tools.length} tools · ${guides.length} guides`}</p>
+  </section>
+
+  {Object.entries(CATEGORIES).map(([cat, info]) => {
+    const catTools = byCategory[cat] || [];
+    if (catTools.length === 0) return null;
+    return (
+      <section class="category-section">
+        <h2>{info.emoji} {isZh ? info.zh : info.en}（{catTools.length}）</h2>
+        <div class="tools-grid">
+          {catTools.map((tool) => (
+            <ToolCard tool={tool.data} locale={locale} />
+          ))}
+        </div>
+      </section>
+    );
+  })}
+
+  <section class="category-section">
+    <h2>📚 {isZh ? '使用攻略' : 'Guides'}</h2>
+    <div class="tools-grid">
+      {guides.map((guide) => (
+        <GuideCard guide={guide.data} locale={locale} />
+      ))}
+    </div>
+  </section>
+</BaseLayout>

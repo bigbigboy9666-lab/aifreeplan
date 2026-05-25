@@ -1,0 +1,22 @@
+---
+interface Props {
+  faq: Array<{ q: string; a: string }>;
+  locale: string;
+}
+
+const { faq, locale } = Astro.props;
+---
+
+{faq.length > 0 && (
+  <section class="faq-section">
+    <h2>{locale === 'zh' ? '常见问题' : 'FAQ'}</h2>
+    <div class="faq-list">
+      {faq.map((item) => (
+        <details class="faq-item">
+          <summary>{item.q}</summary>
+          <p>{item.a}</p>
+        </details>
+      ))}
+    </div>
+  </section>
+)}

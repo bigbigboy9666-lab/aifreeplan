@@ -1,0 +1,33 @@
+---
+interface Props {
+  credits: Record<string, any>;
+  locale: string;
+}
+
+const { credits, locale } = Astro.props;
+const type = credits?.type || '';
+const amount = credits?.[`amount_${locale}`] || credits?.amount || '';
+const reset = credits?.[`reset_${locale}`] || credits?.reset || '';
+
+let badgeClass = 'badge-free';
+let label = '';
+
+if (type === 'none') {
+  badgeClass = 'badge-paid';
+  label = locale === 'zh' ? '无免费额度' : 'No free tier';
+} else if (type === 'daily') {
+  badgeClass = 'badge-free';
+  label = amount ? `${amount}/${locale === 'zh' ? '天' : 'day'}` : (locale === 'zh' ? '每日免费' : 'Daily free');
+} else if (type === 'activity') {
+  badgeClass = 'badge-activity';
+  label = locale === 'zh' ? '活动免费' : 'Free (activity)';
+} else if (type === 'subscription') {
+  badgeClass = 'badge-trial';
+  label = locale === 'zh' ? '试用' : 'Trial';
+} else {
+  badgeClass = 'badge-free';
+  label = amount || (locale === 'zh' ? '免费' : 'Free');
+}
+---
+
+<span class={`free-badge ${badgeClass}`}>{label}</span>

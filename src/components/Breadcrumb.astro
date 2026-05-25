@@ -1,0 +1,19 @@
+---
+interface Props {
+  items: Array<{ label: string; href?: string }>;
+  locale: string;
+}
+
+const { items, locale } = Astro.props;
+---
+
+<nav class="breadcrumb">
+  <a href={`/${locale}`}>{locale === 'zh' ? '首页' : 'Home'}</a>
+  {items.map((item) => (
+    <Fragment>
+      <span> &gt; </span>
+      {item.href && <a href={item.href}>{item.label}</a>}
+      {!item.href && <span>{item.label}</span>}
+    </Fragment>
+  ))}
+</nav>

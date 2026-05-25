@@ -1,0 +1,95 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import FAQ from '@/components/FAQ.astro';
+import { guideSchema } from '@/utils/seo';
+
+export async function getStaticPaths() {
+  const guides = await getCollection('guides');
+  const locales = ['zh', 'en'];
+
+  return locales.flatMap((locale) =>
+    guides.map((guide) => ({
+      params: { locale, slug: guide.data.slug },
+      props: { guide: guide.data, locale },
+    }))
+  );
+}
+
+const { guide, locale } = Astro.props;
+const isZh = locale === 'zh';
+const lang = locale;
+
+const title = guide[`title_${lang}`] || guide.title_en;
+const desc = guide[`description_${lang}`] || guide.description_en;
+const content = guide[`content_${lang}`] || guide.content_en || '';
+const tags = guide[`tags_${lang}`] || guide.tags_en || [];
+const faq = guide[`faq_${lang}`] || [];
+const author = guide[`author_${lang}`] || 'AIFreePlan';
+
+const canonical = `https://aifreeplan.com/${locale}/guides/${guide.slug}`;
+const jsonLd = guideSchema(guide, locale);
+
+// Simple markdown-to-HTML conversion
+let htmlContent = content
+  .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+  .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+  .replace(/^# (.+)$/gm, '<h2>$1</h2>')
+  .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+  .replace(/\*(.+?)\*/g, '<em>$1</em>')
+  .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" loading="lazy">')
+  .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
+  .replace(/^- (.+)$/gm, '<li>$1</li>')
+  .replace(/(<li>.*<\/li>\n?)+/gs, '<ul>$&</ul>')
+  .replace(/\n\n/g, '</p><p>')
+  .replace(/^(?!<[hulo])/gm, '<p>')
+  .replace(/(<\/p><p>)+/g, '</p><p>');
+
+// Strip FAQ from content (it's rendered separately)
+const faqMarker = isZh ? '## 常见问题' : '## FAQ';
+const faqStart = htmlContent.indexOf(faqMarker);
+if (faqStart >= 0) {
+  htmlContent = htmlContent.substring(0, faqStart).trim();
+}
+---
+
+<BaseLayout
+  title={`${title} | AIFreePlan`}
+  description={desc.slice(0, 150)}
+  locale={locale}
+  canonical={canonical}
+  jsonLd={jsonLd}
+  currentPath={`/${locale}/guides/${guide.slug}`}
+>
+  <Breadcrumb items={[
+    { label: isZh ? '使用攻略' : 'Guides', href: `/${locale}/guides` },
+    { label: title },
+  ]} locale={locale} />
+
+  <article class="guide-detail">
+    <header class="guide-header">
+      <h1>{title}</h1>
+      <div class="guide-meta">
+        <span class="guide-date">{isZh ? '发布于' : 'Published'} {guide.date_published}</span>
+        <span class="guide-author">{author}</span>
+      </div>
+      <div class="guide-tags">
+        {tags.map((tag: string) => (
+          <span class="tag">{tag}</span>
+        ))}
+      </div>
+    </header>
+
+    <section class="guide-content" set:html={htmlContent} />
+
+    <FAQ faq={faq} locale={locale} />
+
+    {guide.related_tools && guide.related_tools.length > 0 && (
+      <section>
+        <h2>{isZh ? '相关工具' : 'Related Tools'}</h2>
+        <p>{isZh ? '查看工具详情请点击工具名称' : 'Click tool names for details'}</p>
+      </section>
+    )}
+  </article>
+</BaseLayout>
