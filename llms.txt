@@ -1,0 +1,172 @@
+# AIFreePlan
+
+AIFreePlan is an AI tools free credits aggregator. We help users find free credits, trials, and promotions for AI tools including video generation, image generation, LLMs, and coding assistants.
+
+## Tools
+
+- Kling AI (video): 66 credits/day — https://aifreeplan.com/en/video/kling
+- MiniMax Hailuo (video): 66-100 credits/day — https://aifreeplan.com/en/video/hailuo
+- Luma Dream Machine (video): 30 generations/month — https://aifreeplan.com/en/video/luma
+- Runway (video): 125 credits (one-time) — https://aifreeplan.com/en/video/runway
+- Pika (video): ~10 generations/day — https://aifreeplan.com/en/video/pika
+- Sora (video): Shut down (was 30 videos/day, later cut to 6) — https://aifreeplan.com/en/video/sora
+- Xiaomi MiMo (llm): Credits on signup — https://aifreeplan.com/en/llm/xiaomi-mimo
+- DeepSeek (llm): Credits on signup — https://aifreeplan.com/en/llm/deepseek
+- Tongyi Qianwen (llm): Tokens on signup — https://aifreeplan.com/en/llm/qwen
+- ERNIE Bot (llm): Tokens on signup — https://aifreeplan.com/en/llm/wenxin
+- Kimi (llm): Daily free credits — https://aifreeplan.com/en/llm/kimi
+- Doubao (llm): Basic tier free — https://aifreeplan.com/en/llm/doubao
+- Codeium (coding): Personal plan free forever — https://aifreeplan.com/en/coding/codeium
+- Tongyi Lingma (coding): Free for individuals — https://aifreeplan.com/en/coding/tongyi-lingma
+- CodeBuddy (coding): Credits for new users — https://aifreeplan.com/en/coding/codebuddy
+- AtomCode (coding): CodingPlan Pro tier free for 30 days — https://aifreeplan.com/en/coding/atomcode
+- Tencent Marvis (ai-assistant): 10M tokens/day — https://aifreeplan.com/en/ai-assistant/tencent-marvis
+- Cursor (coding): Hobby free plan — https://aifreeplan.com/en/coding/cursor
+- Windsurf (coding): Free plan Light usage — https://aifreeplan.com/en/coding/windsurf
+- Perplexity (llm): Limited Pro searches daily — https://aifreeplan.com/en/llm/perplexity
+- NotebookLM (llm): Completely free — https://aifreeplan.com/en/llm/notebooklm
+- Ideogram (image): ~25 images/day — https://aifreeplan.com/en/image/ideogram
+- Freebuff (coding): Free, ads shown in CLI — https://aifreeplan.com/en/coding/freebuff
+- Google Gemini (llm): Free tier with limits — https://aifreeplan.com/en/llm/gemini
+- Tongyi Wanxiang (image): ~16 images/day (500/month) — https://aifreeplan.com/en/image/tongyi-wanxiang
+- Jimeng AI (image): 66 credits/day — https://aifreeplan.com/en/image/jimeng
+- LiblibAI (image): Free daily compute — https://aifreeplan.com/en/image/liblib
+- Wenxin Yige (image): New user credits — https://aifreeplan.com/en/image/wenxin-yige
+- MewXAI (image): Free daily credits — https://aifreeplan.com/en/image/mewxai
+- Leonardo AI (image): 150 tokens/day (~15 images) — https://aifreeplan.com/en/image/leonardo-ai
+- Playground AI (image): 500 images/day — https://aifreeplan.com/en/image/playground-ai
+- Bing Image Creator (image): 100 boosted generations/day — https://aifreeplan.com/en/image/bing-image-creator
+- Adobe Firefly (image): 25 credits/month — https://aifreeplan.com/en/image/adobe-firefly
+- Zhipu CogView (image): Free daily credits — https://aifreeplan.com/en/image/zhipu-cogview
+- Cline (coding): Free & Open Source — https://aifreeplan.com/en/coding/cline
+- GitHub Copilot (coding): 2000 completions/month (free tier) — https://aifreeplan.com/en/coding/github-copilot
+- ChatGPT (llm): Unlimited GPT-4o-mini / Limited GPT-4o — https://aifreeplan.com/en/llm/chatgpt
+- Claude (llm): Limited Sonnet uses/day — https://aifreeplan.com/en/llm/claude
+- Midjourney (image): No regular free credits — https://aifreeplan.com/en/image/midjourney
+- Poe (ai-assistant): Daily credits (cost varies by model) — https://aifreeplan.com/en/ai-assistant/poe
+- Astron Coding Plan (coding): First purchase ¥3.9/month, renewal ¥19/month (Worry-free Plan) — https://aifreeplan.com/en/coding/astron-coding-plan
+- Suno (audio): 50 credits daily, 10 songs — https://aifreeplan.com/en/audio/suno
+- V0.dev (coding): $5 monthly credits, 7 messages/day — https://aifreeplan.com/en/coding/v0
+- Gamma (ai-assistant): ~400 credits (initial grant) — https://aifreeplan.com/en/ai-assistant/gamma
+- Manus AI (ai-assistant): 300 daily refresh credits (all plans) — https://aifreeplan.com/en/ai-assistant/manus-ai
+- Google Veo (video): Limited access via Gemini free tier — https://aifreeplan.com/en/video/google-veo
+- PixVerse (video): 90 credits on signup + 60 credits/day — https://aifreeplan.com/en/video/pixverse
+- Show_1 AI Image Generator (video): 100 generations per month — https://aifreeplan.com/en/video/show-1
+- Mora (video): 10 credits per day — https://aifreeplan.com/en/video/mora
+- VideoPoet (video): 5 videos — https://aifreeplan.com/en/video/videopoet
+- Make-A-Video (video): 10 generations — https://aifreeplan.com/en/video/make-a-video
+- Imagen Video (video): 10 generations per day — https://aifreeplan.com/en/video/imagen-video
+- Trae (coding): 5000 autocompletions/month + 3 basic usage — https://aifreeplan.com/en/coding/trae
+- Coze (ai-assistant): Limited daily conversations + 100 bots — https://aifreeplan.com/en/ai-assistant/coze
+- Vidu (video): Unlimited free in Off-Peak Mode + daily free credits — https://aifreeplan.com/en/video/vidu
+- Img2Vid-ESCN (video): 10 free credits per day — https://aifreeplan.com/en/video/img2vid-escn
+- LVDM (video): 10 per month — https://aifreeplan.com/en/video/lvdm
+- ControlVideo (video): Completely free — https://aifreeplan.com/en/video/control-video
+- VideoComposer (video): 100 credits — https://aifreeplan.com/en/video/video-composer
+- Animate Anyone (video): 10 — https://aifreeplan.com/en/video/animateanyone
+- MagicAnimate (video): 100 — https://aifreeplan.com/en/video/magic-animate
+- MotionDiffusion (video): 1 time/day — https://aifreeplan.com/en/video/motiondiffusion
+- Wombo Dream (image): 5 free generations per day — https://aifreeplan.com/en/image/wombo-dream
+- Dawn AI (image): 10 per day — https://aifreeplan.com/en/image/dawn-ai
+- Lensa AI (image): 5 free credits — https://aifreeplan.com/en/image/lensa-ai
+- Remini (image): 5 times per day — https://aifreeplan.com/en/image/remini
+- Snow AI (image): 100 images per month — https://aifreeplan.com/en/image/snow-ai
+- Profile Picture AI (image): 3 — https://aifreeplan.com/en/image/profile-picture-ai
+- Udio (audio): Approx. 10 songs/day — https://aifreeplan.com/en/audio/udio
+- fal.ai (image): $5 free credits for new users — https://aifreeplan.com/en/image/fal-ai
+- Hugging Face (llm): Free inference credits (limited) — https://aifreeplan.com/en/llm/hugging-face
+- Replicate (llm): Free trial credits for new users — https://aifreeplan.com/en/llm/replicate
+- Mistral AI (llm): Le Chat free to use, API has free test credits — https://aifreeplan.com/en/llm/mistral
+- Hailuo AI (video): 5 videos — https://aifreeplan.com/en/video/hailuo-ai
+- ModelScope Text-to-Video (video): 100 credits — https://aifreeplan.com/en/video/modelscope-text-to-video
+- AnimateDiff (video): Unlimited with limited features — https://aifreeplan.com/en/video/animatediff
+- StepVideo (video): 100 credits — https://aifreeplan.com/en/video/stepvideo
+- Deforum (video): 0 — https://aifreeplan.com/en/video/deforum
+- Runway Gen-3 (video): 125 credits per month — https://aifreeplan.com/en/video/runway-gen-3
+- Stable Video Diffusion (image): 100 credits — https://aifreeplan.com/en/image/stable-video-diffusion
+- CogVideo (video): 5 videos per month — https://aifreeplan.com/en/video/cogvideo
+- Deep Dream Generator (image): 5 per day — https://aifreeplan.com/en/image/deep-dream-generator
+- Artbreeder (image): 10 — https://aifreeplan.com/en/image/artbreeder
+- RunwayML (image): 125 credits — https://aifreeplan.com/en/image/runwayml
+- Hotpot AI (image): 100 credits — https://aifreeplan.com/en/image/hotpot-ai
+- Picsart AI (image): 5 — https://aifreeplan.com/en/image/picsart-ai
+- Fotor AI Art (image): 5 per day — https://aifreeplan.com/en/image/fotor-ai-art
+- Wonder AI (image): 10 daily credits — https://aifreeplan.com/en/image/wonder-ai
+- FaceApp (image): 3 photos per day — https://aifreeplan.com/en/image/faceapp
+- Prisma (image): 3 free transformations per day — https://aifreeplan.com/en/image/prisma
+- ToonMe (image): 5 images per day — https://aifreeplan.com/en/image/toonme
+- Grok (llm): Limited free daily queries — https://aifreeplan.com/en/llm/grok
+- Yi-Large (llm): 1000 calls per month — https://aifreeplan.com/en/llm/yi-large
+- Spark Desk (llm): 50 credits per day — https://aifreeplan.com/en/llm/spark-desk
+- ERNIE Bot (llm): 10 — https://aifreeplan.com/en/llm/ernie-bot
+- Hunyuan Large Model (llm): 1000 free calls per month — https://aifreeplan.com/en/llm/hunyuan
+- Phi-3 (llm): Unlimited — https://aifreeplan.com/en/llm/phi-3
+- MusicGen (audio): Completely free (open source) — https://aifreeplan.com/en/audio/musicgen
+- Stable Audio (audio): 20 tracks/month — https://aifreeplan.com/en/audio/stable-audio
+- ElevenLabs (audio): 10,000 characters/month — https://aifreeplan.com/en/audio/elevenlabs
+
+## Guides
+
+- Get GLM-5.1 Free: AtomCode CodingPlan Complete Guide & Tips — https://aifreeplan.com/en/guides/atomcode-codingplan-glm51
+- Tencent Marvis Launches Free: 10M Tokens Daily, Windows/Mac/Android — https://aifreeplan.com/en/guides/tencent-marvis-free-agent
+- Is Cursor Free Plan Enough? 2026 AI Coding Tool Free Guide — https://aifreeplan.com/en/guides/cursor-free-ai-coding
+- Windsurf Free Plan Tested: Can a $0/Month AI Coding Tool Really Work? — https://aifreeplan.com/en/guides/windsurf-free-ai-coding
+- Perplexity AI Search Free: Daily Pro Searches, Best Google Alternative — https://aifreeplan.com/en/guides/perplexity-free-ai-search
+- NotebookLM Free Guide: Google's Best AI Research Tool, 50 Sources + Auto Podcast — https://aifreeplan.com/en/guides/notebooklm-free-research
+- Ideogram Free Images: Best Text Rendering AI Image Tool, Free Tier Enough — https://aifreeplan.com/en/guides/ideogram-free-ai-image
+- Freebuff Free AI Coding Agent: Ads for Free, Run DeepSeek V4 in Terminal — https://aifreeplan.com/en/guides/freebuff-free-coding-agent
+- Doubao Now Charges! Is the Free Tier Enough in 2026? Is Pro Worth ¥68/Month? — https://aifreeplan.com/en/guides/doubao-pricing-2026
+- Gemini Free Tier Shrinks: Is Google AI Still Worth Using Free in 2026? — https://aifreeplan.com/en/guides/gemini-free-tier-shrink-2026
+- Best Free AI Video Generation Tools 2026: Kling vs Hailuo vs Runway vs Pika vs Sora — https://aifreeplan.com/en/guides/free-ai-video-generation-2026
+- Kimi K2.6 Free Coding Guide: Best Open-Source Coding Agent with 300 Parallel Sub-Agents — https://aifreeplan.com/en/guides/kimi-k26-free-coding
+- Free AI API Tokens 2026: 12 Platforms with Free Credits Guide — https://aifreeplan.com/en/guides/free-ai-api-tokens-2026
+- Free AI API Ultimate Guide 2026: 23 Platforms Tested with Rate Limits — https://aifreeplan.com/en/guides/free-ai-api-23-platforms-2026
+- Gemini 3.5 Flash Free Access: 5 Methods, Coding Beats Previous Flagship — https://aifreeplan.com/en/guides/gemini-35-flash-free-usage
+- GitHub Copilot Free Guide: Students Get Pro Free, Is 2000 Completions Enough? — https://aifreeplan.com/en/guides/github-copilot-free-guide
+- ChatGPT Free Tier 2026: Unlimited GPT-4o-mini, How Many GPT-4o Uses Per Day? — https://aifreeplan.com/en/guides/chatgpt-free-tier-2026
+- Leonardo AI Free Guide: 15 Images/Day, No Watermark — Better Than Midjourney for Free Users — https://aifreeplan.com/en/guides/leonardo-ai-free-image
+- Cline Free AI Coding: Open Source, 200+ Models, Apache 2.0 Commercial License — https://aifreeplan.com/en/guides/cline-free-open-source-coding
+- Claude Free Tier 2026: 200K Context Window, How Many Free Messages Per Day? — https://aifreeplan.com/en/guides/claude-free-tier-2026
+- Suno AI Music Generator Free: 10 Songs Per Day, No Credit Card Needed — https://aifreeplan.com/en/guides/suno-free-ai-music
+- Bing Image Creator Free Guide: DALL·E for Free, 100 Generations Per Day — https://aifreeplan.com/en/guides/bing-image-creator-free-guide
+- Gamma AI Presentation Free Guide: 400 Credits to Generate Professional Slides — https://aifreeplan.com/en/guides/gamma-free-ai-presentation
+- Poe AI Free Guide: Access GPT-4o, Claude, Gemini in One Platform with Daily Free Credits — https://aifreeplan.com/en/guides/poe-free-multi-model-ai
+- Manus AI Review 2026: Free Credits, Pricing Plans & Is It Worth It? — https://aifreeplan.com/en/guides/manus-ai-guide
+- Best Free AI Model Credits 2026: ChatGPT vs Claude vs Gemini vs DeepSeek — https://aifreeplan.com/en/guides/llm-free-credits-comparison
+- Free AI Image Generators 2026: 15 Tools Compared — Credits, Quality & Limits — https://aifreeplan.com/en/guides/free-ai-image-generation-2026
+- PixVerse Free Video Generation: 60 Credits/Day + 90 Signup Bonus, Best Effect Templates — https://aifreeplan.com/en/guides/pixverse-free-video
+- Google Veo Free: Try Top-Tier AI Video via Gemini, Free Tier Tested — https://aifreeplan.com/en/guides/google-veo-free-video
+- Midjourney Has No Free Tier: 5 Free Alternatives Tested in 2026 — https://aifreeplan.com/en/guides/midjourney-free-alternatives-2026
+- Qwen3 Free API: Free Tokens on Signup, 20x Cheaper Than GPT-4o — https://aifreeplan.com/en/guides/qwen-free-api-2026
+- AI Image Generator Free Tier Guide — https://aifreeplan.com/en/guides/ai-image-generator-free-tier
+- DeepSeek vs Qwen Free API Comparison — https://aifreeplan.com/en/guides/deepseek-vs-qwen-free-api
+- How to Use ChatGPT Free — https://aifreeplan.com/en/guides/how-to-use-chatgpt-free
+- Best Free AI Coding Assistants — https://aifreeplan.com/en/guides/best-ai-coding-assistants-free
+- Free AI Music Generators — https://aifreeplan.com/en/guides/free-ai-music-generators
+- AI Video Editing Free Tools — https://aifreeplan.com/en/guides/ai-video-editing-free-tools
+- Best AI Art Generators 2026 — https://aifreeplan.com/en/guides/best-ai-art-generators-2026
+- Free AI Writing Assistants 2026: 10 Tools Tested and Ranked — https://aifreeplan.com/en/guides/free-ai-writing-assistants
+- Free AI Music Generators 2026: Suno vs Udio Free Credits Compared — https://aifreeplan.com/en/guides/free-ai-music-generators-comparison
+- Best AI Search Engines — https://aifreeplan.com/en/guides/best-ai-search-engines
+- Free AI Data Analysis Tools — https://aifreeplan.com/en/guides/free-ai-data-analysis-tools
+- AI Design Tools Free Tier — https://aifreeplan.com/en/guides/ai-design-tools-free-tier
+- Best AI Agents 2026 — https://aifreeplan.com/en/guides/best-ai-agents-2026
+- Free AI Image Upscalers — https://aifreeplan.com/en/guides/free-ai-image-upscalers
+- AI Text-to-Speech Free — https://aifreeplan.com/en/guides/ai-text-to-speech-free
+- Best AI Summarizers 2026 — https://aifreeplan.com/en/guides/best-ai-summarizers-2026
+- Free AI Resume Builders — https://aifreeplan.com/en/guides/free-ai-resume-builders
+- Best Free AI Music Generators 2026: 6 Tools Tested & Compared — https://aifreeplan.com/en/guides/free-ai-music-tools-comparison
+
+## Key Pages
+
+- /en/video - Video generation tools free credits
+- /en/image - AI image generation free credits
+- /en/llm - AI LLM platforms free credits
+- /en/coding - Coding assistants free credits
+- /en/ai-assistant - AI assistant free credits
+- /en/audio - AI music free credits
+- /en/guides - Guides, tutorials, and deals
+
+## Contact
+
+Website: https://aifreeplan.com
