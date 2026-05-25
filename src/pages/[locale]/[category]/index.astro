@@ -1,14 +1,14 @@
 ---
-import { getCollection } from 'astro:content';
+import { getTools } from '@/utils/data';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
 import ToolCard from '@/components/ToolCard.astro';
 import { CATEGORIES } from '@/utils/categories';
 
-export async function getStaticPaths() {
+export function getStaticPaths() {
   const categories = Object.keys(CATEGORIES);
   const locales = ['zh', 'en'];
-  const tools = await getCollection('tools');
+  const tools = getTools();
 
   return locales.flatMap((locale) =>
     categories.map((category) => ({

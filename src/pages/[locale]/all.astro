@@ -1,11 +1,11 @@
 ---
-import { getCollection } from 'astro:content';
+import { getTools, getGuides } from '@/utils/data';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import ToolCard from '@/components/ToolCard.astro';
 import GuideCard from '@/components/GuideCard.astro';
 import { CATEGORIES } from '@/utils/categories';
 
-export async function getStaticPaths() {
+export function getStaticPaths() {
   return [
     { params: { locale: 'zh' } },
     { params: { locale: 'en' } },
@@ -15,8 +15,8 @@ export async function getStaticPaths() {
 const { locale } = Astro.params;
 const isZh = locale === 'zh';
 
-const tools = await getCollection('tools');
-const guides = await getCollection('guides');
+const tools = getTools();
+const guides = getGuides();
 
 const title = isZh ? 'AI工具免费额度大全 | AIFreePlan' : 'All AI Tools Free Tier | AIFreePlan';
 const description = isZh

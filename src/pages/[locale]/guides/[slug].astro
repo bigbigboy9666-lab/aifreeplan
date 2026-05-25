@@ -1,12 +1,12 @@
 ---
-import { getCollection } from 'astro:content';
+import { getGuides } from '@/utils/data';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
 import FAQ from '@/components/FAQ.astro';
 import { guideSchema } from '@/utils/seo';
 
-export async function getStaticPaths() {
-  const guides = await getCollection('guides');
+export function getStaticPaths() {
+  const guides = getGuides();
   const locales = ['zh', 'en'];
 
   return locales.flatMap((locale) =>

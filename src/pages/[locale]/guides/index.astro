@@ -1,10 +1,10 @@
 ---
-import { getCollection } from 'astro:content';
+import { getGuides } from '@/utils/data';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
 import GuideCard from '@/components/GuideCard.astro';
 
-export async function getStaticPaths() {
+export function getStaticPaths() {
   return [
     { params: { locale: 'zh' } },
     { params: { locale: 'en' } },
@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 const { locale } = Astro.params;
 const isZh = locale === 'zh';
 
-const guides = await getCollection('guides');
+const guides = getGuides();
 
 const title = isZh ? '使用攻略 | AIFreePlan' : 'Guides | AIFreePlan';
 const description = isZh

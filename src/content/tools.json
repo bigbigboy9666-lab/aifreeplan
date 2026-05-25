@@ -10342,5 +10342,365 @@
     },
     "images": [],
     "plans": []
+  },
+  {
+    "slug": "ifttt-ai",
+    "name_zh": "IFTTT AI",
+    "name_en": "IFTTT AI",
+    "category": "ai-assistant",
+    "official_url": "https://ifttt.com/ai",
+    "company_zh": "IFTTT公司",
+    "company_en": "IFTTT",
+    "description_zh": "IFTTT AI让自动化变聪明，轻松玩转各种服务连接。",
+    "description_en": "IFTTT AI makes automation smarter, enabling easy connections between various apps and services with artificial intelligence.",
+    "free_credits": {
+      "type": "api_calls",
+      "amount": "100",
+      "amount_en": "100",
+      "resolution": "N/A",
+      "watermark": "No",
+      "commercial_use": "Yes",
+      "reset": "monthly"
+    },
+    "features_zh": [
+      "智能自动化引擎",
+      "AI驱动任务优化",
+      "多平台无缝集成",
+      "自定义工作流设计",
+      "实时数据同步监控"
+    ],
+    "features_en": [
+      "Smart Automation Engine",
+      "AI-Driven Task Optimization",
+      "Seamless Multi-Platform Integration",
+      "Custom Workflow Design",
+      "Real-Time Data Sync Monitoring"
+    ],
+    "pros_zh": [
+      "操作简单，上手快",
+      "集成能力强，连接超多服务",
+      "AI提升效率，省时省力"
+    ],
+    "pros_en": [
+      "User-Friendly and Easy to Get Started",
+      "Powerful Integration with Many Services",
+      "AI Boosts Efficiency, Saving Time and Effort"
+    ],
+    "cons_zh": [
+      "高级功能得掏钱买",
+      "刚开始用有点难搞懂"
+    ],
+    "cons_en": [
+      "Advanced Features Require Payment",
+      "Can Be Confusing for Beginners"
+    ],
+    "tips_zh": [
+      "先玩玩免费额度，试试水",
+      "多用现成模板，省得折腾"
+    ],
+    "tips_en": [
+      "Start by Trying the Free Credits to Test the Waters",
+      "Use Pre-Built Templates to Avoid Extra Work"
+    ],
+    "rating": 4,
+    "paid_from": 9.99,
+    "paid_from_en": 9.99,
+    "type": "tool",
+    "category_zh": "AI助手",
+    "category_en": "AI Assistant",
+    "last_updated": "2026-05-26",
+    "activity": {
+      "has_activity": false
+    },
+    "images": [],
+    "plans": []
+  },
+  {
+    "slug": "siri",
+    "name_zh": "Siri",
+    "name_en": "Siri",
+    "category": "ai-assistant",
+    "official_url": "https://www.apple.com/siri/",
+    "company_zh": "苹果公司",
+    "company_en": "Apple Inc.",
+    "description_zh": "苹果智能语音助手，支持语音控制设备和信息查询。",
+    "description_en": "Apple's intelligent voice assistant for voice control and information queries.",
+    "free_credits": {
+      "type": "免费使用",
+      "amount": "无限",
+      "amount_en": "unlimited",
+      "resolution": "N/A",
+      "watermark": "No",
+      "commercial_use": "Yes",
+      "reset": "N/A"
+    },
+    "features_zh": [
+      "语音识别",
+      "自然语言处理",
+      "设备控制",
+      "信息查询",
+      "第三方应用集成"
+    ],
+    "features_en": [
+      "Voice recognition",
+      "Natural language processing",
+      "Device control",
+      "Information queries",
+      "Third-party app integration"
+    ],
+    "pros_zh": [
+      "便捷语音交互",
+      "无缝苹果生态集成",
+      "免费使用"
+    ],
+    "pros_en": [
+      "Convenient voice interaction",
+      "Seamless Apple ecosystem integration",
+      "Free to use"
+    ],
+    "cons_zh": [
+      "仅限苹果设备",
+      "隐私和数据收集问题"
+    ],
+    "cons_en": [
+      "Limited to Apple devices",
+      "Privacy and data collection concerns"
+    ],
+    "tips_zh": [
+      "确保设备兼容Siri",
+      "使用清晰、自然的语音命令"
+    ],
+    "tips_en": [
+      "Ensure device compatibility with Siri",
+      "Use clear and natural voice commands"
+    ],
+    "rating": 4,
+    "paid_from": "免费",
+    "paid_from_en": "Free",
+    "type": "tool",
+    "category_zh": "AI助手",
+    "category_en": "AI Assistant",
+    "last_updated": "2026-05-26",
+    "activity": {
+      "has_activity": false
+    },
+    "images": [],
+    "plans": []
+  },
+  {
+    "slug": "alexa",
+    "name_zh": "Alexa",
+    "name_en": "Alexa",
+    "category": "ai-assistant",
+    "official_url": "https://www.amazon.com/alexa",
+    "company_zh": "亚马逊",
+    "company_en": "Amazon",
+    "description_zh": "亚马逊的智能语音助手，帮你用声音控制设备、查信息、放音乐。",
+    "description_en": "Amazon's voice-controlled AI assistant that manages smart devices, answers questions, and plays music in your home.",
+    "free_credits": {
+      "type": "无免费额度",
+      "amount": "0",
+      "amount_en": "0",
+      "resolution": "N/A",
+      "watermark": "No",
+      "commercial_use": "No",
+      "reset": "无"
+    },
+    "features_zh": [
+      "语音控制智能设备",
+      "查询天气新闻",
+      "设置闹钟和提醒",
+      "播放音乐和有声书",
+      "拨打电话和发消息"
+    ],
+    "features_en": [
+      "Voice control for smart home devices",
+      "Answers questions about weather, news, etc.",
+      "Sets alarms, timers, and reminders",
+      "Plays music, audiobooks, and podcasts",
+      "Makes calls and sends messages"
+    ],
+    "pros_zh": [
+      "用起来特别方便，动动嘴就行",
+      "和亚马逊生态设备结合得很好",
+      "能学到很多小技能，越来越聪明"
+    ],
+    "pros_en": [
+      "Extremely convenient, hands-free operation",
+      "Seamlessly integrates with the Amazon ecosystem",
+      "Expands capabilities with thousands of Skills"
+    ],
+    "cons_zh": [
+      "老是听着你说话，有点担心隐私",
+      "对中文的理解有时不太准"
+    ],
+    "cons_en": [
+      "Always listening raises privacy concerns",
+      "Understanding of non-English languages can be inconsistent"
+    ],
+    "tips_zh": [
+      "多探索技能商店，发现实用功能",
+      "设置好常用语音指令，效率更高"
+    ],
+    "tips_en": [
+      "Explore the Skills Store regularly to discover useful features",
+      "Create custom routines for frequently used commands"
+    ],
+    "rating": 4.5,
+    "paid_from": "设备购买",
+    "paid_from_en": "Device Purchase",
+    "type": "tool",
+    "category_zh": "AI助手",
+    "category_en": "AI Assistant",
+    "last_updated": "2026-05-26",
+    "activity": {
+      "has_activity": false
+    },
+    "images": [],
+    "plans": []
+  },
+  {
+    "slug": "soundraw",
+    "name_zh": "Soundraw",
+    "name_en": "Soundraw",
+    "category": "audio",
+    "official_url": "https://soundraw.io",
+    "company_zh": "Soundraw Inc.",
+    "company_en": "Soundraw Inc.",
+    "description_zh": "一个用AI生成音乐的工具，让你轻松创作专业音乐，适合自媒体和创作者。",
+    "description_en": "An AI music generator that creates professional-quality music from text prompts, great for creators and content makers.",
+    "free_credits": {
+      "type": "daily",
+      "amount": "5首歌",
+      "amount_en": "5 songs per day",
+      "resolution": "标准音质",
+      "watermark": "无水印",
+      "commercial_use": "有限商业使用",
+      "reset": "每天重置"
+    },
+    "features_zh": [
+      "AI音乐生成",
+      "多种风格选择",
+      "自定义时长和节奏",
+      "一键导出文件",
+      "简单直观的操作界面"
+    ],
+    "features_en": [
+      "AI-powered music generation",
+      "Multiple genre options",
+      "Customizable duration and tempo",
+      "One-click file export",
+      "Simple and intuitive interface"
+    ],
+    "pros_zh": [
+      "免费额度够日常用",
+      "生成速度快质量高",
+      "上手简单不用学"
+    ],
+    "pros_en": [
+      "Generous free credits for daily use",
+      "Fast generation with high quality",
+      "Easy to use without learning curve"
+    ],
+    "cons_zh": [
+      "免费版每天只能生成5首",
+      "更高级功能得花钱订阅"
+    ],
+    "cons_en": [
+      "Free version limited to 5 generations per day",
+      "Advanced features require a paid subscription"
+    ],
+    "tips_zh": [
+      "多试试不同风格和参数组合",
+      "用免费额度练习后再考虑付费"
+    ],
+    "tips_en": [
+      "Experiment with different style and parameter combinations",
+      "Practice with free credits before considering paid plans"
+    ],
+    "rating": 4.3,
+    "paid_from": "每月$9.99起",
+    "paid_from_en": "from $9.99/month",
+    "type": "tool",
+    "category_zh": "AI音乐",
+    "category_en": "Audio",
+    "last_updated": "2026-05-26",
+    "activity": {
+      "has_activity": false
+    },
+    "images": [],
+    "plans": []
+  },
+  {
+    "slug": "mubert",
+    "name_zh": "Mubert",
+    "name_en": "Mubert",
+    "category": "audio",
+    "official_url": "https://mubert.com/",
+    "company_zh": "Mubert Inc.",
+    "company_en": "Mubert Inc.",
+    "description_zh": "Mubert是AI音乐生成工具，帮你快速创作原创背景音乐。",
+    "description_en": "Mubert is an AI music generation tool that helps you create original background music quickly.",
+    "free_credits": {
+      "type": "monthly_generations",
+      "amount": "10",
+      "amount_en": "10",
+      "resolution": "标准",
+      "watermark": "Yes",
+      "commercial_use": "No",
+      "reset": "每月"
+    },
+    "features_zh": [
+      "AI驱动的音乐生成",
+      "支持多种音乐风格",
+      "实时流媒体播放",
+      "自定义参数调整",
+      "API集成方便"
+    ],
+    "features_en": [
+      "AI-driven music generation",
+      "Supports various music genres",
+      "Real-time streaming playback",
+      "Customizable parameter adjustments",
+      "Easy API integration"
+    ],
+    "pros_zh": [
+      "生成速度快",
+      "界面简单易用",
+      "音乐质量高"
+    ],
+    "pros_en": [
+      "Fast generation speed",
+      "Simple and easy to use",
+      "High music quality"
+    ],
+    "cons_zh": [
+      "免费版有水印限制",
+      "商用功能需付费"
+    ],
+    "cons_en": [
+      "Free version has watermark limitations",
+      "Commercial features require payment"
+    ],
+    "tips_zh": [
+      "先用免费版试试效果",
+      "根据需求选择合适的付费计划"
+    ],
+    "tips_en": [
+      "Try the free version first to see the effect",
+      "Choose a suitable paid plan based on your needs"
+    ],
+    "rating": 4.5,
+    "paid_from": "每月9.99美元起",
+    "paid_from_en": "Starting from $9.99 per month",
+    "type": "tool",
+    "category_zh": "AI音乐",
+    "category_en": "Audio",
+    "last_updated": "2026-05-26",
+    "activity": {
+      "has_activity": false
+    },
+    "images": [],
+    "plans": []
   }
 ]

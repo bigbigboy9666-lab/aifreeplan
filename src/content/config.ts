@@ -1,0 +1,63 @@
+import { defineCollection, z } from 'astro:content';
+
+const tools = defineCollection({
+  type: 'data',
+  schema: z.object({
+    slug: z.string(),
+    type: z.string().default('tool'),
+    name_zh: z.string().default(''),
+    name_en: z.string().default(''),
+    category: z.string(),
+    category_zh: z.string().default(''),
+    category_en: z.string().default(''),
+    official_url: z.string().default(''),
+    company_zh: z.string().default(''),
+    company_en: z.string().default(''),
+    description_zh: z.string().default(''),
+    description_en: z.string().default(''),
+    free_credits: z.any().default({}),
+    activity: z.any().default({ has_activity: false }),
+    features_zh: z.array(z.string()).default([]),
+    features_en: z.array(z.string()).default([]),
+    pros_zh: z.array(z.string()).default([]),
+    pros_en: z.array(z.string()).default([]),
+    cons_zh: z.array(z.string()).default([]),
+    cons_en: z.array(z.string()).default([]),
+    tips_zh: z.array(z.string()).default([]),
+    tips_en: z.array(z.string()).default([]),
+    rating: z.number().default(4),
+    paid_from: z.string().default(''),
+    paid_from_en: z.string().default(''),
+    last_updated: z.string().default(''),
+    images: z.array(z.string()).default([]),
+    plans: z.array(z.any()).default([]),
+  }).passthrough(),
+});
+
+const guides = defineCollection({
+  type: 'data',
+  schema: z.object({
+    slug: z.string(),
+    type: z.string().default('guide'),
+    category: z.string().default('guides'),
+    category_zh: z.string().default('使用攻略'),
+    category_en: z.string().default('Guides'),
+    title_zh: z.string().default(''),
+    title_en: z.string().default(''),
+    description_zh: z.string().default(''),
+    description_en: z.string().default(''),
+    author_zh: z.string().default('AIFreePlan'),
+    author_en: z.string().default('AIFreePlan'),
+    date_published: z.string().default(''),
+    date_modified: z.string().default(''),
+    tags_zh: z.array(z.string()).default([]),
+    tags_en: z.array(z.string()).default([]),
+    related_tools: z.array(z.string()).default([]),
+    faq_zh: z.array(z.any()).default([]),
+    faq_en: z.array(z.any()).default([]),
+    content_zh: z.string().default(''),
+    content_en: z.string().default(''),
+  }).passthrough(),
+});
+
+export const collections = { tools, guides };

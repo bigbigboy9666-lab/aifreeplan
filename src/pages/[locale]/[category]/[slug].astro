@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { getTools } from '@/utils/data';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
 import Stars from '@/components/Stars.astro';
@@ -8,8 +8,8 @@ import FAQ from '@/components/FAQ.astro';
 import { CATEGORIES } from '@/utils/categories';
 import { toolSchema } from '@/utils/seo';
 
-export async function getStaticPaths() {
-  const tools = await getCollection('tools');
+export function getStaticPaths() {
+  const tools = getTools();
   const locales = ['zh', 'en'];
 
   return locales.flatMap((locale) =>
@@ -44,7 +44,7 @@ const faq = tool[`faq_${lang}`] || [];
 const jsonLd = toolSchema(tool, locale);
 
 // Find related tools
-const allTools = await getCollection('tools');
+const allTools = getTools();
 const related = allTools
   .filter((t) => tool.related_tools?.includes(t.data.slug))
   .map((t) => t.data);
