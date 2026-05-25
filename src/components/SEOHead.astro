@@ -18,7 +18,13 @@ const {
 } = Astro.props;
 
 const ogLocale = locale === 'zh' ? 'zh_CN' : 'en_US';
-const xDefault = 'en';
+const xDefault = 'zh';
+
+// Build hreflang URLs: replace the locale segment in canonical
+const pathWithoutLocale = canonical.replace(`https://aifreeplan.com/${locale}`, '');
+const zhUrl = `https://aifreeplan.com/zh${pathWithoutLocale || '/'}`;
+const enUrl = `https://aifreeplan.com/en${pathWithoutLocale || '/'}`;
+const xDefaultUrl = `https://aifreeplan.com/${xDefault}${pathWithoutLocale || '/'}`;
 ---
 
 <head>
@@ -52,9 +58,9 @@ const xDefault = 'en';
   <meta name="robots" content="index, follow" />
 
   <!-- Hreflang -->
-  <link rel="alternate" hreflang="zh" href={canonical.replace(`/${locale}/`, '/zh/')} />
-  <link rel="alternate" hreflang="en" href={canonical.replace(`/${locale}/`, '/en/')} />
-  <link rel="alternate" hreflang="x-default" href={canonical.replace(`/${locale}/`, `/${xDefault}/`)} />
+  <link rel="alternate" hreflang="zh" href={zhUrl} />
+  <link rel="alternate" hreflang="en" href={enUrl} />
+  <link rel="alternate" hreflang="x-default" href={xDefaultUrl} />
 
   <!-- JSON-LD -->
   {jsonLd.map((script) => (
