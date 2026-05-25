@@ -8542,5 +8542,1805 @@
     "free_note": "每月10000字符",
     "free_note_en": "10,000 characters/month",
     "images": []
+  },
+  {
+    "slug": "mixtral",
+    "name_zh": "Mixtral",
+    "name_en": "Mixtral",
+    "category": "llm",
+    "official_url": "https://mistral.ai",
+    "company_zh": "Mistral AI",
+    "company_en": "Mistral AI",
+    "description_zh": "开源大语言模型，性能优异，支持多种任务。",
+    "description_en": "An open-source large language model with excellent performance, supporting various tasks.",
+    "free_credits": {
+      "type": "open_source",
+      "amount": "unlimited",
+      "amount_en": "unlimited",
+      "resolution": "n/a",
+      "watermark": false,
+      "commercial_use": true,
+      "reset": "none"
+    },
+    "features_zh": [
+      "开源免费",
+      "高性能",
+      "多语言支持",
+      "易于部署",
+      "社区支持"
+    ],
+    "features_en": [
+      "Open-source and free",
+      "High performance",
+      "Multi-language support",
+      "Easy deployment",
+      "Strong community support"
+    ],
+    "pros_zh": [
+      "成本低",
+      "灵活定制",
+      "资源丰富"
+    ],
+    "pros_en": [
+      "Low cost",
+      "Flexible customization",
+      "Rich resources"
+    ],
+    "cons_zh": [
+      "需要技术知识",
+      "硬件要求高"
+    ],
+    "cons_en": [
+      "Requires technical knowledge",
+      "High hardware requirements"
+    ],
+    "tips_zh": [
+      "使用前检查硬件要求",
+      "参与社区获取帮助"
+    ],
+    "tips_en": [
+      "Check hardware requirements before use",
+      "Engage with community for help"
+    ],
+    "rating": 4,
+    "paid_from": 0,
+    "paid_from_en": "Free",
+    "type": "tool",
+    "category_zh": "AI大模型",
+    "category_en": "LLM",
+    "last_updated": "2026-05-24",
+    "activity": {
+      "has_activity": false
+    },
+    "images": [],
+    "plans": []
+  },
+  {
+    "slug": "grok-2",
+    "name_zh": "Grok-2",
+    "name_en": "Grok-2",
+    "category": "llm",
+    "official_url": "https://x.ai/grok-2",
+    "company_zh": "xAI",
+    "company_en": "xAI",
+    "description_zh": "Grok-2是xAI开发的智能AI模型，擅长对话和生成任务。",
+    "description_en": "Grok-2 is an AI model by xAI, excelling in conversation and generation tasks.",
+    "free_credits": {
+      "type": "monthly",
+      "amount": "100",
+      "amount_en": "100 queries",
+      "resolution": "none",
+      "watermark": "none",
+      "commercial_use": false,
+      "reset": "每月重置"
+    },
+    "features_zh": [
+      "自然语言处理",
+      "文本生成",
+      "实时搜索",
+      "代码辅助",
+      "安全对齐"
+    ],
+    "features_en": [
+      "Natural Language Processing",
+      "Text Generation",
+      "Real-time Search",
+      "Code Assistance",
+      "Safety Alignment"
+    ],
+    "pros_zh": [
+      "响应迅速",
+      "知识广泛",
+      "用户友好"
+    ],
+    "pros_en": [
+      "Fast Response",
+      "Broad Knowledge",
+      "User-Friendly"
+    ],
+    "cons_zh": [
+      "可能产生错误",
+      "免费次数受限"
+    ],
+    "cons_en": [
+      "May Generate Errors",
+      "Limited Free Usage"
+    ],
+    "tips_zh": [
+      "提供具体上下文以提高准确性",
+      "利用API进行集成开发"
+    ],
+    "tips_en": [
+      "Provide Specific Context for Better Accuracy",
+      "Use API for Integration Development"
+    ],
+    "rating": 4.5,
+    "paid_from": "每月9美元起",
+    "paid_from_en": "Starting from $9 per month",
+    "type": "tool",
+    "category_zh": "AI大模型",
+    "category_en": "LLM",
+    "last_updated": "2026-05-24",
+    "activity": {
+      "has_activity": false
+    },
+    "images": [],
+    "plans": []
+  },
+  {
+    "slug": "tabnine",
+    "name_zh": "Tabnine",
+    "name_en": "Tabnine",
+    "category": "coding",
+    "official_url": "https://www.tabnine.com/",
+    "company_zh": "Tabnine",
+    "company_en": "Tabnine",
+    "description_zh": "AI驱动的代码补全与智能提示工具，支持多种编程语言。",
+    "description_en": "AI-powered code completion and intelligent suggestion tool supporting multiple programming languages.",
+    "free_credits": {
+      "type": "每月免费使用",
+      "amount": "基础补全功能无限使用，高级功能有次数限制",
+      "amount_en": "Basic completions unlimited, premium features limited",
+      "resolution": "N/A",
+      "watermark": "无",
+      "commercial_use": "允许",
+      "reset": "每月重置高级功能额度"
+    },
+    "features_zh": [
+      "智能代码补全",
+      "多语言支持",
+      "本地化模型运行",
+      "上下文感知",
+      "团队协作分析"
+    ],
+    "features_en": [
+      "Intelligent code completion",
+      "Multi-language support",
+      "Local model execution",
+      "Context awareness",
+      "Team collaboration analysis"
+    ],
+    "pros_zh": [
+      "响应速度快，基本补全免费",
+      "隐私友好，可本地运行",
+      "支持主流IDE和编辑器"
+    ],
+    "pros_en": [
+      "Fast response, basic completion free",
+      "Privacy-friendly, can run locally",
+      "Supports mainstream IDEs and editors"
+    ],
+    "cons_zh": [
+      "高级功能需付费订阅",
+      "复杂逻辑理解能力有限"
+    ],
+    "cons_en": [
+      "Advanced features require paid subscription",
+      "Limited understanding of complex logic"
+    ],
+    "tips_zh": [
+      "免费版已满足大部分基础编码需求",
+      "可先试用免费功能再决定是否升级"
+    ],
+    "tips_en": [
+      "Free version meets most basic coding needs",
+      "Try free features before deciding to upgrade"
+    ],
+    "rating": 4,
+    "paid_from": "免费版可用，付费版$12/月起",
+    "paid_from_en": "Free version available, paid plans from $12/month",
+    "type": "tool",
+    "category_zh": "编程助手",
+    "category_en": "Coding",
+    "last_updated": "2026-05-24",
+    "activity": {
+      "has_activity": false
+    },
+    "images": [],
+    "plans": []
+  },
+  {
+    "slug": "replit-ai",
+    "name_zh": "Replit AI",
+    "name_en": "Replit AI",
+    "category": "coding",
+    "official_url": "https://replit.com",
+    "company_zh": "Replit",
+    "company_en": "Replit",
+    "description_zh": "Replit AI是集成在在线IDE中的AI编程助手，帮助代码编写和调试。",
+    "description_en": "Replit AI is an AI-powered coding assistant integrated into the Replit online IDE, aiding in code generation, debugging, and learning.",
+    "free_credits": {
+      "type": "monthly",
+      "amount": "每月100次AI查询",
+      "amount_en": "100 AI queries per month",
+      "resolution": "标准",
+      "watermark": "无",
+      "commercial_use": "否",
+      "reset": "每月重置"
+    },
+    "features_zh": [
+      "AI代码补全",
+      "智能错误检测",
+      "多语言支持",
+      "协作编程",
+      "云端运行"
+    ],
+    "features_en": [
+      "AI code completion",
+      "Intelligent error detection",
+      "Multi-language support",
+      "Collaborative coding",
+      "Cloud-based execution"
+    ],
+    "pros_zh": [
+      "免费基础功能",
+      "集成开发环境",
+      "实时协作"
+    ],
+    "pros_en": [
+      "Free basic features",
+      "Integrated development environment",
+      "Real-time collaboration"
+    ],
+    "cons_zh": [
+      "免费层使用限制",
+      "依赖网络连接"
+    ],
+    "cons_en": [
+      "Free tier has usage limits",
+      "Requires internet connection"
+    ],
+    "tips_zh": [
+      "充分利用AI提高编码效率",
+      "关注免费信用重置时间"
+    ],
+    "tips_en": [
+      "Make full use of AI to boost coding efficiency",
+      "Keep track of free credit reset times"
+    ],
+    "rating": 4,
+    "paid_from": "每月$7起",
+    "paid_from_en": "From $7/month",
+    "type": "tool",
+    "category_zh": "编程助手",
+    "category_en": "Coding",
+    "last_updated": "2026-05-24",
+    "activity": {
+      "has_activity": false
+    },
+    "images": [],
+    "plans": []
+  },
+  {
+    "slug": "vercel-v0",
+    "name_zh": "Vercel v0 AI工具",
+    "name_en": "Vercel v0",
+    "category": "coding",
+    "official_url": "https://v0.dev",
+    "company_zh": "Vercel",
+    "company_en": "Vercel",
+    "description_zh": "用AI快速生成UI组件，前端开发更轻松。",
+    "description_en": "An AI tool for generating UI components from text, streamlining frontend development.",
+    "free_credits": {
+      "type": "monthly_generations",
+      "amount": "100次",
+      "amount_en": "100 generations",
+      "resolution": "标准",
+      "watermark": false,
+      "commercial_use": true,
+      "reset": "每月重置"
+    },
+    "features_zh": [
+      "自然语言描述生成UI",
+      "实时预览和调整",
+      "导出为React代码",
+      "响应式设计支持",
+      "与Vercel部署无缝集成"
+    ],
+    "features_en": [
+      "Generate UI from natural language",
+      "Real-time preview and editing",
+      "Export to React code",
+      "Responsive design support",
+      "Seamless integration with Vercel deployment"
+    ],
+    "pros_zh": [
+      "上手简单，无需编码基础",
+      "生成质量高，样式现代",
+      "加速原型设计和开发"
+    ],
+    "pros_en": [
+      "Easy to use, no coding required",
+      "High-quality, modern outputs",
+      "Speeds up prototyping and development"
+    ],
+    "cons_zh": [
+      "免费版生成次数有限",
+      "复杂定制可能需手动修改"
+    ],
+    "cons_en": [
+      "Free tier has limited generations",
+      "Complex customizations may require manual adjustments"
+    ],
+    "tips_zh": [
+      "描述时尽量具体，效果更好",
+      "利用模板库快速启动项目"
+    ],
+    "tips_en": [
+      "Be specific in descriptions for better results",
+      "Use template library to kickstart projects"
+    ],
+    "rating": 4,
+    "paid_from": "每月20美元起",
+    "paid_from_en": "Starting from $20/month",
+    "type": "tool",
+    "category_zh": "编程助手",
+    "category_en": "Coding",
+    "last_updated": "2026-05-24",
+    "activity": {
+      "has_activity": false
+    },
+    "images": [],
+    "plans": []
+  },
+  {
+    "slug": "create-xyz",
+    "name_zh": "创世AI",
+    "name_en": "Create.xyz",
+    "category": "coding",
+    "official_url": "https://create.xyz",
+    "company_zh": "创世科技",
+    "company_en": "Create Technologies",
+    "description_zh": "Create.xyz 是个超棒的AI工具，一键生成图像，设计小白也能用。",
+    "description_en": "Create.xyz is an AI tool that generates images and designs with a single click, perfect for beginners.",
+    "free_credits": {
+      "type": "每日",
+      "amount": "10次",
+      "amount_en": "10 credits per day",
+      "resolution": "1024x1024",
+      "watermark": "有",
+      "commercial_use": "否",
+      "reset": "每天重置"
+    },
+    "features_zh": [
+      "一键生成图像",
+      "多种风格选择",
+      "实时预览效果",
+      "简单易用界面",
+      "支持导出高清图"
+    ],
+    "features_en": [
+      "One-click image generation",
+      "Multiple style options",
+      "Real-time preview",
+      "Simple user interface",
+      "Export high-resolution images"
+    ],
+    "pros_zh": [
+      "生成速度快",
+      "界面友好",
+      "免费额度够用"
+    ],
+    "pros_en": [
+      "Fast generation speed",
+      "User-friendly interface",
+      "Adequate free credits"
+    ],
+    "cons_zh": [
+      "免费版有水印",
+      "商用需要付费"
+    ],
+    "cons_en": [
+      "Watermark on free version",
+      "Commercial use requires payment"
+    ],
+    "tips_zh": [
+      "多试试不同风格组合",
+      "用免费额度做练习"
+    ],
+    "tips_en": [
+      "Try different style combinations",
+      "Use free credits for practice"
+    ],
+    "rating": 4.5,
+    "paid_from": "$9.99/month",
+    "paid_from_en": "$9.99/month",
+    "type": "tool",
+    "category_zh": "编程助手",
+    "category_en": "Coding",
+    "last_updated": "2026-05-24",
+    "activity": {
+      "has_activity": false
+    },
+    "images": [],
+    "plans": []
+  },
+  {
+    "slug": "figma-ai",
+    "name_zh": "Figma AI",
+    "name_en": "Figma AI",
+    "category": "coding",
+    "official_url": "https://www.figma.com",
+    "company_zh": "Figma公司",
+    "company_en": "Figma, Inc.",
+    "description_zh": "Figma AI集成智能设计工具，提升设计效率。",
+    "description_en": "Figma AI integrates intelligent design tools to enhance design efficiency and collaboration.",
+    "free_credits": {
+      "type": "limited",
+      "amount": "50次/月",
+      "amount_en": "50 per month",
+      "resolution": "high",
+      "watermark": false,
+      "commercial_use": true,
+      "reset": "每月重置"
+    },
+    "features_zh": [
+      "智能布局建议",
+      "自动设计生成",
+      "实时协作优化",
+      "样式推荐",
+      "资源搜索集成"
+    ],
+    "features_en": [
+      "Smart layout suggestions",
+      "Automatic design generation",
+      "Real-time collaboration optimization",
+      "Style recommendations",
+      "Resource search integration"
+    ],
+    "pros_zh": [
+      "提高设计效率",
+      "无缝协作体验",
+      "丰富的AI工具集"
+    ],
+    "pros_en": [
+      "Enhances design efficiency",
+      "Seamless collaboration experience",
+      "Rich set of AI tools"
+    ],
+    "cons_zh": [
+      "学习曲线较陡",
+      "依赖网络连接"
+    ],
+    "cons_en": [
+      "Steep learning curve",
+      "Requires internet connection"
+    ],
+    "tips_zh": [
+      "利用AI建议加速设计流程",
+      "结合手动调整优化结果"
+    ],
+    "tips_en": [
+      "Use AI suggestions to speed up design process",
+      "Combine with manual adjustments for optimization"
+    ],
+    "rating": 4.5,
+    "paid_from": "$12/月",
+    "paid_from_en": "From $12/month",
+    "type": "tool",
+    "category_zh": "编程助手",
+    "category_en": "Coding",
+    "last_updated": "2026-05-24",
+    "activity": {
+      "has_activity": false
+    },
+    "images": [],
+    "plans": []
+  },
+  {
+    "slug": "framer-ai",
+    "name_zh": "Framer AI",
+    "name_en": "Framer AI",
+    "category": "coding",
+    "official_url": "https://www.framer.com/",
+    "company_zh": "Framer 公司",
+    "company_en": "Framer Inc.",
+    "description_zh": "一个 AI 驱动的网站构建工具，帮助用户快速创建响应式网站。",
+    "description_en": "An AI-powered website builder that enables users to create responsive websites quickly with drag-and-drop editing.",
+    "free_credits": {
+      "type": "免费计划",
+      "amount": "1 个站点，有限功能",
+      "amount_en": "1 site, limited features",
+      "resolution": "响应式",
+      "watermark": "是",
+      "commercial_use": "否",
+      "reset": "不适用"
+    },
+    "features_zh": [
+      "AI 设计助手",
+      "拖放编辑器",
+      "响应式布局",
+      "CMS 集成",
+      "动画效果"
+    ],
+    "features_en": [
+      "AI design assistant",
+      "Drag-and-drop editor",
+      "Responsive layouts",
+      "CMS integration",
+      "Animation effects"
+    ],
+    "pros_zh": [
+      "易于上手",
+      "AI 加速设计",
+      "免费计划可用"
+    ],
+    "pros_en": [
+      "Easy to use",
+      "AI accelerates design",
+      "Free plan available"
+    ],
+    "cons_zh": [
+      "免费版有水印",
+      "高级功能需付费"
+    ],
+    "cons_en": [
+      "Watermark on free version",
+      "Advanced features require payment"
+    ],
+    "tips_zh": [
+      "利用 AI 功能快速原型设计",
+      "学习文档以充分利用工具"
+    ],
+    "tips_en": [
+      "Use AI features for quick prototyping",
+      "Read documentation to fully utilize the tool"
+    ],
+    "rating": 4.5,
+    "paid_from": "$12/月",
+    "paid_from_en": "$12/month",
+    "type": "tool",
+    "category_zh": "编程助手",
+    "category_en": "Coding",
+    "last_updated": "2026-05-24",
+    "activity": {
+      "has_activity": false
+    },
+    "images": [],
+    "plans": []
+  },
+  {
+    "slug": "void-ai-image-generator",
+    "name_zh": "Void",
+    "name_en": "Void",
+    "category": "coding",
+    "official_url": "https://www.aifreeplan.com/tools/void",
+    "company_zh": "AIFreePlan",
+    "company_en": "AIFreePlan",
+    "description_zh": "免费AI绘图，无限制使用，无需登录，快速生成高质量图像。",
+    "description_en": "A free AI image generator that creates images from text prompts. No login, unlimited usage, and fast generation of high-quality visuals.",
+    "free_credits": {
+      "type": "无需登录",
+      "amount": "无限",
+      "amount_en": "Unlimited",
+      "resolution": "1024x1024",
+      "watermark": "无",
+      "commercial_use": "是",
+      "reset": "每日重置"
+    },
+    "features_zh": [
+      "完全免费，无限制生成",
+      "支持文本生成图像",
+      "提供多种艺术风格",
+      "无水印，可商用",
+      "生成速度快，无需排队"
+    ],
+    "features_en": [
+      "Completely free with unlimited generations",
+      "Text-to-image generation",
+      "Supports multiple artistic styles",
+      "No watermarks, suitable for commercial use",
+      "Fast generation with no queues"
+    ],
+    "pros_zh": [
+      "零门槛使用，无需注册登录",
+      "生成质量不错，对提示词响应准确",
+      "提供基础的图像编辑功能"
+    ],
+    "pros_en": [
+      "Zero barrier to entry, no registration needed",
+      "Good generation quality with accurate prompt response",
+      "Includes basic image editing features"
+    ],
+    "cons_zh": [
+      "可选的基础模型较少",
+      "无专业级图像编辑工具"
+    ],
+    "cons_en": [
+      "Limited selection of base models",
+      "Lacks professional-grade image editing tools"
+    ],
+    "tips_zh": [
+      "提示词写得越详细，生成结果越好",
+      "可以尝试不同风格关键词，如‘水彩’、‘像素风’"
+    ],
+    "tips_en": [
+      "Write detailed prompts for better results",
+      "Try different style keywords like 'watercolor' or 'pixel art'"
+    ],
+    "rating": 4,
+    "paid_from": "免费",
+    "paid_from_en": "Free",
+    "type": "tool",
+    "category_zh": "编程助手",
+    "category_en": "Coding",
+    "last_updated": "2026-05-24",
+    "activity": {
+      "has_activity": false
+    },
+    "images": [],
+    "plans": []
+  },
+  {
+    "slug": "supermaven",
+    "name_zh": "Supermaven",
+    "name_en": "Supermaven",
+    "category": "coding",
+    "official_url": "https://supermaven.com",
+    "company_zh": "Supermaven公司",
+    "company_en": "Supermaven Inc.",
+    "description_zh": "AI驱动的代码助手，帮助开发者快速编写和编辑代码。",
+    "description_en": "An AI-powered coding assistant that enhances developer productivity by generating and editing code efficiently.",
+    "free_credits": {
+      "type": "free_tier",
+      "amount": "50",
+      "amount_en": "50",
+      "resolution": "high",
+      "watermark": false,
+      "commercial_use": true,
+      "reset": "daily"
+    },
+    "features_zh": [
+      "AI代码生成",
+      "实时代码解释",
+      "错误自动修复",
+      "支持多种编程语言",
+      "IDE集成"
+    ],
+    "features_en": [
+      "AI code generation",
+      "Real-time code explanation",
+      "Automatic error fixing",
+      "Multi-language support",
+      "IDE integration"
+    ],
+    "pros_zh": [
+      "提高编程效率",
+      "用户界面友好",
+      "免费额度充足"
+    ],
+    "pros_en": [
+      "Boosts coding efficiency",
+      "User-friendly interface",
+      "Generous free tier"
+    ],
+    "cons_zh": [
+      "需要网络连接",
+      "高级功能需付费"
+    ],
+    "cons_en": [
+      "Requires internet connection",
+      "Advanced features require payment"
+    ],
+    "tips_zh": [
+      "结合个人代码库使用以获得更好效果",
+      "定期检查更新以获取新特性"
+    ],
+    "tips_en": [
+      "Use with personal codebase for better results",
+      "Check for updates regularly to access new features"
+    ],
+    "rating": 4,
+    "paid_from": "$9/月",
+    "paid_from_en": "$9/month",
+    "type": "tool",
+    "category_zh": "编程助手",
+    "category_en": "Coding",
+    "last_updated": "2026-05-24",
+    "activity": {
+      "has_activity": false
+    },
+    "images": [],
+    "plans": []
+  },
+  {
+    "slug": "pieces",
+    "name_zh": "Pieces",
+    "name_en": "Pieces",
+    "category": "coding",
+    "official_url": "https://pieces.app",
+    "company_zh": "Pieces Technologies",
+    "company_en": "Pieces Technologies",
+    "description_zh": "一款专为开发者设计的AI驱动代码片段管理与生产力工具。",
+    "description_en": "An AI-powered code snippet management and productivity tool designed for developers.",
+    "free_credits": {
+      "type": "每月使用次数",
+      "amount": 100,
+      "amount_en": "100 times per month",
+      "resolution": "无限制",
+      "watermark": "无",
+      "commercial_use": "是",
+      "reset": "每月重置"
+    },
+    "features_zh": [
+      "AI驱动的代码片段捕获与上下文理解",
+      "支持从各类开发环境直接捕获代码",
+      "强大的全局搜索与智能推荐",
+      "跨平台支持（桌面端、移动端、浏览器插件）",
+      "团队协作与知识库共享功能"
+    ],
+    "features_en": [
+      "AI-powered code snippet capture and context understanding",
+      "Direct capture from various development environments",
+      "Powerful global search and smart recommendations",
+      "Cross-platform support (Desktop, Mobile, Browser Extension)",
+      "Team collaboration and knowledge base sharing"
+    ],
+    "pros_zh": [
+      "极大提升代码复用和查找效率",
+      "界面直观，与开发工作流无缝集成",
+      "免费版功能已足够日常使用"
+    ],
+    "pros_en": [
+      "Significantly boosts code reuse and lookup efficiency",
+      "Intuitive interface, integrates seamlessly into dev workflow",
+      "Free tier is sufficient for daily use"
+    ],
+    "cons_zh": [
+      "高级AI功能和团队协作需付费订阅",
+      "对于非代码类型的笔记支持相对基础"
+    ],
+    "cons_en": [
+      "Advanced AI features and team collaboration require a paid subscription",
+      "Support for non-code note types is relatively basic"
+    ],
+    "tips_zh": [
+      "充分利用AI的上下文理解功能，让代码片段管理更智能",
+      "结合浏览器插件，快速保存网页上的有价值代码片段"
+    ],
+    "tips_en": [
+      "Fully utilize the AI context understanding feature for smarter snippet management",
+      "Use the browser extension to quickly save valuable code snippets from web pages"
+    ],
+    "rating": 4.5,
+    "paid_from": "$12/月",
+    "paid_from_en": "$12/month",
+    "type": "tool",
+    "category_zh": "编程助手",
+    "category_en": "Coding",
+    "last_updated": "2026-05-24",
+    "activity": {
+      "has_activity": false
+    },
+    "images": [],
+    "plans": []
+  },
+  {
+    "slug": "coderabbit",
+    "name_zh": "CodeRabbit",
+    "name_en": "CodeRabbit",
+    "category": "coding",
+    "official_url": "https://coderabbit.ai",
+    "company_zh": "CodeRabbit公司",
+    "company_en": "CodeRabbit Inc.",
+    "description_zh": "智能AI代码审查助手，自动检测问题，提升代码质量和安全性。",
+    "description_en": "AI-powered code review tool that automates detection of issues and enhances code quality and security.",
+    "free_credits": {
+      "type": "每月免费行数",
+      "amount": "500行",
+      "amount_en": "500 lines/month",
+      "resolution": "N/A",
+      "watermark": "无",
+      "commercial_use": "允许开源项目",
+      "reset": "每月重置"
+    },
+    "features_zh": [
+      "自动代码审查",
+      "安全漏洞扫描",
+      "性能优化建议",
+      "多平台集成",
+      "实时反馈"
+    ],
+    "features_en": [
+      "Automated code review",
+      "Security vulnerability scanning",
+      "Performance optimization suggestions",
+      "Multi-platform integration",
+      "Real-time feedback"
+    ],
+    "pros_zh": [
+      "免费计划对开源友好",
+      "提升代码可维护性",
+      "集成简单"
+    ],
+    "pros_en": [
+      "Free plan friendly for open source",
+      "Enhances code maintainability",
+      "Simple integration"
+    ],
+    "cons_zh": [
+      "免费版行数有限",
+      "复杂代码可能误报"
+    ],
+    "cons_en": [
+      "Free version has line limits",
+      "May produce false positives on complex code"
+    ],
+    "tips_zh": [
+      "定期检查审查报告",
+      "结合测试工具使用"
+    ],
+    "tips_en": [
+      "Regularly review reports",
+      "Combine with testing tools"
+    ],
+    "rating": 4.5,
+    "paid_from": "$10/月",
+    "paid_from_en": "$10/month",
+    "type": "tool",
+    "category_zh": "编程助手",
+    "category_en": "Coding",
+    "last_updated": "2026-05-24",
+    "activity": {
+      "has_activity": false
+    },
+    "images": [],
+    "plans": []
+  },
+  {
+    "slug": "sourcery",
+    "name_zh": "Sourcery",
+    "name_en": "Sourcery",
+    "category": "coding",
+    "official_url": "https://sourcery.ai/",
+    "company_zh": "Sourcery公司",
+    "company_en": "Sourcery Inc.",
+    "description_zh": "一个AI驱动的代码审查工具，帮你快速提升代码质量，集成GitHub用起来超方便。",
+    "description_en": "An AI-powered code review tool that enhances code quality, integrating seamlessly with GitHub for effortless use.",
+    "free_credits": {
+      "type": "monthly",
+      "amount": "50",
+      "amount_en": "50",
+      "resolution": "N/A",
+      "watermark": false,
+      "commercial_use": true,
+      "reset": "monthly"
+    },
+    "features_zh": [
+      "自动扫描代码问题",
+      "提供详细改进建议",
+      "支持Python等多种语言",
+      "直接集成到GitHub工作流",
+      "实时反馈节省时间"
+    ],
+    "features_en": [
+      "Automatically scans code issues",
+      "Provides detailed improvement suggestions",
+      "Supports multiple languages like Python",
+      "Integrates directly into GitHub workflow",
+      "Real-time feedback to save time"
+    ],
+    "pros_zh": [
+      "代码质量提升明显",
+      "操作简单易上手",
+      "免费额度够日常用"
+    ],
+    "pros_en": [
+      "Noticeably improves code quality",
+      "Easy to use and intuitive",
+      "Free credits sufficient for daily use"
+    ],
+    "cons_zh": [
+      "免费版次数有限制",
+      "需要稳定网络连接"
+    ],
+    "cons_en": [
+      "Free version has usage limits",
+      "Requires stable internet connection"
+    ],
+    "tips_zh": [
+      "先试用免费版看看效果",
+      "定期检查工具更新以获取新功能"
+    ],
+    "tips_en": [
+      "Try the free version first to see the effect",
+      "Regularly check for updates to get new features"
+    ],
+    "rating": 4.5,
+    "paid_from": "$10/month",
+    "paid_from_en": "$10/month",
+    "type": "tool",
+    "category_zh": "编程助手",
+    "category_en": "Coding",
+    "last_updated": "2026-05-24",
+    "activity": {
+      "has_activity": false
+    },
+    "images": [],
+    "plans": []
+  },
+  {
+    "slug": "perplexity-ai",
+    "name_zh": "Perplexity AI",
+    "name_en": "Perplexity AI",
+    "category": "ai-assistant",
+    "official_url": "https://www.perplexity.ai",
+    "company_zh": "Perplexity AI, Inc.",
+    "company_en": "Perplexity AI, Inc.",
+    "description_zh": "一个结合实时网络搜索与对话式AI的强大问答引擎，直接提供带来源的答案。",
+    "description_en": "A powerful Q&A engine combining real-time web search with conversational AI, providing direct answers with sources.",
+    "free_credits": {
+      "type": "每日查询限制",
+      "amount": "每天5次Pro搜索",
+      "amount_en": "5 Pro searches per day",
+      "resolution": "N/A",
+      "watermark": "无",
+      "commercial_use": "是",
+      "reset": "每日重置"
+    },
+    "features_zh": [
+      "实时联网搜索，信息即时更新",
+      "支持多模态输入（文本、图片、文件）",
+      "提供答案时附带信息来源链接",
+      "支持多轮对话，可深入探讨问题",
+      "界面简洁，交互体验流畅"
+    ],
+    "features_en": [
+      "Real-time web search for up-to-date information",
+      "Supports multi-modal input (text, images, files)",
+      "Provides answers with source links",
+      "Supports multi-turn conversations for deeper exploration",
+      "Clean interface and smooth user experience"
+    ],
+    "pros_zh": [
+      "免费版功能已足够日常研究使用",
+      "答案直接、清晰，并标注来源，便于核实",
+      "是传统搜索引擎的有力补充和替代"
+    ],
+    "pros_en": [
+      "Free version is sufficient for daily research needs",
+      "Answers are direct, clear, and sourced for verification",
+      "Powerful supplement and alternative to traditional search engines"
+    ],
+    "cons_zh": [
+      "免费版每日Pro搜索次数有限",
+      "对于极其专业或小众领域的信息覆盖可能仍有盲区"
+    ],
+    "cons_en": [
+      "Limited daily Pro searches on the free plan",
+      "Coverage of extremely niche or specialized topics may have blind spots"
+    ],
+    "tips_zh": [
+      "提问时尽量具体，有助于获得更精准的答案",
+      "利用追问功能，对答案中的关键点进行深入挖掘"
+    ],
+    "tips_en": [
+      "Be specific in your questions to get more accurate answers",
+      "Use the follow-up feature to dig deeper into key points in the answers"
+    ],
+    "rating": 4.5,
+    "paid_from": "每月150元起",
+    "paid_from_en": "$20/mo",
+    "type": "tool",
+    "category_zh": "AI助手",
+    "category_en": "AI Assistant",
+    "last_updated": "2026-05-24",
+    "activity": {
+      "has_activity": false
+    },
+    "images": [],
+    "plans": []
+  },
+  {
+    "slug": "tongyi",
+    "name_zh": "通义",
+    "name_en": "Tongyi",
+    "category": "ai-assistant",
+    "official_url": "https://tongyi.aliyun.com/",
+    "company_zh": "阿里云",
+    "company_en": "Alibaba Cloud",
+    "description_zh": "阿里云推出的AI语言模型，支持智能对话和内容生成。",
+    "description_en": "An AI language model by Alibaba Cloud, supporting intelligent dialogue and content generation.",
+    "free_credits": {
+      "type": "queries",
+      "amount": 100,
+      "amount_en": "100 queries per day",
+      "resolution": "N/A",
+      "watermark": "no",
+      "commercial_use": "yes",
+      "reset": "daily"
+    },
+    "features_zh": [
+      "多轮对话",
+      "内容生成",
+      "知识问答",
+      "代码辅助",
+      "多语言支持"
+    ],
+    "features_en": [
+      "Multi-turn dialogue",
+      "Content generation",
+      "Knowledge Q&A",
+      "Code assistance",
+      "Multi-language support"
+    ],
+    "pros_zh": [
+      "免费使用",
+      "响应迅速",
+      "中文优化"
+    ],
+    "pros_en": [
+      "Free to use",
+      "Fast response",
+      "Optimized for Chinese"
+    ],
+    "cons_zh": [
+      "免费额度有限",
+      "复杂任务可能不稳定"
+    ],
+    "cons_en": [
+      "Limited free quota",
+      "May be unstable for complex tasks"
+    ],
+    "tips_zh": [
+      "使用清晰指令",
+      "关注免费额度变化"
+    ],
+    "tips_en": [
+      "Use clear instructions",
+      "Monitor free quota changes"
+    ],
+    "rating": 4,
+    "paid_from": "99 CNY/month",
+    "paid_from_en": "99 CNY per month",
+    "type": "tool",
+    "category_zh": "AI助手",
+    "category_en": "AI Assistant",
+    "last_updated": "2026-05-24",
+    "activity": {
+      "has_activity": false
+    },
+    "images": [],
+    "plans": []
+  },
+  {
+    "slug": "grammarly",
+    "name_zh": "Grammarly",
+    "name_en": "Grammarly",
+    "category": "ai-assistant",
+    "official_url": "https://www.grammarly.com/",
+    "company_zh": "Grammarly, Inc.",
+    "company_en": "Grammarly, Inc.",
+    "description_zh": "Grammarly是一款智能语法检查和写作辅助工具，帮助提升文本质量。",
+    "description_en": "Grammarly is an AI-powered writing assistant that checks grammar, spelling, punctuation, and style to improve writing.",
+    "free_credits": {
+      "type": "unlimited_basic",
+      "amount": "unlimited",
+      "amount_en": "Unlimited basic grammar checks",
+      "resolution": "Basic grammar, spelling, and punctuation",
+      "watermark": "No",
+      "commercial_use": "Limited",
+      "reset": "None"
+    },
+    "features_zh": [
+      "实时语法检查",
+      "拼写纠正",
+      "标点符号建议",
+      "写作风格优化",
+      "多语言支持"
+    ],
+    "features_en": [
+      "Real-time grammar checking",
+      "Spelling correction",
+      "Punctuation suggestions",
+      "Writing style improvement",
+      "Multi-language support"
+    ],
+    "pros_zh": [
+      "检查准确率高",
+      "界面友好易用",
+      "免费版功能实用"
+    ],
+    "pros_en": [
+      "High accuracy in checks",
+      "User-friendly interface",
+      "Useful free version features"
+    ],
+    "cons_zh": [
+      "高级功能需付费",
+      "偶尔误报"
+    ],
+    "cons_en": [
+      "Advanced features require payment",
+      "Occasional false positives"
+    ],
+    "tips_zh": [
+      "建议定期使用以保持写作一致性",
+      "结合付费版获得更全面检查"
+    ],
+    "tips_en": [
+      "Use regularly to maintain writing consistency",
+      "Consider paid version for comprehensive checks"
+    ],
+    "rating": 4.5,
+    "paid_from": "$12 per month",
+    "paid_from_en": "From $12 per month",
+    "type": "tool",
+    "category_zh": "AI助手",
+    "category_en": "AI Assistant",
+    "last_updated": "2026-05-24",
+    "activity": {
+      "has_activity": false
+    },
+    "images": [],
+    "plans": []
+  },
+  {
+    "slug": "copy-ai",
+    "name_zh": "Copy.ai",
+    "name_en": "Copy.ai",
+    "category": "ai-assistant",
+    "official_url": "https://www.copy.ai",
+    "company_zh": "Copy.ai公司",
+    "company_en": "Copy.ai Inc.",
+    "description_zh": "一款AI文案生成工具，快速创建营销内容。",
+    "description_en": "AI-powered copywriting tool for quickly generating marketing content and improving writing efficiency.",
+    "free_credits": {
+      "type": "words",
+      "amount": "2000",
+      "amount_en": "2000 words per month",
+      "resolution": "N/A",
+      "watermark": "No",
+      "commercial_use": "Yes",
+      "reset": "Monthly"
+    },
+    "features_zh": [
+      "AI文案自动生成",
+      "支持多语言创作",
+      "提供丰富模板库",
+      "实时编辑与优化",
+      "团队协作与分享"
+    ],
+    "features_en": [
+      "AI-powered copy generation",
+      "Multi-language support",
+      "Extensive template library",
+      "Real-time editing and optimization",
+      "Team collaboration and sharing"
+    ],
+    "pros_zh": [
+      "操作简单，易于上手",
+      "生成速度快，节省时间",
+      "内容质量较高，实用性强"
+    ],
+    "pros_en": [
+      "Easy to use and intuitive",
+      "Fast generation saves time",
+      "High-quality, practical content"
+    ],
+    "cons_zh": [
+      "免费额度有限，需升级",
+      "部分高级功能需付费"
+    ],
+    "cons_en": [
+      "Limited free credits require upgrade",
+      "Some advanced features are paid"
+    ],
+    "tips_zh": [
+      "先明确内容目标再使用工具",
+      "结合模板提升创作效率"
+    ],
+    "tips_en": [
+      "Define content goals before using",
+      "Combine with templates to boost efficiency"
+    ],
+    "rating": 4,
+    "paid_from": "每月9美元起",
+    "paid_from_en": "Starting from $9/month",
+    "type": "tool",
+    "category_zh": "AI助手",
+    "category_en": "AI Assistant",
+    "last_updated": "2026-05-24",
+    "activity": {
+      "has_activity": false
+    },
+    "images": [],
+    "plans": []
+  },
+  {
+    "slug": "writesonic",
+    "name_zh": "Writesonic",
+    "name_en": "Writesonic",
+    "category": "ai-assistant",
+    "official_url": "https://writesonic.com",
+    "company_zh": "Writesonic Inc.",
+    "company_en": "Writesonic Inc.",
+    "description_zh": "Writesonic是AI写作助手，快速生成营销文案。",
+    "description_en": "Writesonic is an AI writing tool that creates marketing copy quickly.",
+    "free_credits": {
+      "type": "免费试用",
+      "amount": "10,000字",
+      "amount_en": "10,000 words",
+      "resolution": "无",
+      "watermark": "无",
+      "commercial_use": "是",
+      "reset": "每月重置"
+    },
+    "features_zh": [
+      "AI文案生成",
+      "博客写作",
+      "广告优化",
+      "邮件内容",
+      "社交媒体帖子"
+    ],
+    "features_en": [
+      "AI copy generation",
+      "Blog writing",
+      "Ad optimization",
+      "Email content",
+      "Social media posts"
+    ],
+    "pros_zh": [
+      "速度快",
+      "多语言支持",
+      "操作简单"
+    ],
+    "pros_en": [
+      "Fast speed",
+      "Multi-language support",
+      "Simple to use"
+    ],
+    "cons_zh": [
+      "免费额度少",
+      "需人工调整"
+    ],
+    "cons_en": [
+      "Limited free credits",
+      "Needs manual tweaking"
+    ],
+    "tips_zh": [
+      "先用免费试用",
+      "结合人工编辑"
+    ],
+    "tips_en": [
+      "Try free trial first",
+      "Combine with manual editing"
+    ],
+    "rating": 4.5,
+    "paid_from": "每月15美元",
+    "paid_from_en": "From $15 per month",
+    "type": "tool",
+    "category_zh": "AI助手",
+    "category_en": "AI Assistant",
+    "last_updated": "2026-05-24",
+    "activity": {
+      "has_activity": false
+    },
+    "images": [],
+    "plans": []
+  },
+  {
+    "slug": "fireflies-ai",
+    "name_zh": "Fireflies.ai",
+    "name_en": "Fireflies.ai",
+    "category": "ai-assistant",
+    "official_url": "https://fireflies.ai",
+    "company_zh": "Fireflies Inc.",
+    "company_en": "Fireflies Inc.",
+    "description_zh": "AI驱动的会议转录和笔记工具，自动记录分析。",
+    "description_en": "AI-powered meeting transcription and note-taking tool that automatically records and analyzes meetings.",
+    "free_credits": {
+      "type": "monthly",
+      "amount": "1000分钟",
+      "amount_en": "1000 minutes of transcription per month",
+      "resolution": "high-quality audio",
+      "watermark": false,
+      "commercial_use": false,
+      "reset": "monthly"
+    },
+    "features_zh": [
+      "自动转录会议",
+      "生成会议摘要",
+      "提取关键话题",
+      "支持多平台集成",
+      "团队协作功能"
+    ],
+    "features_en": [
+      "Automatic meeting transcription",
+      "Generate meeting summaries",
+      "Extract key topics",
+      "Multi-platform integration",
+      "Team collaboration features"
+    ],
+    "pros_zh": [
+      "节省手动记录时间",
+      "提高转录准确性",
+      "易于与团队分享笔记"
+    ],
+    "pros_en": [
+      "Saves time on manual note-taking",
+      "Improves transcription accuracy",
+      "Easy to share notes with teams"
+    ],
+    "cons_zh": [
+      "免费计划有转录分钟限制",
+      "依赖网络连接"
+    ],
+    "cons_en": [
+      "Free plan has transcription minute limits",
+      "Requires internet connection"
+    ],
+    "tips_zh": [
+      "确保会议环境安静以提高转录质量",
+      "定期检查转录内容以纠正错误"
+    ],
+    "tips_en": [
+      "Ensure a quiet meeting environment for better transcription",
+      "Regularly review transcriptions for errors"
+    ],
+    "rating": 4.3,
+    "paid_from": "每月$10起",
+    "paid_from_en": "Starting from $10 per month",
+    "type": "tool",
+    "category_zh": "AI助手",
+    "category_en": "AI Assistant",
+    "last_updated": "2026-05-24",
+    "activity": {
+      "has_activity": false
+    },
+    "images": [],
+    "plans": []
+  },
+  {
+    "slug": "taskade",
+    "name_zh": "Taskade",
+    "name_en": "Taskade",
+    "category": "ai-assistant",
+    "official_url": "https://www.taskade.com",
+    "company_zh": "Taskade公司",
+    "company_en": "Taskade Inc.",
+    "description_zh": "Taskade是一款AI驱动的协作工具，帮你高效管理任务和项目。",
+    "description_en": "Taskade is an AI-powered collaboration tool for efficient task and project management.",
+    "free_credits": {
+      "type": "ai_credits",
+      "amount": "每月50次AI调用",
+      "amount_en": "50 AI calls per month",
+      "resolution": "N/A",
+      "watermark": false,
+      "commercial_use": true,
+      "reset": "每月重置"
+    },
+    "features_zh": [
+      "AI任务助手",
+      "实时协作",
+      "项目模板",
+      "工具集成",
+      "移动应用支持"
+    ],
+    "features_en": [
+      "AI task assistant",
+      "Real-time collaboration",
+      "Project templates",
+      "Tool integrations",
+      "Mobile app support"
+    ],
+    "pros_zh": [
+      "界面友好易上手",
+      "免费版功能全面",
+      "AI助力提升效率"
+    ],
+    "pros_en": [
+      "User-friendly interface",
+      "Comprehensive free features",
+      "AI boosts efficiency"
+    ],
+    "cons_zh": [
+      "高级AI功能需订阅",
+      "团队协作有学习成本"
+    ],
+    "cons_en": [
+      "Advanced AI features require subscription",
+      "Team collaboration has a learning curve"
+    ],
+    "tips_zh": [
+      "用AI快速生成任务列表",
+      "创建常用模板提高重复效率"
+    ],
+    "tips_en": [
+      "Use AI to quickly generate task lists",
+      "Create templates to improve repeated tasks"
+    ],
+    "rating": 4,
+    "paid_from": "每月5美元起",
+    "paid_from_en": "Starting at $5/month per user",
+    "type": "tool",
+    "category_zh": "AI助手",
+    "category_en": "AI Assistant",
+    "last_updated": "2026-05-24",
+    "activity": {
+      "has_activity": false
+    },
+    "images": [],
+    "plans": []
+  },
+  {
+    "slug": "motion",
+    "name_zh": "Motion",
+    "name_en": "Motion",
+    "category": "ai-assistant",
+    "official_url": "https://www.runwayml.com",
+    "company_zh": "RunwayML",
+    "company_en": "RunwayML",
+    "description_zh": "Motion是一款AI动画工具，能快速生成高质量动画。",
+    "description_en": "Motion is an AI animation tool that quickly generates high-quality animations from text or images.",
+    "free_credits": {
+      "type": "每月免费额度",
+      "amount": 5,
+      "amount_en": "5 credits per month",
+      "resolution": "1080p",
+      "watermark": false,
+      "commercial_use": false,
+      "reset": "每月重置"
+    },
+    "features_zh": [
+      "AI动画生成",
+      "支持文本到动画",
+      "自定义风格",
+      "批量处理",
+      "导出多种格式"
+    ],
+    "features_en": [
+      "AI animation generation",
+      "Text-to-animation support",
+      "Custom styles",
+      "Batch processing",
+      "Multiple export formats"
+    ],
+    "pros_zh": [
+      "生成速度快",
+      "用户界面友好",
+      "免费额度充足"
+    ],
+    "pros_en": [
+      "Fast generation speed",
+      "User-friendly interface",
+      "Sufficient free credits"
+    ],
+    "cons_zh": [
+      "免费版有水印",
+      "高级功能需付费"
+    ],
+    "cons_en": [
+      "Free version has watermark",
+      "Advanced features require payment"
+    ],
+    "tips_zh": [
+      "使用高质量输入以提高输出",
+      "定期检查免费额度重置"
+    ],
+    "tips_en": [
+      "Use high-quality input for better output",
+      "Regularly check free credit reset"
+    ],
+    "rating": 4,
+    "paid_from": "每月$20",
+    "paid_from_en": "starting at $20/month",
+    "type": "tool",
+    "category_zh": "AI助手",
+    "category_en": "AI Assistant",
+    "last_updated": "2026-05-24",
+    "activity": {
+      "has_activity": false
+    },
+    "images": [],
+    "plans": []
+  },
+  {
+    "slug": "reclaim-ai",
+    "name_zh": "Reclaim AI",
+    "name_en": "Reclaim AI",
+    "category": "ai-assistant",
+    "official_url": "https://reclaim.ai",
+    "company_zh": "Reclaim Technologies公司",
+    "company_en": "Reclaim Technologies Inc.",
+    "description_zh": "智能日程助手，优化时间管理，自动安排会议和任务。",
+    "description_en": "An AI-powered scheduling assistant that optimizes your calendar and automates meeting and task arrangements.",
+    "free_credits": {
+      "type": "free_tier",
+      "amount": "每月5次智能调度",
+      "amount_en": "5 smart scheduling sessions per month",
+      "resolution": "N/A",
+      "watermark": "none",
+      "commercial_use": false,
+      "reset": "monthly"
+    },
+    "features_zh": [
+      "自动日程优化",
+      "智能会议安排",
+      "时间块管理",
+      "任务优先级排序",
+      "日历集成"
+    ],
+    "features_en": [
+      "Automatic schedule optimization",
+      "Smart meeting scheduling",
+      "Time blocking management",
+      "Task prioritization",
+      "Calendar integration"
+    ],
+    "pros_zh": [
+      "提高时间效率",
+      "减少调度冲突",
+      "用户界面友好"
+    ],
+    "pros_en": [
+      "Improves time efficiency",
+      "Reduces scheduling conflicts",
+      "User-friendly interface"
+    ],
+    "cons_zh": [
+      "免费版功能有限",
+      "学习曲线稍陡"
+    ],
+    "cons_en": [
+      "Limited features in free version",
+      "Slightly steep learning curve"
+    ],
+    "tips_zh": [
+      "定期检查日程以优化时间",
+      "利用集成功能同步所有日历"
+    ],
+    "tips_en": [
+      "Regularly review schedule to optimize time",
+      "Use integration features to sync all calendars"
+    ],
+    "rating": 4.3,
+    "paid_from": "$8/月",
+    "paid_from_en": "$8/month",
+    "type": "tool",
+    "category_zh": "AI助手",
+    "category_en": "AI Assistant",
+    "last_updated": "2026-05-24",
+    "activity": {
+      "has_activity": false
+    },
+    "images": [],
+    "plans": []
+  },
+  {
+    "slug": "clockwise",
+    "name_zh": "Clockwise：你的智能时间管家",
+    "name_en": "Clockwise: Smart Scheduling Tool",
+    "category": "ai-assistant",
+    "official_url": "https://www.getclockwise.com",
+    "company_zh": "Clockwise 公司",
+    "company_en": "Clockwise Inc.",
+    "description_zh": "Clockwise是个聪明小助手，自动优化会议时间，帮你减少日程冲突，提升工作效率。",
+    "description_en": "Clockwise is an AI-powered scheduling tool that automatically adjusts your calendar to reduce meeting conflicts and boost productivity.",
+    "free_credits": {
+      "type": "free_tier",
+      "amount": "5次会议优化/月",
+      "amount_en": "5 meeting optimizations per month",
+      "resolution": "N/A",
+      "watermark": false,
+      "commercial_use": false,
+      "reset": "monthly"
+    },
+    "features_zh": [
+      "智能自动安排会议时间",
+      "保护你的专注时间块",
+      "实时检测日程冲突",
+      "无缝集成Google日历",
+      "自动回复邮件节省时间"
+    ],
+    "features_en": [
+      "Smart automatic meeting scheduling",
+      "Protects your focus time blocks",
+      "Real-time schedule conflict detection",
+      "Seamless Google Calendar integration",
+      "Auto email replies to save time"
+    ],
+    "pros_zh": [
+      "超级省时，减少手动调整",
+      "帮你避开会议疲劳，更专注",
+      "简单易用，提升日常效率"
+    ],
+    "pros_en": [
+      "Saves tons of time by reducing manual adjustments",
+      "Helps avoid meeting fatigue for better focus",
+      "Easy to use and boosts daily efficiency"
+    ],
+    "cons_zh": [
+      "免费版功能有点有限制",
+      "刚上手可能需要点时间适应"
+    ],
+    "cons_en": [
+      "Free version has limited features",
+      "May take some time to get used to initially"
+    ],
+    "tips_zh": [
+      "先设置好时间保护块，让Clockwise帮你守住专注时刻",
+      "定期查看优化建议，调整你的日程习惯"
+    ],
+    "tips_en": [
+      "Set up time protection blocks first to let Clockwise guard your focus time",
+      "Regularly check optimization suggestions to refine your scheduling habits"
+    ],
+    "rating": 4.5,
+    "paid_from": "每月$10起",
+    "paid_from_en": "Starting from $10 per month",
+    "type": "tool",
+    "category_zh": "AI助手",
+    "category_en": "AI Assistant",
+    "last_updated": "2026-05-24",
+    "activity": {
+      "has_activity": false
+    },
+    "images": [],
+    "plans": []
+  },
+  {
+    "slug": "clay",
+    "name_zh": "Clay",
+    "name_en": "Clay",
+    "category": "ai-assistant",
+    "official_url": "https://clay.com",
+    "company_zh": "Clay",
+    "company_en": "Clay",
+    "description_zh": "一个强大的AI数据富集和外联平台，帮你自动寻找和整理潜在客户的联系信息。",
+    "description_en": "A powerful AI data enrichment and outreach platform that automates finding and organizing prospect contact information.",
+    "free_credits": {
+      "type": "trial",
+      "amount": "100",
+      "amount_en": "100",
+      "resolution": "次",
+      "watermark": false,
+      "commercial_use": true,
+      "reset": "每月重置"
+    },
+    "features_zh": [
+      "从数十个数据源聚合信息",
+      "AI驱动的数据查找与验证",
+      "高度自动化的个性化外联工作流",
+      "灵活的表格和数据库管理",
+      "与CRM和数千个应用集成"
+    ],
+    "features_en": [
+      "Aggregates data from dozens of sources",
+      "AI-powered data finding and verification",
+      "Highly automated personalized outreach workflows",
+      "Flexible table and database management",
+      "Integrates with CRMs and thousands of apps"
+    ],
+    "pros_zh": [
+      "数据覆盖面广，来源可靠",
+      "自动化程度极高，大幅节省时间",
+      "界面直观，工作流可定制性强"
+    ],
+    "pros_en": [
+      "Extensive data coverage with reliable sources",
+      "Extremely high automation, significant time savings",
+      "Intuitive interface with strong workflow customization"
+    ],
+    "cons_zh": [
+      "高级功能和大量数据需要付费",
+      "学习曲线较陡，需要时间掌握"
+    ],
+    "cons_en": [
+      "Advanced features and large volumes of data require payment",
+      "Steeper learning curve, takes time to master"
+    ],
+    "tips_zh": [
+      "先利用免费额度熟悉核心的数据查找和验证功能。",
+      "尝试将Clay与你现有的CRM或邮箱工具连接，构建自动化流程。"
+    ],
+    "tips_en": [
+      "Start by using free credits to master the core data finding and verification features.",
+      "Try connecting Clay to your existing CRM or email tool to build automated workflows."
+    ],
+    "rating": 4.5,
+    "paid_from": "$49/月",
+    "paid_from_en": "$49/mo",
+    "type": "tool",
+    "category_zh": "AI助手",
+    "category_en": "AI Assistant",
+    "last_updated": "2026-05-24",
+    "activity": {
+      "has_activity": false
+    },
+    "images": [],
+    "plans": []
+  },
+  {
+    "slug": "lemcal",
+    "name_zh": "Lemcal日历",
+    "name_en": "Lemcal",
+    "category": "ai-assistant",
+    "official_url": "https://lemcal.com",
+    "company_zh": "Lemcal科技",
+    "company_en": "Lemcal Tech",
+    "description_zh": "Lemcal帮你智能管理日程，轻松规划每一天，告别混乱。",
+    "description_en": "Lemcal is an AI-powered calendar tool that helps you manage your schedule efficiently and plan your day with ease.",
+    "free_credits": {
+      "type": "每月免费日程创建",
+      "amount": 100,
+      "amount_en": "100 free events per month",
+      "resolution": "高清视图",
+      "watermark": "无",
+      "commercial_use": "允许",
+      "reset": "每月重置"
+    },
+    "features_zh": [
+      "智能提醒日程",
+      "自动优化时间安排",
+      "多设备同步",
+      "语音输入事件",
+      "集成AI助手"
+    ],
+    "features_en": [
+      "Smart reminders for events",
+      "Automatic schedule optimization",
+      "Multi-device sync",
+      "Voice input for events",
+      "AI assistant integration"
+    ],
+    "pros_zh": [
+      "界面简洁易用",
+      "AI建议实用贴心",
+      "免费额度够用不心疼"
+    ],
+    "pros_en": [
+      "Simple and easy-to-use interface",
+      "Practical and thoughtful AI suggestions",
+      "Generous free credits for daily use"
+    ],
+    "cons_zh": [
+      "高级功能得掏钱",
+      "同步偶尔会卡顿"
+    ],
+    "cons_en": [
+      "Advanced features require payment",
+      "Occasional sync delays"
+    ],
+    "tips_zh": [
+      "多看看AI建议，日程安排更智能",
+      "用语音输入，添加事件快如闪电"
+    ],
+    "tips_en": [
+      "Regularly review AI suggestions to make your schedule smarter",
+      "Use voice input to add events quickly and effortlessly"
+    ],
+    "rating": 4,
+    "paid_from": "每月9.9元起",
+    "paid_from_en": "Starting from $9.9 per month",
+    "type": "tool",
+    "category_zh": "AI助手",
+    "category_en": "AI Assistant",
+    "last_updated": "2026-05-24",
+    "activity": {
+      "has_activity": false
+    },
+    "images": [],
+    "plans": []
   }
 ]
