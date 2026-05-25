@@ -30,6 +30,40 @@ for (const tool of tools) {
   if (!byCategory[cat]) byCategory[cat] = [];
   byCategory[cat].push(tool);
 }
+
+// Schema: WebSite + ItemList
+const siteUrl = `https://aifreeplan.com/${locale}`;
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "AIFreePlan",
+    "url": "https://aifreeplan.com",
+    "description": description,
+    "inLanguage": locale,
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://aifreeplan.com/{locale}/all?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  },
+  ...Object.entries(CATEGORIES).flatMap(([cat, info]) => {
+    const catTools = byCategory[cat] || [];
+    if (catTools.length === 0) return [];
+    return [{
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": isZh ? info.zh : info.en,
+      "url": `${siteUrl}/${cat}`,
+      "numberOfItems": catTools.length,
+      "itemListElement": catTools.slice(0, 20).map((tool, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "url": `${siteUrl}/${tool.data.category}/${tool.data.slug}`
+      }))
+    }];
+  })
+];
 ---
 
 <BaseLayout
@@ -38,6 +72,7 @@ for (const tool of tools) {
   locale={locale}
   canonical={`https://aifreeplan.com/${locale}`}
   currentPath={`/${locale}`}
+  jsonLd={jsonLd}
 >
   <section class="hero">
     <h1>{isZh ? '所有AI工具的免费额度一张表看全' : 'Every AI Tool\'s Free Tier, One Page'}</h1>

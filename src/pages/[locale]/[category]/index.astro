@@ -31,6 +31,30 @@ const title = `${catName} | AIFreePlan`;
 const description = isZh
   ? `${catName}免费额度对比，${tools.length}个工具实测`
   : `${catName} free tier comparison, ${tools.length} tools tested`;
+
+const siteUrl = `https://aifreeplan.com/${locale}`;
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "AIFreePlan", "item": `https://aifreeplan.com/${locale}` },
+      { "@type": "ListItem", "position": 2, "name": catName, "item": `${siteUrl}/${category}` }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": catName,
+    "url": `${siteUrl}/${category}`,
+    "numberOfItems": tools.length,
+    "itemListElement": tools.map((tool, i) => ({
+      "@type": "ListItem",
+      "position": i + 1,
+      "url": `${siteUrl}/${category}/${tool.data.slug}`
+    }))
+  }
+];
 ---
 
 <BaseLayout
@@ -39,6 +63,7 @@ const description = isZh
   locale={locale}
   canonical={`https://aifreeplan.com/${locale}/${category}`}
   currentPath={`/${locale}/${category}`}
+  jsonLd={jsonLd}
 >
   <Breadcrumb items={[{ label: catName }]} locale={locale} />
 
