@@ -57,6 +57,14 @@ FABRICATED_PRODUCT_PATTERNS = [
 SUSPICIOUS_PATTERNS = [
     # 过时的模型名（2026年不应该出现）
     (r'GPT-3\.5\s*Turbo', 'GPT-3.5 Turbo已过时，2026年免费版用的是GPT-4o-mini'),
+    (r'(?<!\.)Qwen-72B(?!-)', 'Qwen-72B已过时，应为Qwen3-235B'),
+    (r'(?<!\.)Qwen-14B(?!-)', 'Qwen-14B已过时，应为Qwen3-30B'),
+    (r'(?<!\.)Qwen-7B(?!-)', 'Qwen-7B已过时，应为Qwen3-8B'),
+    (r'ERNIE\s*3\.5', 'ERNIE 3.5已过时，应为ERNIE 4.0'),
+    (r'(?<!\w)Gemini\s+Pro(?!\s+2)', 'Gemini Pro指代不明，应为Gemini 2.5 Pro'),
+    (r'(?<!\w)Llama\s+3(?!\.)(?!\w)', 'Llama 3已过时，应为Llama 4'),
+    (r'Mixtral\s+8x7B', 'Mixtral 8x7B已过时，应为Mixtral Large'),
+    (r'Stable\s+Diffusion\s+XL', 'SDXL已过时，应为Stable Diffusion 3'),
     # 自相矛盾的额度（同一工具在不同文章里数字不一致）
     # 这个需要交叉检查，单篇文章内检测不到
 ]
