@@ -104,6 +104,7 @@ def main():
         f"git checkout deploy-static",
         f"rm -rf en zh images *.html *.ico *.svg *.txt *.png robots.txt",
         f"cp -r {dist_tmp}/* .",
+        f"cp zh.html index.html",  # 铁律：根目录index.html必须是zh.html的副本
         f"git add -A && git commit -m 'deploy: 自动发布'",
         f"git push origin deploy-static",
         f"git checkout main",
