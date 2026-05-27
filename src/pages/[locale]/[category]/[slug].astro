@@ -85,10 +85,10 @@ const related = allTools
         <div class="free-credits-detail">
           <h2>{isZh ? '免费额度详情' : 'Free Credits Details'}</h2>
           <ul>
-            {tool.free_credits.amount && <li><strong>{isZh ? '额度' : 'Amount'}:</strong> {t('free_credits.amount')}</li>}
-            {tool.free_credits.reset && <li><strong>{isZh ? '重置' : 'Reset'}:</strong> {t('free_credits.reset')}</li>}
-            {tool.free_credits.watermark && <li><strong>{isZh ? '水印' : 'Watermark'}:</strong> {t('free_credits.watermark')}</li>}
-            {tool.free_credits.commercial_use && <li><strong>{isZh ? '商用' : 'Commercial'}:</strong> {t('free_credits.commercial_use')}</li>}
+            {tool.free_credits.amount && <li><strong>{isZh ? '额度' : 'Amount'}:</strong> {isZh ? tool.free_credits.amount : (tool.free_credits.amount_en || tool.free_credits.amount)}</li>}
+            {tool.free_credits.reset && <li><strong>{isZh ? '重置' : 'Reset'}:</strong> {isZh ? tool.free_credits.reset : (tool.free_credits.reset_en || tool.free_credits.reset)}</li>}
+            {tool.free_credits.watermark && <li><strong>{isZh ? '水印' : 'Watermark'}:</strong> {isZh ? tool.free_credits.watermark : (tool.free_credits.watermark_en || tool.free_credits.watermark)}</li>}
+            {tool.free_credits.commercial_use && <li><strong>{isZh ? '商用' : 'Commercial'}:</strong> {isZh ? tool.free_credits.commercial_use : (tool.free_credits.commercial_use_en || tool.free_credits.commercial_use)}</li>}
           </ul>
         </div>
       )}

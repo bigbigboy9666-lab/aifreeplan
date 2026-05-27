@@ -596,10 +596,10 @@
       "type": "activity",
       "amount": "注册送算力",
       "amount_en": "Credits on signup",
-      "duration": "N/A",
+      "duration": "不适用",
       "duration_en": "N/A",
-      "resolution": "N/A",
-      "watermark": "N/A",
+      "resolution": "不适用",
+      "watermark": "不适用",
       "watermark_en": "N/A",
       "commercial_use": "查看官方协议",
       "commercial_use_en": "Check official terms",
@@ -682,10 +682,10 @@
       "type": "signup",
       "amount": "注册送额度",
       "amount_en": "Credits on signup",
-      "duration": "N/A",
+      "duration": "不适用",
       "duration_en": "N/A",
-      "resolution": "N/A",
-      "watermark": "N/A",
+      "resolution": "不适用",
+      "watermark": "不适用",
       "watermark_en": "N/A",
       "commercial_use": "查看官方协议",
       "commercial_use_en": "Check official terms",
@@ -794,10 +794,10 @@
       "type": "signup",
       "amount": "注册送tokens",
       "amount_en": "Tokens on signup",
-      "duration": "N/A",
+      "duration": "不适用",
       "duration_en": "N/A",
-      "resolution": "N/A",
-      "watermark": "N/A",
+      "resolution": "不适用",
+      "watermark": "不适用",
       "watermark_en": "N/A",
       "commercial_use": "查看官方协议",
       "commercial_use_en": "Check official terms",
@@ -884,10 +884,10 @@
       "type": "signup",
       "amount": "注册送tokens",
       "amount_en": "Tokens on signup",
-      "duration": "N/A",
+      "duration": "不适用",
       "duration_en": "N/A",
-      "resolution": "N/A",
-      "watermark": "N/A",
+      "resolution": "不适用",
+      "watermark": "不适用",
       "watermark_en": "N/A",
       "commercial_use": "查看官方协议",
       "commercial_use_en": "Check official terms",
@@ -970,10 +970,10 @@
       "type": "daily",
       "amount": "每日免费额度",
       "amount_en": "Daily free credits",
-      "duration": "N/A",
+      "duration": "不适用",
       "duration_en": "N/A",
-      "resolution": "N/A",
-      "watermark": "N/A",
+      "resolution": "不适用",
+      "watermark": "不适用",
       "watermark_en": "N/A",
       "commercial_use": "查看官方协议",
       "commercial_use_en": "Check official terms",
@@ -1076,10 +1076,10 @@
       "type": "freemium",
       "amount": "基础版免费",
       "amount_en": "Basic tier free",
-      "duration": "N/A",
+      "duration": "不适用",
       "duration_en": "N/A",
-      "resolution": "N/A",
-      "watermark": "N/A",
+      "resolution": "不适用",
+      "watermark": "不适用",
       "watermark_en": "N/A",
       "commercial_use": "查看官方协议",
       "commercial_use_en": "Check official terms",
@@ -1166,10 +1166,10 @@
       "type": "unlimited",
       "amount": "个人版永久免费",
       "amount_en": "Personal plan free forever",
-      "duration": "N/A",
+      "duration": "不适用",
       "duration_en": "N/A",
-      "resolution": "N/A",
-      "watermark": "N/A",
+      "resolution": "不适用",
+      "watermark": "不适用",
       "watermark_en": "N/A",
       "commercial_use": "个人版可商用",
       "commercial_use_en": "Personal plan allows commercial use",
@@ -1253,10 +1253,10 @@
       "type": "unlimited",
       "amount": "个人版免费",
       "amount_en": "Free for individuals",
-      "duration": "N/A",
+      "duration": "不适用",
       "duration_en": "N/A",
-      "resolution": "N/A",
-      "watermark": "N/A",
+      "resolution": "不适用",
+      "watermark": "不适用",
       "watermark_en": "N/A",
       "commercial_use": "个人版可商用",
       "commercial_use_en": "Personal plan allows commercial use",
@@ -1339,10 +1339,10 @@
       "type": "signup",
       "amount": "新用户送额度",
       "amount_en": "Credits for new users",
-      "duration": "N/A",
+      "duration": "不适用",
       "duration_en": "N/A",
-      "resolution": "N/A",
-      "watermark": "N/A",
+      "resolution": "不适用",
+      "watermark": "不适用",
       "watermark_en": "N/A",
       "commercial_use": "查看官方协议",
       "commercial_use_en": "Check official terms",
@@ -1427,7 +1427,7 @@
       "amount_en": "CodingPlan Pro tier free for 30 days",
       "duration": "30天有效",
       "duration_en": "30-day validity",
-      "resolution": "N/A",
+      "resolution": "不适用",
       "watermark": "无",
       "watermark_en": "None",
       "commercial_use": "个人使用",
@@ -1528,7 +1528,7 @@
       "amount_en": "10M tokens/day",
       "duration": "无限对话",
       "duration_en": "Unlimited conversations",
-      "resolution": "N/A",
+      "resolution": "不适用",
       "watermark": "无",
       "watermark_en": "None",
       "commercial_use": "个人使用",
@@ -1625,10 +1625,10 @@
       "type": "limited",
       "amount": "Hobby免费计划",
       "amount_en": "Hobby free plan",
-      "duration": "N/A",
+      "duration": "不适用",
       "duration_en": "N/A",
-      "resolution": "N/A",
-      "watermark": "N/A",
+      "resolution": "不适用",
+      "watermark": "不适用",
       "watermark_en": "N/A",
       "commercial_use": "个人使用",
       "commercial_use_en": "Personal use",
@@ -1742,10 +1742,10 @@
       "type": "limited",
       "amount": "免费版Light用量",
       "amount_en": "Free plan Light usage",
-      "duration": "N/A",
+      "duration": "不适用",
       "duration_en": "N/A",
-      "resolution": "N/A",
-      "watermark": "N/A",
+      "resolution": "不适用",
+      "watermark": "不适用",
       "watermark_en": "N/A",
       "commercial_use": "个人使用",
       "commercial_use_en": "Personal use",
@@ -1827,10 +1827,10 @@
       "type": "daily",
       "amount": "每天有限次Pro搜索",
       "amount_en": "Limited Pro searches daily",
-      "duration": "N/A",
+      "duration": "不适用",
       "duration_en": "N/A",
-      "resolution": "N/A",
-      "watermark": "N/A",
+      "resolution": "不适用",
+      "watermark": "不适用",
       "watermark_en": "N/A",
       "commercial_use": "个人使用",
       "commercial_use_en": "Personal use",
@@ -1918,10 +1918,10 @@
       "type": "unlimited",
       "amount": "完全免费",
       "amount_en": "Completely free",
-      "duration": "N/A",
+      "duration": "不适用",
       "duration_en": "N/A",
-      "resolution": "N/A",
-      "watermark": "N/A",
+      "resolution": "不适用",
+      "watermark": "不适用",
       "watermark_en": "N/A",
       "commercial_use": "个人使用",
       "commercial_use_en": "Personal use",
@@ -2005,7 +2005,7 @@
       "type": "daily",
       "amount": "每天约25张",
       "amount_en": "~25 images/day",
-      "duration": "N/A",
+      "duration": "不适用",
       "duration_en": "N/A",
       "resolution": "基础分辨率",
       "watermark": "无",
@@ -2098,7 +2098,7 @@
       "amount_en": "Free, ads shown in CLI",
       "duration": "每天约5小时（社区反馈）",
       "duration_en": "~5hrs/day (community reports)",
-      "resolution": "N/A",
+      "resolution": "不适用",
       "watermark": "无",
       "watermark_en": "No",
       "commercial_use": "需查看最新协议",
@@ -2191,10 +2191,10 @@
       "type": "freemium",
       "amount": "免费版有限额",
       "amount_en": "Free tier with limits",
-      "duration": "N/A",
+      "duration": "不适用",
       "duration_en": "N/A",
-      "resolution": "N/A",
-      "watermark": "N/A",
+      "resolution": "不适用",
+      "watermark": "不适用",
       "watermark_en": "N/A",
       "commercial_use": "付费后可商用",
       "commercial_use_en": "Paid only",
@@ -2286,8 +2286,8 @@
       "commercial_use_en": "Personal use",
       "reset": "每月重置",
       "reset_en": "Resets monthly",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A"
     },
     "activity": {
       "has_activity": false
@@ -2368,8 +2368,8 @@
       "commercial_use_en": "Personal use",
       "reset": "每天重置",
       "reset_en": "Resets daily",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A"
     },
     "activity": {
       "has_activity": false
@@ -2450,8 +2450,8 @@
       "commercial_use_en": "Paid only",
       "reset": "每天重置",
       "reset_en": "Resets daily",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A"
     },
     "activity": {
       "has_activity": false
@@ -2532,8 +2532,8 @@
       "commercial_use_en": "Paid only",
       "reset": "新用户一次性赠送",
       "reset_en": "One-time for new users",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A"
     },
     "activity": {
       "has_activity": true,
@@ -2617,8 +2617,8 @@
       "commercial_use_en": "Personal use",
       "reset": "每天重置",
       "reset_en": "Resets daily",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A"
     },
     "activity": {
       "has_activity": false
@@ -2699,8 +2699,8 @@
       "commercial_use_en": "Paid only",
       "reset": "每天重置",
       "reset_en": "Resets daily",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A"
     },
     "activity": {
       "has_activity": false
@@ -2785,8 +2785,8 @@
       "commercial_use_en": "Paid only",
       "reset": "每天重置",
       "reset_en": "Resets daily",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A"
     },
     "activity": {
       "has_activity": false
@@ -2867,8 +2867,8 @@
       "commercial_use_en": "Personal use",
       "reset": "每天重置",
       "reset_en": "Resets daily",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A"
     },
     "activity": {
       "has_activity": false
@@ -2949,8 +2949,8 @@
       "commercial_use_en": "Commercial use OK",
       "reset": "每月重置",
       "reset_en": "Resets monthly",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A"
     },
     "activity": {
       "has_activity": false
@@ -3031,8 +3031,8 @@
       "commercial_use_en": "Personal use",
       "reset": "每天重置",
       "reset_en": "Resets daily",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A"
     },
     "activity": {
       "has_activity": false
@@ -3105,7 +3105,7 @@
       "type": "none",
       "amount": "免费开源",
       "amount_en": "Free & Open Source",
-      "resolution": "N/A",
+      "resolution": "不适用",
       "resolution_en": "N/A",
       "watermark": "无",
       "watermark_en": "No",
@@ -3113,8 +3113,8 @@
       "commercial_use_en": "Commercial use allowed (Apache 2.0)",
       "reset": "无限制",
       "reset_en": "No limits",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A"
     },
     "activity": {
       "has_activity": false
@@ -3198,7 +3198,7 @@
       "type": "monthly",
       "amount": "2000次补全/月（免费版）",
       "amount_en": "2000 completions/month (free tier)",
-      "resolution": "N/A",
+      "resolution": "不适用",
       "resolution_en": "N/A",
       "watermark": "无",
       "watermark_en": "No",
@@ -3206,8 +3206,8 @@
       "commercial_use_en": "Free commercial for students/OSS",
       "reset": "每月重置",
       "reset_en": "Resets monthly",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A"
     },
     "activity": {
       "has_activity": true,
@@ -3320,7 +3320,7 @@
       "type": "daily",
       "amount": "GPT-4o-mini 无限 / GPT-4o 有限次",
       "amount_en": "Unlimited GPT-4o-mini / Limited GPT-4o",
-      "resolution": "N/A",
+      "resolution": "不适用",
       "resolution_en": "N/A",
       "watermark": "无",
       "watermark_en": "No",
@@ -3328,8 +3328,8 @@
       "commercial_use_en": "Free tier allows commercial use",
       "reset": "每日重置",
       "reset_en": "Resets daily",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A"
     },
     "activity": {
       "has_activity": false
@@ -3419,7 +3419,7 @@
       "type": "daily",
       "amount": "Sonnet 模型有限次/天",
       "amount_en": "Limited Sonnet uses/day",
-      "resolution": "N/A",
+      "resolution": "不适用",
       "resolution_en": "N/A",
       "watermark": "无",
       "watermark_en": "No",
@@ -3427,8 +3427,8 @@
       "commercial_use_en": "Free tier allows commercial use",
       "reset": "每日重置",
       "reset_en": "Resets daily",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A"
     },
     "activity": {
       "has_activity": false
@@ -3516,7 +3516,7 @@
       "type": "none",
       "amount": "无常规免费额度",
       "amount_en": "No regular free credits",
-      "resolution": "N/A",
+      "resolution": "不适用",
       "resolution_en": "N/A",
       "watermark": "无",
       "watermark_en": "No",
@@ -3524,8 +3524,8 @@
       "commercial_use_en": "Paid only",
       "reset": "无",
       "reset_en": "None",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A"
     },
     "activity": {
       "has_activity": true,
@@ -3620,7 +3620,7 @@
       "type": "daily",
       "amount": "每日积分（模型不同消耗不同）",
       "amount_en": "Daily credits (cost varies by model)",
-      "resolution": "N/A",
+      "resolution": "不适用",
       "resolution_en": "N/A",
       "watermark": "无",
       "watermark_en": "No",
@@ -3628,8 +3628,8 @@
       "commercial_use_en": "Paid only",
       "reset": "每天重置",
       "reset_en": "Resets daily",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A"
     },
     "activity": {
       "has_activity": false
@@ -3720,10 +3720,13 @@
       "reset": "按月订阅，31天有效期",
       "commercial_use": "仅限编程工具使用，禁止自动化脚本和批量任务",
       "commercial_use_en": "For coding tools only (Claude Code, Cursor, OpenClaw etc.), no automation scripts or batch tasks",
-      "resolution": "standard",
+      "resolution": "标准",
       "watermark": "no",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "reset_en": "Monthly subscription, 31-day validity",
+      "watermark_en": "No",
+      "resolution_en": "Standard"
     },
     "activity": {
       "has_activity": false
@@ -3838,9 +3841,12 @@
       "commercial_use_en": "Free plan: no commercial use",
       "reset": "每天重置",
       "vocal_upload": "免费版可上传最长8分钟音频",
-      "resolution": "standard",
+      "resolution": "标准",
       "watermark": "no",
-      "duration_en": ""
+      "duration_en": "About 1-2 min per track",
+      "reset_en": "Resets daily",
+      "watermark_en": "No",
+      "resolution_en": "Standard"
     },
     "activity": {
       "has_activity": false
@@ -3922,10 +3928,14 @@
       "reset": "额度每月重置，消息每天重置",
       "code_export": "支持导出代码",
       "commercial_use": "免费版可商用",
-      "resolution": "standard",
+      "resolution": "标准",
       "watermark": "no",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "reset_en": "Credits monthly, messages daily",
+      "watermark_en": "No",
+      "commercial_use_en": "Commercial use allowed (free tier)",
+      "resolution_en": "Standard"
     },
     "activity": {
       "has_activity": false
@@ -4005,10 +4015,14 @@
       "watermark": "免费版有水印",
       "commercial_use": "免费版可商用但有水印",
       "export": "支持导出PDF",
-      "resolution": "standard",
-      "reset": "monthly",
-      "duration": "",
-      "duration_en": ""
+      "resolution": "标准",
+      "reset": "每月重置",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "reset_en": "Resets monthly",
+      "watermark_en": "Free tier has watermark",
+      "commercial_use_en": "Commercial use allowed (with watermark)",
+      "resolution_en": "Standard"
     },
     "activity": {
       "has_activity": false
@@ -4088,14 +4102,16 @@
       "daily_limit_en": "300 credits/day, resets every 24 hours",
       "models": "免费版仅可用Manus 1.6 Lite",
       "models_en": "Free plan: Manus 1.6 Lite only",
-      "resolution": "N/A",
+      "resolution": "不适用",
       "watermark": "无",
       "commercial_use": "允许",
       "commercial_use_en": "Allowed",
       "reset": "每日重置，不累积",
       "reset_en": "Daily reset, does not roll over",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "watermark_en": "无",
+      "resolution_en": "N/A"
     },
     "activity": {
       "has_activity": false
@@ -4479,8 +4495,12 @@
       "watermark": "无水印",
       "commercial_use": "可以商用",
       "reset": "每月重置",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "reset_en": "Resets monthly",
+      "watermark_en": "No watermark",
+      "commercial_use_en": "Commercial use allowed",
+      "resolution_en": "1024x1024"
     },
     "features_zh": [
       "一键生成图像",
@@ -4553,8 +4573,12 @@
       "watermark": "有水印",
       "commercial_use": "No",
       "reset": "每天重置",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "reset_en": "Resets daily",
+      "watermark_en": "Has watermark",
+      "commercial_use_en": "No",
+      "resolution_en": "1080p"
     },
     "features_zh": [
       "AI智能生成视频",
@@ -4627,8 +4651,12 @@
       "watermark": "有水印",
       "commercial_use": "不允许",
       "reset": "每月重置",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "reset_en": "Resets monthly",
+      "watermark_en": "Has watermark",
+      "commercial_use_en": "Not allowed",
+      "resolution_en": "720p"
     },
     "features_zh": [
       "文本到视频生成",
@@ -4698,11 +4726,15 @@
       "amount": "10次生成",
       "amount_en": "10 generations",
       "resolution": "720p",
-      "watermark": "False",
-      "commercial_use": "False",
+      "watermark": "无",
+      "commercial_use": "无",
       "reset": "每月重置",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "reset_en": "Resets monthly",
+      "watermark_en": "No",
+      "commercial_use_en": "No",
+      "resolution_en": "720p"
     },
     "features_zh": [
       "文本到视频生成",
@@ -4775,8 +4807,12 @@
       "watermark": "有水印",
       "commercial_use": "不允许",
       "reset": "每天重置",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "reset_en": "Resets daily",
+      "watermark_en": "Has watermark",
+      "commercial_use_en": "Not allowed",
+      "resolution_en": "720p"
     },
     "features_zh": [
       "文本到视频生成",
@@ -4852,15 +4888,16 @@
       "daily_limit_en": "Limited",
       "models": "Claude, GPT, DeepSeek等",
       "models_en": "Claude, GPT, DeepSeek, and more",
-      "resolution": "N/A",
+      "resolution": "不适用",
       "watermark": "无",
       "watermark_en": "No",
       "commercial_use": "免费版可商用",
       "commercial_use_en": "Free tier allows commercial use",
       "reset": "每月重置",
       "reset_en": "Resets monthly",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "N/A"
     },
     "activity": {
       "has_activity": false
@@ -4942,15 +4979,16 @@
       "daily_limit_en": "Limited daily calls for basic models",
       "models": "GPT-3.5, Claude Haiku, 豆包等",
       "models_en": "GPT-3.5, Claude Haiku, Doubao, etc.",
-      "resolution": "N/A",
+      "resolution": "不适用",
       "watermark": "无",
       "watermark_en": "No",
       "commercial_use": "免费版可发布公开Bot",
       "commercial_use_en": "Free tier allows public bot publishing",
       "reset": "每日重置",
       "reset_en": "Resets daily",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "N/A"
     },
     "activity": {
       "has_activity": false
@@ -5120,11 +5158,15 @@
       "amount": "10",
       "amount_en": "10 free credits per day",
       "resolution": "1080p",
-      "watermark": "True",
-      "commercial_use": "False",
-      "reset": "daily",
-      "duration": "",
-      "duration_en": ""
+      "watermark": "有",
+      "commercial_use": "无",
+      "reset": "每天重置",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "reset_en": "Resets daily",
+      "watermark_en": "Yes",
+      "commercial_use_en": "No",
+      "resolution_en": "1080p"
     },
     "features_zh": [
       "AI智能转换",
@@ -5194,11 +5236,15 @@
       "amount": "10",
       "amount_en": "10 per month",
       "resolution": "1080p",
-      "watermark": "True",
-      "commercial_use": "False",
-      "reset": "monthly",
-      "duration": "",
-      "duration_en": ""
+      "watermark": "有",
+      "commercial_use": "无",
+      "reset": "每月重置",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "reset_en": "Resets monthly",
+      "watermark_en": "Yes",
+      "commercial_use_en": "No",
+      "resolution_en": "1080p"
     },
     "features_zh": [
       "文本到视频生成",
@@ -5271,8 +5317,12 @@
       "watermark": "无",
       "commercial_use": "需遵循开源协议",
       "reset": "不适用",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "reset_en": "N/A",
+      "watermark_en": "无",
+      "commercial_use_en": "Must follow open-source license",
+      "resolution_en": "Default 512x512, customizable"
     },
     "features_zh": [
       "从单张图片生成视频",
@@ -5342,11 +5392,15 @@
       "amount": "100",
       "amount_en": "100 credits",
       "resolution": "1080p",
-      "watermark": "False",
-      "commercial_use": "True",
-      "reset": "monthly",
-      "duration": "",
-      "duration_en": ""
+      "watermark": "无",
+      "commercial_use": "有",
+      "reset": "每月重置",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "reset_en": "Resets monthly",
+      "watermark_en": "No",
+      "commercial_use_en": "Yes",
+      "resolution_en": "1080p"
     },
     "features_zh": [
       "自动剪辑",
@@ -5416,11 +5470,15 @@
       "amount": "10",
       "amount_en": "10",
       "resolution": "1024x1024",
-      "watermark": "False",
-      "commercial_use": "True",
-      "reset": "daily",
-      "duration": "",
-      "duration_en": ""
+      "watermark": "无",
+      "commercial_use": "有",
+      "reset": "每天重置",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "reset_en": "Resets daily",
+      "watermark_en": "No",
+      "commercial_use_en": "Yes",
+      "resolution_en": "1024x1024"
     },
     "features_zh": [
       "支持单图角色动画生成",
@@ -5492,9 +5550,13 @@
       "resolution": "1080p",
       "watermark": "no",
       "commercial_use": "yes",
-      "reset": "monthly",
-      "duration": "",
-      "duration_en": ""
+      "reset": "每月重置",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "reset_en": "Resets monthly",
+      "watermark_en": "No",
+      "commercial_use_en": "Yes",
+      "resolution_en": "1080p"
     },
     "features_zh": [
       "一键生成动画，超简单。",
@@ -5567,8 +5629,12 @@
       "watermark": "无",
       "commercial_use": "Yes",
       "reset": "每日UTC时间0点重置",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "reset_en": "Resets daily at midnight UTC",
+      "watermark_en": "无",
+      "commercial_use_en": "Yes",
+      "resolution_en": "480p"
     },
     "features_zh": [
       "文本驱动生成：用文字描述你想要的动画效果",
@@ -5638,11 +5704,15 @@
       "amount": "5",
       "amount_en": "5 free generations per day",
       "resolution": "标准分辨率，如1024x1024",
-      "watermark": "False",
-      "commercial_use": "True",
+      "watermark": "无",
+      "commercial_use": "有",
       "reset": "每日重置",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "reset_en": "Resets daily",
+      "watermark_en": "No",
+      "commercial_use_en": "Yes",
+      "resolution_en": "Standard (1024x1024)"
     },
     "features_zh": [
       "文本到图像生成",
@@ -5715,8 +5785,12 @@
       "watermark": "无水印",
       "commercial_use": "不允许",
       "reset": "每日重置",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "reset_en": "Resets daily",
+      "watermark_en": "No watermark",
+      "commercial_use_en": "Not allowed",
+      "resolution_en": "1024x1024"
     },
     "features_zh": [
       "文字生成图像",
@@ -5786,11 +5860,15 @@
       "amount": "5",
       "amount_en": "5 free credits",
       "resolution": "HD",
-      "watermark": "False",
-      "commercial_use": "False",
-      "reset": "never",
-      "duration": "",
-      "duration_en": ""
+      "watermark": "无",
+      "commercial_use": "无",
+      "reset": "不重置",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "reset_en": "Never resets",
+      "watermark_en": "No",
+      "commercial_use_en": "No",
+      "resolution_en": "HD"
     },
     "features_zh": [
       "AI头像生成",
@@ -5860,11 +5938,15 @@
       "amount": "5",
       "amount_en": "5 times per day",
       "resolution": "标准分辨率",
-      "watermark": "False",
-      "commercial_use": "False",
+      "watermark": "无",
+      "commercial_use": "无",
       "reset": "每日重置",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "reset_en": "Resets daily",
+      "watermark_en": "No",
+      "commercial_use_en": "No",
+      "resolution_en": "Standard resolution"
     },
     "features_zh": [
       "AI照片修复",
@@ -5934,11 +6016,15 @@
       "amount": "100张/月",
       "amount_en": "100 images per month",
       "resolution": "1024x1024",
-      "watermark": "False",
-      "commercial_use": "True",
-      "reset": "monthly",
-      "duration": "",
-      "duration_en": ""
+      "watermark": "无",
+      "commercial_use": "有",
+      "reset": "每月重置",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "reset_en": "Resets monthly",
+      "watermark_en": "No",
+      "commercial_use_en": "Yes",
+      "resolution_en": "1024x1024"
     },
     "features_zh": [
       "快速生成图像",
@@ -6011,8 +6097,12 @@
       "watermark": "无",
       "commercial_use": "需付费",
       "reset": "每月重置",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "reset_en": "Resets monthly",
+      "watermark_en": "无",
+      "commercial_use_en": "Paid plan required",
+      "resolution_en": "Adaptive"
     },
     "features_zh": [
       "一键生成多种风格的AI头像",
@@ -6266,9 +6356,9 @@
       "amount_en": "Free inference credits (limited)",
       "duration": "取决于模型和请求量",
       "duration_en": "Depends on model and request volume",
-      "resolution": "N/A",
+      "resolution": "不适用",
       "resolution_en": "N/A",
-      "watermark": "N/A",
+      "watermark": "不适用",
       "watermark_en": "N/A",
       "commercial_use": "取决于模型许可证",
       "commercial_use_en": "Depends on model license",
@@ -6444,9 +6534,9 @@
       "amount_en": "Le Chat free to use, API has free test credits",
       "duration": "Le Chat无限，API有限额",
       "duration_en": "Le Chat unlimited, API has limits",
-      "resolution": "N/A",
+      "resolution": "不适用",
       "resolution_en": "N/A",
-      "watermark": "N/A",
+      "watermark": "不适用",
       "watermark_en": "N/A",
       "commercial_use": "Le Chat免费，API需付费",
       "commercial_use_en": "Le Chat free, API requires payment",
@@ -6532,8 +6622,12 @@
       "watermark": "有水印",
       "commercial_use": "No",
       "reset": "每月重置",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "reset_en": "Resets monthly",
+      "watermark_en": "Has watermark",
+      "commercial_use_en": "No",
+      "resolution_en": "1080p"
     },
     "features_zh": [
       "文本到视频生成",
@@ -6609,8 +6703,12 @@
       "watermark": "无",
       "commercial_use": "Yes",
       "reset": "每月重置",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "reset_en": "Resets monthly",
+      "watermark_en": "无",
+      "commercial_use_en": "Yes",
+      "resolution_en": "720p"
     },
     "features_zh": [
       "文本生成视频",
@@ -6683,8 +6781,12 @@
       "watermark": "有",
       "commercial_use": "No",
       "reset": "无需重置",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "reset_en": "No reset needed",
+      "watermark_en": "Yes",
+      "commercial_use_en": "No",
+      "resolution_en": "720p"
     },
     "features_zh": [
       "从文本生成动画",
@@ -6757,8 +6859,12 @@
       "watermark": "Yes",
       "commercial_use": "No",
       "reset": "每月重置",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "reset_en": "Resets monthly",
+      "watermark_en": "Yes",
+      "commercial_use_en": "No",
+      "resolution_en": "1080p"
     },
     "features_zh": [
       "自动视频生成",
@@ -6827,12 +6933,16 @@
       "type": "unlimited",
       "amount": "0",
       "amount_en": "0",
-      "resolution": "unlimited",
+      "resolution": "无限",
       "watermark": "No",
       "commercial_use": "Yes",
       "reset": "not applicable",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "reset_en": "N/A",
+      "watermark_en": "No",
+      "commercial_use_en": "Yes",
+      "resolution_en": "Unlimited"
     },
     "features_zh": [
       "关键帧动画",
@@ -6905,8 +7015,12 @@
       "watermark": "Yes",
       "commercial_use": "No",
       "reset": "每月重置",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "reset_en": "Resets monthly",
+      "watermark_en": "Yes",
+      "commercial_use_en": "No",
+      "resolution_en": "1080p"
     },
     "features_zh": [
       "文本到视频生成",
@@ -6979,8 +7093,12 @@
       "watermark": "无",
       "commercial_use": "有限制",
       "reset": "每月重置",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "reset_en": "Resets monthly",
+      "watermark_en": "无",
+      "commercial_use_en": "With restrictions",
+      "resolution_en": "512x512"
     },
     "features_zh": [
       "文本到视频生成",
@@ -7053,8 +7171,12 @@
       "watermark": "有水印",
       "commercial_use": "不可商用",
       "reset": "每月重置",
-      "duration": "",
-      "duration_en": ""
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "reset_en": "Resets monthly",
+      "watermark_en": "Has watermark",
+      "commercial_use_en": "No commercial use",
+      "resolution_en": "720p"
     },
     "features_zh": [
       "文本转视频生成",
@@ -7124,9 +7246,15 @@
       "amount": "5",
       "amount_en": "5 per day",
       "resolution": "1024x1024",
-      "watermark": true,
-      "commercial_use": false,
-      "reset": "every 24 hours"
+      "watermark": "有水印",
+      "commercial_use": "不适用",
+      "reset": "every 24 hours",
+      "reset_en": "Resets every 24 hours",
+      "watermark_en": "Yes",
+      "commercial_use_en": "N/A",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "1024x1024"
     },
     "features_zh": [
       "一键上传图片自动生成",
@@ -7196,9 +7324,15 @@
       "amount": "10",
       "amount_en": "10",
       "resolution": "1024x1024",
-      "watermark": false,
-      "commercial_use": false,
-      "reset": "monthly"
+      "watermark": "不适用",
+      "commercial_use": "不适用",
+      "reset": "每月重置",
+      "reset_en": "Resets monthly",
+      "watermark_en": "N/A",
+      "commercial_use_en": "N/A",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "1024x1024"
     },
     "features_zh": [
       "AI混合图像创造新作品",
@@ -7270,7 +7404,13 @@
       "resolution": "720p",
       "watermark": "有",
       "commercial_use": "是",
-      "reset": "每月"
+      "reset": "每月",
+      "reset_en": "每月",
+      "watermark_en": "Yes",
+      "commercial_use_en": "Yes",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "720p"
     },
     "features_zh": [
       "AI视频生成",
@@ -7342,7 +7482,13 @@
       "resolution": "1024x1024",
       "watermark": "无",
       "commercial_use": "是",
-      "reset": "每月重置"
+      "reset": "每月重置",
+      "reset_en": "Resets monthly",
+      "watermark_en": "无",
+      "commercial_use_en": "Yes",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "1024x1024"
     },
     "features_zh": [
       "文本到图像生成",
@@ -7412,9 +7558,15 @@
       "amount": "5",
       "amount_en": "5",
       "resolution": "1080p",
-      "watermark": true,
-      "commercial_use": false,
-      "reset": "24 hours"
+      "watermark": "有水印",
+      "commercial_use": "不适用",
+      "reset": "24 hours",
+      "reset_en": "Resets every 24 hours",
+      "watermark_en": "Yes",
+      "commercial_use_en": "N/A",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "1080p"
     },
     "features_zh": [
       "AI图像生成",
@@ -7484,9 +7636,15 @@
       "amount": "5",
       "amount_en": "5 per day",
       "resolution": "1024x1024",
-      "watermark": false,
-      "commercial_use": false,
-      "reset": "daily"
+      "watermark": "不适用",
+      "commercial_use": "不适用",
+      "reset": "每天重置",
+      "reset_en": "Resets daily",
+      "watermark_en": "N/A",
+      "commercial_use_en": "N/A",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "1024x1024"
     },
     "features_zh": [
       "文本到图像生成",
@@ -7556,9 +7714,15 @@
       "amount": 10,
       "amount_en": "10 daily credits",
       "resolution": "1024x1024",
-      "watermark": false,
-      "commercial_use": true,
-      "reset": "daily"
+      "watermark": "不适用",
+      "commercial_use": "可商用",
+      "reset": "每天重置",
+      "reset_en": "Resets daily",
+      "watermark_en": "N/A",
+      "commercial_use_en": "Yes",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "1024x1024"
     },
     "features_zh": [
       "快速生成高质量图像",
@@ -7628,9 +7792,15 @@
       "amount": 3,
       "amount_en": "3 photos per day",
       "resolution": "标准分辨率",
-      "watermark": true,
-      "commercial_use": false,
-      "reset": "每日重置"
+      "watermark": "有水印",
+      "commercial_use": "不适用",
+      "reset": "每日重置",
+      "reset_en": "Resets daily",
+      "watermark_en": "Yes",
+      "commercial_use_en": "N/A",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "Standard resolution"
     },
     "features_zh": [
       "年龄变化",
@@ -7700,9 +7870,15 @@
       "amount": 3,
       "amount_en": "3 free transformations per day",
       "resolution": "up to 720p",
-      "watermark": false,
-      "commercial_use": false,
-      "reset": "daily"
+      "watermark": "不适用",
+      "commercial_use": "不适用",
+      "reset": "每天重置",
+      "reset_en": "Resets daily",
+      "watermark_en": "N/A",
+      "commercial_use_en": "N/A",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "Up to 720p"
     },
     "features_zh": [
       "AI艺术风格转换",
@@ -7774,7 +7950,13 @@
       "resolution": "1024x1024",
       "watermark": "yes",
       "commercial_use": "no",
-      "reset": "daily"
+      "reset": "每天重置",
+      "reset_en": "Resets daily",
+      "watermark_en": "Yes",
+      "commercial_use_en": "No",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "1024x1024"
     },
     "features_zh": [
       "一键智能卡通化",
@@ -7843,10 +8025,16 @@
       "type": "查询数",
       "amount": "每日有限免费",
       "amount_en": "Limited free daily queries",
-      "resolution": "N/A",
+      "resolution": "不适用",
       "watermark": "无",
       "commercial_use": "否",
-      "reset": "每日重置"
+      "reset": "每日重置",
+      "reset_en": "Resets daily",
+      "watermark_en": "无",
+      "commercial_use_en": "No",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "N/A"
     },
     "features_zh": [
       "实时信息获取",
@@ -7918,7 +8106,13 @@
       "resolution": "n/a",
       "watermark": "no",
       "commercial_use": "yes",
-      "reset": "monthly"
+      "reset": "每月重置",
+      "reset_en": "Resets monthly",
+      "watermark_en": "No",
+      "commercial_use_en": "Yes",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "N/A"
     },
     "features_zh": [
       "高性能计算",
@@ -7988,9 +8182,15 @@
       "amount": 50,
       "amount_en": "50 credits per day",
       "resolution": "1080p",
-      "watermark": false,
-      "commercial_use": true,
-      "reset": "每天重置"
+      "watermark": "不适用",
+      "commercial_use": "可商用",
+      "reset": "每天重置",
+      "reset_en": "Resets daily",
+      "watermark_en": "N/A",
+      "commercial_use_en": "Yes",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "1080p"
     },
     "features_zh": [
       "智能设计建议",
@@ -8059,10 +8259,16 @@
       "type": "每日额度",
       "amount": 10,
       "amount_en": "10",
-      "resolution": "N/A",
+      "resolution": "不适用",
       "watermark": "否",
       "commercial_use": "是",
-      "reset": "每日重置"
+      "reset": "每日重置",
+      "reset_en": "Resets daily",
+      "watermark_en": "No",
+      "commercial_use_en": "Yes",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "N/A"
     },
     "features_zh": [
       "强大的中文对话与内容创作能力",
@@ -8132,9 +8338,15 @@
       "amount": "1000次免费调用",
       "amount_en": "1000 free calls per month",
       "resolution": "1024x1024",
-      "watermark": false,
-      "commercial_use": false,
-      "reset": "每月重置"
+      "watermark": "不适用",
+      "commercial_use": "不适用",
+      "reset": "每月重置",
+      "reset_en": "Resets monthly",
+      "watermark_en": "N/A",
+      "commercial_use_en": "N/A",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "1024x1024"
     },
     "features_zh": [
       "多语言支持",
@@ -8203,10 +8415,16 @@
       "type": "开源免费",
       "amount": "无限制",
       "amount_en": "Unlimited",
-      "resolution": "N/A",
+      "resolution": "不适用",
       "watermark": "无",
       "commercial_use": "支持",
-      "reset": "无"
+      "reset": "无",
+      "reset_en": "无",
+      "watermark_en": "无",
+      "commercial_use_en": "Yes",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "N/A"
     },
     "features_zh": [
       "轻量级设计，适合边缘设备",
@@ -8555,12 +8773,18 @@
     "description_en": "An open-source large language model with excellent performance, supporting various tasks.",
     "free_credits": {
       "type": "open_source",
-      "amount": "unlimited",
+      "amount": "无限",
       "amount_en": "unlimited",
       "resolution": "n/a",
-      "watermark": false,
-      "commercial_use": true,
-      "reset": "none"
+      "watermark": "不适用",
+      "commercial_use": "可商用",
+      "reset": "none",
+      "reset_en": "none",
+      "watermark_en": "N/A",
+      "commercial_use_en": "Yes",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "N/A"
     },
     "features_zh": [
       "开源免费",
@@ -8631,8 +8855,14 @@
       "amount_en": "100 queries",
       "resolution": "none",
       "watermark": "none",
-      "commercial_use": false,
-      "reset": "每月重置"
+      "commercial_use": "不适用",
+      "reset": "每月重置",
+      "reset_en": "Resets monthly",
+      "watermark_en": "none",
+      "commercial_use_en": "N/A",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "none"
     },
     "features_zh": [
       "自然语言处理",
@@ -8701,10 +8931,16 @@
       "type": "每月免费使用",
       "amount": "基础补全功能无限使用，高级功能有次数限制",
       "amount_en": "Basic completions unlimited, premium features limited",
-      "resolution": "N/A",
+      "resolution": "不适用",
       "watermark": "无",
       "commercial_use": "允许",
-      "reset": "每月重置高级功能额度"
+      "reset": "每月重置高级功能额度",
+      "reset_en": "每月重置高级功能额度",
+      "watermark_en": "无",
+      "commercial_use_en": "允许",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "N/A"
     },
     "features_zh": [
       "智能代码补全",
@@ -8776,7 +9012,13 @@
       "resolution": "标准",
       "watermark": "无",
       "commercial_use": "否",
-      "reset": "每月重置"
+      "reset": "每月重置",
+      "reset_en": "Resets monthly",
+      "watermark_en": "无",
+      "commercial_use_en": "No",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "标准"
     },
     "features_zh": [
       "AI代码补全",
@@ -8846,9 +9088,15 @@
       "amount": "100次",
       "amount_en": "100 generations",
       "resolution": "标准",
-      "watermark": false,
-      "commercial_use": true,
-      "reset": "每月重置"
+      "watermark": "不适用",
+      "commercial_use": "可商用",
+      "reset": "每月重置",
+      "reset_en": "Resets monthly",
+      "watermark_en": "N/A",
+      "commercial_use_en": "Yes",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "标准"
     },
     "features_zh": [
       "自然语言描述生成UI",
@@ -8920,7 +9168,13 @@
       "resolution": "1024x1024",
       "watermark": "有",
       "commercial_use": "否",
-      "reset": "每天重置"
+      "reset": "每天重置",
+      "reset_en": "Resets daily",
+      "watermark_en": "Yes",
+      "commercial_use_en": "No",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "1024x1024"
     },
     "features_zh": [
       "一键生成图像",
@@ -8990,9 +9244,15 @@
       "amount": "50次/月",
       "amount_en": "50 per month",
       "resolution": "high",
-      "watermark": false,
-      "commercial_use": true,
-      "reset": "每月重置"
+      "watermark": "不适用",
+      "commercial_use": "可商用",
+      "reset": "每月重置",
+      "reset_en": "Resets monthly",
+      "watermark_en": "N/A",
+      "commercial_use_en": "Yes",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "high"
     },
     "features_zh": [
       "智能布局建议",
@@ -9064,7 +9324,13 @@
       "resolution": "响应式",
       "watermark": "是",
       "commercial_use": "否",
-      "reset": "不适用"
+      "reset": "不适用",
+      "reset_en": "N/A",
+      "watermark_en": "Yes",
+      "commercial_use_en": "No",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "响应式"
     },
     "features_zh": [
       "AI 设计助手",
@@ -9136,7 +9402,13 @@
       "resolution": "1024x1024",
       "watermark": "无",
       "commercial_use": "是",
-      "reset": "每日重置"
+      "reset": "每日重置",
+      "reset_en": "Resets daily",
+      "watermark_en": "无",
+      "commercial_use_en": "Yes",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "1024x1024"
     },
     "features_zh": [
       "完全免费，无限制生成",
@@ -9206,9 +9478,15 @@
       "amount": "50",
       "amount_en": "50",
       "resolution": "high",
-      "watermark": false,
-      "commercial_use": true,
-      "reset": "daily"
+      "watermark": "不适用",
+      "commercial_use": "可商用",
+      "reset": "每天重置",
+      "reset_en": "Resets daily",
+      "watermark_en": "N/A",
+      "commercial_use_en": "Yes",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "high"
     },
     "features_zh": [
       "AI代码生成",
@@ -9280,7 +9558,13 @@
       "resolution": "无限制",
       "watermark": "无",
       "commercial_use": "是",
-      "reset": "每月重置"
+      "reset": "每月重置",
+      "reset_en": "Resets monthly",
+      "watermark_en": "无",
+      "commercial_use_en": "Yes",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "Unlimited"
     },
     "features_zh": [
       "AI驱动的代码片段捕获与上下文理解",
@@ -9349,10 +9633,16 @@
       "type": "每月免费行数",
       "amount": "500行",
       "amount_en": "500 lines/month",
-      "resolution": "N/A",
+      "resolution": "不适用",
       "watermark": "无",
       "commercial_use": "允许开源项目",
-      "reset": "每月重置"
+      "reset": "每月重置",
+      "reset_en": "Resets monthly",
+      "watermark_en": "无",
+      "commercial_use_en": "允许开源项目",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "N/A"
     },
     "features_zh": [
       "自动代码审查",
@@ -9421,10 +9711,16 @@
       "type": "monthly",
       "amount": "50",
       "amount_en": "50",
-      "resolution": "N/A",
-      "watermark": false,
-      "commercial_use": true,
-      "reset": "monthly"
+      "resolution": "不适用",
+      "watermark": "不适用",
+      "commercial_use": "可商用",
+      "reset": "每月重置",
+      "reset_en": "Resets monthly",
+      "watermark_en": "N/A",
+      "commercial_use_en": "Yes",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "N/A"
     },
     "features_zh": [
       "自动扫描代码问题",
@@ -9493,10 +9789,16 @@
       "type": "每日查询限制",
       "amount": "每天5次Pro搜索",
       "amount_en": "5 Pro searches per day",
-      "resolution": "N/A",
+      "resolution": "不适用",
       "watermark": "无",
       "commercial_use": "是",
-      "reset": "每日重置"
+      "reset": "每日重置",
+      "reset_en": "Resets daily",
+      "watermark_en": "无",
+      "commercial_use_en": "Yes",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "N/A"
     },
     "features_zh": [
       "实时联网搜索，信息即时更新",
@@ -9565,10 +9867,16 @@
       "type": "queries",
       "amount": 100,
       "amount_en": "100 queries per day",
-      "resolution": "N/A",
+      "resolution": "不适用",
       "watermark": "no",
       "commercial_use": "yes",
-      "reset": "daily"
+      "reset": "每天重置",
+      "reset_en": "Resets daily",
+      "watermark_en": "No",
+      "commercial_use_en": "Yes",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "N/A"
     },
     "features_zh": [
       "多轮对话",
@@ -9635,12 +9943,18 @@
     "description_en": "Grammarly is an AI-powered writing assistant that checks grammar, spelling, punctuation, and style to improve writing.",
     "free_credits": {
       "type": "unlimited_basic",
-      "amount": "unlimited",
+      "amount": "无限",
       "amount_en": "Unlimited basic grammar checks",
       "resolution": "Basic grammar, spelling, and punctuation",
       "watermark": "No",
       "commercial_use": "Limited",
-      "reset": "None"
+      "reset": "None",
+      "reset_en": "None",
+      "watermark_en": "No",
+      "commercial_use_en": "Limited",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "Basic grammar, spelling, and punctuation"
     },
     "features_zh": [
       "实时语法检查",
@@ -9709,10 +10023,16 @@
       "type": "words",
       "amount": "2000",
       "amount_en": "2000 words per month",
-      "resolution": "N/A",
+      "resolution": "不适用",
       "watermark": "No",
       "commercial_use": "Yes",
-      "reset": "Monthly"
+      "reset": "Monthly",
+      "reset_en": "Monthly",
+      "watermark_en": "No",
+      "commercial_use_en": "Yes",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "N/A"
     },
     "features_zh": [
       "AI文案自动生成",
@@ -9784,7 +10104,13 @@
       "resolution": "无",
       "watermark": "无",
       "commercial_use": "是",
-      "reset": "每月重置"
+      "reset": "每月重置",
+      "reset_en": "Resets monthly",
+      "watermark_en": "无",
+      "commercial_use_en": "Yes",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "无"
     },
     "features_zh": [
       "AI文案生成",
@@ -9854,9 +10180,15 @@
       "amount": "1000分钟",
       "amount_en": "1000 minutes of transcription per month",
       "resolution": "high-quality audio",
-      "watermark": false,
-      "commercial_use": false,
-      "reset": "monthly"
+      "watermark": "不适用",
+      "commercial_use": "不适用",
+      "reset": "每月重置",
+      "reset_en": "Resets monthly",
+      "watermark_en": "N/A",
+      "commercial_use_en": "N/A",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "high-quality audio"
     },
     "features_zh": [
       "自动转录会议",
@@ -9925,10 +10257,16 @@
       "type": "ai_credits",
       "amount": "每月50次AI调用",
       "amount_en": "50 AI calls per month",
-      "resolution": "N/A",
-      "watermark": false,
-      "commercial_use": true,
-      "reset": "每月重置"
+      "resolution": "不适用",
+      "watermark": "不适用",
+      "commercial_use": "可商用",
+      "reset": "每月重置",
+      "reset_en": "Resets monthly",
+      "watermark_en": "N/A",
+      "commercial_use_en": "Yes",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "N/A"
     },
     "features_zh": [
       "AI任务助手",
@@ -9998,9 +10336,15 @@
       "amount": 5,
       "amount_en": "5 credits per month",
       "resolution": "1080p",
-      "watermark": false,
-      "commercial_use": false,
-      "reset": "每月重置"
+      "watermark": "不适用",
+      "commercial_use": "不适用",
+      "reset": "每月重置",
+      "reset_en": "Resets monthly",
+      "watermark_en": "N/A",
+      "commercial_use_en": "N/A",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "1080p"
     },
     "features_zh": [
       "AI动画生成",
@@ -10069,10 +10413,16 @@
       "type": "free_tier",
       "amount": "每月5次智能调度",
       "amount_en": "5 smart scheduling sessions per month",
-      "resolution": "N/A",
+      "resolution": "不适用",
       "watermark": "none",
-      "commercial_use": false,
-      "reset": "monthly"
+      "commercial_use": "不适用",
+      "reset": "每月重置",
+      "reset_en": "Resets monthly",
+      "watermark_en": "none",
+      "commercial_use_en": "N/A",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "N/A"
     },
     "features_zh": [
       "自动日程优化",
@@ -10141,10 +10491,16 @@
       "type": "free_tier",
       "amount": "5次会议优化/月",
       "amount_en": "5 meeting optimizations per month",
-      "resolution": "N/A",
-      "watermark": false,
-      "commercial_use": false,
-      "reset": "monthly"
+      "resolution": "不适用",
+      "watermark": "不适用",
+      "commercial_use": "不适用",
+      "reset": "每月重置",
+      "reset_en": "Resets monthly",
+      "watermark_en": "N/A",
+      "commercial_use_en": "N/A",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "N/A"
     },
     "features_zh": [
       "智能自动安排会议时间",
@@ -10214,9 +10570,15 @@
       "amount": "100",
       "amount_en": "100",
       "resolution": "次",
-      "watermark": false,
-      "commercial_use": true,
-      "reset": "每月重置"
+      "watermark": "不适用",
+      "commercial_use": "可商用",
+      "reset": "每月重置",
+      "reset_en": "Resets monthly",
+      "watermark_en": "N/A",
+      "commercial_use_en": "Yes",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "次"
     },
     "features_zh": [
       "从数十个数据源聚合信息",
@@ -10288,7 +10650,13 @@
       "resolution": "高清视图",
       "watermark": "无",
       "commercial_use": "允许",
-      "reset": "每月重置"
+      "reset": "每月重置",
+      "reset_en": "Resets monthly",
+      "watermark_en": "无",
+      "commercial_use_en": "允许",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "高清视图"
     },
     "features_zh": [
       "智能提醒日程",
@@ -10357,10 +10725,16 @@
       "type": "api_calls",
       "amount": "100",
       "amount_en": "100",
-      "resolution": "N/A",
+      "resolution": "不适用",
       "watermark": "No",
       "commercial_use": "Yes",
-      "reset": "monthly"
+      "reset": "每月重置",
+      "reset_en": "Resets monthly",
+      "watermark_en": "No",
+      "commercial_use_en": "Yes",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "N/A"
     },
     "features_zh": [
       "智能自动化引擎",
@@ -10429,10 +10803,16 @@
       "type": "免费使用",
       "amount": "无限",
       "amount_en": "unlimited",
-      "resolution": "N/A",
+      "resolution": "不适用",
       "watermark": "No",
       "commercial_use": "Yes",
-      "reset": "N/A"
+      "reset": "不适用",
+      "reset_en": "N/A",
+      "watermark_en": "No",
+      "commercial_use_en": "Yes",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "N/A"
     },
     "features_zh": [
       "语音识别",
@@ -10501,10 +10881,16 @@
       "type": "无免费额度",
       "amount": "0",
       "amount_en": "0",
-      "resolution": "N/A",
+      "resolution": "不适用",
       "watermark": "No",
       "commercial_use": "No",
-      "reset": "无"
+      "reset": "无",
+      "reset_en": "无",
+      "watermark_en": "No",
+      "commercial_use_en": "No",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "N/A"
     },
     "features_zh": [
       "语音控制智能设备",
@@ -10576,7 +10962,13 @@
       "resolution": "标准音质",
       "watermark": "无水印",
       "commercial_use": "有限商业使用",
-      "reset": "每天重置"
+      "reset": "每天重置",
+      "reset_en": "Resets daily",
+      "watermark_en": "No watermark",
+      "commercial_use_en": "有限商业使用",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "标准音质"
     },
     "features_zh": [
       "AI音乐生成",
@@ -10648,7 +11040,13 @@
       "resolution": "标准",
       "watermark": "Yes",
       "commercial_use": "No",
-      "reset": "每月"
+      "reset": "每月",
+      "reset_en": "每月",
+      "watermark_en": "Yes",
+      "commercial_use_en": "No",
+      "duration": "不适用",
+      "duration_en": "N/A",
+      "resolution_en": "标准"
     },
     "features_zh": [
       "AI驱动的音乐生成",
