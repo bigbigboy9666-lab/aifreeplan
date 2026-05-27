@@ -9153,60 +9153,60 @@
   },
   {
     "slug": "create-xyz",
-    "name_zh": "创世AI",
+    "name_zh": "Create.xyz",
     "name_en": "Create.xyz",
     "category": "coding",
     "official_url": "https://create.xyz",
     "company_zh": "创世科技",
     "company_en": "Create Technologies",
-    "description_zh": "Create.xyz 是个超棒的AI工具，一键生成图像，设计小白也能用。",
-    "description_en": "Create.xyz is an AI tool that generates images and designs with a single click, perfect for beginners.",
+    "description_zh": "AI驱动的应用构建平台，用自然语言描述需求就能生成网站、应用和工具。支持多种AI模型，适合快速原型开发。",
+    "description_en": "AI-powered app builder that generates websites, apps, and tools from natural language descriptions.",
     "free_credits": {
       "type": "每日",
-      "amount": "10次",
-      "amount_en": "10 credits per day",
+      "amount": "有限免费额度",
+      "amount_en": "Limited free credits",
       "resolution": "1024x1024",
       "watermark": "有",
-      "commercial_use": "否",
+      "commercial_use": "需付费",
       "reset": "每天重置",
       "reset_en": "Resets daily",
       "watermark_en": "Yes",
-      "commercial_use_en": "No",
+      "commercial_use_en": "Paid plan required",
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "1024x1024"
     },
     "features_zh": [
-      "一键生成图像",
-      "多种风格选择",
-      "实时预览效果",
-      "简单易用界面",
-      "支持导出高清图"
+      "自然语言生成应用",
+      "多种AI模型支持",
+      "快速原型开发",
+      "一键部署",
+      "支持自定义域名"
     ],
     "features_en": [
-      "One-click image generation",
-      "Multiple style options",
-      "Real-time preview",
-      "Simple user interface",
-      "Export high-resolution images"
+      "Natural language app generation",
+      "Multiple AI model support",
+      "Rapid prototyping",
+      "One-click deployment",
+      "Custom domain support"
     ],
     "pros_zh": [
+      "上手简单",
       "生成速度快",
-      "界面友好",
-      "免费额度够用"
+      "支持多种应用场景"
     ],
     "pros_en": [
-      "Fast generation speed",
-      "User-friendly interface",
-      "Adequate free credits"
+      "Easy to get started",
+      "Fast generation",
+      "Supports multiple use cases"
     ],
     "cons_zh": [
-      "免费版有水印",
-      "商用需要付费"
+      "免费额度有限",
+      "复杂应用需要付费"
     ],
     "cons_en": [
-      "Watermark on free version",
-      "Commercial use requires payment"
+      "Limited free credits",
+      "Complex apps require paid plan"
     ],
     "tips_zh": [
       "多试试不同风格组合",
