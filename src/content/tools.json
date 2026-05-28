@@ -4481,11 +4481,11 @@
     "slug": "show-1",
     "name_zh": "Show_1 AI图像生成器",
     "name_en": "Show_1 AI Image Generator",
-    "category": "video",
+    "category": "image",
     "official_url": "https://show1.example.com",
     "company_zh": "ShowTech公司",
     "company_en": "ShowTech Inc.",
-    "description_zh": "超简单的AI画图工具，新手也能秒变艺术家！",
+    "description_zh": "Show_1是一款AI图像生成工具，支持文生图，免费版提供100次生成额度。操作简单，适合新手快速体验AI绘画。",
     "description_en": "A user-friendly AI image generator that lets beginners create stunning artwork effortlessly.",
     "free_credits": {
       "type": "每月免费额度",
@@ -4563,7 +4563,7 @@
     "official_url": "https://mora.com",
     "company_zh": "莫拉AI",
     "company_en": "Mora AI",
-    "description_zh": "Mora是你的AI视频小助手，一键生成精彩视频。",
+    "description_zh": "Mora是一款AI视频生成工具，支持文生视频和图生视频。免费版每天10次生成，适合短视频创作和素材制作。",
     "description_en": "Mora is your AI video assistant, creating amazing videos with a click.",
     "free_credits": {
       "type": "daily",
@@ -4631,7 +4631,9 @@
       "has_activity": false
     },
     "images": [],
-    "plans": []
+    "plans": [],
+    "free_tier_zh": "每天10次生成",
+    "free_tier_en": "10 generations/day"
   },
   {
     "slug": "videopoet",
@@ -4797,7 +4799,7 @@
     "official_url": "https://imagen.google.com/video/",
     "company_zh": "谷歌",
     "company_en": "Google",
-    "description_zh": "用AI快速生成高质量视频，操作简单，创意无限。",
+    "description_zh": "Google的Imagen Video模型，文字描述生成高质量视频。目前主要通过Google Labs体验，免费额度有限但画质顶级。",
     "description_en": "Quickly generate high-quality videos using AI, easy to use, perfect for creatives.",
     "free_credits": {
       "type": "每日额度",
@@ -5151,7 +5153,7 @@
     "official_url": "https://img2vid-escn.com",
     "company_zh": "AI创意科技",
     "company_en": "AI Creative Tech",
-    "description_zh": "AI图像转视频工具，动态化静态图片。",
+    "description_zh": "Img2Vid-ESCN是一款AI图像转视频工具，能把静态图片变成动态视频。免费版每天10次生成，适合给照片加动态效果、做短视频素材。",
     "description_en": "An AI tool that converts static images into dynamic videos using advanced algorithms.",
     "free_credits": {
       "type": "daily",
@@ -5385,7 +5387,7 @@
     "official_url": "https://videocomposer.com",
     "company_zh": "VideoComposer AI公司",
     "company_en": "VideoComposer AI Inc.",
-    "description_zh": "用AI轻松做视频，小白也能出大片。",
+    "description_zh": "VideoComposer是阿里达摩院的AI视频编辑工具，支持视频合成、风格迁移和文字生成视频。免费使用，适合短视频创作和视频风格转换。",
     "description_en": "Create professional videos effortlessly with AI. Perfect for beginners and pros alike.",
     "free_credits": {
       "type": "monthly",
@@ -6693,7 +6695,7 @@
     "official_url": "https://modelscope.cn/studios/text-to-video",
     "company_zh": "阿里云",
     "company_en": "Alibaba Cloud",
-    "description_zh": "用文字描述快速生成视频的AI工具。",
+    "description_zh": "ModelScope文生视频是阿里开源的AI视频生成模型，输入文字描述即可生成短视频。完全免费，在Hugging Face和ModelScope平台都能直接体验。",
     "description_en": "An AI tool that generates videos from text descriptions.",
     "free_credits": {
       "type": "免费试用",
@@ -7863,7 +7865,7 @@
     "official_url": "https://www.prisma.com/",
     "company_zh": "Prisma Labs",
     "company_en": "Prisma Labs, Inc.",
-    "description_zh": "AI将照片转化为艺术风格图像",
+    "description_zh": "Prisma是一款AI照片风格转换工具，能把普通照片变成各种艺术风格（油画、水彩、漫画等）。免费版有基础滤镜可用，付费版解锁全部风格。",
     "description_en": "Prisma uses AI to transform photos into stunning artworks with various artistic styles.",
     "free_credits": {
       "type": "daily",
@@ -10563,7 +10565,7 @@
     "official_url": "https://lemcal.com",
     "company_zh": "Lemcal科技",
     "company_en": "Lemcal Tech",
-    "description_zh": "Lemcal帮你智能管理日程，轻松规划每一天，告别混乱。",
+    "description_zh": "Lemcal是一款AI日程管理工具，支持智能排期、会议安排和日历同步。免费版有基础日程管理功能，适合个人和小团队使用。",
     "description_en": "Lemcal is an AI-powered calendar tool that helps you manage your schedule efficiently and plan your day with ease.",
     "free_credits": {
       "type": "每月免费日程创建",
@@ -10797,7 +10799,7 @@
     "official_url": "https://www.amazon.com/alexa",
     "company_zh": "亚马逊",
     "company_en": "Amazon",
-    "description_zh": "亚马逊的智能语音助手，帮你用声音控制设备、查信息、放音乐。",
+    "description_zh": "亚马逊Alexa智能语音助手，支持语音控制智能家居、播放音乐、查询天气等。完全免费使用，需要Echo设备或Alexa App。",
     "description_en": "Amazon's voice-controlled AI assistant that manages smart devices, answers questions, and plays music in your home.",
     "free_credits": {
       "type": "无免费额度",
