@@ -451,8 +451,8 @@
     "description_en": "OpenAI's video generation tool, officially shut down on March 24, 2026. Sora 2 launched Sep 2025 with 30 free videos/day (later cut to 6). Shut down due to pricing 3-10x above competitors. Alternatives: Kling AI, Hailuo.",
     "free_credits": {
       "type": "none",
-      "amount": "已关停（曾每天30个视频，后削减至6个）",
-      "amount_en": "Shut down (was 30 videos/day, later cut to 6)",
+      "amount": "已关停（曾30个视频，后削减至6个）",
+      "amount_en": "Shut down (was 30 videos, later cut to 6)",
       "duration": "最长20秒",
       "duration_en": "Up to 20 seconds",
       "resolution": "最高1080p",
@@ -968,8 +968,8 @@
     "description_en": "By Moonshot AI, Kimi K2.6 focuses on coding and agent capabilities. 13-hour non-stop coding, 300 sub-agents in parallel, SWE-Bench Pro score of 58.6. Free tier includes daily credits for chat and light coding tasks.",
     "free_credits": {
       "type": "daily",
-      "amount": "每日免费额度",
-      "amount_en": "Daily free credits",
+      "amount": "免费额度",
+      "amount_en": "free credits",
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution": "不适用",
@@ -3618,8 +3618,8 @@
     "description_en": "AI aggregation platform by Quora, one interface for all major models. Free users get daily credits to use GPT-4o, Claude Sonnet, Gemini, Llama. $20/month for more usage and premium models.",
     "free_credits": {
       "type": "daily",
-      "amount": "每日积分（模型不同消耗不同）",
-      "amount_en": "Daily credits (cost varies by model)",
+      "amount": "积分（模型不同消耗不同）",
+      "amount_en": "credits (cost varies by model)",
       "resolution": "不适用",
       "resolution_en": "N/A",
       "watermark": "无",
@@ -3923,8 +3923,8 @@
     "description_en": "Vercel's AI UI generator. Describe or screenshot a UI and get React component code. Free plan: $5 monthly credits + 7 messages/day.",
     "free_credits": {
       "type": "monthly",
-      "amount": "每月5美元额度，每天7条消息",
-      "amount_en": "$5 monthly credits, 7 messages/day",
+      "amount": "每月5美元额度，7条消息",
+      "amount_en": "$5 monthly credits, 7 messages",
       "reset": "额度每月重置，消息每天重置",
       "code_export": "支持导出代码",
       "commercial_use": "免费版可商用",
@@ -4360,7 +4360,7 @@
     "description_en": "AI video generation tool with a generous free tier — 90 initial credits plus 60 daily. Rich effect templates, great for short-form content creation.",
     "free_credits": {
       "type": "daily",
-      "amount": "注册送90积分 + 每天60积分",
+      "amount": "注册送90积分 + 60积分",
       "amount_en": "90 credits on signup + 60 credits",
       "duration": "3-5秒",
       "duration_en": "3-5 seconds",
@@ -4568,7 +4568,7 @@
     "free_credits": {
       "type": "daily",
       "amount": "10",
-      "amount_en": "10 credits per day",
+      "amount_en": "10 credits",
       "resolution": "1080p",
       "watermark": "有水印",
       "commercial_use": "No",
@@ -4804,7 +4804,7 @@
     "free_credits": {
       "type": "每日额度",
       "amount": "10次",
-      "amount_en": "10 generations per day",
+      "amount_en": "10 generations",
       "resolution": "720p",
       "watermark": "有水印",
       "commercial_use": "不允许",
@@ -5066,7 +5066,7 @@
     "description_en": "AI video generation platform by Shengshu Technology. Supports reference-to-video, image-to-video, and text-to-video. Off-Peak Mode offers unlimited free generation. Up to 7 reference images for character consistency.",
     "free_credits": {
       "type": "daily",
-      "amount": "Off-Peak模式无限免费 + 每日免费积分",
+      "amount": "Off-Peak模式无限免费 + 免费积分",
       "amount_en": "Unlimited free in Off-Peak Mode + daily free credits",
       "duration": "4-8秒",
       "duration_en": "4-8 seconds",
@@ -5158,7 +5158,7 @@
     "free_credits": {
       "type": "daily",
       "amount": "10",
-      "amount_en": "10 free credits per day",
+      "amount_en": "10 free credits",
       "resolution": "1080p",
       "watermark": "有",
       "commercial_use": "无",
@@ -5626,7 +5626,7 @@
     "free_credits": {
       "type": "每日免费生成",
       "amount": "1次/天",
-      "amount_en": "1 time/day",
+      "amount_en": "1 time",
       "resolution": "480p",
       "watermark": "无",
       "commercial_use": "Yes",
@@ -5704,7 +5704,7 @@
     "free_credits": {
       "type": "每日免费生成次数",
       "amount": "5",
-      "amount_en": "5 free generations per day",
+      "amount_en": "5 free generations",
       "resolution": "标准分辨率，如1024x1024",
       "watermark": "无",
       "commercial_use": "有",
@@ -5782,7 +5782,7 @@
     "free_credits": {
       "type": "每日额度",
       "amount": "10",
-      "amount_en": "10 per day",
+      "amount_en": "10",
       "resolution": "1024x1024",
       "watermark": "无水印",
       "commercial_use": "不允许",
@@ -5938,7 +5938,7 @@
     "free_credits": {
       "type": "每日免费",
       "amount": "5",
-      "amount_en": "5 times per day",
+      "amount_en": "5 times",
       "resolution": "标准分辨率",
       "watermark": "无",
       "commercial_use": "无",
@@ -7246,7 +7246,7 @@
     "free_credits": {
       "type": "daily",
       "amount": "5",
-      "amount_en": "5 per day",
+      "amount_en": "5",
       "resolution": "1024x1024",
       "watermark": "有水印",
       "commercial_use": "不适用",
@@ -7636,7 +7636,7 @@
     "free_credits": {
       "type": "daily",
       "amount": "5",
-      "amount_en": "5 per day",
+      "amount_en": "5",
       "resolution": "1024x1024",
       "watermark": "不适用",
       "commercial_use": "不适用",
@@ -7792,7 +7792,7 @@
     "free_credits": {
       "type": "每日重置",
       "amount": 3,
-      "amount_en": "3 photos per day",
+      "amount_en": "3 photos",
       "resolution": "标准分辨率",
       "watermark": "有水印",
       "commercial_use": "不适用",
@@ -7870,7 +7870,7 @@
     "free_credits": {
       "type": "daily",
       "amount": 3,
-      "amount_en": "3 free transformations per day",
+      "amount_en": "3 free transformations",
       "resolution": "up to 720p",
       "watermark": "不适用",
       "commercial_use": "不适用",
@@ -7948,7 +7948,7 @@
     "free_credits": {
       "type": "daily",
       "amount": 5,
-      "amount_en": "5 images per day",
+      "amount_en": "5 images",
       "resolution": "1024x1024",
       "watermark": "yes",
       "commercial_use": "no",
@@ -8025,7 +8025,7 @@
     "description_en": "Grok is an AI assistant by xAI, offering real-time info and witty chats.",
     "free_credits": {
       "type": "查询数",
-      "amount": "每日有限免费",
+      "amount": "有限免费",
       "amount_en": "Limited free daily queries",
       "resolution": "不适用",
       "watermark": "无",
@@ -8182,7 +8182,7 @@
     "free_credits": {
       "type": "每日额度",
       "amount": 50,
-      "amount_en": "50 credits per day",
+      "amount_en": "50 credits",
       "resolution": "1080p",
       "watermark": "不适用",
       "commercial_use": "可商用",
@@ -9711,8 +9711,8 @@
     "description_en": "A powerful Q&A engine combining real-time web search with conversational AI, providing direct answers with sources.",
     "free_credits": {
       "type": "每日查询限制",
-      "amount": "每天5次Pro搜索",
-      "amount_en": "5 Pro searches per day",
+      "amount": "5次Pro搜索",
+      "amount_en": "5 Pro searches",
       "resolution": "不适用",
       "watermark": "无",
       "commercial_use": "是",
@@ -9790,7 +9790,7 @@
     "free_credits": {
       "type": "queries",
       "amount": 100,
-      "amount_en": "100 queries per day",
+      "amount_en": "100 queries",
       "resolution": "不适用",
       "watermark": "no",
       "commercial_use": "yes",
@@ -10882,7 +10882,7 @@
     "free_credits": {
       "type": "daily",
       "amount": "5首歌",
-      "amount_en": "5 songs per day",
+      "amount_en": "5 songs",
       "resolution": "标准音质",
       "watermark": "无水印",
       "commercial_use": "有限商业使用",
