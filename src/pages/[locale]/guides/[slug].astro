@@ -28,7 +28,7 @@ const tags = guide[`tags_${lang}`] || guide.tags_en || [];
 const faq = guide[`faq_${lang}`] || [];
 const author = guide[`author_${lang}`] || 'AIFreePlan';
 
-const canonical = `https://aifreeplan.com/${locale}/guides/${guide.slug}`;
+const canonical = `https://aifreeplan.com/${locale}/guides/${guide.slug}/`;
 const jsonLd = guideSchema(guide, locale);
 
 // Simple markdown-to-HTML conversion
@@ -61,6 +61,7 @@ if (faqStart >= 0) {
   canonical={canonical}
   jsonLd={jsonLd}
   currentPath={`/${locale}/guides/${guide.slug}`}
+  ogType="article"
 >
   <Breadcrumb items={[
     { label: isZh ? '使用攻略' : 'Guides', href: `/${locale}/guides` },

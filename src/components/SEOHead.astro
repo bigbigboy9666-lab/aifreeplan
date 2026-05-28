@@ -6,6 +6,8 @@ interface Props {
   canonical: string;
   ogImage?: string;
   jsonLd?: Record<string, any>[];
+  noindex?: boolean;
+  ogType?: string;
 }
 
 const {
@@ -15,16 +17,18 @@ const {
   canonical,
   ogImage = 'https://aifreeplan.com/og-default.png',
   jsonLd = [],
+  noindex = false,
+  ogType = 'website',
 } = Astro.props;
 
 const ogLocale = locale === 'zh' ? 'zh_CN' : 'en_US';
 const xDefault = 'zh';
 
 // Build hreflang URLs: replace the locale segment in canonical
-const pathWithoutLocale = canonical.replace(`https://aifreeplan.com/${locale}`, '');
-const zhUrl = `https://aifreeplan.com/zh${pathWithoutLocale || '/'}`;
-const enUrl = `https://aifreeplan.com/en${pathWithoutLocale || '/'}`;
-const xDefaultUrl = `https://aifreeplan.com/${xDefault}${pathWithoutLocale || '/'}`;
+const basePath = canonical.replace(/^https:\/\/aifreeplan\.com/, '').replace(/^\/?(zh|en)/, '') || '/';
+const zhUrl = `https://aifreeplan.com/zh${basePath === '/' ? '' : basePath}`;
+const enUrl = `https://aifreeplan.com/en${basePath === '/' ? '' : basePath}`;
+const xDefaultUrl = `https://aifreeplan.com/${xDefault}${basePath === '/' ? '' : basePath}`;
 ---
 
 <head>
@@ -43,7 +47,7 @@ const xDefaultUrl = `https://aifreeplan.com/${xDefault}${pathWithoutLocale || '/
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:url" content={canonical} />
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content={ogType} />
   <meta property="og:locale" content={ogLocale} />
   <meta property="og:image" content={ogImage} />
   <meta property="og:site_name" content="AIFreePlan" />
@@ -55,7 +59,7 @@ const xDefaultUrl = `https://aifreeplan.com/${xDefault}${pathWithoutLocale || '/
   <meta name="twitter:image" content={ogImage} />
 
   <!-- Robots -->
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow'} />
 
   <!-- Hreflang -->
   <link rel="alternate" hreflang="zh" href={zhUrl} />

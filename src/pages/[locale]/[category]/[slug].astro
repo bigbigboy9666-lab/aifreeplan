@@ -38,7 +38,7 @@ const catInfo = CATEGORIES[tool.category] || { zh: tool.category, en: tool.categ
 const catName = isZh ? catInfo.zh : catInfo.en;
 
 const title = `${name} - ${catName} | AIFreePlan`;
-const canonical = `https://aifreeplan.com/${locale}/${tool.category}/${tool.slug}`;
+const canonical = `https://aifreeplan.com/${locale}/${tool.category}/${tool.slug}/`;
 const faq = tool[`faq_${lang}`] || [];
 
 const jsonLd = toolSchema(tool, locale);

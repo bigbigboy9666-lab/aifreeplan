@@ -11,6 +11,8 @@ interface Props {
   ogImage?: string;
   jsonLd?: Record<string, any>[];
   currentPath?: string;
+  noindex?: boolean;
+  ogType?: string;
 }
 
 const {
@@ -21,6 +23,8 @@ const {
   ogImage = 'https://aifreeplan.com/og-default.png',
   jsonLd = [],
   currentPath = '',
+  noindex = false,
+  ogType = 'website',
 } = Astro.props;
 ---
 
@@ -33,6 +37,8 @@ const {
     canonical={canonical}
     ogImage={ogImage}
     jsonLd={jsonLd}
+    noindex={noindex}
+    ogType={ogType}
   />
   <body>
     <Navigation locale={locale} currentPath={currentPath} />

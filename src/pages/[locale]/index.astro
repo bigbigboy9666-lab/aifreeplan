@@ -43,7 +43,7 @@ const jsonLd = [
     "inLanguage": locale,
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://aifreeplan.com/{locale}/all?q={search_term_string}",
+      "target": `https://aifreeplan.com/${locale}/all?q={search_term_string}`,
       "query-input": "required name=search_term_string"
     }
   },
@@ -70,7 +70,7 @@ const jsonLd = [
   title={title}
   description={description}
   locale={locale}
-  canonical={`https://aifreeplan.com/${locale}`}
+  canonical={`https://aifreeplan.com/${locale}/`}
   currentPath={`/${locale}`}
   jsonLd={jsonLd}
 >
