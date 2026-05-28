@@ -2275,7 +2275,7 @@
     "description_zh": "阿里的AI绘画工具，通义系列的图片生成模型。免费送500张/月，风格多样，中文提示词理解能力强，适合做海报和插画。",
     "description_en": "Alibaba's AI image generation tool. 500 free images/month, diverse styles, strong Chinese prompt understanding.",
     "free_credits": {
-      "type": "daily",
+      "type": "monthly",
       "amount": "500张/月（约16张）",
       "amount_en": "~16 images (500/month)",
       "resolution": "1024x1024",
@@ -2939,7 +2939,7 @@
     "description_en": "Adobe's AI painting tool, safest for commercial use. 25 free credits/month, commercially safe images.",
     "free_credits": {
       "type": "daily",
-      "amount": "25积分/月",
+      "amount": "25积分",
       "amount_en": "25 credits/month",
       "resolution": "最高2048x2048",
       "resolution_en": "Up to 2048x2048",
@@ -6933,7 +6933,7 @@
     "description_en": "An open-source video generation tool based on Stable Diffusion.",
     "free_credits": {
       "type": "unlimited",
-      "amount": "0",
+      "amount": "完全免费",
       "amount_en": "0",
       "resolution": "无限",
       "watermark": "No",
@@ -10803,7 +10803,7 @@
     "description_en": "Amazon's voice-controlled AI assistant that manages smart devices, answers questions, and plays music in your home.",
     "free_credits": {
       "type": "无免费额度",
-      "amount": "0",
+      "amount": "完全免费",
       "amount_en": "0",
       "resolution": "不适用",
       "watermark": "No",
