@@ -280,7 +280,7 @@
     "description_zh": "AI 视频生成领域的先驱，Gen-3 Alpha 模型画质出色。每月125积分免费，够生成几个高质量短视频。专业创作者用得多。",
     "description_en": "Pioneer in AI video generation. Gen-3 Alpha model delivers excellent quality. 125 free credits monthly, enough for a few high-quality short clips. Popular among professional creators.",
     "free_credits": {
-      "type": "one-time",
+      "type": "one_time",
       "amount": "125积分（一次性）",
       "amount_en": "125 credits (one-time)",
       "duration": "5-10秒",
@@ -2093,7 +2093,7 @@
     "description_zh": "免费AI编程Agent，终端里用自然语言改代码。基于Codebuff付费版，用广告换免费额度。默认用DeepSeek V4 Flash，支持Kimi K2.6、MiniMax M2.7等国产模型。",
     "description_en": "Free AI coding agent that edits code via natural language in terminal. Based on paid Codebuff, ad-supported. Uses DeepSeek V4 Flash by default, supports Kimi K2.6, MiniMax M2.7 and other models.",
     "free_credits": {
-      "type": "unlimited_with_ads",
+      "type": "unlimited",
       "amount": "免费，终端内展示广告",
       "amount_en": "Free, ads shown in CLI",
       "duration": "每天约5小时（社区反馈）",
@@ -4488,7 +4488,7 @@
     "description_zh": "Show_1是一款AI图像生成工具，支持文生图，免费版提供100次生成额度。操作简单，适合新手快速体验AI绘画。",
     "description_en": "A user-friendly AI image generator that lets beginners create stunning artwork effortlessly.",
     "free_credits": {
-      "type": "每月免费额度",
+      "type": "monthly",
       "amount": "100次生成",
       "amount_en": "100 generations per month",
       "resolution": "1024x1024",
@@ -4646,7 +4646,7 @@
     "description_zh": "用AI快速生成视频，告别繁琐剪辑，让创意飞起来！",
     "description_en": "Generate videos quickly with AI, no more complex editing, let your creativity soar!",
     "free_credits": {
-      "type": "免费试用",
+      "type": "trial",
       "amount": "5个视频",
       "amount_en": "5 videos",
       "resolution": "720p",
@@ -4802,7 +4802,7 @@
     "description_zh": "Google的Imagen Video模型，文字描述生成高质量视频。目前主要通过Google Labs体验，免费额度有限但画质顶级。",
     "description_en": "Quickly generate high-quality videos using AI, easy to use, perfect for creatives.",
     "free_credits": {
-      "type": "每日额度",
+      "type": "daily",
       "amount": "10次",
       "amount_en": "10 generations",
       "resolution": "720p",
@@ -5312,7 +5312,7 @@
     "description_zh": "基于Stable Diffusion的视频编辑与生成工具，支持动作控制和场景保持。",
     "description_en": "A video editing and generation tool based on Stable Diffusion, supporting motion control and scene consistency.",
     "free_credits": {
-      "type": "开源免费",
+      "type": "unlimited",
       "amount": "完全免费",
       "amount_en": "Completely free",
       "resolution": "默认512x512，可自定义",
@@ -5624,7 +5624,7 @@
     "description_zh": "用AI将静态图片转成动态视频，操作简单效果好。",
     "description_en": "AI tool to generate dynamic videos from static images with simple operation and good results.",
     "free_credits": {
-      "type": "每日免费生成",
+      "type": "daily",
       "amount": "1次/天",
       "amount_en": "1 time",
       "resolution": "480p",
@@ -5702,7 +5702,7 @@
     "description_zh": "AI驱动的文本到艺术图像生成器，快速创建独特艺术作品。",
     "description_en": "AI-powered text-to-art generator that creates unique artwork from text prompts in seconds.",
     "free_credits": {
-      "type": "每日免费生成次数",
+      "type": "daily",
       "amount": "5",
       "amount_en": "5 free generations",
       "resolution": "标准分辨率，如1024x1024",
@@ -5780,7 +5780,7 @@
     "description_zh": "黎明AI帮你用文字变出惊艳图像，免费额度天天有！",
     "description_en": "Dawn AI turns text into stunning images with daily free credits, easy to use.",
     "free_credits": {
-      "type": "每日额度",
+      "type": "daily",
       "amount": "10",
       "amount_en": "10",
       "resolution": "1024x1024",
@@ -5858,7 +5858,7 @@
     "description_zh": "Lensa AI是一款AI图像编辑工具，专注于生成个性化头像。",
     "description_en": "Lensa AI is an AI-powered tool for creating and editing personalized avatars from photos.",
     "free_credits": {
-      "type": "credits",
+      "type": "freemium",
       "amount": "5",
       "amount_en": "5 free credits",
       "resolution": "HD",
@@ -5936,7 +5936,7 @@
     "description_zh": "一款AI驱动的图像增强工具，能修复老照片、提升画质，让照片瞬间焕新。",
     "description_en": "An AI-powered photo enhancer that restores old images, improves clarity, and provides editing features for brand-new results.",
     "free_credits": {
-      "type": "每日免费",
+      "type": "daily",
       "amount": "5",
       "amount_en": "5 times",
       "resolution": "标准分辨率",
@@ -6092,7 +6092,7 @@
     "description_zh": "一键生成专业、个性化的AI头像，适用于社交媒体和职场。",
     "description_en": "Generate professional, personalized AI headshots for social media and professional use with one click.",
     "free_credits": {
-      "type": "免费增值",
+      "type": "freemium",
       "amount": "3",
       "amount_en": "3",
       "resolution": "自适应",
@@ -6617,7 +6617,7 @@
     "description_zh": "Hailuo AI能快速把文字变成高质量视频，操作简单。",
     "description_en": "Hailuo AI quickly generates high-quality videos from text with easy operation.",
     "free_credits": {
-      "type": "免费试用",
+      "type": "trial",
       "amount": "5",
       "amount_en": "5 videos",
       "resolution": "1080p",
@@ -6698,7 +6698,7 @@
     "description_zh": "ModelScope文生视频是阿里开源的AI视频生成模型，输入文字描述即可生成短视频。完全免费，在Hugging Face和ModelScope平台都能直接体验。",
     "description_en": "An AI tool that generates videos from text descriptions.",
     "free_credits": {
-      "type": "免费试用",
+      "type": "trial",
       "amount": "100 credits",
       "amount_en": "100 credits",
       "resolution": "720p",
@@ -6776,7 +6776,7 @@
     "description_zh": "基于扩散模型的AI动画生成工具，从文本创建动画。",
     "description_en": "An AI animation tool using diffusion models to generate animations from text prompts.",
     "free_credits": {
-      "type": "free_tier",
+      "type": "freemium",
       "amount": "无限制但功能受限",
       "amount_en": "Unlimited with limited features",
       "resolution": "720p",
@@ -6854,7 +6854,7 @@
     "description_zh": "AI驱动的视频生成工具，通过简单步骤创建专业视频。",
     "description_en": "AI-powered video creation tool that generates professional videos through simple steps.",
     "free_credits": {
-      "type": "每月额度",
+      "type": "monthly",
       "amount": "100",
       "amount_en": "100 credits",
       "resolution": "1080p",
@@ -7010,7 +7010,7 @@
     "description_zh": "AI驱动的视频生成工具，支持文本到视频创作。",
     "description_en": "AI-powered video generation tool for creating videos from text prompts with advanced features.",
     "free_credits": {
-      "type": "免费试用",
+      "type": "trial",
       "amount": "125",
       "amount_en": "125 credits per month",
       "resolution": "1080p",
@@ -7088,7 +7088,7 @@
     "description_zh": "基于AI的视频生成工具，可从文本或图像创建高质量视频。",
     "description_en": "AI-powered tool that generates videos from text or images using diffusion models.",
     "free_credits": {
-      "type": "免费试用",
+      "type": "trial",
       "amount": "100积分",
       "amount_en": "100 credits",
       "resolution": "512x512",
@@ -7166,7 +7166,7 @@
     "description_zh": "CogVideo是清华和智谱AI开发的AI视频生成工具，文字变视频超简单。",
     "description_en": "CogVideo is an AI video generator from Tsinghua and Zhipu AI, turning text prompts into high-quality videos easily.",
     "free_credits": {
-      "type": "免费额度",
+      "type": "freemium",
       "amount": "每月5个视频",
       "amount_en": "5 videos per month",
       "resolution": "720p",
@@ -7322,7 +7322,7 @@
     "description_zh": "用AI混合照片创造新图像，超酷的创意工具！",
     "description_en": "Use AI to blend images and create unique artworks, a fun and creative tool.",
     "free_credits": {
-      "type": "credits",
+      "type": "freemium",
       "amount": "10",
       "amount_en": "10",
       "resolution": "1024x1024",
@@ -7400,7 +7400,7 @@
     "description_zh": "RunwayML是一个AI视频生成平台，提供文本到视频、图像到视频等功能。",
     "description_en": "An AI-powered platform for video generation and editing, allowing users to create and modify videos using machine learning models.",
     "free_credits": {
-      "type": "credits",
+      "type": "freemium",
       "amount": "125",
       "amount_en": "125 credits",
       "resolution": "720p",
@@ -7478,7 +7478,7 @@
     "description_zh": "Hotpot AI是AI图像生成工具，简单好用，帮你快速创作惊艳图像。",
     "description_en": "Hotpot AI is an AI image generator that's easy to use, helping you create stunning images quickly.",
     "free_credits": {
-      "type": "免费积分",
+      "type": "freemium",
       "amount": "100",
       "amount_en": "100 credits",
       "resolution": "1024x1024",
@@ -7712,7 +7712,7 @@
     "description_zh": "一个超酷的AI工具，帮你快速生成惊艳的图像，简单好用。",
     "description_en": "An innovative AI tool for generating stunning images effortlessly, perfect for creative projects.",
     "free_credits": {
-      "type": "daily_credits",
+      "type": "daily",
       "amount": 10,
       "amount_en": "10 daily credits",
       "resolution": "1024x1024",
@@ -7790,7 +7790,7 @@
     "description_zh": "一款AI驱动的照片编辑应用，能改变面部特征和年龄。",
     "description_en": "An AI-powered photo editing app that can alter facial features, age, and style with realistic results.",
     "free_credits": {
-      "type": "每日重置",
+      "type": "daily",
       "amount": 3,
       "amount_en": "3 photos",
       "resolution": "标准分辨率",
@@ -8024,7 +8024,7 @@
     "description_zh": "Grok是xAI推出的AI助手，实时信息强，对话幽默。",
     "description_en": "Grok is an AI assistant by xAI, offering real-time info and witty chats.",
     "free_credits": {
-      "type": "查询数",
+      "type": "limited",
       "amount": "有限免费",
       "amount_en": "Limited free daily queries",
       "resolution": "不适用",
@@ -8102,7 +8102,7 @@
     "description_zh": "零一万物开发的强大AI语言模型，适用于多种任务。",
     "description_en": "A powerful large language model developed by 01.AI for various AI applications and tasks.",
     "free_credits": {
-      "type": "API calls",
+      "type": "limited",
       "amount": 1000,
       "amount_en": "1000 calls per month",
       "resolution": "n/a",
@@ -8180,7 +8180,7 @@
     "description_zh": "AI驱动的桌面设计工具，快速创建创意内容。",
     "description_en": "AI-powered desktop design tool for quickly creating creative content and graphics.",
     "free_credits": {
-      "type": "每日额度",
+      "type": "daily",
       "amount": 50,
       "amount_en": "50 credits",
       "resolution": "1080p",
@@ -8258,7 +8258,7 @@
     "description_zh": "基于百度文心大模型的AI对话工具，擅长中文理解与生成。",
     "description_en": "A powerful AI chat tool by Baidu, built on the ERNIE large language model for strong Chinese comprehension and generation.",
     "free_credits": {
-      "type": "每日额度",
+      "type": "daily",
       "amount": 10,
       "amount_en": "10",
       "resolution": "不适用",
@@ -8414,7 +8414,7 @@
     "description_zh": "Phi-3是微软推出的轻量级AI语言模型，性能强大，适合各种应用。",
     "description_en": "Phi-3 is a lightweight AI language model from Microsoft, offering strong performance for diverse applications.",
     "free_credits": {
-      "type": "开源免费",
+      "type": "unlimited",
       "amount": "无限制",
       "amount_en": "Unlimited",
       "resolution": "不适用",
@@ -8774,7 +8774,7 @@
     "description_zh": "开源大语言模型，性能优异，支持多种任务。",
     "description_en": "An open-source large language model with excellent performance, supporting various tasks.",
     "free_credits": {
-      "type": "open_source",
+      "type": "unlimited",
       "amount": "无限",
       "amount_en": "unlimited",
       "resolution": "n/a",
@@ -8930,7 +8930,7 @@
     "description_zh": "AI驱动的代码补全与智能提示工具，支持多种编程语言。",
     "description_en": "AI-powered code completion and intelligent suggestion tool supporting multiple programming languages.",
     "free_credits": {
-      "type": "每月免费使用",
+      "type": "monthly",
       "amount": "基础补全功能无限使用，高级功能有次数限制",
       "amount_en": "Basic completions unlimited, premium features limited",
       "resolution": "不适用",
@@ -9086,7 +9086,7 @@
     "description_zh": "用AI快速生成UI组件，前端开发更轻松。",
     "description_en": "An AI tool for generating UI components from text, streamlining frontend development.",
     "free_credits": {
-      "type": "monthly_generations",
+      "type": "monthly",
       "amount": "100次",
       "amount_en": "100 generations",
       "resolution": "标准",
@@ -9164,7 +9164,7 @@
     "description_zh": "AI驱动的应用构建平台，用自然语言描述需求就能生成网站、应用和工具。支持多种AI模型，适合快速原型开发。",
     "description_en": "AI-powered app builder that generates websites, apps, and tools from natural language descriptions.",
     "free_credits": {
-      "type": "每日",
+      "type": "daily",
       "amount": "有限免费额度",
       "amount_en": "Limited free credits",
       "resolution": "1024x1024",
@@ -9320,7 +9320,7 @@
     "description_zh": "一个 AI 驱动的网站构建工具，帮助用户快速创建响应式网站。",
     "description_en": "An AI-powered website builder that enables users to create responsive websites quickly with drag-and-drop editing.",
     "free_credits": {
-      "type": "免费计划",
+      "type": "freemium",
       "amount": "1 个站点，有限功能",
       "amount_en": "1 site, limited features",
       "resolution": "响应式",
@@ -9398,7 +9398,7 @@
     "description_zh": "AI驱动的代码助手，帮助开发者快速编写和编辑代码。",
     "description_en": "An AI-powered coding assistant that enhances developer productivity by generating and editing code efficiently.",
     "free_credits": {
-      "type": "free_tier",
+      "type": "freemium",
       "amount": "50",
       "amount_en": "50",
       "resolution": "high",
@@ -9476,7 +9476,7 @@
     "description_zh": "一款专为开发者设计的AI驱动代码片段管理与生产力工具。",
     "description_en": "An AI-powered code snippet management and productivity tool designed for developers.",
     "free_credits": {
-      "type": "每月使用次数",
+      "type": "monthly",
       "amount": 100,
       "amount_en": "100 times per month",
       "resolution": "无限制",
@@ -9554,7 +9554,7 @@
     "description_zh": "智能AI代码审查助手，自动检测问题，提升代码质量和安全性。",
     "description_en": "AI-powered code review tool that automates detection of issues and enhances code quality and security.",
     "free_credits": {
-      "type": "每月免费行数",
+      "type": "monthly",
       "amount": "500行",
       "amount_en": "500 lines/month",
       "resolution": "不适用",
@@ -9710,7 +9710,7 @@
     "description_zh": "一个结合实时网络搜索与对话式AI的强大问答引擎，直接提供带来源的答案。",
     "description_en": "A powerful Q&A engine combining real-time web search with conversational AI, providing direct answers with sources.",
     "free_credits": {
-      "type": "每日查询限制",
+      "type": "daily",
       "amount": "5次Pro搜索",
       "amount_en": "5 Pro searches",
       "resolution": "不适用",
@@ -9788,7 +9788,7 @@
     "description_zh": "阿里云推出的AI语言模型，支持智能对话和内容生成。",
     "description_en": "An AI language model by Alibaba Cloud, supporting intelligent dialogue and content generation.",
     "free_credits": {
-      "type": "queries",
+      "type": "limited",
       "amount": 100,
       "amount_en": "100 queries",
       "resolution": "不适用",
@@ -9866,7 +9866,7 @@
     "description_zh": "Grammarly是一款智能语法检查和写作辅助工具，帮助提升文本质量。",
     "description_en": "Grammarly is an AI-powered writing assistant that checks grammar, spelling, punctuation, and style to improve writing.",
     "free_credits": {
-      "type": "unlimited_basic",
+      "type": "unlimited",
       "amount": "无限",
       "amount_en": "Unlimited basic grammar checks",
       "resolution": "Basic grammar, spelling, and punctuation",
@@ -9944,7 +9944,7 @@
     "description_zh": "一款AI文案生成工具，快速创建营销内容。",
     "description_en": "AI-powered copywriting tool for quickly generating marketing content and improving writing efficiency.",
     "free_credits": {
-      "type": "words",
+      "type": "limited",
       "amount": "2000",
       "amount_en": "2000 words per month",
       "resolution": "不适用",
@@ -10022,7 +10022,7 @@
     "description_zh": "Writesonic是AI写作助手，快速生成营销文案。",
     "description_en": "Writesonic is an AI writing tool that creates marketing copy quickly.",
     "free_credits": {
-      "type": "免费试用",
+      "type": "trial",
       "amount": "10,000字",
       "amount_en": "10,000 words",
       "resolution": "无",
@@ -10178,7 +10178,7 @@
     "description_zh": "Taskade是一款AI驱动的协作工具，帮你高效管理任务和项目。",
     "description_en": "Taskade is an AI-powered collaboration tool for efficient task and project management.",
     "free_credits": {
-      "type": "ai_credits",
+      "type": "freemium",
       "amount": "每月50次AI调用",
       "amount_en": "50 AI calls per month",
       "resolution": "不适用",
@@ -10256,7 +10256,7 @@
     "description_zh": "Motion是一款AI动画工具，能快速生成高质量动画。",
     "description_en": "Motion is an AI animation tool that quickly generates high-quality animations from text or images.",
     "free_credits": {
-      "type": "每月免费额度",
+      "type": "monthly",
       "amount": 5,
       "amount_en": "5 credits per month",
       "resolution": "1080p",
@@ -10334,7 +10334,7 @@
     "description_zh": "智能日程助手，优化时间管理，自动安排会议和任务。",
     "description_en": "An AI-powered scheduling assistant that optimizes your calendar and automates meeting and task arrangements.",
     "free_credits": {
-      "type": "free_tier",
+      "type": "freemium",
       "amount": "每月5次智能调度",
       "amount_en": "5 smart scheduling sessions per month",
       "resolution": "不适用",
@@ -10412,7 +10412,7 @@
     "description_zh": "Clockwise是个聪明小助手，自动优化会议时间，帮你减少日程冲突，提升工作效率。",
     "description_en": "Clockwise is an AI-powered scheduling tool that automatically adjusts your calendar to reduce meeting conflicts and boost productivity.",
     "free_credits": {
-      "type": "free_tier",
+      "type": "freemium",
       "amount": "5次会议优化/月",
       "amount_en": "5 meeting optimizations per month",
       "resolution": "不适用",
@@ -10568,7 +10568,7 @@
     "description_zh": "Lemcal是一款AI日程管理工具，支持智能排期、会议安排和日历同步。免费版有基础日程管理功能，适合个人和小团队使用。",
     "description_en": "Lemcal is an AI-powered calendar tool that helps you manage your schedule efficiently and plan your day with ease.",
     "free_credits": {
-      "type": "每月免费日程创建",
+      "type": "monthly",
       "amount": 100,
       "amount_en": "100 free events per month",
       "resolution": "高清视图",
@@ -10646,7 +10646,7 @@
     "description_zh": "IFTTT AI让自动化变聪明，轻松玩转各种服务连接。",
     "description_en": "IFTTT AI makes automation smarter, enabling easy connections between various apps and services with artificial intelligence.",
     "free_credits": {
-      "type": "api_calls",
+      "type": "limited",
       "amount": "100",
       "amount_en": "100",
       "resolution": "不适用",
@@ -10724,7 +10724,7 @@
     "description_zh": "苹果智能语音助手，支持语音控制设备和信息查询。",
     "description_en": "Apple's intelligent voice assistant for voice control and information queries.",
     "free_credits": {
-      "type": "免费使用",
+      "type": "freemium",
       "amount": "无限",
       "amount_en": "unlimited",
       "resolution": "不适用",
@@ -10802,7 +10802,7 @@
     "description_zh": "亚马逊Alexa智能语音助手，支持语音控制智能家居、播放音乐、查询天气等。完全免费使用，需要Echo设备或Alexa App。",
     "description_en": "Amazon's voice-controlled AI assistant that manages smart devices, answers questions, and plays music in your home.",
     "free_credits": {
-      "type": "无免费额度",
+      "type": "none",
       "amount": "完全免费",
       "amount_en": "0",
       "resolution": "不适用",
@@ -10958,7 +10958,7 @@
     "description_zh": "Mubert是AI音乐生成工具，帮你快速创作原创背景音乐。",
     "description_en": "Mubert is an AI music generation tool that helps you create original background music quickly.",
     "free_credits": {
-      "type": "monthly_generations",
+      "type": "monthly",
       "amount": "10",
       "amount_en": "10",
       "resolution": "标准",
