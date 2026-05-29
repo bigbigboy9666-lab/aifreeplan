@@ -11,7 +11,7 @@ const tags = guide[`tags_${locale}`] || guide.tags_en || [];
 const date = guide.date_modified || guide.date_published;
 ---
 
-<a href={`/${locale}/guides/${guide.slug}`} class="guide-card" target="_blank" rel="noopener">
+<a href={`/${locale}/guides/${guide.slug}`} class="guide-card">
   <h3 class="guide-title">{title}</h3>
   <p class="guide-desc">{desc}</p>
   <div class="guide-meta">

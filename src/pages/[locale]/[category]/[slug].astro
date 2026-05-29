@@ -142,7 +142,7 @@ const related = allTools
           <h2>{isZh ? '相关工具' : 'Related Tools'}</h2>
           <div class="tools-grid">
             {related.map((rt) => (
-              <a href={`/${locale}/${rt.category}/${rt.slug}`} class="tool-card" target="_blank" rel="noopener">
+              <a href={`/${locale}/${rt.category}/${rt.slug}`} class="tool-card">
                 <h3>{rt[`name_${locale}`] || rt.name_en}</h3>
                 <p>{(rt[`description_${locale}`] || rt.description_en || '').slice(0, 100)}</p>
               </a>

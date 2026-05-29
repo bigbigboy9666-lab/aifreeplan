@@ -13,7 +13,7 @@ const desc = tool[`description_${locale}`] || tool.description_en;
 const catLabel = tool[`category_${locale}`] || tool.category_en;
 ---
 
-<a href={`/${locale}/${tool.category}/${tool.slug}`} class="tool-card" target="_blank" rel="noopener">
+<a href={`/${locale}/${tool.category}/${tool.slug}`} class="tool-card">
   <div class="tool-card-header">
     <h3 class="tool-name">{name}</h3>
     <FreeCreditsBadge credits={tool.free_credits || {}} locale={locale} />
