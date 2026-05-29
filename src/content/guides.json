@@ -4788,5 +4788,91 @@
     ],
     "content_zh": "TRAE免费版每月5000次自动补全，SOLO模式能独立完成整个开发任务——这是字节跳动给个人开发者的福利，不绑卡、不限时。\n\n对比同类工具，[Cursor](/zh/coding/cursor)免费版每月2000次补全，[Windsurf](/zh/coding/windsurf)免费版有用量上限，[GitHub Copilot](/zh/coding/github-copilot)免费版每月2000次补全。TRAE直接给5000次，量上赢了。\n\nTRAE是什么\n\nTRAE是字节跳动在2025年推出的AI编程IDE，全称\"The Real AI Engineer\"。它不是插件，是独立的IDE——基于VS Code魔改，内置AI能力。国内版叫TRAE（国际版也叫TRAE，域名trae.ai），内置豆包、DeepSeek等国产模型，国际版还支持Claude、GPT。\n\n核心卖点是SOLO模式：你描述需求，AI自动写代码、跑测试、出预览。不用一行行盯着改，适合快速搭原型。\n\n免费版到底给什么\n\nTRAE的定价分五档，个人开发者关心的是Free档：\n\n- 价格：0元\n- 自动补全：每月5000次\n- 基础用量：有限（官方没公布具体数字，实测日常编码够用）\n- 队列优先级：标准队列（高峰期可能要排队）\n- 支持模型：豆包、DeepSeek等国产模型\n- SOLO模式：有限制（不能用云端并行任务）\n\n对比一下竞品的免费版：\n\n[Cursor](/zh/coding/cursor) Hobby计划——每月2000次补全，50次高级模型请求。补全次数比TRAE少一半多，但高级模型请求是TRAE没有的（TRAE免费版只能用基础模型）。\n\n[Windsurf](/zh/coding/windsurf) Free——补全和聊天都有，但用量上限较低。适合轻度使用。\n\n[GitHub Copilot](/zh/coding/github-copilot) 免费版——每月2000次补全，50次聊天。和TRAE一样基于VS Code生态，但补全量只有TRAE的40%。\n\n[Codeium](/zh/coding/codeium) 个人版——永久免费，无限补全。数量上最慷慨，但没有SOLO模式这种自动开发能力。\n\n结论：如果你主要需要补全量大、偶尔用SOLO模式搭原型，TRAE免费版最合适。如果你需要高级模型（Claude Opus、GPT-4o），Cursor的免费版更划算。\n\n付费版值不值\n\nTRAE有四个付费档：\n\nLite档——3美元/月。无限补全，5美元基础用量，快速队列。适合日常编码量大的开发者，补全不限次数这个很香。\n\nPro档——10美元/月。20美元基础用量，SOLO模式完整可用，最多10个并发云任务。新用户有7天免费试用。这个档位对标Cursor Pro（20美元/月）和Windsurf Pro（15美元/月），价格最低。\n\nPro+档——30美元/月。Pro的3.5倍用量，15个并发云任务。适合重度用户。\n\nUltra档——100美元/月。Pro的20倍用量，模型抢先体验，20个并发云任务。企业级或极重度用户。\n\n性价比判断：TRAE Pro的10美元/月是同类产品中最便宜的。Cursor Pro要20美元，Windsurf Pro要15美元。但TRAE的模型支持不如Cursor丰富——Cursor可以直接选Claude Opus、GPT-4o等顶级模型，TRAE免费版主要给豆包和DeepSeek。\n\nSOLO模式体验\n\nSOLO模式是TRAE的差异化功能。用法很简单：在对话框里描述你要做什么，比如\"做一个Todo List网页应用，支持增删改查，用React\"，SOLO会自动：\n\n1. 分析需求，拆解任务\n2. 生成项目结构\n3. 写代码\n4. 跑测试\n5. 出预览\n\n实测效果：简单项目（个人主页、Todo应用、表单页面）3-5分钟出结果，质量尚可。复杂项目（多页面应用、数据库集成）需要多轮对话迭代，不如直接写代码快。\n\nSOLO模式适合的场景：快速原型验证、学习新技术栈、写小工具。不适合：生产级项目、复杂业务逻辑、性能敏感场景。\n\n隐私和数据安全\n\nTRAE坚持\"本地优先\"原则——代码存在本地，不上传到云端（除非你主动用SOLO模式的云任务）。数据按账号归属地部署，国内用户数据在国内服务器。支持隐私模式，开启后不存储聊天记录。\n\n对比Cursor（数据可能经过美国服务器）和GitHub Copilot（代码片段会上传到GitHub），TRAE在隐私方面做得更透明。\n\n怎么开始用\n\n1. 访问 trae.ai 下载客户端（支持macOS 10.15+和Windows 10/11）\n2. 注册账号登录（国内版用手机号，国际版用邮箱）\n3. 导入项目或新建项目\n4. 开始编码——补全自动触发，SOLO模式在侧边栏\n\n建议：先领7天Pro免费试用，体验完整功能（包括SOLO模式和高级模型），试用期结束后再决定要不要付费。日常编码用免费版的5000次补全足够。\n\n常见问题\n\n**Q: TRAE免费版和Cursor免费版哪个好？**\nA: 看需求。补全量TRAE赢（5000 vs 2000），模型质量Cursor赢（可选Claude Opus）。日常写代码TRAE够用，需要顶级模型选Cursor。\n\n**Q: TRAE的SOLO模式免费版能用吗？**\nA: 能用，但有限制。不能用云端并行任务，复杂项目效果一般。搭简单原型够了。\n\n**Q: TRAE支持哪些编程语言？**\nA: 主流语言都支持——Python、JavaScript、TypeScript、Java、Go、Rust、C++等。前端框架（React、Vue、Next.js）支持最好，因为字节自己就大量用这些。\n",
     "content_en": "TRAE gives you 5,000 free autocompletions per month — more than Cursor (2,000), GitHub Copilot (2,000), and Windsurf (limited). ByteDance's AI coding IDE is genuinely free for personal use, no credit card required.\n\nWhat is TRAE\n\nTRAE stands for \"The Real AI Engineer.\" It's a standalone AI-powered coding IDE built by ByteDance (the company behind TikTok/Douyin), launched in early 2025. Unlike VS Code extensions such as GitHub Copilot, TRAE is a full IDE with AI deeply integrated into every workflow.\n\nThe headline feature is SOLO mode: describe what you want in plain English, and TRAE autonomously writes code, runs tests, and generates a preview. Think of it as having a junior developer who works at machine speed.\n\nTRAE Free Tier — What You Actually Get\n\nHere's the exact breakdown of TRAE's Free plan:\n\n- Price: $0, no credit card needed\n- Autocompletion: 5,000 per month\n- Basic usage: Limited (ByteDance doesn't publish exact numbers, but it covers daily coding needs)\n- Queue priority: Standard (may queue during peak hours)\n- Available models: Doubao, DeepSeek, and other domestic models\n- SOLO mode: Available with restrictions (no cloud parallel tasks)\n\nHow does this compare to other free AI coding tools?\n\n**Cursor Free (Hobby plan)**: 2,000 autocompletions + 50 premium model requests. Fewer completions than TRAE, but you get access to Claude and GPT-4o for those 50 requests. Better for quality over quantity.\n\n**GitHub Copilot Free**: 2,000 autocompletions + 50 chat messages. Same VS Code ecosystem, but TRAE gives 2.5x more completions.\n\n**Windsurf Free**: Autocompletion and chat available, but with tighter usage limits. Good for light use.\n\n**Codeium Free**: Unlimited autocompletion, forever free. The most generous on paper, but no SOLO mode or autonomous development features.\n\n**Bottom line**: If you need high-volume autocompletion and want to experiment with autonomous coding, TRAE Free is the best option. If you need top-tier models (Claude Opus, GPT-4o), Cursor's free tier is better despite fewer completions.\n\nTRAE Pricing — All Tiers Compared\n\nTRAE has five pricing tiers:\n\n**Lite — $3/month**: Unlimited autocompletion, $5 basic usage, fast queue. Best value for developers who code daily and hit the 5,000/month limit.\n\n**Pro — $10/month**: $20 basic usage, full SOLO mode, up to 10 concurrent cloud tasks. New users get a 7-day free trial. This undercuts Cursor Pro ($20/month) and Windsurf Pro ($15/month) significantly.\n\n**Pro+ — $30/month**: 3.5x the usage of Pro, 15 concurrent cloud tasks. For heavy users.\n\n**Ultra — $100/month**: 20x the usage of Pro, model early access, 20 concurrent cloud tasks. Enterprise-grade.\n\nThe pricing math is simple: TRAE Pro at $10/month is the cheapest full-featured AI coding assistant. Cursor Pro costs double at $20/month, and Windsurf Pro is $15/month. The trade-off is model selection — Cursor lets you pick Claude Opus, GPT-4o, and other frontier models, while TRAE's free tier is limited to Doubao and DeepSeek.\n\nSOLO Mode in Practice\n\nSOLO mode is TRAE's differentiator. Here's what actually happens when you use it:\n\n1. You type a description: \"Build a todo list app with React, supporting add/delete/edit\"\n2. TRAE analyzes the requirements and breaks them into tasks\n3. It generates the project structure\n4. It writes the code\n5. It runs tests\n6. It shows a preview\n\nFor simple projects (landing pages, todo apps, form pages), expect results in 3-5 minutes. Quality is decent — not production-ready, but good enough for prototyping and learning.\n\nFor complex projects (multi-page apps, database integration, authentication), you'll need multiple rounds of iteration. At that point, writing code yourself is often faster.\n\nSOLO mode works best for: rapid prototyping, learning new frameworks, building internal tools. It struggles with: production-grade code, complex business logic, performance-critical applications.\n\nPrivacy and Security\n\nTRAE follows a \"local-first\" approach. Your code stays on your machine unless you actively use SOLO mode's cloud tasks. Data is stored according to your account region — Chinese users' data stays on Chinese servers, international users' data is in Singapore.\n\nCompared to Cursor (data may route through US servers) and GitHub Copilot (code snippets are uploaded to GitHub), TRAE is more transparent about data handling. There's also a privacy mode that prevents storing chat interactions.\n\nGetting Started\n\n1. Download from trae.ai (supports macOS 10.15+ and Windows 10/11)\n2. Sign up with phone number (China) or email (international)\n3. Import or create a project\n4. Start coding — autocompletion triggers automatically, SOLO mode is in the sidebar\n\nPro tip: Claim the 7-day Pro free trial first. It gives you full access to SOLO mode and premium models. After the trial, decide whether to upgrade or stick with the free tier.\n\nFAQ\n\n**Is TRAE really free?**\nYes. The Free plan costs $0 with no credit card required. You get 5,000 autocompletions per month and limited basic usage. No time limit on the free tier.\n\n**TRAE Free vs Cursor Free — which should I pick?**\nTRAE for volume (5,000 vs 2,000 completions), Cursor for model quality (Claude Opus access). If you code 4+ hours daily, TRAE's higher completion limit matters more. If you need the best AI models for complex reasoning, Cursor wins.\n\n**Does TRAE support Python and JavaScript?**\nYes. TRAE supports all major languages including Python, JavaScript, TypeScript, Java, Go, Rust, and C++. Frontend frameworks (React, Vue, Next.js) have the best support since ByteDance uses them extensively internally.\n\n**Can I use TRAE for commercial projects?**\nYes. The free tier allows commercial use. There are no restrictions on the code you write with TRAE.\n\n**Is my code safe with TRAE?**\nYour code stays local by default. SOLO mode cloud tasks process code on ByteDance servers, but you can enable privacy mode to prevent storing chat data. ByteDance follows regional data storage compliance.\n"
+  },
+  {
+    "slug": "minimax-m27-free-coding-openhands",
+    "type": "guide",
+    "category": "guides",
+    "category_zh": "使用攻略",
+    "category_en": "Guides",
+    "title_zh": "免费用MiniMax M2.7写代码：OpenHands实战指南",
+    "title_en": "How to Use MiniMax M2.7 for Free: OpenHands Coding Guide",
+    "description_zh": "通过OpenHands免费使用MiniMax M2.7模型写代码。不需要API密钥，GitHub登录即用。支持Python、JS、Go等主流语言，可直接提PR。2026年最新实测。",
+    "description_en": "Use MiniMax M2.7 for free through OpenHands cloud IDE. No API key needed — just sign in with GitHub. Supports Python, JS, Go and more. Can create PRs directly.",
+    "author_zh": "AIFreePlan",
+    "author_en": "AIFreePlan",
+    "date_published": "2026-05-30",
+    "date_modified": "2026-05-30",
+    "tags_zh": [
+      "MiniMax",
+      "免费编码",
+      "AI编程",
+      "OpenHands",
+      "M2.7",
+      "免费额度"
+    ],
+    "tags_en": [
+      "MiniMax",
+      "Free Coding",
+      "AI Programming",
+      "OpenHands",
+      "M2.7",
+      "Free Tier"
+    ],
+    "related_tools": [
+      {
+        "slug": "cursor",
+        "category": "coding",
+        "relation": "alternative"
+      },
+      {
+        "slug": "cline",
+        "category": "coding",
+        "relation": "alternative"
+      },
+      {
+        "slug": "github-copilot",
+        "category": "coding",
+        "relation": "alternative"
+      }
+    ],
+    "faq_zh": [
+      {
+        "q": "OpenHands的免费额度有上限吗？",
+        "a": "目前没有明确的使用量限制，但高峰期可能会排队。如果遇到限流，换个时间段再试。"
+      },
+      {
+        "q": "能用MiniMax M2.7的官方API吗？",
+        "a": "可以，但官方API不是免费的（$0.3/M input tokens）。想要免费用就通过OpenHands。"
+      },
+      {
+        "q": "和直接用MiniMax Agent有什么区别？",
+        "a": "MiniMax自己的Agent（agent.minimax.io）也能免费用，但OpenHands的优势是GitHub集成和完整的开发环境。"
+      },
+      {
+        "q": "这个模型能替代Claude或GPT吗？",
+        "a": "对于日常编码任务够用，但复杂项目还是Claude/GPT更强。建议把它当免费备选，主力还是用更好的模型。"
+      }
+    ],
+    "faq_en": [
+      {
+        "q": "Is there a usage limit on OpenHands' free tier?",
+        "a": "No explicit limit currently, but you may experience queuing during peak hours. If you hit rate limits, try again during off-peak times."
+      },
+      {
+        "q": "Can I use MiniMax M2.7's official API?",
+        "a": "Yes, but it's not free ($0.3/M input tokens). Use OpenHands for free access."
+      },
+      {
+        "q": "How is this different from using MiniMax Agent directly?",
+        "a": "MiniMax's own Agent (agent.minimax.io) is also free, but OpenHands offers GitHub integration and a full development environment."
+      },
+      {
+        "q": "Can this replace Claude or GPT?",
+        "a": "It's sufficient for everyday coding tasks, but complex projects still benefit from Claude/GPT. Think of it as a free backup option, not a primary tool."
+      }
+    ],
+    "content_zh": "# 免费用MiniMax M2.7写代码：OpenHands实战指南\n\n## 快速结论\n\n**结论先行：** 通过OpenHands（app.all-hands.dev），你可以免费使用MiniMax M2.7模型来写代码、修bug、重构项目。不需要API密钥，不需要信用卡，用GitHub账号登录就能用。\n\n**核心数据：**\n- 免费额度：无明确限制（OpenHands补贴成本）\n- 支持语言：Python、JavaScript、TypeScript、Go、Rust等主流语言\n- 部署方式：云端IDE，浏览器直接用\n- 绑定GitHub后可以直接帮你提PR\n\n---\n\n## 什么是MiniMax M2.7\n\nMiniMax M2.7是稀宇科技（MiniMax）在2026年3月发布的Agent旗舰模型，主打\"自我进化\"——模型能参与自己的训练过程，在SWE-bench Pro上跑出了56.22%的成绩，追平GPT-5.3-Codex。\n\n不过说实话，这些benchmark数据都是MiniMax自己报的，没有独立第三方验证。但OpenHands选它做默认免费模型，说明至少在实际编码场景里够用。\n\n**技术亮点：**\n- MoE架构，10B激活参数\n- 支持多智能体协作\n- 开源权重（HuggingFace可下载），但商用需要MiniMax书面授权\n\n---\n\n## OpenHands是什么\n\nOpenHands（前身是OpenDevin）是一个开源的AI编程平台，GitHub上5万多星。它的定位是\"AI软件工程师\"——你给它一个任务描述，它能自己写代码、跑测试、修bug。\n\n**为什么免费：** OpenHands用MiniMax模型做免费层的默认模型，相当于MiniMax补贴获客成本。你用的不是MiniMax官方API（那个要$0.3/M tokens），而是OpenHands的免费额度。\n\n---\n\n## 怎么用（5步）\n\n### 第1步：打开OpenHands\n访问 https://app.all-hands.dev\n\n### 第2步：登录\n用GitHub或GitLab账号登录。不支持Google登录。\n\n### 第3步：选择模型\n登录后默认就是MiniMax模型，不需要额外配置API密钥。\n\n### 第4步：创建项目\n可以直接在界面上创建新项目，也可以绑定已有的GitHub仓库。\n\n### 第5步：给任务\n用自然语言描述你要做什么，比如：\n- \"帮我写一个Python爬虫，抓取豆瓣Top250电影\"\n- \"这个函数有bug，帮我修一下\"\n- \"帮我把这段JavaScript代码重构成TypeScript\"\n\n绑定GitHub后，OpenHands可以直接帮你提PR。\n\n---\n\n## 实际体验\n\n**优点：**\n- 真的免费，不需要折腾API密钥\n- 能处理中等复杂度的编程任务\n- 支持直接操作GitHub仓库\n- 云端运行，本地不需要装环境\n\n**缺点：**\n- 响应速度比Claude/GPT慢\n- 复杂项目可能需要多轮对话\n- 免费层可能有并发限制（高峰期要排队）\n- 模型能力上限不如Claude Opus或GPT-4o\n\n---\n\n## 和其他免费编码工具对比\n\n| 工具 | 免费额度 | 模型 | 特点 |\n|------|---------|------|------|\n| OpenHands + MiniMax | 无明确限制 | MiniMax M2.7 | 云端IDE，GitHub集成 |\n| Cursor | 每月50次请求 | GPT-4o-mini | 本地IDE，插件形式 |\n| GitHub Copilot | 每月2000次补全 | GPT-4o | 代码补全为主 |\n| Cline | 按API计费 | 多模型 | VS Code插件，需自备密钥 |\n| Windsurf | 有限免费额度 | 自研模型 | 本地IDE |\n\n**选谁：** 如果你只是偶尔写点代码，不想花钱也不想折腾API密钥，OpenHands是最省心的选择。如果你是重度开发者，Cursor或Copilot的体验更好。\n\n---\n\n## FAQ\n\n### OpenHands的免费额度有上限吗？\n目前没有明确的使用量限制，但高峰期可能会排队。如果遇到限流，换个时间段再试。\n\n### 能用MiniMax M2.7的官方API吗？\n可以，但官方API不是免费的（$0.3/M input tokens）。想要免费用就通过OpenHands。\n\n### 和直接用MiniMax Agent有什么区别？\nMiniMax自己的Agent（agent.minimax.io）也能免费用，但OpenHands的优势是GitHub集成和完整的开发环境。\n\n### 这个模型能替代Claude或GPT吗？\n对于日常编码任务够用，但复杂项目还是Claude/GPT更强。建议把它当免费备选，主力还是用更好的模型。\n",
+    "content_en": "# How to Use MiniMax M2.7 for Free: OpenHands Coding Guide\n\n## Quick Verdict\n\n**Bottom line:** Through OpenHands (app.all-hands.dev), you can use MiniMax M2.7 for free to write code, fix bugs, and refactor projects. No API key needed, no credit card required — just sign in with your GitHub account.\n\n**Key data:**\n- Free tier: No explicit usage limit (OpenHands subsidizes the cost)\n- Supported languages: Python, JavaScript, TypeScript, Go, Rust, and more\n- Deployment: Cloud IDE, runs in your browser\n- GitHub integration: Can create PRs directly\n\n---\n\n## What is MiniMax M2.7\n\nMiniMax M2.7 is an Agent flagship model released by MiniMax in March 2026, built around \"self-evolution\" — the model participates in its own training process. It scored 56.22% on SWE-bench Pro, matching GPT-5.3-Codex.\n\nFair warning: these benchmark numbers are self-reported by MiniMax with no independent verification. But OpenHands chose it as their default free model, which suggests it works well enough for real coding tasks.\n\n**Technical highlights:**\n- MoE architecture with 10B activated parameters\n- Multi-agent collaboration support\n- Open weights (available on HuggingFace), but commercial use requires MiniMax's written authorization\n\n---\n\n## What is OpenHands\n\nOpenHands (formerly OpenDevin) is an open-source AI coding platform with 50k+ GitHub stars. It positions itself as an \"AI software engineer\" — give it a task description, and it writes code, runs tests, and fixes bugs autonomously.\n\n**Why it's free:** OpenHands uses MiniMax as the default model for their free tier, essentially subsidizing the cost as a user acquisition play. You're not using MiniMax's official API ($0.3/M tokens) — you're using OpenHands' free allocation.\n\n---\n\n## How to Use It (5 Steps)\n\n### Step 1: Open OpenHands\nVisit https://app.all-hands.dev\n\n### Step 2: Sign In\nUse your GitHub or GitLab account. Google login is not supported.\n\n### Step 3: Select Model\nMiniMax is the default model after login. No API key configuration needed.\n\n### Step 4: Create a Project\nCreate a new project directly in the interface, or connect an existing GitHub repository.\n\n### Step 5: Give a Task\nDescribe what you want in natural language:\n- \"Write a Python scraper for the top 250 movies on Douban\"\n- \"This function has a bug, fix it\"\n- \"Refactor this JavaScript code to TypeScript\"\n\nWith GitHub connected, OpenHands can create PRs directly.\n\n---\n\n## Real-World Experience\n\n**Pros:**\n- Genuinely free, no API key hassle\n- Handles medium-complexity coding tasks\n- Direct GitHub repository integration\n- Cloud-based, no local environment setup needed\n\n**Cons:**\n- Slower response than Claude/GPT\n- Complex projects may need multiple conversation rounds\n- Free tier may have concurrency limits (queuing during peak hours)\n- Model capability ceiling is lower than Claude Opus or GPT-4o\n\n---\n\n## Comparison with Other Free Coding Tools\n\n| Tool | Free Tier | Model | Notes |\n|------|-----------|-------|-------|\n| OpenHands + MiniMax | No explicit limit | MiniMax M2.7 | Cloud IDE, GitHub integration |\n| Cursor | 50 requests/month | GPT-4o-mini | Local IDE, plugin-based |\n| GitHub Copilot | 2000 completions/month | GPT-4o | Code completion focused |\n| Cline | Pay-per-API | Multiple models | VS Code plugin, needs own API key |\n| Windsurf | Limited free tier | Proprietary | Local IDE |\n\n**Which to choose:** If you just need occasional coding help without spending money or configuring API keys, OpenHands is the most hassle-free option. For heavy development work, Cursor or Copilot offer a better experience.\n\n---\n\n## FAQ\n\n### Is there a usage limit on OpenHands' free tier?\nNo explicit limit currently, but you may experience queuing during peak hours. If you hit rate limits, try again during off-peak times.\n\n### Can I use MiniMax M2.7's official API?\nYes, but it's not free ($0.3/M input tokens). Use OpenHands for free access.\n\n### How is this different from using MiniMax Agent directly?\nMiniMax's own Agent (agent.minimax.io) is also free, but OpenHands offers GitHub integration and a full development environment.\n\n### Can this replace Claude or GPT?\nIt's sufficient for everyday coding tasks, but complex projects still benefit from Claude/GPT. Think of it as a free backup option, not a primary tool.\n"
   }
 ]
