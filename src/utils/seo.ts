@@ -8,7 +8,7 @@ export function toolSchema(tool: Record<string, any>, locale: string) {
   const schemas: Record<string, any>[] = [];
 
   // SoftwareApplication
-  schemas.push({
+  const appSchema: Record<string, any> = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
     name,
@@ -23,7 +23,28 @@ export function toolSchema(tool: Record<string, any>, locale: string) {
       priceCurrency: 'USD',
       description: tool.free_credits?.[`amount_${lang}`] || tool.free_credits?.amount || 'Free tier',
     },
-  });
+  };
+
+  // Add image if available
+  if (tool.image) {
+    appSchema.image = tool.image;
+  }
+
+  // Add aggregateRating if rating exists
+  if (tool.rating && tool.rating > 0) {
+    appSchema.aggregateRating = {
+      '@type': 'AggregateRating',
+      ratingValue: tool.rating,
+      bestRating: 5,
+      worstRating: 1,
+      ratingCount: tool.rating_count || 1,
+    };
+  }
+
+  // Add operatingSystem
+  appSchema.operatingSystem = 'Web';
+
+  schemas.push(appSchema);
 
   // BreadcrumbList
   schemas.push({
@@ -61,17 +82,29 @@ export function guideSchema(guide: Record<string, any>, locale: string) {
   const schemas: Record<string, any>[] = [];
 
   // Article
-  schemas.push({
+  const articleSchema: Record<string, any> = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: title,
     description: desc.slice(0, 200),
     author: { '@type': 'Organization', name: 'AIFreePlan' },
     datePublished: guide.date_published,
-    dateModified: guide.date_modified,
-    publisher: { '@type': 'Organization', name: 'AIFreePlan', url: 'https://aifreeplan.com' },
+    dateModified: guide.date_modified || guide.date_published,
+    publisher: {
+      '@type': 'Organization',
+      name: 'AIFreePlan',
+      url: 'https://aifreeplan.com',
+      logo: { '@type': 'ImageObject', url: 'https://aifreeplan.com/og-default.png' },
+    },
     mainEntityOfPage: { '@type': 'WebPage', '@id': `https://aifreeplan.com/${locale}/guides/${guide.slug}` },
-  });
+  };
+
+  // Add image if available
+  if (guide.image) {
+    articleSchema.image = guide.image;
+  }
+
+  schemas.push(articleSchema);
 
   // BreadcrumbList
   schemas.push({
@@ -113,4 +146,17 @@ export function guideSchema(guide: Record<string, any>, locale: string) {
   }
 
   return schemas;
+}
+
+// Organization schema for homepage
+export function organizationSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'AIFreePlan',
+    url: 'https://aifreeplan.com',
+    logo: 'https://aifreeplan.com/og-default.png',
+    sameAs: [],
+    description: 'AI工具免费额度聚合平台，帮你找到所有AI工具的免费额度。',
+  };
 }

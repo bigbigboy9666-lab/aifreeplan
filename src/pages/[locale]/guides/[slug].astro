@@ -4,6 +4,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
 import FAQ from '@/components/FAQ.astro';
 import { guideSchema } from '@/utils/seo';
+import { Marked } from 'marked';
 
 export function getStaticPaths() {
   const guides = getGuides();
@@ -28,35 +29,50 @@ const tags = guide[`tags_${lang}`] || guide.tags_en || [];
 const faq = guide[`faq_${lang}`] || [];
 const author = guide[`author_${lang}`] || 'AIFreePlan';
 
-const canonical = `https://aifreeplan.com/${locale}/guides/${guide.slug}/`;
+const canonical = `https://aifreeplan.com/${locale}/guides/${guide.slug}`;
 const jsonLd = guideSchema(guide, locale);
 
-// Simple markdown-to-HTML conversion
-let htmlContent = content
-  .replace(/^### (.+)$/gm, '<h3>$1</h3>')
-  .replace(/^## (.+)$/gm, '<h2>$1</h2>')
-  .replace(/^# (.+)$/gm, '<h2>$1</h2>')
-  .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-  .replace(/\*(.+?)\*/g, '<em>$1</em>')
-  .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" loading="lazy">')
-  .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
-  .replace(/^- (.+)$/gm, '<li>$1</li>')
-  .replace(/(<li>.*<\/li>\n?)+/gs, '<ul>$&</ul>')
-  .replace(/\n\n/g, '</p><p>')
-  .replace(/^(?!<[hulo])/gm, '<p>')
-  .replace(/(<\/p><p>)+/g, '</p><p>');
-
-// Strip FAQ from content (it's rendered separately)
+// Strip FAQ from content before rendering (it's rendered separately)
+let rawContent = content;
 const faqMarker = isZh ? '## 常见问题' : '## FAQ';
-const faqStart = htmlContent.indexOf(faqMarker);
+const faqStart = rawContent.indexOf(faqMarker);
 if (faqStart >= 0) {
-  htmlContent = htmlContent.substring(0, faqStart).trim();
+  rawContent = rawContent.substring(0, faqStart).trim();
 }
+
+// Proper markdown rendering with heading IDs
+const marked = new Marked({
+  gfm: true,
+  breaks: false,
+});
+
+// Add IDs to headings for anchor links and TOC
+const renderer = {
+  heading({ tokens, depth }: any) {
+    const text = tokens.map((t: any) => t.raw || t.text || '').join('');
+    const slug = text.toLowerCase().replace(/[^a-z0-9\u4e00-\u9fff]+/g, '-').replace(/^-|-$/g, '');
+    return `<h${depth} id="${slug}">${this.parser.parseInline(tokens)}</h${depth}>`;
+  },
+  image({ href, title, text }: any) {
+    const titleAttr = title ? ` title="${title}"` : '';
+    return `<img src="${href}" alt="${text}"${titleAttr} loading="lazy" decoding="async">`;
+  },
+  link({ href, title, text }: any) {
+    if (href.startsWith('http')) {
+      return `<a href="${href}" target="_blank" rel="noopener"${title ? ` title="${title}"` : ''}>${text}</a>`;
+    }
+    return `<a href="${href}"${title ? ` title="${title}"` : ''}>${text}</a>`;
+  },
+};
+
+marked.use({ renderer });
+
+const htmlContent = marked.parse(rawContent) as string;
 ---
 
 <BaseLayout
   title={`${title} | AIFreePlan`}
-  description={desc.slice(0, 150)}
+  description={desc.slice(0, 155)}
   locale={locale}
   canonical={canonical}
   jsonLd={jsonLd}
@@ -87,9 +103,20 @@ if (faqStart >= 0) {
     <FAQ faq={faq} locale={locale} />
 
     {guide.related_tools && guide.related_tools.length > 0 && (
-      <section>
+      <section class="related-tools-section">
         <h2>{isZh ? '相关工具' : 'Related Tools'}</h2>
-        <p>{isZh ? '查看工具详情请点击工具名称' : 'Click tool names for details'}</p>
+        <div class="tools-grid">
+          {guide.related_tools.map((item: any) => {
+            const slug = typeof item === 'string' ? item : item.slug;
+            const category = typeof item === 'string' ? 'coding' : (item.category || 'coding');
+            const displayName = slug.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase());
+            return (
+              <a href={`/${locale}/${category}/${slug}`} class="tool-card">
+                <h3>{displayName}</h3>
+              </a>
+            );
+          })}
+        </div>
       </section>
     )}
   </article>

@@ -29,8 +29,8 @@ const catName = isZh ? catInfo.zh : catInfo.en;
 
 const title = `${catName} | AIFreePlan`;
 const description = isZh
-  ? `${catName}免费额度对比，${tools.length}个工具实测`
-  : `${catName} free tier comparison, ${tools.length} tools tested`;
+  ? `${catName}免费额度对比评测：共${tools.length}个工具实测，含免费额度、重置周期、水印政策、商用许可等详细信息。`
+  : `${catName} free tier comparison: ${tools.length} tools tested with credits, reset cycle, watermark & commercial use details.`;
 
 const siteUrl = `https://aifreeplan.com/${locale}`;
 const jsonLd = [
@@ -61,7 +61,7 @@ const jsonLd = [
   title={title}
   description={description}
   locale={locale}
-  canonical={`https://aifreeplan.com/${locale}/${category}/`}
+  canonical={`https://aifreeplan.com/${locale}/${category}`}
   currentPath={`/${locale}/${category}`}
   jsonLd={jsonLd}
 >

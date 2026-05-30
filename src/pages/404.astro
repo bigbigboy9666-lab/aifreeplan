@@ -1,20 +1,28 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 
-const title = '404 | AIFreePlan';
-const description = 'Page not found';
+// Detect preferred language from URL path or default to zh
+const referrer = Astro.request.headers.get('referer') || '';
+const currentPath = Astro.url.pathname;
+const detectedLocale = currentPath.startsWith('/en') ? 'en' : 'zh';
+const isZh = detectedLocale === 'zh';
+
+const title = isZh ? '404 - 页面未找到 | AIFreePlan' : '404 - Page Not Found | AIFreePlan';
+const description = isZh ? '抱歉，您访问的页面不存在' : 'Sorry, the page you are looking for does not exist';
 ---
 
 <BaseLayout
   title={title}
   description={description}
-  locale="en"
-  canonical="https://aifreeplan.com/en/404"
+  locale={detectedLocale}
+  canonical={`https://aifreeplan.com/${detectedLocale}/404`}
   noindex={true}
 >
   <div style="text-align:center;padding:80px 20px;">
     <h1>404</h1>
-    <p>Page not found</p>
-    <a href="/en" style="color:var(--accent);">← Back to home</a>
+    <p>{isZh ? '抱歉，您访问的页面不存在' : 'Sorry, the page you are looking for does not exist'}</p>
+    <a href={`/${detectedLocale}`} style="color:var(--accent);text-decoration:underline;">
+      {isZh ? '← 返回首页' : '← Back to home'}
+    </a>
   </div>
 </BaseLayout>

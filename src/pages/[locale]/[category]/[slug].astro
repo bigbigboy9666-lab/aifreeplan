@@ -38,7 +38,7 @@ const catInfo = CATEGORIES[tool.category] || { zh: tool.category, en: tool.categ
 const catName = isZh ? catInfo.zh : catInfo.en;
 
 const title = `${name} - ${catName} | AIFreePlan`;
-const canonical = `https://aifreeplan.com/${locale}/${tool.category}/${tool.slug}/`;
+const canonical = `https://aifreeplan.com/${locale}/${tool.category}/${tool.slug}`;
 const faq = tool[`faq_${lang}`] || [];
 
 const jsonLd = toolSchema(tool, locale);
@@ -52,7 +52,10 @@ const related = allTools
 
 <BaseLayout
   title={title}
-  description={desc.slice(0, 150)}
+  description={isZh
+    ? `${name}免费额度详解：${tool.free_credits?.amount || ''}，${catName}首选。${desc.slice(0, 80)}`
+    : `${name} free tier: ${tool.free_credits?.amount_en || tool.free_credits?.amount || 'Free credits'}. ${catName} tool. ${desc.slice(0, 80)}`
+  }
   locale={locale}
   canonical={canonical}
   jsonLd={jsonLd}
@@ -83,7 +86,7 @@ const related = allTools
 
       {tool.free_credits && tool.free_credits.type !== 'none' && (
         <div class="free-credits-detail">
-          <h2>{isZh ? '免费额度详情' : 'Free Credits Details'}</h2>
+          <h2>{name} {isZh ? '免费额度详情' : 'Free Credits Details'}</h2>
           <ul>
             {tool.free_credits.amount && <li><strong>{isZh ? '额度' : 'Amount'}:</strong> {isZh ? tool.free_credits.amount : (tool.free_credits.amount_en || tool.free_credits.amount)}</li>}
             {tool.free_credits.reset && <li><strong>{isZh ? '重置' : 'Reset'}:</strong> {isZh ? tool.free_credits.reset : (tool.free_credits.reset_en || tool.free_credits.reset)}</li>}
@@ -95,7 +98,7 @@ const related = allTools
 
       {t('features') && tool.features_zh?.length > 0 && (
         <div>
-          <h2>{isZh ? '主要功能' : 'Key Features'}</h2>
+          <h2>{name} {isZh ? '主要功能' : 'Key Features'}</h2>
           <ul>
             {(isZh ? tool.features_zh : tool.features_en || tool.features_zh).map((f: string) => (
               <li>{f}</li>
