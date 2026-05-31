@@ -5524,10 +5524,10 @@
     "category": "llm",
     "category_zh": "AI大模型",
     "category_en": "AI LLM",
-    "title_zh": "不用翻墙免费用Gemini！DeepSider和Antigravity两个神器搞定",
-    "title_en": "Free Gemini Without VPN! DeepSider & Antigravity Make It Easy",
-    "description_zh": "国内直接免费用Google Gemini的两个方法：DeepSider浏览器插件每天30次免费，Antigravity IDE完全免费。不用翻墙，不用绑卡。",
-    "description_en": "Two ways to use Google Gemini for free from China: DeepSider browser extension (30 free queries/day) and Antigravity IDE (completely free). No VPN needed.",
+    "title_zh": "不用翻墙免费用Gemini！DeepSider浏览器插件搞定",
+    "title_en": "Free Gemini Without VPN! DeepSider Browser Extension",
+    "description_zh": "国内直接免费用Google Gemini的方法：DeepSider浏览器插件每天30次免费，不用翻墙，不用绑卡。附赠其他免费渠道。",
+    "description_en": "Use Google Gemini for free from China: DeepSider browser extension gives 30 free queries daily. No VPN, no credit card needed.",
     "author_zh": "AIFreePlan",
     "author_en": "AIFreePlan",
     "date_published": "2026-06-01",
@@ -5560,16 +5560,16 @@
         "answer": "真的不用。DeepSider是浏览器插件，装上就能用，直接访问谷歌的Gemini模型。"
       },
       {
-        "question": "Antigravity IDE是什么？",
-        "answer": "Antigravity是谷歌新出的编程IDE，内置Gemini 3.0 Pro，目前完全免费使用。"
+        "question": "Antigravity IDE需要翻墙吗？",
+        "answer": "需要。Antigravity是谷歌的工具，国内访问需要翻墙。"
       },
       {
         "question": "DeepSider免费版够用吗？",
         "answer": "每天30次查询，日常使用够了。如果不够可以升级Pro版。"
       },
       {
-        "question": "这两个工具哪个更好？",
-        "answer": "看你需求：写代码用Antigravity，日常问答用DeepSider。"
+        "question": "有没有完全不用翻墙的替代方案？",
+        "answer": "DeepSider是目前最好的选择。ZenMux也可以试试。"
       }
     ],
     "faq_en": [
@@ -5578,20 +5578,20 @@
         "answer": "Yes! DeepSider is a browser extension that gives you direct access to Google Gemini without any VPN."
       },
       {
-        "question": "What is Antigravity IDE?",
-        "answer": "Antigravity is Google's new coding IDE with built-in Gemini 3.0 Pro, currently completely free to use."
+        "question": "Does Antigravity IDE need VPN?",
+        "answer": "Yes. Antigravity is a Google tool, so users in China need VPN to access it."
       },
       {
         "question": "Is DeepSider free version enough?",
         "answer": "30 queries per day is enough for most daily use. You can upgrade to Pro if needed."
       },
       {
-        "question": "Which tool is better?",
-        "answer": "Depends on your needs: Antigravity for coding, DeepSider for daily Q&A."
+        "question": "Any alternatives that don't need VPN?",
+        "answer": "DeepSider is currently the best option. ZenMux is also worth trying."
       }
     ],
-    "content_zh": "## 为什么要写这篇文章\n\n抖音上刷到AIGeeks发的\"Gemini 3.0 Pro免费使用的7个渠道\"，里面提到了两个国内直接可用的工具：DeepSider和Antigravity。\n\n我试了一下，发现这两个确实好用，关键是**不用翻墙**。对于国内用户来说，这比什么都重要。\n\n---\n\n## DeepSider：浏览器插件，装上就能用\n\n### 是什么\n\nDeepSider是一个浏览器侧边栏插件，支持Chrome和Edge。装上之后，你在任何网页上都能直接调用AI模型，包括Google Gemini。\n\n### 免费额度\n\n- **每天30次查询**（UTC 00:00重置）\n- 支持所有基础模型：GPT-4o-mini、Claude 3 Haiku、Gemini 1.5 Flash等\n- 不用绑卡，注册就能用\n\n### 安装方法\n\n1. 访问 deepsider.ai\n2. 点击\"Get Extension\"\n3. 选择Chrome或Edge\n4. 用Google或GitHub账号登录\n\n### 支持的模型\n\n免费版支持：\n- OpenAI: GPT-4o-mini, GPT-3.5-turbo\n- Anthropic: Claude 3 Haiku\n- Google: Gemini 1.5 Flash, Gemini 1.0 Pro\n- Meta: Llama 3.1 (8B, 70B, 405B)\n- Mistral: Mistral-7B, Mixtral-8x7B\n\n### 适合谁\n\n- 需要快速查资料的\n- 想体验多个AI模型的\n- 不想翻墙的\n\n---\n\n## Antigravity IDE：谷歌新出的编程神器\n\n### 是什么\n\nAntigravity是谷歌新推出的编程IDE，内置Gemini 3.0 Pro，专门给开发者用的。\n\n### 免费情况\n\n目前**完全免费**，没有任何限制。这是谷歌为了推广Gemini生态搞的活动，趁现在能用赶紧用。\n\n### 特点\n\n- 内置Gemini 3.0 Pro，代码能力强\n- 支持多种编程语言\n- 界面类似VS Code，上手快\n- 免费使用，不需要API Key\n\n### 适合谁\n\n- 程序员\n- 想学编程的\n- 需要AI辅助写代码的\n\n---\n\n## 怎么选？\n\n| 需求 | 推荐工具 |\n|------|----------|\n| 日常问答、查资料 | DeepSider |\n| 写代码、编程 | Antigravity |\n| 想试多个模型 | DeepSider |\n| 不想翻墙 | 两个都行 |\n\n---\n\n## 其他免费渠道\n\n除了这两个，还有几个免费用Gemini的渠道：\n\n1. **Google Gemini官方** - gemini.google.com，有免费额度\n2. **Google AI Studio** - aistudio.google.com，官方实验室\n3. **LMArena** - 大模型测试平台，免费使用\n4. **ZenMux** - 国内聚合平台，免费使用\n\n---\n\n## 最后说两句\n\n能白嫖就白嫖，这两个工具都是正规渠道，不用担心安全问题。DeepSider适合日常用，Antigravity适合写代码。\n\n建议两个都装上，互补着用。\n",
-    "content_en": "## Why This Article\n\nI saw a Douyin video about \"7 free channels to use Gemini 3.0 Pro\" and two tools stood out: DeepSider and Antigravity. Both work directly in China without VPN.\n\n---\n\n## DeepSider: Browser Extension, Install and Use\n\n### What Is It\n\nDeepSider is a browser sidebar extension for Chrome and Edge. Once installed, you can access AI models directly from any webpage, including Google Gemini.\n\n### Free Tier\n\n- **30 queries per day** (resets at UTC 00:00)\n- Supports all basic models: GPT-4o-mini, Claude 3 Haiku, Gemini 1.5 Flash, etc.\n- No credit card needed, just sign up\n\n### How to Install\n\n1. Visit deepsider.ai\n2. Click \"Get Extension\"\n3. Choose Chrome or Edge\n4. Login with Google or GitHub\n\n### Supported Models (Free)\n\n- OpenAI: GPT-4o-mini, GPT-3.5-turbo\n- Anthropic: Claude 3 Haiku\n- Google: Gemini 1.5 Flash, Gemini 1.0 Pro\n- Meta: Llama 3.1 (8B, 70B, 405B)\n- Mistral: Mistral-7B, Mixtral-8x7B\n\n### Who Is It For\n\n- Quick research and Q&A\n- Trying multiple AI models\n- Users who want easy access\n\n---\n\n## Antigravity IDE: Google's New Coding Tool\n\n### What Is It\n\nAntigravity is Google's new coding IDE with built-in Gemini 3.0 Pro, designed for developers.\n\n### Free Status\n\nCurrently **completely free** with no limitations. This is a promotional offer from Google to expand the Gemini ecosystem.\n\n### Features\n\n- Built-in Gemini 3.0 Pro for strong coding capabilities\n- Supports multiple programming languages\n- VS Code-like interface, easy to learn\n- Free to use, no API key needed\n\n### Who Is It For\n\n- Programmers\n- People learning to code\n- Anyone needing AI coding assistance\n\n---\n\n## Which One to Choose?\n\n| Need | Recommended Tool |\n|------|------------------|\n| Daily Q&A, research | DeepSider |\n| Coding, programming | Antigravity |\n| Try multiple models | DeepSider |\n| No VPN needed | Both work |\n\n---\n\n## Other Free Channels\n\nBesides these, there are other ways to use Gemini for free:\n\n1. **Google Gemini Official** - gemini.google.com, has free tier\n2. **Google AI Studio** - aistudio.google.com, official lab\n3. **LMArena** - Model testing platform, free\n4. **ZenMux** - Chinese aggregation platform, free\n\n---\n\n## Final Thoughts\n\nTake advantage of these free tools while you can. Both are legitimate and safe to use. DeepSider is great for daily use, Antigravity is perfect for coding.\n\nI recommend installing both and using them together.\n",
+    "content_zh": "## 为什么要写这篇文章\n\n抖音上刷到AIGeeks发的\"Gemini 3.0 Pro免费使用的7个渠道\"，里面提到了几个国内可用的工具。\n\n我试了一下，发现**DeepSider**是真的好用，关键是**不用翻墙**。\n\n---\n\n## DeepSider：浏览器插件，装上就能用\n\n### 是什么\n\nDeepSider是一个浏览器侧边栏插件，支持Chrome和Edge。装上之后，你在任何网页上都能直接调用AI模型，包括Google Gemini。\n\n### 免费额度\n\n- **每天30次查询**（UTC 00:00重置）\n- 支持所有基础模型：GPT-4o-mini、Claude 3 Haiku、Gemini 1.5 Flash等\n- 不用绑卡，注册就能用\n- **不用翻墙**\n\n### 安装方法\n\n1. 访问 deepsider.ai\n2. 点击\"Get Extension\"\n3. 选择Chrome或Edge\n4. 用Google或GitHub账号登录\n\n### 支持的模型\n\n免费版支持：\n- OpenAI: GPT-4o-mini, GPT-3.5-turbo\n- Anthropic: Claude 3 Haiku\n- Google: Gemini 1.5 Flash, Gemini 1.0 Pro\n- Meta: Llama 3.1 (8B, 70B, 405B)\n- Mistral: Mistral-7B, Mixtral-8x7B\n\n### 适合谁\n\n- 需要快速查资料的\n- 想体验多个AI模型的\n- 不想翻墙的\n\n---\n\n## 其他免费渠道\n\n除了DeepSider，还有几个免费用Gemini的渠道：\n\n1. **Google Gemini官方** - gemini.google.com，有免费额度（需要翻墙）\n2. **Google AI Studio** - aistudio.google.com，官方实验室（需要翻墙）\n3. **Antigravity IDE** - 谷歌新出的编程工具，内置Gemini 3.0 Pro（需要翻墙）\n4. **LMArena** - 大模型测试平台，免费使用（需要翻墙）\n5. **ZenMux** - 国内聚合平台，免费使用\n\n---\n\n## 怎么选？\n\n| 需求 | 推荐工具 |\n|------|----------|\n| 日常问答、不想翻墙 | DeepSider |\n| 写代码、能翻墙 | Antigravity IDE |\n| 想试多个模型 | DeepSider |\n| 学习AI | Google AI Studio |\n\n---\n\n## 最后说两句\n\n能白嫖就白嫖，DeepSider是目前国内直接可用的最好选择。其他渠道大多需要翻墙，但如果你有梯子，也可以试试。\n\n建议先把DeepSider装上，够用了。\n",
+    "content_en": "## Why This Article\n\nI saw a Douyin video about \"7 free channels to use Gemini 3.0 Pro\" and found one tool that works directly in China without VPN: DeepSider.\n\n---\n\n## DeepSider: Browser Extension, Install and Use\n\n### What Is It\n\nDeepSider is a browser sidebar extension for Chrome and Edge. Once installed, you can access AI models directly from any webpage, including Google Gemini.\n\n### Free Tier\n\n- **30 queries per day** (resets at UTC 00:00)\n- Supports all basic models: GPT-4o-mini, Claude 3 Haiku, Gemini 1.5 Flash, etc.\n- No credit card needed, just sign up\n- **No VPN needed**\n\n### How to Install\n\n1. Visit deepsider.ai\n2. Click \"Get Extension\"\n3. Choose Chrome or Edge\n4. Login with Google or GitHub\n\n### Supported Models (Free)\n\n- OpenAI: GPT-4o-mini, GPT-3.5-turbo\n- Anthropic: Claude 3 Haiku\n- Google: Gemini 1.5 Flash, Gemini 1.0 Pro\n- Meta: Llama 3.1 (8B, 70B, 405B)\n- Mistral: Mistral-7B, Mixtral-8x7B\n\n### Who Is It For\n\n- Quick research and Q&A\n- Trying multiple AI models\n- Users who want easy access without VPN\n\n---\n\n## Other Free Channels\n\nBesides DeepSider, there are other ways to use Gemini for free:\n\n1. **Google Gemini Official** - gemini.google.com, has free tier (VPN required)\n2. **Google AI Studio** - aistudio.google.com, official lab (VPN required)\n3. **Antigravity IDE** - Google's new coding tool with Gemini 3.0 Pro (VPN required)\n4. **LMArena** - Model testing platform, free (VPN required)\n5. **ZenMux** - Chinese aggregation platform, free\n\n---\n\n## Which One to Choose?\n\n| Need | Recommended Tool |\n|------|------------------|\n| Daily Q&A, no VPN | DeepSider |\n| Coding, have VPN | Antigravity IDE |\n| Try multiple models | DeepSider |\n| Learning AI | Google AI Studio |\n\n---\n\n## Final Thoughts\n\nDeepSider is currently the best option for users in China who want to use Gemini without VPN. Other channels mostly require VPN access.\n\nI recommend installing DeepSider first - it's likely enough for most needs.\n",
     "howto_steps": [
       {
         "name_zh": "安装DeepSider",
