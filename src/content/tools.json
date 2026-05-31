@@ -11024,5 +11024,97 @@
     },
     "images": [],
     "plans": []
+  },
+  {
+    "slug": "step-37-flash",
+    "name_zh": "阶跃Step 3.7 Flash",
+    "name_en": "StepFun Step 3.7 Flash",
+    "category": "llm",
+    "category_zh": "AI大模型",
+    "category_en": "AI LLM",
+    "type": "platform",
+    "official_url": "https://chat.stepfun.com",
+    "company_zh": "阶跃星辰",
+    "company_en": "StepFun",
+    "description_zh": "阶跃星辰发布的生产级Agent优化模型，196B参数仅激活11B，速度最高400 tokens/s。原生多模态，支持256K上下文。通过Hermes Agent可免费使用一个月。",
+    "description_en": "StepFun's production-grade Agent-optimized model. 196B params with only 11B active, up to 400 tokens/s. Native multimodal, 256K context. Free for one month via Hermes Agent.",
+    "free_credits": {
+      "type": "activity",
+      "amount": "免费一个月",
+      "amount_en": "Free for one month",
+      "duration": "30天",
+      "duration_en": "30 days",
+      "resolution": "不适用",
+      "watermark": "不适用",
+      "watermark_en": "N/A",
+      "commercial_use": "查看官方协议",
+      "commercial_use_en": "Check official terms",
+      "reset": "不重置",
+      "reset_en": "No reset",
+      "resolution_en": "N/A"
+    },
+    "activity": {
+      "has_activity": true,
+      "activity_type": "limited_time",
+      "activity_zh": "通过Hermes Agent免费使用一个月，Nous Portal提供支持",
+      "activity_en": "Free for one month via Hermes Agent, supported by Nous Portal",
+      "activity_url": "https://chat.stepfun.com",
+      "activity_end": "2026-06-30"
+    },
+    "features_zh": [
+      "稀疏MoE架构",
+      "196B参数仅激活11B",
+      "最高400 tokens/s",
+      "原生多模态",
+      "256K上下文",
+      "工具调用优化"
+    ],
+    "features_en": [
+      "Sparse MoE architecture",
+      "196B params, 11B active",
+      "Up to 400 tokens/s",
+      "Native multimodal",
+      "256K context",
+      "Tool calling optimized"
+    ],
+    "pros_zh": [
+      "速度极快",
+      "免费使用一个月",
+      "多模态能力强",
+      "工具调用稳定"
+    ],
+    "pros_en": [
+      "Extremely fast",
+      "Free for one month",
+      "Strong multimodal",
+      "Stable tool calling"
+    ],
+    "cons_zh": [
+      "长上下文性能下降",
+      "复杂推理弱于dense模型",
+      "需通过Hermes Agent使用"
+    ],
+    "cons_en": [
+      "Performance drops with long context",
+      "Weaker reasoning than dense models",
+      "Requires Hermes Agent"
+    ],
+    "tips_zh": [
+      "适合高频Agent任务",
+      "多模态场景表现好",
+      "抓紧薅羊毛，活动就一个月"
+    ],
+    "tips_en": [
+      "Good for high-frequency Agent tasks",
+      "Strong in multimodal scenarios",
+      "Grab it while it's free - one month only"
+    ],
+    "rating": 4,
+    "paid_from": "免费",
+    "paid_from_en": "Free",
+    "last_updated": "2026-05-31",
+    "free_level": "excellent",
+    "free_note": "通过Hermes Agent免费一个月",
+    "free_note_en": "Free for one month via Hermes Agent"
   }
 ]
