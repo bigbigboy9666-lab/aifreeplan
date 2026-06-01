@@ -2286,7 +2286,11 @@
       "commercial_use_en": "Personal use",
       "reset": "每月重置",
       "reset_en": "Resets monthly",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A"
     },
     "activity": {
@@ -2368,7 +2372,11 @@
       "commercial_use_en": "Personal use",
       "reset": "每天重置",
       "reset_en": "Resets daily",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A"
     },
     "activity": {
@@ -2450,7 +2458,11 @@
       "commercial_use_en": "Paid only",
       "reset": "每天重置",
       "reset_en": "Resets daily",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A"
     },
     "activity": {
@@ -2532,7 +2544,11 @@
       "commercial_use_en": "Paid only",
       "reset": "新用户一次性赠送",
       "reset_en": "One-time for new users",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A"
     },
     "activity": {
@@ -2617,7 +2633,11 @@
       "commercial_use_en": "Personal use",
       "reset": "每天重置",
       "reset_en": "Resets daily",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A"
     },
     "activity": {
@@ -2699,7 +2719,11 @@
       "commercial_use_en": "Paid only",
       "reset": "每天重置",
       "reset_en": "Resets daily",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A"
     },
     "activity": {
@@ -2785,7 +2809,11 @@
       "commercial_use_en": "Paid only",
       "reset": "每天重置",
       "reset_en": "Resets daily",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A"
     },
     "activity": {
@@ -2867,7 +2895,11 @@
       "commercial_use_en": "Personal use",
       "reset": "每天重置",
       "reset_en": "Resets daily",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A"
     },
     "activity": {
@@ -2949,7 +2981,11 @@
       "commercial_use_en": "Commercial use OK",
       "reset": "每月重置",
       "reset_en": "Resets monthly",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A"
     },
     "activity": {
@@ -3031,7 +3067,11 @@
       "commercial_use_en": "Personal use",
       "reset": "每天重置",
       "reset_en": "Resets daily",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A"
     },
     "activity": {
@@ -3113,7 +3153,11 @@
       "commercial_use_en": "Commercial use allowed (Apache 2.0)",
       "reset": "无限制",
       "reset_en": "No limits",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A"
     },
     "activity": {
@@ -3206,7 +3250,11 @@
       "commercial_use_en": "Free commercial for students/OSS",
       "reset": "每月重置",
       "reset_en": "Resets monthly",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A"
     },
     "activity": {
@@ -3328,7 +3376,11 @@
       "commercial_use_en": "Free tier allows commercial use",
       "reset": "每日重置",
       "reset_en": "Resets daily",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A"
     },
     "activity": {
@@ -3427,7 +3479,11 @@
       "commercial_use_en": "Free tier allows commercial use",
       "reset": "每日重置",
       "reset_en": "Resets daily",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A"
     },
     "activity": {
@@ -3524,7 +3580,11 @@
       "commercial_use_en": "Paid only",
       "reset": "无",
       "reset_en": "None",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A"
     },
     "activity": {
@@ -3628,7 +3688,11 @@
       "commercial_use_en": "Paid only",
       "reset": "每天重置",
       "reset_en": "Resets daily",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A"
     },
     "activity": {
@@ -3722,9 +3786,15 @@
       "commercial_use_en": "For coding tools only (Claude Code, Cursor, OpenClaw etc.), no automation scripts or batch tasks",
       "resolution": "标准",
       "watermark": "no",
+<<<<<<< Updated upstream
       "duration": "不适用",
       "duration_en": "N/A",
       "reset_en": "Monthly subscription, 31-day validity",
+=======
+      "duration": "N/A",
+      "duration_en": "N/A",
+      "reset_en": "按月订阅，31天有效期",
+>>>>>>> Stashed changes
       "watermark_en": "No",
       "resolution_en": "Standard"
     },
@@ -3843,7 +3913,11 @@
       "vocal_upload": "免费版可上传最长8分钟音频",
       "resolution": "标准",
       "watermark": "no",
+<<<<<<< Updated upstream
       "duration_en": "About 1-2 min per track",
+=======
+      "duration_en": "每首约1-2分钟",
+>>>>>>> Stashed changes
       "reset_en": "Resets daily",
       "watermark_en": "No",
       "resolution_en": "Standard"
@@ -3930,9 +4004,15 @@
       "commercial_use": "免费版可商用",
       "resolution": "标准",
       "watermark": "no",
+<<<<<<< Updated upstream
       "duration": "不适用",
       "duration_en": "N/A",
       "reset_en": "Credits monthly, messages daily",
+=======
+      "duration": "N/A",
+      "duration_en": "N/A",
+      "reset_en": "额度每月重置，消息每天重置",
+>>>>>>> Stashed changes
       "watermark_en": "No",
       "commercial_use_en": "Commercial use allowed (free tier)",
       "resolution_en": "Standard"
@@ -4015,6 +4095,7 @@
       "watermark": "免费版有水印",
       "commercial_use": "免费版可商用但有水印",
       "export": "支持导出PDF",
+<<<<<<< Updated upstream
       "resolution": "标准",
       "reset": "每月重置",
       "duration": "不适用",
@@ -4022,6 +4103,15 @@
       "reset_en": "Resets monthly",
       "watermark_en": "Free tier has watermark",
       "commercial_use_en": "Commercial use allowed (with watermark)",
+=======
+      "resolution": "standard",
+      "reset": "monthly",
+      "duration": "N/A",
+      "duration_en": "N/A",
+      "reset_en": "Resets monthly",
+      "watermark_en": "Free tier has watermark",
+      "commercial_use_en": "Commercial use allowed but with watermark",
+>>>>>>> Stashed changes
       "resolution_en": "Standard"
     },
     "activity": {
@@ -4108,7 +4198,11 @@
       "commercial_use_en": "Allowed",
       "reset": "每日重置，不累积",
       "reset_en": "Daily reset, does not roll over",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A",
       "watermark_en": "无",
       "resolution_en": "N/A"
@@ -4495,7 +4589,11 @@
       "watermark": "无水印",
       "commercial_use": "可以商用",
       "reset": "每月重置",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A",
       "reset_en": "Resets monthly",
       "watermark_en": "No watermark",
@@ -4573,7 +4671,11 @@
       "watermark": "有水印",
       "commercial_use": "No",
       "reset": "每天重置",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A",
       "reset_en": "Resets daily",
       "watermark_en": "Has watermark",
@@ -4653,7 +4755,11 @@
       "watermark": "有水印",
       "commercial_use": "不允许",
       "reset": "每月重置",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A",
       "reset_en": "Resets monthly",
       "watermark_en": "Has watermark",
@@ -4731,7 +4837,11 @@
       "watermark": "无",
       "commercial_use": "无",
       "reset": "每月重置",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A",
       "reset_en": "Resets monthly",
       "watermark_en": "No",
@@ -4809,7 +4919,11 @@
       "watermark": "有水印",
       "commercial_use": "不允许",
       "reset": "每天重置",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A",
       "reset_en": "Resets daily",
       "watermark_en": "Has watermark",
@@ -4897,7 +5011,11 @@
       "commercial_use_en": "Free tier allows commercial use",
       "reset": "每月重置",
       "reset_en": "Resets monthly",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A",
       "resolution_en": "N/A"
     },
@@ -4988,7 +5106,11 @@
       "commercial_use_en": "Free tier allows public bot publishing",
       "reset": "每日重置",
       "reset_en": "Resets daily",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A",
       "resolution_en": "N/A"
     },
@@ -5160,10 +5282,17 @@
       "amount": "10",
       "amount_en": "10 free credits",
       "resolution": "1080p",
+<<<<<<< Updated upstream
       "watermark": "有",
       "commercial_use": "无",
       "reset": "每天重置",
       "duration": "不适用",
+=======
+      "watermark": "True",
+      "commercial_use": "False",
+      "reset": "daily",
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A",
       "reset_en": "Resets daily",
       "watermark_en": "Yes",
@@ -5238,10 +5367,17 @@
       "amount": "10",
       "amount_en": "10 per month",
       "resolution": "1080p",
+<<<<<<< Updated upstream
       "watermark": "有",
       "commercial_use": "无",
       "reset": "每月重置",
       "duration": "不适用",
+=======
+      "watermark": "True",
+      "commercial_use": "False",
+      "reset": "monthly",
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A",
       "reset_en": "Resets monthly",
       "watermark_en": "Yes",
@@ -5319,12 +5455,20 @@
       "watermark": "无",
       "commercial_use": "需遵循开源协议",
       "reset": "不适用",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A",
       "reset_en": "N/A",
       "watermark_en": "无",
       "commercial_use_en": "Must follow open-source license",
+<<<<<<< Updated upstream
       "resolution_en": "Default 512x512, customizable"
+=======
+      "resolution_en": "默认512x512，可自定义"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "从单张图片生成视频",
@@ -5394,10 +5538,17 @@
       "amount": "100",
       "amount_en": "100 credits",
       "resolution": "1080p",
+<<<<<<< Updated upstream
       "watermark": "无",
       "commercial_use": "有",
       "reset": "每月重置",
       "duration": "不适用",
+=======
+      "watermark": "False",
+      "commercial_use": "True",
+      "reset": "monthly",
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A",
       "reset_en": "Resets monthly",
       "watermark_en": "No",
@@ -5472,10 +5623,17 @@
       "amount": "10",
       "amount_en": "10",
       "resolution": "1024x1024",
+<<<<<<< Updated upstream
       "watermark": "无",
       "commercial_use": "有",
       "reset": "每天重置",
       "duration": "不适用",
+=======
+      "watermark": "False",
+      "commercial_use": "True",
+      "reset": "daily",
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A",
       "reset_en": "Resets daily",
       "watermark_en": "No",
@@ -5552,8 +5710,13 @@
       "resolution": "1080p",
       "watermark": "no",
       "commercial_use": "yes",
+<<<<<<< Updated upstream
       "reset": "每月重置",
       "duration": "不适用",
+=======
+      "reset": "monthly",
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A",
       "reset_en": "Resets monthly",
       "watermark_en": "No",
@@ -5631,7 +5794,11 @@
       "watermark": "无",
       "commercial_use": "Yes",
       "reset": "每日UTC时间0点重置",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A",
       "reset_en": "Resets daily at midnight UTC",
       "watermark_en": "无",
@@ -5709,12 +5876,20 @@
       "watermark": "无",
       "commercial_use": "有",
       "reset": "每日重置",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A",
       "reset_en": "Resets daily",
       "watermark_en": "No",
       "commercial_use_en": "Yes",
+<<<<<<< Updated upstream
       "resolution_en": "Standard (1024x1024)"
+=======
+      "resolution_en": "标准分辨率，如1024x1024"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "文本到图像生成",
@@ -5787,7 +5962,11 @@
       "watermark": "无水印",
       "commercial_use": "不允许",
       "reset": "每日重置",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A",
       "reset_en": "Resets daily",
       "watermark_en": "No watermark",
@@ -5862,10 +6041,17 @@
       "amount": "5",
       "amount_en": "5 free credits",
       "resolution": "HD",
+<<<<<<< Updated upstream
       "watermark": "无",
       "commercial_use": "无",
       "reset": "不重置",
       "duration": "不适用",
+=======
+      "watermark": "False",
+      "commercial_use": "False",
+      "reset": "never",
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A",
       "reset_en": "Never resets",
       "watermark_en": "No",
@@ -5943,12 +6129,20 @@
       "watermark": "无",
       "commercial_use": "无",
       "reset": "每日重置",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A",
       "reset_en": "Resets daily",
       "watermark_en": "No",
       "commercial_use_en": "No",
+<<<<<<< Updated upstream
       "resolution_en": "Standard resolution"
+=======
+      "resolution_en": "标准分辨率"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "AI照片修复",
@@ -6018,10 +6212,17 @@
       "amount": "100张",
       "amount_en": "100 images per month",
       "resolution": "1024x1024",
+<<<<<<< Updated upstream
       "watermark": "无",
       "commercial_use": "有",
       "reset": "每月重置",
       "duration": "不适用",
+=======
+      "watermark": "False",
+      "commercial_use": "True",
+      "reset": "monthly",
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A",
       "reset_en": "Resets monthly",
       "watermark_en": "No",
@@ -6099,12 +6300,20 @@
       "watermark": "无",
       "commercial_use": "需付费",
       "reset": "每月重置",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A",
       "reset_en": "Resets monthly",
       "watermark_en": "无",
       "commercial_use_en": "Paid plan required",
+<<<<<<< Updated upstream
       "resolution_en": "Adaptive"
+=======
+      "resolution_en": "自适应"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "一键生成多种风格的AI头像",
@@ -6624,7 +6833,11 @@
       "watermark": "有水印",
       "commercial_use": "No",
       "reset": "每月重置",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A",
       "reset_en": "Resets monthly",
       "watermark_en": "Has watermark",
@@ -6705,7 +6918,11 @@
       "watermark": "无",
       "commercial_use": "Yes",
       "reset": "每月重置",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A",
       "reset_en": "Resets monthly",
       "watermark_en": "无",
@@ -6783,7 +7000,11 @@
       "watermark": "有",
       "commercial_use": "No",
       "reset": "无需重置",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A",
       "reset_en": "No reset needed",
       "watermark_en": "Yes",
@@ -6861,7 +7082,11 @@
       "watermark": "Yes",
       "commercial_use": "No",
       "reset": "每月重置",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A",
       "reset_en": "Resets monthly",
       "watermark_en": "Yes",
@@ -6939,7 +7164,11 @@
       "watermark": "No",
       "commercial_use": "Yes",
       "reset": "not applicable",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A",
       "reset_en": "N/A",
       "watermark_en": "No",
@@ -7017,7 +7246,11 @@
       "watermark": "Yes",
       "commercial_use": "No",
       "reset": "每月重置",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A",
       "reset_en": "Resets monthly",
       "watermark_en": "Yes",
@@ -7095,7 +7328,11 @@
       "watermark": "无",
       "commercial_use": "有限制",
       "reset": "每月重置",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A",
       "reset_en": "Resets monthly",
       "watermark_en": "无",
@@ -7173,7 +7410,11 @@
       "watermark": "有水印",
       "commercial_use": "不可商用",
       "reset": "每月重置",
+<<<<<<< Updated upstream
       "duration": "不适用",
+=======
+      "duration": "N/A",
+>>>>>>> Stashed changes
       "duration_en": "N/A",
       "reset_en": "Resets monthly",
       "watermark_en": "Has watermark",
@@ -7248,6 +7489,7 @@
       "amount": "5",
       "amount_en": "5",
       "resolution": "1024x1024",
+<<<<<<< Updated upstream
       "watermark": "有水印",
       "commercial_use": "不适用",
       "reset": "every 24 hours",
@@ -7257,6 +7499,17 @@
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "1024x1024"
+=======
+      "watermark": true,
+      "commercial_use": "仅限个人使用",
+      "reset": "every 24 hours",
+      "reset_en": "Resets every 24 hours",
+      "watermark_en": true,
+      "resolution_en": "1024x1024",
+      "duration": "N/A",
+      "duration_en": "N/A",
+      "commercial_use_en": "Personal use only"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "一键上传图片自动生成",
@@ -7326,6 +7579,7 @@
       "amount": "10",
       "amount_en": "10",
       "resolution": "1024x1024",
+<<<<<<< Updated upstream
       "watermark": "不适用",
       "commercial_use": "不适用",
       "reset": "每月重置",
@@ -7335,6 +7589,17 @@
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "1024x1024"
+=======
+      "watermark": "无水印",
+      "commercial_use": "需付费",
+      "reset": "monthly",
+      "reset_en": "Resets monthly",
+      "resolution_en": "1024x1024",
+      "duration": "N/A",
+      "duration_en": "N/A",
+      "watermark_en": "No watermark",
+      "commercial_use_en": "Paid plan required"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "AI混合图像创造新作品",
@@ -7410,9 +7675,15 @@
       "reset_en": "每月",
       "watermark_en": "Yes",
       "commercial_use_en": "Yes",
+<<<<<<< Updated upstream
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "720p"
+=======
+      "resolution_en": "720p",
+      "duration": "N/A",
+      "duration_en": "N/A"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "AI视频生成",
@@ -7488,9 +7759,15 @@
       "reset_en": "Resets monthly",
       "watermark_en": "无",
       "commercial_use_en": "Yes",
+<<<<<<< Updated upstream
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "1024x1024"
+=======
+      "resolution_en": "1024x1024",
+      "duration": "N/A",
+      "duration_en": "N/A"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "文本到图像生成",
@@ -7560,6 +7837,7 @@
       "amount": "5",
       "amount_en": "5",
       "resolution": "1080p",
+<<<<<<< Updated upstream
       "watermark": "有水印",
       "commercial_use": "不适用",
       "reset": "24 hours",
@@ -7569,6 +7847,17 @@
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "1080p"
+=======
+      "watermark": true,
+      "commercial_use": "免费版有限制",
+      "reset": "24 hours",
+      "reset_en": "Resets every 24 hours",
+      "watermark_en": true,
+      "resolution_en": "1080p",
+      "duration": "N/A",
+      "duration_en": "N/A",
+      "commercial_use_en": "Limited on free tier"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "AI图像生成",
@@ -7638,6 +7927,7 @@
       "amount": "5",
       "amount_en": "5",
       "resolution": "1024x1024",
+<<<<<<< Updated upstream
       "watermark": "不适用",
       "commercial_use": "不适用",
       "reset": "每天重置",
@@ -7647,6 +7937,17 @@
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "1024x1024"
+=======
+      "watermark": "免费有水印",
+      "commercial_use": "需付费",
+      "reset": "daily",
+      "reset_en": "Resets daily",
+      "resolution_en": "1024x1024",
+      "duration": "N/A",
+      "duration_en": "N/A",
+      "watermark_en": "Free tier has watermark",
+      "commercial_use_en": "Paid plan required"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "文本到图像生成",
@@ -7716,6 +8017,7 @@
       "amount": 10,
       "amount_en": "10 daily credits",
       "resolution": "1024x1024",
+<<<<<<< Updated upstream
       "watermark": "不适用",
       "commercial_use": "可商用",
       "reset": "每天重置",
@@ -7725,6 +8027,17 @@
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "1024x1024"
+=======
+      "watermark": "免费有水印",
+      "commercial_use": true,
+      "reset": "daily",
+      "reset_en": "Resets daily",
+      "commercial_use_en": true,
+      "resolution_en": "1024x1024",
+      "duration": "N/A",
+      "duration_en": "N/A",
+      "watermark_en": "Free tier has watermark"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "快速生成高质量图像",
@@ -7794,6 +8107,7 @@
       "amount": 3,
       "amount_en": "3 photos",
       "resolution": "标准分辨率",
+<<<<<<< Updated upstream
       "watermark": "有水印",
       "commercial_use": "不适用",
       "reset": "每日重置",
@@ -7803,6 +8117,17 @@
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "Standard resolution"
+=======
+      "watermark": true,
+      "commercial_use": "仅限个人使用",
+      "reset": "每日重置",
+      "reset_en": "Resets daily",
+      "watermark_en": true,
+      "resolution_en": "标准分辨率",
+      "duration": "N/A",
+      "duration_en": "N/A",
+      "commercial_use_en": "Personal use only"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "年龄变化",
@@ -7872,6 +8197,7 @@
       "amount": 3,
       "amount_en": "3 free transformations",
       "resolution": "up to 720p",
+<<<<<<< Updated upstream
       "watermark": "不适用",
       "commercial_use": "不适用",
       "reset": "每天重置",
@@ -7881,6 +8207,17 @@
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "Up to 720p"
+=======
+      "watermark": "免费有水印",
+      "commercial_use": "需付费",
+      "reset": "daily",
+      "reset_en": "Resets daily",
+      "resolution_en": "up to 720p",
+      "duration": "N/A",
+      "duration_en": "N/A",
+      "watermark_en": "Free tier has watermark",
+      "commercial_use_en": "Paid plan required"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "AI艺术风格转换",
@@ -7952,6 +8289,7 @@
       "resolution": "1024x1024",
       "watermark": "yes",
       "commercial_use": "no",
+<<<<<<< Updated upstream
       "reset": "每天重置",
       "reset_en": "Resets daily",
       "watermark_en": "Yes",
@@ -7959,6 +8297,15 @@
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "1024x1024"
+=======
+      "reset": "daily",
+      "reset_en": "Resets daily",
+      "watermark_en": "Yes",
+      "commercial_use_en": "No",
+      "resolution_en": "1024x1024",
+      "duration": "N/A",
+      "duration_en": "N/A"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "一键智能卡通化",
@@ -8034,9 +8381,15 @@
       "reset_en": "Resets daily",
       "watermark_en": "无",
       "commercial_use_en": "No",
+<<<<<<< Updated upstream
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "N/A"
+=======
+      "resolution_en": "N/A",
+      "duration": "N/A",
+      "duration_en": "N/A"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "实时信息获取",
@@ -8108,6 +8461,7 @@
       "resolution": "n/a",
       "watermark": "no",
       "commercial_use": "yes",
+<<<<<<< Updated upstream
       "reset": "每月重置",
       "reset_en": "Resets monthly",
       "watermark_en": "No",
@@ -8115,6 +8469,15 @@
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "N/A"
+=======
+      "reset": "monthly",
+      "reset_en": "Resets monthly",
+      "watermark_en": "No",
+      "commercial_use_en": "Yes",
+      "resolution_en": "N/A",
+      "duration": "N/A",
+      "duration_en": "N/A"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "高性能计算",
@@ -8184,6 +8547,7 @@
       "amount": 50,
       "amount_en": "50 credits",
       "resolution": "1080p",
+<<<<<<< Updated upstream
       "watermark": "不适用",
       "commercial_use": "可商用",
       "reset": "每天重置",
@@ -8193,6 +8557,17 @@
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "1080p"
+=======
+      "watermark": "无水印",
+      "commercial_use": true,
+      "reset": "每天重置",
+      "reset_en": "Resets daily",
+      "commercial_use_en": true,
+      "resolution_en": "1080p",
+      "duration": "N/A",
+      "duration_en": "N/A",
+      "watermark_en": "No watermark"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "智能设计建议",
@@ -8268,9 +8643,15 @@
       "reset_en": "Resets daily",
       "watermark_en": "No",
       "commercial_use_en": "Yes",
+<<<<<<< Updated upstream
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "N/A"
+=======
+      "resolution_en": "N/A",
+      "duration": "N/A",
+      "duration_en": "N/A"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "强大的中文对话与内容创作能力",
@@ -8340,6 +8721,7 @@
       "amount": "1000次免费调用",
       "amount_en": "1000 free calls per month",
       "resolution": "1024x1024",
+<<<<<<< Updated upstream
       "watermark": "不适用",
       "commercial_use": "不适用",
       "reset": "每月重置",
@@ -8349,6 +8731,17 @@
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "1024x1024"
+=======
+      "watermark": "无水印",
+      "commercial_use": "可商用",
+      "reset": "每月重置",
+      "reset_en": "Resets monthly",
+      "resolution_en": "1024x1024",
+      "duration": "N/A",
+      "duration_en": "N/A",
+      "watermark_en": "No watermark",
+      "commercial_use_en": "Commercial use allowed"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "多语言支持",
@@ -8424,9 +8817,15 @@
       "reset_en": "无",
       "watermark_en": "无",
       "commercial_use_en": "Yes",
+<<<<<<< Updated upstream
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "N/A"
+=======
+      "resolution_en": "N/A",
+      "duration": "N/A",
+      "duration_en": "N/A"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "轻量级设计，适合边缘设备",
@@ -8778,6 +9177,7 @@
       "amount": "无限",
       "amount_en": "unlimited",
       "resolution": "n/a",
+<<<<<<< Updated upstream
       "watermark": "不适用",
       "commercial_use": "可商用",
       "reset": "none",
@@ -8787,6 +9187,17 @@
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "N/A"
+=======
+      "watermark": "无水印",
+      "commercial_use": true,
+      "reset": "none",
+      "reset_en": "none",
+      "commercial_use_en": true,
+      "resolution_en": "N/A",
+      "duration": "N/A",
+      "duration_en": "N/A",
+      "watermark_en": "No watermark"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "开源免费",
@@ -8857,6 +9268,7 @@
       "amount_en": "100 queries",
       "resolution": "none",
       "watermark": "none",
+<<<<<<< Updated upstream
       "commercial_use": "不适用",
       "reset": "每月重置",
       "reset_en": "Resets monthly",
@@ -8865,6 +9277,16 @@
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "none"
+=======
+      "commercial_use": "查看官方协议",
+      "reset": "每月重置",
+      "reset_en": "Resets monthly",
+      "watermark_en": "none",
+      "resolution_en": "none",
+      "duration": "N/A",
+      "duration_en": "N/A",
+      "commercial_use_en": "Check official terms"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "自然语言处理",
@@ -8940,9 +9362,15 @@
       "reset_en": "每月重置高级功能额度",
       "watermark_en": "无",
       "commercial_use_en": "允许",
+<<<<<<< Updated upstream
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "N/A"
+=======
+      "resolution_en": "N/A",
+      "duration": "N/A",
+      "duration_en": "N/A"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "智能代码补全",
@@ -9018,9 +9446,15 @@
       "reset_en": "Resets monthly",
       "watermark_en": "无",
       "commercial_use_en": "No",
+<<<<<<< Updated upstream
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "标准"
+=======
+      "resolution_en": "标准",
+      "duration": "N/A",
+      "duration_en": "N/A"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "AI代码补全",
@@ -9090,6 +9524,7 @@
       "amount": "100次",
       "amount_en": "100 generations",
       "resolution": "标准",
+<<<<<<< Updated upstream
       "watermark": "不适用",
       "commercial_use": "可商用",
       "reset": "每月重置",
@@ -9099,6 +9534,17 @@
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "标准"
+=======
+      "watermark": "无水印",
+      "commercial_use": true,
+      "reset": "每月重置",
+      "reset_en": "Resets monthly",
+      "commercial_use_en": true,
+      "resolution_en": "标准",
+      "duration": "N/A",
+      "duration_en": "N/A",
+      "watermark_en": "No watermark"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "自然语言描述生成UI",
@@ -9162,9 +9608,15 @@
     "company_zh": "创世科技",
     "company_en": "Create Technologies",
     "description_zh": "AI驱动的应用构建平台，用自然语言描述需求就能生成网站、应用和工具。支持多种AI模型，适合快速原型开发。",
+<<<<<<< Updated upstream
     "description_en": "AI-powered app builder that generates websites, apps, and tools from natural language descriptions.",
     "free_credits": {
       "type": "daily",
+=======
+    "description_en": "AI-powered app builder that generates websites, apps, and tools from natural language descriptions. Supports multiple AI models for rapid prototyping.",
+    "free_credits": {
+      "type": "每日",
+>>>>>>> Stashed changes
       "amount": "有限免费额度",
       "amount_en": "Limited free credits",
       "resolution": "1024x1024",
@@ -9174,9 +9626,15 @@
       "reset_en": "Resets daily",
       "watermark_en": "Yes",
       "commercial_use_en": "Paid plan required",
+<<<<<<< Updated upstream
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "1024x1024"
+=======
+      "resolution_en": "1024x1024",
+      "duration": "N/A",
+      "duration_en": "N/A"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "自然语言生成应用",
@@ -9246,6 +9704,7 @@
       "amount": "50次/月",
       "amount_en": "50 per month",
       "resolution": "high",
+<<<<<<< Updated upstream
       "watermark": "不适用",
       "commercial_use": "可商用",
       "reset": "每月重置",
@@ -9255,6 +9714,17 @@
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "high"
+=======
+      "watermark": "无水印",
+      "commercial_use": true,
+      "reset": "每月重置",
+      "reset_en": "Resets monthly",
+      "commercial_use_en": true,
+      "resolution_en": "high",
+      "duration": "N/A",
+      "duration_en": "N/A",
+      "watermark_en": "No watermark"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "智能布局建议",
@@ -9330,9 +9800,15 @@
       "reset_en": "N/A",
       "watermark_en": "Yes",
       "commercial_use_en": "No",
+<<<<<<< Updated upstream
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "响应式"
+=======
+      "resolution_en": "响应式",
+      "duration": "N/A",
+      "duration_en": "N/A"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "AI 设计助手",
@@ -9402,6 +9878,7 @@
       "amount": "50",
       "amount_en": "50",
       "resolution": "high",
+<<<<<<< Updated upstream
       "watermark": "不适用",
       "commercial_use": "可商用",
       "reset": "每天重置",
@@ -9411,6 +9888,17 @@
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "high"
+=======
+      "watermark": "无水印",
+      "commercial_use": true,
+      "reset": "daily",
+      "reset_en": "Resets daily",
+      "commercial_use_en": true,
+      "resolution_en": "high",
+      "duration": "N/A",
+      "duration_en": "N/A",
+      "watermark_en": "No watermark"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "AI代码生成",
@@ -9486,9 +9974,15 @@
       "reset_en": "Resets monthly",
       "watermark_en": "无",
       "commercial_use_en": "Yes",
+<<<<<<< Updated upstream
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "Unlimited"
+=======
+      "resolution_en": "Unlimited",
+      "duration": "N/A",
+      "duration_en": "N/A"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "AI驱动的代码片段捕获与上下文理解",
@@ -9564,9 +10058,15 @@
       "reset_en": "Resets monthly",
       "watermark_en": "无",
       "commercial_use_en": "允许开源项目",
+<<<<<<< Updated upstream
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "N/A"
+=======
+      "resolution_en": "N/A",
+      "duration": "N/A",
+      "duration_en": "N/A"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "自动代码审查",
@@ -9635,6 +10135,7 @@
       "type": "monthly",
       "amount": "50",
       "amount_en": "50",
+<<<<<<< Updated upstream
       "resolution": "不适用",
       "watermark": "不适用",
       "commercial_use": "可商用",
@@ -9645,6 +10146,18 @@
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "N/A"
+=======
+      "resolution": "N/A",
+      "watermark": "无水印",
+      "commercial_use": true,
+      "reset": "monthly",
+      "reset_en": "Resets monthly",
+      "commercial_use_en": true,
+      "resolution_en": "N/A",
+      "duration": "N/A",
+      "duration_en": "N/A",
+      "watermark_en": "No watermark"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "自动扫描代码问题",
@@ -9720,9 +10233,15 @@
       "reset_en": "Resets daily",
       "watermark_en": "无",
       "commercial_use_en": "Yes",
+<<<<<<< Updated upstream
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "N/A"
+=======
+      "resolution_en": "N/A",
+      "duration": "N/A",
+      "duration_en": "N/A"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "实时联网搜索，信息即时更新",
@@ -9794,6 +10313,7 @@
       "resolution": "不适用",
       "watermark": "no",
       "commercial_use": "yes",
+<<<<<<< Updated upstream
       "reset": "每天重置",
       "reset_en": "Resets daily",
       "watermark_en": "No",
@@ -9801,6 +10321,15 @@
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "N/A"
+=======
+      "reset": "daily",
+      "reset_en": "Resets daily",
+      "watermark_en": "No",
+      "commercial_use_en": "Yes",
+      "resolution_en": "N/A",
+      "duration": "N/A",
+      "duration_en": "N/A"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "多轮对话",
@@ -9876,9 +10405,15 @@
       "reset_en": "None",
       "watermark_en": "No",
       "commercial_use_en": "Limited",
+<<<<<<< Updated upstream
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "Basic grammar, spelling, and punctuation"
+=======
+      "resolution_en": "Basic grammar, spelling, and punctuation",
+      "duration": "N/A",
+      "duration_en": "N/A"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "实时语法检查",
@@ -9954,9 +10489,15 @@
       "reset_en": "Monthly",
       "watermark_en": "No",
       "commercial_use_en": "Yes",
+<<<<<<< Updated upstream
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "N/A"
+=======
+      "resolution_en": "N/A",
+      "duration": "N/A",
+      "duration_en": "N/A"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "AI文案自动生成",
@@ -10032,9 +10573,15 @@
       "reset_en": "Resets monthly",
       "watermark_en": "无",
       "commercial_use_en": "Yes",
+<<<<<<< Updated upstream
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "无"
+=======
+      "resolution_en": "无",
+      "duration": "N/A",
+      "duration_en": "N/A"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "AI文案生成",
@@ -10104,6 +10651,7 @@
       "amount": "1000分钟",
       "amount_en": "1000 minutes of transcription per month",
       "resolution": "high-quality audio",
+<<<<<<< Updated upstream
       "watermark": "不适用",
       "commercial_use": "不适用",
       "reset": "每月重置",
@@ -10113,6 +10661,17 @@
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "high-quality audio"
+=======
+      "watermark": "无水印",
+      "commercial_use": "免费版可商用",
+      "reset": "monthly",
+      "reset_en": "Resets monthly",
+      "resolution_en": "high-quality audio",
+      "duration": "N/A",
+      "duration_en": "N/A",
+      "watermark_en": "No watermark",
+      "commercial_use_en": "Commercial use allowed (free tier)"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "自动转录会议",
@@ -10181,6 +10740,7 @@
       "type": "freemium",
       "amount": "每月50次AI调用",
       "amount_en": "50 AI calls per month",
+<<<<<<< Updated upstream
       "resolution": "不适用",
       "watermark": "不适用",
       "commercial_use": "可商用",
@@ -10191,6 +10751,18 @@
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "N/A"
+=======
+      "resolution": "N/A",
+      "watermark": "无水印",
+      "commercial_use": true,
+      "reset": "每月重置",
+      "reset_en": "Resets monthly",
+      "commercial_use_en": true,
+      "resolution_en": "N/A",
+      "duration": "N/A",
+      "duration_en": "N/A",
+      "watermark_en": "No watermark"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "AI任务助手",
@@ -10260,6 +10832,7 @@
       "amount": 5,
       "amount_en": "5 credits per month",
       "resolution": "1080p",
+<<<<<<< Updated upstream
       "watermark": "不适用",
       "commercial_use": "不适用",
       "reset": "每月重置",
@@ -10269,6 +10842,17 @@
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "1080p"
+=======
+      "watermark": "无水印",
+      "commercial_use": "需付费",
+      "reset": "每月重置",
+      "reset_en": "Resets monthly",
+      "resolution_en": "1080p",
+      "duration": "N/A",
+      "duration_en": "N/A",
+      "watermark_en": "No watermark",
+      "commercial_use_en": "Paid plan required"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "AI动画生成",
@@ -10339,6 +10923,7 @@
       "amount_en": "5 smart scheduling sessions per month",
       "resolution": "不适用",
       "watermark": "none",
+<<<<<<< Updated upstream
       "commercial_use": "不适用",
       "reset": "每月重置",
       "reset_en": "Resets monthly",
@@ -10347,6 +10932,16 @@
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "N/A"
+=======
+      "commercial_use": "免费版可商用",
+      "reset": "monthly",
+      "reset_en": "Resets monthly",
+      "watermark_en": "none",
+      "resolution_en": "N/A",
+      "duration": "N/A",
+      "duration_en": "N/A",
+      "commercial_use_en": "Commercial use allowed (free tier)"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "自动日程优化",
@@ -10415,6 +11010,7 @@
       "type": "freemium",
       "amount": "5次会议优化/月",
       "amount_en": "5 meeting optimizations per month",
+<<<<<<< Updated upstream
       "resolution": "不适用",
       "watermark": "不适用",
       "commercial_use": "不适用",
@@ -10425,6 +11021,18 @@
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "N/A"
+=======
+      "resolution": "N/A",
+      "watermark": "无水印",
+      "commercial_use": "免费版可商用",
+      "reset": "monthly",
+      "reset_en": "Resets monthly",
+      "resolution_en": "N/A",
+      "duration": "N/A",
+      "duration_en": "N/A",
+      "watermark_en": "No watermark",
+      "commercial_use_en": "Commercial use allowed (free tier)"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "智能自动安排会议时间",
@@ -10494,6 +11102,7 @@
       "amount": "100",
       "amount_en": "100",
       "resolution": "次",
+<<<<<<< Updated upstream
       "watermark": "不适用",
       "commercial_use": "可商用",
       "reset": "每月重置",
@@ -10503,6 +11112,17 @@
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "次"
+=======
+      "watermark": "无水印",
+      "commercial_use": true,
+      "reset": "每月重置",
+      "reset_en": "Resets monthly",
+      "commercial_use_en": true,
+      "resolution_en": "次",
+      "duration": "N/A",
+      "duration_en": "N/A",
+      "watermark_en": "No watermark"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "从数十个数据源聚合信息",
@@ -10578,9 +11198,15 @@
       "reset_en": "Resets monthly",
       "watermark_en": "无",
       "commercial_use_en": "允许",
+<<<<<<< Updated upstream
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "高清视图"
+=======
+      "resolution_en": "高清视图",
+      "duration": "N/A",
+      "duration_en": "N/A"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "智能提醒日程",
@@ -10652,6 +11278,7 @@
       "resolution": "不适用",
       "watermark": "No",
       "commercial_use": "Yes",
+<<<<<<< Updated upstream
       "reset": "每月重置",
       "reset_en": "Resets monthly",
       "watermark_en": "No",
@@ -10659,6 +11286,15 @@
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "N/A"
+=======
+      "reset": "monthly",
+      "reset_en": "Resets monthly",
+      "watermark_en": "No",
+      "commercial_use_en": "Yes",
+      "resolution_en": "N/A",
+      "duration": "N/A",
+      "duration_en": "N/A"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "智能自动化引擎",
@@ -10730,6 +11366,7 @@
       "resolution": "不适用",
       "watermark": "No",
       "commercial_use": "Yes",
+<<<<<<< Updated upstream
       "reset": "不适用",
       "reset_en": "N/A",
       "watermark_en": "No",
@@ -10737,6 +11374,15 @@
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "N/A"
+=======
+      "reset": "N/A",
+      "reset_en": "N/A",
+      "watermark_en": "No",
+      "commercial_use_en": "Yes",
+      "resolution_en": "N/A",
+      "duration": "N/A",
+      "duration_en": "N/A"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "语音识别",
@@ -10812,9 +11458,15 @@
       "reset_en": "无",
       "watermark_en": "No",
       "commercial_use_en": "No",
+<<<<<<< Updated upstream
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "N/A"
+=======
+      "resolution_en": "N/A",
+      "duration": "N/A",
+      "duration_en": "N/A"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "语音控制智能设备",
@@ -10890,9 +11542,15 @@
       "reset_en": "Resets daily",
       "watermark_en": "No watermark",
       "commercial_use_en": "有限商业使用",
+<<<<<<< Updated upstream
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "标准音质"
+=======
+      "resolution_en": "标准音质",
+      "duration": "N/A",
+      "duration_en": "N/A"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "AI音乐生成",
@@ -10968,9 +11626,15 @@
       "reset_en": "每月",
       "watermark_en": "Yes",
       "commercial_use_en": "No",
+<<<<<<< Updated upstream
       "duration": "不适用",
       "duration_en": "N/A",
       "resolution_en": "标准"
+=======
+      "resolution_en": "标准",
+      "duration": "N/A",
+      "duration_en": "N/A"
+>>>>>>> Stashed changes
     },
     "features_zh": [
       "AI驱动的音乐生成",
