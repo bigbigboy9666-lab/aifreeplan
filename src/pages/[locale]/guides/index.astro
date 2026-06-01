@@ -1,0 +1,44 @@
+---
+import { getGuides } from '@/utils/data';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import GuideCard from '@/components/GuideCard.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: 'zh' } },
+    { params: { locale: 'en' } },
+  ];
+}
+
+const { locale } = Astro.params;
+const isZh = locale === 'zh';
+
+const guides = getGuides();
+
+const title = isZh ? '使用攻略 | AIFreePlan' : 'Guides | AIFreePlan';
+const description = isZh
+  ? `${guides.length}篇AI工具使用攻略，教你白嫖各种免费额度`
+  : `${guides.length} guides on getting free AI tool credits`;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  locale={locale}
+  canonical={`https://aifreeplan.com/${locale}/guides`}
+  currentPath={`/${locale}/guides`}
+>
+  <Breadcrumb items={[{ label: isZh ? '使用攻略' : 'Guides' }]} locale={locale} />
+
+  <header class="guide-header">
+    <h1>{isZh ? '📚 使用攻略' : '📚 Guides'}</h1>
+    <p>{isZh ? `共 ${guides.length} 篇攻略` : `${guides.length} guides`}</p>
+  </header>
+
+  <div class="tools-grid">
+    {guides.map((guide) => (
+      <GuideCard guide={guide.data} locale={locale} />
+    ))}
+  </div>
+</BaseLayout>

@@ -1,0 +1,123 @@
+---
+import { getGuides } from '@/utils/data';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import FAQ from '@/components/FAQ.astro';
+import { guideSchema } from '@/utils/seo';
+import { Marked } from 'marked';
+
+export function getStaticPaths() {
+  const guides = getGuides();
+  const locales = ['zh', 'en'];
+
+  return locales.flatMap((locale) =>
+    guides.map((guide) => ({
+      params: { locale, slug: guide.data.slug },
+      props: { guide: guide.data, locale },
+    }))
+  );
+}
+
+const { guide, locale } = Astro.props;
+const isZh = locale === 'zh';
+const lang = locale;
+
+const title = guide[`title_${lang}`] || guide.title_en;
+const desc = guide[`description_${lang}`] || guide.description_en;
+const content = guide[`content_${lang}`] || guide.content_en || '';
+const tags = guide[`tags_${lang}`] || guide.tags_en || [];
+const faq = guide[`faq_${lang}`] || [];
+const author = guide[`author_${lang}`] || 'AIFreePlan';
+
+const canonical = `https://aifreeplan.com/${locale}/guides/${guide.slug}`;
+const jsonLd = guideSchema(guide, locale);
+
+// Strip FAQ from content before rendering (it's rendered separately)
+let rawContent = content;
+const faqMarker = isZh ? '## 常见问题' : '## FAQ';
+const faqStart = rawContent.indexOf(faqMarker);
+if (faqStart >= 0) {
+  rawContent = rawContent.substring(0, faqStart).trim();
+}
+
+// Proper markdown rendering with heading IDs
+const marked = new Marked({
+  gfm: true,
+  breaks: false,
+});
+
+// Add IDs to headings for anchor links and TOC
+const renderer = {
+  heading({ tokens, depth }: any) {
+    const text = tokens.map((t: any) => t.raw || t.text || '').join('');
+    const slug = text.toLowerCase().replace(/[^a-z0-9\u4e00-\u9fff]+/g, '-').replace(/^-|-$/g, '');
+    return `<h${depth} id="${slug}">${this.parser.parseInline(tokens)}</h${depth}>`;
+  },
+  image({ href, title, text }: any) {
+    const titleAttr = title ? ` title="${title}"` : '';
+    return `<img src="${href}" alt="${text}"${titleAttr} loading="lazy" decoding="async">`;
+  },
+  link({ href, title, text }: any) {
+    if (href.startsWith('http')) {
+      return `<a href="${href}" target="_blank" rel="noopener"${title ? ` title="${title}"` : ''}>${text}</a>`;
+    }
+    return `<a href="${href}"${title ? ` title="${title}"` : ''}>${text}</a>`;
+  },
+};
+
+marked.use({ renderer });
+
+const htmlContent = marked.parse(rawContent) as string;
+---
+
+<BaseLayout
+  title={`${title} | AIFreePlan`}
+  description={desc.slice(0, 155)}
+  locale={locale}
+  canonical={canonical}
+  jsonLd={jsonLd}
+  currentPath={`/${locale}/guides/${guide.slug}`}
+  ogType="article"
+>
+  <Breadcrumb items={[
+    { label: isZh ? '使用攻略' : 'Guides', href: `/${locale}/guides` },
+    { label: title },
+  ]} locale={locale} />
+
+  <article class="guide-detail">
+    <header class="guide-header">
+      <h1>{title}</h1>
+      <div class="guide-meta">
+        <span class="guide-date">{isZh ? '发布于' : 'Published'} {guide.date_published}</span>
+        <span class="guide-author">{author}</span>
+      </div>
+      <div class="guide-tags">
+        {tags.map((tag: string) => (
+          <span class="tag">{tag}</span>
+        ))}
+      </div>
+    </header>
+
+    <section class="guide-content" set:html={htmlContent} />
+
+    <FAQ faq={faq} locale={locale} />
+
+    {guide.related_tools && guide.related_tools.length > 0 && (
+      <section class="related-tools-section">
+        <h2>{isZh ? '相关工具' : 'Related Tools'}</h2>
+        <div class="tools-grid">
+          {guide.related_tools.map((item: any) => {
+            const slug = typeof item === 'string' ? item : item.slug;
+            const category = typeof item === 'string' ? 'coding' : (item.category || 'coding');
+            const displayName = slug.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase());
+            return (
+              <a href={`/${locale}/${category}/${slug}`} class="tool-card">
+                <h3>{displayName}</h3>
+              </a>
+            );
+          })}
+        </div>
+      </section>
+    )}
+  </article>
+</BaseLayout>

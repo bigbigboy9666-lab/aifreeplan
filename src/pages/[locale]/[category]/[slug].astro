@@ -1,0 +1,160 @@
+---
+import { getTools } from '@/utils/data';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import Stars from '@/components/Stars.astro';
+import FreeCreditsBadge from '@/components/FreeCreditsBadge.astro';
+import FAQ from '@/components/FAQ.astro';
+import { CATEGORIES } from '@/utils/categories';
+import { toolSchema } from '@/utils/seo';
+
+export function getStaticPaths() {
+  const tools = getTools();
+  const locales = ['zh', 'en'];
+
+  return locales.flatMap((locale) =>
+    tools.map((tool) => ({
+      params: {
+        locale,
+        category: tool.data.category,
+        slug: tool.data.slug,
+      },
+      props: { tool: tool.data, locale },
+    }))
+  );
+}
+
+const { tool, locale } = Astro.props;
+const isZh = locale === 'zh';
+const lang = locale;
+
+function t(field: string) {
+  return tool[`${field}_${lang}`] ?? tool[`${field}_en`] ?? '';
+}
+
+const name = t('name');
+const desc = t('description');
+const catInfo = CATEGORIES[tool.category] || { zh: tool.category, en: tool.category, emoji: '📦' };
+const catName = isZh ? catInfo.zh : catInfo.en;
+
+const title = `${name} - ${catName} | AIFreePlan`;
+const canonical = `https://aifreeplan.com/${locale}/${tool.category}/${tool.slug}`;
+const faq = tool[`faq_${lang}`] || [];
+
+const jsonLd = toolSchema(tool, locale);
+
+// Find related tools
+const allTools = getTools();
+const related = allTools
+  .filter((t) => tool.related_tools?.includes(t.data.slug))
+  .map((t) => t.data);
+---
+
+<BaseLayout
+  title={title}
+  description={isZh
+    ? `${name}免费额度详解：${tool.free_credits?.amount || ''}，${catName}首选。${desc.slice(0, 80)}`
+    : `${name} free tier: ${tool.free_credits?.amount_en || tool.free_credits?.amount || 'Free credits'}. ${catName} tool. ${desc.slice(0, 80)}`
+  }
+  locale={locale}
+  canonical={canonical}
+  jsonLd={jsonLd}
+  currentPath={`/${locale}/${tool.category}/${tool.slug}`}
+>
+  <Breadcrumb items={[
+    { label: catName, href: `/${locale}/${tool.category}` },
+    { label: name },
+  ]} locale={locale} />
+
+  <article class="guide-detail">
+    <header class="guide-header">
+      <h1>{name}</h1>
+      <div class="guide-meta">
+        <Stars rating={tool.rating || 4} />
+        <FreeCreditsBadge credits={tool.free_credits || {}} locale={locale} />
+        {tool.paid_from && (
+          <span class="guide-date">{isZh ? '付费起步' : 'Paid from'}: {t('paid_from')}</span>
+        )}
+      </div>
+      {tool.official_url && (
+        <p><a href={tool.official_url} target="_blank" rel="noopener">{isZh ? '访问官网' : 'Visit official site'} →</a></p>
+      )}
+    </header>
+
+    <section class="guide-content">
+      <p>{desc}</p>
+
+      {tool.free_credits && tool.free_credits.type !== 'none' && (
+        <div class="free-credits-detail">
+          <h2>{name} {isZh ? '免费额度详情' : 'Free Credits Details'}</h2>
+          <ul>
+            {tool.free_credits.amount && <li><strong>{isZh ? '额度' : 'Amount'}:</strong> {isZh ? tool.free_credits.amount : (tool.free_credits.amount_en || tool.free_credits.amount)}</li>}
+            {tool.free_credits.reset && <li><strong>{isZh ? '重置' : 'Reset'}:</strong> {isZh ? tool.free_credits.reset : (tool.free_credits.reset_en || tool.free_credits.reset)}</li>}
+            {tool.free_credits.watermark && <li><strong>{isZh ? '水印' : 'Watermark'}:</strong> {isZh ? tool.free_credits.watermark : (tool.free_credits.watermark_en || tool.free_credits.watermark)}</li>}
+            {tool.free_credits.commercial_use && <li><strong>{isZh ? '商用' : 'Commercial'}:</strong> {isZh ? tool.free_credits.commercial_use : (tool.free_credits.commercial_use_en || tool.free_credits.commercial_use)}</li>}
+          </ul>
+        </div>
+      )}
+
+      {t('features') && tool.features_zh?.length > 0 && (
+        <div>
+          <h2>{name} {isZh ? '主要功能' : 'Key Features'}</h2>
+          <ul>
+            {(isZh ? tool.features_zh : tool.features_en || tool.features_zh).map((f: string) => (
+              <li>{f}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {t('pros') && tool.pros_zh?.length > 0 && (
+        <div>
+          <h2>{isZh ? '优点' : 'Pros'}</h2>
+          <ul>
+            {(isZh ? tool.pros_zh : tool.pros_en || tool.pros_zh).map((p: string) => (
+              <li>{p}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {t('cons') && tool.cons_zh?.length > 0 && (
+        <div>
+          <h2>{isZh ? '缺点' : 'Cons'}</h2>
+          <ul>
+            {(isZh ? tool.cons_zh : tool.cons_en || tool.cons_zh).map((c: string) => (
+              <li>{c}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {t('tips') && tool.tips_zh?.length > 0 && (
+        <div>
+          <h2>{isZh ? '使用建议' : 'Tips'}</h2>
+          <ul>
+            {(isZh ? tool.tips_zh : tool.tips_en || tool.tips_zh).map((tip: string) => (
+              <li>{tip}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {related.length > 0 && (
+        <div>
+          <h2>{isZh ? '相关工具' : 'Related Tools'}</h2>
+          <div class="tools-grid">
+            {related.map((rt) => (
+              <a href={`/${locale}/${rt.category}/${rt.slug}`} class="tool-card">
+                <h3>{rt[`name_${locale}`] || rt.name_en}</h3>
+                <p>{(rt[`description_${locale}`] || rt.description_en || '').slice(0, 100)}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+    </section>
+
+    <FAQ faq={faq} locale={locale} />
+  </article>
+</BaseLayout>

@@ -1,0 +1,33 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+
+export async function getStaticPaths() {
+  return [
+    { params: { locale: 'zh' } },
+    { params: { locale: 'en' } },
+  ];
+}
+
+const { locale } = Astro.params;
+const isZh = locale === 'zh';
+
+const title = isZh ? '用户条款 | AIFreePlan' : 'Terms of Service | AIFreePlan';
+const description = isZh ? 'AIFreePlan用户条款' : 'AIFreePlan Terms of Service';
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  locale={locale}
+  canonical={`https://aifreeplan.com/${locale}/terms`}
+  currentPath={`/${locale}/terms`}
+>
+  <Breadcrumb items={[{ label: isZh ? '用户条款' : 'Terms of Service' }]} locale={locale} />
+  <article class="guide-detail">
+    <section class="guide-content">
+      <p>{isZh ? '请查看我们的用户条款页面。' : 'Please see our terms of service page.'}</p>
+      <p><a href={`/terms-${locale}.html`} target="_blank">{isZh ? '查看完整用户条款' : 'View full terms of service'}</a></p>
+    </section>
+  </article>
+</BaseLayout>

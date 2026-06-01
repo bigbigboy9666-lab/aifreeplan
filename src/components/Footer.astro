@@ -1,0 +1,20 @@
+---
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+const isZh = locale === 'zh';
+---
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p>© 2026 AIFreePlan. <a href={`https://aifreeplan.com`} target="_blank" rel="noopener" style="color:var(--accent);font-weight:600;text-decoration:none;border-bottom:2px solid var(--accent);cursor:pointer;">{isZh ? '关注我' : 'Follow us'}</a>，{isZh ? '免费使用各种AI大模型' : 'Free AI tools for everyone'}</p>
+    <p class="footer-links">
+      <a href={`/${locale}/privacy`}>{isZh ? '隐私政策' : 'Privacy Policy'}</a> |
+      <a href={`/${locale}/terms`}>{isZh ? '用户条款' : 'Terms of Service'}</a> |
+      <a href="/zh">{isZh ? '中文' : '中文'}</a> |
+      <a href="/en">{isZh ? 'English' : 'English'}</a>
+    </p>
+  </div>
+</footer>

@@ -1,0 +1,252 @@
+{
+  "_meta": {
+    "description": "aifreeplan.com 工具可信数据源。所有文章中的免费额度/价格/模型名必须与此文件交叉验证。",
+    "last_verified": "2026-05-27",
+    "update_method": "官网定价页实测 + GitHub API确认"
+  },
+  "tools": {
+    "chatgpt": {
+      "name_zh": "ChatGPT",
+      "free_tier": {
+        "model": "GPT-4o-mini",
+        "model_unlimited": true,
+        "premium_model": "GPT-4o",
+        "premium_daily_limit": "5-15次",
+        "image_gen_daily": "2-3张",
+        "source": "OpenAI官方文档, 2026-05"
+      },
+      "paid_tiers": [
+        {
+          "name": "Plus",
+          "price_usd": 20,
+          "price_unit": "月"
+        }
+      ],
+      "notes": "免费版已从GPT-3.5升级到GPT-4o-mini，不能再说GPT-3.5"
+    },
+    "claude": {
+      "name_zh": "Claude",
+      "free_tier": {
+        "model": "Sonnet",
+        "context_window": "200K tokens",
+        "daily_limit": "20-30条消息",
+        "source": "Anthropic官方, 2026-05"
+      },
+      "paid_tiers": [
+        {
+          "name": "Pro",
+          "price_usd": 20,
+          "price_unit": "月"
+        }
+      ],
+      "notes": "官方不公布精确每日次数，实测约20-30条"
+    },
+    "gemini": {
+      "name_zh": "Google Gemini",
+      "free_tier": {
+        "model": "Gemini Flash",
+        "premium_model": "Gemini 2.5 Pro",
+        "premium_access": "非高峰时段有限",
+        "source": "Google官方, 2026-05"
+      },
+      "paid_tiers": [
+        {
+          "name": "AI Pro",
+          "price_usd": 19.99,
+          "price_unit": "月"
+        },
+        {
+          "name": "AI Ultra",
+          "price_usd": 249,
+          "price_unit": "月"
+        }
+      ],
+      "notes": "2026-05缩水：引入百分比周限额，高峰期免费用户无法用Pro"
+    },
+    "deepseek": {
+      "name_zh": "DeepSeek",
+      "free_tier": {
+        "web_chat": "免费不限次",
+        "api_daily_tokens": "500万token/天",
+        "models": [
+          "DeepSeek V3",
+          "DeepSeek R1"
+        ],
+        "source": "DeepSeek官方, 2026-05"
+      },
+      "paid_tiers": [
+        {
+          "name": "API超出",
+          "price_cny_input": 1,
+          "price_cny_output": 2,
+          "price_unit": "百万token"
+        }
+      ],
+      "notes": "API免费额度每天500万token，不是100万"
+    },
+    "kimi": {
+      "name_zh": "Kimi",
+      "free_tier": {
+        "context_window": "200万字",
+        "model": "K2.6",
+        "source": "月之暗面官方, 2026-05"
+      },
+      "paid_tiers": [
+        {
+          "name": "会员",
+          "price_cny": 59,
+          "price_unit": "月"
+        }
+      ],
+      "notes": "K2.6是2026年最新模型"
+    },
+    "tongyi_qianwen": {
+      "name_zh": "通义千问",
+      "free_tier": {
+        "web_chat": "免费不限次",
+        "api_daily_tokens": "100万token/天",
+        "model": "Qwen3系列",
+        "source": "阿里云官方, 2026-05"
+      },
+      "paid_tiers": [
+        {
+          "name": "Pro",
+          "price_cny": 49,
+          "price_unit": "月"
+        }
+      ],
+      "notes": "Qwen3是2026年最新系列，不能说Qwen-72B等旧模型名"
+    },
+    "doubao": {
+      "name_zh": "豆包",
+      "free_tier": {
+        "model": "云雀基础模型",
+        "features": [
+          "日常聊天",
+          "问答",
+          "写作",
+          "Seedance 2.0视频"
+        ],
+        "source": "字节跳动官方, 2026-05"
+      },
+      "paid_tiers": [
+        {
+          "name": "Pro",
+          "price_cny": 68,
+          "price_unit": "月"
+        },
+        {
+          "name": "Premium",
+          "price_cny": 200,
+          "price_unit": "月"
+        }
+      ],
+      "notes": "2026-05开始收费，Seedance 2.0仍免费"
+    },
+    "suno": {
+      "name_zh": "Suno",
+      "free_tier": {
+        "daily_credits": 50,
+        "songs_per_credit": "5积分/首(标准) 10积分/首(高质量)",
+        "daily_songs": "5-10首",
+        "max_duration": "4分钟/首",
+        "source": "Suno官网, 2026-05"
+      },
+      "paid_tiers": [
+        {
+          "name": "Pro",
+          "price_usd": 10,
+          "price_unit": "月"
+        }
+      ],
+      "notes": "免费版每天50积分，不是10首歌"
+    },
+    "kling": {
+      "name_zh": "可灵AI",
+      "free_tier": {
+        "daily_credits": 66,
+        "duration": "5-10秒",
+        "resolution": "1080p",
+        "source": "快手官方, 2026-05"
+      },
+      "paid_tiers": [],
+      "notes": "每天66积分"
+    },
+    "hailuo": {
+      "name_zh": "海螺AI",
+      "free_tier": {
+        "signup_credits": 300,
+        "daily_credits": "约66-100积分",
+        "source": "MiniMax官方, 2026-05"
+      },
+      "paid_tiers": [],
+      "notes": "注册送300积分"
+    },
+    "pixverse": {
+      "name_zh": "PixVerse",
+      "free_tier": {
+        "signup_credits": 90,
+        "daily_credits": 60,
+        "source": "PixVerse官网, 2026-05"
+      },
+      "paid_tiers": [],
+      "notes": "注册送90积分，每天60积分"
+    },
+    "gamma": {
+      "name_zh": "Gamma",
+      "free_tier": {
+        "initial_credits": 400,
+        "one_time": true,
+        "ppts_possible": "3-5个",
+        "source": "Gamma官网, 2026-05"
+      },
+      "paid_tiers": [
+        {
+          "name": "Plus",
+          "price_usd": 10,
+          "price_unit": "月"
+        },
+        {
+          "name": "Pro",
+          "price_usd": 20,
+          "price_unit": "月"
+        }
+      ],
+      "notes": "400积分是一次性的，不会每天重置"
+    },
+    "coze": {
+      "name_zh": "Coze",
+      "free_tier": {
+        "bots": 20,
+        "monthly_calls": 5000,
+        "plugins": "100+",
+        "source": "字节跳动, 2026-05"
+      },
+      "paid_tiers": [
+        {
+          "name": "付费版",
+          "price_cny": 99,
+          "price_unit": "月"
+        }
+      ],
+      "notes": "国内版用豆包模型，国际版可选GPT-4o"
+    }
+  },
+  "model_names": {
+    "outdated": {
+      "GPT-3.5 Turbo": "GPT-4o-mini",
+      "GPT-3.5": "GPT-4o-mini",
+      "GPT-4": "GPT-4o",
+      "Qwen-72B": "Qwen3-235B",
+      "Qwen-14B": "Qwen3-30B",
+      "Qwen-7B": "Qwen3-8B",
+      "Qwen-2.5": "Qwen3",
+      "ERNIE 3.5": "ERNIE 4.0",
+      "Llama 3": "Llama 4",
+      "Llama 3.1": "Llama 4",
+      "Llama 3.3": "Llama 4",
+      "Mixtral 8x7B": "Mixtral Large",
+      "Stable Diffusion XL": "Stable Diffusion 3"
+    }
+  }
+}

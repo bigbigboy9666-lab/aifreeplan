@@ -1,0 +1,137 @@
+---
+import { getTools, getGuides } from '@/utils/data';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ToolCard from '@/components/ToolCard.astro';
+import GuideCard from '@/components/GuideCard.astro';
+import { CATEGORIES } from '@/utils/categories';
+import { organizationSchema } from '@/utils/seo';
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: 'zh' } },
+    { params: { locale: 'en' } },
+  ];
+}
+
+const { locale } = Astro.params;
+const isZh = locale === 'zh';
+
+const tools = getTools();
+const guides = getGuides();
+
+const title = isZh ? 'AIFreePlan - AI工具免费额度汇总' : 'AIFreePlan - Free AI Tool Credits Hub';
+const description = isZh
+  ? '帮你找到所有AI工具的免费额度，视频生成、图片生成、AI大模型、编程助手，一站聚合。'
+  : 'Find free tiers for every AI tool. Video generation, image generation, LLMs, coding assistants — all in one place.';
+
+// Group tools by category
+const byCategory: Record<string, typeof tools> = {};
+for (const tool of tools) {
+  const cat = tool.data.category;
+  if (!byCategory[cat]) byCategory[cat] = [];
+  byCategory[cat].push(tool);
+}
+
+// Featured tools for hero section (pick best from each category)
+const featuredSlugs = [
+  'freebuff',         // coding - 置顶
+  'cursor',           // coding
+  'chatgpt',          // llm
+  'kling',            // video
+  'midjourney',       // image
+  'suno',             // audio
+  'poe',              // ai-assistant
+];
+const featuredTools = featuredSlugs
+  .map(slug => tools.find(t => t.data.slug === slug))
+  .filter(Boolean)
+  .slice(0, 6);
+
+// Schema: WebSite + ItemList
+const siteUrl = `https://aifreeplan.com/${locale}`;
+const jsonLd = [
+  organizationSchema(),
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "AIFreePlan",
+    "url": "https://aifreeplan.com",
+    "description": description,
+    "inLanguage": locale,
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": `https://aifreeplan.com/${locale}/all?q={search_term_string}`,
+      "query-input": "required name=search_term_string"
+    }
+  },
+  ...Object.entries(CATEGORIES).flatMap(([cat, info]) => {
+    const catTools = byCategory[cat] || [];
+    if (catTools.length === 0) return [];
+    return [{
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": isZh ? info.zh : info.en,
+      "url": `${siteUrl}/${cat}`,
+      "numberOfItems": catTools.length,
+      "itemListElement": catTools.slice(0, 20).map((tool, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "url": `${siteUrl}/${tool.data.category}/${tool.data.slug}`
+      }))
+    }];
+  })
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  locale={locale}
+  canonical={`https://aifreeplan.com/${locale}`}
+  currentPath={`/${locale}`}
+  jsonLd={jsonLd}
+>
+  <section class="hero">
+    <h1>{isZh ? '所有AI工具的免费额度一张表看全' : 'Every AI Tool\'s Free Tier, One Page'}</h1>
+    <p class="hero-sub">{isZh ? `${tools.length} 个工具 · ${guides.length} 篇攻略` : `${tools.length} tools · ${guides.length} guides`}</p>
+  </section>
+
+  {/* Featured tools - immediately visible on first screen */}
+  <section class="featured-section">
+    <h2>🔥 {isZh ? '热门工具' : 'Popular Tools'}</h2>
+    <div class="featured-grid">
+      {featuredTools.map((tool) => (
+        <ToolCard tool={tool.data} locale={locale} />
+      ))}
+    </div>
+    <div class="featured-cta">
+      <a href={`/${locale}/all`} class="btn-view-all">
+        {isZh ? '查看全部工具 →' : 'View All Tools →'}
+      </a>
+    </div>
+  </section>
+
+  {Object.entries(CATEGORIES).map(([cat, info]) => {
+    const catTools = byCategory[cat] || [];
+    if (catTools.length === 0) return null;
+    return (
+      <section class="category-section">
+        <h2>{info.emoji} {isZh ? info.zh : info.en}（{catTools.length}）</h2>
+        <div class="tools-grid">
+          {catTools.map((tool) => (
+            <ToolCard tool={tool.data} locale={locale} />
+          ))}
+        </div>
+      </section>
+    );
+  })}
+
+  <section class="category-section">
+    <h2>📚 {isZh ? '使用攻略' : 'Guides'}</h2>
+    <div class="tools-grid">
+      {guides.map((guide) => (
+        <GuideCard guide={guide.data} locale={locale} />
+      ))}
+    </div>
+  </section>
+</BaseLayout>

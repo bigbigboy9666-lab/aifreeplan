@@ -1,0 +1,26 @@
+---
+import Stars from '@/components/Stars.astro';
+import FreeCreditsBadge from '@/components/FreeCreditsBadge.astro';
+
+interface Props {
+  tool: Record<string, any>;
+  locale: string;
+}
+
+const { tool, locale } = Astro.props;
+const name = tool[`name_${locale}`] || tool.name_en;
+const desc = tool[`description_${locale}`] || tool.description_en;
+const catLabel = tool[`category_${locale}`] || tool.category_en;
+---
+
+<a href={`/${locale}/${tool.category}/${tool.slug}`} class="tool-card">
+  <div class="tool-card-header">
+    <h3 class="tool-name">{name}</h3>
+    <FreeCreditsBadge credits={tool.free_credits || {}} locale={locale} />
+  </div>
+  <p class="tool-desc">{desc}</p>
+  <div class="tool-meta">
+    <span class="tool-category">{catLabel}</span>
+    <Stars rating={tool.rating || 4} />
+  </div>
+</a>
