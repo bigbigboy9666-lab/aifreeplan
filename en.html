@@ -23,7 +23,6 @@
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
 .container{max-width:1280px;margin:0 auto;padding:0 40px}
 
-/* Header */
 .header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
 .header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
 .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
@@ -39,7 +38,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
 .btn-green{background:var(--green);color:#fff}
 .btn-green:hover{background:#047857}
 
-/* Hero */
 .hero{background:var(--bg-white);padding:60px 0 40px;text-align:center}
 .hero-badge{display:inline-flex;align-items:center;padding:6px 16px;background:var(--green);color:#fff;border-radius:9999px;font-size:13px;font-weight:600;margin-bottom:20px}
 .hero h1{font-size:48px;font-weight:700;margin-bottom:16px;line-height:1.15}
@@ -53,7 +51,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
 .stat-num{font-size:18px;font-weight:700;color:var(--green)}
 .stat-label{font-size:14px;color:var(--text-secondary)}
 
-/* Filter Tags */
 .filter-bar{background:var(--bg);padding:16px 0;display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
 .filter-tag{padding:8px 16px;border-radius:8px;font-size:14px;font-weight:500;cursor:pointer;transition:all .2s;border:none}
 .filter-tag.active{background:var(--text);color:#fff}
@@ -65,14 +62,16 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
 .filter-tag[data-filter="ai-assistant"]{background:var(--yellow-light);color:var(--yellow)}
 .filter-tag:hover{transform:translateY(-1px);opacity:.85}
 
-/* Card Grid */
+.section-title{font-size:28px;font-weight:700;margin-bottom:24px;display:flex;align-items:center;gap:12px}
+.section-title .badge{display:inline-flex;align-items:center;padding:6px 14px;background:var(--accent);color:#fff;border-radius:9999px;font-size:13px;font-weight:600}
+
 .grid-section{padding:40px 0}
 .grid-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
 .grid-header h2{font-size:24px;font-weight:700}
-.grid-count{font-size:14px;color:var(--text-secondary)}
 .card-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
 .tool-card{background:var(--bg-white);border-radius:16px;padding:24px;box-shadow:var(--shadow);transition:all .2s;display:flex;flex-direction:column;gap:14px;text-decoration:none;color:var(--text)}
 .tool-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover)}
+.guide-card{border-left:4px solid var(--accent)}
 .card-top{display:flex;justify-content:space-between;align-items:center}
 .card-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;font-weight:700}
 .card-tag{padding:4px 10px;border-radius:6px;font-size:12px;font-weight:600}
@@ -85,16 +84,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
 .card-cta{margin-top:auto;padding:10px 0;text-align:center;border-radius:8px;font-size:14px;font-weight:600;color:#fff;background:var(--text);cursor:pointer;transition:all .2s}
 .card-cta:hover{background:#0F0D2B}
 
-/* Ad Banner */
 .ad-banner{background:var(--bg);padding:30px 0;text-align:center}
 .ad-box{max-width:1280px;margin:0 auto;height:100px;background:var(--bg-white);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
 
-/* Submit CTA */
 .submit-cta{background:var(--text);padding:60px 0;text-align:center}
 .submit-cta h2{font-size:36px;font-weight:700;color:#fff;margin-bottom:12px}
 .submit-cta p{color:rgba(255,255,255,.7);max-width:560px;margin:0 auto 24px;font-size:16px}
 
-/* Footer */
 .footer{background:#1a1a2e;padding:50px 0 30px;color:#fff}
 .footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
 .footer-brand{max-width:300px}
@@ -107,7 +103,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
 .footer-col a:hover{color:#fff}
 .footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
 
-/* Responsive */
 @media(max-width:1024px){.card-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:768px){
   .card-grid{grid-template-columns:repeat(2,1fr);gap:16px}
@@ -160,6 +155,53 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
   <button class="filter-tag" data-filter="coding">Code</button>
   <button class="filter-tag" data-filter="ai-assistant">Assistant</button>
 </div>
+
+<!-- 最新攻略 - 首屏显示 -->
+<section class="grid-section container">
+  <div class="grid-header">
+    <h2 class="section-title">🔥 Latest Guides <span class="badge">Today</span></h2>
+    <a href="/en/guides" style="color:var(--accent);text-decoration:none;font-weight:500">
+      All Guides →
+    </a>
+  </div>
+  <div class="card-grid">
+<a href="/en/guides/qoderwork-free-pro-2026" class="tool-card guide-card">
+  <div class="card-top">
+    <div class="card-icon" style="background:#6366F1">📚</div>
+    <span class="card-tag" style="background:#E0E7FF;color:#6366F1">Latest Guide</span>
+  </div>
+  <div class="card-name">Qoderwork Free Pro 2026: Complete Guide to Get Pro for Free</div>
+  <p style="font-size:14px;color:var(--text-secondary);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Complete guide to get Qoderwork Pro for free, including registration tutorial, referral link and screenshots</p>
+  <div class="card-cta">Read Guide</div>
+</a>
+<a href="/en/guides/freebuff-free-coding-agent" class="tool-card guide-card">
+  <div class="card-top">
+    <div class="card-icon" style="background:#6366F1">📚</div>
+    <span class="card-tag" style="background:#E0E7FF;color:#6366F1">Latest Guide</span>
+  </div>
+  <div class="card-name">Freebuff Free AI Coding Agent: Ads for Free Coding with DeepSeek V4 Pro</div>
+  <p style="font-size:14px;color:var(--text-secondary);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Freebuff is the free version of Codebuff, using ads to cover AI coding costs. Install a CLI tool in your terminal to code with DeepSeek V4 Pro, Kimi K2.6 for free</p>
+  <div class="card-cta">Read Guide</div>
+</a>
+<a href="/en/guides/kimi-k26-free-coding" class="tool-card guide-card">
+  <div class="card-top">
+    <div class="card-icon" style="background:#6366F1">📚</div>
+    <span class="card-tag" style="background:#E0E7FF;color:#6366F1">Latest Guide</span>
+  </div>
+  <div class="card-name">Kimi K2.6 Free Coding Guide: Strongest Open Source Coding Agent</div>
+  <p style="font-size:14px;color:var(--text-secondary);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Kimi K2.6 SWE-Bench Pro 58.6 points, #1 open source. 13 hours non-stop coding, Agent Swarm 300 sub-agents in parallel</p>
+  <div class="card-cta">Read Guide</div>
+</a>
+<a href="/en/guides/gemini-cli-free-ai-coding" class="tool-card guide-card">
+  <div class="card-top">
+    <div class="card-icon" style="background:#6366F1">📚</div>
+    <span class="card-tag" style="background:#E0E7FF;color:#6366F1">Latest Guide</span>
+  </div>
+  <div class="card-name">Gemini CLI Free AI Coding: Google Terminal Coding Tool</div>
+  <p style="font-size:14px;color:var(--text-secondary);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Google terminal AI coding tool, free to use Gemini model, supports code generation, debugging, refactoring</p>
+  <div class="card-cta">Read Guide</div>
+</a></div>
+</section>
 
 
 <section class="grid-section container">
@@ -427,16 +469,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
 </a></div>
 </section>
 
-<section class="grid-section container">
-  <div class="grid-header">
-    <h2>📚 Popular Guides</h2>
-    <a href="/en/guides" style="color:var(--accent);text-decoration:none;font-weight:500">
-      View All →
-    </a>
-  </div>
-  <div class="card-grid"></div>
-</section>
-
 <section class="ad-banner">
   <div class="container">
     <div class="ad-box">
@@ -495,7 +527,7 @@ document.querySelectorAll('.filter-tag').forEach(tag=>{
     const filter=tag.dataset.filter;
     cards.forEach(card=>{
       const cat=card.dataset.category;
-      card.style.display=(filter==='all'||cat===filter)?'flex':'none';
+      if(cat){card.style.display=(filter==='all'||cat===filter)?'flex':'none'}
     });
   });
 });
