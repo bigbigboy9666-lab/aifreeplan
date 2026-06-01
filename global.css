@@ -306,3 +306,48 @@ main{min-height:calc(100vh - 120px);padding:0 0 60px}
   .tag{padding:8px 16px;min-height:44px;display:inline-flex;align-items:center}
   .faq-item summary{padding:16px;min-height:44px;display:flex;align-items:center}
 }
+
+/* ===== 首页精选工具区域 ===== */
+.featured-section{
+  margin-bottom:48px;
+  padding:32px;
+  background:linear-gradient(135deg, var(--accent-light) 0%, var(--bg-white) 100%);
+  border-radius:var(--radius-lg);
+  border:1px solid var(--accent);
+}
+.featured-section h2{
+  font-size:24px;
+  font-weight:700;
+  color:var(--text);
+  margin-bottom:24px;
+  text-align:center;
+}
+.featured-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:20px;
+  margin-bottom:24px;
+}
+.featured-cta{
+  text-align:center;
+}
+.btn-view-all{
+  display:inline-block;
+  padding:12px 32px;
+  background:var(--accent);
+  color:#fff;
+  border-radius:var(--radius);
+  font-weight:600;
+  text-decoration:none;
+  transition:all .2s;
+}
+.btn-view-all:hover{
+  background:var(--accent-dark);
+  transform:translateY(-2px);
+  box-shadow:0 4px 12px rgba(0,0,0,0.15);
+}
+@media(max-width:768px){
+  .featured-grid{
+    grid-template-columns:1fr;
+  }
+}
