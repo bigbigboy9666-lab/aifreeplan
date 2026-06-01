@@ -1,0 +1,654 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "anyOf": [
+    {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string"
+          },
+          "name_zh": {
+            "type": "string"
+          },
+          "name_en": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "video",
+              "image",
+              "llm",
+              "coding",
+              "ai-assistant",
+              "audio"
+            ]
+          },
+          "category_zh": {
+            "type": "string"
+          },
+          "category_en": {
+            "type": "string"
+          },
+          "type": {
+            "default": "tool",
+            "type": "string"
+          },
+          "official_url": {
+            "type": "string"
+          },
+          "company_zh": {
+            "default": "",
+            "type": "string"
+          },
+          "company_en": {
+            "default": "",
+            "type": "string"
+          },
+          "description_zh": {
+            "type": "string"
+          },
+          "description_en": {
+            "type": "string"
+          },
+          "free_credits": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "default": "",
+                "type": "string"
+              },
+              "amount": {
+                "default": "",
+                "type": "string"
+              },
+              "amount_en": {
+                "default": "",
+                "type": "string"
+              },
+              "duration": {
+                "default": "",
+                "type": "string"
+              },
+              "duration_en": {
+                "default": "",
+                "type": "string"
+              },
+              "resolution": {
+                "default": "",
+                "type": "string"
+              },
+              "resolution_en": {
+                "default": "",
+                "type": "string"
+              },
+              "watermark": {
+                "default": "",
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "boolean"
+                  }
+                ]
+              },
+              "watermark_en": {
+                "default": "",
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "boolean"
+                  }
+                ]
+              },
+              "commercial_use": {
+                "default": "",
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "boolean"
+                  }
+                ]
+              },
+              "commercial_use_en": {
+                "default": "",
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "boolean"
+                  }
+                ]
+              },
+              "reset": {
+                "default": "",
+                "type": "string"
+              },
+              "reset_en": {
+                "default": "",
+                "type": "string"
+              },
+              "models": {
+                "default": "",
+                "type": "string"
+              },
+              "models_en": {
+                "default": "",
+                "type": "string"
+              },
+              "daily_limit": {
+                "default": "",
+                "type": "string"
+              },
+              "daily_limit_en": {
+                "default": "",
+                "type": "string"
+              }
+            }
+          },
+          "activity": {
+            "type": "object",
+            "properties": {
+              "has_activity": {
+                "default": false,
+                "type": "boolean"
+              },
+              "activity_type": {
+                "default": "",
+                "type": "string"
+              },
+              "activity_text_zh": {
+                "default": "",
+                "type": "string"
+              },
+              "activity_text_en": {
+                "default": "",
+                "type": "string"
+              },
+              "activity_url": {
+                "default": "",
+                "type": "string"
+              },
+              "activity_deadline": {
+                "default": "",
+                "type": "string"
+              }
+            }
+          },
+          "features_zh": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "features_en": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "pros_zh": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "pros_en": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "cons_zh": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "cons_en": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "tips_zh": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "tips_en": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "rating": {
+            "default": 4,
+            "type": "number",
+            "minimum": 0,
+            "maximum": 5
+          },
+          "paid_from": {
+            "default": "",
+            "type": "string"
+          },
+          "paid_from_en": {
+            "default": "",
+            "type": "string"
+          },
+          "last_updated": {
+            "default": "",
+            "type": "string"
+          },
+          "free_level": {
+            "default": "",
+            "type": "string"
+          },
+          "free_note": {
+            "default": "",
+            "type": "string"
+          },
+          "free_note_en": {
+            "default": "",
+            "type": "string"
+          },
+          "images": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "plans": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name_zh": {
+                  "default": "",
+                  "type": "string"
+                },
+                "name_en": {
+                  "default": "",
+                  "type": "string"
+                },
+                "price_zh": {
+                  "default": "",
+                  "type": "string"
+                },
+                "price_en": {
+                  "default": "",
+                  "type": "string"
+                },
+                "features_zh": {
+                  "default": "",
+                  "type": "string"
+                },
+                "features_en": {
+                  "default": "",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "required": [
+          "slug",
+          "name_zh",
+          "name_en",
+          "category",
+          "category_zh",
+          "category_en",
+          "official_url",
+          "description_zh",
+          "description_en"
+        ]
+      }
+    },
+    {
+      "type": "object",
+      "properties": {
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string"
+          },
+          "name_zh": {
+            "type": "string"
+          },
+          "name_en": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "video",
+              "image",
+              "llm",
+              "coding",
+              "ai-assistant",
+              "audio"
+            ]
+          },
+          "category_zh": {
+            "type": "string"
+          },
+          "category_en": {
+            "type": "string"
+          },
+          "type": {
+            "default": "tool",
+            "type": "string"
+          },
+          "official_url": {
+            "type": "string"
+          },
+          "company_zh": {
+            "default": "",
+            "type": "string"
+          },
+          "company_en": {
+            "default": "",
+            "type": "string"
+          },
+          "description_zh": {
+            "type": "string"
+          },
+          "description_en": {
+            "type": "string"
+          },
+          "free_credits": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "default": "",
+                "type": "string"
+              },
+              "amount": {
+                "default": "",
+                "type": "string"
+              },
+              "amount_en": {
+                "default": "",
+                "type": "string"
+              },
+              "duration": {
+                "default": "",
+                "type": "string"
+              },
+              "duration_en": {
+                "default": "",
+                "type": "string"
+              },
+              "resolution": {
+                "default": "",
+                "type": "string"
+              },
+              "resolution_en": {
+                "default": "",
+                "type": "string"
+              },
+              "watermark": {
+                "default": "",
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "boolean"
+                  }
+                ]
+              },
+              "watermark_en": {
+                "default": "",
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "boolean"
+                  }
+                ]
+              },
+              "commercial_use": {
+                "default": "",
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "boolean"
+                  }
+                ]
+              },
+              "commercial_use_en": {
+                "default": "",
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "boolean"
+                  }
+                ]
+              },
+              "reset": {
+                "default": "",
+                "type": "string"
+              },
+              "reset_en": {
+                "default": "",
+                "type": "string"
+              },
+              "models": {
+                "default": "",
+                "type": "string"
+              },
+              "models_en": {
+                "default": "",
+                "type": "string"
+              },
+              "daily_limit": {
+                "default": "",
+                "type": "string"
+              },
+              "daily_limit_en": {
+                "default": "",
+                "type": "string"
+              }
+            }
+          },
+          "activity": {
+            "type": "object",
+            "properties": {
+              "has_activity": {
+                "default": false,
+                "type": "boolean"
+              },
+              "activity_type": {
+                "default": "",
+                "type": "string"
+              },
+              "activity_text_zh": {
+                "default": "",
+                "type": "string"
+              },
+              "activity_text_en": {
+                "default": "",
+                "type": "string"
+              },
+              "activity_url": {
+                "default": "",
+                "type": "string"
+              },
+              "activity_deadline": {
+                "default": "",
+                "type": "string"
+              }
+            }
+          },
+          "features_zh": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "features_en": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "pros_zh": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "pros_en": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "cons_zh": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "cons_en": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "tips_zh": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "tips_en": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "rating": {
+            "default": 4,
+            "type": "number",
+            "minimum": 0,
+            "maximum": 5
+          },
+          "paid_from": {
+            "default": "",
+            "type": "string"
+          },
+          "paid_from_en": {
+            "default": "",
+            "type": "string"
+          },
+          "last_updated": {
+            "default": "",
+            "type": "string"
+          },
+          "free_level": {
+            "default": "",
+            "type": "string"
+          },
+          "free_note": {
+            "default": "",
+            "type": "string"
+          },
+          "free_note_en": {
+            "default": "",
+            "type": "string"
+          },
+          "images": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "plans": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name_zh": {
+                  "default": "",
+                  "type": "string"
+                },
+                "name_en": {
+                  "default": "",
+                  "type": "string"
+                },
+                "price_zh": {
+                  "default": "",
+                  "type": "string"
+                },
+                "price_en": {
+                  "default": "",
+                  "type": "string"
+                },
+                "features_zh": {
+                  "default": "",
+                  "type": "string"
+                },
+                "features_en": {
+                  "default": "",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "required": [
+          "slug",
+          "name_zh",
+          "name_en",
+          "category",
+          "category_zh",
+          "category_en",
+          "official_url",
+          "description_zh",
+          "description_en"
+        ]
+      }
+    }
+  ]
+}
