@@ -27,7 +27,7 @@
 }
 
 body{
-  font-family:'DM Sans',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC",sans-serif;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
   background:var(--bg);
   color:var(--text);
   line-height:1.6;
@@ -44,7 +44,7 @@ body{
   max-width:1280px;margin:0 auto;padding:0 40px;
   height:72px;display:flex;align-items:center;justify-content:space-between;
 }
-.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:700}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:24px;font-weight:700}
 .logo-mark{font-size:20px}
 .nav-links{display:flex;align-items:center;gap:32px}
 .nav-link{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
@@ -72,12 +72,12 @@ main{min-height:calc(100vh - 120px);padding:0 0 60px}
   font-weight:600;
   margin-bottom:20px;
 }
-.hero h1{font-family:'Space Grotesk',sans-serif;font-size:48px;font-weight:700;line-height:1.15;margin-bottom:16px}
+.hero h1{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:48px;font-weight:700;line-height:1.15;margin-bottom:16px}
 .hero h1 .highlight{color:var(--accent)}
 .hero p{color:var(--text-secondary);font-size:18px;max-width:640px;margin:0 auto 28px}
 .stats{display:flex;justify-content:center;gap:40px;margin-top:8px}
 .stat{display:flex;align-items:center;gap:6px}
-.stat-num{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;color:var(--green)}
+.stat-num{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:18px;font-weight:700;color:var(--green)}
 .stat-label{font-size:14px;color:var(--text-secondary)}
 
 /* ===== 搜索和筛选 ===== */
@@ -107,7 +107,7 @@ main{min-height:calc(100vh - 120px);padding:0 0 60px}
 /* ===== 卡片网格 ===== */
 .grid-section{padding:40px 0}
 .grid-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
-.grid-header h2{font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:700}
+.grid-header h2{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:24px;font-weight:700}
 .grid-count{font-size:14px;color:var(--text-secondary)}
 .card-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
 
@@ -132,14 +132,14 @@ main{min-height:calc(100vh - 120px);padding:0 0 60px}
 .tool-icon{
   width:44px;height:44px;border-radius:10px;
   display:flex;align-items:center;justify-content:center;
-  color:#fff;font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;
+  color:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:18px;font-weight:700;
 }
 .tool-category-badge{
   padding:4px 10px;border-radius:6px;font-size:12px;font-weight:600;
 }
-.tool-name{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700}
+.tool-name{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:20px;font-weight:700}
 .tool-quota{display:flex;align-items:baseline;gap:6px}
-.tool-quota .num{font-family:'Space Grotesk',sans-serif;font-size:32px;font-weight:700;color:var(--green)}
+.tool-quota .num{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:32px;font-weight:700;color:var(--green)}
 .tool-quota .unit{font-size:14px;color:var(--text-secondary)}
 .tool-bar{height:6px;background:var(--border);border-radius:3px;overflow:hidden}
 .tool-bar-fill{height:100%;border-radius:3px;background:var(--green);transition:width .6s ease}
@@ -154,7 +154,7 @@ main{min-height:calc(100vh - 120px);padding:0 0 60px}
 /* ===== 工具详情页 ===== */
 .guide-detail{padding:40px 0}
 .guide-header{margin-bottom:32px}
-.guide-header h1{font-family:'Space Grotesk',sans-serif;font-size:36px;font-weight:700;line-height:1.3;margin-bottom:12px}
+.guide-header h1{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:36px;font-weight:700;line-height:1.3;margin-bottom:12px}
 .guide-meta{display:flex;gap:16px;color:var(--text-secondary);font-size:14px;margin-bottom:16px}
 .guide-tags{display:flex;gap:8px;flex-wrap:wrap}
 .tag{
@@ -169,7 +169,7 @@ main{min-height:calc(100vh - 120px);padding:0 0 60px}
   line-height:1.8;
 }
 .guide-content h2{
-  font-family:'Space Grotesk',sans-serif;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
   font-size:24px;font-weight:700;
   margin:32px 0 16px;
   padding-bottom:8px;
@@ -201,7 +201,7 @@ main{min-height:calc(100vh - 120px);padding:0 0 60px}
 
 /* ===== FAQ ===== */
 .faq-section{margin-top:40px}
-.faq-section h2{font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:700;margin-bottom:24px}
+.faq-section h2{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:24px;font-weight:700;margin-bottom:24px}
 .faq-list{display:flex;flex-direction:column;gap:12px}
 .faq-item{
   background:var(--bg-white);
@@ -244,7 +244,7 @@ main{min-height:calc(100vh - 120px);padding:0 0 60px}
 
 /* ===== 提交CTA ===== */
 .submit-cta{background:var(--text);padding:60px 0;text-align:center}
-.submit-cta h2{font-family:'Space Grotesk',sans-serif;font-size:36px;font-weight:700;color:#fff;margin-bottom:12px}
+.submit-cta h2{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:36px;font-weight:700;color:#fff;margin-bottom:12px}
 .submit-cta p{color:rgba(255,255,255,.7);max-width:560px;margin:0 auto 24px;font-size:16px}
 
 /* ===== 页脚 ===== */
@@ -280,7 +280,7 @@ main{min-height:calc(100vh - 120px);padding:0 0 60px}
   text-align:center;
   border-bottom:1px solid var(--border);
 }
-.category-header h1{font-family:'Space Grotesk',sans-serif;font-size:36px;font-weight:700;margin-bottom:12px}
+.category-header h1{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:36px;font-weight:700;margin-bottom:12px}
 .category-header p{color:var(--text-secondary);font-size:18px;max-width:640px;margin:0 auto}
 
 /* ===== 响应式 ===== */
