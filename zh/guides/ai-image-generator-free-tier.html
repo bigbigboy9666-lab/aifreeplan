@@ -1,4 +1,102 @@
-<hr>
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ai Image Generator Free Tier - AIFreePlan</title>
+<meta name="description" content="Ai Image Generator Free Tier">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;
+  --text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;
+  --accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);
+  --green:#059669;--green-light:rgba(5,150,105,.1);
+  --shadow:0 4px 20px rgba(0,0,0,.05);--shadow-hover:0 8px 32px rgba(0,0,0,.1);
+  --radius:12px;--radius-lg:16px;
+}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+
+/* Header */
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover);transform:translateY(-1px)}
+
+/* Article */
+.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
+.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
+.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
+.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
+.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
+.article-container ul, .article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
+.article-container li{margin-bottom:8px;line-height:1.6}
+.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
+.article-container code{background:var(--accent-light);color:var(--accent);padding:2px 6px;border-radius:4px;font-size:14px}
+.article-container pre{background:var(--text);color:#e2e8f0;padding:20px;border-radius:12px;margin:20px 0;overflow-x:auto}
+.article-container pre code{background:transparent;color:inherit;padding:0}
+.article-container blockquote{border-left:4px solid var(--accent);padding:16px 20px;margin:20px 0;background:var(--accent-light);border-radius:0 12px 12px 0}
+.article-container a{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
+.article-container a:hover{color:var(--accent-hover)}
+.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-container th, .article-container td{padding:12px;border:1px solid var(--border);text-align:left}
+.article-container th{background:var(--accent-light);font-weight:600}
+.article-container .breadcrumb{display:flex;gap:8px;align-items:center;margin-bottom:24px;font-size:14px;color:var(--text-muted)}
+.article-container .breadcrumb a{color:var(--text-muted);text-decoration:none}
+.article-container .breadcrumb a:hover{color:var(--accent)}
+
+/* Footer */
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand .logo{color:var(--green);margin-bottom:8px;display:inline-block}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6);line-height:1.5}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col h4{font-size:14px;font-weight:700;margin-bottom:4px;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px;transition:color .2s}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+
+/* Responsive */
+@media(max-width:768px){
+  .article-container{padding:20px 16px 60px}
+  .article-container h1{font-size:28px}
+  .container{padding:0 20px}
+  .nav{display:none}
+  .footer-inner{flex-direction:column;gap:30px}
+  .footer-links{gap:30px}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <a href="/zh" class="logo">AI<span class="accent">FreePlan</span></a>
+    <nav class="nav">
+      <a href="/zh/all">全部工具</a>
+      <a href="/zh/guides">攻略</a>
+      <a href="/zh/privacy">隐私</a>
+      <a href="/OTHER_zh" class="btn btn-primary">zh_SWITCH</a>
+    </nav>
+  </div>
+</header>
+
+<main class="article-container">
+  <div class="breadcrumb">
+    <a href="/zh">首页</a> / <a href="/zh/guides">攻略</a> / <span>Ai Image Generator Free Tier</span>
+  </div>
+  <hr>
 <h2 id="嘿-老铁-你想用ai生成惊艳的图片-但又不想一上来就掏钱-这想法太对了-现在ai绘画工具遍地开花-但-免费-的坑和-真香-的羊毛-你得门儿清-今天我就给你掏心窝子聊聊-哪些工具能让你薅到实在的羊毛-以及怎么薅才最聪明">嘿，老铁！你想用AI生成惊艳的图片，但又不想一上来就掏钱？这想法太对了。现在AI绘画工具遍地开花，但“免费”的坑和“真香”的羊毛，你得门儿清。今天我就给你掏心窝子聊聊，哪些工具能让你薅到实在的羊毛，以及怎么薅才最聪明。</h2><h2 id="一-主流ai图片生成器免费额度大盘点">一、主流AI图片生成器免费额度大盘点</h2><p>别听那些广告吹得天花乱坠，咱们直接上干货，看每个工具到底能让你白嫖多少。</p>
 <h3 id="1-dall-e-3-通过-bing-image-creator-或-chatgpt">1. <strong>DALL·E 3 (通过 Bing Image Creator 或 ChatGPT)</strong></h3><ul>
 <li><strong>免费额度：每天15张快速生成。</strong></li>
@@ -111,3 +209,31 @@
 <li><strong>Stable Diffusion</strong> 则像给你一个厨房和菜</li>
 </ul>
 </section> <section class="faq-section" style="margin-top:40px"><h2>❓ 常见问题</h2><div class="faq-list"><details class="faq-item"><summary>2026年哪个AI图片生成工具免费额度最多？</summary><p>Playground AI每天500张免费额度最多，其次是Bing Image Creator每天100次DALL·E加速生成。Stable Diffusion开源免费无限用，但需要自己的GPU或云端算力。</p></details><details class="faq-item"><summary>免费AI图片生成工具有水印吗？</summary><p>大部分免费工具有水印，但Leonardo AI免费版无水印是个例外。Ideogram免费版也无水印。Midjourney完全没有免费额度。</p></details><details class="faq-item"><summary>Midjourney有免费版吗？</summary><p>没有。Midjourney从2023年起取消了所有免费额度，最低$10/月起。免费替代推荐Ideogram（每天10张）或Leonardo AI（每天15张）。</p></details><details class="faq-item"><summary>Stable Diffusion完全免费吗？</summary><p>是的，Stable Diffusion开源免费，可本地运行。但需要至少8GB显存的GPU。也可以通过Hugging Face Spaces、Google Colab等免费云端体验。</p></details></div></section> <section class="grid-section" style="margin-top:40px"> <div class="grid-header"> <h2>相关工具</h2> </div> <div class="card-grid" style="grid-template-columns:repeat(2,1fr)"> <a href="/zh/image/midjourney" class="tool-card"> <div class="tool-name">Midjourney</div> <p style="font-size:14px;color:var(--text-secondary);line-height:1.5"> 目前最火的 AI 图片生成工具，画质和审美一直是行业标杆。免费试用额度有限，但出图质量确实值得付费。V7 版本效果惊艳。 </p> <div class="tool-cta"> 查看详情 </div> </a><a href="/zh/image/leonardo-ai" class="tool-card"> <div class="tool-name">Leonardo AI</div> <p style="font-size:14px;color:var(--text-secondary);line-height:1.5"> 海外热门AI绘画平台，每天免费150个token，能生成约15张图。模型种类多，支持Alchemy高清和ControlNet，社区模型库丰富。 </p> <div class="tool-cta"> 查看详情 </div> </a><a href="/zh/image/ideogram" class="tool-card"> <div class="tool-name">Ideogram</div> <p style="font-size:14px;color:var(--text-secondary);line-height:1.5"> AI图片生成工具，文字渲染最准。前Google Brain团队做的，2026年2月发布3.0版本。免费版每天约25张，没有水印。 </p> <div class="tool-cta"> 查看详情 </div> </a><a href="/zh/image/bing-image-creator" class="tool-card"> <div class="tool-name">Bing图片创建</div> <p style="font-size:14px;color:var(--text-secondary);line-height:1.5"> 微软的免费AI绘画工具，背后是DALL·E模型。每天免费100次加速生成，Microsoft账号登录即可用，不用翻墙。 </p> <div class="tool-cta"> 查看详情 </div> </a> </div> </section> </div> </article>  </main> <footer class="footer"> <div class="container"> <div class="footer-inner"> <div class="footer-brand"> <a href="/zh" class="logo">AIFreePlan</a> <p>AI驱动的免费工具聚合平台，永久免费。</p> </div> <div class="footer-links"> <div class="footer-col"> <h4>产品</h4> <a href="/zh/video">平台</a> <a href="/zh">分类</a> <a href="#">提交工具</a> </div> <div class="footer-col"> <h4>公司</h4> <a href="#">关于我们</a> <a href="#">博客</a> <a href="#">招聘</a> </div> <div class="footer-col"> <h4>法律</h4> <a href="/zh/privacy">隐私政策</a> <a href="/zh/terms">用户条款</a> </div> </div> </div> <div class="footer-bottom">© 2026 AIFreePlan. 保留所有权利。</div> </div> </footer> </body></html>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/zh" class="logo">AI<span class="accent" style="color:var(--green)">FreePlan</span></a>
+        <p>FOOTER_Ai Image Generator Free Tier</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>产品</h4>
+          <a href="/zh/all">全部工具</a>
+          <a href="/zh/guides">攻略</a>
+        </div>
+        <div class="footer-col">
+          <h4>法律</h4>
+          <a href="/zh/privacy">隐私_POLICY</a>
+          <a href="/zh/terms">用户条款</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 AIFreePlan. 保留所有权利。</div>
+  </div>
+</footer>
+
+</body>
+</html>

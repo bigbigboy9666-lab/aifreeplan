@@ -1,4 +1,102 @@
-<p>嘿，各位视频剪辑老铁们！是不是被专业软件贵到肉疼，又被那些“傻瓜工具”限制创意？今天这篇攻略，直接给你盘一盘那些能让你零成本玩转AI视频编辑的宝藏工具，还附带避坑指南和实测对比。看完这篇，省下的钱够你吃好几顿火锅了。</p>
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ai Video Editing Free Tools - AIFreePlan</title>
+<meta name="description" content="Ai Video Editing Free Tools">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;
+  --text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;
+  --accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);
+  --green:#059669;--green-light:rgba(5,150,105,.1);
+  --shadow:0 4px 20px rgba(0,0,0,.05);--shadow-hover:0 8px 32px rgba(0,0,0,.1);
+  --radius:12px;--radius-lg:16px;
+}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+
+/* Header */
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover);transform:translateY(-1px)}
+
+/* Article */
+.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
+.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
+.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
+.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
+.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
+.article-container ul, .article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
+.article-container li{margin-bottom:8px;line-height:1.6}
+.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
+.article-container code{background:var(--accent-light);color:var(--accent);padding:2px 6px;border-radius:4px;font-size:14px}
+.article-container pre{background:var(--text);color:#e2e8f0;padding:20px;border-radius:12px;margin:20px 0;overflow-x:auto}
+.article-container pre code{background:transparent;color:inherit;padding:0}
+.article-container blockquote{border-left:4px solid var(--accent);padding:16px 20px;margin:20px 0;background:var(--accent-light);border-radius:0 12px 12px 0}
+.article-container a{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
+.article-container a:hover{color:var(--accent-hover)}
+.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-container th, .article-container td{padding:12px;border:1px solid var(--border);text-align:left}
+.article-container th{background:var(--accent-light);font-weight:600}
+.article-container .breadcrumb{display:flex;gap:8px;align-items:center;margin-bottom:24px;font-size:14px;color:var(--text-muted)}
+.article-container .breadcrumb a{color:var(--text-muted);text-decoration:none}
+.article-container .breadcrumb a:hover{color:var(--accent)}
+
+/* Footer */
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand .logo{color:var(--green);margin-bottom:8px;display:inline-block}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6);line-height:1.5}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col h4{font-size:14px;font-weight:700;margin-bottom:4px;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px;transition:color .2s}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+
+/* Responsive */
+@media(max-width:768px){
+  .article-container{padding:20px 16px 60px}
+  .article-container h1{font-size:28px}
+  .container{padding:0 20px}
+  .nav{display:none}
+  .footer-inner{flex-direction:column;gap:30px}
+  .footer-links{gap:30px}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <a href="/zh" class="logo">AI<span class="accent">FreePlan</span></a>
+    <nav class="nav">
+      <a href="/zh/all">全部工具</a>
+      <a href="/zh/guides">攻略</a>
+      <a href="/zh/privacy">隐私</a>
+      <a href="/OTHER_zh" class="btn btn-primary">zh_SWITCH</a>
+    </nav>
+  </div>
+</header>
+
+<main class="article-container">
+  <div class="breadcrumb">
+    <a href="/zh">首页</a> / <a href="/zh/guides">攻略</a> / <span>Ai Video Editing Free Tools</span>
+  </div>
+  <p>嘿，各位视频剪辑老铁们！是不是被专业软件贵到肉疼，又被那些“傻瓜工具”限制创意？今天这篇攻略，直接给你盘一盘那些能让你零成本玩转AI视频编辑的宝藏工具，还附带避坑指南和实测对比。看完这篇，省下的钱够你吃好几顿火锅了。</p>
 <h3 id="一-免费ai视频工具-到底能干啥">一、免费AI视频工具，到底能干啥？</h3><p>先说结论：现在的免费工具，已经强到能让你 <strong>“用喝奶茶的时间，做出大片级效果”</strong>。<br>具体来说，它们能帮你实现：</p>
 <ol>
 <li><strong>自动字幕生成</strong>：准确率高达95%以上，10分钟视频，30秒搞定字幕。</li>
@@ -73,3 +171,31 @@
 <p><strong>Q5：这些工具会不会突然收费或倒闭？</strong><br>A：CapCut和Clipchamp背靠大厂，稳定性较高；在线工具可能调整政策，建议重要项目同时本地备份。</p>
 <p>最后说一句：工具再强也只是辅助，你的创意才是核心。赶紧挑一款试起来，做出下一个爆款视频的可能就是你！如果用到哪款觉得特别香，记得回来评论区喊一声～</p>
 </section> <section class="faq-section" style="margin-top:40px"><h2>❓ 常见问题</h2><div class="faq-list"><details class="faq-item"><summary>2026年最好的免费AI视频编辑工具是什么？</summary><p>CapCut（剪映国际版）免费功能最全，无水印。Runway每月125积分做AI特效最强。Pika每天约10次做创意短视频最好。</p></details><details class="faq-item"><summary>CapCut真的完全免费吗？</summary><p>基础版完全免费，无水印，包含大部分AI功能（自动字幕、背景移除、AI特效）。Pro版$7.99/月解锁更多模板和云存储。</p></details><details class="faq-item"><summary>免费AI视频工具有水印吗？</summary><p>CapCut无水印。Runway免费版有水印。Pika免费版有水印。需要无水印选CapCut或付费升级其他工具。</p></details><details class="faq-item"><summary>AI视频编辑工具能做什么？</summary><p>自动加字幕、背景移除/替换、AI特效（风格转换、慢动作）、自动剪辑、文生视频、图生视频。不同工具侧重点不同。</p></details></div></section> <section class="grid-section" style="margin-top:40px"> <div class="grid-header"> <h2>相关工具</h2> </div> <div class="card-grid" style="grid-template-columns:repeat(2,1fr)"> <a href="/zh/video/runway" class="tool-card"> <div class="tool-name">Runway</div> <p style="font-size:14px;color:var(--text-secondary);line-height:1.5"> AI 视频生成领域的先驱，Gen-3 Alpha 模型画质出色。每月125积分免费，够生成几个高质量短视频。专业创作者用得多。 </p> <div class="tool-cta"> 查看详情 </div> </a><a href="/zh/video/pika" class="tool-card"> <div class="tool-name">Pika</div> <p style="font-size:14px;color:var(--text-secondary);line-height:1.5"> Pika 的视频生成以创意特效见长，能做各种风格转换和特效。免费额度每天重置，适合做短视频素材和社交媒体内容。 </p> <div class="tool-cta"> 查看详情 </div> </a> </div> </section> </div> </article>  </main> <footer class="footer"> <div class="container"> <div class="footer-inner"> <div class="footer-brand"> <a href="/zh" class="logo">AIFreePlan</a> <p>AI驱动的免费工具聚合平台，永久免费。</p> </div> <div class="footer-links"> <div class="footer-col"> <h4>产品</h4> <a href="/zh/video">平台</a> <a href="/zh">分类</a> <a href="#">提交工具</a> </div> <div class="footer-col"> <h4>公司</h4> <a href="#">关于我们</a> <a href="#">博客</a> <a href="#">招聘</a> </div> <div class="footer-col"> <h4>法律</h4> <a href="/zh/privacy">隐私政策</a> <a href="/zh/terms">用户条款</a> </div> </div> </div> <div class="footer-bottom">© 2026 AIFreePlan. 保留所有权利。</div> </div> </footer> </body></html>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/zh" class="logo">AI<span class="accent" style="color:var(--green)">FreePlan</span></a>
+        <p>FOOTER_Ai Video Editing Free Tools</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>产品</h4>
+          <a href="/zh/all">全部工具</a>
+          <a href="/zh/guides">攻略</a>
+        </div>
+        <div class="footer-col">
+          <h4>法律</h4>
+          <a href="/zh/privacy">隐私_POLICY</a>
+          <a href="/zh/terms">用户条款</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 AIFreePlan. 保留所有权利。</div>
+  </div>
+</footer>
+
+</body>
+</html>

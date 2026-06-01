@@ -1,4 +1,102 @@
-<hr>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deepseek Vs Qwen Free Api - AIFreePlan</title>
+<meta name="description" content="Deepseek Vs Qwen Free Api">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;
+  --text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;
+  --accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);
+  --green:#059669;--green-light:rgba(5,150,105,.1);
+  --shadow:0 4px 20px rgba(0,0,0,.05);--shadow-hover:0 8px 32px rgba(0,0,0,.1);
+  --radius:12px;--radius-lg:16px;
+}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+
+/* Header */
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover);transform:translateY(-1px)}
+
+/* Article */
+.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
+.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
+.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
+.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
+.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
+.article-container ul, .article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
+.article-container li{margin-bottom:8px;line-height:1.6}
+.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
+.article-container code{background:var(--accent-light);color:var(--accent);padding:2px 6px;border-radius:4px;font-size:14px}
+.article-container pre{background:var(--text);color:#e2e8f0;padding:20px;border-radius:12px;margin:20px 0;overflow-x:auto}
+.article-container pre code{background:transparent;color:inherit;padding:0}
+.article-container blockquote{border-left:4px solid var(--accent);padding:16px 20px;margin:20px 0;background:var(--accent-light);border-radius:0 12px 12px 0}
+.article-container a{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
+.article-container a:hover{color:var(--accent-hover)}
+.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-container th, .article-container td{padding:12px;border:1px solid var(--border);text-align:left}
+.article-container th{background:var(--accent-light);font-weight:600}
+.article-container .breadcrumb{display:flex;gap:8px;align-items:center;margin-bottom:24px;font-size:14px;color:var(--text-muted)}
+.article-container .breadcrumb a{color:var(--text-muted);text-decoration:none}
+.article-container .breadcrumb a:hover{color:var(--accent)}
+
+/* Footer */
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand .logo{color:var(--green);margin-bottom:8px;display:inline-block}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6);line-height:1.5}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col h4{font-size:14px;font-weight:700;margin-bottom:4px;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px;transition:color .2s}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+
+/* Responsive */
+@media(max-width:768px){
+  .article-container{padding:20px 16px 60px}
+  .article-container h1{font-size:28px}
+  .container{padding:0 20px}
+  .nav{display:none}
+  .footer-inner{flex-direction:column;gap:30px}
+  .footer-links{gap:30px}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <a href="/en" class="logo">AI<span class="accent">FreePlan</span></a>
+    <nav class="nav">
+      <a href="/en/all">All Tools</a>
+      <a href="/en/guides">Guides</a>
+      <a href="/en/privacy">Privacy</a>
+      <a href="/OTHER_en" class="btn btn-primary">en_SWITCH</a>
+    </nav>
+  </div>
+</header>
+
+<main class="article-container">
+  <div class="breadcrumb">
+    <a href="/en">Home</a> / <a href="/en/guides">Guides</a> / <span>Deepseek Vs Qwen Free Api</span>
+  </div>
+  <hr>
 <h2 id="deepseek-vs-qwen-free-api-which-should-you-choose">DeepSeek vs Qwen Free API: Which Should You Choose?</h2><p>Both DeepSeek and Qwen (Tongyi Qianwen) offer free API tiers, and both are among China&#39;s leading AI models. But how do they actually perform in real-world development? This comparison cuts through the hype and gives you <strong>hard numbers and practical experience</strong> from a developer&#39;s perspective.</p>
 <h3 id="free-tier-how-much-do-you-actually-get">Free Tier: How Much Do You Actually Get?</h3><p>This is what everyone wants to know. Here&#39;s the direct comparison:</p>
 <table>
@@ -87,3 +185,31 @@
 <li><strong>Test it yourself.</strong> Don&#39;t just take my word for it. Spend 30 minutes calling both APIs with your actual use case (e.g., &quot;Write a Python scraper with error handling&quot; or &quot;Compose a modern poem about burnout&quot;). First-hand experience is the only real benchmark.</li>
 </ol>
 </section> <section class="faq-section" style="margin-top:40px"><h2>❓ FAQ</h2><div class="faq-list"><details class="faq-item"><summary>Which is cheaper: DeepSeek or Qwen API?</summary><p>Qwen3 is cheaper at $0.12/M input tokens vs DeepSeek V3 at $0.27/M. Qwen3 output is $0.4/M vs DeepSeek&#39;s $1.1/M. Qwen is about half the price.</p></details><details class="faq-item"><summary>Does DeepSeek free API have limits?</summary><p>DeepSeek gives 5M free tokens on signup, then charges per use. You can also access it free through third-party platforms like DmxAPI and ModelScope.</p></details><details class="faq-item"><summary>Is Qwen3 open source?</summary><p>Yes, the full Qwen3 series (0.6B to 235B) is open-source under Apache 2.0, free for commercial use. DeepSeek V3 is also open-source.</p></details><details class="faq-item"><summary>Which is better for Chinese language tasks?</summary><p>Qwen3 is more stable for Chinese understanding and generation, with better Alibaba ecosystem integration. DeepSeek excels at complex reasoning. Try both.</p></details></div></section> <section class="grid-section" style="margin-top:40px"> <div class="grid-header"> <h2>Related Tools</h2> </div> <div class="card-grid" style="grid-template-columns:repeat(2,1fr)"> <a href="/en/llm/deepseek" class="tool-card"> <div class="tool-name">DeepSeek</div> <p style="font-size:14px;color:var(--text-secondary);line-height:1.5"> DeepSeek&#39;s flagship model, the cost-performance king of Chinese AI. V4 is free to use, API pricing i </p> <div class="tool-cta"> View Details </div> </a><a href="/en/llm/qwen" class="tool-card"> <div class="tool-name">Tongyi Qianwen</div> <p style="font-size:14px;color:var(--text-secondary);line-height:1.5"> Alibaba&#39;s model family, from lightweight 0.5B to flagship 235B. Qwen3 series is the all-rounder amon </p> <div class="tool-cta"> View Details </div> </a><a href="/en/llm/chatgpt" class="tool-card"> <div class="tool-name">ChatGPT</div> <p style="font-size:14px;color:var(--text-secondary);line-height:1.5"> OpenAI&#39;s flagship product, the most widely used AI chatbot globally. Free tier uses GPT-4o mini, Plu </p> <div class="tool-cta"> View Details </div> </a><a href="/en/llm/claude" class="tool-card"> <div class="tool-name">Claude</div> <p style="font-size:14px;color:var(--text-secondary);line-height:1.5"> By Anthropic, known for safety and long-context processing. Free tier has daily message limits. Pro  </p> <div class="tool-cta"> View Details </div> </a> </div> </section> </div> </article>  </main> <footer class="footer"> <div class="container"> <div class="footer-inner"> <div class="footer-brand"> <a href="/en" class="logo">AIFreePlan</a> <p>AI-powered free tool aggregation platform. Free forever.</p> </div> <div class="footer-links"> <div class="footer-col"> <h4>Product</h4> <a href="/en/video">Platforms</a> <a href="/en">Categories</a> <a href="#">Submit</a> </div> <div class="footer-col"> <h4>Company</h4> <a href="#">About</a> <a href="#">Blog</a> <a href="#">Careers</a> </div> <div class="footer-col"> <h4>Legal</h4> <a href="/en/privacy">Privacy</a> <a href="/en/terms">Terms</a> </div> </div> </div> <div class="footer-bottom">© 2026 AIFreePlan. All rights reserved.</div> </div> </footer> </body></html>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/en" class="logo">AI<span class="accent" style="color:var(--green)">FreePlan</span></a>
+        <p>FOOTER_Deepseek Vs Qwen Free Api</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="/en/all">All Tools</a>
+          <a href="/en/guides">Guides</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/en/privacy">Privacy_POLICY</a>
+          <a href="/en/terms">Terms</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 AIFreePlan. All rights reserved.</div>
+  </div>
+</footer>
+
+</body>
+</html>

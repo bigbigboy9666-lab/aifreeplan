@@ -1,4 +1,102 @@
-<p>本文基于腾讯Marvis官网（marvis.qq.com）、搜狗微信公众号搜索（8篇相关文章）、科技媒体报道整理，数据截至2026年5月21日。</p>
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tencent Marvis Free Agent - AIFreePlan</title>
+<meta name="description" content="Tencent Marvis Free Agent">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;
+  --text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;
+  --accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);
+  --green:#059669;--green-light:rgba(5,150,105,.1);
+  --shadow:0 4px 20px rgba(0,0,0,.05);--shadow-hover:0 8px 32px rgba(0,0,0,.1);
+  --radius:12px;--radius-lg:16px;
+}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+
+/* Header */
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover);transform:translateY(-1px)}
+
+/* Article */
+.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
+.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
+.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
+.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
+.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
+.article-container ul, .article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
+.article-container li{margin-bottom:8px;line-height:1.6}
+.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
+.article-container code{background:var(--accent-light);color:var(--accent);padding:2px 6px;border-radius:4px;font-size:14px}
+.article-container pre{background:var(--text);color:#e2e8f0;padding:20px;border-radius:12px;margin:20px 0;overflow-x:auto}
+.article-container pre code{background:transparent;color:inherit;padding:0}
+.article-container blockquote{border-left:4px solid var(--accent);padding:16px 20px;margin:20px 0;background:var(--accent-light);border-radius:0 12px 12px 0}
+.article-container a{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
+.article-container a:hover{color:var(--accent-hover)}
+.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-container th, .article-container td{padding:12px;border:1px solid var(--border);text-align:left}
+.article-container th{background:var(--accent-light);font-weight:600}
+.article-container .breadcrumb{display:flex;gap:8px;align-items:center;margin-bottom:24px;font-size:14px;color:var(--text-muted)}
+.article-container .breadcrumb a{color:var(--text-muted);text-decoration:none}
+.article-container .breadcrumb a:hover{color:var(--accent)}
+
+/* Footer */
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand .logo{color:var(--green);margin-bottom:8px;display:inline-block}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6);line-height:1.5}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col h4{font-size:14px;font-weight:700;margin-bottom:4px;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px;transition:color .2s}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+
+/* Responsive */
+@media(max-width:768px){
+  .article-container{padding:20px 16px 60px}
+  .article-container h1{font-size:28px}
+  .container{padding:0 20px}
+  .nav{display:none}
+  .footer-inner{flex-direction:column;gap:30px}
+  .footer-links{gap:30px}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <a href="/zh" class="logo">AI<span class="accent">FreePlan</span></a>
+    <nav class="nav">
+      <a href="/zh/all">全部工具</a>
+      <a href="/zh/guides">攻略</a>
+      <a href="/zh/privacy">隐私</a>
+      <a href="/OTHER_zh" class="btn btn-primary">zh_SWITCH</a>
+    </nav>
+  </div>
+</header>
+
+<main class="article-container">
+  <div class="breadcrumb">
+    <a href="/zh">首页</a> / <a href="/zh/guides">攻略</a> / <span>Tencent Marvis Free Agent</span>
+  </div>
+  <p>本文基于腾讯Marvis官网（marvis.qq.com）、搜狗微信公众号搜索（8篇相关文章）、科技媒体报道整理，数据截至2026年5月21日。</p>
 </blockquote>
 <hr>
 <h2 id="一句话总结">一句话总结</h2><p>腾讯把「贾维斯」做出来了，而且免费。Marvis（马维斯）5月21日凌晨全量上线，Windows、Mac、安卓三端齐发，不用邀请码，装上就能用。每天白送1000万Tokens，底层跑的是DeepSeek V4和自家混元大模型。</p>
@@ -75,3 +173,31 @@
 <p>唯一要注意的是配置要求——16GB内存起步，8GB的电脑跑起来可能会卡。如果你的电脑配置不够，先看看自己的硬件再决定。</p>
 <hr>
 </section> <section class="faq-section" style="margin-top:40px"><h2>❓ 常见问题</h2><div class="faq-list"><details class="faq-item"><summary>Marvis真的完全免费吗？</summary><p>目前官网没有任何付费入口，每日1000万Tokens免费送。跟微信当年打法一样。</p></details><details class="faq-item"><summary>隐私模式真的能保证文件不上传吗？</summary><p>官方说法是文件零上传，用端侧大模型。建议先用非敏感文件测试。</p></details><details class="faq-item"><summary>跟ChatGPT比哪个好？</summary><p>定位不同。ChatGPT是通用对话AI，Marvis是操作系统级Agent。</p></details><details class="faq-item"><summary>电脑配置不够怎么办？</summary><p>16GB内存是硬门槛。Mac需要M1及以上芯片。</p></details><details class="faq-item"><summary>以后会出iOS版吗？</summary><p>预计6月中旬上线。</p></details><details class="faq-item"><summary>每天1000万Tokens够用吗？</summary><p>够聊5000轮对话，普通用户根本用不完。</p></details></div></section> <section class="grid-section" style="margin-top:40px"> <div class="grid-header"> <h2>相关工具</h2> </div> <div class="card-grid" style="grid-template-columns:repeat(2,1fr)"> <a href="/zh/ai-assistant/tencent-marvis" class="tool-card"> <div class="tool-name">腾讯Marvis</div> <p style="font-size:14px;color:var(--text-secondary);line-height:1.5"> 腾讯应用宝团队做的操作系统级AI助手，5月21日全量上线。每天送1000万Tokens，底层跑DeepSeek V4和混元大模型。支持Windows、Mac、安卓三端，有隐私模式（本地模型文件零上传） </p> <div class="tool-cta"> 查看详情 </div> </a><a href="/zh/llm/deepseek" class="tool-card"> <div class="tool-name">DeepSeek</div> <p style="font-size:14px;color:var(--text-secondary);line-height:1.5"> 深度求索（DeepSeek）出的大模型，国产AI里的性价比之王。V4版本免费用，API价格只有GPT-4o的十分之一。编程和数学能力特别强，在多个评测里和闭源模型打得有来有回。国内能直接用，不用翻墙。 </p> <div class="tool-cta"> 查看详情 </div> </a><a href="/zh/llm/xiaomi-mimo" class="tool-card"> <div class="tool-name">小米MiMo</div> <p style="font-size:14px;color:var(--text-secondary);line-height:1.5"> 小米自研的大模型，MiMo系列。新用户注册送大量算力，参与活动还能拿更多。用户实测：轻松拿到7亿token额度。 </p> <div class="tool-cta"> 查看详情 </div> </a> </div> </section> </div> </article>  </main> <footer class="footer"> <div class="container"> <div class="footer-inner"> <div class="footer-brand"> <a href="/zh" class="logo">AIFreePlan</a> <p>AI驱动的免费工具聚合平台，永久免费。</p> </div> <div class="footer-links"> <div class="footer-col"> <h4>产品</h4> <a href="/zh/video">平台</a> <a href="/zh">分类</a> <a href="#">提交工具</a> </div> <div class="footer-col"> <h4>公司</h4> <a href="#">关于我们</a> <a href="#">博客</a> <a href="#">招聘</a> </div> <div class="footer-col"> <h4>法律</h4> <a href="/zh/privacy">隐私政策</a> <a href="/zh/terms">用户条款</a> </div> </div> </div> <div class="footer-bottom">© 2026 AIFreePlan. 保留所有权利。</div> </div> </footer> </body></html>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/zh" class="logo">AI<span class="accent" style="color:var(--green)">FreePlan</span></a>
+        <p>FOOTER_Tencent Marvis Free Agent</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>产品</h4>
+          <a href="/zh/all">全部工具</a>
+          <a href="/zh/guides">攻略</a>
+        </div>
+        <div class="footer-col">
+          <h4>法律</h4>
+          <a href="/zh/privacy">隐私_POLICY</a>
+          <a href="/zh/terms">用户条款</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 AIFreePlan. 保留所有权利。</div>
+  </div>
+</footer>
+
+</body>
+</html>
