@@ -52,6 +52,40 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
   .footer-inner{flex-direction:column;gap:30px}
   .footer-links{gap:30px}
 }
+
+.nav-toggle{display:none;align-items:center;justify-content:center;width:40px;height:40px;border:none;background:transparent;font-size:24px;color:var(--text);cursor:pointer;border-radius:8px;transition:background .2s}
+.nav-toggle:active{background:var(--bg)}
+
+/* === Mobile Theme === */
+@media(max-width:768px){
+  /* Header - hamburger menu */
+  .header-inner{height:56px;padding:0 4px 0 16px}
+  .logo{font-size:20px}
+  .nav-toggle{display:flex!important}
+  .nav{position:fixed;top:56px;left:0;right:0;background:var(--bg-white);flex-direction:column;padding:0;gap:0;border-bottom:1px solid var(--border);box-shadow:0 8px 24px rgba(0,0,0,.08);transform:translateY(-100%);opacity:0;pointer-events:none;transition:all .25s ease;z-index:99}
+  .nav.open{transform:translateY(0);opacity:1;pointer-events:auto}
+  .nav a{padding:14px 20px;font-size:15px;border-bottom:1px solid var(--border-light)}
+  .nav a:last-child{border-bottom:none}
+  .nav .btn{margin:12px 20px;text-align:center}
+
+  /* General */
+  .container{padding:0 16px}
+  img{border-radius:10px}
+
+  /* Footer */
+  .footer{padding:36px 0 24px}
+  .footer-inner{flex-direction:column;gap:28px}
+  .footer-brand{max-width:100%}
+  .footer-brand p{font-size:13px}
+  .footer-links{gap:28px;flex-wrap:wrap}
+  .footer-col{min-width:120px}
+  .footer-col a{padding:4px 0;display:inline-block}
+  .footer-bottom{font-size:12px;margin-top:20px;padding-top:16px}
+}
+@media(max-width:480px){
+  .container{padding:0 14px}
+}
+
 </style>
 </head>
 <body>
