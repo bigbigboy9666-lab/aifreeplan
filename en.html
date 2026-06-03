@@ -108,7 +108,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
 .footer-brand p{font-size:14px;color:rgba(255,255,255,.6);line-height:1.5}
 .footer-links{display:flex;gap:60px}
 .footer-col{display:flex;flex-direction:column;gap:10px}
-.footer-col h4{font-size:14px;font-weight:700;margin-bottom:4px;color:#fff}
+.footer-col-title{font-size:14px;font-weight:700;margin-bottom:4px;color:#fff}
 .footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px;transition:color .2s}
 .footer-col a:hover{color:#fff}
 .footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
@@ -212,10 +212,34 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
         @media (max-width: 768px) { .breadcrumb { padding: 10px 16px; font-size: 12px; } }
     </style>
 
-<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/en">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh">
 <link rel="alternate" hreflang="en" href="https://aifreeplan.com/en">
 <link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en">
 <link rel="canonical" href="https://aifreeplan.com/en">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "AIFreePlan",
+  "url": "https://aifreeplan.com",
+  "description": "Compare free AI tool credits across 45+ platforms. Video, image, LLM, coding, and assistant tools.",
+  "inLanguage": ["en", "zh-CN"],
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://aifreeplan.com/en/all?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "AIFreePlan",
+  "url": "https://aifreeplan.com",
+  "description": "AI-powered free tools directory comparing free credits across 45+ platforms"
+}
+</script>
 </head>
 <body>
 
@@ -634,12 +658,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
       </div>
       <div class="footer-links">
         <div class="footer-col">
-          <h4>Product</h4>
+          <div class="footer-col-title">Product</div>
           <a href="/en/all">All Tools</a>
           <a href="/en/guides">Guides</a>
         </div>
         <div class="footer-col">
-          <h4>Legal</h4>
+          <div class="footer-col-title">Legal</div>
           <a href="/en/privacy">Privacy</a>
           <a href="/en/terms">Terms</a>
         </div>
