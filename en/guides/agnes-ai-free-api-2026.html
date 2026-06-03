@@ -239,7 +239,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
   <h2>What is Agnes AI</h2>
 <img src="/data/articles/agnes-ai-homepage.jpg" alt="Agnes AI Official Website - Free API Platform" loading="lazy" decoding="async">
 
-  <p>Agnes AI is an emerging AI platform that provides three types of API services: text generation, image generation, and video generation. According to official announcements, Agnes AI is listed as one of the "TOP 10 AI Lab free Models" and provides cutting-edge AI model capabilities.</p>
+  <p>Agnes AI is launched by <strong>Sapiens AI</strong>, a global Top 10 AI lab, offering three free multimodal models: Agnes 2.0 Flash (text generation & agent capabilities), Agnes Image 2.1 Flash (image generation), and Agnes Video V2.0 (video generation). Website: <a href="https://agnes-ai.com/" target="_blank" rel="nofollow noopener">agnes-ai.com</a>, API platform: <a href="https://platform.agnes-ai.com" target="_blank" rel="nofollow noopener">platform.agnes-ai.com</a>.</p>
 
   <blockquote>
     <p>Note: While officially claimed to be a cutting-edge model, actual performance may vary depending on the task type. For daily tasks and basic work, the free quota is more than sufficient.</p>
@@ -288,7 +288,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "agnes-image-1.2",
+    "model": "agnes-image-2.1-flash",
     "prompt": "A futuristic city skyline at sunset",
     "size": "1024x768",
     "seed": 42
@@ -319,13 +319,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
     </thead>
     <tbody>
       <tr>
-        <td style="padding:12px;border:1px solid var(--border)">Text Generation</td>
+        <td style="padding:12px;border:1px solid var(--border)">Text Generation + Agent</td>
         <td style="padding:12px;border:1px solid var(--border)">agnes-2.0-flash</td>
         <td style="padding:12px;border:1px solid var(--border)">/v1/chat/completions</td>
       </tr>
       <tr>
         <td style="padding:12px;border:1px solid var(--border)">Image Generation</td>
-        <td style="padding:12px;border:1px solid var(--border)">agnes-image-1.2</td>
+        <td style="padding:12px;border:1px solid var(--border)">agnes-image-2.1-flash</td>
         <td style="padding:12px;border:1px solid var(--border)">/v1/images/generations</td>
       </tr>
       <tr>
@@ -380,7 +380,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
       </details>
       <details class="faq-item" style="margin-bottom:12px">
         <summary style="font-weight:600;cursor:pointer;padding:12px;background:var(--bg);border-radius:8px">What types of APIs are supported?</summary>
-        <p style="padding:12px;color:var(--text-secondary)">Supports text generation (agnes-2.0-flash), image generation (agnes-image-1.2), and video generation (agnes-video-v2.0).</p>
+        <p style="padding:12px;color:var(--text-secondary)">Supports text generation & agent (agnes-2.0-flash), image generation (agnes-image-2.1-flash), and video generation (agnes-video-v2.0) — three multimodal APIs.</p>
       </details>
       <details class="faq-item" style="margin-bottom:12px">
         <summary style="font-weight:600;cursor:pointer;padding:12px;background:var(--bg);border-radius:8px">Do I need a VPN?</summary>

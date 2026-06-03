@@ -240,7 +240,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
 <img src="/data/articles/agnes-ai-homepage.jpg" alt="Agnes AI 官网首页 - 免费API平台" loading="lazy" decoding="async">Agnes AI 是什么</h2>
 <img src="/data/articles/agnes-ai-homepage.jpg" alt="Agnes AI 官网首页 - 免费API平台 - 功能亮点" loading="lazy" decoding="async">
 
-  <p>Agnes AI 是一个新兴的AI平台，提供文本生成、图片生成和视频生成三种API服务。根据官方消息，Agnes AI 被列为"TOP 10 AI Lab free Models"之一，提供前沿的AI模型能力。</p>
+  <p>Agnes AI 由全球AI实验室Top10的 <strong>Sapiens AI</strong> 推出，提供三款全模态免费模型：Agnes 2.0 Flash（文本生成与Agent能力）、Agnes Image 2.1 Flash（图像生成）和 Agnes Video V2.0（视频生成）。官网 <a href="https://agnes-ai.com/" target="_blank" rel="nofollow noopener">agnes-ai.com</a>，API平台 <a href="https://platform.agnes-ai.com" target="_blank" rel="nofollow noopener">platform.agnes-ai.com</a>。</p>
 
   <blockquote>
     <p>注意：虽然官方宣称是前沿模型，但实际体验可能因任务类型而异。对于日常杂活和基础任务，免费额度完全够用。</p>
@@ -294,7 +294,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "agnes-image-1.2",
+    "model": "agnes-image-2.1-flash",
     "prompt": "A futuristic city skyline at sunset",
     "size": "1024x768",
     "seed": 42
@@ -325,13 +325,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
     </thead>
     <tbody>
       <tr>
-        <td style="padding:12px;border:1px solid var(--border)">文本生成</td>
+        <td style="padding:12px;border:1px solid var(--border)">文本生成 + Agent</td>
         <td style="padding:12px;border:1px solid var(--border)">agnes-2.0-flash</td>
         <td style="padding:12px;border:1px solid var(--border)">/v1/chat/completions</td>
       </tr>
       <tr>
         <td style="padding:12px;border:1px solid var(--border)">图片生成</td>
-        <td style="padding:12px;border:1px solid var(--border)">agnes-image-1.2</td>
+        <td style="padding:12px;border:1px solid var(--border)">agnes-image-2.1-flash</td>
         <td style="padding:12px;border:1px solid var(--border)">/v1/images/generations</td>
       </tr>
       <tr>
@@ -386,7 +386,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
       </details>
       <details class="faq-item" style="margin-bottom:12px">
         <summary style="font-weight:600;cursor:pointer;padding:12px;background:var(--bg);border-radius:8px">支持哪些类型的API？</summary>
-        <p style="padding:12px;color:var(--text-secondary)">支持文本生成（agnes-2.0-flash）、图片生成（agnes-image-1.2）和视频生成（agnes-video-v2.0）三种API。</p>
+        <p style="padding:12px;color:var(--text-secondary)">支持文本生成与Agent（agnes-2.0-flash）、图片生成（agnes-image-2.1-flash）和视频生成（agnes-video-v2.0）三种全模态API。</p>
       </details>
       <details class="faq-item" style="margin-bottom:12px">
         <summary style="font-weight:600;cursor:pointer;padding:12px;background:var(--bg);border-radius:8px">需要翻墙吗？</summary>
