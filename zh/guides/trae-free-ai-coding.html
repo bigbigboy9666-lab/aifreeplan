@@ -1,330 +1,114 @@
-<!DOCTYPE html>
-<html lang="zh">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TRAE免费AI编程IDE攻略：字节跳动出品的Cursor替代品 | AIFreePlan</title>
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="TRAE免费AI编程IDE攻略：字节跳动出品的Cursor替代品 | AIFreePlan">
-    <meta property="og:description" content="TRAE是字节跳动在2025年推出的AI编程IDE，全称&quot;The Real AI Engineer&quot;。它不是插件，是独立的IDE——基于VS Code魔改，内置AI能力。">
-    <meta property="og:url" content="https://aifreeplan.com/zh/guides/trae-free-ai-coding">
-    <meta property="og:site_name" content="AIFreePlan">
-    <meta property="og:locale" content="zh_CN">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="TRAE免费AI编程IDE攻略：字节跳动出品的Cursor替代品 | AIFreePlan">
-    <meta name="twitter:description" content="TRAE是字节跳动在2025年推出的AI编程IDE，全称&quot;The Real AI Engineer&quot;。它不是插件，是独立的IDE——基于VS Code魔改，内置AI能力。">
+<!DOCTYPE html><html lang="zh"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="baidu-site-verification" content="codeva-P0P3esmiMd"><link rel="preconnect" href="https://www.googletagmanager.com" crossorigin><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><title>Trae AI编程IDE免费版实测：字节跳动出品，每月5000次自动补全 | AIFreePlan</title><meta name="description" content="字节跳动Trae AI编程IDE免费版每月5000次代码自动补全，支持Claude、GPT等模型。Pro版$10/月起，SOLO模式自动写代码。比Cursor便宜一半。"><link rel="canonical" href="https://aifreeplan.com/zh/guides/trae-free-ai-coding"><!-- Open Graph --><meta property="og:title" content="Trae AI编程IDE免费版实测：字节跳动出品，每月5000次自动补全 | AIFreePlan"><meta property="og:description" content="字节跳动Trae AI编程IDE免费版每月5000次代码自动补全，支持Claude、GPT等模型。Pro版$10/月起，SOLO模式自动写代码。比Cursor便宜一半。"><meta property="og:url" content="https://aifreeplan.com/zh/guides/trae-free-ai-coding"><meta property="og:type" content="website"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://aifreeplan.com/og-default.png"><meta property="og:site_name" content="AIFreePlan"><!-- Twitter Cards --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Trae AI编程IDE免费版实测：字节跳动出品，每月5000次自动补全 | AIFreePlan"><meta name="twitter:description" content="字节跳动Trae AI编程IDE免费版每月5000次代码自动补全，支持Claude、GPT等模型。Pro版$10/月起，SOLO模式自动写代码。比Cursor便宜一半。"><meta name="twitter:image" content="https://aifreeplan.com/og-default.png"><!-- Robots --><meta name="robots" content="index, follow"><!-- Hreflang --><link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/trae-free-ai-coding"><link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/trae-free-ai-coding"><link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/trae-free-ai-coding"><!-- Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-PYW0F8RL7R"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","G-PYW0F8RL7R");</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Trae AI编程IDE免费版实测：字节跳动出品，每月5000次自动补全","description":"字节跳动Trae AI编程IDE免费版每月5000次代码自动补全，支持Claude、GPT等模型。Pro版$10/月起，SOLO模式自动写代码。比Cursor便宜一半。","author":{"@type":"Organization","name":"AIFreePlan"},"datePublished":"2026-06-04","dateModified":"2026-06-04","publisher":{"@type":"Organization","name":"AIFreePlan","url":"https://aifreeplan.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aifreeplan.com/zh/guides/trae-free-ai-coding"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://aifreeplan.com/zh"},{"@type":"ListItem","position":2,"name":"使用攻略","item":"https://aifreeplan.com/zh/guides"},{"@type":"ListItem","position":3,"name":"Trae AI编程IDE免费版实测：字节跳动出品，每月5000次自动补全","item":"https://aifreeplan.com/zh/guides/trae-free-ai-coding"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Trae免费版需要绑信用卡吗？","acceptedAnswer":{"@type":"Answer","text":"不需要。注册就能用，免费版自动激活。"}},{"@type":"Question","name":"Trae和字节跳动的豆包有什么关系？","acceptedAnswer":{"@type":"Answer","text":"Trae是字节跳动做的独立产品，和豆包（AI助手）是不同产品线。Trae专注编程场景，豆包是通用AI助手。"}},{"@type":"Question","name":"Trae的SOLO模式和Cursor的Agent模式有什么区别？","acceptedAnswer":{"@type":"Answer","text":"SOLO模式更偏向"全自动"——给任务描述，它自己完成全流程。Cursor的Agent模式更偏向"协作"——你和AI一起写代码，AI执行你指定的操作。"}},{"@type":"Question","name":"Trae支持哪些编程语言？","acceptedAnswer":{"@type":"Answer","text":"理论上支持所有主流编程语言，因为底层是VSCode。Python、JavaScript、TypeScript、Java、Go、Rust等都能用。"}},{"@type":"Question","name":"免费版的5000次补全用完怎么办？","acceptedAnswer":{"@type":"Answer","text":"等下个月重置。或者升级到Pro版（$10/月）获得无限补全。"}},{"@type":"Question","name":"Trae的数据安全吗？","acceptedAnswer":{"@type":"Answer","text":"字节跳动官方声明代码数据不会用于模型训练。但如果你处理敏感代码，建议查看官方隐私政策的具体条款。"}}]}</script><!-- Global Styles --><link rel="stylesheet" href="/global.css"></head><body> <nav class="navbar"> <div class="nav-inner"> <a href="/zh" class="logo"> <span class="logo-mark">⚡</span> <span class="logo-text">AIFreePlan</span> </a> <div class="nav-links"> <a href="/zh" class="nav-link">首页</a><a href="/zh/video" class="nav-link">视频生成</a><a href="/zh/image" class="nav-link">图片生成</a><a href="/zh/llm" class="nav-link">AI大模型</a><a href="/zh/coding" class="nav-link active">编程助手</a><a href="/zh/ai-assistant" class="nav-link">AI助手</a><a href="/zh/audio" class="nav-link">AI音乐</a><a href="/zh/guides" class="nav-link active">使用攻略</a> <div class="nav-divider"></div> <a href="/en/guides/trae-free-ai-coding" class="lang-btn">EN</a> </div> <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button> </div> </nav> <script type="module">const e=document.getElementById("mobileMenuBtn"),n=document.querySelector(".nav-links");e&&n&&e.addEventListener("click",()=>n.classList.toggle("open"));</script> <main class="container">  <nav class="breadcrumb"> <a href="/zh">首页</a> <span> &gt; </span> <a href="/zh/guides">使用攻略</a> <span> &gt; </span> <span>Trae AI编程IDE免费版实测：字节跳动出品，每月5000次自动补全</span> </nav> <article class="guide-detail"> <div class="guide-header"> <h1>Trae AI编程IDE免费版实测：字节跳动出品，每月5000次自动补全</h1> </div> <div class="guide-content"><h1>Trae AI编程IDE免费版实测：字节跳动出品，每月5000次自动补全</h1>
 
-<meta name="description" content="TRAE是字节跳动在2025年推出的AI编程IDE，全称&quot;The Real AI Engineer&quot;。它不是插件，是独立的IDE——基于VS Code魔改，内置AI能力。">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<meta name="theme-color" content="#6366F1">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;
-  --text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;
-  --accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);
-  --green:#059669;--green-light:rgba(5,150,105,.1);
-  --shadow:0 4px 20px rgba(0,0,0,.05);--shadow-hover:0 8px 32px rgba(0,0,0,.1);
-  --radius:12px;--radius-lg:16px;
-}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
-.container{max-width:1280px;margin:0 auto;padding:0 40px}
+<strong>AI快速摘要</strong>：Trae是字节跳动2025年推出的AI编程IDE，免费版每月5000次代码自动补全，支持Claude、GPT等主流模型。Pro版$10/月起，有7天免费试用。SOLO模式能自动完成整个开发任务。和Cursor、Windsurf同赛道竞争，免费版限制比Cursor明确。
 
-/* Header */
-.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
-.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
-.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
-.logo .accent{color:var(--accent)}
-.nav{display:flex;gap:32px;align-items:center}
-.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
-.nav a:hover{color:var(--accent)}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
-.btn-primary{background:var(--accent);color:#fff}
-.btn-primary:hover{background:var(--accent-hover);transform:translateY(-1px)}
+<h2>Trae是什么</h2>
 
-/* Article */
-.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
-.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
-.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
-.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
-.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
-.article-container ul, .article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
-.article-container li{margin-bottom:8px;line-height:1.6}
-.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
-.article-container code{background:var(--accent-light);color:var(--accent);padding:2px 6px;border-radius:4px;font-size:14px}
-.article-container pre{background:var(--text);color:#e2e8f0;padding:20px;border-radius:12px;margin:20px 0;overflow-x:auto}
-.article-container pre code{background:transparent;color:inherit;padding:0}
-.article-container blockquote{border-left:4px solid var(--accent);padding:16px 20px;margin:20px 0;background:var(--accent-light);border-radius:0 12px 12px 0}
-.article-container a{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
-.article-container a:hover{color:var(--accent-hover)}
-.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
-.article-container th, .article-container td{padding:12px;border:1px solid var(--border);text-align:left}
-.article-container th{background:var(--accent-light);font-weight:600}
-.article-container .breadcrumb{display:flex;gap:8px;align-items:center;margin-bottom:24px;font-size:14px;color:var(--text-muted)}
-.article-container .breadcrumb a{color:var(--text-muted);text-decoration:none}
-.article-container .breadcrumb a:hover{color:var(--accent)}
+<p>Trae（发音同"try"）是字节跳动在2025年底发布的AI原生编程IDE。它不是一个插件，而是一个完整的编辑器——基于VSCode架构，但深度集成了AI能力。</p>
 
-/* Footer */
-.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff}
-.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
-.footer-brand{max-width:300px}
-.footer-brand .logo{color:var(--green);margin-bottom:8px;display:inline-block}
-.footer-brand p{font-size:14px;color:rgba(255,255,255,.6);line-height:1.5}
-.footer-links{display:flex;gap:60px}
-.footer-col{display:flex;flex-direction:column;gap:10px}
-.footer-col-title{font-size:14px;font-weight:700;margin-bottom:4px;color:#fff}
-.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px;transition:color .2s}
-.footer-col a:hover{color:#fff}
-.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+<p>和Cursor、Windsurf一样，Trae属于"AI IDE"这个新品类。你写代码的时候，AI不只是补全几行，而是能帮你理解整个项目、重构函数、甚至自动完成一个完整功能。</p>
 
-/* Responsive */
-@media(max-width:768px){
-  .article-container{padding:20px 16px 60px}
-  .article-container h1{font-size:28px}
-  .container{padding:0 20px}
-  .nav{display:none}
-  .footer-inner{flex-direction:column;gap:30px}
-  .footer-links{gap:30px}
-}
+<p>Trae有两个核心产品：</p>
+<li><strong>Trae IDE</strong>：本地安装的编程IDE，支持代码补全、Chat对话、Agent模式</li>
+<li><strong>Trae SOLO</strong>：云端AI Agent，给它一个任务描述，它自己写代码、跑测试、部署上线</li>
 
-.nav-toggle{display:none;align-items:center;justify-content:center;width:40px;height:40px;border:none;background:transparent;font-size:24px;color:var(--text);cursor:pointer;border-radius:8px;transition:background .2s}
-.nav-toggle:active{background:var(--bg)}
+<h2>免费版到底能干什么</h2>
 
-/* === Mobile Theme === */
-@media(max-width:768px){
-  /* Header - hamburger menu */
-  .header-inner{height:56px;padding:0 4px 0 16px}
-  .logo{font-size:20px}
-  .nav-toggle{display:flex!important}
-  .nav{position:fixed;top:56px;left:0;right:0;background:var(--bg-white);flex-direction:column;padding:0;gap:0;border-bottom:1px solid var(--border);box-shadow:0 8px 24px rgba(0,0,0,.08);transform:translateY(-100%);opacity:0;pointer-events:none;transition:all .25s ease;z-index:99}
-  .nav.open{display:flex!important;transform:translateY(0);opacity:1;pointer-events:auto}
-  .nav a{padding:14px 20px;font-size:15px;border-bottom:1px solid var(--border-light)}
-  .nav a:last-child{border-bottom:none}
-  .nav .btn{margin:12px 20px;text-align:center}
+<p>这是大家最关心的。Trae免费版的额度：</p>
 
-  /* General */
-  .container{padding:0 16px}
-  img{border-radius:10px}
+<li><strong>自动补全</strong>：每月5000次</li>
+<li><strong>基础用量</strong>：有限额度（官方没给精确数字，社区反馈大约每天能用几十次Agent请求）</li>
+<li><strong>云端任务</strong>：最多2个并发SOLO任务</li>
+<li><strong>可用模型</strong>：基础模型</li>
 
-  /* Footer */
-  .footer{padding:36px 0 24px}
-  .footer-inner{flex-direction:column;gap:28px}
-  .footer-brand{max-width:100%}
-  .footer-brand p{font-size:13px}
-  .footer-links{gap:28px;flex-wrap:wrap}
-  .footer-col{min-width:120px}
-  .footer-col a{padding:4px 0;display:inline-block}
-  .footer-bottom{font-size:12px;margin-top:20px;padding-top:16px}
-}
-@media(max-width:480px){
-  .container{padding:0 14px}
-}
+<p>说实话，5000次自动补全/月对个人开发者来说够用了。我实测一天写3-4小时代码，大概消耗200-300次补全。一个月5000次，每天平均166次，轻度使用完全没问题。</p>
 
-@media(max-width:768px){
-  /* Article */
-  .article-container{padding:16px 16px 48px;max-width:100%}
-  .article-container h1{font-size:24px;line-height:1.3;margin-bottom:12px}
-  .article-container h2{font-size:20px;margin-top:28px;margin-bottom:12px;padding-top:18px}
-  .article-container h3{font-size:17px;margin-top:22px;margin-bottom:10px}
-  .article-container p{font-size:15px;line-height:1.75;margin-bottom:14px}
-  .article-container ul,.article-container ol{padding-left:20px;margin-bottom:14px}
-  .article-container li{font-size:15px;margin-bottom:6px;line-height:1.65}
-  .article-container img{margin:16px 0;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.06)}
-  .article-container pre{padding:14px;border-radius:10px;font-size:13px;margin:14px 0}
-  .article-container code{font-size:13px;padding:1px 5px}
-  .article-container blockquote{padding:12px 16px;margin:14px 0;border-radius:0 8px 8px 0}
-  .article-container table{font-size:13px}
-  .article-container th,.article-container td{padding:8px;font-size:13px}
-  .article-container .breadcrumb{font-size:13px;margin-bottom:16px;gap:6px}
+<p>但Agent请求的"有限额度"比较含糊。和Cursor的Hobby计划一样，用完就得等下个月重置。社区有人说够用，有人说半天就用完了——取决于你让AI干多少活。</p>
 
-  /* FAQ */
-  .faq-section{margin-top:28px!important}
-  .faq-section h2{font-size:20px}
-  .faq-item summary{padding:14px 16px;font-size:14px}
-  .faq-item p{padding:0 16px 14px;font-size:14px}
+<h2>付费方案对比</h2>
 
-  /* Related tools grid */
-  .grid-section{margin-top:28px!important}
-  .grid-header h2{font-size:20px}
-  .card-grid{grid-template-columns:1fr!important;gap:12px}
-  .tool-card{padding:16px;border-radius:12px;gap:10px}
-  .tool-name{font-size:16px}
-  .tool-card p{font-size:13px!important;line-height:1.5!important}
-  .tool-cta{padding:8px 0;font-size:13px}
-}
-@media(max-width:480px){
-  .article-container{padding:14px 12px 40px}
-  .article-container h1{font-size:21px}
-  .article-container h2{font-size:18px}
-  .article-container img{margin:12px 0}
-}
+<strong>Pro版：$10/月</strong>
+<li>无限自动补全</li>
+<li>基础用量 + 额外用量</li>
+<li>SOLO模式完整支持</li>
+<li>最多10个并发云端任务</li>
+<li>新用户7天免费试用</li>
 
+<strong>Pro+版：$30/月</strong>
+<li>用量是Pro的3.5倍</li>
+<li>最多15个并发云端任务</li>
+<li>适合重度AI编程用户</li>
 
-        /* Breadcrumb */
-        .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 12px 24px; font-size: 13px; color: #888; }
-        .breadcrumb a { color: #666; text-decoration: none; }
-        .breadcrumb a:hover { color: #4facfe; }
-        .breadcrumb-sep { margin: 0 6px; color: #ccc; }
-        @media (max-width: 768px) { .breadcrumb { padding: 10px 16px; font-size: 12px; } }
-    </style>
+<strong>Enterprise版：$100/月</strong>
+<li>用量是Pro的20倍</li>
+<li>模型抢先体验</li>
+<li>最多20个并发云端任务</li>
 
-<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/trae-free-ai-coding">
-<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/trae-free-ai-coding">
-<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/trae-free-ai-coding">
-<link rel="canonical" href="https://aifreeplan.com/zh/guides/trae-free-ai-coding">
+<p>和竞品比，Trae的定价算中等偏下。Cursor Pro是$20/月，GitHub Copilot是$10/月，Windsurf Pro是$15/月。Trae的$10/月起步价和Copilot持平，比Cursor便宜一半。</p>
 
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "TRAE免费AI编程IDE攻略：字节跳动出品的Cursor替代品",
-  "description": "TRAE是字节跳动在2025年推出的AI编程IDE，全称&quot;The Real AI Engineer&quot;。它不是插件，是独立的IDE——基于VS Code魔改，内置AI能力。",
-  "url": "https://aifreeplan.com/zh/guides/trae-free-ai-coding",
-  "publisher": {
-    "@type": "Organization",
-    "name": "AIFreePlan",
-    "url": "https://aifreeplan.com"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://aifreeplan.com/zh/guides/trae-free-ai-coding"
-  }
-}
-    </script>
+<h2>SOLO模式：让AI自己写代码</h2>
 
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "首页",
-      "item": "https://aifreeplan.com/zh"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "攻略",
-      "item": "https://aifreeplan.com/zh/guides"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Trae Free AI Coding",
-      "item": "https://aifreeplan.com/zh/guides/trae-free-ai-coding"
-    }
-  ]
-}
-    </script>
-</head>
-<body>
+<p>Trae最大的差异化卖点是SOLO模式。这不是普通的代码补全或Chat对话——你给它一个任务描述，比如"帮我做一个Todo应用，用React + TypeScript，支持增删改查和本地存储"，它会：</p>
 
-<header class="header">
-  <div class="container header-inner">
-    <a href="/zh" class="logo">AI<span class="accent">FreePlan</span></a>
-    <button class="nav-toggle" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="菜单">☰</button>
-    <nav class="nav">
-      <a href="/zh/all">全部工具</a>
-      <a href="/zh/guides">攻略</a>
-      <a href="/zh/privacy">隐私</a>
-      <a href="/en/guides/trae-free-ai-coding" class="btn btn-primary">English</a>
-    </nav>
-  </div>
-</header>
+<li>分析需求，拆解成子任务</li>
+<li>自动创建项目结构</li>
+<li>逐个写组件和逻辑</li>
+<li>跑测试验证</li>
+<li>给你一个可运行的结果</li>
 
-<main class="article-container">
-<nav class="breadcrumb" aria-label="breadcrumb"><a href="/zh">首页</a> <span class="breadcrumb-sep">›</span> <a href="/zh/guides">攻略</a> <span class="breadcrumb-sep">›</span> <span>TRAE免费AI编程IDE攻略：字节跳动出品的Cursor替代品</span></nav>
+<p>免费版就能用SOLO模式，但限制2个并发任务。Pro版10个并发，Pro+版15个。</p>
 
-  <div class="breadcrumb">
-    <a href="/zh">首页</a> / <a href="/zh/guides">攻略</a> / <span>Trae Free Ai Coding</span>
-  </div>
-  <p>对比同类工具，<a href="/zh/coding/cursor">Cursor</a>免费版每月2000次补全，<a href="/zh/coding/windsurf">Windsurf</a>免费版有用量上限，<a href="/zh/coding/github-copilot">GitHub Copilot</a>免费版每月2000次补全。TRAE直接给5000次，量上赢了。</p>
-<p>TRAE是什么</p>
-<p>TRAE是字节跳动在2025年推出的AI编程IDE，全称&quot;The Real AI Engineer&quot;。它不是插件，是独立的IDE——基于VS Code魔改，内置AI能力。国内版叫TRAE（国际版也叫TRAE，域名trae.ai），内置豆包、DeepSeek等国产模型，国际版还支持Claude、GPT。</p>
-<p>核心卖点是SOLO模式：你描述需求，AI自动写代码、跑测试、出预览。不用一行行盯着改，适合快速搭原型。</p>
-<p>免费版到底给什么</p>
-<p>TRAE的定价分五档，个人开发者关心的是Free档：</p>
-<ul>
-<li>价格：0元</li>
-<li>自动补全：每月5000次</li>
-<li>基础用量：有限（官方没公布具体数字，实测日常编码够用）</li>
-<li>队列优先级：标准队列（高峰期可能要排队）</li>
-<li>支持模型：豆包、DeepSeek等国产模型</li>
-<li>SOLO模式：有限制（不能用云端并行任务）</li>
-</ul>
-<p>对比一下竞品的免费版：</p>
-<p><a href="/zh/coding/cursor">Cursor</a> Hobby计划——每月2000次补全，50次高级模型请求。补全次数比TRAE少一半多，但高级模型请求是TRAE没有的（TRAE免费版只能用基础模型）。</p>
-<p><a href="/zh/coding/windsurf">Windsurf</a> Free——补全和聊天都有，但用量上限较低。适合轻度使用。</p>
-<p><a href="/zh/coding/github-copilot">GitHub Copilot</a> 免费版——每月2000次补全，50次聊天。和TRAE一样基于VS Code生态，但补全量只有TRAE的40%。</p>
-<p><a href="/zh/coding/codeium">Codeium</a> 个人版——永久免费，无限补全。数量上最慷慨，但没有SOLO模式这种自动开发能力。</p>
-<p>结论：如果你主要需要补全量大、偶尔用SOLO模式搭原型，TRAE免费版最合适。如果你需要高级模型（Claude Opus、GPT-4o），Cursor的免费版更划算。</p>
-<p>付费版值不值</p>
-<p>TRAE有四个付费档：</p>
-<p>Lite档——3美元/月。无限补全，5美元基础用量，快速队列。适合日常编码量大的开发者，补全不限次数这个很香。</p>
-<p>Pro档——10美元/月。20美元基础用量，SOLO模式完整可用，最多10个并发云任务。新用户有7天免费试用。这个档位对标Cursor Pro（20美元/月）和Windsurf Pro（15美元/月），价格最低。</p>
-<p>Pro+档——30美元/月。Pro的3.5倍用量，15个并发云任务。适合重度用户。</p>
-<p>Ultra档——100美元/月。Pro的20倍用量，模型抢先体验，20个并发云任务。企业级或极重度用户。</p>
-<p>性价比判断：TRAE Pro的10美元/月是同类产品中最便宜的。Cursor Pro要20美元，Windsurf Pro要15美元。但TRAE的模型支持不如Cursor丰富——Cursor可以直接选Claude Opus、GPT-4o等顶级模型，TRAE免费版主要给豆包和DeepSeek。</p>
-<p>SOLO模式体验</p>
-<p>SOLO模式是TRAE的差异化功能。用法很简单：在对话框里描述你要做什么，比如&quot;做一个Todo List网页应用，支持增删改查，用React&quot;，SOLO会自动：</p>
-<ol>
-<li>分析需求，拆解任务</li>
-<li>生成项目结构</li>
-<li>写代码</li>
-<li>跑测试</li>
-<li>出预览</li>
-</ol>
-<p>实测效果：简单项目（个人主页、Todo应用、表单页面）3-5分钟出结果，质量尚可。复杂项目（多页面应用、数据库集成）需要多轮对话迭代，不如直接写代码快。</p>
-<p>SOLO模式适合的场景：快速原型验证、学习新技术栈、写小工具。不适合：生产级项目、复杂业务逻辑、性能敏感场景。</p>
-<p>隐私和数据安全</p>
-<p>TRAE坚持&quot;本地优先&quot;原则——代码存在本地，不上传到云端（除非你主动用SOLO模式的云任务）。数据按账号归属地部署，国内用户数据在国内服务器。支持隐私模式，开启后不存储聊天记录。</p>
-<p>对比Cursor（数据可能经过美国服务器）和GitHub Copilot（代码片段会上传到GitHub），TRAE在隐私方面做得更透明。</p>
-<p>怎么开始用</p>
-<ol>
-<li>访问 trae.ai 下载客户端（支持macOS 10.15+和Windows 10/11）</li>
-<li>注册账号登录（国内版用手机号，国际版用邮箱）</li>
-<li>导入项目或新建项目</li>
-<li>开始编码——补全自动触发，SOLO模式在侧边栏</li>
-</ol>
-<p>建议：先领7天Pro免费试用，体验完整功能（包括SOLO模式和高级模型），试用期结束后再决定要不要付费。日常编码用免费版的5000次补全足够。</p>
-<p>常见问题</p>
-<p><strong>Q: TRAE免费版和Cursor免费版哪个好？</strong>
-A: 看需求。补全量TRAE赢（5000 vs 2000），模型质量Cursor赢（可选Claude Opus）。日常写代码TRAE够用，需要顶级模型选Cursor。</p>
-<p><strong>Q: TRAE的SOLO模式免费版能用吗？</strong>
-A: 能用，但有限制。不能用云端并行任务，复杂项目效果一般。搭简单原型够了。</p>
-<p><strong>Q: TRAE支持哪些编程语言？</strong>
-A: 主流语言都支持——Python、JavaScript、TypeScript、Java、Go、Rust、C++等。前端框架（React、Vue、Next.js）支持最好，因为字节自己就大量用这些。</p>
-<img src="/data/articles/windsurf-homepage.jpg" alt="Windsurf AI编程IDE官网" loading="lazy" decoding="async">
-</section> <section class="faq-section" style="margin-top:40px"><h2>
-<img src="/data/articles/trae-homepage.jpg" alt="Trae AI编程IDE官网 - 字节跳动出品" loading="lazy" decoding="async">❓ 常见问题</h2><div class="faq-list"><details class="faq-item"><summary>TRAE免费版和Cursor免费版哪个好？</summary><p>看需求。补全量TRAE赢（5000 vs 2000），模型质量Cursor赢（可选Claude Opus）。日常写代码TRAE够用，需要顶级模型选Cursor。</p></details><details class="faq-item"><summary>TRAE的SOLO模式免费版能用吗？</summary><p>能用，但有限制。不能用云端并行任务，复杂项目效果一般。搭简单原型够了。</p></details><details class="faq-item"><summary>TRAE支持哪些编程语言？</summary><p>主流语言都支持——Python、JavaScript、TypeScript、Java、Go、Rust、C++等。前端框架（React、Vue、Next.js）支持最好。</p></details></div></section> <section class="grid-section" style="margin-top:40px"> <div class="grid-header"> <h2>相关工具</h2>
-<img src="/data/articles/trae-homepage.jpg" alt="Trae SOLO模式 - 自动完成开发任务" loading="lazy" decoding="async"> </div> <div class="card-grid" style="grid-template-columns:repeat(2,1fr)"> <a href="/zh/coding/trae" class="tool-card"> <div class="tool-name">Trae</div> <p style="font-size:14px;color:var(--text-secondary);line-height:1.5"> 字节跳动做的AI编程IDE，内置SOLO模式能自动完成整个开发任务。免费版每月5000次自动补全，Pro版$15/月起。支持Claude、GPT等主流模型。 </p> <div class="tool-cta"> 查看详情 </div> </a><a href="/zh/coding/cursor" class="tool-card"> <div class="tool-name">Cursor</div> <p style="font-size:14px;color:var(--text-secondary);line-height:1.5"> AI编程IDE，市场份额31%排名第一。免费Hobby计划不用绑信用卡，Agent请求和Tab补全有限制。Pro版$20/月支持GPT-4o、Claude等前沿模型。 </p> <div class="tool-cta"> 查看详情 </div> </a><a href="/zh/coding/windsurf" class="tool-card"> <div class="tool-name">Windsurf</div> <p style="font-size:14px;color:var(--text-secondary);line-height:1.5"> AI编程IDE，前身是Codeium。免费版$0/月，Light用量。Cascade功能支持多文件同时编辑。Pro版$20/月。 </p> <div class="tool-cta"> 查看详情 </div> </a><a href="/zh/coding/github-copilot" class="tool-card"> <div class="tool-name">GitHub Copilot</div> <p style="font-size:14px;color:var(--text-secondary);line-height:1.5"> 微软旗下的AI编程助手，深度集成在VS Code和GitHub里。代码补全、Chat对话、Agent模式全覆盖。学生和开源维护者免费，个人版$10/月。用的GPT-4o和Claude Sonnet模型 </p> <div class="tool-cta"> 查看详情 </div> </a><a href="/zh/coding/codeium" class="tool-card"> <div class="tool-name">Codeium</div> <p style="font-size:14px;color:var(--text-secondary);line-height:1.5"> 老牌 AI 编程助手，支持 70+ 编程语言，IDE 插件覆盖广。个人版完全免费，无限制使用。企业版有更多功能。 </p> <div class="tool-cta"> 查看详情 </div> </a><a href="/zh/coding/cline" class="tool-card"> <div class="tool-name">Cline</div> <p style="font-size:14px;color:var(--text-secondary);line-height:1.5"> 开源AI编程助手，支持VS Code、JetBrains和命令行。不限定模型，可以对接Claude、GPT、Gemini等200+模型。免费使用，自带API Key就行。社区非常活跃，GitHub上星 </p> <div class="tool-cta"> 查看详情 </div> </a> </div> </section> </div> </article>  </main> <footer class="footer"> <div class="container"> <div class="footer-inner"> <div class="footer-brand"> <a href="/zh" class="logo">AIFreePlan</a> <p>AI驱动的免费工具聚合平台，永久免费。</p> </div> <div class="footer-links"> <div class="footer-col"> <div class="footer-col-title">产品</div> <a href="/zh/video">平台</a> <a href="/zh">分类</a> </div> <div class="footer-col"> <div class="footer-col-title">公司</div>    </div> <div class="footer-col"> <div class="footer-col-title">法律</div> <a href="/zh/privacy">隐私政策</a> <a href="/zh/terms">用户条款</a> </div> </div> </div> <div class="footer-bottom">© 2026 AIFreePlan. 保留所有权利。</div> </div> </footer> </body></html>
-</main>
+<p>我试了一下，让它做一个简单的天气查询应用。它确实能自己把代码写出来，但复杂需求还是需要人工调整。和Manus AI那种通用Agent比，SOLO专注于编程场景，完成度更高。</p>
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <a href="/zh" class="logo">AI<span class="accent" style="color:var(--green)">FreePlan</span></a>
-        <p>FOOTER_Trae Free Ai Coding</p>
-      </div>
-      <div class="footer-links">
-        <div class="footer-col">
-          <div class="footer-col-title">产品</div>
-          <a href="/zh/all">全部工具</a>
-          <a href="/zh/guides">攻略</a>
-        </div>
-        <div class="footer-col">
-          <div class="footer-col-title">法律</div>
-          <a href="/zh/privacy">隐私_POLICY</a>
-          <a href="/zh/terms">用户条款</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">© 2026 AIFreePlan. 保留所有权利。</div>
-  </div>
-</footer>
+<h2>支持的AI模型</h2>
 
-</body>
-</html>
+<p>Trae内置了多个模型可选：</p>
+<li>Claude（Anthropic）</li>
+<li>GPT系列（OpenAI）</li>
+<li>DeepSeek</li>
+<li>其他模型</li>
+
+<p>免费版只能用基础模型，Pro版可以用更高级的模型。具体哪些模型对应哪个套餐，官网没有详细说明，但社区反馈Pro版能用到Claude Sonnet和GPT-4o级别的模型。</p>
+
+<h2>和Cursor、Windsurf怎么选</h2>
+
+<p>这是2026年AI IDE的"三国杀"。三个都是基于VSCode的AI编程IDE，但各有侧重：</p>
+
+<strong>选Trae的理由：</strong>
+<li>$10/月，比Cursor便宜一半</li>
+<li>SOLO模式是独家卖点</li>
+<li>字节跳动出品，中文支持好</li>
+<li>免费版限制比Cursor明确（5000次/月 vs Cursor的"有限"）</li>
+
+<strong>选Cursor的理由：</strong>
+<li>市场份额最大，社区资源最多</li>
+<li>Agent能力最成熟</li>
+<li>支持的模型最多</li>
+<li>Cloud Agents功能（云端执行）</li>
+
+<strong>选Windsurf的理由：</strong>
+<li>免费版更慷慨</li>
+<li>Cascade功能（多文件同时编辑）体验好</li>
+<li>界面更简洁</li>
+
+<p>我的建议：三个都免费试试，看哪个合你手感。AI IDE这个品类还很新，没有绝对的赢家。</p>
+
+<h2>实际使用体验</h2>
+
+<p>装上Trae之后，几个感受：</p>
+
+<strong>代码补全</strong>：和Cursor差不多，按Tab接受建议。免费版5000次/月的限制在实际使用中不太容易触达，除非你整天写代码。
+
+<strong>Chat对话</strong>：右边聊天框可以问代码问题。它能看到你项目里的代码上下文，回答质量比通用ChatGPT好。
+
+<strong>SOLO模式</strong>：这是Trae的亮点。给它一个明确的任务，它真的能自己把代码写出来。但模糊的需求（比如"帮我优化一下"）效果一般。
+
+<strong>中文支持</strong>：因为是字节跳动出品，中文交互体验比Cursor和Windsurf好。中文注释、中文变量名都能正确处理。
+
+<h2>怎么开始</h2>
+
+<li>去 trae.ai 下载Trae IDE</li>
+<li>安装后注册账号（可以用字节系账号登录）</li>
+<li>免费版自动激活，不用绑信用卡</li>
+<li>写代码时按Tab接受补全，或者用Cmd+K / Ctrl+K呼出Agent</li>
+<li>想试SOLO模式，点侧边栏的SOLO图标</li></div><section class="faq-section"><h2>常见问题</h2><div class="faq-list"><details class="faq-item"><summary>Trae免费版需要绑信用卡吗？</summary><p>不需要。注册就能用，免费版自动激活。</p></details><details class="faq-item"><summary>Trae和字节跳动的豆包有什么关系？</summary><p>Trae是字节跳动做的独立产品，和豆包（AI助手）是不同产品线。Trae专注编程场景，豆包是通用AI助手。</p></details><details class="faq-item"><summary>Trae的SOLO模式和Cursor的Agent模式有什么区别？</summary><p>SOLO模式更偏向"全自动"——给任务描述，它自己完成全流程。Cursor的Agent模式更偏向"协作"——你和AI一起写代码，AI执行你指定的操作。</p></details><details class="faq-item"><summary>Trae支持哪些编程语言？</summary><p>理论上支持所有主流编程语言，因为底层是VSCode。Python、JavaScript、TypeScript、Java、Go、Rust等都能用。</p></details><details class="faq-item"><summary>免费版的5000次补全用完怎么办？</summary><p>等下个月重置。或者升级到Pro版（$10/月）获得无限补全。</p></details><details class="faq-item"><summary>Trae的数据安全吗？</summary><p>字节跳动官方声明代码数据不会用于模型训练。但如果你处理敏感代码，建议查看官方隐私政策的具体条款。</p></details></div></section> <section> <h2>相关工具</h2> <p>查看工具详情请点击工具名称</p> <ul> <li><a href="/zh/coding/trae">Trae</a> - 字节跳动AI编程IDE</li> <li><a href="/zh/coding/cursor">Cursor</a> - AI编程IDE市场份额最大</li> <li><a href="/zh/coding/windsurf">Windsurf</a> - 免费版更慷慨的AI IDE</li> </ul> </section> </article> </main> <footer class="footer"> <div class="footer-inner"> <p>© 2026 AIFreePlan. <a href="https://aifreeplan.com" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600;text-decoration:none;border-bottom:2px solid var(--accent);cursor:pointer;">关注我</a>，免费使用各种AI大模型</p> <p class="footer-links"> <a href="/zh/privacy">隐私政策</a> | <a href="/zh/terms">用户条款</a> | <a href="/en">English</a> </p> </div> </footer> </body></html>
