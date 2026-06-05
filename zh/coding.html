@@ -3,17 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>免费AI编程助手额度｜GitHub Copilot、Cursor、Codeium免费额度 - AIFreePlan</title>
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="免费AI编程助手额度｜GitHub Copilot、Cursor、Codeium免费额度 - AIFreePlan">
-    <meta property="og:description" content="免费AI编程助手额度大全，GitHub Copilot、Cursor、Codeium、通义灵码等工具的免费额度、功能限制和适用场景对比。">
-    <meta property="og:url" content="https://aifreeplan.com/zh/coding">
-    <meta property="og:site_name" content="AIFreePlan">
-    <meta property="og:locale" content="zh_CN">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="免费AI编程助手额度｜GitHub Copilot、Cursor、Codeium免费额度 - AIFreePlan">
-    <meta name="twitter:description" content="免费AI编程助手额度大全，GitHub Copilot、Cursor、Codeium、通义灵码等工具的免费额度、功能限制和适用场景对比。">
-<meta name="description" content="免费AI编程助手额度大全，GitHub Copilot、Cursor、Codeium、通义灵码等工具的免费额度、功能限制和适用场景对比。">
+<title>免费AI编程工具额度汇总 | AIFreePlan</title>
+<meta name="description" content="免费AI编程工具额度对比，覆盖Cursor、GitHub Copilot、Google Jules、Codeium等。">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta name="theme-color" content="#6366F1">
 <link rel="canonical" href="https://aifreeplan.com/zh/coding">
@@ -22,115 +13,52 @@
 <link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/coding">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;
-  --text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;
-  --accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);
-  --green:#059669;--green-light:rgba(5,150,105,.1);
-  --shadow:0 4px 20px rgba(0,0,0,.05);--shadow-hover:0 8px 32px rgba(0,0,0,.1);
-  --radius:12px;--radius-lg:16px;
-}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+:root{--bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;--text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;--accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);--green:#059669;--shadow:0 4px 20px rgba(0,0,0,.05);--shadow-hover:0 8px 32px rgba(0,0,0,.1);--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
 .container{max-width:1280px;margin:0 auto;padding:0 40px}
 .header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
 .header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
 .logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
 .logo .accent{color:var(--accent)}
 .nav{display:flex;gap:32px;align-items:center}
-.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500}
 .nav a:hover{color:var(--accent)}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;text-decoration:none}
 .btn-primary{background:var(--accent);color:#fff}
-.btn-primary:hover{background:var(--accent-hover);transform:translateY(-1px)}
+.btn-primary:hover{background:var(--accent-hover)}
+.breadcrumb{font-size:14px;color:var(--text-muted);margin-bottom:24px}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb-sep{margin:0 8px}
+.card-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin:32px 0}
 .tool-card{background:var(--bg-white);border-radius:16px;padding:24px;box-shadow:var(--shadow);transition:all .2s;display:flex;flex-direction:column;gap:14px;text-decoration:none;color:var(--text)}
 .tool-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover)}
-.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff}
+table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+th,td{padding:12px 16px;border:1px solid var(--border);text-align:left}
+th{background:var(--accent-light);font-weight:600;font-size:13px}
+tr:hover{background:var(--bg)}
+.faq-section{background:var(--bg-white);border-radius:var(--radius);padding:32px;margin-top:40px;box-shadow:var(--shadow)}
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff;margin-top:60px}
 .footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
-.footer-brand{max-width:300px}
-.footer-brand .logo{color:var(--green);margin-bottom:8px;display:inline-block}
-.footer-brand p{font-size:14px;color:rgba(255,255,255,.6);line-height:1.5}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6)}
 .footer-links{display:flex;gap:60px}
 .footer-col{display:flex;flex-direction:column;gap:10px}
-.footer-col-title{font-size:14px;font-weight:700;margin-bottom:4px;color:#fff}
-.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px;transition:color .2s}
+.footer-col h4{font-size:14px;font-weight:700;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px}
 .footer-col a:hover{color:#fff}
 .footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
-@media(max-width:768px){
-  .container{padding:0 20px}
-  .nav{display:none}
-  .footer-inner{flex-direction:column;gap:30px}
-  .footer-links{gap:30px}
-}
-
-.nav-toggle{display:none;align-items:center;justify-content:center;width:40px;height:40px;border:none;background:transparent;font-size:24px;color:var(--text);cursor:pointer;border-radius:8px;transition:background .2s}
-.nav-toggle:active{background:var(--bg)}
-
-/* === Mobile Theme === */
-@media(max-width:768px){
-  /* Header - hamburger menu */
-  .header-inner{height:56px;padding:0 4px 0 16px}
-  .logo{font-size:20px}
-  .nav-toggle{display:flex!important}
-  .nav{position:fixed;top:56px;left:0;right:0;background:var(--bg-white);flex-direction:column;padding:0;gap:0;border-bottom:1px solid var(--border);box-shadow:0 8px 24px rgba(0,0,0,.08);transform:translateY(-100%);opacity:0;pointer-events:none;transition:all .25s ease;z-index:99}
-  .nav.open{display:flex!important;transform:translateY(0);opacity:1;pointer-events:auto}
-  .nav a{padding:14px 20px;font-size:15px;border-bottom:1px solid var(--border-light)}
-  .nav a:last-child{border-bottom:none}
-  .nav .btn{margin:12px 20px;text-align:center}
-
-  /* General */
-  .container{padding:0 16px}
-  img{border-radius:10px}
-
-  /* Footer */
-  .footer{padding:36px 0 24px}
-  .footer-inner{flex-direction:column;gap:28px}
-  .footer-brand{max-width:100%}
-  .footer-brand p{font-size:13px}
-  .footer-links{gap:28px;flex-wrap:wrap}
-  .footer-col{min-width:120px}
-  .footer-col a{padding:4px 0;display:inline-block}
-  .footer-bottom{font-size:12px;margin-top:20px;padding-top:16px}
-}
-@media(max-width:480px){
-  .container{padding:0 14px}
-}
-
-
-        /* Breadcrumb */
-        .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 12px 24px; font-size: 13px; color: #888; }
-        .breadcrumb a { color: #666; text-decoration: none; }
-        .breadcrumb a:hover { color: #4facfe; }
-        .breadcrumb-sep { margin: 0 6px; color: #ccc; }
-        @media (max-width: 768px) { .breadcrumb { padding: 10px 16px; font-size: 12px; } }
-    </style>
-
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "首页",
-      "item": "https://aifreeplan.com/zh"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "编程助手",
-      "item": "https://aifreeplan.com/zh/coding"
-    }
-  ]
-}
-    </script>
+@media(max-width:1024px){.card-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:768px){.card-grid{grid-template-columns:repeat(2,1fr)}.container{padding:0 16px}.nav{display:none}}
+@media(max-width:480px){.card-grid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CollectionPage","name":"免费AI编程工具额度汇总","description":"免费AI编程工具额度对比，覆盖Cursor、GitHub Copilot、Google Jules、Codeium等。","url":"https://aifreeplan.com/zh/coding","mainEntity":{"@type":"ItemList","numberOfItems":12,"itemListElement":[{"@type":"ListItem","position":1,"name":"Codeium"},{"@type":"ListItem","position":2,"name":"通义灵码"},{"@type":"ListItem","position":3,"name":"CodeBuddy"},{"@type":"ListItem","position":4,"name":"AtomCode"},{"@type":"ListItem","position":5,"name":"Cursor"},{"@type":"ListItem","position":6,"name":"Windsurf"},{"@type":"ListItem","position":7,"name":"Freebuff"},{"@type":"ListItem","position":8,"name":"Cline"},{"@type":"ListItem","position":9,"name":"GitHub Copilot"},{"@type":"ListItem","position":10,"name":"讯飞星辰 Coding Plan"},{"@type":"ListItem","position":11,"name":"V0.dev"},{"@type":"ListItem","position":12,"name":"Google Jules"}]}}
+</script>
 </head>
 <body>
-
 <header class="header">
   <div class="container header-inner">
     <a href="/zh" class="logo">AI<span class="accent">FreePlan</span></a>
-    <button class="nav-toggle" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="菜单">☰</button>
     <nav class="nav">
       <a href="/zh/all">全部工具</a>
       <a href="/zh/guides">攻略</a>
@@ -139,36 +67,64 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
     </nav>
   </div>
 </header>
-
 <main class="container" style="padding-top:40px;padding-bottom:80px">
-<nav class="breadcrumb" aria-label="breadcrumb"><a href="/zh">首页</a> <span class="breadcrumb-sep">›</span> <a href="/zh/coding">编程助手</a></nav>
+<nav class="breadcrumb"><a href="/zh">首页</a> <span class="breadcrumb-sep">›</span> <span>编程助手</span></nav>
+<h1 style="font-size:36px;font-weight:700;margin-bottom:16px">💻 免费AI编程工具额度汇总</h1>
+<p style="color:var(--text-secondary);line-height:1.8;max-width:800px;margin-bottom:32px">汇总所有AI编程助手的免费额度和使用限制。包括Cursor、GitHub Copilot、Google Jules、Codeium、通义灵码等，一张表看清免费补全次数、API限制。</p>
+<h2 style="font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px">工具对比表</h2>
+<div style="overflow-x:auto">
+<table>
+<thead><tr><th>工具</th><th>免费额度</th><th>重置周期</th><th>分辨率</th><th>水印</th></tr></thead>
+<tbody>
+<tr><td><a href="/zh/coding/codeium" style="color:var(--accent);text-decoration:none;font-weight:600">Codeium</a></td><td>个人版永久免费</td><td>不适用</td><td>N/A</td><td>N/A</td></tr>
+<tr><td><a href="/zh/coding/tongyi-lingma" style="color:var(--accent);text-decoration:none;font-weight:600">通义灵码</a></td><td>个人版免费</td><td>不适用</td><td>N/A</td><td>N/A</td></tr>
+<tr><td><a href="/zh/coding/codebuddy" style="color:var(--accent);text-decoration:none;font-weight:600">CodeBuddy</a></td><td>新用户送额度</td><td>不重置</td><td>N/A</td><td>N/A</td></tr>
+<tr><td><a href="/zh/coding/atomcode" style="color:var(--accent);text-decoration:none;font-weight:600">AtomCode</a></td><td>CodingPlan Pro档限时免费，30天有效</td><td>5小时滚动窗口</td><td>N/A</td><td>无</td></tr>
+<tr><td><a href="/zh/coding/cursor" style="color:var(--accent);text-decoration:none;font-weight:600">Cursor</a></td><td>Hobby免费计划</td><td>每月重置</td><td>N/A</td><td>N/A</td></tr>
+<tr><td><a href="/zh/coding/windsurf" style="color:var(--accent);text-decoration:none;font-weight:600">Windsurf</a></td><td>免费版Light用量</td><td>每月重置</td><td>N/A</td><td>N/A</td></tr>
+<tr><td><a href="/zh/coding/freebuff" style="color:var(--accent);text-decoration:none;font-weight:600">Freebuff</a></td><td>免费，终端内展示广告</td><td>每天重置</td><td>N/A</td><td>无</td></tr>
+<tr><td><a href="/zh/coding/cline" style="color:var(--accent);text-decoration:none;font-weight:600">Cline</a></td><td>免费开源</td><td>无限制</td><td>N/A</td><td>无</td></tr>
+<tr><td><a href="/zh/coding/github-copilot" style="color:var(--accent);text-decoration:none;font-weight:600">GitHub Copilot</a></td><td>2000次补全/月（免费版）</td><td>每月重置</td><td>N/A</td><td>无</td></tr>
+<tr><td><a href="/zh/coding/astron-coding-plan" style="color:var(--accent);text-decoration:none;font-weight:600">讯飞星辰 Coding Plan</a></td><td>首购¥3.9/月，续费¥19/月（无忧版）</td><td>按月订阅，31天有效期</td><td>N/A</td><td>N/A</td></tr>
+<tr><td><a href="/zh/coding/v0" style="color:var(--accent);text-decoration:none;font-weight:600">V0.dev</a></td><td>每月5美元额度，每天7条消息</td><td>额度每月重置，消息每天重置</td><td>N/A</td><td>N/A</td></tr>
+<tr><td><a href="/zh/coding/google-jules" style="color:var(--accent);text-decoration:none;font-weight:600">Google Jules</a></td><td>完全免费，限额大幅提升60倍</td><td>每天重置</td><td>N/A</td><td>N/A</td></tr>
 
-</div> </div> </div> </section>  </main> <footer class="footer"> <div class="container"> <div class="footer-inner"> <div class="footer-brand"> <a href="/zh" class="logo">AIFreePlan</a> <p>AI驱动的免费工具聚合平台，永久免费。</p> </div> <div class="footer-links"> <div class="footer-col"> <div class="footer-col-title">产品</div> <a href="/zh/video">平台</a> <a href="/zh">分类</a> </div> <div class="footer-col"> <div class="footer-col-title">公司</div>    </div> <div class="footer-col"> <div class="footer-col-title">法律</div> <a href="/zh/privacy">隐私政策</a> <a href="/zh/terms">用户条款</a> </div> </div> </div> <div class="footer-bottom">© 2026 AIFreePlan. 保留所有权利。</div> </div> </footer> </body></html> <script type="module">const s=document.querySelectorAll(".filter-tag"),r=document.querySelectorAll(".tool-card"),n=document.querySelector(".grid-count");s.forEach(e=>{e.addEventListener("click",()=>{s.forEach(t=>t.classList.remove("active")),e.classList.add("active");const o=e.dataset.filter;let c=0;r.forEach(t=>{const a=t.dataset.category,l=o==="all"||a===o;t.style.display=l?"flex":"none",l&&c++}),n&&(n.textContent=`Showing ${c} of ${r.length}`)})});</script>
+</tbody>
+</table>
+</div>
+<h2 style="font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px">全部工具 (12)</h2>
+<div class="card-grid">
+<a href="/zh/coding/codeium" class="tool-card" data-category="coding"><div style="display:flex;justify-content:space-between;align-items:center"><div style="width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;font-weight:700;background:#0284C7">C</div><span style="padding:4px 10px;border-radius:6px;font-size:12px;font-weight:600;background:#E0F2FE;color:#0284C7">编程助手</span></div><div style="font-size:20px;font-weight:700">Codeium</div><div style="font-size:14px;color:var(--text-secondary);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">老牌 AI 编程助手，支持 70+ 编程语言，IDE 插件覆盖广。个人版完全免费，无限制使用。企业版有更多功能。</div><div style="font-size:13px;color:var(--text-muted)">个人版永久免费</div><div style="margin-top:auto;padding:10px 0;text-align:center;border-radius:8px;font-size:14px;font-weight:600;color:#fff;background:var(--text);cursor:pointer">查看详情</div></a>
+<a href="/zh/coding/tongyi-lingma" class="tool-card" data-category="coding"><div style="display:flex;justify-content:space-between;align-items:center"><div style="width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;font-weight:700;background:#0284C7">通</div><span style="padding:4px 10px;border-radius:6px;font-size:12px;font-weight:600;background:#E0F2FE;color:#0284C7">编程助手</span></div><div style="font-size:20px;font-weight:700">通义灵码</div><div style="font-size:14px;color:var(--text-secondary);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">阿里巴巴的AI编程助手，深度集成在VS Code和JetBrains里。用的通义千问模型，中文编程体验好。个人免费用，企业版按席位收费。代码补全、Chat对话、代码解释、单测生成都支持。</div><div style="font-size:13px;color:var(--text-muted)">个人版免费</div><div style="margin-top:auto;padding:10px 0;text-align:center;border-radius:8px;font-size:14px;font-weight:600;color:#fff;background:var(--text);cursor:pointer">查看详情</div></a>
+<a href="/zh/coding/codebuddy" class="tool-card" data-category="coding"><div style="display:flex;justify-content:space-between;align-items:center"><div style="width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;font-weight:700;background:#0284C7">C</div><span style="padding:4px 10px;border-radius:6px;font-size:12px;font-weight:600;background:#E0F2FE;color:#0284C7">编程助手</span></div><div style="font-size:20px;font-weight:700">CodeBuddy</div><div style="font-size:14px;color:var(--text-secondary);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">腾讯出的AI编程助手，和腾讯云生态深度整合。代码补全、Chat对话、代码审查都支持。个人免费用，企业版有更多功能。特别适合用腾讯云的团队。</div><div style="font-size:13px;color:var(--text-muted)">新用户送额度</div><div style="margin-top:auto;padding:10px 0;text-align:center;border-radius:8px;font-size:14px;font-weight:600;color:#fff;background:var(--text);cursor:pointer">查看详情</div></a>
+<a href="/zh/coding/atomcode" class="tool-card" data-category="coding"><div style="display:flex;justify-content:space-between;align-items:center"><div style="width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;font-weight:700;background:#0284C7">A</div><span style="padding:4px 10px;border-radius:6px;font-size:12px;font-weight:600;background:#E0F2FE;color:#0284C7">编程助手</span></div><div style="font-size:20px;font-weight:700">AtomCode</div><div style="font-size:14px;color:var(--text-secondary);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">华为系开源终端AI编程助手，对标Claude Code。CodingPlan限时免费提供GLM-5.1、DeepSeek-V4-Flash、Qwen3全系列等国产顶级大模型，跑在昇腾芯片上，5小时滚动</div><div style="font-size:13px;color:var(--text-muted)">CodingPlan Pro档限时免费，30天有效</div><div style="margin-top:auto;padding:10px 0;text-align:center;border-radius:8px;font-size:14px;font-weight:600;color:#fff;background:var(--text);cursor:pointer">查看详情</div></a>
+<a href="/zh/coding/cursor" class="tool-card" data-category="coding"><div style="display:flex;justify-content:space-between;align-items:center"><div style="width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;font-weight:700;background:#0284C7">C</div><span style="padding:4px 10px;border-radius:6px;font-size:12px;font-weight:600;background:#E0F2FE;color:#0284C7">编程助手</span></div><div style="font-size:20px;font-weight:700">Cursor</div><div style="font-size:14px;color:var(--text-secondary);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">AI编程IDE，市场份额31%排名第一。免费Hobby计划不用绑信用卡，Agent请求和Tab补全有限制。Pro版$20/月支持GPT-4o、Claude等前沿模型。</div><div style="font-size:13px;color:var(--text-muted)">Hobby免费计划</div><div style="margin-top:auto;padding:10px 0;text-align:center;border-radius:8px;font-size:14px;font-weight:600;color:#fff;background:var(--text);cursor:pointer">查看详情</div></a>
+<a href="/zh/coding/windsurf" class="tool-card" data-category="coding"><div style="display:flex;justify-content:space-between;align-items:center"><div style="width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;font-weight:700;background:#0284C7">W</div><span style="padding:4px 10px;border-radius:6px;font-size:12px;font-weight:600;background:#E0F2FE;color:#0284C7">编程助手</span></div><div style="font-size:20px;font-weight:700">Windsurf</div><div style="font-size:14px;color:var(--text-secondary);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">AI编程IDE，前身是Codeium。免费版$0/月，Light用量。Cascade功能支持多文件同时编辑。Pro版$20/月。</div><div style="font-size:13px;color:var(--text-muted)">免费版Light用量</div><div style="margin-top:auto;padding:10px 0;text-align:center;border-radius:8px;font-size:14px;font-weight:600;color:#fff;background:var(--text);cursor:pointer">查看详情</div></a>
+<a href="/zh/coding/freebuff" class="tool-card" data-category="coding"><div style="display:flex;justify-content:space-between;align-items:center"><div style="width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;font-weight:700;background:#0284C7">F</div><span style="padding:4px 10px;border-radius:6px;font-size:12px;font-weight:600;background:#E0F2FE;color:#0284C7">编程助手</span></div><div style="font-size:20px;font-weight:700">Freebuff</div><div style="font-size:14px;color:var(--text-secondary);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">免费AI编程Agent，终端里用自然语言改代码。基于Codebuff付费版，用广告换免费额度。默认用DeepSeek V4 Flash，支持Kimi K2.6、MiniMax M2.7等国产模型。</div><div style="font-size:13px;color:var(--text-muted)">免费，终端内展示广告</div><div style="margin-top:auto;padding:10px 0;text-align:center;border-radius:8px;font-size:14px;font-weight:600;color:#fff;background:var(--text);cursor:pointer">查看详情</div></a>
+<a href="/zh/coding/cline" class="tool-card" data-category="coding"><div style="display:flex;justify-content:space-between;align-items:center"><div style="width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;font-weight:700;background:#0284C7">C</div><span style="padding:4px 10px;border-radius:6px;font-size:12px;font-weight:600;background:#E0F2FE;color:#0284C7">编程助手</span></div><div style="font-size:20px;font-weight:700">Cline</div><div style="font-size:14px;color:var(--text-secondary);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">开源AI编程助手，支持VS Code、JetBrains和命令行。不限定模型，可以对接Claude、GPT、Gemini等200+模型。免费使用，自带API Key就行。社区非常活跃，GitHub上星</div><div style="font-size:13px;color:var(--text-muted)">免费开源</div><div style="margin-top:auto;padding:10px 0;text-align:center;border-radius:8px;font-size:14px;font-weight:600;color:#fff;background:var(--text);cursor:pointer">查看详情</div></a>
+<a href="/zh/coding/github-copilot" class="tool-card" data-category="coding"><div style="display:flex;justify-content:space-between;align-items:center"><div style="width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;font-weight:700;background:#0284C7">G</div><span style="padding:4px 10px;border-radius:6px;font-size:12px;font-weight:600;background:#E0F2FE;color:#0284C7">编程助手</span></div><div style="font-size:20px;font-weight:700">GitHub Copilot</div><div style="font-size:14px;color:var(--text-secondary);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">微软旗下的AI编程助手，深度集成在VS Code和GitHub里。代码补全、Chat对话、Agent模式全覆盖。学生和开源维护者免费，个人版$10/月。用的GPT-4o和Claude Sonnet模型</div><div style="font-size:13px;color:var(--text-muted)">2000次补全/月（免费版）</div><div style="margin-top:auto;padding:10px 0;text-align:center;border-radius:8px;font-size:14px;font-weight:600;color:#fff;background:var(--text);cursor:pointer">查看详情</div></a>
+<a href="/zh/coding/astron-coding-plan" class="tool-card" data-category="coding"><div style="display:flex;justify-content:space-between;align-items:center"><div style="width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;font-weight:700;background:#0284C7">讯</div><span style="padding:4px 10px;border-radius:6px;font-size:12px;font-weight:600;background:#E0F2FE;color:#0284C7">编程助手</span></div><div style="font-size:20px;font-weight:700">讯飞星辰 Coding Plan</div><div style="font-size:14px;color:var(--text-secondary);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">讯飞星辰 MaaS 平台 Coding Plan 是面向开发者的按月畅享的 AI 编码订阅服务，整合了星火X2和GLM、Kimi、MiniMax、DeepSeek、Qwen等开源热门模型。首购仅需3.</div><div style="font-size:13px;color:var(--text-muted)">首购¥3.9/月，续费¥19/月（无忧版）</div><div style="margin-top:auto;padding:10px 0;text-align:center;border-radius:8px;font-size:14px;font-weight:600;color:#fff;background:var(--text);cursor:pointer">查看详情</div></a>
+<a href="/zh/coding/v0" class="tool-card" data-category="coding"><div style="display:flex;justify-content:space-between;align-items:center"><div style="width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;font-weight:700;background:#0284C7">V</div><span style="padding:4px 10px;border-radius:6px;font-size:12px;font-weight:600;background:#E0F2FE;color:#0284C7">编程助手</span></div><div style="font-size:20px;font-weight:700">V0.dev</div><div style="font-size:14px;color:var(--text-secondary);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Vercel推出的AI界面生成工具，用文字描述或截图就能生成React组件代码。免费版每月5美元额度加每天7条消息。</div><div style="font-size:13px;color:var(--text-muted)">每月5美元额度，每天7条消息</div><div style="margin-top:auto;padding:10px 0;text-align:center;border-radius:8px;font-size:14px;font-weight:600;color:#fff;background:var(--text);cursor:pointer">查看详情</div></a>
+<a href="/zh/coding/google-jules" class="tool-card" data-category="coding"><div style="display:flex;justify-content:space-between;align-items:center"><div style="width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;font-weight:700;background:#0284C7">G</div><span style="padding:4px 10px;border-radius:6px;font-size:12px;font-weight:600;background:#E0F2FE;color:#0284C7">编程助手</span></div><div style="font-size:20px;font-weight:700">Google Jules</div><div style="font-size:14px;color:var(--text-secondary);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">谷歌推出的免费AI编程工具，1.5版本大升级：限额提升60倍，速度提升10倍。完全免费使用，支持代码生成、调试、重构等全流程。是GitHub Copilot的免费替代品。</div><div style="font-size:13px;color:var(--text-muted)">完全免费，限额大幅提升60倍</div><div style="margin-top:auto;padding:10px 0;text-align:center;border-radius:8px;font-size:14px;font-weight:600;color:#fff;background:var(--text);cursor:pointer">查看详情</div></a>
+
+</div>
+<div class="faq-section">
+<h3 style="font-size:20px;font-weight:700;margin-bottom:20px">常见问题</h3>
+<div style="margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border-light)"><div style="font-weight:700;margin-bottom:8px">Q: 哪个编程助手工具免费额度最多？</div><div style="color:var(--text-secondary);line-height:1.7">A: 根据我们的对比，Codeium和通义灵码是免费额度最慷慨的。详见上方对比表。</div></div>
+<div style="margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border-light)"><div style="font-weight:700;margin-bottom:8px">Q: 有没有不需要信用卡的编程助手工具？</div><div style="color:var(--text-secondary);line-height:1.7">A: 有。DeepSeek、通义千问等国产工具通常不需要信用卡。部分海外工具如Google Gemini也不需要。</div></div>
+<div style="margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border-light)"><div style="font-weight:700;margin-bottom:8px">Q: 免费编程助手工具可以商用吗？</div><div style="color:var(--text-secondary);line-height:1.7">A: 取决于具体工具和其免费版条款。Stable Diffusion开源协议允许商用，其他工具需确认各自的使用条款。</div></div>
+
+</div>
+<p style="margin-top:40px;font-size:13px;color:var(--text-muted)">最后更新：2026年6月5日</p>
 </main>
-
 <footer class="footer">
-  <div class="container">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <a href="/zh" class="logo">AI<span class="accent" style="color:var(--green)">FreePlan</span></a>
-        <p>AI驱动的免费工具聚合平台，永久免费。</p>
-      </div>
-      <div class="footer-links">
-        <div class="footer-col">
-          <div class="footer-col-title">产品</div>
-          <a href="/zh/all">全部工具</a>
-          <a href="/zh/guides">攻略</a>
-        </div>
-        <div class="footer-col">
-          <div class="footer-col-title">法律</div>
-          <a href="/zh/privacy">隐私政策</a>
-          <a href="/zh/terms">用户条款</a>
-        </div>
-      </div>
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="/zh" class="logo" style="color:#059669">AI<span class="accent" style="color:#6366F1">FreePlan</span></a><p>AI驱动的免费工具聚合平台，永久免费。</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h4>产品</h4><a href="/zh/all">全部工具</a><a href="/zh/guides">攻略</a></div>
+      <div class="footer-col"><h4>法律</h4><a href="/zh/privacy">隐私</a><a href="/zh/terms">用户条款</a></div>
     </div>
-    <div class="footer-bottom">© 2026 AIFreePlan. 保留所有权利。</div>
   </div>
+  <div class="container footer-bottom">© 2026 AIFreePlan.</div>
 </footer>
-
-</body>
-</html>
+</body></html>
