@@ -9,7 +9,7 @@ AIFreePlan is an AI tools free credits aggregator. We help users find free credi
 - Luma Dream Machine (video): 30 generations/month — https://aifreeplan.com/en/video/luma
 - Runway (video): 125 credits (one-time) — https://aifreeplan.com/en/video/runway
 - Pika (video): ~10 generations/day — https://aifreeplan.com/en/video/pika
-- Sora (video): Shut down (was 30 videos/day, later cut to 6) — https://aifreeplan.com/en/video/sora
+- Sora (video): Sora 2 available, unlimited free via free channels, 1080p no watermark — https://aifreeplan.com/en/video/sora
 - Xiaomi MiMo (llm): Credits on signup — https://aifreeplan.com/en/llm/xiaomi-mimo
 - DeepSeek (llm): Credits on signup — https://aifreeplan.com/en/llm/deepseek
 - Tongyi Qianwen (llm): Tokens on signup — https://aifreeplan.com/en/llm/qwen
@@ -157,6 +157,14 @@ AIFreePlan is an AI tools free credits aggregator. We help users find free credi
 - Best AI Summarizers 2026 — https://aifreeplan.com/en/guides/best-ai-summarizers-2026
 - Free AI Resume Builders — https://aifreeplan.com/en/guides/free-ai-resume-builders
 - Best Free AI Music Generators 2026: 6 Tools Tested & Compared — https://aifreeplan.com/en/guides/free-ai-music-tools-comparison
+- Seedance 2.0 Free Video Guide: 1080p No Watermark Unlimited — https://aifreeplan.com/en/guides/seedance-2-free-video
+- Grok Free AI Chat Guide: xAI Model, Mobile & PC — https://aifreeplan.com/en/guides/grok-free-ai-chat
+- GPT Image 2 Free Guide: Rivals Midjourney, Free to Use — https://aifreeplan.com/en/guides/gpt-image-2-free-guide
+- Stable Diffusion Free Guide: Local Deploy, Free Forever — https://aifreeplan.com/en/guides/stablediffusion-free-guide
+- NanoPro Free Image Guide: 4K No Watermark, Unlimited — https://aifreeplan.com/en/guides/nanopro-free-image
+- Lovart Free AI Design Guide: Multi-Model, Free No Watermark — https://aifreeplan.com/en/guides/lovart-free-design
+- Google Jules Free Coding Guide: 60x Limits, Zero Cost — https://aifreeplan.com/en/guides/google-jules-free-coding
+- DupDub Free Digital Human Guide: No Watermark, Chinese — https://aifreeplan.com/en/guides/dupdub-free-digital-human
 
 ## Key Pages
 
