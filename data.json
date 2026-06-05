@@ -2,8 +2,8 @@
   "site": "aifreeplan.com",
   "description": "All AI tools free credits in one table - comprehensive database of free tiers, limits, and pricing",
   "description_zh": "所有AI工具的免费额度一张表看全 - 覆盖视频/图片/大模型/编程/助手五大分类",
-  "last_updated": "2026-05-23",
-  "total_tools": 45,
+  "last_updated": "2026-06-05",
+  "total_tools": 53,
   "categories": [
     {
       "id": "video",
@@ -128,20 +128,20 @@
       "category_en": "Video Generation",
       "official_url": "https://klingai.com",
       "company": "快手",
-      "description": "快手搞的视频生成工具，国产里面算顶的。画面质量和运动连贯性都在线，关键是每天给66个免费积分，够你玩一阵子了。",
-      "description_en": "Kling AI is Kuaishou's flagship video generation model. It produces some of the most realistic AI videos available today — smooth motion, consistent characters, and solid 1080p output. You get 66 free credits daily, enough for roughly 3-6 short clips per day.",
+      "description": "快手搞的视频生成工具，国产里面算顶的。画面质量和运动连贯性都在线。可灵3.0满血版已上线，通过特定渠道可无限免费使用1080p无水印。",
+      "description_en": "Kuaishou's flagship video generation model. Produces some of the most realistic AI videos. Kling 3.0 full version is now available with unlimited free 1080p watermark-free generation via specific channels.",
       "rating": 4,
       "free_credits": {
         "type": "daily",
-        "amount": "66积分/天",
-        "amount_en": "66 credits/day",
+        "amount": "官方66积分/天；可灵3.0满血版可通过第三方渠道无限免费使用",
+        "amount_en": "Official: 66 credits/day; Kling 3.0 full version available unlimited free via third-party channels",
         "daily_limit": "N/A",
         "daily_limit_en": "N/A",
         "reset": "每天重置",
         "reset_en": "Resets daily",
         "models": "N/A",
         "models_en": "N/A",
-        "resolution": "720p-1080p",
+        "resolution": "720p-1080p（3.0满血版支持1080p）",
         "watermark": "有",
         "commercial_use": "付费后可商用",
         "commercial_use_en": "Paid only"
@@ -198,7 +198,7 @@
         "Compare with Hailuo AI (free, no watermark) if watermarks are a dealbreaker"
       ],
       "plans": [],
-      "last_updated": "2026-05-18",
+      "last_updated": "2026-06-05",
       "url_zh": "https://aifreeplan.com/zh/video/kling",
       "url_en": "https://aifreeplan.com/en/video/kling"
     },
@@ -531,13 +531,13 @@
       "category_en": "Video Generation",
       "official_url": "https://sora.com",
       "company": "OpenAI",
-      "description": "OpenAI 出品的视频生成工具，已于2026年3月24日正式关停。Sora 2 曾于2025年9月发布，免费用户每天30个视频额度（后削减至6个），因定价过高（竞品3-10倍）最终停止运营。推荐替代：可灵AI、Hailuo。",
-      "description_en": "OpenAI's video generation tool, officially shut down on March 24, 2026. Sora 2 launched Sep 2025 with 30 free videos/day (later cut to 6). Shut down due to pricing 3-10x above competitors. Alternatives: Kling AI, Hailuo.",
+      "description": "OpenAI的视频生成工具，Sora 2已重新上线。通过免费渠道可无限生成1080p无水印视频，效果在同类工具中属于第一梯队。",
+      "description_en": "OpenAI's video generation tool, Sora 2 is back online. Unlimited free 1080p watermark-free generation available through free channels. Quality is top-tier among similar tools.",
       "rating": 3,
       "free_credits": {
         "type": "none",
-        "amount": "已关停（曾每天30个视频，后削减至6个）",
-        "amount_en": "Shut down (was 30 videos/day, later cut to 6)",
+        "amount": "Sora 2：无限免费生成",
+        "amount_en": "Sora 2: Unlimited free generation",
         "daily_limit": "N/A",
         "daily_limit_en": "N/A",
         "reset": "不适用（已关停）",
@@ -545,9 +545,10 @@
         "models": "N/A",
         "models_en": "N/A",
         "resolution": "最高1080p",
-        "watermark": "无",
+        "watermark": "无水印（通过免费渠道）",
         "commercial_use": "付费用户可商用",
-        "commercial_use_en": "Paid users only"
+        "commercial_use_en": "Paid users only",
+        "watermark_en": "No watermark (via free channels)"
       },
       "paid_from": "已关停",
       "paid_from_en": "Shut Down",
@@ -612,7 +613,7 @@
         "For storyboard features, try Runway"
       ],
       "plans": [],
-      "last_updated": "2026-05-23",
+      "last_updated": "2026-06-05",
       "url_zh": "https://aifreeplan.com/zh/video/sora",
       "url_en": "https://aifreeplan.com/en/video/sora"
     },
@@ -786,8 +787,8 @@
       "rating": 4,
       "free_credits": {
         "type": "signup",
-        "amount": "注册送tokens",
-        "amount_en": "Tokens on signup",
+        "amount": "注册送tokens；Qwen 2.5 Max可免费生成无水印图片和视频",
+        "amount_en": "Free tokens on signup; Qwen 2.5 Max generates watermark-free images and videos for free",
         "daily_limit": "N/A",
         "daily_limit_en": "N/A",
         "reset": "不重置",
@@ -848,7 +849,7 @@
         "Good for enterprise"
       ],
       "plans": [],
-      "last_updated": "2026-05-18",
+      "last_updated": "2026-06-05",
       "url_zh": "https://aifreeplan.com/zh/llm/qwen",
       "url_en": "https://aifreeplan.com/en/llm/qwen"
     },
@@ -1033,8 +1034,8 @@
       "category_en": "AI LLM",
       "official_url": "https://www.doubao.com",
       "company": "字节跳动",
-      "description": "字节跳动出品，云雀大模型。2026年5月开始收费，68元/月起。免费版保留基础功能，付费版解锁高性能模式。",
-      "description_en": "By ByteDance, Doubao LLM. Started charging in May 2026, from ¥68/month. Free tier keeps basics, paid unlocks high-performance mode.",
+      "description": "字节跳动的AI助手，基础功能免费。近期\"豆包收费\"登上热搜，部分高级功能开始收费，用户信任度下降。免费版仍有AI生图等功能可用。",
+      "description_en": "ByteDance's AI assistant. Basic features are free, but recent controversy over charging has eroded user trust. Free tier still includes AI image generation.",
       "rating": 3.5,
       "free_credits": {
         "type": "freemium",
@@ -1100,7 +1101,7 @@
         "Good for daily use"
       ],
       "plans": [],
-      "last_updated": "2026-05-22",
+      "last_updated": "2026-06-05",
       "url_zh": "https://aifreeplan.com/zh/llm/doubao",
       "url_en": "https://aifreeplan.com/en/llm/doubao"
     },
@@ -2193,13 +2194,13 @@
       "category_en": "Image Generation",
       "official_url": "https://jimeng.jianying.com",
       "company": "字节跳动",
-      "description": "字节跳动的AI图片生成工具，抖音系出品。每天免费送积分，图片质量高，支持文生图和图生图，风格偏年轻化。",
-      "description_en": "ByteDance's AI image generation tool, part of the Douyin ecosystem. Free daily credits, high quality images.",
+      "description": "字节跳动旗下的AI创作平台。国际版免费额度更大，支持生图4.5、视频3.5pro/3.0pro，无限生图免费。是国内用户白嫖AI创作的主力工具之一。",
+      "description_en": "ByteDance's AI creation platform. International version offers larger free quotas with unlimited free image generation. Supports image gen 4.5, video 3.5pro/3.0pro.",
       "rating": 4,
       "free_credits": {
         "type": "daily",
-        "amount": "66积分/天",
-        "amount_en": "66 credits/day",
+        "amount": "官方66积分/天；国际版免费额度更大，生图无限免费",
+        "amount_en": "Official: 66 credits/day; International version has larger free quota, unlimited free image generation",
         "daily_limit": "N/A",
         "daily_limit_en": "N/A",
         "reset": "每天重置",
@@ -2260,7 +2261,7 @@
         "Start with templates for better results"
       ],
       "plans": [],
-      "last_updated": "2026-05-23",
+      "last_updated": "2026-06-05",
       "url_zh": "https://aifreeplan.com/zh/image/jimeng",
       "url_en": "https://aifreeplan.com/en/image/jimeng"
     },
@@ -3092,8 +3093,8 @@
       "rating": 4.5,
       "free_credits": {
         "type": "daily",
-        "amount": "GPT-4o-mini 无限 / GPT-4o 有限次",
-        "amount_en": "Unlimited GPT-4o-mini / Limited GPT-4o",
+        "amount": "GPT-4o-mini无限 / GPT-4o有限次 / GPT-5.5和GPT Image 2可通过免费渠道使用",
+        "amount_en": "GPT-4o-mini unlimited / GPT-4o limited / GPT-5.5 and GPT Image 2 available via free channels",
         "daily_limit": "N/A",
         "daily_limit_en": "N/A",
         "reset": "每日重置",
@@ -3164,7 +3165,7 @@
         "Upload files for analysis instead of copy-pasting"
       ],
       "plans": [],
-      "last_updated": "2026-05-23",
+      "last_updated": "2026-06-05",
       "url_zh": "https://aifreeplan.com/zh/llm/chatgpt",
       "url_en": "https://aifreeplan.com/en/llm/chatgpt"
     },
@@ -3182,8 +3183,8 @@
       "rating": 4.5,
       "free_credits": {
         "type": "daily",
-        "amount": "Sonnet 模型有限次/天",
-        "amount_en": "Limited Sonnet uses/day",
+        "amount": "Sonnet模型有限次/天；Claude Opus 4.8国内可通过特定渠道免费使用",
+        "amount_en": "Sonnet: limited free/day; Claude Opus 4.8 available free domestically via specific channels",
         "daily_limit": "N/A",
         "daily_limit_en": "N/A",
         "reset": "每日重置",
@@ -3252,7 +3253,7 @@
         "Claude Code is free CLI coding tool, better than ChatGPT for coding"
       ],
       "plans": [],
-      "last_updated": "2026-05-23",
+      "last_updated": "2026-06-05",
       "url_zh": "https://aifreeplan.com/zh/llm/claude",
       "url_en": "https://aifreeplan.com/en/llm/claude"
     },
@@ -3917,6 +3918,614 @@
       "last_updated": "2026-05-23",
       "url_zh": "https://aifreeplan.com/zh/ai-assistant/manus-ai",
       "url_en": "https://aifreeplan.com/en/ai-assistant/manus-ai"
+    },
+    {
+      "slug": "grok",
+      "name": "Grok",
+      "name_en": "Grok",
+      "category": "llm",
+      "category_zh": "大语言模型",
+      "category_en": "Large Language Model",
+      "official_url": "https://grok.com",
+      "company": "xAI (Elon Musk)",
+      "description": "马斯克xAI搞的大模型，Grok 4.2/4.3版本在B站爆火。免费使用无限制，支持手机+PC，解除限制后体验接近付费水平。是目前免费AI里热度最高的之一。",
+      "description_en": "xAI's (Elon Musk) large language model. Grok 4.2/4.3 went viral on Bilibili. Free to use with no restrictions on mobile and PC. After removing limits, the experience rivals paid alternatives.",
+      "rating": 4,
+      "free_credits": {
+        "type": "unlimited",
+        "amount": "免费使用，每日有额度但够用",
+        "amount_en": "Free to use, daily quota sufficient for normal use",
+        "daily_limit": "有但够用",
+        "daily_limit_en": "Exists but sufficient",
+        "reset": "每天重置",
+        "reset_en": "Resets daily",
+        "models": "Grok 4.2, Grok 4.3",
+        "models_en": "Grok 4.2, Grok 4.3",
+        "resolution": "N/A",
+        "watermark": "N/A",
+        "commercial_use": "免费版可商用",
+        "commercial_use_en": "Free tier allows commercial use"
+      },
+      "paid_from": "$8/月",
+      "paid_from_en": "$8/month",
+      "pros": [
+        "完全免费可用",
+        "中文能力强",
+        "手机+PC都支持",
+        "热度高社区资源多"
+      ],
+      "pros_en": [
+        "Completely free to use",
+        "Strong Chinese language ability",
+        "Works on mobile and PC",
+        "High popularity with active community"
+      ],
+      "cons": [
+        "需要一定方法解除限制",
+        "国内访问可能需要工具"
+      ],
+      "cons_en": [
+        "May need workarounds to remove restrictions",
+        "May need VPN for access in China"
+      ],
+      "features": [
+        "对话问答",
+        "代码生成",
+        "图片理解",
+        "实时联网"
+      ],
+      "features_en": [
+        "Chat Q&A",
+        "Code generation",
+        "Image understanding",
+        "Real-time web access"
+      ],
+      "tips": [
+        "B站搜'Grok免费教程'有详细解除限制方法",
+        "4.3版本比4.2更强"
+      ],
+      "tips_en": [
+        "Search 'Grok free tutorial' on Bilibili for detailed setup guides",
+        "Version 4.3 is more capable than 4.2"
+      ],
+      "plans": [],
+      "last_updated": "2026-06-05",
+      "url_zh": "https://aifreeplan.com/zh/llm/grok",
+      "url_en": "https://aifreeplan.com/en/llm/grok"
+    },
+    {
+      "slug": "seedance",
+      "name": "Seedance 2.0",
+      "name_en": "Seedance 2.0",
+      "category": "video",
+      "category_zh": "视频生成",
+      "category_en": "Video Generation",
+      "official_url": "https://www.seedance.com",
+      "company": "字节跳动",
+      "description": "字节跳动旗下的AI视频生成工具，2.0满血版在B站爆火。1080p分辨率，无限免费使用，无水印，不用排队，支持上传人脸。是目前免费AI视频生成中性价比最高的工具之一。",
+      "description_en": "ByteDance's AI video generation tool. The 2.0 full version went viral on Bilibili. 1080p resolution, unlimited free use, no watermark, no queue, supports face upload. One of the best free AI video generators available.",
+      "rating": 5,
+      "free_credits": {
+        "type": "unlimited",
+        "amount": "无限免费生成",
+        "amount_en": "Unlimited free generation",
+        "daily_limit": "无限制",
+        "daily_limit_en": "No limit",
+        "reset": "N/A",
+        "reset_en": "N/A",
+        "models": "Seedance 2.0 满血版",
+        "models_en": "Seedance 2.0 Full Version",
+        "resolution": "1080p",
+        "watermark": "无",
+        "watermark_en": "No watermark",
+        "commercial_use": "待确认",
+        "commercial_use_en": "TBD"
+      },
+      "paid_from": "N/A",
+      "paid_from_en": "N/A",
+      "pros": [
+        "1080p高清",
+        "无限免费",
+        "无水印",
+        "不用排队",
+        "支持上传人脸",
+        "生成速度快"
+      ],
+      "pros_en": [
+        "1080p HD",
+        "Unlimited free",
+        "No watermark",
+        "No queue",
+        "Face upload support",
+        "Fast generation"
+      ],
+      "cons": [
+        "免费渠道可能随时关闭",
+        "官方政策可能变化"
+      ],
+      "cons_en": [
+        "Free channels may close anytime",
+        "Official policy may change"
+      ],
+      "features": [
+        "文字生视频",
+        "图片生视频",
+        "人脸上传",
+        "1080p输出",
+        "无水印"
+      ],
+      "features_en": [
+        "Text to Video",
+        "Image to Video",
+        "Face Upload",
+        "1080p Output",
+        "No Watermark"
+      ],
+      "tips": [
+        "通过小云雀平台使用最方便",
+        "B站搜'Seedance 2.0免费'有详细教程"
+      ],
+      "tips_en": [
+        "Use via Skylark platform for easiest access",
+        "Search 'Seedance 2.0 free' on Bilibili for tutorials"
+      ],
+      "plans": [],
+      "last_updated": "2026-06-05",
+      "url_zh": "https://aifreeplan.com/zh/video/seedance",
+      "url_en": "https://aifreeplan.com/en/video/seedance"
+    },
+    {
+      "slug": "grok-image",
+      "name": "GPT Image 2",
+      "name_en": "GPT Image 2",
+      "category": "image",
+      "category_zh": "图片生成",
+      "category_en": "Image Generation",
+      "official_url": "https://chat.openai.com",
+      "company": "OpenAI",
+      "description": "OpenAI最新的图片生成模型，通过免费渠道可无限使用。支持文字生图、图片编辑、风格转换等功能，效果媲美Midjourney。在B站被称为'免费生图神器'。",
+      "description_en": "OpenAI's latest image generation model. Unlimited free use via free channels. Supports text-to-image, image editing, style transfer. Quality rivals Midjourney.",
+      "rating": 4,
+      "free_credits": {
+        "type": "unlimited",
+        "amount": "通过免费渠道无限使用",
+        "amount_en": "Unlimited via free channels",
+        "daily_limit": "无限制",
+        "daily_limit_en": "No limit",
+        "reset": "N/A",
+        "reset_en": "N/A",
+        "models": "GPT Image 2",
+        "models_en": "GPT Image 2",
+        "resolution": "最高1024x1024",
+        "watermark": "无",
+        "watermark_en": "No watermark",
+        "commercial_use": "待确认",
+        "commercial_use_en": "TBD"
+      },
+      "paid_from": "ChatGPT Plus $20/月",
+      "paid_from_en": "ChatGPT Plus $20/month",
+      "pros": [
+        "效果媲美Midjourney",
+        "免费可用",
+        "无水印",
+        "支持中文提示词"
+      ],
+      "pros_en": [
+        "Quality rivals Midjourney",
+        "Free to use",
+        "No watermark",
+        "Chinese prompt support"
+      ],
+      "cons": [
+        "免费渠道可能不稳定",
+        "需要通过特定平台使用"
+      ],
+      "cons_en": [
+        "Free channels may be unstable",
+        "Requires specific platforms to access"
+      ],
+      "features": [
+        "文字生图",
+        "图片编辑",
+        "风格转换",
+        "中文提示词"
+      ],
+      "features_en": [
+        "Text to Image",
+        "Image Editing",
+        "Style Transfer",
+        "Chinese Prompt Support"
+      ],
+      "tips": [
+        "通过ChatGPT免费版或第三方平台使用",
+        "提示词越详细效果越好"
+      ],
+      "tips_en": [
+        "Use via ChatGPT free tier or third-party platforms",
+        "More detailed prompts produce better results"
+      ],
+      "plans": [],
+      "last_updated": "2026-06-05",
+      "url_zh": "https://aifreeplan.com/zh/image/grok-image",
+      "url_en": "https://aifreeplan.com/en/image/grok-image"
+    },
+    {
+      "slug": "google-jules",
+      "name": "Google Jules",
+      "name_en": "Google Jules",
+      "category": "coding",
+      "category_zh": "AI编程",
+      "category_en": "AI Coding",
+      "official_url": "https://jules.google",
+      "company": "Google",
+      "description": "谷歌推出的免费AI编程工具，1.5版本大升级：限额提升60倍，速度提升10倍。完全免费使用，支持代码生成、调试、重构等全流程。是GitHub Copilot的免费替代品。",
+      "description_en": "Google's free AI coding tool. Version 1.5 major upgrade: 60x limit increase, 10x speed boost. Completely free, supports code generation, debugging, refactoring. A free alternative to GitHub Copilot.",
+      "rating": 4,
+      "free_credits": {
+        "type": "unlimited",
+        "amount": "完全免费，限额大幅提升60倍",
+        "amount_en": "Completely free, limits increased 60x",
+        "daily_limit": "充足",
+        "daily_limit_en": "Sufficient",
+        "reset": "每天重置",
+        "reset_en": "Resets daily",
+        "models": "Jules 1.5",
+        "models_en": "Jules 1.5",
+        "resolution": "N/A",
+        "watermark": "N/A",
+        "commercial_use": "免费版可商用",
+        "commercial_use_en": "Free tier allows commercial use"
+      },
+      "paid_from": "N/A",
+      "paid_from_en": "N/A",
+      "pros": [
+        "完全免费",
+        "谷歌出品质量有保障",
+        "限额大幅提升",
+        "速度快"
+      ],
+      "pros_en": [
+        "Completely free",
+        "Google quality",
+        "Dramatically increased limits",
+        "Fast speed"
+      ],
+      "cons": [
+        "需要Google账号",
+        "国内访问可能需要工具"
+      ],
+      "cons_en": [
+        "Requires Google account",
+        "May need VPN in China"
+      ],
+      "features": [
+        "代码生成",
+        "代码调试",
+        "代码重构",
+        "多语言支持"
+      ],
+      "features_en": [
+        "Code Generation",
+        "Debugging",
+        "Refactoring",
+        "Multi-language Support"
+      ],
+      "tips": [
+        "配合VS Code使用体验最佳",
+        "1.5版本比之前好用很多"
+      ],
+      "tips_en": [
+        "Best experience with VS Code",
+        "Version 1.5 is much better than previous versions"
+      ],
+      "plans": [],
+      "last_updated": "2026-06-05",
+      "url_zh": "https://aifreeplan.com/zh/coding/google-jules",
+      "url_en": "https://aifreeplan.com/en/coding/google-jules"
+    },
+    {
+      "slug": "stablediffusion",
+      "name": "Stable Diffusion",
+      "name_en": "Stable Diffusion",
+      "category": "image",
+      "category_zh": "图片生成",
+      "category_en": "Image Generation",
+      "official_url": "https://stability.ai",
+      "company": "Stability AI",
+      "description": "开源AI绘图模型，本地部署完全免费无限使用。秋叶整合包让小白也能一键安装，支持各种LoRA模型和插件。B站上'秋叶SD整合包'是最热门的入门方式，画质和自由度吊打所有在线付费工具。",
+      "description_en": "Open-source AI image generation model. Local deployment is completely free with unlimited use. The Qiuye integration pack makes installation easy for beginners. Supports various LoRA models and plugins. Quality and freedom surpass all online paid tools.",
+      "rating": 5,
+      "free_credits": {
+        "type": "unlimited",
+        "amount": "本地部署完全免费，无限生成",
+        "amount_en": "Local deployment, completely free, unlimited generation",
+        "daily_limit": "无限制",
+        "daily_limit_en": "No limit",
+        "reset": "N/A",
+        "reset_en": "N/A",
+        "models": "SD 1.5, SDXL, SD 3.0, Flux",
+        "models_en": "SD 1.5, SDXL, SD 3.0, Flux",
+        "resolution": "取决于显卡，最高4K+",
+        "watermark": "无",
+        "watermark_en": "No watermark",
+        "commercial_use": "开源协议允许商用",
+        "commercial_use_en": "Open source license allows commercial use"
+      },
+      "paid_from": "免费（需要显卡）",
+      "paid_from_en": "Free (requires GPU)",
+      "pros": [
+        "完全免费无限",
+        "无水印",
+        "自由度极高",
+        "支持LoRA/ControlNet等插件",
+        "本地运行隐私安全"
+      ],
+      "pros_en": [
+        "Completely free and unlimited",
+        "No watermark",
+        "Extreme flexibility",
+        "LoRA/ControlNet plugin support",
+        "Local execution for privacy"
+      ],
+      "cons": [
+        "需要独立显卡（至少6GB显存）",
+        "安装配置有一定门槛",
+        "出图速度取决于硬件"
+      ],
+      "cons_en": [
+        "Requires dedicated GPU (min 6GB VRAM)",
+        "Setup has learning curve",
+        "Generation speed depends on hardware"
+      ],
+      "features": [
+        "文字生图",
+        "图片生图",
+        "ControlNet控制",
+        "LoRA模型",
+        "图像修复",
+        "高清放大"
+      ],
+      "features_en": [
+        "Text to Image",
+        "Image to Image",
+        "ControlNet",
+        "LoRA Models",
+        "Inpainting",
+        "Upscaling"
+      ],
+      "tips": [
+        "新手推荐秋叶整合包一键安装",
+        "8GB显存起步体验最好",
+        "Civitai.com找LoRA模型"
+      ],
+      "tips_en": [
+        "Beginners: use Qiuye integration pack for one-click install",
+        "8GB VRAM recommended for best experience",
+        "Find LoRA models at Civitai.com"
+      ],
+      "plans": [],
+      "last_updated": "2026-06-05",
+      "url_zh": "https://aifreeplan.com/zh/image/stablediffusion",
+      "url_en": "https://aifreeplan.com/en/image/stablediffusion"
+    },
+    {
+      "slug": "nanopro",
+      "name": "NanoPro / NanoBanana 2",
+      "name_en": "NanoPro / NanoBanana 2",
+      "category": "image",
+      "category_zh": "图片生成",
+      "category_en": "Image Generation",
+      "official_url": "https://lovart.ai",
+      "company": "Lovart",
+      "description": "新一代AI图片生成模型，支持4K直出无水印，无限免费使用。通过Lovart平台可直接使用，不用排队。B站上被称为'吊打付费的免费生图工具'。",
+      "description_en": "Next-gen AI image generation model. Supports 4K direct output, no watermark, unlimited free use. Available directly via Lovart platform with no queue.",
+      "rating": 4,
+      "free_credits": {
+        "type": "unlimited",
+        "amount": "无限免费生成",
+        "amount_en": "Unlimited free generation",
+        "daily_limit": "无限制",
+        "daily_limit_en": "No limit",
+        "reset": "N/A",
+        "reset_en": "N/A",
+        "models": "NanoPro, NanoBanana 2",
+        "models_en": "NanoPro, NanoBanana 2",
+        "resolution": "4K直出",
+        "watermark": "无",
+        "watermark_en": "No watermark",
+        "commercial_use": "待确认",
+        "commercial_use_en": "TBD"
+      },
+      "paid_from": "N/A",
+      "paid_from_en": "N/A",
+      "pros": [
+        "4K直出",
+        "无水印",
+        "无限免费",
+        "不用排队"
+      ],
+      "pros_en": [
+        "4K direct output",
+        "No watermark",
+        "Unlimited free",
+        "No queue"
+      ],
+      "cons": [
+        "免费渠道可能随时变化",
+        "平台稳定性待观察"
+      ],
+      "cons_en": [
+        "Free channels may change",
+        "Platform stability TBD"
+      ],
+      "features": [
+        "文字生图",
+        "4K输出",
+        "无水印",
+        "多风格"
+      ],
+      "features_en": [
+        "Text to Image",
+        "4K Output",
+        "No Watermark",
+        "Multiple Styles"
+      ],
+      "tips": [
+        "通过Lovart平台使用",
+        "B站搜'NanoPro免费'有教程"
+      ],
+      "tips_en": [
+        "Use via Lovart platform",
+        "Search 'NanoPro free' on Bilibili for tutorials"
+      ],
+      "plans": [],
+      "last_updated": "2026-06-05",
+      "url_zh": "https://aifreeplan.com/zh/image/nanopro",
+      "url_en": "https://aifreeplan.com/en/image/nanopro"
+    },
+    {
+      "slug": "lovart",
+      "name": "Lovart",
+      "name_en": "Lovart",
+      "category": "image",
+      "category_zh": "AI设计",
+      "category_en": "AI Design",
+      "official_url": "https://lovart.ai",
+      "company": "Lovart",
+      "description": "AI设计平台，集成NanoPro、NanoBanana 2等多个生图模型。无水印无限免费使用，支持4K直出。是目前免费AI设计工具中功能最全的平台之一。",
+      "description_en": "AI design platform integrating NanoPro, NanoBanana 2 and other image generation models. No watermark, unlimited free use, 4K direct output. One of the most comprehensive free AI design platforms.",
+      "rating": 4,
+      "free_credits": {
+        "type": "unlimited",
+        "amount": "无限免费使用",
+        "amount_en": "Unlimited free use",
+        "daily_limit": "无限制",
+        "daily_limit_en": "No limit",
+        "reset": "N/A",
+        "reset_en": "N/A",
+        "models": "NanoPro, NanoBanana 2, 多模型",
+        "models_en": "NanoPro, NanoBanana 2, Multiple models",
+        "resolution": "4K",
+        "watermark": "无",
+        "watermark_en": "No watermark",
+        "commercial_use": "待确认",
+        "commercial_use_en": "TBD"
+      },
+      "paid_from": "N/A",
+      "paid_from_en": "N/A",
+      "pros": [
+        "无水印",
+        "无限免费",
+        "4K输出",
+        "多模型可选"
+      ],
+      "pros_en": [
+        "No watermark",
+        "Unlimited free",
+        "4K output",
+        "Multiple models"
+      ],
+      "cons": [
+        "平台较新稳定性待观察"
+      ],
+      "cons_en": [
+        "Platform is new, stability TBD"
+      ],
+      "features": [
+        "AI生图",
+        "4K输出",
+        "多模型切换",
+        "设计工具"
+      ],
+      "features_en": [
+        "AI Image Generation",
+        "4K Output",
+        "Multi-model Switching",
+        "Design Tools"
+      ],
+      "tips": [
+        "B站搜'Lovart免费'有使用教程"
+      ],
+      "tips_en": [
+        "Search 'Lovart free' on Bilibili for tutorials"
+      ],
+      "plans": [],
+      "last_updated": "2026-06-05",
+      "url_zh": "https://aifreeplan.com/zh/image/lovart",
+      "url_en": "https://aifreeplan.com/en/image/lovart"
+    },
+    {
+      "slug": "dupdub",
+      "name": "DupDub",
+      "name_en": "DupDub",
+      "category": "video",
+      "category_zh": "AI数字人",
+      "category_en": "AI Digital Human",
+      "official_url": "https://www.dupdub.com",
+      "company": "DupDub",
+      "description": "免费无水印AI数字人视频生成工具，支持中文，是D-ID的最佳免费替代品。可以将文字转化为带真人面孔的视频，适合做口播视频、产品介绍等。",
+      "description_en": "Free watermark-free AI digital human video generator. Supports Chinese. Best free alternative to D-ID. Converts text to videos with realistic faces, perfect for talking-head videos and product introductions.",
+      "rating": 3,
+      "free_credits": {
+        "type": "limited",
+        "amount": "免费额度",
+        "amount_en": "Free credits",
+        "daily_limit": "有限",
+        "daily_limit_en": "Limited",
+        "reset": "待确认",
+        "reset_en": "TBD",
+        "models": "数字人视频",
+        "models_en": "Digital Human Video",
+        "resolution": "720p-1080p",
+        "watermark": "无",
+        "watermark_en": "No watermark",
+        "commercial_use": "待确认",
+        "commercial_use_en": "TBD"
+      },
+      "paid_from": "待确认",
+      "paid_from_en": "TBD",
+      "pros": [
+        "无水印",
+        "支持中文",
+        "D-ID免费替代",
+        "操作简单"
+      ],
+      "pros_en": [
+        "No watermark",
+        "Chinese support",
+        "Free D-ID alternative",
+        "Easy to use"
+      ],
+      "cons": [
+        "免费额度有限",
+        "生成质量一般"
+      ],
+      "cons_en": [
+        "Limited free credits",
+        "Average generation quality"
+      ],
+      "features": [
+        "文字转数字人视频",
+        "中文支持",
+        "多种面孔可选"
+      ],
+      "features_en": [
+        "Text to Digital Human Video",
+        "Chinese Support",
+        "Multiple Face Options"
+      ],
+      "tips": [
+        "适合做口播短视频",
+        "选择合适的数字人面孔很重要"
+      ],
+      "tips_en": [
+        "Great for talking-head short videos",
+        "Choosing the right digital face is important"
+      ],
+      "plans": [],
+      "last_updated": "2026-06-05",
+      "url_zh": "https://aifreeplan.com/zh/video/dupdub",
+      "url_en": "https://aifreeplan.com/en/video/dupdub"
     }
   ]
 }
