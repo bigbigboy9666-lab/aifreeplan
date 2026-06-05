@@ -107,6 +107,7 @@ AIFreePlan is an AI tools free credits aggregator. We help users find free credi
 
 ## Guides
 
+- Hailuo AI Free Video: 66-100 Credits/Day, Best Natural Motion — https://aifreeplan.com/en/guides/hailuo-free-video
 - Get GLM-5.1 Free: AtomCode CodingPlan Complete Guide & Tips — https://aifreeplan.com/en/guides/atomcode-codingplan-glm51
 - Tencent Marvis Launches Free: 10M Tokens Daily, Windows/Mac/Android — https://aifreeplan.com/en/guides/tencent-marvis-free-agent
 - Is Cursor Free Plan Enough? 2026 AI Coding Tool Free Guide — https://aifreeplan.com/en/guides/cursor-free-ai-coding
