@@ -69,6 +69,7 @@ body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans 
     <nav class="nav">
       <a href="/{lang}/all">{all_tools_text}</a>
       <a href="/{lang}/guides">{guides_text}</a>
+      <a href="/{lang}/feedback">{feedback_text}</a>
       <a href="/{lang}/privacy">{privacy_text}</a>
       <a href="{lang_switch_path}" class="btn btn-primary">{lang_switch_text}</a>
     </nav>
@@ -91,6 +92,7 @@ body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans 
           <h4>{product_text}</h4>
           <a href="/{lang}/all">{all_tools_text}</a>
           <a href="/{lang}/guides">{guides_text}</a>
+          <a href="/{lang}/feedback">{feedback_text}</a>
         </div>
         <div class="footer-col">
           <h4>{legal_text}</h4>
@@ -112,6 +114,7 @@ TEXTS = {
     'zh': {
         'all_tools_text': '全部工具',
         'guides_text': '攻略',
+        'feedback_text': '留言板',
         'privacy_text': '隐私政策',
         'terms_text': '用户条款',
         'footer_desc': 'AI驱动的免费工具聚合平台，永久免费。',
@@ -122,6 +125,7 @@ TEXTS = {
     'en': {
         'all_tools_text': 'All Tools',
         'guides_text': 'Guides',
+        'feedback_text': 'Feedback',
         'privacy_text': 'Privacy',
         'terms_text': 'Terms',
         'footer_desc': 'AI-powered free tools directory. Free forever.',
