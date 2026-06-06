@@ -11,7 +11,7 @@ from templates.page_builder import build_page, validate_page
 
 # Giscus 配置
 GISCUS_CONFIG = {
-    'repo': 'bigbigboy0666-lab/afreeplan',
+    'repo': 'bigbigboy9666-lab/aifreeplan',
     'repoId': 'R_kgDOSf8t_A',
     'category': 'Announcements',
     'categoryId': 'DIC_kwDOSf8t_M4C-nuS',
