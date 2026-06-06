@@ -11,10 +11,10 @@ from templates.page_builder import build_page, validate_page
 
 # Giscus 配置
 GISCUS_CONFIG = {
-    'repo': 'bigbigboy9666-lab/aifreeplan',
-    'repoId': '',  # 需要在 https://giscus.app/ 获取
-    'category': 'Announcements',  # GitHub Discussions 分类名
-    'categoryId': '',  # 需要在 https://giscus.app/ 获取
+    'repo': 'bigbigboy0666-lab/afreeplan',
+    'repoId': 'R_kgDOSf8t_A',
+    'category': 'Announcements',
+    'categoryId': 'DIC_kwDOSf8t_M4C-nuS',
     'mapping': 'pathname',
     'strict': '0',
     'reactionsEnabled': '1',
