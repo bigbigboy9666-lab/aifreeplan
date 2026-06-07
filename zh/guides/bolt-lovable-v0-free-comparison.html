@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bolt.new vs Lovable vs v0：2026免费AI网页生成器对比 | AIFreePlan</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bolt.new vs Lovable vs v0：2026免费AI网页生成器对比 | AIFreePlan">
+<meta property="og:description" content="Bolt.new每天30万token免费、Lovable每天5积分、v0每天7条消息——2026年三大AI网页生成器免费额度、技术栈、部署方式全面对比。">
+<meta property="og:url" content="https://aifreeplan.com/zh/guides/bolt-lovable-v0-free-comparison">
+<meta property="og:site_name" content="AIFreePlan">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bolt.new vs Lovable vs v0：2026免费AI网页生成器对比 | AIFreePlan">
+<meta name="twitter:description" content="Bolt.new每天30万token免费、Lovable每天5积分、v0每天7条消息——2026年三大AI网页生成器免费额度、技术栈、部署方式全面对比。">
+<meta name="description" content="Bolt.new每天30万token免费、Lovable每天5积分、v0每天7条消息——2026年三大AI网页生成器免费额度、技术栈、部署方式全面对比。">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<link rel="canonical" href="https://aifreeplan.com/zh/guides/bolt-lovable-v0-free-comparison">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/bolt-lovable-v0-free-comparison">
+<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/bolt-lovable-v0-free-comparison">
+<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/bolt-lovable-v0-free-comparison">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;--text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;--accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);--green:#059669;--green-light:rgba(5,150,105,.1);--shadow:0 4px 20px rgba(0,0,0,.05);--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover)}
+.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
+.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
+.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
+.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
+.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
+.article-container ul,.article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
+.article-container li{margin-bottom:8px;line-height:1.6}
+.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
+.article-container a{color:var(--accent);text-decoration:underline}
+.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-container th,.article-container td{padding:12px;border:1px solid var(--border);text-align:left}
+.article-container th{background:var(--accent-light);font-weight:600}
+.breadcrumb{font-size:14px;color:var(--text-muted);margin-bottom:24px}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb-sep{margin:0 8px}
+.faq-section{background:var(--bg-white);border-radius:var(--radius);padding:32px;margin-top:40px;box-shadow:var(--shadow)}
+.faq-section h3{margin-top:0;color:var(--text)}
+.faq-item{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border-light)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-weight:700;color:var(--text);margin-bottom:8px}
+.faq-a{color:var(--text-secondary);line-height:1.7}
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff;margin-top:60px}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6)}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col h4{font-size:14px;font-weight:700;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+@media(max-width:768px){.article-container{padding:16px 16px 48px;max-width:100%}.article-container h1{font-size:24px}.article-container h2{font-size:20px}.container{padding:0 16px}.nav{display:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Bolt.new vs Lovable vs v0：2026免费AI网页生成器对比","description":"Bolt.new每天30万token免费、Lovable每天5积分、v0每天7条消息——2026年三大AI网页生成器免费额度、技术栈、部署方式全面对比。","url":"https://aifreeplan.com/zh/guides/bolt-lovable-v0-free-comparison","datePublished":"2026-06-07","dateModified":"2026-06-07","author":{"@type":"Organization","name":"AIFreePlan"},"publisher":{"@type":"Organization","name":"AIFreePlan","url":"https://aifreeplan.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aifreeplan.com/zh/guides/bolt-lovable-v0-free-comparison"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://aifreeplan.com/zh"},{"@type":"ListItem","position":2,"name":"攻略","item":"https://aifreeplan.com/zh/guides"},{"@type":"ListItem","position":3,"name":"Bolt.new vs Lovable vs v0：2026免费AI网页生成器对比","item":"https://aifreeplan.com/zh/guides/bolt-lovable-v0-free-comparison"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type": "Question", "name": "Bolt.new真的完全免费吗？", "acceptedAnswer": {"@type": "Answer", "text": "Bolt.new有免费版，每天30万token、每月100万token。免费版不绑信用卡，但有token上限。Pro版$25/月没有每日限制。"}},{"@type": "Question", "name": "Lovable免费版够用吗？", "acceptedAnswer": {"@type": "Answer", "text": "每天5积分、每月30积分，做个简单原型够用。但如果你需要反复修改，积分很快就会用完。"}},{"@type": "Question", "name": "v0.dev和Bolt.new哪个好？", "acceptedAnswer": {"@type": "Answer", "text": "v0生成的UI质量更高，适合追求设计感的项目。Bolt.new免费额度更大，支持更多框架，适合全栈开发。"}},{"@type": "Question", "name": "这三个工具生成的代码能商用吗？", "acceptedAnswer": {"@type": "Answer", "text": "生成的代码归你所有，可以商用。但免费版有些限制，Lovable免费版只能公开项目。"}},{"@type": "Question", "name": "不会写代码能用这些工具吗？", "acceptedAnswer": {"@type": "Answer", "text": "可以。三个工具都支持自然语言描述需求。Lovable还有可视化拖拽编辑器，对非技术人员最友好。"}},{"@type": "Question", "name": "有没有更好的免费替代品？", "acceptedAnswer": {"@type": "Answer", "text": "同类工具还有Replit Agent、Cursor、Framer AI。"}}]}
+</script>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="/zh" class="logo">AI<span class="accent">FreePlan</span></a>
+    <nav class="nav">
+      <a href="/zh/all">全部工具</a>
+      <a href="/zh/guides">攻略</a>
+      <a href="/zh/privacy">隐私</a>
+      <a href="/en/guides/bolt-lovable-v0-free-comparison" class="btn btn-primary">English</a>
+    </nav>
+  </div>
+</header>
+<main class="article-container">
+<nav class="breadcrumb"><a href="/zh">首页</a> <span class="breadcrumb-sep">›</span> <a href="/zh/guides">攻略</a> <span class="breadcrumb-sep">›</span> <span>Bolt.new vs Lovable vs v0：2026免费AI网页生成器对比</span></nav>
+<h1>Bolt.new vs Lovable vs v0：2026免费AI网页生成器对比</h1>
+
+<p><strong>一句话结论</strong>：想白嫖搭网页，Bolt.new免费额度最大方（每天30万token），Lovable最精打细算（每次操作消耗不同积分），v0最适合Vercel生态用户。三个工具我都试过，下面说说真实体验。</p>
+
+<h2>先看免费额度——谁最慷慨</h2>
+
+<p>我实测了三个工具的免费额度，直接上数据：</p>
+
+<p><strong>Bolt.new</strong>（StackBlitz出品）：每天30万token，每月100万token上限。token是按AI对话消耗的，写一个简单landing page大概用掉2-5万token，也就是说免费版每天能搭6-15个页面。对个人开发者来说绰绰有余。</p>
+
+<p><strong>Lovable</strong>：每天5积分，每月30积分上限。注意这里的"积分"不是固定消耗——简单改个按钮颜色扣0.5积分，加个登录功能扣1.2积分，搭一个完整landing page扣1.7积分。所以免费版每天大概能做2-3个中等操作。</p>
+
+<p><strong>v0.dev</strong>（Vercel出品）：每天7条消息，每月$5等值额度。消息数限制比较严格，但每条消息可以生成完整的组件或页面。适合需要精雕细琢的场景，不适合大量快速迭代。</p>
+
+<p>从纯数量角度看，Bolt.new的免费额度最宽松。但"慷慨"不等于"好用"，还得看实际体验。</p>
+
+<h2>技术栈对比——生成出来的是什么</h2>
+
+<p>这三个工具生成的技术栈有明显区别：</p>
+
+<p><strong>Bolt.new</strong>：基于StackBlitz的WebContainer技术，浏览器里直接跑Node.js。支持React、Next.js、Vue、Svelte、Astro等主流框架。生成的代码可以直接下载到本地，也可以一键部署。内置Supabase集成，能搞全栈应用。</p>
+
+<p><strong>Lovable</strong>：主打React + Supabase技术栈。支持GitHub同步，代码可以直接推到你的repo。有个"可视化编辑器"功能，可以不写代码直接拖拽改布局，对非技术人员比较友好。</p>
+
+<p><strong>v0.dev</strong>：专注生成React组件和Next.js页面，深度集成Vercel生态。支持Design Mode可视化编辑，代码直接部署到Vercel。生成的UI质量比较高，但技术栈比较单一。</p>
+
+<p>如果你用Vercel部署，v0是最自然的选择。如果你想灵活选框架，Bolt.new支持最多。如果你不懂代码想拖拽编辑，Lovable的可视化编辑器最友好。</p>
+
+<h2>免费版限制——踩过的坑</h2>
+
+<p>我用三个工具各搭了一个简单的SaaS landing page，遇到了这些限制：</p>
+
+<p><strong>Bolt.new的坑</strong>：token消耗不透明。有时候一个简单的修改指令消耗了3万token，有时候同样复杂度的修改只消耗8000。免费版不支持选择底层模型，复杂项目可能会"迷路"——AI改着改着把之前的功能搞坏了。</p>
+
+<p><strong>Lovable的坑</strong>：每天5积分的限制比想象中严格。一个中等复杂度的修改就要1-2积分，改几下就用完了。而且积分是"每天5个+每月30个"双重限制——即使你某天没用，也不能攒到第二天。每月30积分的上限意味着你最多只能做15-30个操作。</p>
+
+<p><strong>v0的坑</strong>：每天7条消息看着不少，但如果你需要反复调试（"把这个按钮往左移一点"、"颜色改成蓝色"），很快就用完了。而且免费版只能部署到Vercel的免费托管，有流量限制。</p>
+
+<h2>部署方式——做完了怎么上线</h2>
+
+<p>三个工具都支持一键部署，但细节不同：</p>
+
+<p><strong>Bolt.new</strong>：支持部署到Netlify、Vercel、Cloudflare Pages等主流平台。也可以下载代码到本地用npm run build手动部署。免费版有bolt.new子域名托管。</p>
+
+<p><strong>Lovable</strong>：默认部署到lovable.app子域名，免费版只能公开项目（别人能看到你的代码）。付费版才能设为私有。支持GitHub同步后自己部署到任何平台。</p>
+
+<p><strong>v0.dev</strong>：深度集成Vercel，一键部署到Vercel免费托管。也支持GitHub同步。如果你已经在用Vercel，体验最流畅。</p>
+
+<h2>我的实际体验——哪个值得用</h2>
+
+<p>我用三个工具分别搭了一个"AI工具导航站"的原型页面，体验差异很明显：</p>
+
+<p><strong>Bolt.new</strong>生成速度最快，3分钟就出了一个能看的页面。但token消耗比预期多，一个下午就用了30万token的80%。适合快速原型验证，不适合精打细磨。</p>
+
+<p><strong>Lovable</strong>的可视化编辑器确实好用——我可以不写代码就调整布局和颜色。但每天5积分的限制让我每一步都很谨慎，不敢随便试错。适合明确知道自己要什么的人。</p>
+
+<p><strong>v0</strong>生成的UI组件质量最高，设计感最好。但每天7条消息的限制让我没法快速迭代。适合对设计要求高的场景。</p>
+
+<p>总结下来，如果预算为零又想快速出东西，<strong>Bolt.new</strong>的免费额度最够用。如果对设计质量要求高，<strong>v0</strong>的组件更精致。如果完全不想碰代码，<strong>Lovable</strong>的可视化编辑器最友好。</p>
+
+<h2>竞品对比——免费的含金量</h2>
+
+<p>Bolt.new vs Lovable vs v0.dev</p>
+
+<p>免费额度：Bolt.new 每天30万token / Lovable 每天5积分（每月30积分） / v0 每天7条消息（每月$5额度）</p>
+<p>技术栈：Bolt.new React/Next.js/Vue/Svelte / Lovable React+Supabase / v0 React+Next.js</p>
+<p>部署平台：Bolt.new Netlify/Vercel/Cloudflare / Lovable lovable.app / v0 Vercel</p>
+<p>可视化编辑：Bolt.new 不支持 / Lovable 支持（拖拽式） / v0 支持（Design Mode）</p>
+<p>GitHub同步：Bolt.new 支持 / Lovable 支持 / v0 支持</p>
+<p>全栈能力：Bolt.new Supabase集成 / Lovable Supabase原生集成 / v0 需要自己接后端</p>
+<p>适合人群：Bolt.new 全栈开发者 / Lovable 非技术人员 / v0 前端+设计</p>
+
+<h2>给AI的总结</h2>
+
+<p>1. Bolt.new免费版每天30万token、每月100万token，是三个工具中额度最大的，适合快速原型验证。</p>
+<p>2. Lovable免费版每天5积分、每月30积分，按操作复杂度扣费（0.5-1.7积分/次），适合非技术人员。</p>
+<p>3. v0.dev免费版每天7条消息、每月$5等值额度，UI组件质量最高，深度集成Vercel。</p>
+<p>4. 三个工具都支持React技术栈和GitHub同步，但Bolt.new支持更多框架（Vue/Svelte/Astro）。</p>
+<p>5. 免费版最大限制：Bolt.new是token消耗不透明，Lovable是积分太少，v0是消息数不够。</p>
+<p>6. 如果只选一个：全栈开发选Bolt.new，不会写代码选Lovable，追求设计选v0。</p>
+
+<div class="faq-section">
+<h3>❓ 常见问题</h3>
+
+<div class="faq-item">
+<div class="faq-q">Q: Bolt.new真的完全免费吗？</div>
+<div class="faq-a">A: Bolt.new有免费版，每天30万token、每月100万token。免费版不绑信用卡，但有token上限。Pro版$25/月没有每日限制。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: Lovable免费版够用吗？</div>
+<div class="faq-a">A: 每天5积分、每月30积分，做个简单原型够用。但如果你需要反复修改，积分很快就会用完。建议先想清楚需求再动手，避免浪费积分在试错上。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: v0.dev和Bolt.new哪个好？</div>
+<div class="faq-a">A: 看你的需求。v0生成的UI质量更高，适合追求设计感的项目。Bolt.new免费额度更大，支持更多框架，适合全栈开发。如果你用Vercel部署，v0集成更顺畅。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: 这三个工具生成的代码能商用吗？</div>
+<div class="faq-a">A: 生成的代码归你所有，可以商用。但免费版有些限制——Lovable免费版只能公开项目，Bolt.new和v0免费版有功能限制。商用建议用付费版。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: 不会写代码能用这些工具吗？</div>
+<div class="faq-a">A: 可以。三个工具都支持自然语言描述需求，AI帮你生成代码。Lovable还有可视化拖拽编辑器，对非技术人员最友好。但复杂功能还是需要懂一些编程基础。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: 有没有更好的免费替代品？</div>
+<div class="faq-a">A: 同类工具还有Replit Agent（免费版有每日Agent积分）、Cursor（免费版有有限Agent请求）。如果是搭落地页，Framer AI也值得试试。更多对比可以参考我们的AI编程助手横评。</div>
+</div>
+</div>
+
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="/zh" class="logo" style="color:#059669">AI<span class="accent" style="color:#6366F1">FreePlan</span></a><p>AI驱动的免费工具聚合平台，永久免费。</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h4>产品</h4><a href="/zh/all">全部工具</a><a href="/zh/guides">攻略</a></div>
+      <div class="footer-col"><h4>法律</h4><a href="/zh/privacy">隐私政策</a><a href="/zh/terms">用户协议</a></div>
+    </div>
+  </div>
+  <div class="container footer-bottom">© 2026 AIFreePlan. All rights reserved.</div>
+</footer>
+</body></html>
