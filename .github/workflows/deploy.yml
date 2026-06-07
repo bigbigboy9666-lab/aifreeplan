@@ -1,0 +1,73 @@
+name: Deploy to aifreeplan.com
+    
+    on:
+      push:
+        branches: [main]
+      workflow_dispatch:
+    
+    jobs:
+      build-and-deploy:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout source
+            uses: actions/checkout@v4
+    
+          - name: Setup Node.js
+            uses: actions/setup-node@v4
+            with:
+              node-version: 22
+    
+          - name: Setup pnpm
+            uses: pnpm/action-setup@v4
+            with:
+              version: 10
+    
+          - name: Install dependencies
+            run: |
+              if [ -f pnpm-lock.yaml ]; then
+                pnpm install --frozen-lockfile
+              else
+                pnpm install
+              fi
+    
+          - name: Build static site
+            run: pnpm build
+    
+          - name: Generate sitemap
+            run: python3 scripts/generate_sitemap.py
+    
+          - name: Deploy to deploy-static branch
+            env:
+              DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+            run: |
+              git config user.name "bot"
+              git config user.email "bot@aifreeplan.com"
+    
+              # Authenticate if key provided
+              if [ -n "$DEPLOY_KEY" ]; then
+                REPO_URL=$(git remote get-url origin | sed "s|https://|https://x-access-token:${DEPLOY_KEY}@|")
+                git remote set-url origin "$REPO_URL"
+              fi
+    
+              # Save build output
+              cp -r dist /tmp/aifreeplan-dist
+    
+              # Fetch deploy-static branch (may not exist yet)
+              git fetch origin deploy-static 2>/dev/null || true
+    
+              # Checkout or create deploy-static branch
+              git checkout deploy-static 2>/dev/null || git checkout -b deploy-static
+    
+              # Clean old files
+              rm -rf en zh images *.html *.ico *.svg *.txt *.png *.css *.xml robots.txt data.json llms.txt
+    
+              # Copy new build
+              cp -r /tmp/aifreeplan-dist/* .
+    
+              # Root index.html = zh.html (required for Cloudflare Pages)
+              cp zh.html index.html
+    
+              # Commit and push
+              git add -A
+              git commit -m "deploy: automatic build $(date +%Y-%m-%d-%H%M)"
+              git push origin deploy-static
