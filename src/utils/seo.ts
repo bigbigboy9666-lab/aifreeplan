@@ -66,6 +66,7 @@ export function guideSchema(guide: Record<string, any>, locale: string) {
     '@type': 'Article',
     headline: title,
     description: desc.slice(0, 200),
+    image: guide.image || guide.cover_image || `https://aifreeplan.com/og-guides/${guide.slug}.png`,
     author: { '@type': 'Organization', name: 'AIFreePlan' },
     datePublished: guide.date_published,
     dateModified: guide.date_modified,

@@ -31,9 +31,18 @@ for (const tool of tools) {
   byCategory[cat].push(tool);
 }
 
-// Schema: WebSite + ItemList
+// Schema: WebSite + Organization + WebPage + BreadcrumbList + ItemList
 const siteUrl = `https://aifreeplan.com/${locale}`;
 const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AIFreePlan",
+    "url": "https://aifreeplan.com",
+    "logo": "https://aifreeplan.com/favicon.svg",
+    "description": description,
+    "sameAs": []
+  },
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -41,22 +50,56 @@ const jsonLd = [
     "url": "https://aifreeplan.com",
     "description": description,
     "inLanguage": locale,
+    "publisher": {
+      "@type": "Organization",
+      "name": "AIFreePlan",
+      "url": "https://aifreeplan.com"
+    },
     "potentialAction": {
       "@type": "SearchAction",
       "target": "https://aifreeplan.com/{locale}/all?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": title,
+    "description": description,
+    "url": siteUrl,
+    "inLanguage": locale,
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "AIFreePlan",
+      "url": "https://aifreeplan.com"
+    },
+    "about": {
+      "@type": "Organization",
+      "name": "AIFreePlan",
+      "url": "https://aifreeplan.com"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": isZh ? "首页" : "Home",
+      "item": siteUrl
+    }]
+  },
   ...Object.entries(CATEGORIES).flatMap(([cat, info]) => {
     const catTools = byCategory[cat] || [];
     if (catTools.length === 0) return [];
+    const displayTools = catTools.slice(0, 20);
     return [{
       "@context": "https://schema.org",
       "@type": "ItemList",
       "name": isZh ? info.zh : info.en,
       "url": `${siteUrl}/${cat}`,
-      "numberOfItems": catTools.length,
-      "itemListElement": catTools.slice(0, 20).map((tool, i) => ({
+      "numberOfItems": displayTools.length,
+      "itemListElement": displayTools.map((tool, i) => ({
         "@type": "ListItem",
         "position": i + 1,
         "url": `${siteUrl}/${tool.data.category}/${tool.data.slug}`
