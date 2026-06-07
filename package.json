@@ -1,0 +1,16 @@
+{
+  "name": "aifreeplan",
+  "version": "2.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "validate": "node scripts/validate-content.mjs",
+    "sitemap": "python3 scripts/generate_sitemap.py"
+  },
+  "dependencies": {
+    "astro": "^6.0.0"
+  }
+}
