@@ -102,13 +102,13 @@ const guideSchema = z.object({
 
 const toolsCollection = defineCollection({
   type: 'content_layer',
-  loader: file('tools.json'),
+  loader: file('src/content/tools.json'),
   schema: toolSchema,
 });
 
 const guidesCollection = defineCollection({
   type: 'content_layer',
-  loader: file('guides.json'),
+  loader: file('src/content/guides.json'),
   schema: guideSchema,
 });
 
