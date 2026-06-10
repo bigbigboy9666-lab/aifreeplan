@@ -3,7 +3,7 @@
   "description": "All AI tools free credits in one table - comprehensive database of free tiers, limits, and pricing",
   "description_zh": "所有AI工具的免费额度一张表看全 - 覆盖视频/图片/大模型/编程/助手五大分类",
   "last_updated": "2026-06-10",
-  "total_tools": 54,
+  "total_tools": 55,
   "categories": [
     {
       "id": "video",
@@ -21,7 +21,7 @@
       "id": "llm",
       "name_zh": "AI大模型",
       "name_en": "AI Large Models",
-      "count": 11
+      "count": 12
     },
     {
       "id": "coding",
@@ -4608,6 +4608,90 @@
       "last_updated": "2026-06-10",
       "url_zh": "https://aifreeplan.com/zh/ai-assistant/tabbit",
       "url_en": "https://aifreeplan.com/en/ai-assistant/tabbit"
+    },
+    {
+      "slug": "xfyun-maas",
+      "name": "讯飞星辰 MaaS",
+      "name_en": "iFlytek Spark MaaS",
+      "category": "llm",
+      "category_zh": "AI大模型",
+      "category_en": "AI Large Models",
+      "official_url": "https://maas.xfyun.cn",
+      "company": "科大讯飞",
+      "description": "科大讯飞推出的一站式大模型服务平台，聚合了讯飞星火Spark、DeepSeek、Qwen等主流模型。目前活动期间可免费不限量使用Qwen3.6-35B-A3B和Qwen3.5-35B-A3B，活动持续到6月底，无限Token。支持API调用，可通过CC Switch接入Claude Code、Codex等工具使用。",
+      "description_en": "iFlytek's one-stop LLM platform aggregating Spark, DeepSeek, Qwen models. Currently offering free unlimited access to Qwen3.6-35B-A3B and Qwen3.5-35B-A3B until end of June. Supports API calls via CC Switch for Claude Code, Codex integration.",
+      "rating": 4,
+      "free_credits": {
+        "type": "promo",
+        "amount": "活动期间不限量（到6月底）",
+        "amount_en": "Unlimited until end of June (promo)",
+        "daily_limit": "无限制",
+        "daily_limit_en": "No limit",
+        "reset": "活动期间无限",
+        "reset_en": "Unlimited during promo",
+        "models": "Qwen3.6-35B-A3B, Qwen3.5-35B-A3B（活动期间免费）",
+        "models_en": "Qwen3.6-35B-A3B, Qwen3.5-35B-A3B (free during promo)",
+        "resolution": "N/A",
+        "watermark": "无",
+        "commercial_use": "需确认",
+        "commercial_use_en": "Check terms"
+      },
+      "paid_from": "Token Plan包月制",
+      "paid_from_en": "Token Plan subscription",
+      "pros": [
+        "活动期间完全免费无限Token",
+        "Qwen3.6模型能力很强，35B参数够用",
+        "支持128K上下文窗口",
+        "可通过CC Switch接入Claude Code/Codex",
+        "平台聚合多个主流模型"
+      ],
+      "pros_en": [
+        "Completely free with unlimited tokens during promo",
+        "Qwen3.6 is powerful despite 35B parameters",
+        "128K context window supported",
+        "Integrates with Claude Code/Codex via CC Switch",
+        "Platform aggregates multiple mainstream models"
+      ],
+      "cons": [
+        "免费活动6月底截止",
+        "需要通过CC Switch配置使用",
+        "暂不兼容Claude Code最新版本"
+      ],
+      "cons_en": [
+        "Free promo ends end of June",
+        "Requires CC Switch configuration",
+        "Not compatible with latest Claude Code version yet"
+      ],
+      "features": [
+        "Qwen3.6/3.5-35B免费调用",
+        "API接口兼容Anthropic格式",
+        "CC Switch可视化配置",
+        "支持Claude Code/Codex/OpenClaw",
+        "128K上下文窗口"
+      ],
+      "features_en": [
+        "Free Qwen3.6/3.5-35B API access",
+        "Anthropic-compatible API format",
+        "CC Switch visual configuration",
+        "Supports Claude Code/Codex/OpenClaw",
+        "128K context window"
+      ],
+      "tips": [
+        "先领权益，6月底前都免费",
+        "用CC Switch配置比手动改配置文件简单",
+        "Claude Code如果有问题回退到v2.1.145版本",
+        "高并发需求可联系讯飞工作人员额外领取"
+      ],
+      "tips_en": [
+        "Claim free access now — valid until end of June",
+        "CC Switch is easier than manual config files",
+        "Roll back to Claude Code v2.1.145 if issues",
+        "Contact iFlytek for high-concurrency needs"
+      ],
+      "plans": [],
+      "last_updated": "2026-06-10",
+      "url_zh": "https://aifreeplan.com/zh/llm/xfyun-maas",
+      "url_en": "https://aifreeplan.com/en/llm/xfyun-maas"
     }
   ]
 }

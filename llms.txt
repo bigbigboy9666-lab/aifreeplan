@@ -20,6 +20,7 @@ AIFreePlan is an AI tools free credits aggregator. We help users find free credi
 - Tongyi Lingma (coding): Free for individuals — https://aifreeplan.com/en/coding/tongyi-lingma
 - CodeBuddy (coding): Credits for new users — https://aifreeplan.com/en/coding/codebuddy
 - AtomCode (coding): CodingPlan Pro tier free for 30 days — https://aifreeplan.com/en/coding/atomcode
+- iFlytek Spark MaaS (llm): Unlimited Qwen3.6-35B until end of June — https://aifreeplan.com/en/llm/xfyun-maas
 - Tencent Marvis (ai-assistant): 10M tokens/day — https://aifreeplan.com/en/ai-assistant/tencent-marvis
 - Tabbit (ai-assistant): ~1000 chats/week free — https://aifreeplan.com/en/ai-assistant/tabbit
 - Cursor (coding): Hobby free plan — https://aifreeplan.com/en/coding/cursor

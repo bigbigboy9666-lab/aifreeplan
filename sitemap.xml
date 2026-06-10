@@ -397,6 +397,18 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/zh/llm/xfyun-maas</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/llm/xfyun-maas</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/zh/llm/hugging-face</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
