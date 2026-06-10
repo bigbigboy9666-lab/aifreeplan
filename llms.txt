@@ -109,6 +109,7 @@ AIFreePlan is an AI tools free credits aggregator. We help users find free credi
 
 ## Guides
 
+- Kling AI Free Video: 66 Credits/Day, Best Quality Chinese AI Tool — https://aifreeplan.com/en/guides/kling-free-video
 - Hailuo AI Free Video: 66-100 Credits/Day, Best Natural Motion — https://aifreeplan.com/en/guides/hailuo-free-video
 - Get GLM-5.1 Free: AtomCode CodingPlan Complete Guide & Tips — https://aifreeplan.com/en/guides/atomcode-codingplan-glm51
 - Tencent Marvis Launches Free: 10M Tokens Daily, Windows/Mac/Android — https://aifreeplan.com/en/guides/tencent-marvis-free-agent
