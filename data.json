@@ -2,8 +2,8 @@
   "site": "aifreeplan.com",
   "description": "All AI tools free credits in one table - comprehensive database of free tiers, limits, and pricing",
   "description_zh": "所有AI工具的免费额度一张表看全 - 覆盖视频/图片/大模型/编程/助手五大分类",
-  "last_updated": "2026-06-05",
-  "total_tools": 53,
+  "last_updated": "2026-06-10",
+  "total_tools": 54,
   "categories": [
     {
       "id": "video",
@@ -33,7 +33,7 @@
       "id": "ai-assistant",
       "name_zh": "AI助手",
       "name_en": "AI Assistants",
-      "count": 4
+      "count": 6
     },
     {
       "id": "audio",
@@ -4526,6 +4526,88 @@
       "last_updated": "2026-06-05",
       "url_zh": "https://aifreeplan.com/zh/video/dupdub",
       "url_en": "https://aifreeplan.com/en/video/dupdub"
+    },
+    {
+      "slug": "tabbit",
+      "name": "Tabbit",
+      "name_en": "Tabbit",
+      "category": "ai-assistant",
+      "category_zh": "AI助手",
+      "category_en": "AI Assistant",
+      "official_url": "https://tabbit.ai",
+      "company": "美团·光年之外",
+      "description": "美团旗下光年之外团队做的AI浏览器，跟普通浏览器加个AI插件完全不一样——底层就把AI融进去了。浏览网页时随时跟AI对话，能引用当前页面、截图、本地文件来提问。内置Agent帮你自动填表、收集信息，还能自己创建\"妙招\"定制工作流。标准版永久免费，每周1000次对话+50张图+10个Agent任务。",
+      "description_en": "An AI browser built from the ground up by Meituan's Light Years team — not a Chrome extension with a sidebar, but AI woven into every layer. Chat with AI while browsing, referencing pages, screenshots, or local files. Built-in Agent automates repetitive tasks like form filling and data collection. Create custom Skills for your workflows. Standard version is free forever with ~1000 AI chats/week, 50 images, and 10 Agent tasks.",
+      "rating": 4,
+      "free_credits": {
+        "type": "weekly",
+        "amount": "每周约1000次对话+50张图+10个Agent任务",
+        "amount_en": "~1000 chats/week + 50 images + 10 Agent tasks",
+        "daily_limit": "N/A",
+        "daily_limit_en": "N/A",
+        "reset": "每周重置",
+        "reset_en": "Resets weekly",
+        "models": "GPT-5.2, Claude-Sonnet-4.6等",
+        "models_en": "GPT-5.2, Claude-Sonnet-4.6 and more",
+        "resolution": "N/A",
+        "watermark": "无",
+        "commercial_use": "免费可商用",
+        "commercial_use_en": "Free for commercial use"
+      },
+      "paid_from": "N/A",
+      "paid_from_en": "N/A",
+      "pros": [
+        "标准版永久免费，额度够用",
+        "AI不是侧边栏，是底层融合",
+        "内置Agent自动干活",
+        "支持自定义妙招（Skills）工作流",
+        "集成GPT-5.2、Claude-Sonnet-4.6等主流模型"
+      ],
+      "pros_en": [
+        "Standard version is free forever with generous limits",
+        "AI is deeply integrated, not just a sidebar",
+        "Built-in Agent automates repetitive tasks",
+        "Custom Skills let you build personalized workflows",
+        "Supports GPT-5.2, Claude-Sonnet-4.6, and other top models"
+      ],
+      "cons": [
+        "新发布，生态还不成熟",
+        "只有桌面端，没有移动端",
+        "Agent功能目前还比较基础"
+      ],
+      "cons_en": [
+        "Just launched — ecosystem still maturing",
+        "Desktop only, no mobile app yet",
+        "Agent capabilities are still basic"
+      ],
+      "features": [
+        "AI网页对话（引用页面/截图/文件）",
+        "内置Agent自动执行任务",
+        "自定义妙招（Skills）工作流",
+        "智能标签分组",
+        "多模型切换（GPT-5.2/Claude等）"
+      ],
+      "features_en": [
+        "AI chat while browsing (reference pages/screenshots/files)",
+        "Built-in Agent for task automation",
+        "Custom Skills for personalized workflows",
+        "Smart tab grouping",
+        "Multi-model switching (GPT-5.2, Claude, etc.)"
+      ],
+      "tips": [
+        "用妙招功能把常用操作一键化",
+        "Agent适合跑重复性任务，比如批量收集信息",
+        "不同模型换着用，GPT-5.2写文案好，Claude分析长文好"
+      ],
+      "tips_en": [
+        "Use Skills to automate your most repeated workflows",
+        "Agent shines on repetitive tasks like batch data collection",
+        "Switch models based on task — GPT-5.2 for writing, Claude for long-form analysis"
+      ],
+      "plans": [],
+      "last_updated": "2026-06-10",
+      "url_zh": "https://aifreeplan.com/zh/ai-assistant/tabbit",
+      "url_en": "https://aifreeplan.com/en/ai-assistant/tabbit"
     }
   ]
 }

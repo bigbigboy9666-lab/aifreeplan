@@ -21,6 +21,7 @@ AIFreePlan is an AI tools free credits aggregator. We help users find free credi
 - CodeBuddy (coding): Credits for new users — https://aifreeplan.com/en/coding/codebuddy
 - AtomCode (coding): CodingPlan Pro tier free for 30 days — https://aifreeplan.com/en/coding/atomcode
 - Tencent Marvis (ai-assistant): 10M tokens/day — https://aifreeplan.com/en/ai-assistant/tencent-marvis
+- Tabbit (ai-assistant): ~1000 chats/week free — https://aifreeplan.com/en/ai-assistant/tabbit
 - Cursor (coding): Hobby free plan — https://aifreeplan.com/en/coding/cursor
 - Windsurf (coding): Free plan Light usage — https://aifreeplan.com/en/coding/windsurf
 - Perplexity (llm): Limited Pro searches daily — https://aifreeplan.com/en/llm/perplexity
