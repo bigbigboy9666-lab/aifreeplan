@@ -621,9 +621,9 @@
       "slug": "xiaomi-mimo",
       "name": "小米MiMo Code",
       "name_en": "Xiaomi MiMo Code",
-      "category": "coding",
-      "category_zh": "编程助手",
-      "category_en": "Coding Assistants",
+      "category": "llm",
+      "category_zh": "AI大模型",
+      "category_en": "AI LLM",
       "official_url": "https://mimo.xiaomi.com/mimocode",
       "company": "小米",
       "description": "小米基于OpenCode魔改的AI编程助手，开源MIT协议。最大的卖点是内置MiMo Auto通道，装完就能用，限时免费1个月，跑的是MiMo-V2.5模型，100万token上下文。实际跑下来编码能力不错，SWE-Bench成绩跟Claude Sonnet 4.6一个水平，但token效率高很多，同样的任务比Claude省40-60%的消耗。亮点是跨会话记忆、语音输入、自动从历史会话提取知识这些。免费期过了就得付费了，Token Plan最便宜的Lite档起步。",
@@ -759,8 +759,8 @@
         }
       ],
       "last_updated": "2026-06-11",
-      "url_zh": "https://aifreeplan.com/zh/coding/xiaomi-mimo",
-      "url_en": "https://aifreeplan.com/en/coding/xiaomi-mimo"
+      "url_zh": "https://aifreeplan.com/zh/llm/xiaomi-mimo",
+      "url_en": "https://aifreeplan.com/en/llm/xiaomi-mimo"
     },
     {
       "slug": "deepseek",

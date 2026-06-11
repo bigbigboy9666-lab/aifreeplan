@@ -4,13 +4,200 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>小米MiMo Code 免费额度详情 - AIFreePlan</title>
-<meta http-equiv="refresh" content="0;url=/zh/coding/xiaomi-mimo">
-<link rel="canonical" href="https://aifreeplan.com/zh/coding/xiaomi-mimo">
-<meta name="description" content="小米MiMo Code已迁移到编程助手分类">
-<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/coding/xiaomi-mimo">
-<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/coding/xiaomi-mimo">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="小米MiMo Code 免费额度详情 - AIFreePlan">
+    <meta property="og:description" content="小米MiMo Code开源AI大模型，基于OpenCode魔改，内置V2.5模型限时免费1个月，编码能力比肩Claude Sonnet 4.6，token效率省40-60%。">
+    <meta property="og:url" content="https://aifreeplan.com/zh/llm/xiaomi-mimo">
+    <meta property="og:site_name" content="AIFreePlan">
+    <meta property="og:locale" content="zh_CN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="小米MiMo Code 免费额度详情 - AIFreePlan">
+    <meta name="twitter:description" content="小米MiMo Code开源AI大模型，基于OpenCode魔改，内置V2.5模型限时免费1个月，编码能力比肩Claude Sonnet 4.6，token效率省40-60%。">
+
+<meta name="description" content="小米MiMo Code开源AI大模型，基于OpenCode魔改，内置V2.5模型限时免费1个月，编码能力比肩Claude Sonnet 4.6，token效率省40-60%。">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<link rel="canonical" href="https://aifreeplan.com/zh/llm/xiaomi-mimo">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/llm/xiaomi-mimo">
+<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/llm/xiaomi-mimo">
+<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/llm/xiaomi-mimo">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;
+  --text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;
+  --accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);
+  --green:#059669;--green-light:rgba(5,150,105,.1);
+  --shadow:0 4px 20px rgba(0,0,0,.05);--shadow-hover:0 8px 32px rgba(0,0,0,.1);
+  --radius:12px;--radius-lg:16px;
+}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover);transform:translateY(-1px)}
+.tool-card{background:var(--bg-white);border-radius:16px;padding:24px;box-shadow:var(--shadow);transition:all .2s;display:flex;flex-direction:column;gap:14px;text-decoration:none;color:var(--text)}
+.tool-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover)}
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand .logo{color:var(--green);margin-bottom:8px;display:inline-block}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6);line-height:1.5}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col-title{font-size:14px;font-weight:700;margin-bottom:4px;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px;transition:color .2s}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+@media(max-width:768px){
+  .container{padding:0 20px}
+  .nav{display:none}
+  .footer-inner{flex-direction:column;gap:30px}
+  .footer-links{gap:30px}
+}
+
+.nav-toggle{display:none;align-items:center;justify-content:center;width:40px;height:40px;border:none;background:transparent;font-size:24px;color:var(--text);cursor:pointer;border-radius:8px;transition:background .2s}
+.nav-toggle:active{background:var(--bg)}
+
+/* === Mobile Theme === */
+@media(max-width:768px){
+  /* Header - hamburger menu */
+  .header-inner{height:56px;padding:0 4px 0 16px}
+  .logo{font-size:20px}
+  .nav-toggle{display:flex!important}
+  .nav{position:fixed;top:56px;left:0;right:0;background:var(--bg-white);flex-direction:column;padding:0;gap:0;border-bottom:1px solid var(--border);box-shadow:0 8px 24px rgba(0,0,0,.08);transform:translateY(-100%);opacity:0;pointer-events:none;transition:all .25s ease;z-index:99}
+  .nav.open{display:flex!important;transform:translateY(0);opacity:1;pointer-events:auto}
+  .nav a{padding:14px 20px;font-size:15px;border-bottom:1px solid var(--border-light)}
+  .nav a:last-child{border-bottom:none}
+  .nav .btn{margin:12px 20px;text-align:center}
+
+  /* General */
+  .container{padding:0 16px}
+  img{border-radius:10px}
+
+  /* Footer */
+  .footer{padding:36px 0 24px}
+  .footer-inner{flex-direction:column;gap:28px}
+  .footer-brand{max-width:100%}
+  .footer-brand p{font-size:13px}
+  .footer-links{gap:28px;flex-wrap:wrap}
+  .footer-col{min-width:120px}
+  .footer-col a{padding:4px 0;display:inline-block}
+  .footer-bottom{font-size:12px;margin-top:20px;padding-top:16px}
+}
+@media(max-width:480px){
+  .container{padding:0 14px}
+}
+
+
+        /* Breadcrumb */
+        .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 12px 24px; font-size: 13px; color: #888; }
+        .breadcrumb a { color: #666; text-decoration: none; }
+        .breadcrumb a:hover { color: #4facfe; }
+        .breadcrumb-sep { margin: 0 6px; color: #ccc; }
+        @media (max-width: 768px) { .breadcrumb { padding: 10px 16px; font-size: 12px; } }
+    </style>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "小米MiMo 免费额度详情",
+  "description": "小米MiMo 免费额度详情",
+  "url": "https://aifreeplan.com/zh/llm/xiaomi-mimo",
+  "applicationCategory": "AIApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+    </script>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://aifreeplan.com/zh"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI大模型",
+      "item": "https://aifreeplan.com/zh/llm"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "小米MiMo 免费额度详情",
+      "item": "https://aifreeplan.com/zh/llm/xiaomi-mimo"
+    }
+  ]
+}
+    </script>
 </head>
 <body>
-<p>Redirecting to <a href="/zh/coding/xiaomi-mimo">小米MiMo Code</a>...</p>
+
+<header class="header">
+  <div class="container header-inner">
+    <a href="/zh" class="logo">AI<span class="accent">FreePlan</span></a>
+    <button class="nav-toggle" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="菜单">☰</button>
+    <nav class="nav">
+      <a href="/zh/all">全部工具</a>
+      <a href="/zh/guides">攻略</a>
+      <a href="/zh/privacy">隐私</a>
+      <a href="/en/llm/xiaomi-mimo" class="btn btn-primary">English</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container" style="padding-top:40px;padding-bottom:80px">
+<nav class="breadcrumb" aria-label="breadcrumb"><a href="/zh">首页</a> <span class="breadcrumb-sep">›</span> <a href="/zh/coding">AI编程</a> <span class="breadcrumb-sep">›</span> <span>小米MiMo 免费额度详情</span></nav>
+
+</a> </p> </header> <section class="guide-content"> <p>小米MiMo Code开源AI大模型，基于OpenCode魔改，内置V2.5模型限时免费1个月，编码能力比肩Claude Sonnet 4.6，token效率省40-60%。</p> <div class="free-credits-detail"> <h2>小米MiMo 免费额度详情</h2> <ul> <li><strong>额度:</strong> 注册送算力</li> <li><strong>重置:</strong> 不重置</li> <li><strong>水印:</strong> 不适用</li> <li><strong>商用:</strong> 查看官方协议</li> </ul> </div> <div> <h2>小米MiMo 主要功能</h2> <ul> <li>开源大模型</li><li>数学推理强</li><li>代码生成</li><li>多语言支持</li><li>小米生态整合</li><li>免费API调用</li> </ul> </div> <div> <h2>优点</h2> <ul> <li>注册送大量算力</li><li>中文能力强</li><li>响应速度快</li> </ul> </div> <div> <h2>缺点</h2> <ul> <li>功能相对基础</li><li>生态不如大厂丰富</li> </ul> </div> <div> <h2>使用建议</h2> <ul> <li>注册后积极参与活动能拿更多算力</li><li>适合日常对话和代码辅助</li> </ul> </div>  <div style="margin-top:24px"><h2>相关攻略</h2><ul><li><a href="/zh/guides/tencent-marvis-free-agent" style="color:#6366F1;text-decoration:none">腾讯Marvis免费AI智能体攻略：腾讯出品的AI Agent实测 | AIFreePlan</a></li></ul></div></section>  </div> </article>  </main> <footer class="footer"> <div class="container"> <div class="footer-inner"> <div class="footer-brand"> <a href="/zh" class="logo">AIFreePlan</a> <p>AI驱动的免费工具聚合平台，永久免费。</p> </div> <div class="footer-links"> <div class="footer-col"> <div class="footer-col-title">产品</div> <a href="/zh/video">平台</a> <a href="/zh">分类</a> </div> <div class="footer-col"> <div class="footer-col-title">公司</div>    </div> <div class="footer-col"> <div class="footer-col-title">法律</div> <a href="/zh/privacy">隐私政策</a> <a href="/zh/terms">用户条款</a> </div> </div> </div> <div class="footer-bottom">© 2026 AIFreePlan. 保留所有权利。</div> </div> </footer> </body></html>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/zh" class="logo">AI<span class="accent" style="color:var(--green)">FreePlan</span></a>
+        <p>AI驱动的免费工具聚合平台，永久免费。</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <div class="footer-col-title">产品</div>
+          <a href="/zh/all">全部工具</a>
+          <a href="/zh/guides">攻略</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">关于</div>
+          <a href="/zh/about">关于我们</a>
+          <a href="https://github.com/bigbigboy0666-lab/aifreeplan">GitHub</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">法律</div>
+          <a href="/zh/privacy">隐私政策</a>
+          <a href="/zh/terms">用户条款</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 AIFreePlan. 保留所有权利。</div>
+  </div>
+</footer>
+
 </body>
 </html>
