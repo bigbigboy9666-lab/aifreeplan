@@ -391,12 +391,75 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
     </tbody>
   </table>
 
+  <h2>评测成绩</h2>
+
+  <p>Agnes-2.0-Flash 在真实 Agent 评测榜 <strong>Claw-Eval 上排名第九</strong>，图片和视频模型均在 Artificial Analysis 盲评榜的前列。免费开放第一周，数据就很猛：</p>
+
+  <ul>
+    <li>文本模型调用量超过 <strong>1万亿 Token</strong></li>
+    <li>图片模型生成超过 <strong>200万张</strong></li>
+    <li>视频模型生成超过 <strong>200万秒</strong></li>
+  </ul>
+
+  <h2>接入 Agent 工具</h2>
+
+  <p>Agnes AI 官方提供了接入 OpenClaw、Hermes、Claude Code 等 Agent 工具的教程。以 WorkBuddy 为例：</p>
+
+  <h3>第一步：获取 API Key</h3>
+  <p>访问 <a href="https://platform.agnes-ai.com" target="_blank" rel="nofollow noopener">platform.agnes-ai.com</a>，注册登录后在控制台创建并复制 API Key。</p>
+
+  <h3>第二步：配置文本模型</h3>
+  <p>打开 WorkBuddy，点击对话框里的「Auto」→「配置自定义模型」，填入：</p>
+  <ul>
+    <li><strong>接口地址：</strong><code>https://apihub.agnes-ai.com/v1</code></li>
+    <li><strong>API Key：</strong>刚才创建的 Key</li>
+    <li><strong>模型名称：</strong><code>agnes-2.0-flash</code></li>
+  </ul>
+  <p>保存后就能直接选择 Agnes 模型使用了。</p>
+
+  <h3>第三步：创建图片/视频 Skill</h3>
+  <p>图片和视频模型通过 Skill 调用。在 WorkBuddy 中发送提示词让它自动创建 Skill：</p>
+  <blockquote>
+    <p>我想使用 Agnes-Image-2.1-Flash 模型生图，访问它的文档 https://agnes-ai.com/doc/agnes-image-21-flash，并将它打包成一份 Skill，命名为 agnes-image-gen。</p>
+  </blockquote>
+  <p>视频 Skill 同理，创建完成后在「技能」里就能看到并使用了。</p>
+
+  <h2>实测效果</h2>
+
+  <h3>图片生成实测</h3>
+  <p>测试了 Agnes-Image-2.1-Flash 在不同风格下的表现：</p>
+  <ul>
+    <li><strong>赛博朋克科幻风：</strong>城市夜景，高楼林立，霓虹闪烁，光影和氛围都很到位，有电影感</li>
+    <li><strong>王家卫电影风格：</strong>人物照的色调和颗粒感确实有那个味道，用柯达 Portra 800 胶卷的质感</li>
+    <li><strong>中国水墨山水画：</strong>留白、墨色浓淡过渡处理得比较自然，没有生硬的AI味，还加了印章和文字</li>
+  </ul>
+
+  <h3>图片编辑能力</h3>
+  <p>测了图生图的编辑能力，重点看人物一致性：</p>
+  <ul>
+    <li><strong>表情修改：</strong>把原图人物改成微微一笑，五官、发型、服装保持得不错，笑得也自然</li>
+    <li><strong>证件照生成：</strong>基于原图生成蓝底证件照，成片基本能直接用，还把发型梳理好了</li>
+  </ul>
+
+  <h3>视频生成实测</h3>
+  <p>Agnes-Video-2.0 的表现更让人惊喜，而且<strong>原生支持音画同出</strong>，不需要单独配音：</p>
+  <ul>
+    <li><strong>GT3赛车比赛：</strong>多镜头切换（远景、中景、特写），视频配乐和镜头调度同步得不错，车身号码保持一致</li>
+    <li><strong>摇滚乐队演出：</strong>多人物、复杂动作、灯光变化，模型的下限表现不错</li>
+    <li><strong>图生视频追逐片：</strong>基于一张图片生成高速路追逐大片，各种镜头切换和人物动作相当流畅，配乐也是一绝，直接输出10秒长视频</li>
+  </ul>
+
+  <blockquote>
+    <p>总结：Agnes 免费开放的模型，表现不输一些闭源模型。而且团队还在持续升级，预计本周末灰度更新后，Agnes-2.0-Flash 将原生支持 <strong>1M 超长上下文窗口</strong>，接入方式不用改。</p>
+  </blockquote>
+
   <h2>使用建议</h2>
 
   <ul>
-    <li><strong>文本任务：</strong>适合日常杂活、基础问答、内容生成</li>
-    <li><strong>图片任务：</strong>支持文生图，可调整尺寸和种子</li>
-    <li><strong>视频任务：</strong>支持文生视频，可调整帧率和分辨率</li>
+    <li><strong>文本任务：</strong>Claw-Eval排名第九，适合Agent任务、日常杂活、基础问答</li>
+    <li><strong>图片任务：</strong>支持文生图+图生图，风格把控能力强，人物一致性保持得好</li>
+    <li><strong>视频任务：</strong>原生音画同出，多镜头切换流畅，支持图生视频</li>
+    <li><strong>上下文窗口：</strong>即将升级到1M超长上下文，接入方式不变</li>
   </ul>
 
   <blockquote>
