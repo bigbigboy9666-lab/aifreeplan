@@ -2,7 +2,7 @@
   "site": "aifreeplan.com",
   "description": "All AI tools free credits in one table - comprehensive database of free tiers, limits, and pricing",
   "description_zh": "所有AI工具的免费额度一张表看全 - 覆盖视频/图片/大模型/编程/助手五大分类",
-  "last_updated": "2026-06-10",
+  "last_updated": "2026-06-11",
   "total_tools": 55,
   "categories": [
     {
@@ -619,77 +619,146 @@
     },
     {
       "slug": "xiaomi-mimo",
-      "name": "小米MiMo",
-      "name_en": "Xiaomi MiMo",
+      "name": "小米MiMo Code",
+      "name_en": "Xiaomi MiMo Code",
       "category": "llm",
       "category_zh": "AI大模型",
       "category_en": "AI LLM",
-      "official_url": "https://mimo.xiaomi.com",
+      "official_url": "https://mimo.xiaomi.com/mimocode",
       "company": "小米",
-      "description": "小米自研的大模型，MiMo系列。新用户注册送大量算力，参与活动还能拿更多。用户实测：轻松拿到7亿token额度。",
-      "description_en": "Xiaomi's self-developed LLM, MiMo series. New users get generous compute credits, plus more through activities.",
-      "rating": 4,
+      "description": "小米基于OpenCode魔改的AI编程助手，开源MIT协议。最大的卖点是内置MiMo Auto通道，装完就能用，限时免费1个月，跑的是MiMo-V2.5模型，100万token上下文。实际跑下来编码能力不错，SWE-Bench成绩跟Claude Sonnet 4.6一个水平，但token效率高很多，同样的任务比Claude省40-60%的消耗。亮点是跨会话记忆、语音输入、自动从历史会话提取知识这些。免费期过了就得付费了，Token Plan最便宜的Lite档起步。",
+      "description_en": "Xiaomi's AI coding agent forked from OpenCode, open-sourced under MIT. The killer feature is the built-in MiMo Auto channel — zero config, free for 1 month, runs MiMo-V2.5 with 1M token context. Coding performance is on par with Claude Sonnet 4.6 on SWE-Bench, but 40-60% more token-efficient. Highlights: cross-session memory, voice input, auto knowledge distillation. After the free period, you need a Token Plan subscription.",
+      "rating": 4.5,
       "free_credits": {
-        "type": "activity",
-        "amount": "注册送算力",
-        "amount_en": "Credits on signup",
-        "daily_limit": "N/A",
-        "daily_limit_en": "N/A",
+        "type": "limited_time",
+        "amount": "MiMo Auto通道限时免费1个月（MiMo-V2.5模型，100万上下文）。平台注册送额度40天有效，邀请好友各得$2",
+        "amount_en": "MiMo Auto channel free for 1 month (MiMo-V2.5, 1M context). Platform signup bonus valid 40 days, invite friends for $2 each",
+        "daily_limit": "无明确日限",
+        "daily_limit_en": "No explicit daily limit",
         "reset": "不重置",
         "reset_en": "No reset",
-        "models": "N/A",
-        "models_en": "N/A",
+        "models": "MiMo-V2.5（免费通道）/ V2.5-Pro（付费）",
+        "models_en": "MiMo-V2.5 (free channel) / V2.5-Pro (paid)",
         "resolution": "N/A",
         "watermark": "N/A",
-        "commercial_use": "查看官方协议",
-        "commercial_use_en": "Check official terms"
+        "commercial_use": "MIT开源，商用需看具体服务条款",
+        "commercial_use_en": "MIT open source, check service terms for commercial use"
       },
-      "paid_from": "免费",
-      "paid_from_en": "Free",
+      "paid_from": "Token Plan Lite起步",
+      "paid_from_en": "Token Plan Lite and up",
       "pros": [
-        "注册送大量算力",
-        "中文能力强",
-        "响应速度快"
+        "限时免费白嫖1个月，零配置直接用",
+        "编码能力比肩Claude Sonnet 4.6",
+        "token效率极高，比Claude省40-60%",
+        "100万token超长上下文",
+        "跨会话持久记忆，不会每次从头开始",
+        "语音输入、自动知识提取等独家功能",
+        "开源MIT，可以自己接别的模型"
       ],
       "pros_en": [
-        "Generous signup credits",
-        "Strong Chinese",
-        "Fast response"
+        "Free for 1 month, zero config",
+        "Coding on par with Claude Sonnet 4.6",
+        "40-60% more token-efficient than Claude",
+        "1M token context window",
+        "Persistent cross-session memory",
+        "Voice input and auto knowledge distillation",
+        "MIT open source, BYOK supported"
       ],
       "cons": [
-        "功能相对基础",
-        "生态不如大厂丰富"
+        "免费只有1个月，过了得掏钱",
+        "免费通道只给V2.5，Pro版要付费",
+        "Credit消耗倍率高，宣传的16亿Credit实际用起来没那么多",
+        "生态刚起步，社区还在建设中",
+        "需要小米账号实名认证才能买套餐"
       ],
       "cons_en": [
-        "Relatively basic features",
-        "Less ecosystem than big players"
+        "Free for only 1 month",
+        "Free channel only gives V2.5, Pro requires payment",
+        "Credit multiplier is high — advertised 1.6B credits sounds more than it is",
+        "Ecosystem still early, community building",
+        "Real-name auth required for paid plans"
       ],
       "features": [
-        "开源大模型",
-        "数学推理强",
-        "代码生成",
-        "多语言支持",
-        "小米生态整合",
-        "免费API调用"
+        "MiMo Auto零配置免费通道",
+        "跨会话持久记忆（SQLite FTS5）",
+        "Compose模式规范驱动开发",
+        "语音输入（TenVAD + MiMo ASR）",
+        "/dream自动知识提取 + /distill技能提炼",
+        "Goal停止条件验证（防AI偷懒）",
+        "子代理并行系统",
+        "100万token上下文窗口",
+        "开源MIT协议"
       ],
       "features_en": [
-        "Open source model",
-        "Strong math reasoning",
-        "Code generation",
-        "Multi-language support",
-        "Xiaomi ecosystem integration",
-        "Free API access"
+        "MiMo Auto zero-config free channel",
+        "Cross-session persistent memory (SQLite FTS5)",
+        "Compose mode for spec-driven development",
+        "Voice input (TenVAD + MiMo ASR)",
+        "/dream auto knowledge extraction + /distill skill mining",
+        "Goal stop-condition verification",
+        "Subagent parallel system",
+        "1M token context window",
+        "MIT open source"
       ],
       "tips": [
-        "注册后积极参与活动能拿更多算力",
-        "适合日常对话和代码辅助"
+        "装完选MiMo Auto通道就能白嫖，不用注册API Key",
+        "免费期内多用，1个月后要付费",
+        "夜间（0:00-8:00北京时间）打8折，省钱党注意",
+        "cache命中时token消耗极低，多轮对话比首轮便宜很多",
+        "想要更强的V2.5-Pro得买Token Plan",
+        "可以导入Claude Code配置无缝切换"
       ],
       "tips_en": [
-        "Participate in activities for more credits",
-        "Good for daily chat and code assistance"
+        "Select MiMo Auto on first launch to start free, no API key needed",
+        "Use it heavily during the free month, it costs money after",
+        "Night discount (0:00-8:00 Beijing time) saves 20%",
+        "Cache hits are extremely cheap — multi-turn is cheaper than first turn",
+        "V2.5-Pro requires a paid Token Plan",
+        "Import Claude Code config for seamless switch"
       ],
-      "plans": [],
-      "last_updated": "2026-05-18",
+      "plans": [
+        {
+          "name": "MiMo Auto（免费通道）",
+          "name_en": "MiMo Auto (Free)",
+          "price": "限时免费1个月",
+          "price_en": "Free for 1 month",
+          "credits": "无限（MiMo-V2.5）",
+          "credits_en": "Unlimited (MiMo-V2.5)"
+        },
+        {
+          "name": "Token Plan Lite",
+          "name_en": "Token Plan Lite",
+          "price": "见官网",
+          "price_en": "See official site",
+          "credits": "4.1B Credits/月",
+          "credits_en": "4.1B Credits/month"
+        },
+        {
+          "name": "Token Plan Standard",
+          "name_en": "Token Plan Standard",
+          "price": "见官网",
+          "price_en": "See official site",
+          "credits": "更多Credits/月",
+          "credits_en": "More Credits/month"
+        },
+        {
+          "name": "Token Plan Pro",
+          "name_en": "Token Plan Pro",
+          "price": "见官网",
+          "price_en": "See official site",
+          "credits": "大量Credits/月",
+          "credits_en": "Large Credits/month"
+        },
+        {
+          "name": "Token Plan Max",
+          "name_en": "Token Plan Max",
+          "price": "见官网",
+          "price_en": "See official site",
+          "credits": "海量Credits/月",
+          "credits_en": "Massive Credits/month"
+        }
+      ],
+      "last_updated": "2026-06-11",
       "url_zh": "https://aifreeplan.com/zh/llm/xiaomi-mimo",
       "url_en": "https://aifreeplan.com/en/llm/xiaomi-mimo"
     },
