@@ -25,8 +25,8 @@ def generate_guide_html(slug, title_zh, title_en, description_zh, description_en
 <meta property="og:url" content="https://aifreeplan.com/zh/guides/{slug}">
 <meta property="og:site_name" content="AIFreePlan">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://aifreeplan.com/og-image.jpg">
-<meta name="twitter:image" content="https://aifreeplan.com/og-image.jpg">
+<meta property="og:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:image" content="https://aifreeplan.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{title_zh} | AIFreePlan">
 <meta name="twitter:description" content="{description_zh}">
@@ -137,8 +137,8 @@ body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans 
 <meta property="og:url" content="https://aifreeplan.com/en/guides/{slug}">
 <meta property="og:site_name" content="AIFreePlan">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://aifreeplan.com/og-image.jpg">
-<meta name="twitter:image" content="https://aifreeplan.com/og-image.jpg">
+<meta property="og:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:image" content="https://aifreeplan.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{title_en} | AIFreePlan">
 <meta name="twitter:description" content="{description_en}">
