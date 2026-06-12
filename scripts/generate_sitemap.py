@@ -56,6 +56,15 @@ def generate_sitemap():
             'changefreq': 'weekly'
         })
     
+    # 去重
+    seen = set()
+    unique_pages = []
+    for page in pages:
+        if page['url'] not in seen:
+            seen.add(page['url'])
+            unique_pages.append(page)
+    pages = unique_pages
+
     # 生成sitemap.xml
     today = datetime.now().strftime('%Y-%m-%d')
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n'
