@@ -290,80 +290,37 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
     <a href="/en">Home</a> / <a href="/en/guides">Guides</a> / <span>Cline Free Open Source Coding</span>
   </div>
   <p>Sources: Cline GitHub repository, official docs, community benchmarks. Verified May 2026.</p>
-</blockquote>
 <hr>
-<h2 id="quick-answer">Quick Answer</h2><p>Cline is a fully open-source AI coding assistant under Apache 2.0 — free to use, modify, and commercialize. It&#39;s model-agnostic: connect Claude, GPT, Gemini, DeepSeek, or 200+ models via OpenRouter. Bring your own API key, no subscription fees.</p>
+<h2 id="quick-answer">A fully open-source coding assistant that doesn't lock you into any model</h2>
+<img src="/data/articles/cline-homepage.webp" alt="Cline open source coding assistant" loading="lazy" decoding="async">
+<p>Everyone who's used GitHub Copilot has the same gripe: $10/month, limited models, and if you want to switch you're out of luck. Cursor is worse at $20/month. Then I found Cline — completely open source under Apache 2.0, and it doesn't lock you into any model. Claude, GPT, Gemini, DeepSeek, over 200 models you can connect. Bring your own API key, no subscription fees.</p>
+
 <hr>
-<h2 id="what-is-cline">What Is Cline</h2><p><img src="/data/articles/cline-homepage.webp" alt="Cline AI Coding Agent - Free VS Code Plugin" loading="lazy" decoding="async">)</p>
-<p>Cline is an open-source AI coding assistant that works in VS Code, JetBrains, and the command line. Unlike GitHub Copilot, Cursor, and other commercial tools, Cline has key differences:</p>
-<p><strong>Fully open source:</strong> Code on GitHub, Apache 2.0 license. Use it commercially, modify it, redistribute it.</p>
-<p><strong>Model-agnostic:</strong> Connect any AI model — Claude, GPT-4o, Gemini, DeepSeek, Qwen. Via OpenRouter, access 200+ models.</p>
-<p><strong>Bring your own API key:</strong> No subscription. You pay only for API calls. With DeepSeek, coding tasks cost roughly $0.01-0.05 per hour.</p>
-<p><strong>Community-driven:</strong> 10K+ GitHub stars, frequent updates, active community.</p>
+<h2 id="what-is-cline">What Cline actually is</h2>
+<img src="/data/articles/cline-homepage.webp" alt="Cline AI Coding Agent - Free VS Code Plugin" loading="lazy" decoding="async">
+<p>Cline is an open-source AI coding assistant that runs in VS Code, JetBrains, and the command line. Unlike commercial tools, the code is fully public on GitHub under Apache 2.0 — you can use it commercially, modify it, redistribute it, no questions asked. Model-wise, you can connect Claude, GPT-4o, Gemini, DeepSeek, Qwen, or 200+ models through OpenRouter. Cost-wise you only pay for API calls — with DeepSeek, coding tasks run about $0.01-0.05 per hour. GitHub stars are over 10K with a very active community.</p>
+
 <hr>
-<h2 id="how-cline-compares-to-paid-tools">How Cline Compares to Paid Tools</h2><p><img src="/data/articles/cline-comparison.webp" alt="Cline AI coding agent - competitive analysis" loading="lazy" decoding="async">)</p>
-<p><strong>Cline vs GitHub Copilot vs Cursor vs Windsurf</strong></p>
-<p>Price: Cline free (BYOK) / Copilot $10/month / Cursor $20/month / Windsurf $15/month
-Models: Cline 200+ / Copilot GPT-4o+Claude / Cursor multi-model / Windsurf multi-model
-Open source: Cline yes / Copilot no / Cursor no / Windsurf no
-Commercial use: Cline Apache 2.0 / Copilot student free / Cursor paid / Windsurf paid
-IDE support: Cline VS Code+JetBrains+CLI / Copilot VS Code+JetBrains / Cursor own / Windsurf own</p>
-<p><strong>The key difference:</strong> Cline&#39;s &quot;free&quot; means truly free — no feature limits, no usage caps, no queuing. Your only cost is API fees, which you control by choosing cheaper models.</p>
+<h2 id="how-cline-compares-to-paid-tools">How it stacks up against Copilot and Cursor</h2>
+<img src="/data/articles/cline-comparison.webp" alt="Cline AI coding agent - competitive analysis" loading="lazy" decoding="async">
+<p>Price: Cline is free (BYOK), Copilot is $10/month, Cursor $20/month, Windsurf $15/month. Model count: Cline offers 200+, the others give you a handful. Open source: only Cline is. IDE support: Cline covers VS Code, JetBrains, and CLI; Copilot works in those IDEs too; Cursor and Windsurf are locked to their own. The key difference is that Cline's "free" means truly free — no feature limits, no usage caps, no queuing. Your only cost is API fees, which you control by choosing cheaper models.</p>
+
 <hr>
-<h2 id="plan-act-dual-mode">Plan/Act Dual Mode</h2><p>Cline&#39;s smartest design choice is its two operating modes:</p>
-<p><strong>Plan mode:</strong></p>
-<ul>
-<li>Cline analyzes your requirements</li>
-<li>Creates a modification plan</li>
-<li>Lists which files to change and how</li>
-<li>You approve before execution</li>
-</ul>
-<p><strong>Act mode:</strong></p>
-<ul>
-<li>Cline executes the task directly</li>
-<li>Creates/modifies files automatically</li>
-<li>Runs terminal commands</li>
-<li>Auto-fixes errors</li>
-</ul>
-<p><strong>Strategy:</strong> Use Plan mode first to review the approach, then switch to Act mode to execute. More controlled, fewer surprises.</p>
+<h2 id="plan-act-dual-mode">The smartest design choice: Plan/Act dual mode</h2>
+<p>Cline has two operating modes, which I think is its cleverest feature. In Plan mode, Cline analyzes your requirements, builds a modification plan, lists which files to change and how, and waits for your approval before doing anything. In Act mode, it just gets to work — creating and modifying files, running terminal commands, fixing bugs. My approach: start with Plan to review the strategy, then switch to Act to execute. More controlled, fewer surprises.</p>
+
 <hr>
-<h2 id="kanban-multi-task-board">Kanban Multi-Task Board</h2><p>Cline has a unique Kanban board feature. Launch multiple coding tasks simultaneously, and Cline processes them in parallel:</p>
-<ul>
-<li>Task 1: Refactor user module</li>
-<li>Task 2: Fix login bug</li>
-<li>Task 3: Write unit tests</li>
-</ul>
-<p>All three run concurrently. Monitor progress on the board. Especially useful for large projects.</p>
+<h2 id="kanban-multi-task-board">Kanban board: run multiple tasks in parallel</h2>
+<p>Cline has a unique Kanban board feature where you can launch multiple coding tasks simultaneously and process them in parallel. "Refactor user module," "fix login bug," and "write unit tests" all running at once, with progress visible on the board. This is particularly useful for larger projects.</p>
+
 <hr>
-<h2 id="how-to-use-cline-cheaply">How to Use Cline Cheaply</h2><p>Since Cline requires your own API key, here&#39;s how to minimize costs:</p>
-<p><strong>Option 1: DeepSeek (cheapest)</strong></p>
-<ul>
-<li>DeepSeek V4 API pricing is extremely low</li>
-<li>Coding tasks: ~$0.01-0.05/hour</li>
-<li>Strong Chinese programming understanding</li>
-</ul>
-<p><strong>Option 2: Claude Sonnet (best value)</strong></p>
-<ul>
-<li>$3/million input tokens</li>
-<li>One of the strongest coding models</li>
-<li>Heavy daily use: ~$0.5-2</li>
-</ul>
-<p><strong>Option 3: OpenRouter (most flexible)</strong></p>
-<ul>
-<li>One key for 200+ models</li>
-<li>Switch models per task</li>
-<li>Transparent pricing</li>
-</ul>
-<p>DeepSeek + Cline is currently the cheapest AI coding setup available. Cheaper than GitHub Copilot Free (which caps at 2,000 completions). Cline has no cap.</p>
-<p>For more free coding tools, see <a href="/en/guides/freebuff-free-coding-agent">Freebuff free coding agent</a> and <a href="/en/guides/atomcode-codingplan-glm51">AtomCode CodingPlan guide</a>.</p>
+<h2 id="how-to-use-cline-cheaply">How to keep costs near zero</h2>
+<p>Since you need your own API key, what's the cheapest path? DeepSeek is the bottom of the barrel price-wise — V4 API costs are extremely low, coding tasks run about $0.01-0.05 per hour, and it handles Chinese programming context well. Best value is Claude Sonnet at $3/million input tokens — one of the strongest coding models, heavy daily use runs about $0.5-2. Most flexible is OpenRouter — one key for 200+ models, switch per task, transparent pricing. On a tight budget? DeepSeek plus Cline is currently the cheapest AI coding setup available, beating even GitHub Copilot Free which caps at 2,000 completions.</p>
+<p>For more free coding tools, check out <a href="/en/guides/freebuff-free-coding-agent">Freebuff free coding agent</a> and <a href="/en/guides/atomcode-codingplan-glm51">AtomCode CodingPlan guide</a>.</p>
+
 <hr>
-</section> 
-<h2>⚠️ 3 Common Pitfalls for Beginners</h2>
-<ul>
-<li><strong>You need your own API Key</strong>: Cline is free and open-source, but requires an AI model API key (like <a href="/en/llm/deepseek">DeepSeek</a> or OpenAI). Without one, Cline can't work</li>
-<li><strong>API costs are unpredictable</strong>: Cline calls APIs by token — complex tasks can burn lots of tokens. Set token limits to avoid surprise bills</li>
-<li><strong>Works alongside Cursor/Windsurf</strong>: Cline is a VS Code plugin that can coexist with <a href="/en/coding/cursor">Cursor</a> or <a href="/en/coding/windsurf">Windsurf</a>. Different tools for different scenarios</li>
-</ul>
+<h2 id="common-pitfalls">Common pitfalls for newcomers</h2>
+<p>Cline is free and open-source, but you do need your own API key — without one, it's an empty shell. Many people install it and wonder why it doesn't work; that's why. API costs are token-based, so complex tasks can eat through tokens fast — set an upper limit to avoid surprise bills. And yes, it works alongside Cursor or Windsurf since it's just a VS Code plugin — different tools for different scenarios.</p>
 
 <h2>📊 Free Coding Assistant Quota Comparison</h2>
 <table>

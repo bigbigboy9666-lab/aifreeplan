@@ -280,105 +280,31 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
   <div class="breadcrumb">
     <a href="/zh">首页</a> / <a href="/zh/guides">攻略</a> / <span>Minimax M27 Free Coding Openha</span>
   </div>
-  <p><strong>核心数据：</strong></p>
-<ul>
-<li>免费额度：无明确限制（OpenHands补贴成本）</li>
-<li>支持语言：Python、JavaScript、TypeScript、Go、Rust等主流语言</li>
-<li>部署方式：云端IDE，浏览器直接用</li>
-<li>绑定GitHub后可以直接帮你提PR</li>
-</ul>
+  <p>2026 年 3 月，MiniMax 发布了 M2.7 模型，号称"自我进化"，在 SWE-bench Pro 上跑出了 56.22% 的成绩，追平 GPT-5.3-Codex。说实话这个数据是 MiniMax 自己报的没有独立验证，但 OpenHands 选它做默认免费模型，说明在实际编码场景里确实够用。</p>
+<p><strong>核心数据：</strong>免费额度没有明确限制（OpenHands 补贴成本），支持 Python、JavaScript、TypeScript、Go、Rust 等主流语言，云端 IDE 浏览器直接用，绑定 GitHub 后可以直接帮你提 PR。</p>
 <hr>
-<h2 id="什么是minimax-m2-7">
-<img src="/data/articles/minimax-homepage.jpg" alt="MiniMax 官网" loading="lazy" decoding="async">什么是MiniMax M2.7</h2><p>MiniMax M2.7是稀宇科技（MiniMax）在2026年3月发布的Agent旗舰模型，主打&quot;自我进化&quot;——模型能参与自己的训练过程，在SWE-bench Pro上跑出了56.22%的成绩，追平GPT-5.3-Codex。</p>
-<p>不过说实话，这些benchmark数据都是MiniMax自己报的，没有独立第三方验证。但OpenHands选它做默认免费模型，说明至少在实际编码场景里够用。</p>
-<p><strong>技术亮点：</strong></p>
-<ul>
-<li>MoE架构，10B激活参数</li>
-<li>支持多智能体协作</li>
-<li>开源权重（HuggingFace可下载），但商用需要MiniMax书面授权</li>
-</ul>
+<h2 id="什么是minimax-m2-7">什么是 MiniMax M2.7</h2>
+<img src="/data/articles/minimax-homepage.jpg" alt="MiniMax 官网" loading="lazy" decoding="async">
+<p>M2.7 是稀宇科技（MiniMax）的 Agent 旗舰模型，主打"自我进化"——模型能参与自己的训练过程。技术上用的是 MoE 架构，10B 激活参数，支持多智能体协作，权重在 HuggingFace 上可以下载但商用需要 MiniMax 书面授权。</p>
+
 <hr>
-<h2 id="openhands是什么">OpenHands是什么</h2>
+<h2 id="openhands是什么">OpenHands 是什么</h2>
 <img src="/data/articles/openhands-homepage.jpg" alt="OpenHands AI编程平台" loading="lazy" decoding="async">
-<img src="/data/articles/minimax-homepage.jpg" alt="MiniMax 官网 - 功能亮点" loading="lazy" decoding="async"><p>OpenHands（前身是OpenDevin）是一个开源的AI编程平台，GitHub上5万多星。它的定位是&quot;AI软件工程师&quot;——你给它一个任务描述，它能自己写代码、跑测试、修bug。</p>
-<p><strong>为什么免费：</strong> OpenHands用MiniMax模型做免费层的默认模型，相当于MiniMax补贴获客成本。你用的不是MiniMax官方API（那个要$0.3/M tokens），而是OpenHands的免费额度。</p>
+<p>OpenHands（前身是 OpenDevin）是一个开源 AI 编程平台，GitHub 上 5 万多星。定位是"AI 软件工程师"——给它一个任务描述，它能自己写代码、跑测试、修 bug。为什么免费？因为 OpenHands 用 MiniMax 模型做免费层的默认模型，相当于 MiniMax 在补贴获客成本。你用的不是 MiniMax 官方 API（那个要 $0.3/M tokens），而是 OpenHands 的免费额度。</p>
+
 <hr>
-<h2 id="怎么用-5步">怎么用（5步）</h2>
+<h2 id="怎么用-5步">怎么用，5 步搞定</h2>
 <img src="/data/articles/openhands-homepage.jpg" alt="OpenHands AI编程平台 - 功能亮点" loading="lazy" decoding="async">
-<img src="/data/articles/minimax-homepage.jpg" alt="MiniMax 官网 - 使用界面" loading="lazy" decoding="async"><h3 id="第1步-打开openhands">第1步：打开OpenHands</h3><p>访问 <a href="https://app.all-hands.dev" target="_blank" rel="noopener">https://app.all-hands.dev</a></p>
-<h3 id="第2步-登录">第2步：登录</h3><p>用GitHub或GitLab账号登录。不支持Google登录。</p>
-<h3 id="第3步-选择模型">第3步：选择模型</h3><p>登录后默认就是MiniMax模型，不需要额外配置API密钥。</p>
-<h3 id="第4步-创建项目">第4步：创建项目</h3><p>可以直接在界面上创建新项目，也可以绑定已有的GitHub仓库。</p>
-<h3 id="第5步-给任务">第5步：给任务</h3><p>用自然语言描述你要做什么，比如：</p>
-<ul>
-<li>&quot;帮我写一个Python爬虫，抓取豆瓣Top250电影&quot;</li>
-<li>&quot;这个函数有bug，帮我修一下&quot;</li>
-<li>&quot;帮我把这段JavaScript代码重构成TypeScript&quot;</li>
-</ul>
-<p>绑定GitHub后，OpenHands可以直接帮你提PR。</p>
+<p>第一步，访问 <a href="https://app.all-hands.dev" target="_blank" rel="noopener">https://app.all-hands.dev</a>。第二步，用 GitHub 或 GitLab 账号登录（不支持 Google 登录）。第三步，登录后默认就是 MiniMax 模型，不需要额外配置 API 密钥。第四步，可以在界面上创建新项目，也可以绑定已有的 GitHub 仓库。第五步，用自然语言描述你要做什么，比如"帮我写一个 Python 爬虫抓取豆瓣 Top250 电影"、"这个函数有 bug 帮我修一下"、"帮我把这段 JavaScript 重构成 TypeScript"。绑定 GitHub 后，OpenHands 可以直接帮你提 PR。</p>
+
 <hr>
-<h2 id="实际体验">实际体验</h2>
-<img src="/data/articles/openhands-homepage.jpg" alt="OpenHands AI编程平台 - 使用界面" loading="lazy" decoding="async"><p><strong>优点：</strong></p>
-<ul>
-<li>真的免费，不需要折腾API密钥</li>
-<li>能处理中等复杂度的编程任务</li>
-<li>支持直接操作GitHub仓库</li>
-<li>云端运行，本地不需要装环境</li>
-</ul>
-<p><strong>缺点：</strong></p>
-<ul>
-<li>响应速度比Claude/GPT慢</li>
-<li>复杂项目可能需要多轮对话</li>
-<li>免费层可能有并发限制（高峰期要排队）</li>
-<li>模型能力上限不如Claude Opus或GPT-4o</li>
-</ul>
+<h2 id="实际体验">实际体验怎么样</h2>
+<img src="/data/articles/openhands-homepage.jpg" alt="OpenHands AI编程平台 - 使用界面" loading="lazy" decoding="async">
+<p>优点是真免费不需要折腾 API 密钥，能处理中等复杂度的编程任务，支持直接操作 GitHub 仓库，云端运行本地不用装环境。缺点是响应速度比 Claude/GPT 慢，复杂项目可能需要多轮对话，免费层高峰期可能要排队，模型能力上限不如 Claude Opus 或 GPT-4o。</p>
+
 <hr>
-<h2 id="和其他免费编码工具对比">和其他免费编码工具对比</h2><table>
-<thead>
-<tr>
-<th>工具</th>
-<th>免费额度</th>
-<th>模型</th>
-<th>特点</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>OpenHands + MiniMax</td>
-<td>无明确限制</td>
-<td>MiniMax M2.7</td>
-<td>云端IDE，GitHub集成</td>
-</tr>
-<tr>
-<td>Cursor</td>
-<td>每月50次请求</td>
-<td>GPT-4o-mini</td>
-<td>本地IDE，插件形式</td>
-</tr>
-<tr>
-<td>GitHub Copilot</td>
-<td>每月2000次补全</td>
-<td>GPT-4o</td>
-<td>代码补全为主</td>
-</tr>
-<tr>
-<td>Cline</td>
-<td>按API计费</td>
-<td>多模型</td>
-<td>VS Code插件，需自备密钥</td>
-</tr>
-<tr>
-<td>Windsurf</td>
-<td>有限免费额度</td>
-<td>自研模型</td>
-<td>本地IDE</td>
-</tr>
-</tbody></table>
-<p><strong>选谁：</strong> 如果你只是偶尔写点代码，不想花钱也不想折腾API密钥，OpenHands是最省心的选择。如果你是重度开发者，Cursor或Copilot的体验更好。</p>
-<hr>
-<h2 id="faq">FAQ</h2><h3 id="openhands的免费额度有上限吗">OpenHands的免费额度有上限吗？</h3><p>目前没有明确的使用量限制，但高峰期可能会排队。如果遇到限流，换个时间段再试。</p>
-<h3 id="能用minimax-m2-7的官方api吗">能用MiniMax M2.7的官方API吗？</h3><p>可以，但官方API不是免费的（$0.3/M input tokens）。想要免费用就通过OpenHands。</p>
-<h3 id="和直接用minimax-agent有什么区别">和直接用MiniMax Agent有什么区别？</h3><p>MiniMax自己的Agent（agent.minimax.io）也能免费用，但OpenHands的优势是GitHub集成和完整的开发环境。</p>
-<h3 id="这个模型能替代claude或gpt吗">这个模型能替代Claude或GPT吗？</h3><p>对于日常编码任务够用，但复杂项目还是Claude/GPT更强。建议把它当免费备选，主力还是用更好的模型。</p>
+<h2 id="和其他免费编码工具对比">和其他免费编码工具比谁更省心</h2>
+<p>跟 Cursor（每月 50 次请求，用 GPT-4o-mini）、GitHub Copilot（每月 2000 次补全，用 GPT-4o）、Cline（按 API 计费，多模型，需自备密钥）、Windsurf（有限免费额度，自研模型）比起来，OpenHands 加 MiniMax 的组合优势是没有明确使用限制、云端 IDE、GitHub 集成。如果你只是偶尔写点代码不想花钱也不想折腾 API 密钥，OpenHands 是最省心的选择。重度开发者的话，Cursor 或 Copilot 的体验更好。</p>
 </section> 
 <h2>⚠️ 新手最容易踩的2个坑</h2>
 <ul>

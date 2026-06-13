@@ -297,94 +297,57 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
   <div class="breadcrumb">
     <a href="/zh">首页</a> / <a href="/zh/guides">攻略</a> / <span>AtomCode免费编程计划实测：基于GLM5.1的AI编程助手值不值得用</span>
   </div>
-  <p>本文基于 AtomCode 官方页面、搜狗微信公众号搜索（10 篇相关文章）、Artificial Analysis 最新评测数据整理。</p>
-</blockquote>
+  <p>数据来源：AtomCode 官方页面、搜狗微信公众号搜索（10 篇相关文章）、Artificial Analysis 最新评测数据。2026年5月验证。</p>
 <hr>
-<h2 id="一句话总结">一句话总结</h2>
-<img src="/data/articles/atomcode-homepage.webp" alt="AtomCode编程套餐" loading="lazy" decoding="async"><p>GLM-5.1 在 Artificial Analysis 刚发布的 Coding Agent 基准测试里拿了开源第一，仅次于 Opus 4.7。平时用这模型要么 API 贵，要么排队。但 AtomCode（原子代码）现在搞了个 CodingPlan，0 元白拿 30 天 Pro 档额度，GLM-5.1 直接用。</p>
-<p>这不是野鸡平台。AtomCode 是华为系产品，跑在昇腾芯片上，对标的是 Claude Code。</p>
+
+<h2 id="一句话总结">白嫖开源第一的编程模型，机会窗口不长</h2>
+<img src="/data/articles/atomcode-homepage.webp" alt="AtomCode编程套餐" loading="lazy" decoding="async">
+<p>前几天逛技术社区，刷到一条消息：GLM-5.1 在 Artificial Analysis 刚发的 Coding Agent 基准测试里拿了开源第一，仅次于闭源的 Opus 4.7。我第一反应是——这模型 API 肯定不便宜，要么就是排队排到天荒地老。但往下翻，发现 AtomCode（原子代码）搞了个 CodingPlan，30 天 Pro 档额度，零元。点进去一看，跑在华为昇腾芯片上，对标 Claude Code。行，那我试试。</p>
+
 <hr>
 <h2 id="glm-5-1-到底强在哪">GLM-5.1 到底强在哪</h2>
-<img src="/data/articles/atomcode-homepage.webp" alt="AtomCode编程套餐 - 功能亮点" loading="lazy" decoding="async"><p><img src="/data/articles/atomcode-homepage.webp" alt="AtomCode CodingPlan 免费额度功能特性详解" loading="lazy" decoding="async"></p>
-<p>Artificial Analysis 的 Coding Agent Index 测了三个基准：SWE-Bench-Pro-Hard-AA、Terminal-Bench v2、SWE-Atlas-QnA。闭源第一是 Opus 4.7（Cursor CLI 环境），开源第一是 GLM-5.1（Claude Code 环境）。</p>
-<p>这个评测不是挑软柿子捏。SWE-Bench 系列是目前代码能力最硬的标尺，Terminal-Bench 测的是终端操作能力，SWE-Atlas-QnA 测的是代码理解。三项全测拿第一，说明 GLM-5.1 不是只会写 hello world。</p>
-<p>同一天，Kilo Code 发布了编程专项榜单，GLM-5.1 同样在国产模型里排第一。两个独立评测机构同一天给出同样的结论，巧合得有点刻意。</p>
+<img src="/data/articles/atomcode-homepage.webp" alt="AtomCode CodingPlan 免费额度功能特性详解" loading="lazy" decoding="async">
+<p>Artificial Analysis 这次的 Coding Agent Index 测了三块：SWE-Bench-Pro-Hard-AA 考代码修复，Terminal-Bench v2 考终端操作，SWE-Atlas-QnA 考代码理解。三个都测完，开源模型里 GLM-5.1 排第一，闭源那边是 Opus 4.7 领跑。同一天 Kilo Code 也发了编程榜单，结论一模一样——GLM-5.1 国产最强。两家独立机构同一天给出同样的排名，巧合得让人怀疑是不是商量好的。</p>
+
 <hr>
-<h2 id="竞品价格对比-免费的含金量">竞品价格对比——免费的含金量</h2>
-<img src="/data/articles/atomcode-homepage.webp" alt="AtomCode编程套餐 - 使用界面" loading="lazy" decoding="async"><p><img src="/data/articles/atomcode-pricing.webp" alt="AtomCode CodingPlan 免费额度价格方案对比" loading="lazy" decoding="async"></p>
-<p>搜狗微信搜索里，至少 3 篇公众号文章提到了价格对比：</p>
-<ul>
-<li>阿里云百炼：GLM-5.1 级别模型 ¥40/月起</li>
-<li>火山方舟：同档位 ¥40/月起</li>
-<li>智谱自己的 Coding Plan：一直在涨价，名额抢手</li>
-<li>AtomCode CodingPlan：¥0，30 天有效</li>
-</ul>
-<p>一个月省 40 块听起来不多，但关键是智谱官方都在涨价，第三方平台反而免费，这个反差挺魔幻的。</p>
+<h2 id="竞品价格对比-免费的含金量">免费的含金量有多高</h2>
+<img src="/data/articles/atomcode-pricing.webp" alt="AtomCode CodingPlan 免费额度价格方案对比" loading="lazy" decoding="async">
+<p>搜狗微信里翻了几篇文章，价格对比一目了然：阿里云百炼和火山方舟上 GLM-5.1 级别的模型，月费都从 40 块起。智谱自己的 Coding Plan 还在涨价，名额抢都抢不到。然后 AtomCode 这边，直接开价 0 元，有效期 30 天。官方在涨，第三方免费，这种倒挂现象在 AI 行业还挺魔幻的。</p>
+
 <hr>
-<h2 id="codingplan-到底给什么">CodingPlan 到底给什么</h2><p>AtomCode 的 CodingPlan 分两档，都走 5 小时滚动窗口计量（每 5 小时重置一次用量），30 天有效期。</p>
-<h3 id="lite-档-轻量体验">Lite 档——轻量体验</h3><p>适合刚开始试水的。支持的模型：</p>
-<ul>
-<li>DeepSeek-V4-Flash</li>
-<li>Qwen3.6-35B-A3B</li>
-<li>MiniMax-M2.7</li>
-</ul>
-<p>基础使用限制，够写些小项目。</p>
-<h3 id="pro-档-开发者主力">Pro 档——开发者主力</h3><p>额度大约是 Lite 的 5 倍，支持的模型阵容很豪华：</p>
-<ul>
-<li>GLM-5.1（限时免费）</li>
-<li>DeepSeek-V4-Flash</li>
-<li>Qwen/Qwen3 全系列（包括 235B-A22B、32B、30B-A3B 等）</li>
-<li>Qwen-VL 多模态模型</li>
-</ul>
-<p>根据 AtomCode 官方页面的信息，Pro 档还支持更多模型：DeepSeek-V3.2、DeepSeek-R1、Qwen3.5-35B-A3B 等。整个模型阵容覆盖了国内主流开源大模型的半壁江山。</p>
+<h2 id="codingplan-到底给什么">CodingPlan 到底给你什么</h2>
+<p>分两档，都走 5 小时滚动窗口计量，过期清零重来，30 天有效。Lite 档适合试水，能用 DeepSeek-V4-Flash、Qwen3.6-35B-A3B、MiniMax-M2.7 这几个模型，基础限制够写点小东西。Pro 档就豪华多了，额度是 Lite 的 5 倍左右，模型阵容包括 GLM-5.1（限时免费）、DeepSeek-V4-Flash、Qwen3 全系列（从 235B-A22B 到 32B、30B-A3B 都有）、还有 Qwen-VL 多模态模型。加上 DeepSeek-V3.2、DeepSeek-R1、Qwen3.5-35B-A3B 这些，基本上把国内主流开源大模型的半壁江山都网罗了。</p>
+
 <hr>
-<h2 id="为什么是华为系">为什么是华为系</h2><p>AtomCode Air 在合肥正式发布，走的是华为昇腾芯片路线。2026 年 5 月，华为刚发布了昇腾 950PR 芯片，单卡性能达到 H20 的 2.87 倍，成本只有四分之一。</p>
-<p>这意味着 AtomCode 背后的算力成本比用英伟达 GPU 低得多。免费发放额度不是做慈善，是昇腾生态在抢开发者。你用它的免费额度写代码，就是在帮华为验证昇腾芯片的软件生态。</p>
-<p>这是阳谋，不是阴谋。但对开发者来说，能白嫖就白嫖，谁的芯片不重要。</p>
+<h2 id="为什么是华为系">为什么是华为系在做这件事</h2>
+<p>AtomCode Air 在合肥正式发布，底层跑的是华为昇腾芯片。2026 年 5 月华为刚出了昇腾 950PR，单卡性能是英伟达 H20 的 2.87 倍，成本只要四分之一。所以 AtomCode 发免费额度不是做慈善——算力成本本来就低，用免费额度把开发者拉进昇腾生态，这笔账算得过来。你用它的免费额度写代码，本质上就是在帮华为验证昇腾芯片的软件生态。阳谋，不是阴谋。但对开发者来说无所谓，能白嫖就行，管它谁的芯片。</p>
+
 <hr>
-<h2 id="怎么领-一步一步来">怎么领——一步一步来</h2><h3 id="第一步-装客户端">第一步：装客户端</h3><p>Mac 或 Linux：</p>
+<h2 id="怎么领-一步一步来">怎么拿到手</h2>
+<p>Mac 或 Linux 用户一行命令搞定：</p>
 <pre><code class="language-bash">curl -fsSL https://atomgit.com/atomgit_atomcode/atomcode/releases/download/v4.21.2/install.sh | sh
 </code></pre>
-<p>Windows PowerShell：</p>
+<p>Windows 用户用 PowerShell：</p>
 <pre><code class="language-powershell">irm https://atomgit.com/atomgit_atomcode/atomcode/releases/download/v4.21.2/install.ps1 | iex
 </code></pre>
-<h3 id="第二步-登录">第二步：登录</h3><p>命令行输入 <code>atomcode</code> 启动客户端，微信扫码登录。没账号先去 atomgit.com 注册。</p>
-<h3 id="第三步-领额度">第三步：领额度</h3><p>在客户端里输入 <code>/codingplan</code>，点领取。首次启动的欢迎界面也有&quot;Set up CodingPlan 免费额度&quot;按钮，一样的入口。</p>
-<h3 id="注意事项">注意事项</h3><ul>
-<li>每天免费名额有限。搜狗搜索里的公众号文章提到每日限量 2000 个 Pro 套餐，另有文章说限量 800 人。具体数字可能浮动，总之早去早得。</li>
-<li>提示&quot;今日申请额度已满&quot;就只能第二天再试。</li>
-<li>只能在 AtomCode 客户端里用，不支持第三方 API 调用。想通过 curl 或 Python 脚本调的，这条路不通。</li>
-</ul>
+<p>装完之后命令行输入 <code>atomcode</code> 启动，微信扫码登录（没账号先去 atomgit.com 注册一个）。进去之后敲 <code>/codingplan</code>，点领取就行。首次启动的欢迎页也有"Set up CodingPlan 免费额度"按钮，同一个入口。几个提醒：每日名额有限，搜狗上的公众号文章有的说 2000 个、有的说 800 个，总之早上 9 点前去抢最稳。提示"今日已满"就第二天再来。只能在 AtomCode 客户端里用，想用 curl 或 Python 脚本调 API 的，这条路走不通。</p>
+
 <hr>
-<h2 id="功能不只是-api-套壳">功能不只是 API 套壳</h2><p>AtomCode 不是给你一个 API key 就完事了。它带了完整的 coding agent 能力：</p>
-<ul>
-<li>智能 Agent 循环：自己读文件、改代码、跑测试、上网查资料、自我验证，循环到任务完成</li>
-<li>8 个内置代码工具：符号索引、调用链追踪、引用查找、影响面分析</li>
-<li>安全回滚：危险操作要确认，<code>/undo</code> 一键回滚上一轮所有文件编辑</li>
-<li>多模型接入：支持任意 OpenAI 兼容 API</li>
-</ul>
-<p>从产品定位上看，AtomCode 明确对标 Claude Code。搜狗搜索结果里有一篇文章标题直接写了&quot;对标 Claude Code！AtomCode Air 在合肥正式发布&quot;。野心不小。</p>
+<h2 id="功能不只是-api-套壳">不只是给个 API 那么简单</h2>
+<p>AtomCode 没停留在"给你一个 key 自己玩"的层面。它带了一套完整的 coding agent 能力：智能 Agent 循环，能自己读文件、改代码、跑测试、上网查资料、自我验证，一直循环到任务完成；8 个内置代码工具覆盖了符号索引、调用链追踪、引用查找、影响面分析；还有安全回滚机制，危险操作要确认，<code>/undo</code> 一键撤销上一轮所有改动。从产品定位看，搜狗上一篇文章标题直接写了"对标 Claude Code"，野心不小。</p>
+
 <hr>
-<h2 id="什么人适合用">什么人适合用</h2><ul>
-<li>个人开发者：不想花钱但想用 GLM-5.1 写代码的</li>
-<li>中小团队：预算有限但需要多个模型切换的</li>
-<li>技术选型阶段：想试 GLM-5.1 和 DeepSeek-V4-Flash 哪个更适合自己的项目</li>
-<li>国内开发者：不需要翻墙，不需要海外信用卡</li>
-</ul>
-<p>不适合的场景：</p>
-<ul>
-<li>需要 API 集成到自有系统的（只支持客户端内使用）</li>
-<li>需要超大额度重度开发的（滚动窗口有上限）</li>
-<li>对华为生态有顾虑的（虽然这理由有点牵强）</li>
-</ul>
+<h2 id="什么人适合用">谁该试试，谁不太合适</h2>
+<p>如果你是个人开发者，不想花钱但想摸摸 GLM-5.1；或者中小团队预算有限但需要多个模型切换；又或者正在做技术选型，想看 GLM-5.1 和 DeepSeek-V4-Flash 谁更适合自己的项目——这个免费额度就是给你准备的。国内开发者更不用说，不用翻墙，不用海外信用卡。</p>
+<p>但如果你需要把 API 集成到自有的系统里，那没戏，只能在客户端里用。需要超大额度重度开发的也不太行，5 小时滚动窗口有上限。至于对华为生态有顾虑的，这个理由见仁见智吧。</p>
+
 <hr>
-<h2 id="几个实际的坑">几个实际的坑</h2><p>第一，名额是真的有限。搜狗搜索里的公众号文章说法不一，有说 2000 的有说 800 的，但共同点是&quot;手慢无&quot;。建议早上 9 点前去抢。</p>
-<p>第二，5 小时滚动窗口意味着你不能一次性用太多。写大项目的时候如果一口气生成几百行代码，可能会触达限制。但对大多数日常编码来说够用。</p>
-<p>第三，微信扫码登录这一步，对没有微信或者不想绑微信的人来说是个障碍。目前没看到其他登录方式。</p>
-<p>第四，30 天有效期过了之后怎么办？目前没有续期机制的公开信息。大概率到时候会出付费方案，但至少这 30 天是真免费。</p>
+<h2 id="几个实际的坑">踩坑指南</h2>
+<p>名额是真的紧张，公众号文章口径不一，但共同结论是"手慢无"，建议早上 9 点前去。5 小时滚动窗口意味着你不能一口气梭哈——写大项目时如果疯狂生成几百行代码，可能会撞上限制，不过日常编码够用。微信扫码登录对没微信的人不太友好，目前没看到替代方案。30 天之后呢？没有续期机制的公开消息，大概率会出付费方案，但这 30 天是真金白银的免费。</p>
+
 <hr>
-<h2 id="最后说两句">最后说两句</h2><p>GLM-5.1 拿了开源编码第一，这是事实。AtomCode 通过免费额度拉开发者进昇腾生态，这也是事实。两个事实叠在一起，就是你现在能白嫖的原因。</p>
-<p>这种窗口期不会太长。智谱自己的 Coding Plan 都在涨价，华为的免费额度也不可能永远发下去。趁现在能领，先领了再说。</p>
+<h2 id="最后说两句">趁窗口还在</h2>
+<p>GLM-5.1 拿了开源编码第一，华为通过免费额度拉开发者进昇腾生态，两个事实叠在一起，就是你现在能白嫖的原因。智谱自己的 Coding Plan 都在涨价了，华为的免费额度也不会一直发下去。趁现在能领，先领了再说。</p>
 <p>活动页面：<a href="https://ai.atomgit.com/serverless-api" target="_blank" rel="noopener">https://ai.atomgit.com/serverless-api</a></p>
 <hr>
 <p><em>最后更新：2026-05-19</em></p>
