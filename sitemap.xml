@@ -2065,6 +2065,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/zh/guides/pika-free-video-guide</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/guides/pika-free-video-guide</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/zh/guides/freebuff-free-coding-agent</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
