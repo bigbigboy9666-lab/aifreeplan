@@ -367,7 +367,25 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
 A：目前主要限制是<strong>每日Token总量</strong>（约100万）和<strong>并发数</strong>（10 RPS）。没有明确的“调用次数”限制。只要你不搞大规模自动化批量请求，正常开发使用基本够用。两家都未公开说免费版会下线，但长期情况未知。</p>
 <p><strong>Q2：我用的时候提示“系统繁忙”，是被限流了吗？</strong>
 A：大概率是。当你的请求频率超过10 RPS，或者服务器整体负载高时，就会返回错误。建议在代码里做好**重试机制</p>
-</section> <section class="faq-section" style="margin-top:40px"><h2>❓ 常见问题</h2>
+</section> 
+<h2>⚠️ 新手最容易踩的3个坑</h2>
+<ul>
+<li><strong>免费额度随时可能调整</strong>：DeepSeek和通义千问的免费政策都变动过。建议两个都注册，一个主用一个备用</li>
+<li><strong>API调用有并发限制</strong>：免费版API通常有并发数限制，高并发场景需要排队。生产环境建议申请企业版或加缓存</li>
+<li><strong>模型选择影响效果</strong>：DeepSeek-V4和Qwen3.5是各自的最新模型，但免费额度可能只给老版本。用之前确认你拿到的是哪个版本</li>
+</ul>
+
+<h2>📊 免费API额度对比</h2>
+<table>
+<thead><tr><th>工具</th><th>免费额度</th><th>并发限制</th><th>最新模型</th></tr></thead>
+<tbody>
+<tr><td>DeepSeek</td><td>500万token</td><td>有</td><td>DeepSeek-V4</td></tr>
+<tr><td>通义千问</td><td>100万token</td><td>有</td><td>Qwen3.5</td></tr>
+<tr><td><a href="/zh/llm/kimi">Kimi</a></td><td>每天免费额度</td><td>有</td><td>K2.6</td></tr>
+<tr><td><a href="/zh/llm/chatgpt">ChatGPT</a></td><td>网页版免费</td><td>无</td><td>GPT-4o</td></tr>
+</tbody>
+</table>
+<section class="faq-section" style="margin-top:40px"><h2>❓ 常见问题</h2>
 <img src="/data/articles/deepseek-homepage.jpg" alt="DeepSeek vs 通义千问对比 - 功能亮点" loading="lazy" decoding="async">
 <img src="/data/articles/kimi-homepage.jpg" alt="通义千问官网 - 阿里云AI大模型" loading="lazy" decoding="async"><div class="faq-list"><details class="faq-item"><summary>DeepSeek和通义千问哪个API更便宜？</summary><p>DeepSeek V3输入$0.27/百万token，输出$1.1/百万token。通义千问Qwen3输入$0.12/百万token，输出$0.4/百万token。通义千问便宜一半多。</p></details><details class="faq-item"><summary>DeepSeek免费API有额度限制吗？</summary><p>DeepSeek官方API注册送500万token，之后按量付费。通过第三方平台（如DmxAPI、ModelScope）可以免费调用。</p></details><details class="faq-item"><summary>通义千问Qwen3开源吗？</summary><p>是的，Qwen3全系列开源（0.6B到235B），Apache 2.0协议可商用。DeepSeek V3也开源。两个都可以本地部署。</p></details><details class="faq-item"><summary>哪个更适合中文场景？</summary><p>通义千问在中文理解和生成上更稳定，阿里生态整合好。DeepSeek推理能力强，适合复杂逻辑任务。建议两个都试试。</p></details></div></section> <section class="grid-section" style="margin-top:40px"> <div class="grid-header"> <h2>相关工具</h2>
 <img src="/data/articles/deepseek-homepage.jpg" alt="DeepSeek vs 通义千问对比 - 使用界面" loading="lazy" decoding="async">
