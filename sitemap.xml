@@ -1957,6 +1957,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/zh/guides/tabbit-ai-browser-guide</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/guides/tabbit-ai-browser-guide</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/zh/guides/notebooklm-free-research</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
