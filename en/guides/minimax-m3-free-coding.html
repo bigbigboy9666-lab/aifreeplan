@@ -99,68 +99,54 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
 
 <h2>What is MiniMax M3</h2>
 <p>MiniMax M3 is the latest flagship model from MiniMax (稀宇科技), a Chinese AI company founded in 2022. It is not a general chatbot — it is specifically designed for <strong>coding and agentic tasks</strong>. Three things make it stand out:</p>
-<ul>
-<li><strong>MSA (MiniMax Sparse Attention)</strong>: A novel attention architecture with 1M token context window. Per-token compute at 1M context is just 1/20 of the previous generation.</li>
-<li><strong>Native multimodality</strong>: Trained from Step 0 with interleaved text, image, speech, and music data — not stitched together after the fact.</li>
-<li><strong>Open weights</strong>: MiniMax has committed to releasing model weights within 10 days of launch. M3 is the first and only open-weight model combining frontier coding, 1M context, and native multimodality.</li>
-</ul>
+<p><strong>MSA (MiniMax Sparse Attention)</strong>：A novel attention architecture with 1M token context window. Per-token compute at 1M context is just 1/20 of the previous generation.</p>
+<p><strong>Native multimodality</strong>：Trained from Step 0 with interleaved text, image, speech, and music data — not stitched together after the fact.</p>
+<p><strong>Open weights</strong>：MiniMax has committed to releasing model weights within 10 days of launch. M3 is the first and only open-weight model combining frontier coding, 1M context, and native multimodality.</p>
 
 <h2>Coding Benchmarks: Beats GPT-5.5</h2>
 <p>Here is how M3 performs on internationally recognized coding benchmarks:</p>
-<ul>
-<li><strong>SWE-Bench Pro: 59.0%</strong> — Surpasses GPT-5.5 and Gemini 3.1 Pro, approaches Claude Opus 4.7</li>
-<li><strong>Terminal-Bench 2.1: 66.0%</strong> — Terminal operation capability</li>
-<li><strong>MCP Atlas: 74.2%</strong> — Tool calling ability</li>
-<li><strong>KernelBench Hard: 28.8%</strong> — CUDA kernel optimization</li>
-<li><strong>SVG-Bench</strong> — Outperforms Opus 4.7 on SVG generation</li>
-</ul>
+<p><strong>SWE-Bench Pro: 59.0%</strong> — Surpasses GPT-5.5 and Gemini 3.1 Pro, approaches Claude Opus 4.7</p>
+<p><strong>Terminal-Bench 2.1: 66.0%</strong> — Terminal operation capability</p>
+<p><strong>MCP Atlas: 74.2%</strong> — Tool calling ability</p>
+<p><strong>KernelBench Hard: 28.8%</strong> — CUDA kernel optimization</p>
+<p><strong>SVG-Bench</strong> — Outperforms Opus 4.7 on SVG generation</p>
 <p>These are not self-reported numbers. MiniMax ran SWE-Bench with Claude Code as scaffolding (4 runs, averaged), and Terminal-Bench with the official Terminus 2 evaluation framework.</p>
 
 <h2>Real-World Tasks: 12 Hours of Autonomous Paper Reproduction</h2>
 <p>Benchmarks are one thing. Real tasks are another. MiniMax gave M3 an ICLR 2025 Outstanding Paper and asked it to reproduce the results independently:</p>
-<ul>
-<li>Ran autonomously for nearly 12 hours, producing 18 commits and 23 experimental files</li>
-<li>Successfully matched the prediction-probability trends during SFT</li>
-<li>Clearly observed the squeezing effect in DPO experiments</li>
-<li>Required multimodal understanding (curves and formulas), long context (paper + code + logs simultaneously), and strong coding skills</li>
-</ul>
+<p>Ran autonomously for nearly 12 hours, producing 18 commits and 23 experimental files</p>
+<p>Successfully matched the prediction-probability trends during SFT</p>
+<p>Clearly observed the squeezing effect in DPO experiments</p>
+<p>Required multimodal understanding (curves and formulas), long context (paper + code + logs simultaneously), and strong coding skills</p>
 <p>Another test: M3 optimized an FP8 matrix multiplication CUDA kernel on NVIDIA Hopper GPUs. In 24 hours, it completed 147 benchmark submissions and 1,959 tool calls, improving hardware peak utilization from 7.6% to 71.3% — a 9.4x speedup. Most other models stopped making progress within the first 30 submissions.</p>
 
 <h2>Pricing: $20 = 10x Claude Pro</h2>
 <p>This is the most exciting part. MiniMax Token Plan tiers:</p>
-<ul>
-<li><strong>Plus $20/month</strong>: ~1.7 billion tokens/month of M3 usage</li>
-<li><strong>Max $50/month</strong>: ~5.1 billion tokens/month</li>
-<li><strong>Ultra $120/month</strong>: ~9.8 billion tokens/month</li>
-</ul>
+<p><strong>Plus $20/month</strong>：~1.7 billion tokens/month of M3 usage</p>
+<p><strong>Max $50/month</strong>：~5.1 billion tokens/month</p>
+<p><strong>Ultra $120/month</strong>：~9.8 billion tokens/month</p>
 <p>For comparison, Claude Pro is also $20/month but gives you roughly one-tenth the token quota. Text, image, speech, and music all share the same usage pool. Among subscription plans at comparable price points, MiniMax Token Plan offers one of the highest token quotas globally.</p>
 <p>API pricing on OpenRouter: $0.30 per million input tokens, $1.20 per million output tokens. 1M context window, max output 512K tokens.</p>
 
 <h2>How to Try M3 for Free</h2>
 <p>Three ways to experience M3 at zero or low cost:</p>
-<ul>
-<li><strong>¥15 signup credits</strong>: Register at platform.minimaxi.com and get ¥15 in trial credits automatically</li>
-<li><strong>OpenRouter free tier</strong>: Call M3 through OpenRouter API — new users get free credits</li>
-<li><strong>MiniMax Code desktop app</strong>: Download from agent.minimaxi.com/download, works with Token Plan</li>
-</ul>
+<p><strong>¥15 signup credits</strong>：Register at platform.minimaxi.com and get ¥15 in trial credits automatically</p>
+<p><strong>OpenRouter free tier</strong>：Call M3 through OpenRouter API — new users get free credits</p>
+<p><strong>MiniMax Code desktop app</strong>：Download from agent.minimaxi.com/download, works with Token Plan</p>
 
 <h2>MiniMax Code: Purpose-Built for M3</h2>
 <p>MiniMax Code is the official agent coding product, built on the open-source projects OpenCode and Pi. Key features:</p>
-<ul>
-<li><strong>Agent Team</strong>: Breaks large tasks into multi-stage, concurrent, dynamically adjustable workflows, advanced collaboratively by a cluster of agents</li>
-<li><strong>Producer + Verifier</strong>: One agent writes code, another verifies it, forming a self-correcting loop</li>
-<li><strong>Computer Use</strong>: Can operate your computer — e.g., "Open the local ERP client and batch-enter invoice data from this Excel spreadsheet"</li>
-<li><strong>Skills and Memories</strong>: Learns your work habits and turns repetitive tasks into custom skills</li>
-</ul>
+<p><strong>Agent Team</strong>：Breaks large tasks into multi-stage, concurrent, dynamically adjustable workflows, advanced collaboratively by a cluster of agents</p>
+<p><strong>Producer + Verifier</strong>：One agent writes code, another verifies it, forming a self-correcting loop</p>
+<p><strong>Computer Use</strong>：Can operate your computer — e.g., "Open the local ERP client and batch-enter invoice data from this Excel spreadsheet"</p>
+<p><strong>Skills and Memories</strong>：Learns your work habits and turns repetitive tasks into custom skills</p>
 <p>MiniMax Code's Agent Team is similar in direction to Claude Code's recently released Dynamic Workflows. Claude Code emphasizes fixed orchestration based on JS code; MiniMax Code focuses more on deep reflection and continuous error correction.</p>
 
 <h2>M3 vs Top Coding Models</h2>
-<ul>
-<li><strong>M3 vs Claude Opus 4.7</strong>: M3 approaches Opus 4.7 on SWE-Bench Pro but costs a fraction of the price. Opus 4.7 is $5/$25 per million tokens; M3 is $0.30/$1.20</li>
-<li><strong>M3 vs GPT-5.5</strong>: M3 surpasses GPT-5.5 on SWE-Bench Pro. GPT-5.5 scored 83.4% via Codex CLI (different scaffolding); M3 scored 59% via Claude Code (official evaluation)</li>
-<li><strong>M3 vs Gemini 3.1 Pro</strong>: M3 outperforms Gemini 3.1 Pro on multiple benchmarks including coding and multimodal tasks</li>
-<li><strong>M3 vs M2.7</strong>: M3 is a comprehensive upgrade over M2.7 in coding, context length, and multimodality</li>
-</ul>
+<p><strong>M3 vs Claude Opus 4.7</strong>：M3 approaches Opus 4.7 on SWE-Bench Pro but costs a fraction of the price. Opus 4.7 is $5/$25 per million tokens; M3 is $0.30/$1.20</p>
+<p><strong>M3 vs GPT-5.5</strong>：M3 surpasses GPT-5.5 on SWE-Bench Pro. GPT-5.5 scored 83.4% via Codex CLI (different scaffolding); M3 scored 59% via Claude Code (official evaluation)</p>
+<p><strong>M3 vs Gemini 3.1 Pro</strong>：M3 outperforms Gemini 3.1 Pro on multiple benchmarks including coding and multimodal tasks</p>
+<p><strong>M3 vs M2.7</strong>：M3 is a comprehensive upgrade over M2.7 in coding, context length, and multimodality</p>
 
 <h2>MSA Architecture: Why 1M Context Matters</h2>
 <p>MSA (MiniMax Sparse Attention) is the core technical innovation in M3. Compared to DSA and MoBA sparse attention approaches, MSA partitions KV blocks more precisely, achieving higher effective context coverage.</p>
@@ -169,21 +155,17 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
 
 <h2>Limitations</h2>
 <p>Some honest caveats:</p>
-<ul>
-<li>M3's SWE-Bench Pro score (59%) beats GPT-5.5 but still has a gap with Opus 4.7</li>
-<li>The open weights promise ("within 10 days") has not been fulfilled yet as of June 8, 2026</li>
-<li>MiniMax is a relatively young company — ecosystem and community are less mature than OpenAI/Anthropic</li>
-<li>API stability needs time to prove; the official site mentions "continuously improving model serving stability"</li>
-<li>Free credits are limited (¥15); heavy usage requires payment</li>
-</ul>
+<p>M3's SWE-Bench Pro score (59%) beats GPT-5.5 but still has a gap with Opus 4.7</p>
+<p>The open weights promise ("within 10 days") has not been fulfilled yet as of June 8, 2026</p>
+<p>MiniMax is a relatively young company — ecosystem and community are less mature than OpenAI/Anthropic</p>
+<p>API stability needs time to prove; the official site mentions "continuously improving model serving stability"</p>
+<p>Free credits are limited (¥15); heavy usage requires payment</p>
 
 <h2>Who Should Use M3</h2>
-<ul>
-<li><strong>Budget-conscious developers</strong>: $20/month for 1.7B tokens is unbeatable value</li>
-<li><strong>Long-context projects</strong>: 1M context window for large codebase analysis</li>
-<li><strong>Agent/automation use cases</strong>: M3 excels on agentic benchmarks</li>
-<li><strong>Teams wanting open-source models</strong>: Weights are coming soon, enabling local deployment</li>
-</ul>
+<p><strong>Budget-conscious developers</strong>：$20/month for 1.7B tokens is unbeatable value</p>
+<p><strong>Long-context projects</strong>：1M context window for large codebase analysis</p>
+<p><strong>Agent/automation use cases</strong>：M3 excels on agentic benchmarks</p>
+<p><strong>Teams wanting open-source models</strong>：Weights are coming soon, enabling local deployment</p>
 
 <h2 id="comparison">Comparison</h2>
 <table>
