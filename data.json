@@ -3,7 +3,7 @@
   "description": "All AI tools free credits in one table - comprehensive database of free tiers, limits, and pricing",
   "description_zh": "所有AI工具的免费额度一张表看全 - 覆盖视频/图片/大模型/编程/助手五大分类",
   "last_updated": "2026-06-11",
-  "total_tools": 55,
+  "total_tools": 56,
   "categories": [
     {
       "id": "video",
@@ -27,7 +27,7 @@
       "id": "coding",
       "name_zh": "编程助手",
       "name_en": "Coding Assistants",
-      "count": 11
+      "count": 12
     },
     {
       "id": "ai-assistant",
@@ -4761,6 +4761,127 @@
       "last_updated": "2026-06-10",
       "url_zh": "https://aifreeplan.com/zh/llm/xfyun-maas",
       "url_en": "https://aifreeplan.com/en/llm/xfyun-maas"
+    },
+    {
+      "slug": "zhipu-coding-plan",
+      "name": "智谱 GLM Coding Plan",
+      "name_en": "Zhipu GLM Coding Plan",
+      "category": "coding",
+      "category_zh": "编程助手",
+      "category_en": "Coding Assistant",
+      "official_url": "https://z.ai/subscribe",
+      "company": "智谱AI",
+      "description": "智谱推出的AI编程订阅套餐，搭配ZCode编程工具使用。提供免费模型（GLM-4.7-Flash、GLM-4.5-Flash），付费三档：Lite约¥72/月、Pro约¥216/月、Max约¥576/月（均季付）。适配20+编程工具，订阅用户享ZCode 1.5倍配额。",
+      "description_en": "Zhipu's AI coding subscription paired with ZCode IDE. Free models available (GLM-4.7-Flash, GLM-4.5-Flash). Paid tiers: Lite ~$10/mo, Pro ~$30/mo, Max ~$80/mo (quarterly billing). Compatible with 20+ coding tools. Subscribers get 1.5x quota in ZCode.",
+      "rating": 4,
+      "free_credits": {
+        "type": "unlimited",
+        "amount": "GLM-4.7-Flash永久免费（203K上下文），GLM-4.5-Flash永久免费",
+        "amount_en": "GLM-4.7-Flash free forever (203K context), GLM-4.5-Flash free forever",
+        "daily_limit": "无限制",
+        "daily_limit_en": "No limit",
+        "reset": "不适用",
+        "reset_en": "N/A",
+        "models": "GLM-4.7-Flash、GLM-4.5-Flash、GLM-4.6V-Flash、CogView-3-Flash、CogVideoX-Flash",
+        "models_en": "GLM-4.7-Flash, GLM-4.5-Flash, GLM-4.6V-Flash, CogView-3-Flash, CogVideoX-Flash",
+        "resolution": "N/A",
+        "watermark": "N/A",
+        "commercial_use": "免费模型可商用",
+        "commercial_use_en": "Free models allow commercial use"
+      },
+      "paid_from": "Lite $30/季（约¥72/月）",
+      "paid_from_en": "Lite $30/quarter (~$10/mo)",
+      "pros": [
+        "免费模型真免费无限制",
+        "GLM-5.1编程旗舰模型",
+        "适配20+编程工具（Claude Code/Cursor/Cline等）",
+        "订阅送MCP工具（视觉/搜索/阅读）",
+        "ZCode订阅用户1.5倍配额",
+        "国内付款方便（支付宝）"
+      ],
+      "pros_en": [
+        "Free models truly unlimited",
+        "GLM-5.1 flagship coding model",
+        "Works with 20+ coding tools (Claude Code/Cursor/Cline etc)",
+        "Free MCP tools with subscription (vision/search/reader)",
+        "1.5x quota for subscribers in ZCode",
+        "Easy payment via Alipay in China"
+      ],
+      "cons": [
+        "只能季付不能月付",
+        "Flash模型深度不够，复杂任务需付费",
+        "GLM-5需Pro档才解锁",
+        "价格已涨30%+，无首购优惠"
+      ],
+      "cons_en": [
+        "Quarterly billing only, no monthly",
+        "Flash models lack depth for complex tasks",
+        "GLM-5 requires Pro tier",
+        "Prices increased 30%+, no first-purchase discount"
+      ],
+      "features": [
+        "免费Flash模型无限使用",
+        "ZCode 3.0编程工具（自研Agent）",
+        "GLM-5.1/5-Turbo/4.7/4.6多模型",
+        "兼容OpenAI/Claude API格式",
+        "赠送视觉分析/Web搜索/阅读MCP",
+        "支持Claude Code/Cursor/Cline/Codex CLI等20+工具"
+      ],
+      "features_en": [
+        "Unlimited free Flash models",
+        "ZCode 3.0 coding tool (self-developed Agent)",
+        "Multi-model: GLM-5.1/5-Turbo/4.7/4.6",
+        "OpenAI/Claude API compatible",
+        "Free vision/search/reader MCP tools",
+        "Works with Claude Code/Cursor/Cline/Codex CLI and 20+ tools"
+      ],
+      "tips": [
+        "先用免费Flash模型体验，够用就不必订阅",
+        "Lite档性价比最高，日常开发足够",
+        "配合ZCode使用享1.5倍配额加成",
+        "季付折算比月付划算但要一次掏钱多",
+        "注册后在z.ai拿API Key，配置到任意兼容工具"
+      ],
+      "tips_en": [
+        "Start with free Flash models — enough for most tasks",
+        "Lite tier offers best value for daily dev",
+        "Use ZCode for 1.5x quota bonus",
+        "Quarterly billing saves money but costs more upfront",
+        "Get API key from z.ai, configure in any compatible tool"
+      ],
+      "plans": [
+        {
+          "name": "免费",
+          "name_en": "Free",
+          "price": "¥0",
+          "price_en": "$0",
+          "features": "GLM-4.7-Flash、GLM-4.5-Flash无限使用"
+        },
+        {
+          "name": "Lite",
+          "name_en": "Lite",
+          "price": "$30/季（约¥72/月）",
+          "price_en": "$30/quarter (~$10/mo)",
+          "features": "GLM-5.1/5-Turbo/4.7/4.6/4.5-Air，约3倍Claude Pro用量"
+        },
+        {
+          "name": "Pro",
+          "name_en": "Pro",
+          "price": "$90/季（约¥216/月）",
+          "price_en": "$90/quarter (~$30/mo)",
+          "features": "Lite全部+GLM-5，约5倍Lite用量"
+        },
+        {
+          "name": "Max",
+          "name_en": "Max",
+          "price": "$240/季（约¥576/月）",
+          "price_en": "$240/quarter (~$80/mo)",
+          "features": "同Pro模型，约4倍Pro用量"
+        }
+      ],
+      "last_updated": "2026-06-14",
+      "url_zh": "https://aifreeplan.com/zh/coding/zhipu-coding-plan",
+      "url_en": "https://aifreeplan.com/en/coding/zhipu-coding-plan"
     }
   ]
 }

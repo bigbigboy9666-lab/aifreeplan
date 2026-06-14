@@ -1045,6 +1045,18 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/zh/coding/zhipu-coding-plan</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/coding/zhipu-coding-plan</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/zh/coding/v0</loc>
     <lastmod>2026-06-14</lastmod>
     <changefreq>weekly</changefreq>
