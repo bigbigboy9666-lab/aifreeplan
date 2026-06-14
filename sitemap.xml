@@ -217,6 +217,18 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/zh/llm/freetheai</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/llm/freetheai</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/zh/llm/claude</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>

@@ -3,7 +3,7 @@
   "description": "All AI tools free credits in one table - comprehensive database of free tiers, limits, and pricing",
   "description_zh": "所有AI工具的免费额度一张表看全 - 覆盖视频/图片/大模型/编程/助手五大分类",
   "last_updated": "2026-06-11",
-  "total_tools": 62,
+  "total_tools": 63,
   "categories": [
     {
       "id": "video",
@@ -21,7 +21,7 @@
       "id": "llm",
       "name_zh": "AI大模型",
       "name_en": "AI Large Models",
-      "count": 18
+      "count": 19
     },
     {
       "id": "coding",
@@ -5435,6 +5435,100 @@
       "last_updated": "2026-06-14",
       "url_zh": "https://aifreeplan.com/zh/llm/aliyun-bailian",
       "url_en": "https://aifreeplan.com/en/llm/aliyun-bailian"
+    },
+    {
+      "slug": "freetheai",
+      "name": "FreeTheAI",
+      "name_en": "FreeTheAI",
+      "category": "llm",
+      "category_zh": "AI大模型",
+      "category_en": "AI Large Models",
+      "official_url": "https://freetheai.xyz",
+      "company": "FreeTheAI",
+      "description": "免费AI API网关，50+模型统一接入。一个Discord账号拿Key，通吃GPT-5、Claude 4.5、DeepSeek R1、Gemini 3.0、Grok 4等主流模型。OpenAI兼容格式，不绑卡不计费，每分钟30次速率限制，无每日上限。",
+      "description_en": "Free AI API gateway with 50+ models. One Discord account gets a key for GPT-5, Claude 4.5, DeepSeek R1, Gemini 3.0, Grok 4 and more. OpenAI compatible, no credit card, 30 req/min rate limit, no daily cap.",
+      "rating": 3,
+      "free_credits": {
+        "type": "unlimited",
+        "amount": "50+模型永久免费，不计费，无每日上限",
+        "amount_en": "50+ models free forever, no billing, no daily cap",
+        "daily_limit": "无每日限制（速率限制30次/分钟）",
+        "daily_limit_en": "No daily limit (30 req/min rate limit)",
+        "reset": "不适用（永久免费）",
+        "reset_en": "N/A (permanent free)",
+        "models": "GPT-5/4.1/4o、Claude 4.5/4/3.7 Sonnet、DeepSeek R1/V3、Gemini 3.0/2.5 Flash、Grok 4/3等50+",
+        "models_en": "GPT-5/4.1/4o, Claude 4.5/4/3.7 Sonnet, DeepSeek R1/V3, Gemini 3.0/2.5 Flash, Grok 4/3 and 50+ more",
+        "resolution": "N/A",
+        "watermark": "N/A",
+        "commercial_use": "可商用（但无SLA保障）",
+        "commercial_use_en": "Commercial use allowed (no SLA)"
+      },
+      "paid_from": "完全免费",
+      "paid_from_en": "Completely free",
+      "pros": [
+        "50+模型一个Key通吃",
+        "不绑卡不计费无每日上限",
+        "100% OpenAI兼容格式",
+        "覆盖GPT/Claude/DeepSeek/Gemini/Grok全家族",
+        "API国内可直连（注册Discord需魔法）",
+        "Key永久有效"
+      ],
+      "pros_en": [
+        "50+ models with one key",
+        "No credit card, no billing, no daily cap",
+        "100% OpenAI compatible",
+        "Full GPT/Claude/DeepSeek/Gemini/Grok coverage",
+        "API works from China (Discord signup needs VPN)",
+        "Key is permanent"
+      ],
+      "cons": [
+        "注册Discord需要魔法环境",
+        "速率限制30次/分钟，高并发不行",
+        "免费公共服务无SLA保障",
+        "不适合生产环境",
+        "模型名需加bbl/前缀"
+      ],
+      "cons_en": [
+        "Discord signup needs VPN",
+        "30 req/min rate limit, not for high concurrency",
+        "Free public service, no SLA",
+        "Not suitable for production",
+        "Model names need bbl/ prefix"
+      ],
+      "features": [
+        "50+模型统一接入",
+        "GPT-5/Claude 4.5等旗舰模型",
+        "OpenAI兼容API格式",
+        "Discord /signup 拿Key",
+        "支持对话/图片/视频/TTS",
+        "国内API可直连"
+      ],
+      "features_en": [
+        "50+ models unified access",
+        "GPT-5/Claude 4.5 flagship models",
+        "OpenAI compatible API",
+        "Discord /signup for key",
+        "Chat/image/video/TTS support",
+        "API accessible from China"
+      ],
+      "tips": [
+        "Discord注册需魔法，但API调用国内可直连",
+        "模型名要加bbl/前缀如bbl/gpt-5",
+        "API地址: https://api.freetheai.xyz/v1",
+        "Key丢了在Discord运行/resetkey重新获取",
+        "适合开发测试，不建议上生产"
+      ],
+      "tips_en": [
+        "Discord needs VPN, but API works from China",
+        "Model names need bbl/ prefix like bbl/gpt-5",
+        "API endpoint: https://api.freetheai.xyz/v1",
+        "Run /resetkey in Discord if key lost",
+        "Best for dev/testing, not production"
+      ],
+      "plans": [],
+      "last_updated": "2026-06-14",
+      "url_zh": "https://aifreeplan.com/zh/llm/freetheai",
+      "url_en": "https://aifreeplan.com/en/llm/freetheai"
     }
   ]
 }
