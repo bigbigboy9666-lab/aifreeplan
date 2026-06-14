@@ -3,7 +3,7 @@
   "description": "All AI tools free credits in one table - comprehensive database of free tiers, limits, and pricing",
   "description_zh": "所有AI工具的免费额度一张表看全 - 覆盖视频/图片/大模型/编程/助手五大分类",
   "last_updated": "2026-06-11",
-  "total_tools": 61,
+  "total_tools": 62,
   "categories": [
     {
       "id": "video",
@@ -21,7 +21,7 @@
       "id": "llm",
       "name_zh": "AI大模型",
       "name_en": "AI Large Models",
-      "count": 17
+      "count": 18
     },
     {
       "id": "coding",
@@ -5343,6 +5343,98 @@
       "last_updated": "2026-06-14",
       "url_zh": "https://aifreeplan.com/zh/llm/cline-bot-api",
       "url_en": "https://aifreeplan.com/en/llm/cline-bot-api"
+    },
+    {
+      "slug": "aliyun-bailian",
+      "name": "阿里百炼",
+      "name_en": "Alibaba Bailian",
+      "category": "llm",
+      "category_zh": "AI大模型",
+      "category_en": "AI Large Models",
+      "official_url": "https://bailian.console.aliyun.com",
+      "company": "阿里云",
+      "description": "阿里云大模型服务平台（DashScope），130+模型统一API接入。新用户每模型赠送100万Token免费额度，覆盖Qwen系列、视觉模型、通义万相图片生成等。所有模型共用一个API Key，兼容OpenAI格式。",
+      "description_en": "Alibaba Cloud's LLM platform (DashScope) with 130+ models via unified API. New users get 1M free tokens per model, covering Qwen series, vision models, Tongyi Wanxiang image generation. All models share one API key, OpenAI compatible.",
+      "rating": 4,
+      "free_credits": {
+        "type": "one-time",
+        "amount": "新用户每模型赠送约100万Token，130+模型均有免费额度",
+        "amount_en": "~1M free tokens per model for new users, 130+ models with free credits",
+        "daily_limit": "无每日限制（按额度消耗）",
+        "daily_limit_en": "No daily limit (credit-based)",
+        "reset": "不重置（一次性额度，用完为止）",
+        "reset_en": "No reset (one-time, lasts until consumed)",
+        "models": "Qwen3.6-Flash、Qwen-VL-OCR、通义万相、DeepSeek等130+模型",
+        "models_en": "Qwen3.6-Flash, Qwen-VL-OCR, Tongyi Wanxiang, DeepSeek and 130+ more",
+        "resolution": "N/A",
+        "watermark": "N/A",
+        "commercial_use": "可商用",
+        "commercial_use_en": "Commercial use allowed"
+      },
+      "paid_from": "免费额度用完后按量付费",
+      "paid_from_en": "Pay-per-use after free credits consumed",
+      "pros": [
+        "130+模型统一API、统一Key",
+        "每模型约100万Token免费",
+        "Qwen系列国内直连延迟低",
+        "兼容OpenAI格式，接入简单",
+        "覆盖文本/视觉/图片生成/语音全模态",
+        "阿里云大厂稳定可靠"
+      ],
+      "pros_en": [
+        "130+ models, unified API and key",
+        "~1M free tokens per model",
+        "Qwen series, low latency in China",
+        "OpenAI compatible, easy integration",
+        "Full modality: text/vision/image/voice",
+        "Alibaba Cloud stable and reliable"
+      ],
+      "cons": [
+        "需要实名认证（身份证）",
+        "免费额度不直接显示，要进模型卡片查",
+        "API Key位置藏得深",
+        "一次性额度，不刷新"
+      ],
+      "cons_en": [
+        "Requires ID verification",
+        "Free credits not directly visible, check per model",
+        "API Key location is hidden deep",
+        "One-time credits, no refresh"
+      ],
+      "features": [
+        "130+模型统一接入",
+        "Qwen3.6-Flash快速模型",
+        "Qwen-VL-OCR视觉识别",
+        "通义万相图片生成",
+        "所有模型共用一个API Key",
+        "兼容OpenAI SDK格式"
+      ],
+      "features_en": [
+        "130+ models unified access",
+        "Qwen3.6-Flash fast model",
+        "Qwen-VL-OCR vision recognition",
+        "Tongyi Wanxiang image generation",
+        "All models share one API key",
+        "OpenAI SDK compatible"
+      ],
+      "tips": [
+        "API Key在模型广场左下角API-KEY里",
+        "免费额度要进每个模型卡片的计费概览里看",
+        "所有模型地址都是dashscope.aliyuncs.com",
+        "切换模型只改model名字，其他不动",
+        "支付宝/淘宝账号直接登录，不用重新注册"
+      ],
+      "tips_en": [
+        "API Key is in Model Square bottom-left corner",
+        "Check free credits in each model's billing overview",
+        "All models use dashscope.aliyuncs.com endpoint",
+        "Switch models by changing model name only",
+        "Login with Alipay/Taobao account directly"
+      ],
+      "plans": [],
+      "last_updated": "2026-06-14",
+      "url_zh": "https://aifreeplan.com/zh/llm/aliyun-bailian",
+      "url_en": "https://aifreeplan.com/en/llm/aliyun-bailian"
     }
   ]
 }
