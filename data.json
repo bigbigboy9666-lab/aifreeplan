@@ -3,7 +3,7 @@
   "description": "All AI tools free credits in one table - comprehensive database of free tiers, limits, and pricing",
   "description_zh": "所有AI工具的免费额度一张表看全 - 覆盖视频/图片/大模型/编程/助手五大分类",
   "last_updated": "2026-06-11",
-  "total_tools": 56,
+  "total_tools": 60,
   "categories": [
     {
       "id": "video",
@@ -21,7 +21,7 @@
       "id": "llm",
       "name_zh": "AI大模型",
       "name_en": "AI Large Models",
-      "count": 12
+      "count": 16
     },
     {
       "id": "coding",
@@ -4882,6 +4882,377 @@
       "last_updated": "2026-06-14",
       "url_zh": "https://aifreeplan.com/zh/coding/zhipu-coding-plan",
       "url_en": "https://aifreeplan.com/en/coding/zhipu-coding-plan"
+    },
+    {
+      "slug": "sensenova",
+      "name": "商汤日日新",
+      "name_en": "SenseNova",
+      "category": "llm",
+      "category_zh": "AI大模型",
+      "category_en": "AI Large Models",
+      "official_url": "https://sensenova.cn",
+      "company": "商汤科技",
+      "description": "商汤科技大模型平台，Token Plan公测期间完全免费。每5小时1500次调用，支持原生多模态模型Flash-Lite（取消视觉转文本中间步骤）、U1-Fast和DeepSeek-V4-Flash。兼容OpenAI SDK，无需绑卡。",
+      "description_en": "SenseTime's LLM platform. Token Plan beta is completely free: 1500 calls per 5 hours. Supports native multimodal Flash-Lite (no vision-to-text conversion), U1-Fast, and DeepSeek-V4-Flash. OpenAI SDK compatible, no credit card needed.",
+      "rating": 4,
+      "free_credits": {
+        "type": "recurring",
+        "amount": "每5小时1500次调用（公测免费）",
+        "amount_en": "1500 calls per 5 hours (free beta)",
+        "daily_limit": "每5小时1500次",
+        "daily_limit_en": "1500 per 5 hours",
+        "reset": "每5小时刷新",
+        "reset_en": "Every 5 hours",
+        "models": "SenseNova-6.7-Flash-Lite、SenseNova-U1-Fast、DeepSeek-V4-Flash",
+        "models_en": "SenseNova-6.7-Flash-Lite, SenseNova-U1-Fast, DeepSeek-V4-Flash",
+        "resolution": "N/A",
+        "watermark": "N/A",
+        "commercial_use": "公测期间可商用",
+        "commercial_use_en": "Commercial use allowed during beta"
+      },
+      "paid_from": "暂无（公测期间免费，未来将推出Lite/Pro）",
+      "paid_from_en": "None yet (free beta, Lite/Pro coming soon)",
+      "pros": [
+        "公测完全免费",
+        "每5小时1500次额度大方",
+        "原生多模态，不经文字中转",
+        "100页财报47秒处理",
+        "兼容OpenAI SDK",
+        "无需绑卡"
+      ],
+      "pros_en": [
+        "Completely free during beta",
+        "Generous 1500 calls/5hrs quota",
+        "Native multimodal, no text conversion",
+        "Processes 100-page reports in 47s",
+        "OpenAI SDK compatible",
+        "No credit card needed"
+      ],
+      "cons": [
+        "公测阶段，未来可能收费",
+        "模型知名度不如GPT/Claude",
+        "生态和社区较小"
+      ],
+      "cons_en": [
+        "Beta phase, may charge in the future",
+        "Less known than GPT/Claude",
+        "Smaller ecosystem"
+      ],
+      "features": [
+        "原生多模态理解+生成",
+        "每5小时1500次免费调用",
+        "Flash-Lite取消视觉转文本中间步骤",
+        "Token消耗降60%",
+        "兼容OpenAI SDK",
+        "办公小浣熊等应用生态"
+      ],
+      "features_en": [
+        "Native multimodal understanding+generation",
+        "1500 free calls per 5 hours",
+        "Flash-Lite skips vision-to-text conversion",
+        "60% token consumption reduction",
+        "OpenAI SDK compatible",
+        "Office apps ecosystem"
+      ],
+      "tips": [
+        "办公场景首选，图表分析很强",
+        "配置时用OpenAI兼容格式",
+        "公测期间尽量多用，以后可能收费",
+        "GitHub上有SenseNova-Skills开源项目"
+      ],
+      "tips_en": [
+        "Best for office scenarios, strong chart analysis",
+        "Use OpenAI compatible format for config",
+        "Use it a lot during beta, may charge later",
+        "SenseNova-Skills open source on GitHub"
+      ],
+      "plans": [],
+      "last_updated": "2026-06-14",
+      "url_zh": "https://aifreeplan.com/zh/llm/sensenova",
+      "url_en": "https://aifreeplan.com/en/llm/sensenova"
+    },
+    {
+      "slug": "modelscope",
+      "name": "魔塔社区",
+      "name_en": "ModelScope",
+      "category": "llm",
+      "category_zh": "AI大模型",
+      "category_en": "AI Large Models",
+      "official_url": "https://modelscope.cn",
+      "company": "阿里云",
+      "description": "阿里云旗下中国最大开源AI模型社区，5万+模型。每天2000次免费API调用，兼容OpenAI SDK。支持Qwen、DeepSeek、GLM、百川等主力开源模型。需绑定阿里云账号。Base URL: api.modelscope.cn/v1",
+      "description_en": "Alibaba Cloud's largest open-source AI model community in China with 50K+ models. 2000 free API calls daily, OpenAI SDK compatible. Supports Qwen, DeepSeek, GLM, Baichuan and more. Requires Alibaba Cloud account binding.",
+      "rating": 4,
+      "free_credits": {
+        "type": "recurring",
+        "amount": "每天2000次免费API调用",
+        "amount_en": "2000 free API calls per day",
+        "daily_limit": "2000次/天",
+        "daily_limit_en": "2000/day",
+        "reset": "每天重置",
+        "reset_en": "Daily reset",
+        "models": "Qwen、DeepSeek、GLM、百川、零一万物、LLaMA等",
+        "models_en": "Qwen, DeepSeek, GLM, Baichuan, 01.AI, LLaMA and more",
+        "resolution": "N/A",
+        "watermark": "N/A",
+        "commercial_use": "可商用（视具体模型许可证）",
+        "commercial_use_en": "Commercial use allowed (per model license)"
+      },
+      "paid_from": "免费（超出后按量付费）",
+      "paid_from_en": "Free (pay-per-use after quota)",
+      "pros": [
+        "每天2000次免费调用",
+        "5万+开源模型可选",
+        "兼容OpenAI SDK",
+        "阿里云大厂背景稳定",
+        "Qwen等国产模型齐全"
+      ],
+      "pros_en": [
+        "2000 free calls daily",
+        "50K+ open-source models",
+        "OpenAI SDK compatible",
+        "Alibaba Cloud stable backing",
+        "Full lineup of Chinese models"
+      ],
+      "cons": [
+        "必须绑定阿里云账号",
+        "不绑账号会报错",
+        "部分模型有许可证限制"
+      ],
+      "cons_en": [
+        "Must bind Alibaba Cloud account",
+        "Errors without account binding",
+        "Some models have license restrictions"
+      ],
+      "features": [
+        "每天2000次免费API调用",
+        "5万+开源模型",
+        "兼容OpenAI SDK",
+        "认准闪电图标模型支持API-Inference",
+        "Qwen/DeepSeek/GLM/百川全覆盖",
+        "国内访问速度快"
+      ],
+      "features_en": [
+        "2000 free API calls daily",
+        "50K+ open-source models",
+        "OpenAI SDK compatible",
+        "Lightning icon = API-Inference support",
+        "Full Qwen/DeepSeek/GLM/Baichuan coverage",
+        "Fast access from China"
+      ],
+      "tips": [
+        "必须先绑定阿里云账号，否则报错",
+        "个人设置→访问控制→创建长期有效令牌",
+        "认准有闪电图标的模型支持API",
+        "Cursor/Claude Code配置: Base URL用api.modelscope.cn/v1",
+        "日常开发调试首选"
+      ],
+      "tips_en": [
+        "Bind Alibaba Cloud account first or get errors",
+        "Settings → Access Control → Create long-lived token",
+        "Lightning icon models support API",
+        "Cursor/Claude Code config: Base URL = api.modelscope.cn/v1",
+        "Best for daily dev and debugging"
+      ],
+      "plans": [],
+      "last_updated": "2026-06-14",
+      "url_zh": "https://aifreeplan.com/zh/llm/modelscope",
+      "url_en": "https://aifreeplan.com/en/llm/modelscope"
+    },
+    {
+      "slug": "freemodel",
+      "name": "FreeModel",
+      "name_en": "FreeModel",
+      "category": "llm",
+      "category_zh": "AI大模型",
+      "category_en": "AI Large Models",
+      "official_url": "https://freemodel.dev",
+      "company": "FreeModel",
+      "description": "AI API中转平台，注册送$5额度，验证邮箱送1个月Pro。自研FRE-5.4/5.5模型，兼容OpenAI和Anthropic API格式。支持支付宝/微信支付，推荐好友双方各得$10。",
+      "description_en": "AI API relay platform. $5 credits on registration, 1 month Pro on email verification. Self-developed FRE-5.4/5.5 models. OpenAI and Anthropic API compatible. Alipay/WeChat Pay supported. Referral: both get $10.",
+      "rating": 3,
+      "free_credits": {
+        "type": "one-time",
+        "amount": "注册送$5，验证邮箱送1个月Pro，推荐好友各得$10",
+        "amount_en": "$5 on signup, 1 month Pro on email verify, $10 per referral",
+        "daily_limit": "无每日限制（按额度消耗）",
+        "daily_limit_en": "No daily limit (credits-based)",
+        "reset": "不重置（一次性额度）",
+        "reset_en": "No reset (one-time credits)",
+        "models": "FRE-5.4、FRE-5.5",
+        "models_en": "FRE-5.4, FRE-5.5",
+        "resolution": "N/A",
+        "watermark": "N/A",
+        "commercial_use": "可商用",
+        "commercial_use_en": "Commercial use allowed"
+      },
+      "paid_from": "Pro套餐（具体价格未公开）",
+      "paid_from_en": "Pro plan (pricing not publicly shown)",
+      "pros": [
+        "注册即送$5+1个月Pro",
+        "兼容OpenAI和Anthropic API",
+        "支持支付宝/微信支付",
+        "推荐好友各得$10无上限",
+        "国内邮箱就能注册"
+      ],
+      "pros_en": [
+        "$5 + 1 month Pro on signup",
+        "OpenAI and Anthropic API compatible",
+        "Alipay/WeChat Pay supported",
+        "$10 referral bonus, no limit",
+        "Register with any email"
+      ],
+      "cons": [
+        "中小平台稳定性存疑",
+        "数据经第三方中转有隐私风险",
+        "模型真实性需自行验证",
+        "VIP线路需充值$10-30解锁"
+      ],
+      "cons_en": [
+        "Small platform, stability uncertain",
+        "Data routed through third party",
+        "Model authenticity needs verification",
+        "VIP routes require $10-30 top-up"
+      ],
+      "features": [
+        "自研FRE-5.4/5.5模型",
+        "OpenAI兼容API格式",
+        "Anthropic Claude Messages API兼容",
+        "国内VIP线路（北京/杭州/广州）",
+        "推荐好友各得$10",
+        "支付宝/微信支付"
+      ],
+      "features_en": [
+        "Self-developed FRE-5.4/5.5 models",
+        "OpenAI compatible API",
+        "Anthropic Claude Messages API compatible",
+        "China VIP routes (Beijing/Hangzhou/Guangzhou)",
+        "$10 referral bonus",
+        "Alipay/WeChat Pay"
+      ],
+      "tips": [
+        "先白嫖$5体验，好用再考虑充值",
+        "不要把生产环境全押上面",
+        "别传敏感数据（中转有隐私风险）",
+        "改base_url一行就能用，代码不用动",
+        "推荐好友是持续获额度的好方式"
+      ],
+      "tips_en": [
+        "Try the free $5 first before paying",
+        "Don't rely on it for production",
+        "Don't send sensitive data (relay risk)",
+        "Just change base_url, rest of code stays same",
+        "Referrals are the best way to get more credits"
+      ],
+      "plans": [],
+      "last_updated": "2026-06-14",
+      "url_zh": "https://aifreeplan.com/zh/llm/freemodel",
+      "url_en": "https://aifreeplan.com/en/llm/freemodel"
+    },
+    {
+      "slug": "agnes-ai",
+      "name": "Agnes AI",
+      "name_en": "Agnes AI",
+      "category": "llm",
+      "category_zh": "AI大模型",
+      "category_en": "AI Large Models",
+      "official_url": "https://agnes-ai.com",
+      "company": "Sapiens AI",
+      "description": "新加坡Sapiens AI旗下全模态AI平台。Free Access层免费使用前沿模型，支持文本（Agnes 2.0 Flash，Claw-Eval全球第9）、图片（Agnes Image 2.0 Flash）、视频（Agnes Video V2.0）。基础TPS限制，公平使用配额。付费Token Plan提供更高TPS和额度。",
+      "description_en": "Sapiens AI's (Singapore) full-modality AI platform. Free Access tier: use frontier models for free. Text (Agnes 2.0 Flash, Claw-Eval #9 globally), Image (Agnes Image 2.0 Flash), Video (Agnes Video V2.0). Basic TPS limit, fair-use quota. Paid Token Plan for higher TPS and quotas.",
+      "rating": 4,
+      "free_credits": {
+        "type": "unlimited",
+        "amount": "Free Access层：文本/图片/视频全模态免费，基础TPS限制",
+        "amount_en": "Free Access: text/image/video all free, basic TPS limit",
+        "daily_limit": "公平使用配额（无明确上限）",
+        "daily_limit_en": "Fair-use quota (no explicit cap)",
+        "reset": "持续可用",
+        "reset_en": "Ongoing",
+        "models": "Agnes 2.0 Flash（文本）、Agnes Image 2.0/2.1 Flash（图片）、Agnes Video V2.0（视频）",
+        "models_en": "Agnes 2.0 Flash (text), Agnes Image 2.0/2.1 Flash (image), Agnes Video V2.0 (video)",
+        "resolution": "N/A",
+        "watermark": "N/A",
+        "commercial_use": "可商用",
+        "commercial_use_en": "Commercial use allowed"
+      },
+      "paid_from": "Token Plan（按月/年订阅，更高TPS和额度）",
+      "paid_from_en": "Token Plan (monthly/yearly, higher TPS and quotas)",
+      "pros": [
+        "文本/图片/视频三模态全免费",
+        "文本模型Claw-Eval全球第9",
+        "图片价格曾是行业1/10",
+        "不限额度公平使用",
+        "注册即用无需绑卡",
+        "多模型集群+智能路由降低成本"
+      ],
+      "pros_en": [
+        "Text/image/video all free",
+        "Text model Claw-Eval #9 globally",
+        "Image pricing was 1/10 of industry",
+        "Fair-use, no hard cap",
+        "No credit card needed",
+        "Multi-model cluster + smart routing lowers cost"
+      ],
+      "cons": [
+        "基础TPS限制，速度较慢",
+        "新平台，稳定性待验证",
+        "免费层不含优先支持",
+        "模型生态不如OpenAI/Anthropic"
+      ],
+      "cons_en": [
+        "Basic TPS limit, slower speed",
+        "New platform, stability TBD",
+        "Free tier has no priority support",
+        "Model ecosystem smaller than OpenAI/Anthropic"
+      ],
+      "features": [
+        "文本/图片/视频全模态API",
+        "Agnes 2.0 Flash文本模型",
+        "Agnes Image图片生成",
+        "Agnes Video视频生成",
+        "多模型集群智能路由",
+        "企业版支持SSO和团队分析"
+      ],
+      "features_en": [
+        "Text/image/video full modality API",
+        "Agnes 2.0 Flash text model",
+        "Agnes Image generation",
+        "Agnes Video generation",
+        "Multi-model cluster smart routing",
+        "Enterprise: SSO and team analytics"
+      ],
+      "tips": [
+        "全场景兜底选择，生图生视频都免费",
+        "速度要求高的场景考虑付费Token Plan",
+        "文本做Agent、图片做配图、视频做素材三件套",
+        "平台地址: platform.agnes-ai.com"
+      ],
+      "tips_en": [
+        "All-purpose fallback: free for image/video generation",
+        "Consider paid Token Plan for speed-critical tasks",
+        "Text for agents, images for content, videos for material",
+        "Platform: platform.agnes-ai.com"
+      ],
+      "plans": [
+        {
+          "name": "Free Access",
+          "name_en": "Free Access",
+          "price": "¥0",
+          "price_en": "$0",
+          "features": "全模态免费，基础TPS，公平使用配额"
+        },
+        {
+          "name": "Token Plan",
+          "name_en": "Token Plan",
+          "price": "按月/年订阅",
+          "price_en": "Monthly/Yearly subscription",
+          "features": "更高TPS，更多月度额度，生产级API，年付省2个月"
+        }
+      ],
+      "last_updated": "2026-06-14",
+      "url_zh": "https://aifreeplan.com/zh/llm/agnes-ai",
+      "url_en": "https://aifreeplan.com/en/llm/agnes-ai"
     }
   ]
 }
