@@ -3,7 +3,7 @@
   "description": "All AI tools free credits in one table - comprehensive database of free tiers, limits, and pricing",
   "description_zh": "所有AI工具的免费额度一张表看全 - 覆盖视频/图片/大模型/编程/助手五大分类",
   "last_updated": "2026-06-11",
-  "total_tools": 60,
+  "total_tools": 61,
   "categories": [
     {
       "id": "video",
@@ -21,7 +21,7 @@
       "id": "llm",
       "name_zh": "AI大模型",
       "name_en": "AI Large Models",
-      "count": 16
+      "count": 17
     },
     {
       "id": "coding",
@@ -5253,6 +5253,96 @@
       "last_updated": "2026-06-14",
       "url_zh": "https://aifreeplan.com/zh/llm/agnes-ai",
       "url_en": "https://aifreeplan.com/en/llm/agnes-ai"
+    },
+    {
+      "slug": "cline-bot-api",
+      "name": "Cline.bot API",
+      "name_en": "Cline.bot API",
+      "category": "llm",
+      "category_zh": "AI大模型",
+      "category_en": "AI Large Models",
+      "official_url": "https://app.cline.bot",
+      "company": "Cline",
+      "description": "Cline官方API平台，免费提供3款模型（MiniMax-M3、小米MiMo-v2.5、DeepSeek-V4-Flash），全部支持1M超长上下文。OpenAI兼容格式，注册送$0.5额度，免费模型不扣额度。Google/GitHub登录即可，无需绑卡。",
+      "description_en": "Cline's official API platform. 3 free models (MiniMax-M3, Xiaomi MiMo-v2.5, DeepSeek-V4-Flash) all with 1M context. OpenAI compatible. $0.5 signup bonus, free models don't consume credits. Google/GitHub login, no credit card.",
+      "rating": 4,
+      "free_credits": {
+        "type": "unlimited",
+        "amount": "3款模型永久免费，不扣额度，1M上下文",
+        "amount_en": "3 models free forever, no credit consumption, 1M context",
+        "daily_limit": "无限制",
+        "daily_limit_en": "No limit",
+        "reset": "不适用（免费模型不扣额度）",
+        "reset_en": "N/A (free models don't consume credits)",
+        "models": "minimax/minimax-m3、xiaomi/mimo-v2.5、deepseek/deepseek-v4-flash",
+        "models_en": "minimax/minimax-m3, xiaomi/mimo-v2.5, deepseek/deepseek-v4-flash",
+        "resolution": "N/A",
+        "watermark": "N/A",
+        "commercial_use": "可商用",
+        "commercial_use_en": "Commercial use allowed"
+      },
+      "paid_from": "注册送$0.5（付费模型用）",
+      "paid_from_en": "$0.5 on signup (for paid models)",
+      "pros": [
+        "3款模型完全免费不扣额度",
+        "1M超长上下文，处理大文件不截断",
+        "OpenAI兼容格式，配置简单",
+        "MiniMax-M3和小米MiMo独家免费入口",
+        "Google/GitHub一键登录",
+        "Cline插件原生对接最方便"
+      ],
+      "pros_en": [
+        "3 models completely free, no credit consumption",
+        "1M ultra-long context, no file truncation",
+        "OpenAI compatible, easy config",
+        "Exclusive free access to MiniMax-M3 and Xiaomi MiMo",
+        "One-click Google/GitHub login",
+        "Native integration with Cline VS Code plugin"
+      ],
+      "cons": [
+        "只有3款模型，选择有限",
+        "平台规则可能随时调整",
+        "新平台，长期稳定性待观察"
+      ],
+      "cons_en": [
+        "Only 3 models available",
+        "Platform rules may change",
+        "New platform, long-term stability TBD"
+      ],
+      "features": [
+        "3款免费模型，1M上下文",
+        "MiniMax-M3综合能力强",
+        "小米MiMo推理能力突出",
+        "DeepSeek-V4-Flash速度快",
+        "OpenAI兼容API格式",
+        "Cline/CC Switch原生支持"
+      ],
+      "features_en": [
+        "3 free models, 1M context",
+        "MiniMax-M3 strong general capability",
+        "Xiaomi MiMo strong reasoning",
+        "DeepSeek-V4-Flash fast speed",
+        "OpenAI compatible API",
+        "Native Cline/CC Switch support"
+      ],
+      "tips": [
+        "API地址: https://api.cline.bot/api/v1",
+        "Cline插件里直接选Cline Provider最省事",
+        "1M上下文处理长代码文件和大文档很有用",
+        "免费模型不扣$0.5额度，留着试付费模型",
+        "API Key泄露了去后台删掉重新生成"
+      ],
+      "tips_en": [
+        "API endpoint: https://api.cline.bot/api/v1",
+        "Select Cline Provider in Cline plugin for easiest setup",
+        "1M context great for long code files and docs",
+        "Free models don't consume the $0.5 bonus",
+        "Delete and regenerate API key if compromised"
+      ],
+      "plans": [],
+      "last_updated": "2026-06-14",
+      "url_zh": "https://aifreeplan.com/zh/llm/cline-bot-api",
+      "url_en": "https://aifreeplan.com/en/llm/cline-bot-api"
     }
   ]
 }
