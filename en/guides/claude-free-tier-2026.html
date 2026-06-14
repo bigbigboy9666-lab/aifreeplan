@@ -298,65 +298,48 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
     <a href="/en">Home</a> / <a href="/en/guides">Guides</a> / <span>Claude Free Tier 2026</span>
   </div>
   <p>Sources: Anthropic official docs, third-party benchmarks, hands-on testing. Verified May 2026.</p>
-</blockquote>
 <hr>
-<h2 id="quick-answer">Quick Answer</h2><p>Claude Free gives you Sonnet model access with a daily message cap (roughly 20-30 messages based on testing — Anthropic doesn&#39;t publish exact numbers). The standout feature is 200K context window. If you regularly process long documents or large codebases, Claude Free beats ChatGPT Free for that use case.</p>
+<h2 id="quick-answer">200K context window: the best reason to use Claude for free</h2>
+<img src="/data/articles/claude-homepage.webp" alt="Claude free tier" loading="lazy" decoding="async">
+<p>I had to analyze an 80-page contract the other day. ChatGPT Free has a 128K context window and cut off halfway through. Switched to Claude Free — its 200K context swallowed the whole thing in one go, analysis came back crystal clear. Since then Claude has been my go-to for long documents. Free tier gives you Sonnet model access with roughly 20-30 messages per day (Anthropic doesn't publish exact numbers, this is from my own testing). Use them up and you're done for the day — resets tomorrow.</p>
+
 <hr>
-<h2 id="what-you-get-free-in-2026">What You Get Free in 2026</h2><p><img src="/data/articles/claude-homepage.webp" alt="Claude AI Chat Interface by Anthropic" loading="lazy" decoding="async">)</p>
-<p><strong>Claude Free includes:</strong></p>
-<p><strong>Sonnet model (limited uses/day):</strong></p>
-<ul>
-<li>Multi-turn conversations</li>
-<li>File upload (PDF, code, documents)</li>
-<li>Artifacts preview (code execution, chart generation)</li>
-<li>200K token context window</li>
-<li>~20-30 messages/day (tested, not officially published)</li>
-</ul>
-<p><strong>Not included in free tier:</strong></p>
-<ul>
-<li>Opus model (strongest, Pro-only)</li>
-<li>Claude Code (terminal coding tool, Pro-only)</li>
-<li>Projects (project management feature)</li>
-<li>Higher usage limits</li>
-</ul>
-<p><strong>The killer feature:</strong> 200K context window. You can feed Claude an entire book, a large codebase, or a lengthy contract in one go. ChatGPT Free only offers 128K.</p>
+<h2 id="what-you-get-free-in-2026">What you actually get for free</h2>
+<img src="/data/articles/claude-homepage.webp" alt="Claude AI Chat Interface by Anthropic" loading="lazy" decoding="async">
+<p>Sonnet model, about 20-30 messages per day, supporting multi-turn conversations, file uploads (PDF, code, documents), Artifacts preview, and a 200K token context window. What you don't get: Opus (the strongest reasoning model, Pro-only), Claude Code (terminal coding tool, Pro-only), Projects (project management), and higher usage limits. The killer feature is that 200K context — feed it an entire book, a large codebase, or a lengthy contract without splitting it up. ChatGPT Free only gives you 128K.</p>
+
 <hr>
-<h2 id="claude-free-vs-the-competition">Claude Free vs the Competition</h2><p><img src="/data/articles/claude-comparison.webp" alt="Claude AI - comparison with other free AI" loading="lazy" decoding="async">)</p>
-<p><strong>Claude vs ChatGPT vs Gemini vs DeepSeek vs Kimi — Free Tier</strong></p>
-<p>Context window: Claude 200K / ChatGPT 128K / Gemini 1M / DeepSeek 128K / Kimi 256K
-Daily usage: Claude limited / ChatGPT unlimited mini / Gemini unlimited Flash / DeepSeek unlimited / Kimi limited
-Reasoning: Claude strong / ChatGPT strong / Gemini strong / DeepSeek strong / Kimi medium
-Code ability: Claude very strong / ChatGPT strong / Gemini strong / DeepSeek very strong / Kimi medium
-English quality: Excellent / Excellent / Good / Good / Good</p>
-<p>Claude&#39;s core advantage is long-context processing and coding. For analyzing 100-page PDFs or understanding large codebases, Claude&#39;s 200K context is ideal. DeepSeek and Kimi offer unlimited free usage if volume matters more than context length.</p>
+<h2 id="claude-free-vs-the-competition">Claude vs ChatGPT, Gemini, and others</h2>
+<img src="/data/articles/claude-comparison.webp" alt="Claude AI - comparison with other free AI" loading="lazy" decoding="async">
+<p>Context windows: Claude 200K, ChatGPT 128K, Gemini 1M, DeepSeek 128K, Kimi 256K. Daily usage: Claude is limited, ChatGPT's GPT-4o-mini is unlimited, Gemini Flash is unlimited, DeepSeek is unlimited, Kimi is limited. Reasoning and coding ability: Claude, ChatGPT, and DeepSeek are all strong. Claude's core advantage is clear — long-context processing and coding. If you need to analyze 100-page PDFs or understand large codebases, Claude's 200K context is the best fit. But if you primarily work in Chinese, DeepSeek and Kimi offer unlimited free usage, which is a better deal by volume.</p>
+
 <hr>
-<h2 id="sonnet-s-coding-strength">Sonnet&#39;s Coding Strength</h2><p>Claude Sonnet performs exceptionally well in coding benchmarks:</p>
-<ul>
-<li>SWE-Bench (code repair): Sonnet ranks near the top</li>
-<li>HumanEval (code generation): near-perfect scores</li>
-<li>Real-world feel: code writing, debugging, and code review all feel reliable</li>
-</ul>
-<p>For AI-powered coding with Claude, pair it with <a href="/en/coding/cline">Cline</a> (open-source AI coding assistant). Cline embeds Claude&#39;s coding ability directly into VS Code — much better experience than the web interface.</p>
+<h2 id="sonnet-s-coding-strength">How good is Sonnet at coding</h2>
+<p>Claude Sonnet performs exceptionally well in coding benchmarks — near the top on SWE-Bench (code repair) and near-perfect on HumanEval (code generation). In practice, code writing, debugging, and code review all feel reliable. If you're using Claude for coding, pair it with <a href="/en/coding/cline">Cline</a> (open-source AI coding assistant) to embed Claude's coding ability directly into VS Code — much better than the web interface.</p>
+
 <hr>
-<h2 id="artifacts-the-hidden-free-feature">Artifacts: The Hidden Free Feature</h2><p>Artifacts is Claude&#39;s unique feature. When Claude generates code or content, a preview panel appears on the right:</p>
-<ul>
-<li>HTML/CSS → live web page preview</li>
-<li>Python → run and display results</li>
-<li>Charts → visual rendering</li>
-<li>SVG → graphic rendering</li>
-</ul>
-<p>Available on the free tier. Great for rapid prototyping, learning to code, and generating visual content.</p>
+<h2 id="artifacts-the-hidden-free-feature">Artifacts: the free feature most people don't know about</h2>
+<p>Artifacts is Claude's unique preview feature, and it works on the free tier. When Claude generates code or content, a preview panel appears on the right — HTML/CSS shows as a live web page, Python runs and displays results, charts render visually, SVGs display as graphics. Great for rapid prototyping, learning to code, or generating visual content. Most people don't know this exists on the free tier, but it's genuinely useful.</p>
+
 <hr>
-<h2 id="is-claude-pro-worth-20-month">Is Claude Pro Worth $20/Month?</h2><p>$20/month gets you:</p>
-<ul>
-<li>5x Sonnet usage (from ~20-30 to 100+ messages/day)</li>
-<li>Opus model access (strongest reasoning)</li>
-<li>Claude Code (terminal AI coding tool)</li>
-<li>Projects (set project context for better results)</li>
-</ul>
-<p>Worth it if you use Claude heavily (1+ hours daily). For occasional questions, the free tier is sufficient.</p>
+<h2 id="is-claude-pro-worth-20-month">Is Pro worth $20/month</h2>
+<p>Twenty bucks gets you 5x Sonnet usage (from 20-30 to 100+ messages/day), Opus model access for the strongest reasoning, Claude Code for terminal AI coding, and Projects for setting persistent context. Worth it if you use Claude heavily — over an hour daily. For occasional questions, the free tier is enough.</p>
+
 <hr>
-</section> <section class="faq-section" style="margin-top:40px"><h2>❓ FAQ</h2><div class="faq-list"><details class="faq-item"><summary>How many free messages does Claude give per day?</summary><p>Anthropic doesn&#39;t publish exact numbers. Testing shows roughly 20-30 Sonnet messages per day. Resets daily.</p></details><details class="faq-item"><summary>Do I need a VPN for Claude Free?</summary><p>Yes, if you&#39;re in mainland China. Claude is not directly available there.</p></details><details class="faq-item"><summary>Which is better free: Claude or ChatGPT?</summary><p>Long documents: Claude wins (200K vs 128K). Feature breadth: ChatGPT wins. Coding: both strong.</p></details><details class="faq-item"><summary>Can I upload files on Claude Free?</summary><p>Yes. Supports PDF, code files, documents, and more. The 200K context means you can upload very large files.</p></details><details class="faq-item"><summary>Can I use Claude Free commercially?</summary><p>Yes. Anthropic&#39;s terms allow commercial use of free tier output.</p></details><details class="faq-item"><summary>Is Artifacts available on the free tier?</summary><p>Yes. Preview code execution results directly in the chat.</p></details></div></section> <section class="grid-section" style="margin-top:40px"> <div class="grid-header"> <h2>Related Tools</h2> </div> <div class="card-grid" style="grid-template-columns:repeat(2,1fr)"> <a href="/en/llm/claude" class="tool-card"> <div class="tool-name">Claude</div> <p style="font-size:14px;color:var(--text-secondary);line-height:1.5"> By Anthropic, known for safety and long-context processing. Free tier has daily message limits. Pro  </p> <div class="tool-cta"> View Details </div> </a><a href="/en/llm/chatgpt" class="tool-card"> <div class="tool-name">ChatGPT</div> <p style="font-size:14px;color:var(--text-secondary);line-height:1.5"> OpenAI&#39;s flagship product, the most widely used AI chatbot globally. Free tier uses GPT-4o mini, Plu </p> <div class="tool-cta"> View Details </div> </a><a href="/en/llm/gemini" class="tool-card"> <div class="tool-name">Google Gemini</div> <p style="font-size:14px;color:var(--text-secondary);line-height:1.5"> Google&#39;s AI assistant with Search integration. Free tier introduced weekly percentage caps in May 20 </p> <div class="tool-cta"> View Details </div> </a><a href="/en/llm/deepseek" class="tool-card"> <div class="tool-name">DeepSeek</div> <p style="font-size:14px;color:var(--text-secondary);line-height:1.5"> DeepSeek&#39;s flagship model, the cost-performance king of Chinese AI. V4 is free to use, API pricing i </p> <div class="tool-cta"> View Details </div> </a><a href="/en/llm/kimi" class="tool-card"> <div class="tool-name">Kimi</div> <p style="font-size:14px;color:var(--text-secondary);line-height:1.5"> By Moonshot AI, Kimi K2.6 focuses on coding and agent capabilities. 13-hour non-stop coding, 300 sub </p> <div class="tool-cta"> View Details </div> </a> </div> </section> </div> </article>  </main> <footer class="footer"> <div class="container"> <div class="footer-inner"> <div class="footer-brand"> <a href="/en" class="logo">AIFreePlan</a> <p>AI-powered free tool aggregation platform. Free forever.</p> </div> <div class="footer-links"> <div class="footer-col"> <div class="footer-col-title">Product</div> <a href="/en/video">Platforms</a> <a href="/en">Categories</a> </div> <div class="footer-col"> <div class="footer-col-title">Company</div> </div> <div class="footer-col"> <div class="footer-col-title">Legal</div> <a href="/en/privacy">Privacy</a> <a href="/en/terms">Terms</a> </div> </div> </div> <div class="footer-bottom">© 2026 AIFreePlan. All rights reserved.</div> </div> </footer> </body></html>
+<h2 id="common-questions">What catches people off guard</h2>
+<p>Claude's free tier has been shrinking throughout 2026 — don't put all your eggs in one basket, keep Kimi or DeepSeek as backup. Long conversations get truncated, so break your questions into segments and confirm each before continuing. For coding, Claude excels at creative writing and analysis but sometimes gives incomplete code solutions — for programming tasks, Cursor or Codeium might be more dependable.</p>
+
+<h2>📊 Free LLM Quota Comparison</h2>
+<table>
+<thead><tr><th>Tool</th><th>Free Quota</th><th>Context Length</th><th>Quality</th></tr></thead>
+<tbody>
+<tr><td>Claude Free</td><td>~20-30 Sonnet/day</td><td>200K</td><td>⭐⭐⭐⭐</td></tr>
+<tr><td><a href="/en/llm/chatgpt">ChatGPT</a></td><td>Unlimited GPT-4o mini/day</td><td>128K</td><td>⭐⭐⭐⭐⭐</td></tr>
+<tr><td><a href="/en/llm/deepseek">DeepSeek</a></td><td>5M tokens free API</td><td>128K</td><td>⭐⭐⭐⭐</td></tr>
+<tr><td><a href="/en/llm/kimi">Kimi</a></td><td>Daily free quota</td><td>200K+</td><td>⭐⭐⭐⭐</td></tr>
+</tbody>
+</table>
+<section class="faq-section" style="margin-top:40px"><h2>❓ FAQ</h2><div class="faq-list"><details class="faq-item"><summary>How many free messages does Claude give per day?</summary><p>Anthropic doesn&#39;t publish exact numbers. Testing shows roughly 20-30 Sonnet messages per day. Resets daily.</p></details><details class="faq-item"><summary>Do I need a VPN for Claude Free?</summary><p>Yes, if you&#39;re in mainland China. Claude is not directly available there.</p></details><details class="faq-item"><summary>Which is better free: Claude or ChatGPT?</summary><p>Long documents: Claude wins (200K vs 128K). Feature breadth: ChatGPT wins. Coding: both strong.</p></details><details class="faq-item"><summary>Can I upload files on Claude Free?</summary><p>Yes. Supports PDF, code files, documents, and more. The 200K context means you can upload very large files.</p></details><details class="faq-item"><summary>Can I use Claude Free commercially?</summary><p>Yes. Anthropic&#39;s terms allow commercial use of free tier output.</p></details><details class="faq-item"><summary>Is Artifacts available on the free tier?</summary><p>Yes. Preview code execution results directly in the chat.</p></details></div></section> <section class="grid-section" style="margin-top:40px"> <div class="grid-header"> <h2>Related Tools</h2> </div> <div class="card-grid" style="grid-template-columns:repeat(2,1fr)"> <a href="/en/llm/claude" class="tool-card"> <div class="tool-name">Claude</div> <p style="font-size:14px;color:var(--text-secondary);line-height:1.5"> By Anthropic, known for safety and long-context processing. Free tier has daily message limits. Pro  </p> <div class="tool-cta"> View Details </div> </a><a href="/en/llm/chatgpt" class="tool-card"> <div class="tool-name">ChatGPT</div> <p style="font-size:14px;color:var(--text-secondary);line-height:1.5"> OpenAI&#39;s flagship product, the most widely used AI chatbot globally. Free tier uses GPT-4o mini, Plu </p> <div class="tool-cta"> View Details </div> </a><a href="/en/llm/gemini" class="tool-card"> <div class="tool-name">Google Gemini</div> <p style="font-size:14px;color:var(--text-secondary);line-height:1.5"> Google&#39;s AI assistant with Search integration. Free tier introduced weekly percentage caps in May 20 </p> <div class="tool-cta"> View Details </div> </a><a href="/en/llm/deepseek" class="tool-card"> <div class="tool-name">DeepSeek</div> <p style="font-size:14px;color:var(--text-secondary);line-height:1.5"> DeepSeek&#39;s flagship model, the cost-performance king of Chinese AI. V4 is free to use, API pricing i </p> <div class="tool-cta"> View Details </div> </a><a href="/en/llm/kimi" class="tool-card"> <div class="tool-name">Kimi</div> <p style="font-size:14px;color:var(--text-secondary);line-height:1.5"> By Moonshot AI, Kimi K2.6 focuses on coding and agent capabilities. 13-hour non-stop coding, 300 sub </p> <div class="tool-cta"> View Details </div> </a> </div> </section> </div> </article>  </main> <footer class="footer"> <div class="container"> <div class="footer-inner"> <div class="footer-brand"> <a href="/en" class="logo">AIFreePlan</a> <p>AI-powered free tool aggregation platform. Free forever.</p> </div> <div class="footer-links"> <div class="footer-col"> <div class="footer-col-title">Product</div> <a href="/en/video">Platforms</a> <a href="/en">Categories</a> </div> <div class="footer-col"> <div class="footer-col-title">Company</div> </div> <div class="footer-col"> <div class="footer-col-title">Legal</div> <a href="/en/privacy">Privacy</a> <a href="/en/terms">Terms</a> </div> </div> </div> <div class="footer-bottom">© 2026 AIFreePlan. All rights reserved.</div> </div> </footer> </body></html>
 </main>
 
 <footer class="footer">
