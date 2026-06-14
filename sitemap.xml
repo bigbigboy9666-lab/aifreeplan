@@ -2485,6 +2485,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/zh/guides/coze-free-ai-agent-builder</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/guides/coze-free-ai-agent-builder</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/zh/guides/deepsider-antigravity-free-gemini</loc>
     <lastmod>2026-06-14</lastmod>
     <changefreq>weekly</changefreq>
