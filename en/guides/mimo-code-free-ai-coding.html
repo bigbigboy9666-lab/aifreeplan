@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MiMo Code Free AI Coding Guide — Xiaomi's Open-Source Alternative to Claude Code | AIFreePlan</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="MiMo Code Free AI Coding Guide | AIFreePlan">
+<meta property="og:description" content="Xiaomi's open-source MiMo Code AI coding assistant with free MiMo-V2.5 model, persistent memory, Compose mode, and voice input. Beats Claude Code on SWE-Bench.">
+<meta property="og:url" content="https://aifreeplan.com/en/guides/mimo-code-free-ai-coding">
+<meta property="og:site_name" content="AIFreePlan">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MiMo Code Free AI Coding Guide | AIFreePlan">
+<meta name="twitter:description" content="Xiaomi's open-source MiMo Code AI coding assistant with free MiMo-V2.5 model, persistent memory, Compose mode, and voice input.">
+<meta name="description" content="MiMo Code is Xiaomi's open-source AI coding assistant with a free MiMo-V2.5 model. Features persistent memory, Compose mode, and scores 68.2% on SWE-Bench, beating Claude Code.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<link rel="canonical" href="https://aifreeplan.com/en/guides/mimo-code-free-ai-coding">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/mimo-code-free-ai-coding">
+<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/mimo-code-free-ai-coding">
+<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/mimo-code-free-ai-coding">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;--text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;--accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);--green:#059669;--green-light:rgba(5,150,105,.1);--shadow:0 4px 20px rgba(0,0,0,.05);--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover)}
+.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
+.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
+.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
+.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
+.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
+.article-container ul,.article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
+.article-container li{margin-bottom:8px;line-height:1.6}
+.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
+.article-container a{color:var(--accent);text-decoration:underline}
+.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-container th,.article-container td{padding:12px;border:1px solid var(--border);text-align:left}
+.article-container th{background:var(--accent-light);font-weight:600}
+.breadcrumb{font-size:14px;color:var(--text-muted);margin-bottom:24px}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb-sep{margin:0 8px}
+.faq-section{background:var(--bg-white);border-radius:var(--radius);padding:32px;margin-top:40px;box-shadow:var(--shadow)}
+.faq-section h3{margin-top:0;color:var(--text)}
+.faq-item{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border-light)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-weight:700;color:var(--text);margin-bottom:8px}
+.faq-a{color:var(--text-secondary);line-height:1.7}
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff;margin-top:60px}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6)}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col h4{font-size:14px;font-weight:700;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+@media(max-width:768px){.article-container{padding:16px 16px 48px;max-width:100%}.article-container h1{font-size:24px}.article-container h2{font-size:20px}.container{padding:0 16px}.nav{display:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"MiMo Code Free AI Coding Guide — Xiaomi's Open-Source Alternative to Claude Code","description":"Xiaomi's open-source MiMo Code AI coding assistant with free MiMo-V2.5 model, persistent memory, Compose mode, and voice input. Beats Claude Code on SWE-Bench.","url":"https://aifreeplan.com/en/guides/mimo-code-free-ai-coding","datePublished":"2026-06-15","dateModified":"2026-06-15","author":{"@type":"Organization","name":"AIFreePlan"},"publisher":{"@type":"Organization","name":"AIFreePlan","url":"https://aifreeplan.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aifreeplan.com/en/guides/mimo-code-free-ai-coding"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aifreeplan.com/en"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://aifreeplan.com/en/guides"},{"@type":"ListItem","position":3,"name":"MiMo Code Free AI Coding Guide","item":"https://aifreeplan.com/en/guides/mimo-code-free-ai-coding"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is MiMo Code really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. MiMo Code is open-source software under the MIT license, and the built-in MiMo-V2.5 model is currently free to use (for a limited time). You can also connect third-party model APIs like DeepSeek, Qwen, or GLM."}},{"@type":"Question","name":"How does MiMo Code compare to Claude Code?","acceptedAnswer":{"@type":"Answer","text":"On the SWE-Bench Verified benchmark, MiMo Code scores 68.2%, beating Claude Code's 65.8%. MiMo Code also has a unique persistent memory system and Compose mode, and it is completely free, while Claude Code requires a Claude Max subscription ($100/month or more)."}},{"@type":"Question","name":"What programming languages does MiMo Code support?","acceptedAnswer":{"@type":"Answer","text":"MiMo Code supports all major programming languages including Python, JavaScript, TypeScript, Java, Go, Rust, C/C++, and more. It runs in the terminal and can be used with any project."}},{"@type":"Question","name":"What is MiMo Code's persistent memory system?","acceptedAnswer":{"@type":"Answer","text":"MiMo Code uses an independent subagent to automatically save session state, solving the 'forgetfulness' problem common in long AI coding conversations. The Dream command enables 7-day memory consolidation, so the AI learns your coding style and project structure over time."}}]}
+</script>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="/en" class="logo">AI<span class="accent">FreePlan</span></a>
+    <nav class="nav">
+      <a href="/en/all">All Tools</a>
+      <a href="/en/guides">Guides</a>
+      <a href="/en/privacy">Privacy</a>
+      <a href="/zh/guides/mimo-code-free-ai-coding" class="btn btn-primary">中文</a>
+    </nav>
+  </div>
+</header>
+<main class="article-container">
+<nav class="breadcrumb"><a href="/en">Home</a> <span class="breadcrumb-sep">›</span> <a href="/en/guides">Guides</a> <span class="breadcrumb-sep">›</span> <span>MiMo Code Free AI Coding Guide</span></nav>
+
+<h1>MiMo Code: Free AI Coding Assistant by Xiaomi — Beats Claude Code on SWE-Bench</h1>
+<p><em>Updated June 15, 2026 · 8 min read</em></p>
+
+<p>Looking for a free, capable AI coding assistant with excellent Chinese language support? <strong>MiMo Code</strong> from Xiaomi's LLM team is worth serious consideration. It is open-source under the MIT license, ships with a free MiMo-V2.5 model that scores 68.2% on SWE-Bench Verified (beating Claude Code's 65.8%), and includes unique features like persistent memory and a full-pipeline Compose mode.</p>
+
+<h2>What is MiMo Code</h2>
+<p>MiMo Code is a terminal-based AI coding assistant built by Xiaomi's large model team on top of the OpenCode framework. Unlike IDE-based tools such as Cursor or Windsurf, MiMo Code runs entirely in your terminal, making it ideal for developers who prefer command-line workflows.</p>
+<p>Key highlights:</p>
+<ul>
+<li><strong>Free built-in model</strong>: The MiMo-V2.5 model is free to use (for a limited time), no API key setup required</li>
+<li><strong>Persistent memory system</strong>: An independent subagent automatically saves session state, solving the long-conversation amnesia problem</li>
+<li><strong>Compose mode</strong>: One command to run the full Design, Plan, Code, and Test pipeline</li>
+<li><strong>Dream command</strong>: 7-day memory consolidation so the AI learns your coding style over time</li>
+<li><strong>Voice input</strong>: Describe requirements by speaking instead of typing</li>
+<li><strong>Full localization</strong>: Complete Chinese interface, documentation, and error messages</li>
+</ul>
+
+<h2>Free Tier and Pricing</h2>
+<p>MiMo Code's pricing is straightforward:</p>
+<table>
+<tr><th>Item</th><th>Cost</th><th>Details</th></tr>
+<tr><td>MiMo Code software</td><td>Completely free</td><td>MIT license, open source, commercial use allowed</td></tr>
+<tr><td>MiMo-V2.5 model</td><td>Free (limited time)</td><td>Built-in model, works out of the box after setup</td></tr>
+<tr><td>Third-party models</td><td>Per provider pricing</td><td>Supports DeepSeek, Qwen, GLM free APIs</td></tr>
+<tr><td>Compose mode</td><td>Free</td><td>No extra cost when using the built-in model</td></tr>
+<tr><td>Persistent memory</td><td>Free</td><td>Available to all users</td></tr>
+</table>
+<p>For comparison, Claude Code requires a Claude Max subscription ($100/month or more) or pay-per-use API billing. MiMo Code's free tier is significantly more generous for individual developers.</p>
+
+<h2>Installation and Quick Start</h2>
+<h3>System Requirements</h3>
+<ul>
+<li>Operating system: macOS, Linux, or Windows (WSL)</li>
+<li>Node.js 18+ or use npx to run directly</li>
+<li>Terminal environment (iTerm2, Terminal, Windows Terminal, etc.)</li>
+</ul>
+<h3>Installation Steps</h3>
+<p>The easiest way to install is via npm:</p>
+<p><code>npm install -g @anthropic-ai/mimo-code</code></p>
+<p>Or run directly with npx (no installation needed):</p>
+<p><code>npx @anthropic-ai/mimo-code</code></p>
+<p>On first launch, MiMo Code walks you through configuration. Select the built-in MiMo-V2.5 model to start using it for free immediately, with no third-party API registration required.</p>
+
+<h2>MiMo-V2.5 Model Performance</h2>
+<p>MiMo-V2.5 is Xiaomi's coding-specialized large language model. Here are the key benchmark results:</p>
+<table>
+<tr><th>Benchmark</th><th>MiMo-V2.5</th><th>Claude Code</th><th>Notes</th></tr>
+<tr><td>SWE-Bench Verified</td><td>68.2%</td><td>65.8%</td><td>Real GitHub issue fixing ability</td></tr>
+<tr><td>HumanEval</td><td>91.3%</td><td>92.0%</td><td>Code generation accuracy</td></tr>
+<tr><td>MBPP</td><td>88.7%</td><td>87.2%</td><td>Basic programming problem solving</td></tr>
+</table>
+<p>On the most important SWE-Bench Verified benchmark, MiMo-V2.5 outperforms Claude Code. This test simulates real development scenarios: given a GitHub issue and code repository, the AI must autonomously locate the problem and submit a fix.</p>
+
+<h2>Core Features Explained</h2>
+<h3>1. Persistent Memory System</h3>
+<p>The biggest pain point with traditional AI coding assistants is forgetfulness: after 20 rounds of conversation, they start losing context. MiMo Code solves this with an independent subagent that manages memory automatically:</p>
+<ul>
+<li>Key decisions, code changes, and project structure information are saved automatically each session</li>
+<li>New sessions load historical memory on startup, so you do not need to re-explain your project</li>
+<li>Memory is isolated by project, so different projects do not interfere with each other</li>
+</ul>
+
+<h3>2. Compose Mode</h3>
+<p>Compose mode is MiMo Code's flagship differentiating feature. After you describe a requirement, it automatically executes four phases:</p>
+<ol>
+<li><strong>Design</strong>: Analyzes requirements and generates a technical plan and architecture</li>
+<li><strong>Plan</strong>: Breaks the task into an actionable step list</li>
+<li><strong>Code</strong>: Implements code step by step</li>
+<li><strong>Test</strong>: Automatically writes test cases and verifies correctness</li>
+</ol>
+<p>The entire process runs without manual intervention, making it ideal for rapid prototyping and feature iteration.</p>
+
+<h3>3. Dream Command</h3>
+<p>Run the <code>/dream</code> command and MiMo Code consolidates the past 7 days of interactions into long-term memory. It extracts your coding habits, preferred frameworks, and code style preferences. In future conversations, the AI automatically references these preferences to generate code that matches your style.</p>
+
+<h3>4. Voice Input</h3>
+<p>Do not feel like typing? MiMo Code supports voice input. Hold a shortcut key and speak your requirement; the AI transcribes and executes it. This is particularly convenient when describing complex requirements.</p>
+
+<h3>5. Third-Party Model Support</h3>
+<p>In addition to the built-in MiMo-V2.5, MiMo Code supports connecting to other model APIs:</p>
+<ul>
+<li><strong>DeepSeek</strong>: DeepSeek-V3 / DeepSeek-Coder, with free tier available</li>
+<li><strong>Qwen</strong>: Alibaba Qwen series, free API credits from Alibaba Cloud</li>
+<li><strong>GLM</strong>: Zhipu AI GLM-4/5 series, 5 million free tokens for new users</li>
+<li><strong>OpenAI</strong>: GPT-4o and other models (paid)</li>
+<li><strong>Anthropic</strong>: Claude series models (paid)</li>
+</ul>
+
+<h2>Comparison with Other Free Coding Tools</h2>
+<table>
+<tr><th>Tool</th><th>Free Tier</th><th>Chinese Support</th><th>Memory System</th><th>Environment</th></tr>
+<tr><td>MiMo Code</td><td>Built-in model free</td><td>Full localization</td><td>Persistent + Dream</td><td>Terminal</td></tr>
+<tr><td>Claude Code</td><td>$100/month subscription</td><td>English only</td><td>Limited context</td><td>Terminal</td></tr>
+<tr><td>Cursor</td><td>2000 completions/month</td><td>English only</td><td>Project indexing</td><td>IDE</td></tr>
+<tr><td>GitHub Copilot</td><td>2000 completions/month</td><td>English only</td><td>None</td><td>IDE plugin</td></tr>
+<tr><td>Windsurf</td><td>Basic features free</td><td>Partial</td><td>Flow mode</td><td>IDE</td></tr>
+<tr><td>Trae</td><td>Free to use</td><td>Full localization</td><td>Limited</td><td>IDE</td></tr>
+</table>
+<p>MiMo Code's core advantage is the combination of free pricing, persistent memory, and Chinese language support. For developers who want long coding conversations without paying, it is currently one of the best options available.</p>
+
+<h2>Best Use Cases</h2>
+<ul>
+<li><strong>Personal project development</strong>: Build projects from scratch; Compose mode handles the full pipeline</li>
+<li><strong>Bug fixing</strong>: Describe the symptom and the AI locates and fixes the issue</li>
+<li><strong>Code refactoring</strong>: Set a refactoring goal and the AI executes in batches while ensuring tests pass</li>
+<li><strong>Learning new tech stacks</strong>: Ask questions as you code; persistent memory keeps conversations coherent</li>
+<li><strong>Script automation</strong>: Use voice input to describe requirements and quickly generate automation scripts</li>
+</ul>
+
+<h2>Things to Keep in Mind</h2>
+<ul>
+<li>The MiMo-V2.5 model is free for a limited time and may become paid in the future, so try it soon</li>
+<li>As a newer tool, its ecosystem and plugins are not as rich as Cursor or VS Code</li>
+<li>Terminal-based operation has a learning curve for developers not comfortable with the command line</li>
+<li>Large project indexing and context management are still being improved</li>
+</ul>
+
+<h2>Bottom Line</h2>
+<p>MiMo Code is a significant open-source contribution from Xiaomi to the AI coding space. The free built-in model, persistent memory system, and Compose mode make it stand out among free coding tools. If you are a developer who prefers terminal workflows, or if you want an AI coding assistant that costs nothing, MiMo Code is well worth trying.</p>
+<p><strong>Key numbers at a glance:</strong></p>
+<ul>
+<li>Price: Software free + built-in model free (limited time)</li>
+<li>SWE-Bench score: 68.2% (beats Claude Code's 65.8%)</li>
+<li>License: MIT (commercial use allowed)</li>
+<li>Chinese support: Full localization</li>
+<li>Unique features: Persistent memory + Compose mode + Dream command</li>
+</ul>
+
+<div class="faq-section">
+<h3>FAQ</h3>
+<div class="faq-item"><div class="faq-q">Q: Is MiMo Code really free?</div><div class="faq-a">A: Yes. MiMo Code is open-source software under the MIT license, and the built-in MiMo-V2.5 model is currently free to use (for a limited time). You can also connect third-party model APIs like DeepSeek, Qwen, or GLM.</div></div>
+<div class="faq-item"><div class="faq-q">Q: How does MiMo Code compare to Claude Code?</div><div class="faq-a">A: On the SWE-Bench Verified benchmark, MiMo Code scores 68.2%, beating Claude Code's 65.8%. MiMo Code also has a unique persistent memory system and Compose mode, and it is completely free, while Claude Code requires a Claude Max subscription ($100/month or more).</div></div>
+<div class="faq-item"><div class="faq-q">Q: What programming languages does MiMo Code support?</div><div class="faq-a">A: MiMo Code supports all major programming languages including Python, JavaScript, TypeScript, Java, Go, Rust, C/C++, and more. It runs in the terminal and can be used with any project.</div></div>
+<div class="faq-item"><div class="faq-q">Q: What is MiMo Code's persistent memory system?</div><div class="faq-a">A: MiMo Code uses an independent subagent to automatically save session state, solving the 'forgetfulness' problem common in long AI coding conversations. The Dream command enables 7-day memory consolidation, so the AI learns your coding style and project structure over time.</div></div>
+</div>
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="/en" class="logo" style="color:#059669">AI<span class="accent" style="color:#6366F1">FreePlan</span></a><p>AI-powered free tools aggregator. Free forever.</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h4>Product</h4><a href="/en/all">All Tools</a><a href="/en/guides">Guides</a></div>
+      <div class="footer-col"><h4>Legal</h4><a href="/en/privacy">Privacy</a><a href="/en/terms">Terms</a></div>
+    </div>
+  </div>
+  <div class="container footer-bottom">© 2026 AIFreePlan. All rights reserved.</div>
+</footer>
+</body></html>
