@@ -5539,8 +5539,8 @@
       "category_en": "Coding Assistant",
       "official_url": "https://deveco.huawei.com",
       "company": "华为",
-      "description": "华为推出的CLI编程助手，内置智谱GLM-5.1模型，完全免费不限额度。基于华为昇腾芯片训练的模型，编码能力接近Claude Opus 4.6的94.6%。npm安装即可使用，无需抢购。",
-      "description_en": "Huawei's CLI coding assistant with built-in Zhipu GLM-5.1 model, completely free with no usage limits. Trained on Huawei Ascend chips, coding capability reaches 94.6% of Claude Opus 4.6. Install via npm and use immediately, no queuing required.",
+      "description": "华为推出的CLI编程助手，内置智谱GLM-5.1模型，登录即用无需手动选择。完全免费不限额度，基于华为昇腾芯片训练，编码能力接近Claude Opus 4.6的94.6%。界面皮肤主题丰富，深色浅色随心切换，颜值在线。",
+      "description_en": "Huawei CLI coding assistant with built-in Zhipu GLM-5.1 model, ready to use after login with no manual selection needed. Completely free with no usage limits, trained on Huawei Ascend chips, coding capability reaches 94.6% of Claude Opus 4.6. Rich theme options with dark/light mode switching, great looking interface.",
       "rating": 4,
       "free_credits": {
         "type": "unlimited",
