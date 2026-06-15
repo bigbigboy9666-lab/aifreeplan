@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>华为DevEco Code免费攻略：GLM-5.1不限量白嫖指南 | AIFreePlan</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="华为DevEco Code免费攻略：GLM-5.1不限量白嫖指南 | AIFreePlan">
+    <meta property="og:description" content="华为DevEco Code内置智谱GLM-5.1模型，完全免费不限额度，登录即用无需手动选择，皮肤主题颜值在线。">
+    <meta property="og:url" content="https://aifreeplan.com/zh/guides/huawei-deveco-code-free-coding">
+    <meta property="og:site_name" content="AIFreePlan">
+    <meta property="og:locale" content="zh_CN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="华为DevEco Code免费攻略：GLM-5.1不限量白嫖指南 | AIFreePlan">
+    <meta name="twitter:description" content="华为DevEco Code内置智谱GLM-5.1模型，完全免费不限额度，登录即用无需手动选择，皮肤主题颜值在线。">
+
+<meta name="description" content="华为DevEco Code内置智谱GLM-5.1模型，完全免费不限额度，登录即用无需手动选择，皮肤主题颜值在线。npm install三分钟上手。">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<link rel="canonical" href="https://aifreeplan.com/zh/guides/huawei-deveco-code-free-coding">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/huawei-deveco-code-free-coding">
+<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/huawei-deveco-code-free-coding">
+<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/huawei-deveco-code-free-coding">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;
+  --text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;
+  --accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);
+  --green:#059669;--green-light:rgba(5,150,105,.1);
+  --shadow:0 4px 20px rgba(0,0,0,.05);--shadow-hover:0 8px 32px rgba(0,0,0,.1);
+  --radius:12px;--radius-lg:16px;
+}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+
+/* Header */
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover);transform:translateY(-1px)}
+
+/* Article */
+.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
+.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
+.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
+.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
+.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
+.article-container ul, .article-container ol{margin-bottom:16px;padding-left:24px}
+.article-container li{margin-bottom:8px;color:var(--text-secondary);line-height:1.8}
+.article-container strong{color:var(--text);font-weight:600}
+.article-container img{max-width:100%;border-radius:12px;margin:24px 0}
+.article-container blockquote{border-left:4px solid var(--accent);padding:16px 20px;background:var(--accent-light);border-radius:0 8px 8px 0;margin:24px 0}
+.article-container code{background:var(--bg);padding:2px 6px;border-radius:4px;font-size:14px;font-family:'SF Mono',Monaco,Consolas,monospace}
+.article-container pre{background:var(--bg);padding:16px;border-radius:8px;overflow-x:auto;margin:24px 0}
+.article-container pre code{background:none;padding:0}
+
+/* CTA */
+.cta-box{background:var(--green-light);border-radius:12px;padding:20px;margin:24px 0;text-align:center}
+.cta-box a{display:inline-block;padding:12px 24px;background:var(--accent);color:#fff;border-radius:8px;text-decoration:none;font-weight:600;transition:all .2s}
+.cta-box a:hover{background:var(--accent-hover)}
+
+/* Related */
+.related-guides{margin-top:40px;padding-top:24px;border-top:1px solid var(--border)}
+.related-guides h3{font-size:18px;font-weight:600;margin-bottom:16px}
+.related-guides a{color:var(--accent);text-decoration:none}
+
+/* Footer */
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand .logo{color:var(--green);margin-bottom:8px;display:inline-block}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6);line-height:1.5}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col-title{font-size:14px;font-weight:700;margin-bottom:4px;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px;transition:color .2s}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+
+@media(max-width:768px){
+  .container{padding:0 20px}
+  .nav{display:none}
+  .article-container h1{font-size:28px}
+  .footer-inner{flex-direction:column;gap:30px}
+  .footer-links{gap:30px}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <a href="/zh" class="logo">AI<span class="accent">FreePlan</span></a>
+    <nav class="nav">
+      <a href="/zh/all">全部工具</a>
+      <a href="/zh/guides">攻略</a>
+      <a href="/zh/feedback">留言板</a>
+      <a href="/zh/privacy">隐私政策</a>
+      <a href="/en/guides/huawei-deveco-code-free-coding" class="btn btn-primary">English</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+<div class="article-container">
+
+<h1>华为DevEco Code免费攻略：GLM-5.1不限量白嫖指南</h1>
+
+<p><em>更新时间：2026年6月15日</em></p>
+
+<img src="/data/articles/huawei-deveco-code-screenshot.jpg" alt="华为DevEco Code界面截图">
+
+<p>白嫖AI编程助手的名单上，又多了一个重量级玩家——华为。华为最近发布了一个叫DevEco Code的CLI工具，跟之前那些送Token的玩法不太一样。它内置了智谱的GLM-5.1模型，<strong>完全免费，不限额度、不限次数</strong>。装好就能用，不需要抢购，不需要排期。</p>
+
+<h2>GLM-5.1是什么水平</h2>
+
+<p>GLM-5.1是智谱今年3月发布的旗舰开源模型，在Claude Code编码评测中得了<strong>45.3分</strong>，达到Claude Opus 4.6（47.9分）的<strong>94.6%</strong>，比前代GLM-5提升了28%。而且这个模型是完全基于华为昇腾芯片训练的——也就是说，华为跟智谱在这个模型上本来就有深度合作。</p>
+
+<p>现在华为把GLM-5.1作为DevEco Code的内置模型免费开放，等于把自家芯片训练的模型，通过自家工具，免费提供给开发者。逻辑上是通的，对开发者来说是实打实的福利。</p>
+
+<h2>三分钟上手</h2>
+
+<p>使用门槛很低，不需要鸿蒙开发经验，也不需要安装DevEco Studio。</p>
+
+<p><strong>第一步，装工具。</strong></p>
+<pre><code>npm install -g @deveco/deveco-code</code></pre>
+<p>装完跑<code>deveco -v</code>，看到版本号就说明成功了。</p>
+
+<p><strong>第二步，登录。</strong></p>
+<p>终端输入<code>deveco</code>，选择「自动跳转到浏览器登录」，用华为账号登录就行。没有账号可以注册，免费的。</p>
+
+<p><strong>第三步，开用。</strong></p>
+<p>登录完成后直接输入需求，<strong>默认就是GLM-5.1模型</strong>，无需手动选择。整个过程三分钟搞定，比配置大部分AI编程工具都快。</p>
+
+<h2>特色功能：皮肤主题</h2>
+
+<p>DevEco Code内置多种编辑器皮肤主题，支持深色/浅色模式切换，界面美观，编码体验舒适。截图中展示的就是默认的深色主题，视觉效果很棒。</p>
+
+<h2>跟其他免费方案有什么不同</h2>
+
+<p>市面上的免费AI编程工具很多，但各有各的短板。</p>
+
+<ul>
+  <li><strong>硅基流动和讯飞星辰</strong>送Token，但有用量上限和速率限制</li>
+  <li><strong>智谱自己的Coding Plan</strong>需要每天早上抢，抢到了才有额度</li>
+  <li><strong>MoMA</strong>送2500万Token，但也需要实名认证且有有效期</li>
+</ul>
+
+<p>DevEco Code这个方案的不同之处在于：<strong>它不限额度</strong>。你不用担心Token用完、不用排队抢购、不用算着用量过日子。只要华为还在运营这个工具，GLM-5.1就能免费调用。</p>
+
+<blockquote>
+<p>当然，这个工具目前定位是辅助鸿蒙开发的，内置GLM-5.1只是其中一项能力。但实测下来，不干鸿蒙相关的活，单纯拿它当通用编程助手用也完全没问题。</p>
+</blockquote>
+
+<h2>一个问题：能接入其他工具吗</h2>
+
+<p>DevEco Code是一个独立的CLI工具，有自己独立的终端界面，不像其他API那样可以自由接入Cursor、Claude Code、Windsurf等第三方工具。这是它跟OpenAI兼容API的本质区别。</p>
+
+<p>目前看来，这个工具更适合把它当成一个独立的AI编程环境来用，而不是作为其他工具的模型后端。如果你想在Cursor或者Claude Code里用GLM-5.1，还是得走智谱官方的API或者Coding Plan。</p>
+
+<h2>适合谁用</h2>
+
+<ul>
+  <li>如果你在找免费的AI编程助手，又不想折腾API Key和用量管理，DevEco Code几乎是最省心的选择。装好登录就能用，不需要任何配置。</li>
+  <li>如果你是鸿蒙开发者就更赚了——DevEco Code本身就是为鸿蒙应用开发设计的CLI工具，GLM-5.1是锦上添花。</li>
+  <li>如果你已经在用其他AI编程工具（比如Claude Code或Codex），而且用得很好，那DevEco Code可能不会取代你现有的工作流。但它作为一个备选方案——特别是主力工具出问题的时候——价值很大。</li>
+</ul>
+
+<h2>观察者点评</h2>
+
+<p>华为这一手挺聪明的。GLM-5.1本身就是基于昇腾芯片训练的，把自家芯片训练的模型放到自家开发工具里免费提供，既能吸引开发者使用DevEco Code，又能展示昇腾生态的AI能力，一举两得。</p>
+
+<p>对开发者来说，不管华为的动机是什么，结果就是多了一个不限量免费的编程助手可用。GLM-5.1虽然不是最强的模型，但45.3的编码评分已经接近Claude Opus 4.6的水平，日常开发完全够用。考虑到智谱的Coding Plan还要每天抢，华为这个「无需抢购、不限额度」的方案，对普通开发者来说反而更实用了。</p>
+
+<div class="cta-box">
+  <p><strong>立即体验华为DevEco Code</strong></p>
+  <a href="https://deveco.huawei.com" target="_blank" rel="noopener">访问官网</a>
+</div>
+
+<div class="related-guides">
+  <h3>相关攻略</h3>
+  <ul>
+    <li><a href="/zh/guides/ai-coding-free-credits-2026">2026免费AI编程助手实测：10款工具免费额度全面对比</a></li>
+    <li><a href="/zh/guides/best-ai-coding-assistants-free">2026最好用的免费AI编程助手推荐：Cursor/Copilot/Codeium对比</a></li>
+    <li><a href="/zh/guides/cursor-free-ai-coding">Cursor免费版完全攻略2026：不绑信用卡就能用的AI编程IDE</a></li>
+    <li><a href="/zh/guides/freebuff-free-coding-agent">Freebuff免费AI编程Agent攻略：360模式搬到AI编程领域</a></li>
+  </ul>
+</div>
+
+</div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/zh" class="logo">AI<span class="accent" style="color:var(--green)">FreePlan</span></a>
+        <p>AI驱动的免费工具聚合平台，永久免费。</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <div class="footer-col-title">产品</div>
+          <a href="/zh/all">全部工具</a>
+          <a href="/zh/guides">攻略</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">关于</div>
+          <a href="/zh/about">关于我们</a>
+          <a href="https://github.com/bigbigboy0666-lab/aifreeplan">GitHub</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">法律</div>
+          <a href="/zh/privacy">隐私政策</a>
+          <a href="/zh/terms">用户条款</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 AIFreePlan. 保留所有权利。</div>
+  </div>
+</footer>
+
+</body>
+</html>
