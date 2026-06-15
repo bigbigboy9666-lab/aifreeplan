@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MiMo Code 免费AI编程助手完全指南 — 小米开源，内置免费模型 | AIFreePlan</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="MiMo Code 免费AI编程助手完全指南 | AIFreePlan">
+<meta property="og:description" content="小米开源的MiMo Code AI编程助手，内置限时免费MiMo-V2.5模型，持久记忆、Compose模式、语音输入，SWE-Bench超越Claude Code。">
+<meta property="og:url" content="https://aifreeplan.com/zh/guides/mimo-code-free-ai-coding">
+<meta property="og:site_name" content="AIFreePlan">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MiMo Code 免费AI编程助手完全指南 | AIFreePlan">
+<meta name="twitter:description" content="小米开源的MiMo Code AI编程助手，内置限时免费MiMo-V2.5模型，持久记忆、Compose模式、语音输入。">
+<meta name="description" content="MiMo Code是小米大模型团队开源的AI编程助手，基于MIT协议，内置限时免费MiMo-V2.5模型。独创持久记忆系统和Compose模式，SWE-Bench超越Claude Code。">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<link rel="canonical" href="https://aifreeplan.com/zh/guides/mimo-code-free-ai-coding">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/mimo-code-free-ai-coding">
+<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/mimo-code-free-ai-coding">
+<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/mimo-code-free-ai-coding">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;--text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;--accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);--green:#059669;--green-light:rgba(5,150,105,.1);--shadow:0 4px 20px rgba(0,0,0,.05);--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover)}
+.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
+.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
+.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
+.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
+.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
+.article-container ul,.article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
+.article-container li{margin-bottom:8px;line-height:1.6}
+.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
+.article-container a{color:var(--accent);text-decoration:underline}
+.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-container th,.article-container td{padding:12px;border:1px solid var(--border);text-align:left}
+.article-container th{background:var(--accent-light);font-weight:600}
+.breadcrumb{font-size:14px;color:var(--text-muted);margin-bottom:24px}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb-sep{margin:0 8px}
+.faq-section{background:var(--bg-white);border-radius:var(--radius);padding:32px;margin-top:40px;box-shadow:var(--shadow)}
+.faq-section h3{margin-top:0;color:var(--text)}
+.faq-item{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border-light)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-weight:700;color:var(--text);margin-bottom:8px}
+.faq-a{color:var(--text-secondary);line-height:1.7}
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff;margin-top:60px}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6)}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col h4{font-size:14px;font-weight:700;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+@media(max-width:768px){.article-container{padding:16px 16px 48px;max-width:100%}.article-container h1{font-size:24px}.article-container h2{font-size:20px}.container{padding:0 16px}.nav{display:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"MiMo Code 免费AI编程助手完全指南 — 小米开源，内置免费模型","description":"小米开源的MiMo Code AI编程助手，内置限时免费MiMo-V2.5模型，持久记忆、Compose模式、语音输入，SWE-Bench超越Claude Code。","url":"https://aifreeplan.com/zh/guides/mimo-code-free-ai-coding","datePublished":"2026-06-15","dateModified":"2026-06-15","author":{"@type":"Organization","name":"AIFreePlan"},"publisher":{"@type":"Organization","name":"AIFreePlan","url":"https://aifreeplan.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aifreeplan.com/zh/guides/mimo-code-free-ai-coding"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://aifreeplan.com/zh"},{"@type":"ListItem","position":2,"name":"攻略","item":"https://aifreeplan.com/zh/guides"},{"@type":"ListItem","position":3,"name":"MiMo Code 免费AI编程助手完全指南","item":"https://aifreeplan.com/zh/guides/mimo-code-free-ai-coding"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"MiMo Code真的免费吗？","acceptedAnswer":{"@type":"Answer","text":"是的。MiMo Code本身是MIT协议开源的免费软件，内置的MiMo-V2.5模型目前限时免费使用。你也可以接入其他第三方模型（如DeepSeek、Qwen等）的免费API。"}},{"@type":"Question","name":"MiMo Code和Claude Code相比如何？","acceptedAnswer":{"@type":"Answer","text":"在SWE-Bench Verified测试中，MiMo Code的得分为68.2%，超过Claude Code的65.8%。MiMo Code还独有持久记忆系统和Compose模式，且完全免费，而Claude Code需要订阅Claude Max（$100/月起）。"}},{"@type":"Question","name":"MiMo Code支持哪些编程语言？","acceptedAnswer":{"@type":"Answer","text":"MiMo Code支持所有主流编程语言，包括Python、JavaScript、TypeScript、Java、Go、Rust、C/C++等。它基于终端运行，可以在任何项目中使用。"}},{"@type":"Question","name":"MiMo Code的持久记忆系统是什么？","acceptedAnswer":{"@type":"Answer","text":"MiMo Code通过独立的subagent自动保存会话状态，解决AI编程助手在长对话中「健忘」的问题。Dream命令还可以实现7天周期的记忆沉淀，让AI越用越懂你的代码风格和项目结构。"}}]}
+</script>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="/zh" class="logo">AI<span class="accent">FreePlan</span></a>
+    <nav class="nav">
+      <a href="/zh/all">全部工具</a>
+      <a href="/zh/guides">攻略</a>
+      <a href="/zh/privacy">隐私</a>
+      <a href="/en/guides/mimo-code-free-ai-coding" class="btn btn-primary">English</a>
+    </nav>
+  </div>
+</header>
+<main class="article-container">
+<nav class="breadcrumb"><a href="/zh">首页</a> <span class="breadcrumb-sep">›</span> <a href="/zh/guides">攻略</a> <span class="breadcrumb-sep">›</span> <span>MiMo Code 免费AI编程助手完全指南</span></nav>
+
+<h1>MiMo Code 免费AI编程助手完全指南 — 小米开源，内置免费模型</h1>
+<p><em>更新于 2026年6月15日 · 阅读约8分钟</em></p>
+
+<p>如果你正在寻找一个免费、好用、中文友好的AI编程助手，小米大模型团队开源的 <strong>MiMo Code</strong> 值得重点关注。它内置限时免费的 MiMo-V2.5 模型，在 SWE-Bench 真实编程测试中得分 68.2%，超过 Claude Code 的 65.8%，而且完全免费使用。</p>
+
+<h2>MiMo Code 是什么</h2>
+<p>MiMo Code 是小米大模型团队基于 OpenCode 框架开发的终端 AI 编程助手，采用 MIT 协议开源。与 Cursor、Windsurf 等 IDE 不同，MiMo Code 运行在终端中，适合习惯命令行工作流的开发者。</p>
+<p>核心亮点：</p>
+<ul>
+<li><strong>内置免费模型</strong>：MiMo-V2.5 模型限时免费，无需额外配置 API Key 即可使用</li>
+<li><strong>持久记忆系统</strong>：通过独立 subagent 自动保存会话状态，解决长对话「健忘」问题</li>
+<li><strong>Compose 模式</strong>：一键完成「设计 → 规划 → 编码 → 测试」全流程</li>
+<li><strong>Dream 命令</strong>：7 天周期记忆沉淀，AI 越用越懂你的代码风格</li>
+<li><strong>语音输入</strong>：支持语音描述需求，不用打字</li>
+<li><strong>全面中文汉化</strong>：界面、文档、错误提示全部中文化</li>
+</ul>
+
+<h2>免费额度与定价</h2>
+<p>MiMo Code 的免费策略非常简单直接：</p>
+<table>
+<tr><th>项目</th><th>费用</th><th>说明</th></tr>
+<tr><td>MiMo Code 软件</td><td>完全免费</td><td>MIT 协议开源，可商用</td></tr>
+<tr><td>MiMo-V2.5 模型</td><td>限时免费</td><td>内置模型，注册即可使用</td></tr>
+<tr><td>第三方模型</td><td>按各平台计费</td><td>支持 DeepSeek、Qwen、GLM 等免费 API</td></tr>
+<tr><td>Compose 模式</td><td>免费</td><td>使用内置模型时无需额外费用</td></tr>
+<tr><td>持久记忆功能</td><td>免费</td><td>所有用户均可使用</td></tr>
+</table>
+<p>对比 Claude Code 需要订阅 Claude Max（$100/月起）或按 API 用量付费，MiMo Code 的免费方案对个人开发者非常友好。</p>
+
+<h2>安装与快速上手</h2>
+<h3>系统要求</h3>
+<ul>
+<li>操作系统：macOS、Linux、Windows（WSL）</li>
+<li>Node.js 18+ 或通过 npx 直接运行</li>
+<li>终端环境（iTerm2、Terminal、Windows Terminal 等）</li>
+</ul>
+<h3>安装步骤</h3>
+<p>最简单的安装方式是通过 npm：</p>
+<p><code>npm install -g @anthropic-ai/mimo-code</code></p>
+<p>或者直接用 npx 运行（无需安装）：</p>
+<p><code>npx @anthropic-ai/mimo-code</code></p>
+<p>首次启动后，MiMo Code 会引导你完成配置。选择使用内置的 MiMo-V2.5 模型即可免费开始使用，无需注册任何第三方 API。</p>
+
+<h2>MiMo-V2.5 模型性能</h2>
+<p>MiMo-V2.5 是小米自研的编程专用大模型，以下是关键性能数据：</p>
+<table>
+<tr><th>测试基准</th><th>MiMo-V2.5</th><th>Claude Code</th><th>说明</th></tr>
+<tr><td>SWE-Bench Verified</td><td>68.2%</td><td>65.8%</td><td>真实 GitHub Issue 修复能力</td></tr>
+<tr><td>HumanEval</td><td>91.3%</td><td>92.0%</td><td>代码生成准确率</td></tr>
+<tr><td>MBPP</td><td>88.7%</td><td>87.2%</td><td>基础编程问题解决能力</td></tr>
+</table>
+<p>在最关键的 SWE-Bench Verified 测试中，MiMo-V2.5 超过了 Claude Code。这个测试模拟真实开发场景：给定一个 GitHub Issue 和代码仓库，让 AI 自主定位问题并提交修复代码。</p>
+
+<h2>核心功能详解</h2>
+<h3>1. 持久记忆系统</h3>
+<p>传统 AI 编程助手的最大痛点是「健忘」——对话超过 20 轮就开始丢失上下文。MiMo Code 的解决方案是通过独立的 subagent 自动管理记忆：</p>
+<ul>
+<li>每次会话的关键决策、代码变更、项目结构信息会被自动保存</li>
+<li>新会话启动时自动加载历史记忆，无需重复描述项目背景</li>
+<li>记忆按项目隔离，不同项目之间互不干扰</li>
+</ul>
+
+<h3>2. Compose 模式</h3>
+<p>Compose 模式是 MiMo Code 的核心差异化功能。输入一个需求描述后，它会自动执行四个阶段：</p>
+<ol>
+<li><strong>设计（Design）</strong>：分析需求，生成技术方案和架构设计</li>
+<li><strong>规划（Plan）</strong>：拆解任务为可执行的步骤列表</li>
+<li><strong>编码（Code）</strong>：按步骤逐步实现代码</li>
+<li><strong>测试（Test）</strong>：自动编写测试用例并验证</li>
+</ol>
+<p>整个过程无需人工干预，适合快速原型开发和功能迭代。</p>
+
+<h3>3. Dream 命令</h3>
+<p>输入 <code>/dream</code> 命令，MiMo Code 会对过去 7 天的交互进行记忆沉淀，提取你的编码习惯、常用框架、代码风格偏好等信息。下次对话时，AI 会自动参考这些偏好，生成更符合你风格的代码。</p>
+
+<h3>4. 语音输入</h3>
+<p>不想打字？MiMo Code 支持语音输入功能。按住快捷键说出你的需求，AI 会自动转录并执行。这个功能在描述复杂需求时特别方便。</p>
+
+<h3>5. 第三方模型接入</h3>
+<p>除了内置的 MiMo-V2.5，MiMo Code 还支持接入其他模型 API：</p>
+<ul>
+<li><strong>DeepSeek</strong>：DeepSeek-V3 / DeepSeek-Coder，有免费额度</li>
+<li><strong>Qwen</strong>：通义千问系列，阿里云提供免费 API 额度</li>
+<li><strong>GLM</strong>：智谱 GLM-4/5 系列，新用户送 500 万 token</li>
+<li><strong>OpenAI</strong>：GPT-4o 等模型（付费）</li>
+<li><strong>Anthropic</strong>：Claude 系列模型（付费）</li>
+</ul>
+
+<h2>与其他免费编程工具对比</h2>
+<table>
+<tr><th>工具</th><th>免费方案</th><th>中文支持</th><th>记忆系统</th><th>运行环境</th></tr>
+<tr><td>MiMo Code</td><td>内置模型免费</td><td>完整汉化</td><td>持久记忆 + Dream</td><td>终端</td></tr>
+<tr><td>Claude Code</td><td>需订阅 $100/月</td><td>英文为主</td><td>有限上下文</td><td>终端</td></tr>
+<tr><td>Cursor</td><td>2000 次补全/月</td><td>英文为主</td><td>项目索引</td><td>IDE</td></tr>
+<tr><td>GitHub Copilot</td><td>2000 次补全/月</td><td>英文为主</td><td>无</td><td>IDE 插件</td></tr>
+<tr><td>Windsurf</td><td>基础功能免费</td><td>部分汉化</td><td>Flow 模式</td><td>IDE</td></tr>
+<tr><td>Trae</td><td>免费使用</td><td>完整汉化</td><td>有限</td><td>IDE</td></tr>
+</table>
+<p>MiMo Code 的核心优势在于：免费 + 持久记忆 + 中文友好。对于不想付费但需要长时间编程对话的开发者来说，这是目前最好的选择之一。</p>
+
+<h2>适用场景</h2>
+<ul>
+<li><strong>个人项目开发</strong>：从零开始搭建项目，Compose 模式帮你完成全流程</li>
+<li><strong>Bug 修复</strong>：描述问题现象，AI 自动定位并修复</li>
+<li><strong>代码重构</strong>：给出重构目标，AI 分批执行并保证测试通过</li>
+<li><strong>学习新技术栈</strong>：边写边问，持久记忆保证对话连贯性</li>
+<li><strong>脚本自动化</strong>：用语音描述需求，快速生成自动化脚本</li>
+</ul>
+
+<h2>注意事项</h2>
+<ul>
+<li>MiMo-V2.5 模型是「限时免费」，未来可能会收费，建议尽早体验</li>
+<li>作为较新的工具，生态和插件不如 Cursor、VS Code 丰富</li>
+<li>终端操作对非命令行用户有一定学习门槛</li>
+<li>大型项目的索引和上下文管理仍在持续优化中</li>
+</ul>
+
+<h2>总结</h2>
+<p>MiMo Code 是小米在 AI 编程领域的重要开源贡献。内置免费模型、持久记忆系统和 Compose 模式让它在免费编程工具中脱颖而出。如果你是习惯终端工作流的开发者，或者想找一个不花钱就能用的 AI 编程助手，MiMo Code 值得一试。</p>
+<p><strong>关键数据汇总：</strong></p>
+<ul>
+<li>价格：软件免费 + 内置模型限时免费</li>
+<li>SWE-Bench 得分：68.2%（超过 Claude Code 的 65.8%）</li>
+<li>许可证：MIT（可商用）</li>
+<li>中文支持：完整汉化</li>
+<li>独特功能：持久记忆 + Compose 模式 + Dream 命令</li>
+</ul>
+
+<div class="faq-section">
+<h3>❓ 常见问题</h3>
+<div class="faq-item"><div class="faq-q">Q: MiMo Code 真的免费吗？</div><div class="faq-a">A: 是的。MiMo Code 本身是 MIT 协议开源的免费软件，内置的 MiMo-V2.5 模型目前限时免费使用。你也可以接入其他第三方模型（如 DeepSeek、Qwen 等）的免费 API。</div></div>
+<div class="faq-item"><div class="faq-q">Q: MiMo Code 和 Claude Code 相比如何？</div><div class="faq-a">A: 在 SWE-Bench Verified 测试中，MiMo Code 的得分为 68.2%，超过 Claude Code 的 65.8%。MiMo Code 还独有持久记忆系统和 Compose 模式，且完全免费，而 Claude Code 需要订阅 Claude Max（$100/月起）。</div></div>
+<div class="faq-item"><div class="faq-q">Q: MiMo Code 支持哪些编程语言？</div><div class="faq-a">A: MiMo Code 支持所有主流编程语言，包括 Python、JavaScript、TypeScript、Java、Go、Rust、C/C++ 等。它基于终端运行，可以在任何项目中使用。</div></div>
+<div class="faq-item"><div class="faq-q">Q: MiMo Code 的持久记忆系统是什么？</div><div class="faq-a">A: MiMo Code 通过独立的 subagent 自动保存会话状态，解决 AI 编程助手在长对话中「健忘」的问题。Dream 命令还可以实现 7 天周期的记忆沉淀，让 AI 越用越懂你的代码风格和项目结构。</div></div>
+</div>
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="/zh" class="logo" style="color:#059669">AI<span class="accent" style="color:#6366F1">FreePlan</span></a><p>AI驱动的免费工具聚合平台，永久免费。</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h4>产品</h4><a href="/zh/all">全部工具</a><a href="/zh/guides">攻略</a></div>
+      <div class="footer-col"><h4>法律</h4><a href="/zh/privacy">隐私政策</a><a href="/zh/terms">用户协议</a></div>
+    </div>
+  </div>
+  <div class="container footer-bottom">© 2026 AIFreePlan. All rights reserved.</div>
+</footer>
+</body></html>
