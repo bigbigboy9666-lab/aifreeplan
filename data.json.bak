@@ -2,8 +2,8 @@
   "site": "aifreeplan.com",
   "description": "All AI tools free credits in one table - comprehensive database of free tiers, limits, and pricing",
   "description_zh": "所有AI工具的免费额度一张表看全 - 覆盖视频/图片/大模型/编程/助手五大分类",
-  "last_updated": "2026-06-15",
-  "total_tools": 64,
+  "last_updated": "2026-06-11",
+  "total_tools": 63,
   "categories": [
     {
       "id": "video",
@@ -27,7 +27,7 @@
       "id": "coding",
       "name_zh": "编程助手",
       "name_en": "Coding Assistants",
-      "count": 13
+      "count": 12
     },
     {
       "id": "ai-assistant",
@@ -5529,90 +5529,6 @@
       "last_updated": "2026-06-14",
       "url_zh": "https://aifreeplan.com/zh/llm/freetheai",
       "url_en": "https://aifreeplan.com/en/llm/freetheai"
-    },
-    {
-      "slug": "huawei-deveco-code",
-      "name": "华为DevEco Code",
-      "name_en": "Huawei DevEco Code",
-      "category": "coding",
-      "category_zh": "编程助手",
-      "category_en": "Coding Assistant",
-      "official_url": "https://deveco.huawei.com",
-      "company": "华为",
-      "description": "华为推出的CLI编程助手，内置智谱GLM-5.1模型，完全免费不限额度。基于华为昇腾芯片训练的模型，编码能力接近Claude Opus 4.6的94.6%。npm安装即可使用，无需抢购。",
-      "description_en": "Huawei's CLI coding assistant with built-in Zhipu GLM-5.1 model, completely free with no usage limits. Trained on Huawei Ascend chips, coding capability reaches 94.6% of Claude Opus 4.6. Install via npm and use immediately, no queuing required.",
-      "rating": 4,
-      "free_credits": {
-        "type": "unlimited",
-        "amount": "完全免费，不限额度，不限次数",
-        "amount_en": "Completely free, unlimited, no usage limits",
-        "daily_limit": "无限制",
-        "daily_limit_en": "No limits",
-        "reset": "无需重置",
-        "reset_en": "No reset needed",
-        "models": "GLM-5.1 Free",
-        "models_en": "GLM-5.1 Free",
-        "resolution": "N/A",
-        "watermark": "N/A",
-        "commercial_use": "免费商用",
-        "commercial_use_en": "Free commercial use"
-      },
-      "paid_from": "免费",
-      "paid_from_en": "Free",
-      "pros": [
-        "完全免费不限额度，不用抢",
-        "GLM-5.1编码能力接近Claude Opus",
-        "npm安装三分钟上手",
-        "基于华为昇腾芯片，国产自主",
-        "不绑定鸿蒙开发，通用编程也能用"
-      ],
-      "pros_en": [
-        "Completely free with no limits, no queuing",
-        "GLM-5.1 coding capability near Claude Opus",
-        "npm install, 3 minutes to start",
-        "Based on Huawei Ascend chips, domestic autonomous",
-        "Not tied to HarmonyOS development, works for general coding"
-      ],
-      "cons": [
-        "独立CLI工具，不能接入Cursor/Claude Code",
-        "目前定位是鸿蒙开发辅助",
-        "模型能力不如Claude Opus/GPT-4o"
-      ],
-      "cons_en": [
-        "Standalone CLI tool, cannot integrate with Cursor/Claude Code",
-        "Currently positioned as HarmonyOS development assistant",
-        "Model capability not as strong as Claude Opus/GPT-4o"
-      ],
-      "features": [
-        "内置GLM-5.1免费模型",
-        "不限额度不限次数",
-        "npm全局安装",
-        "华为账号登录",
-        "终端界面操作"
-      ],
-      "features_en": [
-        "Built-in GLM-5.1 free model",
-        "Unlimited usage, no limits",
-        "npm global install",
-        "Huawei account login",
-        "Terminal interface"
-      ],
-      "tips": [
-        "npm install -g @deveco/deveco-code",
-        "终端输入deveco启动",
-        "输入/models选择GLM-5.1 Free",
-        "当备选工具，主力出问题时顶上"
-      ],
-      "tips_en": [
-        "npm install -g @deveco/deveco-code",
-        "Type 'deveco' in terminal to start",
-        "Type '/models' to select GLM-5.1 Free",
-        "Use as backup when main tool has issues"
-      ],
-      "plans": [],
-      "last_updated": "2026-06-15",
-      "url_zh": "https://aifreeplan.com/zh/coding/huawei-deveco-code",
-      "url_en": "https://aifreeplan.com/en/coding/huawei-deveco-code"
     }
   ]
 }

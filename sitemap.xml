@@ -1105,6 +1105,18 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/zh/coding/huawei-deveco-code</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/coding/huawei-deveco-code</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/zh/coding/pieces</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
