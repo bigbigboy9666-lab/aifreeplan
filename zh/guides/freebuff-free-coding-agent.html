@@ -304,13 +304,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
 <p>npm install -g freebuff</p>
 <p>装完之后进你的项目目录，敲 freebuff 就能开始用了。没有注册流程，没有 API Key 配置，没有模式选择——打开就干。</p>
 <h2 id="它背后用了哪些模型">它背后用了哪些模型</h2>
-<img src="/data/articles/freebuff-homepage.webp" alt="FreeBuff编程Agent - 功能亮点" loading="lazy" decoding="async"><p><img src="/data/articles/freebuff-homepage.webp" alt="FreeBuff AI编程Agent - 国产免费替代方案" loading="lazy" decoding="async">)</p>
-<p>这是很多人关心的部分。Freebuff 并不是只用一个模型，而是根据任务类型分配不同的模型：</p>
-<p>主力编程模型四选一：DeepSeek V4 Flash（默认，最快）、DeepSeek V4 Pro（最聪明，但API会拿数据训练）、Kimi K2.6（月之暗面出品）、MiniMax M2.7。辅助模型方面，Gemini 3.1 Flash Lite负责文件搜索和网页研究，GPT-5.4负责深度思考（需要你自己的ChatGPT订阅）。</p>
 <p>注意一个细节：DeepSeek V4 Pro 虽然最聪明，但它的 API 会拿你的请求数据做训练。如果你写的是公司代码，建议用 V4 Flash 或者 Kimi K2.6。</p>
 <h2 id="免费的含金量">免费的含金量</h2>
-<img src="/data/articles/freebuff-homepage.webp" alt="FreeBuff编程Agent - 使用界面" loading="lazy" decoding="async"><p>Freebuff不是那种"免费试用3天然后逼你付费"的套路。它是真正的免费——只要你能忍受终端里的广告。它不存储你的代码库，不拿你的数据训练模型，只收集少量调试日志，广告收入覆盖模型调用成本。实际体验上，Reddit上有用户反馈"每天大概能免费用5小时左右"，这个数字没有官方确认，但多个用户交叉验证过。</p>
-<h2 id="和-claude-code-cursor-比怎么样">和 Claude Code、Cursor 比怎么样</h2><p><img src="/data/articles/freebuff-comparison.webp" alt="FreeBuff AI编程Agent - 与竞品对比分析" loading="lazy" decoding="async">)</p>
 <p>这三个都是终端里的 AI 编程工具，但定位完全不同。Freebuff免费（广告换额度），用DeepSeek V4 Flash等模型，开箱即用零配置，适合预算有限的个人开发者。Codebuff（付费版）100-500美元/月或1美分/积分，用OpenRouter上的任意模型，支持自定义Agent工作流，适合专业团队。Claude Code 20美元/月（Claude Pro），用Claude Sonnet/Opus，Anthropic官方出品，适合已经在用Claude生态的用户。Cursor免费版有限制、Pro 20美元/月，支持多模型切换，IDE集成不只是终端，适合习惯GUI编辑器的用户。</p>
 <p>官方评测数据：Codebuff在175+编程任务的内部评测中得分61%，Claude Code 53%。不过这个数据是Codebuff自己做的，参考一下就好。</p>
 <h2 id="9-个内置子-agent">9 个内置子 Agent</h2><p>Freebuff不是一个简单的"你问我答"工具。它内置了9个专门的子Agent：Code Review Agent自动审查代码变更，Browser Use Agent能操作浏览器做测试，Deep Thinking Agent做复杂问题深度分析，File Picker Agent扫描项目结构找相关文件，Planner Agent规划修改步骤和顺序，Editor Agent精确编辑代码，Reviewer Agent验证修改是否正确，Web Research Agent联网搜索技术方案，还有多Agent协同配合完成复杂任务。用 @AgentName 就能调用特定Agent，比如 @review 让它审查代码。</p>

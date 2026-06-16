@@ -309,20 +309,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
 </ul>
 <p>你也可以手动选：输入 <code>/model</code>，选 &quot;Auto (Gemini 3)&quot; 或 &quot;Pro&quot;。</p>
 <h2 id="免费额度到底有多少">免费额度到底有多少？</h2>
-<img src="/data/articles/gemini-homepage.jpg" alt="Gemini CLI免费使用教程" loading="lazy" decoding="async">
-<img src="/data/articles/gemini-homepage.jpg" alt="Gemini CLI代码生成示例" loading="lazy" decoding="async"><p>这是大家最关心的：</p>
-<p><strong>用Google账号登录（推荐）：</strong> 每天1000次请求，每分钟60次。不需要信用卡，不需要API Key，OAuth登录就行。</p>
 <p><strong>用Gemini API Key：</strong> 每天250次请求，但只能用Flash模型（不是Pro）。</p>
 <p><strong>Google AI Pro订阅：</strong> 每天1500次。</p>
 <p><strong>Google AI Ultra订阅：</strong> 每天2000次。</p>
 <p>对个人开发者来说，Google账号登录的1000次/天完全够用了。一天写代码能用到1000次AI交互的，要么是摸鱼要么是神。</p>
 <h2 id="四大杀手锏详解">四大杀手锏详解</h2>
-<img src="/data/articles/gemini-homepage.jpg" alt="Gemini CLI免费使用教程 - 功能亮点" loading="lazy" decoding="async">
-<img src="/data/articles/gemini-homepage.jpg" alt="Gemini CLI代码生成示例 - 功能亮点" loading="lazy" decoding="async"><p><strong>1. 百万级上下文：一次吞下整个代码库</strong></p>
-<p>1M token上下文意味着什么？大约75万个英文单词，或者100万+个中文字。你可以把整个项目的代码一次性扔给它，让它理解全局架构后再做修改。</p>
-<p>实测效果：我传了一个2万行的Python项目，让它重构数据库层。它能准确找到所有相关文件、理解模块依赖关系，然后一次性改完。Cursor在类似场景下经常会漏改某个文件。</p>
-<p><strong>2. 谷歌搜索加持：实时联网</strong></p>
-<p>内置了Google Search grounding功能。你问&quot;React 19有什么新特性&quot;，它不会瞎编，而是直接去搜最新的React文档，基于真实信息回答。</p>
+<p>实测效果：我传了一个2万行的Python项目，让它重构数据库层。它能准确找到所有相关文件、理解模块依赖关系，然后一次性改完。Cursor在类似场景下经常uot;，它不会瞎编，而是直接去搜最新的React文档，基于真实信息回答。</p>
 <p>还有一个web_fetch工具，可以抓取指定URL的内容。比如你说&quot;读一下这个GitHub Issue然后帮我修bug&quot;，它会抓取Issue内容，分析问题，直接给出修复方案。</p>
 <p><strong>3. 多模态输入：草图生成应用</strong></p>
 <p>可以传图片、PDF、甚至手绘草图。你画一个页面布局的草图，它能直接生成对应的HTML/CSS代码。传一张截图，它能识别UI元素并生成前端代码。</p>
@@ -330,15 +322,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
 <p>支持Model Context Protocol（MCP），可以接入各种外部工具和数据源。比如接入数据库查询、调用API、连接CI/CD流水线。社区已经有大量MCP服务器可用。</p>
 <p>还有一个Agent Skills系统——类似Hermes的skill机制，可以给Gemini CLI添加专业能力（安全审计、云部署、代码迁移等）。</p>
 <h2 id="安装有多简单">安装有多简单？</h2>
-<img src="/data/articles/gemini-homepage.jpg" alt="Gemini CLI免费使用教程 - 使用界面" loading="lazy" decoding="async"><p>一行命令：</p>
 <p>npx @google/gemini-cli</p>
 <p>不需要安装任何东西，npx直接运行。或者用npm全局安装：</p>
 <p>npm install -g @google/gemini-cli</p>
 <p>macOS用户还可以用Homebrew：</p>
 <p>brew install gemini-cli</p>
 <p>安装后运行 <code>gemini</code>，用Google账号OAuth登录，直接开始用。整个过程不超过2分钟。</p>
-<h2 id="跟其他ai编程工具比怎么样">跟其他AI编程工具比怎么样？</h2><p><strong>vs Cursor：</strong> Cursor是编辑器内集成，Gemini CLI是终端内运行。Cursor的Tab补全体验更好，但Gemini CLI的全局代码理解和多文件操作更强。两者不冲突，可以配合使用。</p>
-<p><strong>vs GitHub Copilot：</strong> Copilot的补全更丝滑，但Copilot需要$10/月（免费版有限制）。Gemini CLI免费版每天1000次，额度碾压。</p>
+<h2 id="跟其他ai编程工具比怎么样">跟其他AI编程工具比怎么样？</h2><p><strong>vs Cursor：trong>vs GitHub Copilot：</strong> Copilot的补全更丝滑，但Copilot需要$10/月（免费版有限制）。Gemini CLI免费版每天1000次，额度碾压。</p>
 <p><strong>vs Claude Code：</strong> 功能类似，但Claude Code需要Anthropic API Key（按量付费）。Gemini CLI免费版完全够个人用。</p>
 <p><strong>最大优势：</strong> 完全免费、开源（Apache 2.0）、不需要信用卡、不需要编辑器。只要有终端就能用。</p>
 <h2 id="实际使用体验">实际使用体验</h2><p>用了一周，说几个真实感受：</p>
