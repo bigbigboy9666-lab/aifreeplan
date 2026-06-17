@@ -2983,8 +2983,8 @@
       "category_en": "Coding Assistant",
       "official_url": "https://cline.bot",
       "company": "Cline",
-      "description": "开源AI编程助手，支持VS Code、JetBrains和命令行。不限定模型，可以对接Claude、GPT、Gemini等200+模型。免费使用，自带API Key就行。社区非常活跃，GitHub上星标破万。",
-      "description_en": "Open-source AI coding assistant for VS Code, JetBrains, and CLI. Supports 200+ models including Claude, GPT, Gemini. Free to use with your own API key.",
+      "description": "开源AI编程助手，支持VS Code、JetBrains和命令行。不限定模型，可以对接Claude、GPT、Gemini等200+模型。2026年6月推出ClinePass服务，提供GLM 5.1等精选模型，不用自备API Key也能用。免费使用，自带API Key就行。GitHub星标6.3万+。",
+      "description_en": "Open-source AI coding assistant for VS Code, JetBrains, and CLI. Supports 200+ models including Claude, GPT, Gemini. Launched ClinePass in June 2026 with curated models like GLM 5.1 - no API key needed. Free to use with your own API key. 63K+ GitHub stars.",
       "rating": 4.5,
       "free_credits": {
         "type": "none",
@@ -3035,7 +3035,8 @@
         "Plan/Act 双模式",
         "支持 200+ AI 模型",
         "MCP 服务器扩展",
-        "自动修复 Linter 错误"
+        "自动修复 Linter 错误",
+        "ClinePass 模型服务（GLM 5.1等）"
       ],
       "features_en": [
         "VS Code Extension",
@@ -3045,20 +3046,23 @@
         "Plan/Act Dual Mode",
         "200+ AI Model Support",
         "MCP Server Extensions",
-        "Auto Linter Error Fix"
+        "Auto Linter Error Fix",
+        "ClinePass Model Service (GLM 5.1 etc.)"
       ],
       "tips": [
         "新手建议先用 Claude Sonnet 模型，性价比最高",
         "在 .clinerules 文件里定义项目规则，效果提升明显",
-        "搭配 OpenRouter 可以用 200+ 模型，价格透明"
+        "搭配 OpenRouter 可以用 200+ 模型，价格透明",
+        "ClinePass提供GLM 5.1等模型，不想自备API Key的可以试试"
       ],
       "tips_en": [
         "Start with Claude Sonnet for best cost-performance",
         "Define project rules in .clinerules for better results",
-        "Use OpenRouter for 200+ models with transparent pricing"
+        "Use OpenRouter for 200+ models with transparent pricing",
+        "ClinePass offers GLM 5.1 and more - try it if you don't want to bring your own API key"
       ],
       "plans": [],
-      "last_updated": "2026-05-22",
+      "last_updated": "2026-06-17",
       "url_zh": "https://aifreeplan.com/zh/coding/cline",
       "url_en": "https://aifreeplan.com/en/coding/cline"
     },
