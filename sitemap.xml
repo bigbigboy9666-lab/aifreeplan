@@ -121,6 +121,30 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/zh/productivity</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/productivity</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/chat</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/chat</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/zh/about</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -140,6 +164,18 @@
   </url>
   <url>
     <loc>https://aifreeplan.com/en/terms</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/agent</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/agent</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -529,6 +565,30 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/zh/agent/dify</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/agent/dify</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/agent/coze</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/agent/coze</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/zh/image/fal-ai</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -901,6 +961,42 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/zh/productivity/wps-ai</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/productivity/wps-ai</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/productivity/feishu-minutes</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/productivity/feishu-minutes</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/productivity/baidu-netdisk-ai</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/productivity/baidu-netdisk-ai</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/zh/coding/framer-ai</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -1189,6 +1285,30 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/zh/chat/tencent-yuanbao</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/chat/tencent-yuanbao</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/chat/quark</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/chat/quark</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/zh/video/mora</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -1268,6 +1388,18 @@
   </url>
   <url>
     <loc>https://aifreeplan.com/en/video/motiondiffusion</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/video/jianying-ai</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/video/jianying-ai</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -1376,6 +1508,18 @@
   </url>
   <url>
     <loc>https://aifreeplan.com/en/video/imagen-video</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/video/tencent-zenvideo</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/video/tencent-zenvideo</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
