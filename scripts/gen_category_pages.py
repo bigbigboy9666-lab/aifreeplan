@@ -36,6 +36,18 @@ cat_meta = {
         'zh': {'name': 'AI音乐', 'emoji': '🎵', 'h1': '免费AI音乐生成额度汇总', 'intro': '汇总AI音乐生成工具的免费额度。', 'desc': '免费AI音乐生成工具额度对比。'},
         'en': {'name': 'AI Music', 'emoji': '🎵', 'h1': 'Free AI Music Generation Credits', 'intro': 'Compare free credits for AI music generation tools.', 'desc': 'Free AI music generation tools comparison.'},
     },
+    'chat': {
+        'zh': {'name': 'AI对话', 'emoji': '💬', 'h1': '免费AI对话工具额度汇总', 'intro': '汇总所有AI对话助手的免费额度和使用限制。包括豆包、DeepSeek、通义千问、Kimi、腾讯元宝、夸克等，一张表看清免费对话额度差异。', 'desc': '免费AI对话工具额度对比，覆盖豆包、DeepSeek、通义千问、Kimi、腾讯元宝、夸克等。'},
+        'en': {'name': 'AI Chat', 'emoji': '💬', 'h1': 'Free AI Chat Tools Credits', 'intro': 'Compare free plans for AI chat assistants. Covers Doubao, DeepSeek, Qwen, Kimi, Tencent Yuanbao, Quark and more.', 'desc': 'Free AI chat tools comparison. Doubao, DeepSeek, Qwen, Kimi free tiers with usage limits.'},
+    },
+    'agent': {
+        'zh': {'name': '智能体平台', 'emoji': '🤖', 'h1': '免费AI智能体平台额度汇总', 'intro': '汇总AI智能体开发平台的免费额度和使用限制。包括扣子Coze、Dify等，零代码搭建AI助手。', 'desc': '免费AI智能体平台额度对比，覆盖扣子Coze、Dify等。'},
+        'en': {'name': 'Agent Platform', 'emoji': '🤖', 'h1': 'Free AI Agent Platform Credits', 'intro': 'Compare free plans for AI agent platforms. Covers Coze, Dify and more. Build AI assistants with no code.', 'desc': 'Free AI agent platform comparison. Coze, Dify free tiers with features and limits.'},
+    },
+    'productivity': {
+        'zh': {'name': '办公效率', 'emoji': '📊', 'h1': '免费AI办公工具额度汇总', 'intro': '汇总AI办公效率工具的免费额度和使用限制。包括飞书妙记、WPS AI、百度网盘AI等，提升日常办公效率。', 'desc': '免费AI办公工具额度对比，覆盖飞书妙记、WPS AI、百度网盘AI等。'},
+        'en': {'name': 'Productivity', 'emoji': '📊', 'h1': 'Free AI Productivity Tools Credits', 'intro': 'Compare free plans for AI productivity tools. Covers Feishu Minutes, WPS AI, Baidu Netdisk AI and more.', 'desc': 'Free AI productivity tools comparison. Feishu Minutes, WPS AI, Baidu Netdisk AI free tiers.'},
+    },
 }
 
 def get_free_summary(t, lang='zh'):
@@ -62,8 +74,8 @@ def make_category_page(cat, lang):
     th = ('工具','免费额度','重置周期','分辨率','水印') if is_zh else ('Tool','Free Credits','Reset Cycle','Resolution','Watermark')
     last_upd = '最后更新：2026年6月5日' if is_zh else 'Last updated: June 5, 2026'
 
-    colors = {'video':'#DB2777','image':'#10B981','llm':'#6366F1','coding':'#0284C7','ai-assistant':'#F59E0B','audio':'#EC4899'}
-    tag_bg = {'video':'#FCE7F3','image':'#D1FAE5','llm':'#E0E7FF','coding':'#E0F2FE','ai-assistant':'#FEF3C7','audio':'#FCE7F3'}
+    colors = {'video':'#DB2777','image':'#10B981','llm':'#6366F1','coding':'#0284C7','ai-assistant':'#F59E0B','audio':'#EC4899','chat':'#8B5CF6','agent':'#EF4444','productivity':'#14B8A6'}
+    tag_bg = {'video':'#FCE7F3','image':'#D1FAE5','llm':'#E0E7FF','coding':'#E0F2FE','ai-assistant':'#FEF3C7','audio':'#FCE7F3','chat':'#EDE9FE','agent':'#FEE2E2','productivity':'#CCFBF1'}
     color = colors.get(cat, '#6366F1')
     tbg = tag_bg.get(cat, '#E0E7FF')
 
@@ -244,7 +256,7 @@ tr:hover{{background:var(--bg)}}
     return html
 
 count = 0
-for cat in ['video', 'image', 'llm', 'coding', 'ai-assistant', 'audio']:
+for cat in ['video', 'image', 'llm', 'coding', 'ai-assistant', 'audio', 'chat', 'agent', 'productivity']:
     for lang in ['zh', 'en']:
         html = make_category_page(cat, lang)
         if html:

@@ -2983,8 +2983,8 @@
       "category_en": "Coding Assistant",
       "official_url": "https://cline.bot",
       "company": "Cline",
-      "description": "开源AI编程助手，支持VS Code、JetBrains和命令行。不限定模型，可以对接Claude、GPT、Gemini等200+模型。免费使用，自带API Key就行。社区非常活跃，GitHub上星标破万。",
-      "description_en": "Open-source AI coding assistant for VS Code, JetBrains, and CLI. Supports 200+ models including Claude, GPT, Gemini. Free to use with your own API key.",
+      "description": "开源AI编程助手，支持VS Code、JetBrains和命令行。不限定模型，可以对接Claude、GPT、Gemini等200+模型。2026年6月推出ClinePass服务，提供GLM 5.1等精选模型，不用自备API Key也能用。免费使用，自带API Key就行。GitHub星标6.3万+。",
+      "description_en": "Open-source AI coding assistant for VS Code, JetBrains, and CLI. Supports 200+ models including Claude, GPT, Gemini. Launched ClinePass in June 2026 with curated models like GLM 5.1 - no API key needed. Free to use with your own API key. 63K+ GitHub stars.",
       "rating": 4.5,
       "free_credits": {
         "type": "none",
@@ -3035,7 +3035,8 @@
         "Plan/Act 双模式",
         "支持 200+ AI 模型",
         "MCP 服务器扩展",
-        "自动修复 Linter 错误"
+        "自动修复 Linter 错误",
+        "ClinePass 模型服务（GLM 5.1等）"
       ],
       "features_en": [
         "VS Code Extension",
@@ -3045,20 +3046,23 @@
         "Plan/Act Dual Mode",
         "200+ AI Model Support",
         "MCP Server Extensions",
-        "Auto Linter Error Fix"
+        "Auto Linter Error Fix",
+        "ClinePass Model Service (GLM 5.1 etc.)"
       ],
       "tips": [
         "新手建议先用 Claude Sonnet 模型，性价比最高",
         "在 .clinerules 文件里定义项目规则，效果提升明显",
-        "搭配 OpenRouter 可以用 200+ 模型，价格透明"
+        "搭配 OpenRouter 可以用 200+ 模型，价格透明",
+        "ClinePass提供GLM 5.1等模型，不想自备API Key的可以试试"
       ],
       "tips_en": [
         "Start with Claude Sonnet for best cost-performance",
         "Define project rules in .clinerules for better results",
-        "Use OpenRouter for 200+ models with transparent pricing"
+        "Use OpenRouter for 200+ models with transparent pricing",
+        "ClinePass offers GLM 5.1 and more - try it if you don't want to bring your own API key"
       ],
       "plans": [],
-      "last_updated": "2026-05-22",
+      "last_updated": "2026-06-17",
       "url_zh": "https://aifreeplan.com/zh/coding/cline",
       "url_en": "https://aifreeplan.com/en/coding/cline"
     },
@@ -5613,6 +5617,712 @@
       "last_updated": "2026-06-15",
       "url_zh": "https://aifreeplan.com/zh/coding/huawei-deveco-code",
       "url_en": "https://aifreeplan.com/en/coding/huawei-deveco-code"
+    },
+    {
+      "slug": "tencent-yuanbao",
+      "name": "腾讯元宝",
+      "name_en": "Tencent Yuanbao",
+      "category": "chat",
+      "category_zh": "AI对话",
+      "category_en": "AI Chat",
+      "official_url": "https://yuanbao.tencent.com",
+      "company": "腾讯",
+      "description": "腾讯出品的AI对话助手，基于混元HY2.0大模型。深度融入微信生态，支持AI搜索、文档分析、图片理解和创建个人智能体。月活1.28亿，适合微信重度用户。",
+      "description_en": "Tencent's AI assistant powered by Hunyuan HY2.0. Deeply integrated with WeChat ecosystem. Supports AI search, document analysis, image understanding and custom agent creation. 128M MAU.",
+      "rating": 4,
+      "free_credits": {
+        "type": "unlimited",
+        "amount": "基础对话完全免费",
+        "amount_en": "Basic chat is completely free",
+        "daily_limit": "无明确限制",
+        "daily_limit_en": "No explicit limit",
+        "reset": "N/A",
+        "reset_en": "N/A",
+        "models": "混元HY2.0",
+        "models_en": "Hunyuan HY2.0",
+        "resolution": "N/A",
+        "watermark": "N/A",
+        "commercial_use": "个人使用免费",
+        "commercial_use_en": "Free for personal use"
+      },
+      "paid_from": "15元/月",
+      "paid_from_en": "~$2/month",
+      "pros": [
+        "微信生态深度整合",
+        "月活1.28亿生态成熟",
+        "基础对话完全免费",
+        "微信端与APP数据同步"
+      ],
+      "pros_en": [
+        "Deep WeChat ecosystem integration",
+        "128M MAU with mature ecosystem",
+        "Basic chat completely free",
+        "Syncs between WeChat and app"
+      ],
+      "cons": [
+        "高级功能需会员",
+        "模型能力相比DeepSeek有差距"
+      ],
+      "cons_en": [
+        "Advanced features require membership",
+        "Model capability lags behind DeepSeek"
+      ],
+      "features": [
+        "AI对话",
+        "AI搜索",
+        "文档分析",
+        "图片理解",
+        "个人智能体",
+        "微信生态联动"
+      ],
+      "features_en": [
+        "AI Chat",
+        "AI Search",
+        "Document Analysis",
+        "Image Understanding",
+        "Custom Agents",
+        "WeChat Integration"
+      ],
+      "tips": [
+        "微信用户首选，不用额外装APP",
+        "Hy-Memory长期记忆插件值得关注"
+      ],
+      "tips_en": [
+        "Best choice for WeChat users - no extra app needed",
+        "Check out Hy-Memory plugin for long-term memory"
+      ],
+      "plans": [],
+      "last_updated": "2026-06-17",
+      "url_zh": "https://aifreeplan.com/zh/chat/tencent-yuanbao",
+      "url_en": "https://aifreeplan.com/en/chat/tencent-yuanbao"
+    },
+    {
+      "slug": "quark",
+      "name": "夸克",
+      "name_en": "Quark",
+      "category": "chat",
+      "category_zh": "AI对话",
+      "category_en": "AI Chat",
+      "official_url": "https://www.quark.cn",
+      "company": "阿里巴巴",
+      "description": "阿里旗下的智能搜索+AI助手，深度融合通义千问3.7。多模态搜索响应速度提升38%，智能摘要精准度97.8%。搜索+创作一体化，信息检索与内容整理的利器。",
+      "description_en": "Alibaba's intelligent search + AI assistant, integrated with Qwen 3.7. Multimodal search 38% faster, smart summary accuracy 97.8%. All-in-one search and creation tool.",
+      "rating": 4,
+      "free_credits": {
+        "type": "unlimited",
+        "amount": "基础AI搜索和文档处理永久免费",
+        "amount_en": "Basic AI search and document processing permanently free",
+        "daily_limit": "无明确限制",
+        "daily_limit_en": "No explicit limit",
+        "reset": "N/A",
+        "reset_en": "N/A",
+        "models": "通义千问3.7",
+        "models_en": "Qwen 3.7",
+        "resolution": "N/A",
+        "watermark": "N/A",
+        "commercial_use": "个人使用免费",
+        "commercial_use_en": "Free for personal use"
+      },
+      "paid_from": "12元/月",
+      "paid_from_en": "~$1.7/month",
+      "pros": [
+        "搜索+AI一体化体验",
+        "基础功能永久免费",
+        "文档/简历/PPT智能分析",
+        "浏览器内置无需额外安装"
+      ],
+      "pros_en": [
+        "Integrated search + AI experience",
+        "Basic features permanently free",
+        "Smart analysis for docs/resume/PPT",
+        "Built into browser, no extra install"
+      ],
+      "cons": [
+        "高级功能需夸克会员",
+        "主要面向移动端"
+      ],
+      "cons_en": [
+        "Advanced features require membership",
+        "Primarily mobile-focused"
+      ],
+      "features": [
+        "AI搜索",
+        "AI问答",
+        "文档智能分析",
+        "AI写真",
+        "扫描转Word",
+        "网盘AI助手"
+      ],
+      "features_en": [
+        "AI Search",
+        "AI Q&A",
+        "Smart Document Analysis",
+        "AI Portrait",
+        "Scan to Word",
+        "Cloud Drive AI Assistant"
+      ],
+      "tips": [
+        "适合日常信息检索和文档处理",
+        "手机端体验更好"
+      ],
+      "tips_en": [
+        "Great for daily info retrieval and document processing",
+        "Better experience on mobile"
+      ],
+      "plans": [],
+      "last_updated": "2026-06-17",
+      "url_zh": "https://aifreeplan.com/zh/chat/quark",
+      "url_en": "https://aifreeplan.com/en/chat/quark"
+    },
+    {
+      "slug": "jianying-ai",
+      "name": "剪映AI",
+      "name_en": "CapCut AI",
+      "category": "video",
+      "category_zh": "视频生成",
+      "category_en": "Video Generation",
+      "official_url": "https://www.capcut.cn",
+      "company": "字节跳动",
+      "description": "字节跳动旗下的视频剪辑工具，AI功能包括智能字幕、图文成片、AI特效、一键成片。基础剪辑和常用AI能力免费，自媒体人的日常剪辑搭档。",
+      "description_en": "ByteDance's video editor with AI features including smart subtitles, text-to-video, AI effects, and one-tap editing. Basic editing and common AI features are free.",
+      "rating": 4,
+      "free_credits": {
+        "type": "unlimited",
+        "amount": "基础剪辑和常用AI功能免费",
+        "amount_en": "Basic editing and common AI features free",
+        "daily_limit": "无明确限制",
+        "daily_limit_en": "No explicit limit",
+        "reset": "N/A",
+        "reset_en": "N/A",
+        "models": "N/A",
+        "models_en": "N/A",
+        "resolution": "最高4K导出",
+        "watermark": "免费版可去水印",
+        "commercial_use": "个人使用免费",
+        "commercial_use_en": "Free for personal use"
+      },
+      "paid_from": "30元/月",
+      "paid_from_en": "~$4/month",
+      "pros": [
+        "基础功能免费且够用",
+        "AI字幕自动生成",
+        "图文成片门槛低",
+        "与即梦AI联动"
+      ],
+      "pros_en": [
+        "Basic features free and sufficient",
+        "Auto-generated AI subtitles",
+        "Low barrier for text-to-video",
+        "Integrates with Jimeng AI"
+      ],
+      "cons": [
+        "高级模板和特效需会员",
+        "音色克隆等高级AI功能付费"
+      ],
+      "cons_en": [
+        "Premium templates and effects require membership",
+        "Voice cloning and advanced AI features are paid"
+      ],
+      "features": [
+        "视频剪辑",
+        "AI图文成片",
+        "智能字幕",
+        "AI特效",
+        "一键成片",
+        "录屏"
+      ],
+      "features_en": [
+        "Video Editing",
+        "AI Text-to-Video",
+        "Smart Subtitles",
+        "AI Effects",
+        "One-tap Editing",
+        "Screen Recording"
+      ],
+      "tips": [
+        "自媒体人必备，免费版已经很强",
+        "配合即梦AI生成素材再剪辑效果更好"
+      ],
+      "tips_en": [
+        "Essential for content creators - free version is already powerful",
+        "Pair with Jimeng AI to generate assets then edit in CapCut"
+      ],
+      "plans": [],
+      "last_updated": "2026-06-17",
+      "url_zh": "https://aifreeplan.com/zh/video/jianying-ai",
+      "url_en": "https://aifreeplan.com/en/video/jianying-ai"
+    },
+    {
+      "slug": "tencent-zenvideo",
+      "name": "腾讯智影",
+      "name_en": "Tencent ZenVideo",
+      "category": "video",
+      "category_zh": "视频生成",
+      "category_en": "Video Generation",
+      "official_url": "https://zenvideo.qq.com",
+      "company": "腾讯",
+      "description": "腾讯出品的数字人视频制作平台，支持文本驱动数字人播报、AI配音、视频剪辑。免费版可用但有水印和时长限制，适合教育培训和直播场景。",
+      "description_en": "Tencent's digital human video platform. Supports text-driven digital avatar narration, AI dubbing, and video editing. Free version available with watermark and length limits.",
+      "rating": 3,
+      "free_credits": {
+        "type": "limited",
+        "amount": "免费试用，单次视频最长30秒",
+        "amount_en": "Free trial, max 30 seconds per video",
+        "daily_limit": "有限",
+        "daily_limit_en": "Limited",
+        "reset": "N/A",
+        "reset_en": "N/A",
+        "models": "N/A",
+        "models_en": "N/A",
+        "resolution": "免费版有限制",
+        "watermark": "有水印",
+        "commercial_use": "付费后可商用",
+        "commercial_use_en": "Paid only"
+      },
+      "paid_from": "2999元/年",
+      "paid_from_en": "~$420/year",
+      "pros": [
+        "数字人效果自然",
+        "多语种支持",
+        "适合教育培训场景"
+      ],
+      "pros_en": [
+        "Natural-looking digital humans",
+        "Multi-language support",
+        "Great for education and training"
+      ],
+      "cons": [
+        "免费版有水印",
+        "免费版时长限制严格",
+        "付费价格较高"
+      ],
+      "cons_en": [
+        "Free version has watermark",
+        "Strict length limits on free tier",
+        "Paid plans are expensive"
+      ],
+      "features": [
+        "数字人视频生成",
+        "AI配音",
+        "视频剪辑",
+        "直播推流",
+        "素材库"
+      ],
+      "features_en": [
+        "Digital Human Video",
+        "AI Dubbing",
+        "Video Editing",
+        "Live Streaming",
+        "Asset Library"
+      ],
+      "tips": [
+        "先用免费版试试数字人效果",
+        "教育场景性价比最高"
+      ],
+      "tips_en": [
+        "Try the free tier first to test digital human quality",
+        "Best value for education use cases"
+      ],
+      "plans": [],
+      "last_updated": "2026-06-17",
+      "url_zh": "https://aifreeplan.com/zh/video/tencent-zenvideo",
+      "url_en": "https://aifreeplan.com/en/video/tencent-zenvideo"
+    },
+    {
+      "slug": "feishu-minutes",
+      "name": "飞书妙记",
+      "name_en": "Feishu Minutes",
+      "category": "productivity",
+      "category_zh": "办公效率",
+      "category_en": "Productivity",
+      "official_url": "https://www.feishu.cn/product/minutes",
+      "company": "字节跳动",
+      "description": "飞书生态内的AI会议转写工具，支持音视频自动转写、多语言、智能总结、关键词提炼。飞书用户每月免费300分钟，会议记录自动化利器。",
+      "description_en": "AI meeting transcription tool in Feishu ecosystem. Auto audio/video transcription, multi-language, smart summary, keyword extraction. 300 free minutes/month for Feishu users.",
+      "rating": 4,
+      "free_credits": {
+        "type": "monthly",
+        "amount": "每月300分钟免费转写",
+        "amount_en": "300 minutes free transcription per month",
+        "daily_limit": "N/A",
+        "daily_limit_en": "N/A",
+        "reset": "每月重置",
+        "reset_en": "Resets monthly",
+        "models": "N/A",
+        "models_en": "N/A",
+        "resolution": "N/A",
+        "watermark": "N/A",
+        "commercial_use": "飞书用户免费",
+        "commercial_use_en": "Free for Feishu users"
+      },
+      "paid_from": "300元/人/年",
+      "paid_from_en": "~$42/person/year",
+      "pros": [
+        "转写准确率高",
+        "自动结构化纪要",
+        "与飞书文档深度联动",
+        "多语言支持"
+      ],
+      "pros_en": [
+        "High transcription accuracy",
+        "Auto-structured meeting notes",
+        "Deep integration with Feishu docs",
+        "Multi-language support"
+      ],
+      "cons": [
+        "需要飞书账号",
+        "免费时长有限",
+        "企业版价格不低"
+      ],
+      "cons_en": [
+        "Requires Feishu account",
+        "Limited free minutes",
+        "Enterprise pricing is not cheap"
+      ],
+      "features": [
+        "会议音视频转写",
+        "智能总结",
+        "关键词提炼",
+        "待办事项识别",
+        "全文搜索",
+        "多语言支持"
+      ],
+      "features_en": [
+        "Meeting Transcription",
+        "Smart Summary",
+        "Keyword Extraction",
+        "Action Item Detection",
+        "Full-text Search",
+        "Multi-language Support"
+      ],
+      "tips": [
+        "飞书用户直接用，不需要额外开通",
+        "300分钟对普通用户够用"
+      ],
+      "tips_en": [
+        "Available directly for Feishu users - no extra activation needed",
+        "300 minutes is sufficient for most users"
+      ],
+      "plans": [],
+      "last_updated": "2026-06-17",
+      "url_zh": "https://aifreeplan.com/zh/productivity/feishu-minutes",
+      "url_en": "https://aifreeplan.com/en/productivity/feishu-minutes"
+    },
+    {
+      "slug": "wps-ai",
+      "name": "WPS AI",
+      "name_en": "WPS AI",
+      "category": "productivity",
+      "category_zh": "办公效率",
+      "category_en": "Productivity",
+      "official_url": "https://ai.wps.cn",
+      "company": "金山办公",
+      "description": "金山WPS内置的AI助手，支持文档智能写作、PPT一键生成、表格数据分析、PDF智能阅读。新用户7天免费体验，基础功能免费，年费198元起。",
+      "description_en": "AI assistant built into WPS Office. Smart writing, one-tap PPT generation, spreadsheet analysis, PDF reading. 7-day free trial, basic features free, from 198 CNY/year.",
+      "rating": 4,
+      "free_credits": {
+        "type": "trial",
+        "amount": "新用户7天免费体验，基础功能免费",
+        "amount_en": "7-day free trial for new users, basic features free",
+        "daily_limit": "N/A",
+        "daily_limit_en": "N/A",
+        "reset": "N/A",
+        "reset_en": "N/A",
+        "models": "N/A",
+        "models_en": "N/A",
+        "resolution": "N/A",
+        "watermark": "N/A",
+        "commercial_use": "个人使用免费",
+        "commercial_use_en": "Free for personal use"
+      },
+      "paid_from": "198元/年",
+      "paid_from_en": "~$28/year",
+      "pros": [
+        "与WPS深度集成",
+        "中文办公场景优化好",
+        "价格相对便宜",
+        "PPT一键生成实用"
+      ],
+      "pros_en": [
+        "Deep WPS integration",
+        "Optimized for Chinese office scenarios",
+        "Relatively affordable",
+        "One-tap PPT generation is practical"
+      ],
+      "cons": [
+        "高级AI功能需付费",
+        "长文档分析能力有限"
+      ],
+      "cons_en": [
+        "Advanced AI features require payment",
+        "Long document analysis is limited"
+      ],
+      "features": [
+        "文档智能写作",
+        "PPT一键生成",
+        "表格数据分析",
+        "PDF智能阅读",
+        "多语言翻译",
+        "公文写作辅助"
+      ],
+      "features_en": [
+        "Smart Document Writing",
+        "One-tap PPT Generation",
+        "Spreadsheet Analysis",
+        "Smart PDF Reading",
+        "Multi-language Translation",
+        "Official Document Writing"
+      ],
+      "tips": [
+        "WPS重度用户直接开，体验无缝",
+        "198元/年性价比不错"
+      ],
+      "tips_en": [
+        "Seamless experience for heavy WPS users",
+        "198 CNY/year is good value"
+      ],
+      "plans": [],
+      "last_updated": "2026-06-17",
+      "url_zh": "https://aifreeplan.com/zh/productivity/wps-ai",
+      "url_en": "https://aifreeplan.com/en/productivity/wps-ai"
+    },
+    {
+      "slug": "baidu-netdisk-ai",
+      "name": "百度网盘AI",
+      "name_en": "Baidu Netdisk AI",
+      "category": "productivity",
+      "category_zh": "办公效率",
+      "category_en": "Productivity",
+      "official_url": "https://pan.baidu.com",
+      "company": "百度",
+      "description": "百度网盘内置的AI功能，支持智能文件搜索、图片识别、文档摘要、视频分类、语音转文字。基础存储5GB免费，AI功能部分免费，月活破1.05亿。",
+      "description_en": "AI features built into Baidu Netdisk. Smart file search, image recognition, document summary, video classification, speech-to-text. 5GB free storage, some AI features free, 105M MAU.",
+      "rating": 3,
+      "free_credits": {
+        "type": "limited",
+        "amount": "5GB免费存储，部分AI功能免费",
+        "amount_en": "5GB free storage, some AI features free",
+        "daily_limit": "有限",
+        "daily_limit_en": "Limited",
+        "reset": "N/A",
+        "reset_en": "N/A",
+        "models": "N/A",
+        "models_en": "N/A",
+        "resolution": "N/A",
+        "watermark": "N/A",
+        "commercial_use": "个人使用免费",
+        "commercial_use_en": "Free for personal use"
+      },
+      "paid_from": "10元/月",
+      "paid_from_en": "~$1.4/month",
+      "pros": [
+        "云存储+AI深度融合",
+        "月活1.05亿用户基础大",
+        "AI文件处理速度提升45%",
+        "支持百万级长文档解析"
+      ],
+      "pros_en": [
+        "Deep cloud storage + AI integration",
+        "105M MAU with large user base",
+        "AI file processing 45% faster",
+        "Supports million-level document parsing"
+      ],
+      "cons": [
+        "免费存储只有5GB",
+        "AI功能需会员解锁更多",
+        "主要面向个人云存储场景"
+      ],
+      "cons_en": [
+        "Only 5GB free storage",
+        "AI features need membership for full access",
+        "Primarily for personal cloud storage"
+      ],
+      "features": [
+        "智能文件搜索",
+        "图片内容识别",
+        "文档自动摘要",
+        "视频智能分类",
+        "语音转文字",
+        "智能相册整理"
+      ],
+      "features_en": [
+        "Smart File Search",
+        "Image Recognition",
+        "Auto Document Summary",
+        "Smart Video Classification",
+        "Speech to Text",
+        "Smart Album Organization"
+      ],
+      "tips": [
+        "已经是百度网盘用户的直接用AI功能",
+        "10元/月会员解锁100GB+基础AI"
+      ],
+      "tips_en": [
+        "Use AI features directly if you're already a Baidu Netdisk user",
+        "10 CNY/month membership unlocks 100GB + basic AI"
+      ],
+      "plans": [],
+      "last_updated": "2026-06-17",
+      "url_zh": "https://aifreeplan.com/zh/productivity/baidu-netdisk-ai",
+      "url_en": "https://aifreeplan.com/en/productivity/baidu-netdisk-ai"
+    },
+    {
+      "slug": "coze",
+      "name": "扣子Coze",
+      "name_en": "Coze",
+      "category": "agent",
+      "category_zh": "智能体平台",
+      "category_en": "Agent Platform",
+      "official_url": "https://www.coze.cn",
+      "company": "字节跳动",
+      "description": "字节跳动的智能体开发平台，零代码创建AI智能体，支持多平台发布（微信、飞书、网页等）。个人完全免费，无限制创建智能体，每日约1000次调用。",
+      "description_en": "ByteDance's agent development platform. Create AI agents with no code, publish to WeChat/Feishu/web. Completely free for personal use, unlimited agent creation, ~1000 calls/day.",
+      "rating": 5,
+      "free_credits": {
+        "type": "unlimited",
+        "amount": "个人完全免费，无限制创建智能体",
+        "amount_en": "Completely free for personal use, unlimited agent creation",
+        "daily_limit": "约1000次/天调用",
+        "daily_limit_en": "~1000 calls/day",
+        "reset": "每天重置",
+        "reset_en": "Resets daily",
+        "models": "豆包、云雀等多种免费模型",
+        "models_en": "Doubao, Skylark and other free models",
+        "resolution": "N/A",
+        "watermark": "N/A",
+        "commercial_use": "个人使用免费",
+        "commercial_use_en": "Free for personal use"
+      },
+      "paid_from": "免费",
+      "paid_from_en": "Free",
+      "pros": [
+        "完全免费零门槛",
+        "零代码创建智能体",
+        "多平台一键发布",
+        "插件市场丰富"
+      ],
+      "pros_en": [
+        "Completely free, zero barrier",
+        "No-code agent creation",
+        "One-click publish to multiple platforms",
+        "Rich plugin marketplace"
+      ],
+      "cons": [
+        "每日调用有上限",
+        "企业版尚未推出"
+      ],
+      "cons_en": [
+        "Daily call limit exists",
+        "Enterprise version not yet available"
+      ],
+      "features": [
+        "零代码智能体开发",
+        "多平台发布",
+        "插件市场",
+        "知识库管理",
+        "工作流编排",
+        "数据库存储"
+      ],
+      "features_en": [
+        "No-code Agent Development",
+        "Multi-platform Publishing",
+        "Plugin Marketplace",
+        "Knowledge Base Management",
+        "Workflow Orchestration",
+        "Database Storage"
+      ],
+      "tips": [
+        "想搭自己AI助手的最佳选择",
+        "配合豆包模型效果最好"
+      ],
+      "tips_en": [
+        "Best choice for building your own AI assistant",
+        "Works best with Doubao model"
+      ],
+      "plans": [],
+      "last_updated": "2026-06-17",
+      "url_zh": "https://aifreeplan.com/zh/agent/coze",
+      "url_en": "https://aifreeplan.com/en/agent/coze"
+    },
+    {
+      "slug": "dify",
+      "name": "Dify",
+      "name_en": "Dify",
+      "category": "agent",
+      "category_zh": "智能体平台",
+      "category_en": "Agent Platform",
+      "official_url": "https://dify.ai",
+      "company": "Dify",
+      "description": "开源AI应用开发平台，支持可视化工作流编排、RAG引擎、100+模型接入。社区版完全免费可自部署，云服务免费版每月200次API调用。适合有技术背景的用户。",
+      "description_en": "Open-source AI app development platform. Visual workflow orchestration, RAG engine, 100+ model integration. Community edition free and self-hostable, cloud free tier: 200 API calls/month.",
+      "rating": 4,
+      "free_credits": {
+        "type": "limited",
+        "amount": "社区版完全免费自部署；云服务免费版200次/月API调用",
+        "amount_en": "Community edition free self-hosted; Cloud free tier 200 API calls/month",
+        "daily_limit": "云免费版5个应用",
+        "daily_limit_en": "Cloud free: 5 apps",
+        "reset": "每月重置",
+        "reset_en": "Resets monthly",
+        "models": "支持100+模型接入",
+        "models_en": "Supports 100+ model integrations",
+        "resolution": "N/A",
+        "watermark": "N/A",
+        "commercial_use": "社区版MIT开源可商用",
+        "commercial_use_en": "Community edition MIT license, commercial use allowed"
+      },
+      "paid_from": "$59/月",
+      "paid_from_en": "$59/month",
+      "pros": [
+        "开源可自部署",
+        "可视化工作流编排",
+        "支持100+模型",
+        "MIT协议可商用"
+      ],
+      "pros_en": [
+        "Open-source and self-hostable",
+        "Visual workflow orchestration",
+        "Supports 100+ models",
+        "MIT license, commercial use allowed"
+      ],
+      "cons": [
+        "需要技术背景",
+        "云服务免费版额度低",
+        "付费版价格不便宜"
+      ],
+      "cons_en": [
+        "Requires technical background",
+        "Cloud free tier is limited",
+        "Paid plans are not cheap"
+      ],
+      "features": [
+        "可视化AI工作流",
+        "RAG引擎",
+        "模型管理",
+        "应用发布与API集成",
+        "团队协作",
+        "监控与分析"
+      ],
+      "features_en": [
+        "Visual AI Workflow",
+        "RAG Engine",
+        "Model Management",
+        "App Publishing & API",
+        "Team Collaboration",
+        "Monitoring & Analytics"
+      ],
+      "tips": [
+        "有服务器的直接自部署社区版",
+        "云服务免费版适合先体验"
+      ],
+      "tips_en": [
+        "Self-host the community edition if you have a server",
+        "Cloud free tier is good for initial exploration"
+      ],
+      "plans": [],
+      "last_updated": "2026-06-17",
+      "url_zh": "https://aifreeplan.com/zh/agent/dify",
+      "url_en": "https://aifreeplan.com/en/agent/dify"
     }
   ]
 }
