@@ -1,0 +1,88 @@
+{
+  "version": "2.0",
+  "generatedAt": "2026-06-19",
+  "totalCategories": 9,
+  "categories": [
+    {
+      "id": "llm",
+      "count": 20,
+      "nameZh": "AI大模型",
+      "nameEn": "AI Large Models",
+      "icon": "🤖",
+      "description": "Large language models and chatbots",
+      "descriptionZh": "AI大语言模型"
+    },
+    {
+      "id": "image",
+      "count": 16,
+      "nameZh": "图片生成",
+      "nameEn": "Image Generation",
+      "icon": "🖼️",
+      "description": "AI-powered image generation tools",
+      "descriptionZh": "AI图片生成工具"
+    },
+    {
+      "id": "coding",
+      "count": 14,
+      "nameZh": "编程助手",
+      "nameEn": "Coding Assistants",
+      "icon": "💻",
+      "description": "AI coding assistants and developer tools",
+      "descriptionZh": "AI编程助手"
+    },
+    {
+      "id": "video",
+      "count": 10,
+      "nameZh": "视频生成",
+      "nameEn": "Video Generation",
+      "icon": "🎬",
+      "description": "AI-powered video generation tools",
+      "descriptionZh": "AI视频生成工具"
+    },
+    {
+      "id": "ai-assistant",
+      "count": 5,
+      "nameZh": "AI助手",
+      "nameEn": "AI Assistants",
+      "icon": "🤝",
+      "description": "General-purpose AI assistants",
+      "descriptionZh": "AI智能助手"
+    },
+    {
+      "id": "productivity",
+      "count": 3,
+      "nameZh": "办公效率",
+      "nameEn": "Productivity",
+      "icon": "📊",
+      "description": "AI-powered productivity and office tools",
+      "descriptionZh": "AI办公效率工具"
+    },
+    {
+      "id": "chat",
+      "count": 2,
+      "nameZh": "AI对话",
+      "nameEn": "AI Chat",
+      "icon": "💬",
+      "description": "AI chat and conversation platforms",
+      "descriptionZh": "AI对话平台"
+    },
+    {
+      "id": "agent",
+      "count": 2,
+      "nameZh": "智能体平台",
+      "nameEn": "Agent Platform",
+      "icon": "🧩",
+      "description": "AI agent development platforms",
+      "descriptionZh": "AI智能体开发平台"
+    },
+    {
+      "id": "audio",
+      "count": 1,
+      "nameZh": "AI音乐",
+      "nameEn": "AI Music",
+      "icon": "🎵",
+      "description": "AI music and audio generation tools",
+      "descriptionZh": "AI音乐生成工具"
+    }
+  ]
+}

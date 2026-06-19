@@ -1,0 +1,97 @@
+---
+import type { AITool } from '../types';
+
+interface Props {
+  tool: AITool;
+  lang?: 'zh' | 'en';
+}
+
+const { tool, lang = 'zh' } = Astro.props;
+
+const refreshLabel: Record<string, string> = {
+  daily: lang === 'zh' ? '每日刷新' : 'Resets daily',
+  weekly: lang === 'zh' ? '每周刷新' : 'Resets weekly',
+  monthly: lang === 'zh' ? '每月刷新' : 'Resets monthly',
+  'one-time': lang === 'zh' ? '一次性' : 'One-time only',
+  unknown: lang === 'zh' ? '刷新周期未知' : 'Refresh period unknown',
+};
+
+const ft = tool.freeTier;
+---
+
+<div class="bg-primary/5 border-2 border-primary rounded-2xl p-6">
+  <h3 class="text-lg font-bold text-primary mb-4">
+    {lang === 'zh' ? '🆓 免费额度详情' : '🆓 Free Tier Details'}
+  </h3>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+    <div class="bg-white rounded-xl p-4">
+      <p class="text-sm text-text-muted mb-1">{lang === 'zh' ? '免费额度' : 'Free Credits'}</p>
+      <p class="text-2xl font-bold text-primary">{ft.credits} <span class="text-sm font-normal">{ft.creditUnit}</span></p>
+      <p class="text-xs text-text-muted mt-1">{refreshLabel[ft.refreshPeriod]}</p>
+    </div>
+
+    <div class="bg-white rounded-xl p-4">
+      <p class="text-sm text-text-muted mb-1">{lang === 'zh' ? '信用卡要求' : 'Credit Card'}</p>
+      <p class="text-lg font-bold">
+        {ft.requiresCreditCard
+          ? (lang === 'zh' ? '💳 需要' : '💳 Required')
+          : (lang === 'zh' ? '✅ 不需要' : '✅ Not Required')}
+      </p>
+    </div>
+
+    <div class="bg-white rounded-xl p-4">
+      <p class="text-sm text-text-muted mb-1">{lang === 'zh' ? '水印' : 'Watermark'}</p>
+      <p class="text-lg font-bold">
+        {ft.watermark
+          ? (lang === 'zh' ? '有水印' : 'Has watermark')
+          : (lang === 'zh' ? '✅ 无水印' : '✅ No watermark')}
+      </p>
+    </div>
+
+    <div class="bg-white rounded-xl p-4">
+      <p class="text-sm text-text-muted mb-1">{lang === 'zh' ? '商用许可' : 'Commercial Use'}</p>
+      <p class="text-lg font-bold">
+        {ft.commercialUse
+          ? (lang === 'zh' ? '✅ 允许商用' : '✅ Allowed')
+          : (lang === 'zh' ? '❌ 不允许商用' : '❌ Not allowed')}
+      </p>
+    </div>
+  </div>
+
+  {ft.resolution && (
+    <p class="text-sm mb-1">
+      <span class="font-semibold">{lang === 'zh' ? '分辨率:' : 'Resolution:'}</span> {ft.resolution}
+    </p>
+  )}
+  {ft.models && (
+    <p class="text-sm mb-1">
+      <span class="font-semibold">{lang === 'zh' ? '可用模型:' : 'Available models:'}</span> {ft.models}
+    </p>
+  )}
+  {ft.dailyLimit && (
+    <p class="text-sm mb-1">
+      <span class="font-semibold">{lang === 'zh' ? '每日上限:' : 'Daily limit:'}</span> {ft.dailyLimit}
+    </p>
+  )}
+
+  {ft.limitations && ft.limitations.length > 0 && (
+    <div class="mt-4">
+      <p class="text-sm font-semibold mb-2">{lang === 'zh' ? '⚠️ 使用限制' : '⚠️ Limitations'}</p>
+      <ul class="space-y-1">
+        {ft.limitations.map((limitation) => (
+          <li class="text-sm text-text-muted flex items-start gap-2">
+            <span class="text-accent mt-0.5">•</span>
+            <span>{limitation}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
+
+  <p class="text-xs text-text-muted mt-4">
+    {lang === 'zh'
+      ? `最后验证日期: ${tool.lastVerifiedDate}`
+      : `Last verified: ${tool.lastVerifiedDate}`}
+  </p>
+</div>

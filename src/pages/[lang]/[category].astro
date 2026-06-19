@@ -1,0 +1,158 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ToolCard from '../../components/ToolCard.astro';
+import ConversionBanner from '../../components/ConversionBanner.astro';
+import type { AITool } from '../../types';
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+
+const siteUrl = 'https://aifreeplan.com';
+
+export function getStaticPaths() {
+  const data = JSON.parse(readFileSync(resolve(process.cwd(), 'public/data/categories.json'), 'utf-8'));
+  const langs = ['zh', 'en'];
+  return langs.flatMap((lang) =>
+    data.categories.map((cat: any) => ({
+      params: { lang, category: cat.id },
+    }))
+  );
+}
+
+const { lang, category: categorySlug } = Astro.params as { lang: 'zh' | 'en'; category: string };
+
+// Read data for page rendering
+const toolsData = JSON.parse(readFileSync(resolve(process.cwd(), 'public/data/tools.json'), 'utf-8'));
+const categoriesData = JSON.parse(readFileSync(resolve(process.cwd(), 'public/data/categories.json'), 'utf-8'));
+const allTools: AITool[] = toolsData.tools as AITool[];
+const allCategories = categoriesData.categories;
+
+// Find category info
+const categoryInfo = allCategories.find((c: any) => c.id === categorySlug);
+if (!categoryInfo) {
+  return Astro.redirect(`/${lang}`);
+}
+
+const categoryNameDisplay = lang === 'zh' ? categoryInfo.nameZh : categoryInfo.nameEn;
+const categoryDesc = lang === 'zh' ? categoryInfo.descriptionZh : categoryInfo.description;
+
+// Filter tools by category (case-insensitive match)
+const categoryTools = allTools.filter(
+  t => t.category.toLowerCase() === categorySlug
+);
+
+// Sort tools by rating descending
+const sortedTools = [...categoryTools].sort((a, b) => b.rating - a.rating);
+
+// SEO
+const title = lang === 'zh'
+  ? `${categoryInfo.nameZh} - 免费AI工具 | AI Free Plan`
+  : `${categoryInfo.nameEn} - Free AI Tools | AI Free Plan`;
+const description = lang === 'zh'
+  ? `发现最佳免费${categoryInfo.nameZh}工具，包含免费额度、使用限制和替代方案。共 ${categoryTools.length} 个工具。`
+  : `Discover the best free ${categoryInfo.nameEn} tools with free credits, usage limits, and alternatives. ${categoryTools.length} tools listed.`;
+
+const canonicalUrl = `${siteUrl}/${lang}/${categorySlug}`;
+
+// JSON-LD: CollectionPage
+const collectionSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": lang === 'zh' ? `${categoryInfo.nameZh} - 免费AI工具` : `${categoryInfo.nameEn} - Free AI Tools`,
+  "description": description,
+  "url": canonicalUrl,
+  "numberOfItems": categoryTools.length,
+  "itemListElement": sortedTools.map((tool, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "name": lang === 'zh' ? tool.name : tool.nameEn,
+    "url": `${siteUrl}/${lang}/tools/${tool.id}`
+  }))
+};
+
+// JSON-LD: BreadcrumbList
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": lang === 'zh' ? '首页' : 'Home',
+      "item": `${siteUrl}/${lang}`
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": categoryNameDisplay,
+      "item": canonicalUrl
+    }
+  ]
+};
+
+const jsonLd = [collectionSchema, breadcrumbSchema];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalUrl={canonicalUrl}
+  jsonLd={jsonLd}
+  lang={lang}
+>
+  <!-- Breadcrumb Navigation -->
+  <nav class="flex items-center gap-2 text-sm text-text-muted mb-6 flex-wrap" aria-label="Breadcrumb">
+    <a href={`/${lang}`} class="hover:text-primary">{lang === 'zh' ? '首页' : 'Home'}</a>
+    <span>/</span>
+    <span class="text-text font-medium">{categoryNameDisplay}</span>
+  </nav>
+
+  <!-- Category Header -->
+  <div class="mb-8">
+    <div class="flex items-center gap-3 mb-3">
+      <span class="text-4xl">{categoryInfo.icon}</span>
+      <h1 class="text-3xl sm:text-4xl font-bold">{categoryNameDisplay}</h1>
+    </div>
+    <p class="text-lg text-text-muted mb-4">{categoryDesc}</p>
+    <p class="text-sm text-text-muted">
+      {lang === 'zh'
+        ? `共收录 ${categoryTools.length} 个工具，按评分排序`
+        : `${categoryTools.length} tools listed, sorted by rating`}
+    </p>
+  </div>
+
+  <!-- Category Quick Links -->
+  <div class="flex flex-wrap gap-2 mb-8">
+    {allCategories.map((cat: any) => (
+      <a
+        href={`/${lang}/${cat.id}`}
+        class={`inline-flex items-center gap-1.5 px-3 py-1.5 text-sm rounded-full border transition-colors ${
+          cat.id === categorySlug
+            ? 'bg-primary text-white border-primary'
+            : 'bg-white text-text-muted border-border hover:border-primary hover:text-primary'
+        }`}
+      >
+        <span>{cat.icon}</span>
+        <span>{lang === 'zh' ? cat.nameZh : cat.nameEn}</span>
+        <span class="text-xs opacity-70">({cat.count})</span>
+      </a>
+    ))}
+  </div>
+
+  <!-- Tools Grid -->
+  {sortedTools.length > 0 ? (
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+      {sortedTools.map((tool) => (
+        <ToolCard tool={tool} lang={lang} />
+      ))}
+    </div>
+  ) : (
+    <div class="text-center py-12">
+      <p class="text-text-muted text-lg">
+        {lang === 'zh' ? '该分类暂无工具。' : 'No tools found in this category.'}
+      </p>
+    </div>
+  )}
+
+  <!-- Conversion Banner -->
+  <ConversionBanner lang={lang} />
+</BaseLayout>
