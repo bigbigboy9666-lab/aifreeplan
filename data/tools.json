@@ -2,7 +2,7 @@
   "version": "2.0",
   "generatedAt": "2026-06-19",
   "migratedFrom": "data.json",
-  "totalTools": 73,
+  "totalTools": 74,
   "tools": [
     {
       "id": "kling",
@@ -6390,6 +6390,97 @@
           "free tier",
           "Agent Platform",
           "Dify"
+        ]
+      }
+    },
+    {
+      "id": "zenmux",
+      "name": "ZenMux",
+      "nameEn": "ZenMux",
+      "category": "LLM",
+      "categoryZh": "AI大模型",
+      "categoryEn": "AI Large Models",
+      "websiteUrl": "https://zenmux.ai",
+      "company": "AI Force Singapore Pte. Ltd.",
+      "description": "企业级大模型聚合平台，一个API对接200+主流模型（GPT-4o、Claude、Gemini、Qwen等），智能路由自动选最优模型，独创AI模型保险机制消除幻觉风险。支持按量付费和订阅制，兼容OpenAI/Anthropic/Google协议。注册送免费额度，适合需要多模型切换的开发者和企业。",
+      "descriptionEn": "Enterprise LLM aggregation platform with unified API for 200+ models (GPT-4o, Claude, Gemini, Qwen, etc.). Intelligent routing automatically selects the best model, with unique AI Model Insurance to eliminate hallucination risk. Compatible with OpenAI/Anthropic/Google protocols.",
+      "rating": 4,
+      "freeTier": {
+        "refreshPeriod": "one-time",
+        "credits": 5,
+        "creditUnit": "USD credits on signup",
+        "resolution": "N/A",
+        "watermark": false,
+        "commercialUse": true
+      },
+      "paidFrom": "$0.001/千token",
+      "paidFromEn": "$0.001/1K tokens",
+      "pros": [
+        "一个API对接200+模型",
+        "智能路由自动选最优模型",
+        "AI模型保险机制消除幻觉风险",
+        "兼容OpenAI/Anthropic/Google协议",
+        "注册送免费额度"
+      ],
+      "prosEn": [
+        "Single API for 200+ models",
+        "Intelligent routing auto-selects optimal model",
+        "Unique AI Model Insurance eliminates hallucination risk",
+        "Compatible with OpenAI/Anthropic/Google protocols",
+        "Free credits on signup"
+      ],
+      "cons": [
+        "中文文档较少",
+        "部分冷门模型路由不稳定",
+        "需要技术基础"
+      ],
+      "consEn": [
+        "Fewer Chinese docs",
+        "Some niche model routing unstable",
+        "Requires technical knowledge"
+      ],
+      "features": [
+        "统一API接入200+模型",
+        "智能供应商路由",
+        "智能模型路由",
+        "AI模型保险",
+        "兼容三大协议",
+        "按量付费+订阅制",
+        "请求日志与用量分析",
+        "视频生成支持"
+      ],
+      "featuresEn": [
+        "Unified API for 200+ models",
+        "Intelligent provider routing",
+        "Intelligent model routing",
+        "AI Model Insurance",
+        "Multi-protocol compatible",
+        "Pay-as-you-go + Subscription",
+        "Request logs & analytics",
+        "Video generation support"
+      ],
+      "tips": [
+        "注册后先用免费额度测试路由效果",
+        "善用模型别名功能",
+        "开启AI模型保险获得赔付保障"
+      ],
+      "tipsEn": [
+        "Test routing with free credits first",
+        "Use model aliases for easy switching",
+        "Enable AI Model Insurance for compensation"
+      ],
+      "lastVerifiedDate": "2026-06-20",
+      "seoMeta": {
+        "title": "ZenMux - Enterprise LLM Platform | AI Free Plan",
+        "titleZh": "ZenMux - 企业级大模型聚合平台 | AI Free Plan",
+        "description": "ZenMux: unified API for 200+ AI models with intelligent routing and AI Model Insurance.",
+        "descriptionZh": "ZenMux：统一API接入200+大模型，智能路由+AI模型保险。",
+        "keywords": [
+          "ZenMux",
+          "LLM platform",
+          "model routing",
+          "大模型聚合",
+          "智能路由"
         ]
       }
     }
