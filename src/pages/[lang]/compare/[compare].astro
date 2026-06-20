@@ -1,0 +1,211 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import type { AITool } from '../../../types';
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+
+const siteUrl = 'https://aifreeplan.com';
+
+export function getStaticPaths() {
+  const data = JSON.parse(readFileSync(resolve(process.cwd(), 'public/data/tools.json'), 'utf-8'));
+  const tools: AITool[] = data.tools;
+  const langs = ['zh', 'en'];
+  const paths: any[] = [];
+
+  // Generate all valid tool pairs
+  langs.forEach(lang => {
+    for (let i = 0; i < tools.length; i++) {
+      for (let j = i + 1; j < tools.length; j++) {
+        paths.push({
+          params: { lang, compare: `${tools[i].id}-vs-${tools[j].id}` },
+          props: { toolA: tools[i], toolB: tools[j] },
+        });
+      }
+    }
+  });
+
+  return paths;
+}
+
+const { lang, compare } = Astro.params as { lang: 'zh' | 'en'; compare: string };
+const { toolA, toolB } = Astro.props as { toolA: AITool; toolB: AITool };
+
+// Language-aware content
+const nameA = lang === 'zh' ? toolA.name : toolA.nameEn;
+const nameB = lang === 'zh' ? toolB.name : toolB.nameEn;
+const descA = lang === 'zh' ? toolA.description : toolA.descriptionEn;
+const descB = lang === 'zh' ? toolB.description : toolB.descriptionEn;
+const categoryA = lang === 'zh' ? toolA.categoryZh : toolA.categoryEn;
+const categoryB = lang === 'zh' ? toolB.categoryZh : toolB.categoryEn;
+const paidFromA = lang === 'zh' ? toolA.paidFrom : toolA.paidFromEn;
+const paidFromB = lang === 'zh' ? toolB.paidFrom : toolB.paidFromEn;
+const prosA = lang === 'zh' ? toolA.pros : toolA.prosEn;
+const prosB = lang === 'zh' ? toolB.pros : toolB.prosEn;
+const consA = lang === 'zh' ? toolA.cons : toolA.consEn;
+const consB = lang === 'zh' ? toolB.cons : toolB.consEn;
+const featuresA = lang === 'zh' ? toolA.features : toolA.featuresEn;
+const featuresB = lang === 'zh' ? toolB.features : toolB.featuresEn;
+
+const seoTitle = lang === 'zh'
+  ? `${nameA} vs ${nameB} - 免费额度对比 | AI Free Plan`
+  : `${nameA} vs ${nameB} - Free Tier Comparison | AI Free Plan`;
+const seoDesc = lang === 'zh'
+  ? `对比${nameA}和${nameB}的免费额度、功能和评分。哪个更适合你？`
+  : `Compare ${nameA} and ${nameB}: free credits, features, and ratings. Which one is right for you?`;
+const canonicalUrl = `${siteUrl}/${lang}/compare/${compare}`;
+
+// Comparison table data
+const comparisonRows = lang === 'zh' ? [
+  { label: '分类', keyA: categoryA, keyB: categoryB },
+  { label: '评分', keyA: `⭐ ${toolA.rating}`, keyB: `⭐ ${toolB.rating}` },
+  { label: '免费额度', keyA: `${toolA.freeTier.credits} ${toolA.freeTier.creditUnit}`, keyB: `${toolB.freeTier.credits} ${toolB.freeTier.creditUnit}` },
+  { label: '刷新周期', keyA: toolA.freeTier.refreshPeriod, keyB: toolB.freeTier.refreshPeriod },
+  { label: '分辨率', keyA: toolA.freeTier.resolution, keyB: toolB.freeTier.resolution },
+  { label: '水印', keyA: toolA.freeTier.watermark ? '有' : '无', keyB: toolB.freeTier.watermark ? '有' : '无' },
+  { label: '商用', keyA: toolA.freeTier.commercialUse ? '允许' : '不允许', keyB: toolB.freeTier.commercialUse ? '允许' : '不允许' },
+  { label: '付费起步', keyA: paidFromA, keyB: paidFromB },
+] : [
+  { label: 'Category', keyA: categoryA, keyB: categoryB },
+  { label: 'Rating', keyA: `⭐ ${toolA.rating}`, keyB: `⭐ ${toolB.rating}` },
+  { label: 'Free Credits', keyA: `${toolA.freeTier.credits} ${toolA.freeTier.creditUnit}`, keyB: `${toolB.freeTier.credits} ${toolB.freeTier.creditUnit}` },
+  { label: 'Refresh Period', keyA: toolA.freeTier.refreshPeriod, keyB: toolB.freeTier.refreshPeriod },
+  { label: 'Resolution', keyA: toolA.freeTier.resolution, keyB: toolB.freeTier.resolution },
+  { label: 'Watermark', keyA: toolA.freeTier.watermark ? 'Yes' : 'No', keyB: toolB.freeTier.watermark ? 'Yes' : 'No' },
+  { label: 'Commercial Use', keyA: toolA.freeTier.commercialUse ? 'Yes' : 'No', keyB: toolB.freeTier.commercialUse ? 'Yes' : 'No' },
+  { label: 'Paid From', keyA: paidFromA, keyB: paidFromB },
+];
+
+// JSON-LD: WebPage with comparison
+const comparisonSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": seoTitle,
+  "description": seoDesc,
+  "url": canonicalUrl,
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      { "@type": "SoftwareApplication", "name": toolA.nameEn || toolA.name, "url": `${siteUrl}/${lang}/tools/${toolA.id}` },
+      { "@type": "SoftwareApplication", "name": toolB.nameEn || toolB.name, "url": `${siteUrl}/${lang}/tools/${toolB.id}` }
+    ]
+  }
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": lang === 'zh' ? '首页' : 'Home', "item": `${siteUrl}/${lang}` },
+    { "@type": "ListItem", "position": 2, "name": lang === 'zh' ? '对比' : 'Compare', "item": `${siteUrl}/${lang}/compare` },
+    { "@type": "ListItem", "position": 3, "name": `${nameA} vs ${nameB}`, "item": canonicalUrl }
+  ]
+};
+---
+
+<BaseLayout title={seoTitle} description={seoDesc} canonical={canonicalUrl} lang={lang}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(comparisonSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  </Fragment>
+
+  <main class="max-w-6xl mx-auto px-4 py-8">
+    {/* Breadcrumb */}
+    <nav class="text-sm text-gray-500 mb-6">
+      <a href={`/${lang}`} class="hover:text-emerald-600">{lang === 'zh' ? '首页' : 'Home'}</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-700">{nameA} vs {nameB}</span>
+    </nav>
+
+    {/* Hero */}
+    <section class="text-center mb-12">
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">
+        {nameA} <span class="text-emerald-600">vs</span> {nameB}
+      </h1>
+      <p class="text-gray-500 max-w-2xl mx-auto">{seoDesc}</p>
+    </section>
+
+    {/* Comparison Table */}
+    <section class="bg-white rounded-xl border border-gray-200 overflow-hidden mb-12">
+      <div class="grid grid-cols-3 bg-gray-50 border-b border-gray-200">
+        <div class="p-4 font-semibold text-gray-500">{lang === 'zh' ? '对比项' : 'Feature'}</div>
+        <div class="p-4 text-center">
+          <a href={`/${lang}/tools/${toolA.id}`} class="font-bold text-lg hover:text-emerald-600">{nameA}</a>
+        </div>
+        <div class="p-4 text-center">
+          <a href={`/${lang}/tools/${toolB.id}`} class="font-bold text-lg hover:text-emerald-600">{nameB}</a>
+        </div>
+      </div>
+      {comparisonRows.map((row, i) => (
+        <div class={`grid grid-cols-3 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'} border-b border-gray-100`}>
+          <div class="p-4 font-medium text-gray-700">{row.label}</div>
+          <div class="p-4 text-center text-gray-600">{row.keyA}</div>
+          <div class="p-4 text-center text-gray-600">{row.keyB}</div>
+        </div>
+      ))}
+    </section>
+
+    {/* Pros & Cons */}
+    <div class="grid md:grid-cols-2 gap-8 mb-12">
+      {/* Tool A */}
+      <div class="bg-white rounded-xl border border-gray-200 p-6">
+        <h2 class="text-xl font-bold mb-4">{nameA}</h2>
+        <p class="text-gray-600 text-sm mb-4">{descA}</p>
+        <div class="mb-4">
+          <h3 class="font-semibold text-emerald-600 mb-2">{lang === 'zh' ? '优点' : 'Pros'}</h3>
+          <ul class="space-y-1">
+            {prosA.map(pro => <li class="text-sm text-gray-600 flex items-start gap-2"><span class="text-emerald-500">✓</span>{pro}</li>)}
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-red-500 mb-2">{lang === 'zh' ? '缺点' : 'Cons'}</h3>
+          <ul class="space-y-1">
+            {consA.map(con => <li class="text-sm text-gray-600 flex items-start gap-2"><span class="text-red-500">✗</span>{con}</li>)}
+          </ul>
+        </div>
+        <div class="mt-4">
+          <h3 class="font-semibold text-gray-700 mb-2">{lang === 'zh' ? '核心功能' : 'Key Features'}</h3>
+          <div class="flex flex-wrap gap-2">
+            {featuresA.map(f => <span class="px-2 py-1 bg-gray-100 text-xs rounded-full">{f}</span>)}
+          </div>
+        </div>
+        <a href={`/${lang}/tools/${toolA.id}`} class="mt-4 block text-center bg-emerald-600 text-white text-sm font-medium rounded-lg px-4 py-2 hover:bg-emerald-700 transition-colors">
+          {lang === 'zh' ? '查看详情' : 'View Details'} →
+        </a>
+      </div>
+
+      {/* Tool B */}
+      <div class="bg-white rounded-xl border border-gray-200 p-6">
+        <h2 class="text-xl font-bold mb-4">{nameB}</h2>
+        <p class="text-gray-600 text-sm mb-4">{descB}</p>
+        <div class="mb-4">
+          <h3 class="font-semibold text-emerald-600 mb-2">{lang === 'zh' ? '优点' : 'Pros'}</h3>
+          <ul class="space-y-1">
+            {prosB.map(pro => <li class="text-sm text-gray-600 flex items-start gap-2"><span class="text-emerald-500">✓</span>{pro}</li>)}
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-red-500 mb-2">{lang === 'zh' ? '缺点' : 'Cons'}</h3>
+          <ul class="space-y-1">
+            {consB.map(con => <li class="text-sm text-gray-600 flex items-start gap-2"><span class="text-red-500">✗</span>{con}</li>)}
+          </ul>
+        </div>
+        <div class="mt-4">
+          <h3 class="font-semibold text-gray-700 mb-2">{lang === 'zh' ? '核心功能' : 'Key Features'}</h3>
+          <div class="flex flex-wrap gap-2">
+            {featuresB.map(f => <span class="px-2 py-1 bg-gray-100 text-xs rounded-full">{f}</span>)}
+          </div>
+        </div>
+        <a href={`/${lang}/tools/${toolB.id}`} class="mt-4 block text-center bg-emerald-600 text-white text-sm font-medium rounded-lg px-4 py-2 hover:bg-emerald-700 transition-colors">
+          {lang === 'zh' ? '查看详情' : 'View Details'} →
+        </a>
+      </div>
+    </div>
+
+    {/* Back to tools */}
+    <div class="text-center">
+      <a href={`/${lang}`} class="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors font-medium">
+        ← {lang === 'zh' ? '返回工具列表' : 'Back to All Tools'}
+      </a>
+    </div>
+  </main>
+</BaseLayout>
