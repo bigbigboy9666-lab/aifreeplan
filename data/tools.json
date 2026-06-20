@@ -2,7 +2,7 @@
   "version": "2.0",
   "generatedAt": "2026-06-19",
   "migratedFrom": "data.json",
-  "totalTools": 74,
+  "totalTools": 75,
   "tools": [
     {
       "id": "kling",
@@ -6481,6 +6481,90 @@
           "model routing",
           "大模型聚合",
           "智能路由"
+        ]
+      }
+    },
+    {
+      "id": "bb-browser",
+      "name": "bb-browser",
+      "nameEn": "bb-browser",
+      "category": "Coding",
+      "categoryZh": "编程助手",
+      "categoryEn": "Coding Assistant",
+      "websiteUrl": "https://github.com/epiral/bb-browser",
+      "company": "Epiral",
+      "description": "开源工具，\"你的浏览器就是API\"。CLI + MCP Server，让AI Agent能控制你的Chrome浏览器并使用你的登录状态。不需要单独配置API Key，直接复用你浏览器里已登录的账号。适合需要AI帮你操作网页、自动化浏览器任务的开发者。",
+      "descriptionEn": "Open-source tool: \"Your browser is the API.\" CLI + MCP server for AI agents to control Chrome with your login state. No separate API keys needed — reuses your existing browser sessions. Perfect for developers who need AI to automate web tasks.",
+      "rating": 4,
+      "freeTier": {
+        "refreshPeriod": "unlimited",
+        "credits": 0,
+        "creditUnit": "completely free (open source)",
+        "resolution": "N/A",
+        "watermark": false,
+        "commercialUse": true
+      },
+      "paidFrom": "完全免费",
+      "paidFromEn": "Completely free",
+      "pros": [
+        "开源免费，MIT协议",
+        "复用浏览器登录状态，不需要额外配置",
+        "支持CLI和MCP Server两种模式",
+        "让AI Agent能操作真实网页"
+      ],
+      "prosEn": [
+        "Free and open source (MIT)",
+        "Reuses browser login state, no extra config",
+        "Supports CLI and MCP Server modes",
+        "Enables AI agents to operate real web pages"
+      ],
+      "cons": [
+        "需要本地运行Chrome",
+        "依赖Node.js环境",
+        "项目较新，社区生态还在建设"
+      ],
+      "consEn": [
+        "Requires local Chrome",
+        "Depends on Node.js",
+        "Relatively new project, ecosystem still growing"
+      ],
+      "features": [
+        "CLI命令行工具",
+        "MCP Server集成",
+        "Chrome浏览器控制",
+        "复用登录状态",
+        "AI Agent自动化"
+      ],
+      "featuresEn": [
+        "CLI tool",
+        "MCP Server integration",
+        "Chrome browser control",
+        "Login state reuse",
+        "AI Agent automation"
+      ],
+      "tips": [
+        "配合Claude Code或Cursor使用效果最好",
+        "可以用它让AI帮你操作需要登录的网站",
+        "先用npm install -g bb-browser安装"
+      ],
+      "tipsEn": [
+        "Works best with Claude Code or Cursor",
+        "Use it to let AI operate sites that require login",
+        "Install with: npm install -g bb-browser"
+      ],
+      "lastVerifiedDate": "2026-06-20",
+      "seoMeta": {
+        "title": "bb-browser - Your Browser is the API | AI Free Plan",
+        "titleZh": "bb-browser - 你的浏览器就是API | AI Free Plan",
+        "description": "bb-browser: open-source CLI + MCP server for AI agents to control Chrome with your login state. Completely free.",
+        "descriptionZh": "bb-browser：开源CLI+MCP Server，让AI Agent控制你的Chrome浏览器并复用登录状态。完全免费。",
+        "keywords": [
+          "bb-browser",
+          "browser API",
+          "MCP server",
+          "AI agent",
+          "Chrome automation",
+          "浏览器自动化"
         ]
       }
     }
