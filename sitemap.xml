@@ -26,9 +26,9 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aifreeplan.com/en/guides/free-ai-subtitle-generator-tools</loc>
+    <loc>https://aifreeplan.com/en/guides/free-ai-image-generator-tools</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aifreeplan.com/en/image/</loc>
@@ -406,11 +406,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aifreeplan.com/en/tools/zenmux/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://aifreeplan.com/en/tools/zhipu-coding-plan/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -456,9 +451,9 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aifreeplan.com/zh/guides/free-ai-subtitle-generator-tools</loc>
+    <loc>https://aifreeplan.com/zh/guides/free-ai-image-generator-tools</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://aifreeplan.com/zh/image/</loc>
@@ -832,11 +827,6 @@
   </url>
   <url>
     <loc>https://aifreeplan.com/zh/tools/xiaomi-mimo/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://aifreeplan.com/zh/tools/zenmux/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
