@@ -1,0 +1,21 @@
+{
+  "name": "aifreeplan-v2",
+  "type": "module",
+  "version": "2.0.0",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "migrate": "node scripts/migrate-data.mjs",
+    "scraper": "node scripts/cron-scraper.mjs"
+  },
+  "dependencies": {
+    "astro": "^6.4.7",
+    "@tailwindcss/vite": "^4.0.0",
+    "tailwindcss": "^4.0.0"
+  }
+}

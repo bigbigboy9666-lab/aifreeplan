@@ -1,0 +1,63 @@
+---
+interface Props {
+  lang?: 'zh' | 'en';
+}
+
+const { lang = 'zh' } = Astro.props;
+---
+
+<section class="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-6 mt-8">
+  <div class="max-w-2xl mx-auto text-center">
+    <h3 class="text-xl font-bold mb-2">
+      {lang === 'zh' ? '📬 获取每周免费AI工具推荐' : '📬 Get Weekly Free AI Tool Picks'}
+    </h3>
+    <p class="text-sm text-text-muted mb-4">
+      {lang === 'zh'
+        ? '订阅我们的邮件列表，每周精选最佳免费AI工具直送邮箱。'
+        : 'Subscribe to our mailing list for curated free AI tool picks delivered weekly.'}
+    </p>
+    <form id="subscribe-form" class="flex gap-2 max-w-md mx-auto">
+      <input
+        type="email"
+        name="email"
+        required
+        placeholder={lang === 'zh' ? '输入你的邮箱' : 'Enter your email'}
+        class="flex-1 px-4 py-2 rounded-lg border border-border text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+      />
+      <button
+        type="submit"
+        class="px-5 py-2 bg-primary text-white text-sm font-medium rounded-lg hover:bg-primary-dark transition-colors"
+      >
+        {lang === 'zh' ? '订阅' : 'Subscribe'}
+      </button>
+    </form>
+    <p class="text-xs text-text-muted mt-2" id="subscribe-status"></p>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('subscribe-form') as HTMLFormElement;
+  const status = document.getElementById('subscribe-status');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = (form.elements.namedItem('email') as HTMLInputElement).value;
+
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+
+      if (res.ok) {
+        if (status) status.textContent = '✅ ' + (document.documentElement.lang === 'zh' ? '订阅成功！' : 'Subscribed successfully!');
+        form.reset();
+      } else {
+        if (status) status.textContent = '❌ ' + (document.documentElement.lang === 'zh' ? '订阅失败，请重试。' : 'Subscription failed, please try again.');
+      }
+    } catch {
+      if (status) status.textContent = '❌ Network error';
+    }
+  });
+</script>
