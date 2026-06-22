@@ -1,0 +1,68 @@
+{
+  "guides": [
+    {
+      "slug": "freebuff-free-coding-agent",
+      "title_zh": "Freebuff Free Coding Agent",
+      "title_en": "Freebuff Free Coding Agent",
+      "excerpt_zh": "免费编程Agent工具推荐",
+      "excerpt_en": "Free coding agent tool recommendation",
+      "pinned": true
+    },
+    {
+      "slug": "huawei-deveco-code-free-coding",
+      "title_zh": "华为DevEco Code免费攻略：GLM-5.1不限量白嫖指南",
+      "title_en": "Huawei DevEco Code Free Guide: Unlimited GLM-5.1",
+      "excerpt_zh": "华为DevEco Code内置智谱GLM-5.1模型，完全免费不限额度，登录即用无需手动选择",
+      "excerpt_en": "Built-in Zhipu GLM-5.1 model, completely free with no quota limits"
+    },
+    {
+      "slug": "qoderwork-free-pro-2026",
+      "title_zh": "Qoderwork免费Pro攻略：2026年白嫖Pro版完整教程",
+      "title_en": "Qoderwork Free Pro Guide 2026",
+      "excerpt_zh": "Qoderwork免费Pro版领取攻略，包含注册教程、邀请链接和截图",
+      "excerpt_en": "Complete guide to getting Qoderwork Pro free, including registration and invite links"
+    },
+    {
+      "slug": "kimi-k26-free-coding",
+      "title_zh": "Kimi K2.6 免费编码指南：开源最强编码Agent，300个子智能体并行干活",
+      "title_en": "Kimi K2.6 Free Coding Guide: Open-Source Strongest Agent",
+      "excerpt_zh": "Kimi K2.6 SWE-Bench Pro 58.6分，开源第一。13小时不间断编码，Agent Swarm 300子智能体并行",
+      "excerpt_en": "SWE-Bench Pro 58.6 score, #1 open source. 13-hour continuous coding with 300 sub-agents"
+    },
+    {
+      "slug": "gemini-cli-free-ai-coding",
+      "title_zh": "Gemini CLI免费AI编程：Google出品的终端编程神器",
+      "title_en": "Gemini CLI Free AI Coding: Google's Terminal Powerhouse",
+      "excerpt_zh": "Google出品的终端AI编程工具，免费用Gemini模型，支持代码生成、调试、重构",
+      "excerpt_en": "Terminal AI coding tool from Google, free Gemini model with code generation, debugging, refactoring"
+    },
+    {
+      "slug": "deepsider-antigravity-free-gemini",
+      "title_zh": "Deepsider免费用Gemini：反重力扩展，浏览器里直接调用Gemini API",
+      "title_en": "Deepsider Free Gemini: Antigravity Extension",
+      "excerpt_zh": "Deepsider反重力浏览器扩展，免费调用Gemini API，无需翻墙，支持代码生成和对话",
+      "excerpt_en": "Antigravity browser extension for free Gemini API access, no VPN needed"
+    },
+    {
+      "slug": "trae-free-ai-coding",
+      "title_zh": "Trae免费AI编程：字节跳动出品，每月5000次自动补全",
+      "title_en": "Trae Free AI Coding: ByteDance出品, 5000 Completions/Month",
+      "excerpt_zh": "字节跳动做的AI编程IDE，内置SOLO模式能自动完成整个开发任务。免费版每月5000次自动补全",
+      "excerpt_en": "AI IDE from ByteDance with SOLO mode for full task automation. 5000 monthly completions free"
+    },
+    {
+      "slug": "atomcode-codingplan-free",
+      "title_zh": "AtomCode CodingPlan免费攻略：GLM-5.1加持的AI编程工具",
+      "title_en": "AtomCode CodingPlan Free Guide: GLM-5.1 Powered",
+      "excerpt_zh": "AtomCode CodingPlan限时免费放Pro档额度，基于GLM-5.1模型，编码能力强",
+      "excerpt_en": "Limited-time free Pro tier powered by GLM-5.1 model with strong coding capabilities"
+    },
+    {
+      "slug": "agnes-ai-free-api-2026",
+      "title_zh": "Agnes AI免费API：2026年6月起无限期免费，支持文本/图片/视频",
+      "title_en": "Agnes AI Free API: Indefinitely Free Since June 2026",
+      "excerpt_zh": "Agnes AI宣布从2026年6月1日起无限期免费提供API服务，无需订阅、无额度阉割",
+      "excerpt_en": "Indefinitely free API service since June 1, 2026, no subscription or quota limits"
+    }
+  ]
+}

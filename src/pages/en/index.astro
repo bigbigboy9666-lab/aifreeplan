@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ToolCard from '../../components/ToolCard.astro';
+import GuideCard from '../../components/GuideCard.astro';
 import ConversionBanner from '../../components/ConversionBanner.astro';
 import { readFileSync } from 'fs';
 
@@ -8,9 +9,13 @@ const toolsData = JSON.parse(readFileSync('public/data/tools.json', 'utf-8'));
 const tools = toolsData.tools || toolsData;
 const categoriesData = JSON.parse(readFileSync('public/data/categories.json', 'utf-8'));
 const categories = categoriesData.categories || categoriesData;
+const guidesData = JSON.parse(readFileSync('public/data/guides.json', 'utf-8'));
+const guides = guidesData.guides || [];
 
 const lang = 'en';
 const topTools = tools.sort((a: any, b: any) => (b.rating || 0) - (a.rating || 0)).slice(0, 12);
+const pinnedGuides = guides.filter((g: any) => g.pinned);
+const recentGuides = guides.filter((g: any) => !g.pinned).slice(0, 6);
 ---
 
 <BaseLayout
@@ -59,6 +64,36 @@ const topTools = tools.sort((a: any, b: any) => (b.rating || 0) - (a.rating || 0
     </div>
   </section>
 
+  <!-- Latest Guides -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <div class="flex items-center justify-between mb-8">
+      <h2 class="text-3xl font-bold">📚 Latest Guides</h2>
+      <a href="/en/guides" class="text-primary font-medium hover:underline">
+        View All Guides →
+      </a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {pinnedGuides.map((guide: any) => (
+        <GuideCard
+          title={guide.title_en}
+          excerpt={guide.excerpt_en}
+          href={`/${lang}/guides/${guide.slug}`}
+          pinned={true}
+          lang={lang}
+        />
+      ))}
+      {recentGuides.slice(0, 3).map((guide: any) => (
+        <GuideCard
+          title={guide.title_en}
+          excerpt={guide.excerpt_en}
+          href={`/${lang}/guides/${guide.slug}`}
+          pinned={false}
+          lang={lang}
+        />
+      ))}
+    </div>
+  </section>
+
   <section class="max-w-6xl mx-auto px-4 py-16">
     <h2 class="text-3xl font-bold mb-2">Top Free AI Tools</h2>
     <p class="text-gray-500 mb-8">Sorted by rating — find the best free tools fast</p>
@@ -68,7 +103,7 @@ const topTools = tools.sort((a: any, b: any) => (b.rating || 0) - (a.rating || 0
       ))}
     </div>
     <div class="text-center mt-10">
-      <a href={`/${lang}/llm`}
+      <a href={`/${lang}/tools`}
          class="inline-flex items-center gap-2 px-8 py-3 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors font-medium">
         View All {tools.length} Tools →
       </a>
@@ -111,6 +146,21 @@ const topTools = tools.sort((a: any, b: any) => (b.rating || 0) - (a.rating || 0
         <h3 class="text-xl font-bold mb-2">Save Money</h3>
         <p class="text-gray-500">Side-by-side comparisons help you find the best free plan for your needs — no more paying for features you don't use.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- Submit CTA -->
+  <section class="bg-gray-900 dark:bg-black py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">Know a Free AI Platform? Submit a Recommendation</h2>
+      <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
+        If you know of an AI platform offering free credits, help us expand our database.
+        Every submission is manually reviewed to ensure accuracy and reliability.
+      </p>
+      <a href="mailto:submit@aifreeplan.com"
+         class="inline-flex items-center gap-2 px-8 py-3 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors font-medium">
+        📩 Submit Recommendation
+      </a>
     </div>
   </section>
 
