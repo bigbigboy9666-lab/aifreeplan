@@ -26,9 +26,9 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aifreeplan.com/en/guides/free-ai-image-generator-tools</loc>
+    <loc>https://aifreeplan.com/en/guides/free-ai-video-generation-tools</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://aifreeplan.com/en/image/</loc>
@@ -61,6 +61,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/en/tools/ai21-labs/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/en/tools/aliyun-bailian/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -81,7 +86,17 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/en/tools/bb-browser/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/en/tools/bing-image-creator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/tools/cerebras/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -106,12 +121,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/en/tools/cloudflare-workers-ai/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/en/tools/codebuddy/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aifreeplan.com/en/tools/codeium/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/tools/cohere/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -151,6 +176,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/en/tools/fireworks-ai/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/en/tools/freebuff/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -181,6 +211,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/en/tools/github-models/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/en/tools/google-jules/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -196,6 +231,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/en/tools/groq/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/en/tools/hailuo/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -206,7 +246,17 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/en/tools/huggingface-inference/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/en/tools/ideogram/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/tools/intern-ai/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -266,6 +316,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/en/tools/mistral/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/en/tools/modelscope/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -277,6 +332,21 @@
   </url>
   <url>
     <loc>https://aifreeplan.com/en/tools/notebooklm/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/tools/nvidia-nim/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/tools/openrouter/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/tools/ovh-ai/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -316,12 +386,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/en/tools/scaleway/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/en/tools/seedance/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aifreeplan.com/en/tools/sensenova/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/tools/siliconflow/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -357,6 +437,11 @@
   </url>
   <url>
     <loc>https://aifreeplan.com/en/tools/tencent-zenvideo/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/tools/together-ai/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -406,6 +491,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/en/tools/zenmux/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/en/tools/zhipu-coding-plan/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -451,9 +541,9 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aifreeplan.com/zh/guides/free-ai-image-generator-tools</loc>
+    <loc>https://aifreeplan.com/zh/guides/free-ai-video-generation-tools</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://aifreeplan.com/zh/image/</loc>
@@ -486,6 +576,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/zh/tools/ai21-labs/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/zh/tools/aliyun-bailian/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -506,7 +601,17 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/zh/tools/bb-browser/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/zh/tools/bing-image-creator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/cerebras/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -531,12 +636,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/zh/tools/cloudflare-workers-ai/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/zh/tools/codebuddy/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aifreeplan.com/zh/tools/codeium/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/cohere/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -576,6 +691,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/zh/tools/fireworks-ai/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/zh/tools/freebuff/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -606,6 +726,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/zh/tools/github-models/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/zh/tools/google-jules/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -621,6 +746,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/zh/tools/groq/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/zh/tools/hailuo/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -631,7 +761,17 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/zh/tools/huggingface-inference/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/zh/tools/ideogram/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/intern-ai/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -691,6 +831,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/zh/tools/mistral/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/zh/tools/modelscope/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -702,6 +847,21 @@
   </url>
   <url>
     <loc>https://aifreeplan.com/zh/tools/notebooklm/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/nvidia-nim/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/openrouter/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/ovh-ai/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -741,12 +901,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/zh/tools/scaleway/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/zh/tools/seedance/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aifreeplan.com/zh/tools/sensenova/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/siliconflow/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -782,6 +952,11 @@
   </url>
   <url>
     <loc>https://aifreeplan.com/zh/tools/tencent-zenvideo/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/together-ai/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -827,6 +1002,11 @@
   </url>
   <url>
     <loc>https://aifreeplan.com/zh/tools/xiaomi-mimo/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/zenmux/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
