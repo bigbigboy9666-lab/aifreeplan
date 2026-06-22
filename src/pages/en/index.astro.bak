@@ -15,7 +15,7 @@ const topTools = tools.sort((a: any, b: any) => (b.rating || 0) - (a.rating || 0
 
 <BaseLayout
   title="AIFreePlan - AI Free Tier Aggregator | Find the Best Free AI Tools"
-  description="The world's first AI free tier aggregation platform. Compare free credits, usage limits, and trial details across 91 AI tools."
+  description="The world's first AI free tier aggregation platform. Compare free credits, usage limits, and trial details across 73+ AI tools."
   lang={lang}
 >
   <section class="relative bg-gradient-to-br from-emerald-50 to-indigo-50 dark:from-gray-900 dark:to-gray-800 py-20 px-4">
