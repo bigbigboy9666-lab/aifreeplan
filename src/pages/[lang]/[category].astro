@@ -34,6 +34,8 @@ if (!categoryInfo) {
 
 const categoryNameDisplay = lang === 'zh' ? categoryInfo.nameZh : categoryInfo.nameEn;
 const categoryDesc = lang === 'zh' ? categoryInfo.descriptionZh : categoryInfo.description;
+// Use categoryInfo.count from data for consistency with UI
+const displayCount = categoryInfo.count || categoryTools.length;
 
 // Filter tools by category (case-insensitive match)
 const categoryTools = allTools.filter(
@@ -51,7 +53,7 @@ const description = lang === 'zh'
   ? `发现最佳免费${categoryInfo.nameZh}工具，包含免费额度、使用限制和替代方案。共 ${categoryTools.length} 个工具。`
   : `Discover the best free ${categoryInfo.nameEn} tools with free credits, usage limits, and alternatives. ${categoryTools.length} tools listed.`;
 
-const canonicalUrl = `${siteUrl}/${lang}/${categorySlug}`;
+const canonicalUrl = `${siteUrl}/${lang}/${categorySlug}/`;
 
 // JSON-LD: CollectionPage
 const collectionSchema = {
@@ -60,7 +62,7 @@ const collectionSchema = {
   "name": lang === 'zh' ? `${categoryInfo.nameZh} - 免费AI工具` : `${categoryInfo.nameEn} - Free AI Tools`,
   "description": description,
   "url": canonicalUrl,
-  "numberOfItems": categoryTools.length,
+  "numberOfItems": displayCount,
   "itemListElement": sortedTools.map((tool, index) => ({
     "@type": "ListItem",
     "position": index + 1,

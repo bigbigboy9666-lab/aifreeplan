@@ -14,6 +14,8 @@ const refreshLabel: Record<string, string> = {
   monthly: lang === 'zh' ? '每月刷新' : 'Resets monthly',
   'one-time': lang === 'zh' ? '一次性' : 'One-time only',
   unknown: lang === 'zh' ? '刷新周期未知' : 'Refresh period unknown',
+  none: lang === 'zh' ? '无限制' : 'Unlimited',
+  unlimited: lang === 'zh' ? '无限制' : 'Unlimited',
 };
 
 const ft = tool.freeTier;
@@ -27,8 +29,8 @@ const ft = tool.freeTier;
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
     <div class="bg-white rounded-xl p-4">
       <p class="text-sm text-text-muted mb-1">{lang === 'zh' ? '免费额度' : 'Free Credits'}</p>
-      <p class="text-2xl font-bold text-primary">{ft.credits} <span class="text-sm font-normal">{ft.creditUnit}</span></p>
-      <p class="text-xs text-text-muted mt-1">{refreshLabel[ft.refreshPeriod]}</p>
+      <p class="text-2xl font-bold text-primary">{ft.credits ?? 0} {ft.creditUnit || ''}</p>
+      <p class="text-xs text-text-muted mt-1">{refreshLabel[ft.refreshPeriod || 'unknown']}</p>
     </div>
 
     <div class="bg-white rounded-xl p-4">

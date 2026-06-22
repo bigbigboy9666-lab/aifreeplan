@@ -46,7 +46,7 @@ const seoDesc = lang === 'zh'
   ? (tool.seoMeta.descriptionZh || tool.seoMeta.description)
   : tool.seoMeta.description;
 
-const canonicalUrl = `${siteUrl}/${lang}/tools/${tool.id}/`;
+const canonicalUrl = `${siteUrl}/${lang}/tools/${tool.id}`;
 
 // Rating stars
 const fullStars = Math.floor(tool.rating);
@@ -57,22 +57,6 @@ const emptyStars = 5 - fullStars - (hasHalf ? 1 : 0);
 const relatedTools = allTools
   .filter(t => t.category === tool.category && t.id !== tool.id)
   .slice(0, 4);
-
-// Safe freeTier field access for schema generation
-const refreshText: Record<string, Record<string, string>> = {
-  daily: { zh: '每日刷新', en: 'refreshing daily' },
-  weekly: { zh: '每周刷新', en: 'refreshing weekly' },
-  monthly: { zh: '每月刷新', en: 'refreshing monthly' },
-  'one-time': { zh: '一次性', en: 'one-time only' },
-  unknown: { zh: '未知', en: 'unknown' },
-};
-
-const safeRefreshLabel = refreshText[tool.freeTier?.refreshPeriod || 'unknown']?.[lang] || (lang === 'zh' ? '未知' : 'unknown');
-const safeCredits = tool.freeTier?.credits ?? 0;
-const safeUnit = tool.freeTier?.creditUnit || '';
-const freeTierText = lang === 'zh'
-  ? (safeUnit ? `${name}提供 ${safeCredits} ${safeUnit}，${safeRefreshLabel}。` : `${name}提供 ${safeCredits}，${safeRefreshLabel}。`)
-  : (safeUnit ? `${tool.nameEn || tool.name} offers ${safeCredits} ${safeUnit}, ${safeRefreshLabel}.` : `${tool.nameEn || tool.name} offers ${safeCredits}, ${safeRefreshLabel}.`);
 
 // JSON-LD: SoftwareApplication
 const softwareSchema = {
@@ -89,8 +73,8 @@ const softwareSchema = {
     "price": "0",
     "priceCurrency": "USD",
     "description": lang === 'zh'
-      ? `免费额度: ${safeCredits}${safeUnit ? ' ' + safeUnit : ''}${safeRefreshLabel !== '未知' && safeRefreshLabel !== 'unknown' ? '，' + safeRefreshLabel : ''}`
-      : `Free credits: ${safeCredits}${safeUnit ? ' ' + safeUnit : ''}${safeRefreshLabel !== 'unknown' ? ', ' + safeRefreshLabel : ''}`
+      ? `免费额度: ${tool.freeTier.credits} ${tool.freeTier.creditUnit}`
+      : `Free credits: ${tool.freeTier.credits} ${tool.freeTier.creditUnit}`
   },
   "aggregateRating": {
     "@type": "AggregateRating",
@@ -131,6 +115,15 @@ const breadcrumbSchema = {
   ]
 };
 
+// JSON-LD: FAQPage
+const refreshText: Record<string, Record<string, string>> = {
+  daily: { zh: '每日刷新', en: 'refreshing daily' },
+  weekly: { zh: '每周刷新', en: 'refreshing weekly' },
+  monthly: { zh: '每月刷新', en: 'refreshing monthly' },
+  'one-time': { zh: '一次性', en: 'one-time only' },
+  unknown: { zh: '未知', en: 'unknown' },
+};
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -142,7 +135,9 @@ const faqSchema = {
         : `What are ${tool.nameEn || tool.name}'s free credits?`,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": freeTierText
+        "text": lang === 'zh'
+          ? `${name}提供 ${tool.freeTier.credits} ${tool.freeTier.creditUnit}，${refreshText[tool.freeTier.refreshPeriod]?.zh || '未知'}。`
+          : `${tool.nameEn || tool.name} offers ${tool.freeTier.credits} ${tool.freeTier.creditUnit}, ${refreshText[tool.freeTier.refreshPeriod]?.en || 'unknown'}.`
       }
     },
     {
@@ -152,7 +147,7 @@ const faqSchema = {
         : `Does ${tool.nameEn || tool.name} require a credit card?`,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": tool.freeTier?.requiresCreditCard
+        "text": tool.freeTier.requiresCreditCard
           ? (lang === 'zh' ? '是的，注册需要绑定信用卡。' : 'Yes, a credit card is required to sign up.')
           : (lang === 'zh' ? '不需要，注册即可使用免费额度。' : 'No, you can start using the free tier without a credit card.')
       }
@@ -164,7 +159,7 @@ const faqSchema = {
         : `Does ${tool.nameEn || tool.name}'s free tier include watermarks?`,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": tool.freeTier?.watermark
+        "text": tool.freeTier.watermark
           ? (lang === 'zh' ? '免费版输出带有水印，付费版可去除。' : 'Yes, free tier outputs include watermarks. Remove them with a paid plan.')
           : (lang === 'zh' ? '免费版输出没有水印。' : 'No, the free tier produces watermark-free output.')
       }

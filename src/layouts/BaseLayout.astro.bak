@@ -19,15 +19,9 @@ const {
 
 const siteUrl = 'https://aifreeplan.com';
 const currentPath = Astro.url.pathname;
-// Ensure trailing slash for consistency
-const normalizedPath = currentPath.endsWith('/') ? currentPath : currentPath + '/';
-const zhUrl = `${siteUrl}${normalizedPath.replace(/^\/en/, '/zh')}`;
-const enUrl = `${siteUrl}${normalizedPath.replace(/^\/zh/, '/en')}`;
-const canonical = canonicalUrl || `${siteUrl}${normalizedPath}`;
-// Determine if this is homepage
-const isHomepage = normalizedPath === '/zh/' || normalizedPath === '/en/';
-const isToolPage = normalizedPath.includes('/tools/');
-const isCategoryPage = normalizedPath.match(/\/(zh|en)\/(llm|image|video|coding|audio|chat|agent|productivity|ai-assistant)\/?$/);
+const zhUrl = `${siteUrl}${currentPath.replace(/^\/en/, '/zh')}`;
+const enUrl = `${siteUrl}${currentPath.replace(/^\/zh/, '/en')}`;
+const canonical = canonicalUrl || `${siteUrl}${currentPath}`;
 ---
 
 <!doctype html>
@@ -43,7 +37,7 @@ const isCategoryPage = normalizedPath.match(/\/(zh|en)\/(llm|image|video|coding|
     <!-- hreflang tags -->
     <link rel="alternate" hreflang="zh" href={zhUrl} />
     <link rel="alternate" hreflang="en" href={enUrl} />
-    <link rel="alternate" hreflang="x-default" href={enUrl} />
+    <link rel="alternate" hreflang="x-default" href={zhUrl} />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -52,16 +46,11 @@ const isCategoryPage = normalizedPath.match(/\/(zh|en)\/(llm|image|video|coding|
     <meta property="og:url" content={canonical} />
     <meta property="og:site_name" content="AI Free Plan" />
     <meta property="og:locale" content={lang === 'zh' ? 'zh_CN' : 'en_US'} />
-    <meta property="og:image" content="https://aifreeplan.com/og-image.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content={lang === 'zh' ? 'AIFreePlan - AI免费额度聚合平台' : 'AIFreePlan - AI Free Tier Aggregator'} />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content="https://aifreeplan.com/og-image.png" />
 
     <title>{title}</title>
 
@@ -73,48 +62,6 @@ const isCategoryPage = normalizedPath.match(/\/(zh|en)\/(llm|image|video|coding|
           Array.isArray(jsonLd) ? jsonLd : [jsonLd]
         )}
       />
-    )}
-
-    <!-- Homepage: WebSite + Organization Schema -->
-    {isHomepage && (
-      <>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "name": lang === 'zh' ? 'AIFreePlan' : 'AIFreePlan',
-            "url": siteUrl + '/',
-            "description": lang === 'zh' ? '全球首个AI工具免费额度聚合平台' : 'The world\'s first AI free tier aggregation platform',
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": {
-                "@type": "EntryPoint",
-                "urlTemplate": siteUrl + '/{search_term_string}'
-              },
-              "query-input": "required name=search_term_string"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "AIFreePlan",
-              "url": siteUrl + '/',
-              "logo": {
-                "@type": "ImageObject",
-                "url": siteUrl + '/favicon.svg'
-              }
-            }
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "AIFreePlan",
-            "url": siteUrl + '/',
-            "description": lang === 'zh' ? 'AI工具免费额度聚合平台' : 'AI Free Tier Aggregation Platform',
-            "sameAs": []
-          })}
-        </script>
-      </>
     )}
   </head>
   <body class="min-h-screen flex flex-col">
