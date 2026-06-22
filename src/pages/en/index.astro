@@ -116,12 +116,12 @@ const recentGuides = guides.filter((g: any) => !g.pinned).slice(0, 6);
       <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
         {categories.map((cat: any) => (
           <a href={`/${lang}/${cat.id}`}
-             class="group bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:border-emerald-400 hover:shadow-lg transition-all">
+             class="group bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:border-emerald-400 hover:shadow-lg transition-all h-full flex flex-col">
             <div class="text-4xl mb-3">{cat.icon}</div>
             <h3 class="text-lg font-bold mb-1 group-hover:text-emerald-600 transition-colors">
               {cat.nameEn}
             </h3>
-            <p class="text-sm text-gray-500">{cat.count} tools</p>
+            <p class="text-sm text-gray-500 mt-auto">{cat.count} tools</p>
           </a>
         ))}
       </div>
