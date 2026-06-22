@@ -3,7 +3,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   output: 'static',
-  trailingSlash: 'ignore',
+  trailingSlash: 'always',
   vite: {
     plugins: [tailwindcss()],
   },
