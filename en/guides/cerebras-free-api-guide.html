@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cerebras Free API Guide: 1 Million Tokens/Day, GPT OSS & GLM 4.7 | AIFreePlan</title>
+<meta name="description" content="Cerebras offers a completely free API with 1 million tokens per day. Access GPT OSS 120B and GLM 4.7 models at 20x the speed of OpenAI. No credit card required.">
+<meta name="keywords" content="Cerebras, free API, GPT OSS, GLM 4.7, AI inference, wafer scale engine">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cerebras Free API Guide: 1 Million Tokens/Day, GPT OSS & GLM 4.7 | AIFreePlan">
+<meta property="og:description" content="Cerebras offers a completely free API with 1 million tokens per day. Access GPT OSS 120B and GLM 4.7 models at 20x the speed of OpenAI.">
+<meta property="og:url" content="https://aifreeplan.com/en/guides/cerebras-free-api-guide">
+<meta property="og:site_name" content="AIFreePlan">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://aifreeplan.com/en/guides/cerebras-free-api-guide">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cerebras Free API Guide: 1 Million Tokens/Day, GPT OSS & GLM 4.7",
+  "description": "Cerebras offers a completely free API with 1 million tokens per day. Access GPT OSS 120B and GLM 4.7 models at 20x the speed of OpenAI.",
+  "datePublished": "2026-06-23",
+  "author": { "@type": "Person", "name": "Cat Bro" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Cerebras free API really completely free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The Free Trial tier is completely free with no credit card required. You get 1 million tokens per day across all public models."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use Cerebras API from China?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cerebras API endpoint (api.cerebras.ai) is not directly accessible from mainland China. You need a proxy or Cloudflare Workers relay."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What models does Cerebras support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Public endpoints currently support two models: GPT OSS 120B (120B parameters, ~3000 tokens/s) and GLM 4.7 (355B parameters, ~1000 tokens/s). More models are available via Dedicated Endpoints."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Cerebras compatible with OpenAI API?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fully compatible. Cerebras follows the OpenAI API format. You only need to change the base_url and API key to switch seamlessly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is RPM 5 too slow?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RPM 5 means max 5 requests per minute, but Cerebras responds extremely fast (GPT OSS reaches 3000 tokens/s). So 5 requests actually process far more tokens than other platforms. Great for interactive conversations and moderate-frequency calls."
+      }
+    }
+  ]
+}
+</script>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.8; color: #1a1a1a; max-width: 800px; margin: 0 auto; padding: 20px; }
+h1 { font-size: 2em; border-bottom: 2px solid #10b981; padding-bottom: 10px; }
+h2 { font-size: 1.5em; margin-top: 30px; color: #059669; }
+h3 { font-size: 1.2em; margin-top: 20px; color: #047857; }
+.story-box { background: linear-gradient(135deg, #ecfdf5, #e0e7ff); border-left: 4px solid #10b981; padding: 20px; border-radius: 8px; margin: 20px 0; }
+.code-block { background: #1e293b; color: #e2e8f0; padding: 16px; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 14px; line-height: 1.6; }
+.table-wrapper { overflow-x: auto; margin: 20px 0; }
+table { width: 100%; border-collapse: collapse; }
+th { background: #10b981; color: white; padding: 12px; text-align: left; }
+td { padding: 10px 12px; border-bottom: 1px solid #e5e7eb; }
+tr:nth-child(even) { background: #f9fafb; }
+.faq-section { margin: 30px 0; }
+.faq-item { margin: 15px 0; padding: 15px; background: #f9fafb; border-radius: 8px; }
+.faq-q { font-weight: bold; color: #059669; margin-bottom: 5px; }
+.mistakes { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 20px; border-radius: 8px; margin: 20px 0; }
+.mistakes li { margin: 8px 0; }
+.inline-link { color: #059669; text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<h1>Cerebras Free API Guide: 1 Million Tokens/Day, GPT OSS & GLM 4.7</h1>
+
+<div class="story-box">
+<strong>📖 Real Case:</strong> An indie developer building an AI coding assistant was spending $20/month on OpenAI API for code completions. After switching to Cerebras, not only was it free, but response time dropped from 2 seconds to 0.3 seconds -- his users thought he upgraded to a paid plan.
+</div>
+
+<p>A company called <strong><a href="https://www.cerebras.ai/" class="inline-link" target="_blank">Cerebras</a></strong> has been making waves recently. They don't make apps or do marketing -- they build the world's largest AI chip (a wafer-scale engine) and then <strong>open-source their API for free</strong>.</p>
+
+<p>The kicker: <strong>completely free, no credit card needed, just sign up with an email</strong>. You get 1 million tokens per day, which is more than enough for individual developers.</p>
+
+<h2>📊 Free Tier Overview</h2>
+
+<div class="table-wrapper">
+<table>
+<tr><th>Item</th><th>Details</th></tr>
+<tr><td>Free Tier</td><td>Free Trial (permanently free)</td></tr>
+<tr><td>Daily token limit</td><td>1,000,000 (1 million)</td></tr>
+<tr><td>Requests per minute</td><td>5 RPM</td></tr>
+<tr><td>Tokens per minute</td><td>30K TPM</td></tr>
+<tr><td>Tokens per hour</td><td>1,000,000 (1 million)</td></tr>
+<tr><td>Supported models</td><td>GPT OSS 120B + GLM 4.7</td></tr>
+<tr><td>Credit card</td><td>Not required</td></tr>
+<tr><td>Accessible from China</td><td>❌ Requires proxy/relay</td></tr>
+</table>
+</div>
+
+<h2>🤖 Available Models</h2>
+
+<h3>1. GPT OSS 120B (Production)</h3>
+<p>OpenAI's open-source 120-billion parameter model, running at <strong>~3000 tokens/s</strong> on Cerebras -- that's 10x faster than GPU and 20x faster than OpenAI's official API.</p>
+<p>Best for: Code generation, summarization, general chat, structured outputs, tool calling.</p>
+
+<h3>2. GLM 4.7 (Preview)</h3>
+<p>Zhipu AI's 355-billion parameter model, running at ~1000 tokens/s on Cerebras. Excels at <strong>Chinese language understanding and coding</strong>, with strong tool-use capabilities.</p>
+<p>Best for: Chinese conversations, code writing, multi-step reasoning, Agent workflows.</p>
+
+<h2>🚀 Sign Up and Get Your API Key</h2>
+
+<h3>Step 1: Create an Account</h3>
+<p>Go to <a href="https://cloud.cerebras.ai" class="inline-link" target="_blank">cloud.cerebras.ai</a> and sign up with your email. Google login is supported, and <strong>you can use any email domain -- no phone number needed</strong>.</p>
+
+<h3>Step 2: Create an API Key</h3>
+<p>After logging in, navigate to <strong>API Keys</strong> in the left sidebar and create a new key. Copy it immediately -- <strong>it only shows once</strong>.</p>
+
+<h3>Step 3: Set Environment Variable</h3>
+<div class="code-block"># macOS / Linux
+export CEREBRAS_API_KEY=***
+
+# Verify it's set
+echo $CEREBRAS_API_KEY</div>
+
+<h2>💻 Your First API Call</h2>
+
+<h3>Method 1: Python SDK (Recommended)</h3>
+<div class="code-block">pip install --upgrade cerebras_cloud_sdk
+
+import os
+from cerebras.cloud.sdk import Cerebras
+
+client = Cerebras(
+    api_key=os.environ.get("CEREBRAS_API_KEY"),
+)
+
+response = client.chat.completions.create(
+    messages=[
+        {"role": "user", "content": "Write a quick sort in Python"}
+    ],
+    model="gpt-oss-120b",
+)
+
+print(response.choices[0].message.content)</div>
+
+<h3>Method 2: Direct cURL</h3>
+<div class="code-block">curl https://api.cerebras.ai/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $CEREBRAS_API_KEY" \
+  -d '{
+    "model": "gpt-oss-120b",
+    "messages": [
+      {"role": "user", "content": "Write a quick sort in Python"}
+    ]
+  }'</div>
+
+<h3>Method 3: OpenAI-Compatible</h3>
+<p>Since Cerebras is fully OpenAI API-compatible, you can use the OpenAI Python library directly with just two changes:</p>
+<div class="code-block">from openai import OpenAI
+
+client = OpenAI(
+    api_key=os.environ.get("CEREBRAS_API_KEY"),
+    base_url="https://api.cerebras.ai/v1",
+)
+
+response = client.chat.completions.create(
+    model="gpt-oss-120b",
+    messages=[{"role": "user", "content": "Hello!"}]
+)</div>
+
+<h2>⚡ How Fast Is It Really?</h2>
+
+<p>This is Cerebras's biggest selling point. Their WAFL chip (wafer-scale engine) is 58x larger than GPUs:</p>
+
+<div class="table-wrapper">
+<table>
+<tr><th>Model</th><th>Cerebras Speed</th><th>Vs GPU</th><th>Vs OpenAI API</th></tr>
+<tr><td>GPT OSS 120B</td><td>~3000 tokens/s</td><td>10x faster</td><td>20x faster</td></tr>
+<tr><td>GLM 4.7</td><td>~1000 tokens/s</td><td>N/A</td><td>N/A</td></tr>
+</table>
+</div>
+
+<p>A full code file (~500 lines) can be generated in about <strong>0.2 seconds</strong>. For coding scenarios, this means you practically feel zero wait time.</p>
+
+<h2>🔗 IDE Integrations</h2>
+
+<p>Cerebras has native integrations with several AI coding tools:</p>
+
+<ul>
+<li><strong>VS Code</strong>: Install the Cerebras extension and paste your API Key</li>
+<li><strong>Cline</strong>: Open-source AI coding assistant, configure Cerebras as the backend</li>
+<li><strong>OpenCode</strong>: Terminal-based AI coding Agent with Cerebras support</li>
+</ul>
+
+<h2>⚠️ 5 Common Mistakes Beginners Make</h2>
+
+<div class="mistakes">
+<h3>🚫 Mistake 1: Forgetting about the proxy</h3>
+<p>The Cerebras API endpoint (api.cerebras.ai) is not directly accessible from mainland China. Solutions: use a proxy, or set up a Cloudflare Workers relay (search "Cerebras CF relay" for ready-made solutions).</p>
+
+<h3>🚫 Mistake 2: Thinking RPM 5 is slow</h3>
+<p>5 requests per minute sounds low, but each Cerebras response is incredibly fast (GPT OSS hits 3000 tokens/s). So 5 requests actually process far more tokens than other platforms. The key is to <strong>send fewer, bigger requests</strong> rather than many small ones.</p>
+
+<h3>🚫 Mistake 3: Losing your API Key</h3>
+<p>Your API key only displays once when created. <strong>Copy and save it immediately</strong> (e.g., in a password manager).</p>
+
+<h3>🚫 Mistake 4: Not setting max_completion_tokens</h3>
+<p>If you don't specify max_completion_tokens, Cerebras estimates using the maximum sequence length, which can drain your 1 million token quota faster than expected. Always <strong>set a reasonable max_completion_tokens value</strong>.</p>
+
+<h3>🚫 Mistake 5: Confusing Free and Paid tiers</h3>
+<p>The free tier has RPM 5. If you need high-frequency calls (e.g., batch processing), consider upgrading to the Developer tier (starting at $10), which bumps RPM to 1000.</p>
+</div>
+
+<h2>🆚 Comparison with Other Free APIs</h2>
+
+<div class="table-wrapper">
+<table>
+<tr><th>Platform</th><th>Free Quota</th><th>Speed</th><th>China Accessible</th><th>CC Required</th></tr>
+<tr><td><a href="/en/tools/cerebras" class="inline-link">Cerebras</a></td><td>1M tokens/day</td><td>⚡⚡⚡ Blazing</td><td>❌</td><td>No</td></tr>
+<tr><td><a href="/en/tools/groq" class="inline-link">Groq</a></td><td>1000 req/day</td><td>⚡⚡ Fast</td><td>❌</td><td>No</td></tr>
+<tr><td><a href="/en/tools/openrouter" class="inline-link">OpenRouter</a></td><td>50 req/day</td><td>⚡ Moderate</td><td>✅</td><td>No</td></tr>
+<tr><td><a href="/en/tools/github-models" class="inline-link">GitHub Models</a></td><td>150 req/day</td><td>⚡ Moderate</td><td>✅</td><td>No</td></tr>
+<tr><td>OpenAI</td><td>Paid only</td><td>⚡ Moderate</td><td>❌</td><td>Yes</td></tr>
+</table>
+</div>
+
+<h2>❓ FAQ</h2>
+<div class="faq-section">
+<div class="faq-item"><div class="faq-q">Q: Is Cerebras free API really completely free?</div><div class="faq-a">A: Yes. The Free Trial tier is permanently free with no credit card required. You get 1 million tokens per day across all public models.</div></div>
+<div class="faq-item"><div class="faq-q">Q: Can I use Cerebras API from China?</div><div class="faq-a">A: The Cerebras API endpoint (api.cerebras.ai) is not directly accessible from mainland China. You need a proxy or Cloudflare Workers relay.</div></div>
+<div class="faq-item"><div class="faq-q">Q: What models does Cerebras support?</div><div class="faq-a">A: Public endpoints support GPT OSS 120B (production) and GLM 4.7 (preview). More models are available via Dedicated Endpoints for enterprise workloads.</div></div>
+<div class="faq-item"><div class="faq-q">Q: Is Cerebras compatible with OpenAI API?</div><div class="faq-a">A: Fully compatible. Cerebras follows the OpenAI API format. Change the base_url and API key, and you're done.</div></div>
+<div class="faq-item"><div class="faq-q">Q: Is RPM 5 too slow?</div><div class="faq-a">A: RPM 5 means max 5 requests per minute, but Cerebras responds incredibly fast (GPT OSS reaches 3000 tokens/s). Five requests actually process far more tokens than other platforms. Great for interactive conversations and moderate-frequency calls.</div></div>
+<div class="faq-item"><div class="faq-q">Q: How do I monitor my token usage?</div><div class="faq-a">A: Log into cloud.cerebras.ai and check Usage & Monitoring in the Cloud Console. Every API response also includes rate limit headers -- use curl --verbose to inspect them.</div></div>
+</div>
+
+<h2>🎯 Bottom Line</h2>
+
+<p>Cerebras is currently one of the <strong>highest-quota and fastest free AI inference APIs</strong> available. 1 million tokens per day is plenty for individual developers, and both GPT OSS 120B and GLM 4.7 are genuinely capable models.</p>
+
+<p>The only barrier is network access from China, but given the speed and quota you're getting for free, it's absolutely worth the setup.</p>
+
+<p><strong>Want blazing-fast AI inference for free? Go to <a href="https://cloud.cerebras.ai" class="inline-link" target="_blank">cloud.cerebras.ai</a>, sign up, grab your API Key, and start building. No credit card needed.</strong></p>
+
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cerebras免费API攻略：100万token/天，GPT OSS/GLM 4.7随便用 | AIFreePlan</title>
+<meta name="description" content="Cerebras提供免费API，每天100万token，支持GPT OSS 120B和GLM 4.7两大模型。速度比OpenAI快20倍，注册只需邮箱，无需信用卡。本文教你从零开始白嫖Cerebras API。">
+<meta name="keywords" content="Cerebras, 免费API, GPT OSS, GLM 4.7, 白嫖AI, 推理加速">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cerebras免费API攻略：100万token/天，GPT OSS/GLM 4.7随便用 | AIFreePlan">
+<meta property="og:description" content="Cerebras提供免费API，每天100万token，支持GPT OSS 120B和GLM 4.7两大模型。速度比OpenAI快20倍，注册只需邮箱，无需信用卡。">
+<meta property="og:url" content="https://aifreeplan.com/zh/guides/cerebras-free-api-guide">
+<meta property="og:site_name" content="AIFreePlan">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://aifreeplan.com/zh/guides/cerebras-free-api-guide">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cerebras免费API攻略：100万token/天，GPT OSS/GLM 4.7随便用",
+  "description": "Cerebras提供免费API，每天100万token，支持GPT OSS 120B和GLM 4.7两大模型。速度比OpenAI快20倍，注册只需邮箱，无需信用卡。",
+  "datePublished": "2026-06-23",
+  "author": { "@type": "Person", "name": "猫哥" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Cerebras免费API真的完全免费吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "是的。Cerebras的Free Trial层级完全免费，不需要绑定信用卡。每天可以免费使用100万token，涵盖所有公开模型。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cerebras的API国内能用吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cerebras的API地址（api.cerebras.ai）在国内网络环境下无法直接访问，需要使用代理或CF Workers中转。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cerebras支持哪些模型？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "公开端点目前支持两个模型：GPT OSS 120B（1200亿参数，约3000 tokens/s）和GLM 4.7（3550亿参数，约1000 tokens/s）。更多大模型可通过Dedicated Endpoints使用。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cerebras和OpenAI API兼容吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "完全兼容。Cerebras遵循OpenAI API格式，只需修改base_url和API key即可无缝切换。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "RPM只有5会不会很慢？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RPM 5意味着每分钟最多5个请求，但Cerebras的单次响应速度极快（GPT OSS可达3000 tokens/s），所以5个请求的实际吞吐量远超其他平台。适合交互式对话和中等频率调用。"
+      }
+    }
+  ]
+}
+</script>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.8; color: #1a1a1a; max-width: 800px; margin: 0 auto; padding: 20px; }
+h1 { font-size: 2em; border-bottom: 2px solid #10b981; padding-bottom: 10px; }
+h2 { font-size: 1.5em; margin-top: 30px; color: #059669; }
+h3 { font-size: 1.2em; margin-top: 20px; color: #047857; }
+.story-box { background: linear-gradient(135deg, #ecfdf5, #e0e7ff); border-left: 4px solid #10b981; padding: 20px; border-radius: 8px; margin: 20px 0; }
+.code-block { background: #1e293b; color: #e2e8f0; padding: 16px; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 14px; line-height: 1.6; }
+.table-wrapper { overflow-x: auto; margin: 20px 0; }
+table { width: 100%; border-collapse: collapse; }
+th { background: #10b981; color: white; padding: 12px; text-align: left; }
+td { padding: 10px 12px; border-bottom: 1px solid #e5e7eb; }
+tr:nth-child(even) { background: #f9fafb; }
+.faq-section { margin: 30px 0; }
+.faq-item { margin: 15px 0; padding: 15px; background: #f9fafb; border-radius: 8px; }
+.faq-q { font-weight: bold; color: #059669; margin-bottom: 5px; }
+.mistakes { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 20px; border-radius: 8px; margin: 20px 0; }
+.mistakes li { margin: 8px 0; }
+.inline-link { color: #059669; text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<h1>Cerebras免费API攻略：100万token/天，GPT OSS/GLM 4.7随便用</h1>
+
+<div class="story-box">
+<strong>📖 案例：</strong>一个做AI编程助手的独立开发者，之前每个月要花$20用OpenAI的API给用户提供代码补全。换了Cerebras之后，不仅免费，而且响应速度从2秒降到0.3秒——用户以为他升级了付费套餐。
+</div>
+
+<p>最近有个叫<strong><a href="https://www.cerebras.ai/" class="inline-link" target="_blank">Cerebras</a></strong>的公司火了。他们不做APP，不搞营销，就造了一台全世界最大的AI芯片（晶圆级引擎），然后<strong>免费开放API</strong>给你用。</p>
+
+<p>重点是：<strong>完全免费，不需要信用卡，注册就能用</strong>。每天100万token的额度，对于个人开发者来说基本够用了。</p>
+
+<h2>📊 免费额度一览</h2>
+
+<p>先说结论：<strong>Cerebras是目前免费额度最高的AI API之一</strong>。每天100万token是什么概念？假设你用GPT OSS 120B做一个编程助手，每次对话平均消耗2000 token（含输入输出），那你每天可以免费处理500次对话。对个人开发者来说完全够用。</p>
+
+<div class="table-wrapper">
+<table>
+<tr><th>项目</th><th>详情</th></tr>
+<tr><td>免费层级</td><td>Free Trial（永久免费）</td></tr>
+<tr><td>每日token上限</td><td>1,000,000（100万）</td></tr>
+<tr><td>每分钟请求数</td><td>5 RPM</td></tr>
+<tr><td>每分钟token数</td><td>30K TPM</td></tr>
+<tr><td>每小时token数</td><td>1,000,000（100万）</td></tr>
+<tr><td>支持模型</td><td>GPT OSS 120B + GLM 4.7</td></tr>
+<tr><td>信用卡</td><td>不需要</td></tr>
+<tr><td>国内可用</td><td>❌ 需要代理/中转</td></tr>
+<tr><td>API兼容性</td><td>完全兼容OpenAI格式</td></tr>
+<tr><td>计费方式</td><td>免费层无计费，按token计费</td></tr>
+</table>
+</div>
+
+<p>如果你需要更高的速率限制，Cerebras还有付费的Developer层（最低$10），RPM提升到1000，TPM提升到100万。但对于白嫖党来说，免费的100万token已经非常香了。</p>
+
+<h2>🤖 支持模型</h2>
+
+<h3>1. GPT OSS 120B（生产级）</h3>
+<p>OpenAI开源的1200亿参数大模型，在Cerebras上跑出了<strong>约3000 tokens/s</strong>的速度——这是什么概念？比在GPU上跑快10倍，比OpenAI官方API快20倍。</p>
+<p>GPT OSS 120B在多个基准测试中表现优异：代码生成能力接近GPT-4级别，数学推理能力强，上下文窗口支持长达128K tokens（约96,000个英文单词或50,000个中文字符）。这意味着你可以把一个完整的代码库丢给它，让它一次性理解并修改。</p>
+<p>适合场景：代码生成、摘要、通用对话、结构化输出、工具调用、Agent工作流。</p>
+
+<h3>2. GLM 4.7（预览版）</h3>
+<p>智谱AI的3550亿参数大模型，在Cerebras上约1000 tokens/s。作为中文母语模型，GLM 4.7在<strong>中文理解、代码编写、多步骤推理</strong>方面表现出色。工具调用能力也很强，适合构建AI Agent。</p>
+<p>目前处于预览阶段，意味着随时可能下线或变更，但不影响白嫖。如果你对中文对话或编程有需求，GLM 4.7是免费API中最好的中文模型之一。</p>
+<p>适合场景：中文对话、代码编写、多步骤推理、Agent工作流。</p>
+
+<h2>🚀 注册和获取API Key</h2>
+
+<h3>第一步：注册账号</h3>
+<p>打开 <a href="https://cloud.cerebras.ai" class="inline-link" target="_blank">cloud.cerebras.ai</a>，用邮箱注册即可。支持Google登录，也支持纯邮箱注册——<strong>用自己的域名邮箱就行，不需要手机号</strong>。</p>
+
+<h3>第二步：创建API Key</h3>
+<p>登录后，在左侧导航栏找到 <strong>API Keys</strong>，点击创建一个新的API Key。复制保存好，<strong>只显示一次</strong>。</p>
+
+<h3>第三步：配置环境变量</h3>
+<div class="code-block"># macOS / Linux
+export CEREBRAS_API_KEY="你的key"
+
+# 验证是否配置成功
+echo $CEREBRAS_API_KEY</div>
+
+<h2>💻 第一个API调用</h2>
+
+<h3>方法一：用Python SDK（推荐）</h3>
+<div class="code-block">pip install --upgrade cerebras_cloud_sdk
+
+import os
+from cerebras.cloud.sdk import Cerebras
+
+client = Cerebras(
+    api_key=os.environ.get("CEREBRAS_API_KEY"),
+)
+
+response = client.chat.completions.create(
+    messages=[
+        {"role": "user", "content": "用Python写一个快速排序"}
+    ],
+    model="gpt-oss-120b",
+)
+
+print(response.choices[0].message.content)</div>
+
+<h3>方法二：用cURL直接调用</h3>
+<div class="code-block">curl https://api.cerebras.ai/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $CEREBRAS_API_KEY" \
+  -d '{
+    "model": "gpt-oss-120b",
+    "messages": [
+      {"role": "user", "content": "用Python写一个快速排序"}
+    ]
+  }'</div>
+
+<h3>方法三：OpenAI兼容</h3>
+<p>因为Cerebras完全兼容OpenAI API格式，你可以直接用OpenAI的Python库，只需要改两行：</p>
+<div class="code-block">from openai import OpenAI
+
+client = OpenAI(
+    api_key=os.environ.get("CEREBRAS_API_KEY"),
+    base_url="https://api.cerebras.ai/v1",
+)
+
+response = client.chat.completions.create(
+    model="gpt-oss-120b",
+    messages=[{"role": "user", "content": "Hello!"}]
+)</div>
+
+<h2>🛠️ 实际使用场景</h2>
+
+<h3>场景一：AI编程助手</h3>
+<p>这是Cerebras最经典的使用场景。把Cerebras API接入到你的IDE（VS Code、Cline、OpenCode），即可获得接近实时的代码补全和对话。</p>
+<p>比如你用Cline做编程Agent，配置Cerebras后端后，每次代码生成请求都在0.3秒内完成——比用OpenAI API快了将近7倍。写代码时不再需要等loading动画。</p>
+
+<h3>场景二：中文AI应用</h3>
+<p>GLM 4.7是中文能力最强的免费模型之一。用它来做中文客服、中文内容生成、中文代码注释，效果远超大多数开源模型。</p>
+<p>比如你可以用它构建一个中文知识库问答系统，把文档投喂给GLM 4.7，用户用中文提问，它用中文回答。配合RAG架构，准确率相当不错。</p>
+
+<h3>场景三：快速原型开发</h3>
+<p>因为Cerebras速度极快，非常适合做快速原型。比如你想做一个AI对话demo，用Cerebras后端可以在几分钟内搭出来——响应快到用户不会觉得卡顿。</p>
+<p>配合OpenAI兼容接口，你甚至可以直接用现有的OpenAI项目代码，只改两行配置就能切换到Cerebras。</p>
+
+<h2>⚡ 速度有多快？</h2>
+
+<p>这是Cerebras最大的卖点。他们的WAFL芯片（晶圆级引擎）比传统GPU大58倍，推理速度：</p>
+
+<div class="table-wrapper">
+<table>
+<tr><th>模型</th><th>Cerebras速度</th><th>对比GPU</th><th>对比OpenAI API</th></tr>
+<tr><td>GPT OSS 120B</td><td>~3000 tokens/s</td><td>10x更快</td><td>20x更快</td></tr>
+<tr><td>GLM 4.7</td><td>~1000 tokens/s</td><td>数据不足</td><td>数据不足</td></tr>
+</table>
+</div>
+
+<p>也就是说，一个完整的代码文件（约500行），Cerebras大概<strong>0.2秒</strong>就能生成完毕。这在编程场景中意味着什么？你几乎感受不到等待。</p>
+
+<h2>🔗 集成到开发工具</h2>
+
+<p>Cerebras原生支持多个AI编程工具，可以直接用他们的API：</p>
+
+<ul>
+<li><strong>VS Code</strong>：安装Cerebras扩展，在设置里填入API Key即可</li>
+<li><strong>Cline</strong>：开源AI编程助手，配置Cerebras为后端</li>
+<li><strong>OpenCode</strong>：终端AI编程Agent，支持Cerebras后端</li>
+</ul>
+
+<p>具体配置方法见各自的文档。</p>
+
+<h2>⚠️ 新手最容易踩的5个坑</h2>
+
+<div class="mistakes">
+<h3>🚫 坑1：忘记设置代理</h3>
+<p>Cerebras的API地址（api.cerebras.ai）在国内无法直接访问。解决方案有两个：一是用代理软件，二是用Cloudflare Workers搭建中转（搜索"Cerebras CF中转"能找到现成方案）。</p>
+
+<h3>🚫 坑2：RPM 5不代表慢</h3>
+<p>每分钟5个请求听起来很低，但Cerebras单次响应极快（GPT OSS 3000 tokens/s），所以5个请求的实际吞吐量远超其他平台。关键是<strong>一次请求处理更多内容</strong>，而不是频繁发短请求。</p>
+
+<h3>🚫 坑3：API Key只出现一次</h3>
+<p>创建API Key时只显示一次，关掉后就看不到了。务必<strong>立刻复制保存到安全的地方</strong>（比如密码管理器）。</p>
+
+<h3>🚫 坑4：没设max_completion_tokens导致超限</h3>
+<p>如果不指定max_completion_tokens，Cerebras会预估最大序列长度来扣减token配额，可能导致很快用完100万token。建议<strong>始终设置合理的max_completion_tokens值</strong>。</p>
+
+<h3>🚫 坑5：混淆免费层和付费层</h3>
+<p>免费层RPM只有5，如果你要做高频调用（比如批量处理），可以考虑升级到Developer层（最低$10），RPM提升到1000。</p>
+</div>
+
+<h2>🆚 和其他免费API对比</h2>
+
+<div class="table-wrapper">
+<table>
+<tr><th>平台</th><th>免费额度</th><th>速度</th><th>国内可用</th><th>需信用卡</th></tr>
+<tr><td><a href="/zh/tools/cerebras" class="inline-link">Cerebras</a></td><td>100万token/天</td><td>⚡⚡⚡ 极快</td><td>❌</td><td>否</td></tr>
+<tr><td><a href="/zh/tools/groq" class="inline-link">Groq</a></td><td>1000次/天</td><td>⚡⚡ 快</td><td>❌</td><td>否</td></tr>
+<tr><td><a href="/zh/tools/openrouter" class="inline-link">OpenRouter</a></td><td>50次/天</td><td>⚡ 一般</td><td>✅</td><td>否</td></tr>
+<tr><td><a href="/zh/tools/github-models" class="inline-link">GitHub Models</a></td><td>150次/天</td><td>⚡ 一般</td><td>✅</td><td>否</td></tr>
+<tr><td>OpenAI</td><td>需付费</td><td>⚡ 一般</td><td>❌</td><td>是</td></tr>
+</table>
+</div>
+
+<h2>❓ FAQ</h2>
+<div class="faq-section">
+<div class="faq-item"><div class="faq-q">Q: Cerebras免费API真的完全免费吗？</div><div class="faq-a">A: 是的。Free Trial层级完全免费，不需要绑定信用卡。每天100万token，用完即止，不会收费。</div></div>
+<div class="faq-item"><div class="faq-q">Q: Cerebras的API国内能用吗？</div><div class="faq-a">A: Cerebras的API地址（api.cerebras.ai）在国内网络环境下无法直接访问，需要使用代理或Cloudflare Workers中转。</div></div>
+<div class="faq-item"><div class="faq-q">Q: Cerebras支持哪些模型？</div><div class="faq-a">A: 公开端点目前支持GPT OSS 120B（生产级）和GLM 4.7（预览版）。更多大模型可通过Dedicated Endpoints使用。</div></div>
+<div class="faq-item"><div class="faq-q">Q: Cerebras和OpenAI API兼容吗？</div><div class="faq-a">A: 完全兼容。Cerebras遵循OpenAI API格式，只需修改base_url和API key即可无缝切换。</div></div>
+<div class="faq-item"><div class="faq-q">Q: RPM只有5会不会很慢？</div><div class="faq-a">A: RPM 5意味着每分钟最多5个请求，但Cerebras的单次响应速度极快（GPT OSS可达3000 tokens/s），5个请求的实际吞吐量远超其他平台。适合交互式对话和中等频率调用。</div></div>
+<div class="faq-item"><div class="faq-q">Q: 怎么监控我的token用量？</div><div class="faq-a">A: 登录cloud.cerebras.ai进入Cloud Console，在Usage &amp; Monitoring中可以实时查看用量。另外每个API响应都会返回rate limit header，可以用curl --verbose查看。</div></div>
+</div>
+
+<h2>🎯 总结</h2>
+
+<p>Cerebras是目前<strong>免费额度最高、速度最快</strong>的开源模型API之一。100万token/天的额度对个人开发者完全够用，而且GPT OSS 120B和GLM 4.7的能力都很能打。</p>
+
+<p>唯一的门槛是国内网络需要代理或中转，但考虑到白嫖的速度和额度，这点麻烦完全值得。</p>
+
+<p><strong>想白嫖世界最快的AI推理？去 <a href="https://cloud.cerebras.ai" class="inline-link" target="_blank">cloud.cerebras.ai</a> 注册，拿到API Key就能用，不用绑信用卡。</strong></p>
+
+</body>
+</html>
