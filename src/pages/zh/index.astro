@@ -84,7 +84,7 @@ const recentGuides = guides.filter((g: any) => !g.pinned).slice(0, 6);
           lang={lang}
         />
       ))}
-      {recentGuides.slice(0, 3).map((guide: any) => (
+      {recentGuides.slice(0, 8).map((guide: any) => (
         <GuideCard
           title={guide.title_zh}
           excerpt={guide.excerpt_zh}
