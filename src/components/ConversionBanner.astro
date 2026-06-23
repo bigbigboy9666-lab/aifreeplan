@@ -16,48 +16,11 @@ const { lang = 'zh' } = Astro.props;
         ? '订阅我们的邮件列表，每周精选最佳免费AI工具直送邮箱。'
         : 'Subscribe to our mailing list for curated free AI tool picks delivered weekly.'}
     </p>
-    <form id="subscribe-form" class="flex gap-2 max-w-md mx-auto">
-      <input
-        type="email"
-        name="email"
-        required
-        placeholder={lang === 'zh' ? '输入你的邮箱' : 'Enter your email'}
-        class="flex-1 px-4 py-2 rounded-lg border border-border text-sm focus:outline-none focus:ring-2 focus:ring-primary"
-      />
-      <button
-        type="submit"
-        class="px-5 py-2 bg-primary text-white text-sm font-medium rounded-lg hover:bg-primary-dark transition-colors"
-      >
-        {lang === 'zh' ? '订阅' : 'Subscribe'}
-      </button>
-    </form>
-    <p class="text-xs text-text-muted mt-2" id="subscribe-status"></p>
+    <a
+      href="mailto:submit@aifreeplan.com?subject=%E8%AE%A2%E9%98%85%E9%82%AE%E4%BB%B6%E5%88%97%E8%A1%A8&body=%E8%AF%B7%E5%B0%86%E6%88%91%E8%AE%A2%E9%98%85%E5%88%B0%EF%BC%9A%0A%0A%E9%82%AE%E7%AE%B1%EF%BC%9A"
+      class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white text-sm font-medium rounded-lg hover:bg-primary-dark transition-colors"
+    >
+      {lang === 'zh' ? '📧 订阅邮件列表' : '📧 Subscribe to Newsletter'}
+    </a>
   </div>
 </section>
-
-<script>
-  const form = document.getElementById('subscribe-form') as HTMLFormElement;
-  const status = document.getElementById('subscribe-status');
-
-  form?.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const email = (form.elements.namedItem('email') as HTMLInputElement).value;
-
-    try {
-      const res = await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
-      });
-
-      if (res.ok) {
-        if (status) status.textContent = '✅ ' + (document.documentElement.lang === 'zh' ? '订阅成功！' : 'Subscribed successfully!');
-        form.reset();
-      } else {
-        if (status) status.textContent = '❌ ' + (document.documentElement.lang === 'zh' ? '订阅失败，请重试。' : 'Subscription failed, please try again.');
-      }
-    } catch {
-      if (status) status.textContent = '❌ Network error';
-    }
-  });
-</script>
