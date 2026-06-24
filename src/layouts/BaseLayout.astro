@@ -124,10 +124,13 @@ const isCategoryPage = normalizedPath.match(/\/(zh|en)\/(llm|image|video|coding|
           🤖 AI Free Plan
         </a>
         <div class="flex items-center gap-4">
-          <a href={`/${lang}`} class="text-sm text-text-muted hover:text-text">
+          <a href={`/${lang}`} class="text-sm text-text hover:text-primary">
             {lang === 'zh' ? '首页' : 'Home'}
           </a>
-          <a href={`/${lang === 'zh' ? 'en' : 'zh'}`} class="text-sm text-text-muted hover:text-text">
+          <a href={`/${lang}/guides`} class="text-sm text-text hover:text-primary">
+            {lang === 'zh' ? '攻略' : 'Guides'}
+          </a>
+          <a href={`/${lang === 'zh' ? 'en' : 'zh'}`} class="text-sm text-text hover:text-primary">
             {lang === 'zh' ? 'English' : '中文'}
           </a>
         </div>

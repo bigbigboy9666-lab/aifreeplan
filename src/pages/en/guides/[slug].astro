@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+
+export function getStaticPaths() {
+  const data = JSON.parse(readFileSync(resolve(process.cwd(), 'public/data/guides.json'), 'utf-8'));
+  const guides = data.guides || [];
+  return guides.map((guide) => ({
+    params: { slug: guide.slug },
+    props: { guide },
+  }));
+}
+
+const { guide } = Astro.props;
+
+const lang = 'en';
+const title = `${guide.title_en} - AI Free Plan`;
+const description = guide.excerpt_en || guide.title_en;
+---
+
+<BaseLayout title={title} description={description} lang={lang}>
+  <div class="max-w-4xl mx-auto">
+    <a href="/en/guides" class="text-sm text-text-muted hover:text-primary mb-6 inline-block">&larr; Back to Guides</a>
+    
+    <h1 class="text-3xl font-bold mb-4">{guide.title_en}</h1>
+    <p class="text-text-muted mb-8">{guide.excerpt_en}</p>
+
+    <div class="prose prose-lg max-w-none">
+      <p class="text-text-muted">Guide content coming soon...</p>
+    </div>
+  </div>
+</BaseLayout>
