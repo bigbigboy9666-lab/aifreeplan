@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+
+export function getStaticPaths() {
+  const data = JSON.parse(readFileSync(resolve(process.cwd(), 'public/data/guides.json'), 'utf-8'));
+  const guides = data.guides || [];
+  const langs = ['zh', 'en'];
+  return langs.flatMap((lang) =>
+    guides.map((guide) => ({
+      params: { lang, slug: guide.slug },
+      props: { guide, lang },
+    }))
+  );
+}
+
+const { guide, lang } = Astro.props as { guide: any; lang: 'zh' | 'en' };
+const isZh = lang === 'zh';
+
+const title = isZh ? `${guide.title_zh} - AI Free Plan` : `${guide.title_en} - AI Free Plan`;
+const description = isZh ? (guide.excerpt_zh || guide.title_zh) : (guide.excerpt_en || guide.title_en);
+
+// Try to load static HTML content
+let bodyContent = '';
+const staticHtmlPath = resolve(process.cwd(), isZh ? 'zh/guides' : 'en/guides', `${guide.slug}.html`);
+try {
+  const staticHtml = readFileSync(staticHtmlPath, 'utf-8');
+  const mainStart = staticHtml.indexOf('<main class="article-container">');
+  const mainEnd = staticHtml.indexOf('</main>');
+  if (mainStart !== -1 && mainEnd !== -1) {
+    bodyContent = staticHtml.substring(mainStart + 31, mainEnd);
+  }
+} catch (e) {
+  // No static HTML yet
+}
+
+const siteUrl = 'https://aifreeplan.com';
+const canonicalUrl = `${siteUrl}/${lang}/guides/${guide.slug}/`;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalUrl={canonicalUrl}
+  lang={lang}
+>
+  <div class="max-w-4xl mx-auto">
+    <a href={`/${lang}/guides`} class="text-sm text-text-muted hover:text-primary mb-6 inline-block">&larr; {isZh ? '返回攻略列表' : 'Back to Guides'}</a>
+    
+    <h1 class="text-3xl font-bold mb-4">{isZh ? guide.title_zh : guide.title_en}</h1>
+    <p class="text-text-muted mb-8">{isZh ? guide.excerpt_zh : guide.excerpt_en}</p>
+
+    <div class="prose prose-lg max-w-none">
+      {bodyContent ? <div set:html={bodyContent} /> : <p class="text-text-muted">{isZh ? '攻略内容待补充...' : 'Guide content coming soon...'}</p>}
+    </div>
+  </div>
+</BaseLayout>

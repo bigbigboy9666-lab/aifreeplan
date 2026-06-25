@@ -21,13 +21,14 @@ const siteUrl = 'https://aifreeplan.com';
 const currentPath = Astro.url.pathname;
 // Ensure trailing slash for consistency
 const normalizedPath = currentPath.endsWith('/') ? currentPath : currentPath + '/';
-const zhUrl = `${siteUrl}${normalizedPath.replace(/^\/en/, '/zh')}`;
-const enUrl = `${siteUrl}${normalizedPath.replace(/^\/zh/, '/en')}`;
-const canonical = canonicalUrl || `${siteUrl}${normalizedPath}`;
+// Strip lang prefix for cross-language matching
+const pathWithoutLang = normalizedPath.replace(/^\/(zh|en)\//, '/').replace(/^\/$/, '/');
+const zhUrl = `${siteUrl}/zh/${pathWithoutLang}/`;
+const enUrl = `${siteUrl}/en/${pathWithoutLang}/`;
 // Determine if this is homepage
 const isHomepage = normalizedPath === '/zh/' || normalizedPath === '/en/';
 const isToolPage = normalizedPath.includes('/tools/');
-const isCategoryPage = normalizedPath.match(/\/(zh|en)\/(llm|image|video|coding|audio|chat|agent|productivity|ai-assistant)\/?$/);
+const isCategoryPage = normalizedPath.match(/\(zh|en\)\(llm|image|video|coding|audio|chat|agent|productivity|ai-assistant\)\/?$/);
 ---
 
 <!doctype html>
@@ -37,7 +38,7 @@ const isCategoryPage = normalizedPath.match(/\/(zh|en)\/(llm|image|video|coding|
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href={canonical} />
+    <link rel="canonical" href={canonicalUrl || `${siteUrl}${normalizedPath}`} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <!-- hreflang tags -->
@@ -49,7 +50,7 @@ const isCategoryPage = normalizedPath.match(/\/(zh|en)\/(llm|image|video|coding|
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={canonical} />
+    <meta property="og:url" content={canonicalUrl || `${siteUrl}${normalizedPath}`} />
     <meta property="og:site_name" content="AI Free Plan" />
     <meta property="og:locale" content={lang === 'zh' ? 'zh_CN' : 'en_US'} />
     <meta property="og:image" content="https://aifreeplan.com/og-image.png" />
@@ -129,6 +130,9 @@ const isCategoryPage = normalizedPath.match(/\/(zh|en)\/(llm|image|video|coding|
           </a>
           <a href={`/${lang}/guides`} class="text-sm text-text hover:text-primary">
             {lang === 'zh' ? '攻略' : 'Guides'}
+          </a>
+          <a href={`/${lang}/tools`} class="text-sm text-text hover:text-primary">
+            {lang === 'zh' ? '工具' : 'Tools'}
           </a>
           <a href={`/${lang === 'zh' ? 'en' : 'zh'}`} class="text-sm text-text hover:text-primary">
             {lang === 'zh' ? 'English' : '中文'}

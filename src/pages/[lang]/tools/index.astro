@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ToolCard from '../../../components/ToolCard.astro';
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+
+export function getStaticPaths() {
+  const langs = ['zh', 'en'];
+  return langs.map((lang) => ({
+    params: { lang },
+    props: { lang },
+  }));
+}
+
+const { lang } = Astro.props as { lang: 'zh' | 'en' };
+const isZh = lang === 'zh';
+
+const toolsData = JSON.parse(readFileSync(resolve(process.cwd(), 'public/data/tools.json'), 'utf-8'));
+const tools = (toolsData.tools || toolsData).sort((a: any, b: any) => (b.rating || 0) - (a.rating || 0));
+
+const categoriesData = JSON.parse(readFileSync(resolve(process.cwd(), 'public/data/categories.json'), 'utf-8'));
+const categories = categoriesData.categories || [];
+
+const title = isZh
+  ? '全部免费AI工具 - AI Free Plan'
+  : 'All Free AI Tools - AI Free Plan';
+const description = isZh
+  ? '汇总91款AI工具的免费额度、使用限制和白嫖攻略，帮你省钱用AI。'
+  : 'Compare free credits, usage limits, and trial details across 91 AI tools.';
+
+const canonicalUrl = `https://aifreeplan.com/${lang}/tools/`;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalUrl={canonicalUrl}
+  lang={lang}
+>
+  <div class="max-w-6xl mx-auto">
+    <h1 class="text-3xl font-bold mb-2">{isZh ? '全部免费AI工具' : 'All Free AI Tools'}</h1>
+    <p class="text-text-muted mb-8">{isZh ? '按评分排序，共收录91款AI工具' : 'Sorted by rating, 91 AI tools listed'}</p>
+
+    <!-- Category Filter -->
+    <div class="flex flex-wrap gap-2 mb-8">
+      <button
+        onclick="filterTools('all')"
+        class="category-btn px-4 py-2 rounded-full text-sm font-medium bg-primary text-white border border-primary"
+        data-category="all"
+      >
+        {isZh ? '全部' : 'All'} ({tools.length})
+      </button>
+      {categories.map((cat: any) => (
+        <button
+          onclick="filterTools('${cat.id}')"
+          class="category-btn px-4 py-2 rounded-full text-sm font-medium bg-white text-text-muted border border-border hover:border-primary hover:text-primary"
+          data-category="${cat.id}"
+        >
+          {cat.icon} {isZh ? cat.nameZh : cat.nameEn} ({cat.count})
+        </button>
+      ))}
+    </div>
+
+    <!-- Tools Grid -->
+    <div id="tools-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {tools.map((tool: any) => (
+        <ToolCard tool={tool} lang={lang} />
+      ))}
+    </div>
+  </div>
+
+  <script>
+    function filterTools(category) {
+      const cards = document.querySelectorAll('#tools-grid > *');
+      const buttons = document.querySelectorAll('.category-btn');
+      
+      // Update button styles
+      buttons.forEach(btn => {
+        if (btn.dataset.category === category) {
+          btn.classList.remove('bg-white', 'text-text-muted', 'border-border');
+          btn.classList.add('bg-primary', 'text-white', 'border-primary');
+        } else {
+          btn.classList.remove('bg-primary', 'text-white', 'border-primary');
+          btn.classList.add('bg-white', 'text-text-muted', 'border-border');
+        }
+      });
+
+      // Filter cards
+      cards.forEach(card => {
+        if (category === 'all') {
+          card.style.display = '';
+        } else {
+          const toolId = card.querySelector('a')?.getAttribute('href');
+          if (toolId && toolId.includes(category)) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        }
+      });
+    }
+  </script>
+</BaseLayout>
