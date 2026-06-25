@@ -17,6 +17,21 @@ const { guide } = Astro.props;
 const lang = 'en';
 const title = `${guide.title_en} - AI Free Plan`;
 const description = guide.excerpt_en || guide.title_en;
+
+// Try to load static HTML content if it exists
+let bodyContent = '';
+const staticHtmlPath = resolve(process.cwd(), 'en/guides', `${guide.slug}.html`);
+try {
+  const staticHtml = readFileSync(staticHtmlPath, 'utf-8');
+  // Extract the <main> content between <main class="article-container"> and </main>
+  const mainStart = staticHtml.indexOf('<main class="article-container">');
+  const mainEnd = staticHtml.indexOf('</main>');
+  if (mainStart !== -1 && mainEnd !== -1) {
+    bodyContent = staticHtml.substring(mainStart + 31, mainEnd);
+  }
+} catch (e) {
+  // No static HTML yet, will show placeholder
+}
 ---
 
 <BaseLayout title={title} description={description} lang={lang}>
@@ -27,7 +42,7 @@ const description = guide.excerpt_en || guide.title_en;
     <p class="text-text-muted mb-8">{guide.excerpt_en}</p>
 
     <div class="prose prose-lg max-w-none">
-      <p class="text-text-muted">Guide content coming soon...</p>
+      {bodyContent ? <div set:html={bodyContent} /> : <p class="text-text-muted">Guide content coming soon...</p>}
     </div>
   </div>
 </BaseLayout>

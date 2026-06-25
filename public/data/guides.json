@@ -70,6 +70,13 @@
       "title_en": "Cerebras Free API Guide: 1 Million Tokens/Day, GPT OSS & GLM 4.7",
       "excerpt_zh": "Cerebras免费开放API，每天100万token，支持GPT OSS 120B和GLM 4.7。速度比OpenAI快20倍，注册只需邮箱，无需信用卡。",
       "excerpt_en": "Cerebras offers a completely free API with 1M tokens/day. Access GPT OSS 120B and GLM 4.7 at 20x OpenAI speed. Email signup, no credit card."
+    },
+    {
+      "slug": "qwen3-6-free-unlimited-2026",
+      "title_zh": "Qwen3.6免费无限量使用：阿里通义千问最强模型，6月底前白嫖攻略",
+      "title_en": "Qwen3.6 Free Unlimited: Alibaba's Strongest Model, Complete Free Guide Until End of June 2026",
+      "excerpt_zh": "通义千问推出Qwen3.6免费无限量使用活动，通过通义千问网页版和DashScope API均可免费使用。支持文本、代码、推理等多场景，6月底截止。",
+      "excerpt_en": "Alibaba's Tongyi Qianwen offers free unlimited access to Qwen3.6 through web interface and DashScope API. Supports text, code, reasoning and more. Promotion ends late June 2026."
     }
   ]
 }
