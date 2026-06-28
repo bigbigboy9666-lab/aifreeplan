@@ -2,7 +2,6 @@
 /en/guides /en/guides/index.html 301
 /zh/tools /zh/tools/index.html 301
 /en/tools /en/tools/index.html 301
-/ /zh/ 302
 /zh/video/kling /zh/tools/kling 301
 /en/video/kling /en/tools/kling 301
 /zh/video/hailuo /zh/tools/hailuo 301
@@ -149,3 +148,4 @@
 /en/agent/coze /en/tools/coze 301
 /zh/agent/dify /zh/tools/dify 301
 /en/agent/dify /en/tools/dify 301
+/ /zh/ 302
