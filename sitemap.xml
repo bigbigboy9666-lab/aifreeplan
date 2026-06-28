@@ -20511,12 +20511,12 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aifreeplan.com/en/guides/cerebras-free-api-guide/</loc>
+    <loc>https://aifreeplan.com/en/guides/deepsider-antigravity-free-gemini/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aifreeplan.com/en/guides/deepsider-antigravity-free-gemini/</loc>
+    <loc>https://aifreeplan.com/en/guides/free-ai-llm-api-platforms-comparison/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -20546,12 +20546,12 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aifreeplan.com/en/guides/qoderwork-free-pro-2026/</loc>
+    <loc>https://aifreeplan.com/en/guides/notebooklm-free-guide-2026/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aifreeplan.com/en/guides/qwen3-6-free-unlimited-2026/</loc>
+    <loc>https://aifreeplan.com/en/guides/qoderwork-free-pro-2026/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -20782,6 +20782,11 @@
   </url>
   <url>
     <loc>https://aifreeplan.com/en/tools/ideogram/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/tools/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -41556,12 +41561,12 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aifreeplan.com/zh/guides/cerebras-free-api-guide/</loc>
+    <loc>https://aifreeplan.com/zh/guides/deepsider-antigravity-free-gemini/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aifreeplan.com/zh/guides/deepsider-antigravity-free-gemini/</loc>
+    <loc>https://aifreeplan.com/zh/guides/free-ai-llm-api-platforms-comparison/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -41591,12 +41596,12 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aifreeplan.com/zh/guides/qoderwork-free-pro-2026/</loc>
+    <loc>https://aifreeplan.com/zh/guides/notebooklm-free-guide-2026/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aifreeplan.com/zh/guides/qwen3-6-free-unlimited-2026/</loc>
+    <loc>https://aifreeplan.com/zh/guides/qoderwork-free-pro-2026/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -41827,6 +41832,11 @@
   </url>
   <url>
     <loc>https://aifreeplan.com/zh/tools/ideogram/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

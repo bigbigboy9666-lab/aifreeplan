@@ -1,6 +1,14 @@
 {
   "guides": [
     {
+      "slug": "free-ai-llm-api-platforms-comparison",
+      "title_zh": "免费AI大模型API平台对比：2026年最强白嫖指南",
+      "title_en": "Free AI LLM API Platforms Comparison: 2026 Best Free Tier Guide",
+      "excerpt_zh": "深度横评20+个AI大模型平台的免费额度、RPM限制、TPM上限，帮你找到最适合的免费API。",
+      "excerpt_en": "In-depth review of 20+ AI LLM platforms: free credits, RPM limits, TPM caps.",
+      "pinned": false
+    },
+    {
       "slug": "freebuff-free-coding-agent",
       "title_zh": "Freebuff Free Coding Agent",
       "title_en": "Freebuff Free Coding Agent",
@@ -65,18 +73,11 @@
       "excerpt_en": "Indefinitely free API service since June 1, 2026, no subscription or quota limits"
     },
     {
-      "slug": "cerebras-free-api-guide",
-      "title_zh": "Cerebras免费API攻略：100万token/天，GPT OSS/GLM 4.7随便用",
-      "title_en": "Cerebras Free API Guide: 1 Million Tokens/Day, GPT OSS & GLM 4.7",
-      "excerpt_zh": "Cerebras免费开放API，每天100万token，支持GPT OSS 120B和GLM 4.7。速度比OpenAI快20倍，注册只需邮箱，无需信用卡。",
-      "excerpt_en": "Cerebras offers a completely free API with 1M tokens/day. Access GPT OSS 120B and GLM 4.7 at 20x OpenAI speed. Email signup, no credit card."
-    },
-    {
-      "slug": "qwen3-6-free-unlimited-2026",
-      "title_zh": "Qwen3.6免费无限量使用：阿里通义千问最强模型，6月底前白嫖攻略",
-      "title_en": "Qwen3.6 Free Unlimited: Alibaba's Strongest Model, Complete Free Guide Until End of June 2026",
-      "excerpt_zh": "通义千问推出Qwen3.6免费无限量使用活动，通过通义千问网页版和DashScope API均可免费使用。支持文本、代码、推理等多场景，6月底截止。",
-      "excerpt_en": "Alibaba's Tongyi Qianwen offers free unlimited access to Qwen3.6 through web interface and DashScope API. Supports text, code, reasoning and more. Promotion ends late June 2026."
+      "slug": "notebooklm-free-guide-2026",
+      "title_zh": "NotebookLM完全免费攻略：Google出品的AI研究神器，50个来源+播客生成+视频解说全免费",
+      "title_en": "NotebookLM Complete Free Guide: Google's AI Research Tool with 50 Sources, Podcast & Video Generation — All Free",
+      "excerpt_zh": "Google出品的AI研究工具NotebookLM，完全免费使用。支持上传50个来源文档，自动生成播客式对话、视频解说和研究摘要。2026年仍是唯一不收费的主流AI研究工具。",
+      "excerpt_en": "Google's AI research tool NotebookLM, completely free. Upload up to 50 source documents, auto-generate podcast-style conversations, video explanations and research summaries. In 2026, still the only mainstream AI research tool that remains free."
     }
   ]
 }
