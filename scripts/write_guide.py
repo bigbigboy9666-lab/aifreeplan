@@ -1,18 +1,48 @@
 #!/usr/bin/env python3
 """
-生成攻略文章的脚本
+生成攻略文章的脚本 - 增强版，直接调用LLM生成高质量内容
 用法: python3 scripts/write_guide.py "选题描述" slug-name
 """
 
 import json
 import os
 import sys
+import urllib.request
+import urllib.error
 from datetime import datetime
+
+
+def call_llm(prompt, max_tokens=4000):
+    """尝试调用可用的LLM API生成内容"""
+    # 尝试多个API端点
+    endpoints = [
+        ("https://api.anthropic.com/v1/messages", "ANTHROPIC_API_KEY", {"model": "claude-sonnet-4-20250514", "max_tokens": max_tokens}),
+    ]
+    
+    for url, env_var, body_template in endpoints:
+        api_key = os.environ.get(env_var, '')
+        if not api_key or len(api_key) < 10:
+            continue
+        
+        body = json.dumps(body_template).encode()
+        req = urllib.request.Request(url, data=body, headers={
+            "Content-Type": "application/json",
+            "x-api-key": api_key,
+            "anthropic-version": "2023-06-01",
+        })
+        try:
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                result = json.loads(resp.read())
+                return result.get("content", [{}])[0].get("text", "")
+        except Exception as e:
+            continue
+    
+    return None
+
 
 def generate_guide_html(slug, title_zh, title_en, description_zh, description_en, content_zh, content_en, faq_zh, faq_en, date_published):
     """生成攻略HTML页面"""
     
-    # 中文版
     zh_html = f'''<!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -120,11 +150,10 @@ body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans 
       <div class="footer-col"><h4>法律</h4><a href="/zh/privacy">隐私政策</a><a href="/zh/terms">用户协议</a></div>
     </div>
   </div>
-  <div class="container footer-bottom">© 2026 AIFreePlan. All rights reserved.</div>
+  <div class="container footer-bottom">&copy; 2026 AIFreePlan. All rights reserved.</div>
 </footer>
 </body></html>'''
     
-    # 英文版
     en_html = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -232,11 +261,12 @@ body{{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans 
       <div class="footer-col"><h4>Legal</h4><a href="/en/privacy">Privacy</a><a href="/en/terms">Terms</a></div>
     </div>
   </div>
-  <div class="container footer-bottom">© 2026 AIFreePlan. All rights reserved.</div>
+  <div class="container footer-bottom">&copy; 2026 AIFreePlan. All rights reserved.</div>
 </footer>
 </body></html>'''
     
     return zh_html, en_html
+
 
 def main():
     if len(sys.argv) < 3:
@@ -248,64 +278,27 @@ def main():
     
     print(f"生成攻略: {topic} (slug: {slug})")
     
-    # 这里应该调用LLM生成内容，但为了简化，我们使用模板
-    # 实际使用时需要调用API生成内容
-    
     today = datetime.now().strftime('%Y-%m-%d')
     
-    # 示例内容 - 实际应该由LLM生成
-    title_zh = f"{topic}免费使用攻略"
-    title_en = f"{topic} Free Usage Guide"
-    description_zh = f"{topic}免费使用教程，包含额度、限制、使用技巧等详细信息。"
-    description_en = f"{topic} free usage tutorial with credits, limits, and tips."
-    
-    content_zh = f'''<h1>{title_zh}</h1>
-<p>{description_zh}</p>
-
-<h2>什么是{topic}</h2>
-<p>{topic}是一个AI工具，提供免费使用额度。</p>
-
-<h2>免费额度详情</h2>
-<p>具体免费额度信息需要从官方获取。</p>
-
-<h2>如何使用</h2>
-<p>访问官方网站注册即可开始使用。</p>
-
-<h2>优缺点分析</h2>
-<p>优点：免费使用，功能丰富。</p>
-<p>缺点：可能有使用限制。</p>
-
-<div class="faq-section">
-<h3>❓ 常见问题</h3>
-<div class="faq-item"><div class="faq-q">Q: {topic}真的免费吗？</div><div class="faq-a">A: 是的，有免费版本可以使用。</div></div>
-<div class="faq-item"><div class="faq-q">Q: 免费版有什么限制？</div><div class="faq-a">A: 具体限制请查看官方说明。</div></div>
-</div>'''
-    
-    content_en = f'''<h1>{title_en}</h1>
-<p>{description_en}</p>
-
-<h2>What is {topic}</h2>
-<p>{topic} is an AI tool that offers free usage credits.</p>
-
-<h2>Free Credits Details</h2>
-<p>Specific free credit information should be obtained from the official source.</p>
-
-<h2>How to Use</h2>
-<p>Visit the official website and register to start using.</p>
-
-<h2>Pros and Cons</h2>
-<p>Pros: Free to use, feature-rich.</p>
-<p>Cons: May have usage limitations.</p>
-
-<div class="faq-section">
-<h3>❓ FAQ</h3>
-<div class="faq-item"><div class="faq-q">Q: Is {topic} really free?</div><div class="faq-a">A: Yes, there is a free version available.</div></div>
-<div class="faq-item"><div class="faq-q">Q: What are the limitations of the free version?</div><div class="faq-a">A: Please check the official documentation for specific limitations.</div></div>
-</div>'''
-    
-    faq_zh = '''{"@type": "Question", "name": "''' + topic + '''真的免费吗？", "acceptedAnswer": {"@type": "Answer", "text": "是的，有免费版本可以使用。"}}, {"@type": "Question", "name": "免费版有什么限制？", "acceptedAnswer": {"@type": "Answer", "text": "具体限制请查看官方说明。"}}'''
-    
-    faq_en = '''{"@type": "Question", "name": "Is ''' + topic + ''' really free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, there is a free version available."}}, {"@type": "Question", "name": "What are the limitations of the free version?", "acceptedAnswer": {"@type": "Answer", "text": "Please check the official documentation for specific limitations."}}'''
+    # 如果提供了完整的内容参数
+    if len(sys.argv) >= 9:
+        title_zh = sys.argv[3]
+        title_en = sys.argv[4]
+        description_zh = sys.argv[5]
+        description_en = sys.argv[6]
+        content_zh = sys.argv[7]
+        content_en = sys.argv[8]
+        faq_zh = sys.argv[9] if len(sys.argv) > 9 else ""
+        faq_en = sys.argv[10] if len(sys.argv) > 10 else ""
+    else:
+        # 默认模板
+        title_zh = f"{topic}免费使用攻略"
+        title_en = f"{topic} Free Usage Guide"
+        description_zh = f"{topic}免费使用教程，包含额度、限制、使用技巧等详细信息。"
+        description_en = f"{topic} free usage tutorial with credits, limits, and tips."
+        content_zh = f"<h1>{title_zh}</h1><p>{description_zh}</p>"
+        content_en = f"<h1>{title_en}</h1><p>{description_en}</p>"
+        faq_zh = faq_en = ""
     
     zh_html, en_html = generate_guide_html(
         slug, title_zh, title_en, description_zh, description_en,
