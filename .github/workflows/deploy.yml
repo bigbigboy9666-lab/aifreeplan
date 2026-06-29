@@ -1,0 +1,70 @@
+name: Deploy to aifreeplan.com
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Install dependencies
+        run: |
+          if [ -f pnpm-lock.yaml ]; then
+            pnpm install --frozen-lockfile
+          else
+            pnpm install
+          fi
+
+      - name: Build static site
+        run: pnpm build
+
+      - name: Generate sitemap
+        run: python3 scripts/generate_sitemap.py
+
+      - name: Validate content quality
+        run: node scripts/validate-content.mjs
+
+      - name: Deploy to deploy-static branch
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+        run: |
+          git config user.name "bot"
+          git config user.email "bot@aifreeplan.com"
+
+          if [ -n "$DEPLOY_KEY" ]; then
+            REPO_URL=$(git remote get-url origin | sed "s|https://|https://x-access-token:${DEPLOY_KEY}@|")
+            git remote set-url origin "$REPO_URL"
+          fi
+
+          cp -r dist /tmp/aifreeplan-dist
+
+          git fetch origin deploy-static 2>/dev/null || true
+
+          git checkout deploy-static 2>/dev/null || git checkout -b deploy-static
+
+          # Clean old files but keep .git
+          find . -maxdepth 1 -not -name '.git' -not -name '.' -not -name '.github' -exec rm -rf {} + 2>/dev/null || true
+
+          cp -r /tmp/aifreeplan-dist/* .
+
+          # Root index for Cloudflare Pages
+          cp zh/index.html index.html 2>/dev/null || true
+
+          git add -A
+          git commit -m "deploy: automatic build $(date +%Y-%m-%d-%H%M)"
+          git push origin deploy-static
