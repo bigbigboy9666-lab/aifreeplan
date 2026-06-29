@@ -1,7 +1,8 @@
 {
-  "name": "aifreeplan-v2",
+  "name": "aifreeplan",
   "type": "module",
   "version": "2.0.0",
+  "private": true,
   "engines": {
     "node": ">=22.12.0"
   },
@@ -11,7 +12,9 @@
     "preview": "astro preview",
     "astro": "astro",
     "migrate": "node scripts/migrate-data.mjs",
-    "scraper": "node scripts/cron-scraper.mjs"
+    "scraper": "node scripts/cron-scraper.mjs",
+    "validate": "node scripts/validate-content.mjs",
+    "sitemap": "python3 scripts/generate_sitemap.py"
   },
   "dependencies": {
     "astro": "^6.4.7",
