@@ -20506,6 +20506,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/en/guides/apfel-macos-free-on-device-ai-2026/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/en/guides/atomcode-codingplan-free/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -41552,6 +41557,11 @@
   </url>
   <url>
     <loc>https://aifreeplan.com/zh/guides/agnes-ai-free-api-2026/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/guides/apfel-macos-free-on-device-ai-2026/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -1,6 +1,13 @@
 {
   "guides": [
     {
+      "slug": "apfel-macos-free-on-device-ai-2026",
+      "title_zh": "Apfel：macOS Tahoe内置免费AI工具完全攻略 - 无需API Key，零成本本地运行",
+      "title_en": "Apfel: Complete Guide to macOS Tahoe Built-in Free AI - Zero Cost On-Device",
+      "excerpt_zh": "Apfel利用macOS Tahoe内置的3B参数模型，提供完全免费、无需联网、保护隐私的本地AI能力。一行brew安装，零配置，支持CLI/OpenAI兼容服务器/MCP协议。",
+      "excerpt_en": "Apfel leverages macOS Tahoes built-in 3B parameter model to provide completely free, offline, privacy-preserving local AI. One brew install, zero config, supports CLI/OpenAI-compatible server/MCP protocol."
+    },
+    {
       "slug": "free-ai-llm-api-platforms-comparison",
       "title_zh": "免费AI大模型API平台对比：2026年最强白嫖指南",
       "title_en": "Free AI LLM API Platforms Comparison: 2026 Best Free Tier Guide",
