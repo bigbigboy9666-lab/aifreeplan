@@ -1,6 +1,13 @@
 {
   "guides": [
     {
+      "slug": "monkeyCode-free-ai-coding-platform-2026",
+      "title_zh": "MonkeyCode：奇安信出品的免费开源AI开发平台，云端编程零门槛",
+      "title_en": "MonkeyCode: Free Open-Source AI Coding Platform by Chaitin, Zero-T门槛 Cloud Development",
+      "excerpt_zh": "MonkeyCode 是奇安信开源的企业级 AI 开发平台，内置云端开发环境，支持多种顶尖大模型。每天3千万免费额度，无需安装、无需部署，在浏览器中完成编码、测试、运行全流程。",
+      "excerpt_en": "MonkeyCode is an open-source enterprise AI development platform by Chaitin, featuring built-in cloud development environments and support for top-tier LLMs. 30 million free daily credits, no installation or deployment needed."
+    },
+    {
       "slug": "apfel-macos-free-on-device-ai-2026",
       "title_zh": "Apfel：macOS Tahoe内置免费AI工具完全攻略 - 无需API Key，零成本本地运行",
       "title_en": "Apfel: Complete Guide to macOS Tahoe Built-in Free AI - Zero Cost On-Device",
