@@ -94,6 +94,13 @@
       "excerpt_en": "Google's AI research tool NotebookLM, completely free. Upload up to 50 source documents, auto-generate podcast-style conversations, video explanations and research summaries. In 2026, still the only mainstream AI research tool that remains free."
     },
     {
+      "slug": "mistral-ai-studio-free-api-guide",
+      "title_zh": "Mistral AI Studio 免费 API 额度与 OCR4 多语言文档识别完全攻略",
+      "title_en": "Mistral AI Studio Free API Credits & OCR4 Multilingual Document Recognition Guide",
+      "excerpt_zh": "Mistral AI 推出全新 OCR4 多语言文档识别模型（支持 170 种语言），同时开放 Studio 免费 API 额度。本文详细解读免费额度详情、使用限制和注册方法。",
+      "excerpt_en": "Mistral AI launches OCR4 multilingual document recognition model (supporting 170 languages) and opens free Studio API credits. Detailed guide on free quotas, limitations, and registration."
+    },
+    {
       "slug": "nano-banana-2-lite-free-image-generation",
       "title_zh": "Nano Banana 2 Lite 完全免费：Google DeepMind 最快 AI 图片生成工具",
       "title_en": "Nano Banana 2 Lite Free: Google DeepMind's Fastest AI Image Generator",
