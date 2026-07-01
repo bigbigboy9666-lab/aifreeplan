@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mistral AI Studio Free API Credits & OCR4 Multilingual Document Recognition Guide | AIFreePlan</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mistral AI Studio Free API Credits & OCR4 Multilingual Document Recognition Guide | AIFreePlan">
+<meta property="og:description" content="Mistral AI launches OCR4 multilingual document recognition model (supporting 170 languages) and opens free Studio API credits. Detailed guide on free quotas, limitations, and registration.">
+<meta property="og:url" content="https://aifreeplan.com/en/guides/mistral-ai-studio-free-api-guide">
+<meta property="og:site_name" content="AIFreePlan">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mistral AI Studio Free API Credits & OCR4 Multilingual Document Recognition Guide | AIFreePlan">
+<meta name="twitter:description" content="Mistral AI launches OCR4 multilingual document recognition model (supporting 170 languages) and opens free Studio API credits. Detailed guide on free quotas, limitations, and registration.">
+<meta name="description" content="Mistral AI launches OCR4 multilingual document recognition model (supporting 170 languages) and opens free Studio API credits. Detailed guide on free quotas, limitations, and registration.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<link rel="canonical" href="https://aifreeplan.com/en/guides/mistral-ai-studio-free-api-guide">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/mistral-ai-studio-free-api-guide">
+<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/mistral-ai-studio-free-api-guide">
+<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/mistral-ai-studio-free-api-guide">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;--text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;--accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);--green:#059669;--green-light:rgba(5,150,105,.1);--shadow:0 4px 20px rgba(0,0,0,.05);--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover)}
+.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
+.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
+.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
+.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
+.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
+.article-container ul,.article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
+.article-container li{margin-bottom:8px;line-height:1.6}
+.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
+.article-container a{color:var(--accent);text-decoration:underline}
+.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-container th,.article-container td{padding:12px;border:1px solid var(--border);text-align:left}
+.article-container th{background:var(--accent-light);font-weight:600}
+.breadcrumb{font-size:14px;color:var(--text-muted);margin-bottom:24px}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb-sep{margin:0 8px}
+.faq-section{background:var(--bg-white);border-radius:var(--radius);padding:32px;margin-top:40px;box-shadow:var(--shadow)}
+.faq-section h3{margin-top:0;color:var(--text)}
+.faq-item{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border-light)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-weight:700;color:var(--text);margin-bottom:8px}
+.faq-a{color:var(--text-secondary);line-height:1.7}
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff;margin-top:60px}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6)}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col h4{font-size:14px;font-weight:700;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+@media(max-width:768px){.article-container{padding:16px 16px 48px;max-width:100%}.article-container h1{font-size:24px}.article-container h2{font-size:20px}.container{padding:0 16px}.nav{display:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Mistral AI Studio Free API Credits & OCR4 Multilingual Document Recognition Guide","description":"Mistral AI launches OCR4 multilingual document recognition model (supporting 170 languages) and opens free Studio API credits. Detailed guide on free quotas, limitations, and registration.","url":"https://aifreeplan.com/en/guides/mistral-ai-studio-free-api-guide","datePublished":"2026-06-27","dateModified":"2026-06-27","author":{"@type":"Organization","name":"AIFreePlan"},"publisher":{"@type":"Organization","name":"AIFreePlan","url":"https://aifreeplan.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aifreeplan.com/en/guides/mistral-ai-studio-free-api-guide"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aifreeplan.com/en"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://aifreeplan.com/en/guides"},{"@type":"ListItem","position":3,"name":"Mistral AI Studio Free API Credits & OCR4 Multilingual Document Recognition Guide","item":"https://aifreeplan.com/en/guides/mistral-ai-studio-free-api-guide"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is Mistral AI Studio free API really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Mistral AI offers a Free mode that provides API access without requiring a credit card, making it ideal for developers and researchers doing prototyping and testing."},{"@type":"Question","name":"What improvements does OCR4 have over OCR3?","acceptedAnswer":{"@type":"Answer","text":"OCR4 supports 170 languages across 10 language families and scored 93.07 on OmniDocBench, surpassing GPT-5.5 Pro and Gemini-3.1 Pro in user experience ratings. Additionally, OCR4 introduces paragraph-level bounding box extraction and structural block labels."}}]}
+</script>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="/en" class="logo">AI<span class="accent">FreePlan</span></a>
+    <nav class="nav">
+      <a href="/en/all">All Tools</a>
+      <a href="/en/guides">Guides</a>
+      <a href="/en/privacy">Privacy</a>
+      <a href="/zh/guides/mistral-ai-studio-free-api-guide" class="btn btn-primary">中文</a>
+    </nav>
+  </div>
+</header>
+<main class="article-container">
+<nav class="breadcrumb"><a href="/en">Home</a> <span class="breadcrumb-sep">›</span> <a href="/en/guides">Guides</a> <span class="breadcrumb-sep">›</span> <span>Mistral AI Studio Free API Credits & OCR4 Multilingual Document Recognition Guide</span></nav>
+
+<h1>Mistral AI Studio Free API Credits & OCR4 Multilingual Document Recognition Guide</h1>
+
+<p>French AI company Mistral AI has recently rolled out several major updates: a brand new <strong>OCR4 document recognition model</strong> and <strong>free Studio API credits</strong>. Whether you are a developer or a regular user, there is something here for everyone. This guide covers everything you need to know about Mistral AI's latest free quota policies, OCR4 capabilities, and step-by-step usage instructions.</p>
+
+<h2>1. What is Mistral AI?</h2>
+
+<p>Mistral AI is a French artificial intelligence company founded in 2023 and headquartered in Paris. The company is known for developing open-source and commercial large language models. Their main products include:</p>
+
+<ul>
+<li><strong>Mistral Large 3</strong>: The latest flagship model using a hybrid MoE (Mixture of Experts) architecture with 67.5 billion total parameters (4.1 billion active parameters), supporting multimodal tasks</li>
+<li><strong>Mistral Small 3</strong>: An efficient small model designed for cost-sensitive production environments</li>
+<li><strong>Codestral</strong>: A model specifically optimized for code generation, supporting low-latency, high-frequency coding tasks</li>
+<li><strong>Ministral series</strong>: An efficient model family designed for edge device deployment, including different specifications such as 3B, 8B, and 14B</li>
+</ul>
+
+<p>Mistral AI's core philosophy is to build frontier-class models while maintaining an open-source spirit. Their models perform excellently in numerous benchmark tests, particularly excelling in multilingual support and code generation.</p>
+
+<h2>2. OCR4 Multilingual Document Recognition Model Deep Dive</h2>
+
+<p>OCR4 is Mistral AI's latest optical character recognition (OCR) model and serves as the core component of their Document AI technology stack. Here are the key figures and features:</p>
+
+<h3>Core Capabilities</h3>
+
+<table>
+<tr><th>Metric</th><th>Value</th></tr>
+<tr><td>Languages supported</td><td>170 (across 10 language families)</td></tr>
+<tr><td>OmniDocBench benchmark score</td><td>93.07</td></tr>
+<tr><td>New features</td><td>Paragraph-level bounding box extraction, structural block labels</td></tr>
+<tr><td>User experience rating</td><td>Surpasses GPT-5.5 Pro and Gemini-3.1 Pro</td></tr>
+</table>
+
+<h3>Key Differences Between OCR4 and OCR3</h3>
+
+<p>OCR4 is the new generation model, while OCR3 is retained for existing integrations and production workloads. The main differences include:</p>
+
+<ul>
+<li><strong>Paragraph-level bounding boxes</strong>: OCR4 can precisely extract coordinate ranges for each text paragraph, whereas OCR3 only provides character-level positioning</li>
+<li><strong>Structural block labels</strong>: OCR4 automatically identifies document structures such as headings, body text, tables, and lists, assigning semantic labels accordingly</li>
+<li><strong>Multilingual support</strong>: OCR4 supports 170 languages, while OCR3 primarily focuses on English and a few major languages</li>
+<li><strong>Complex layout handling</strong>: OCR4 performs significantly better with multi-column layouts, mixed text-and-image documents, scanned documents, and other complex scenarios</li>
+</ul>
+
+<h3>Application Scenarios</h3>
+
+<p>OCR4 is particularly well-suited for the following use cases:</p>
+
+<ol>
+<li><strong>Contract and legal document processing</strong>: Automatically extract contract clauses, signature areas, and key dates</li>
+<li><strong>Financial report analysis</strong>: Extract tabular data and numerical values from scanned financial statements</li>
+<li><strong>Multilingual document translation</strong>: Use OCR4 to extract text first, then feed it into a translation model</li>
+<li><strong>Knowledge graph construction</strong>: Extract entities and relationships from large volumes of unstructured documents</li>
+<li><strong>Built-in document understanding in Le Chat</strong>: When users upload PDFs, Excel files, or Word documents to chat.mistral.ai, the system automatically applies OCR technology to extract content</li>
+</ol>
+
+<h2>3. Mistral AI Studio Free API Credits Explained</h2>
+
+<p>Mistral AI offers multiple API access plans for developers, with the <strong>Free mode</strong> being the completely free entry point:</p>
+
+<h3>Free Mode</h3>
+
+<table>
+<tr><th>Feature</th><th>Details</th></tr>
+<tr><td>Credit card required</td><td>No</td></tr>
+<tr><td>Available models</td><td>All Mistral models (including Mistral Large 3, Codestral, Ministral series, etc.)</td></tr>
+<tr><td>Rate limiting</td><td>Conservative rate limits suitable for prototyping and evaluation</td></tr>
+<tr><td>API endpoint</td><td>api.mistral.ai</td></tr>
+<tr><td>Target audience</td><td>Developers, researchers, students</td></tr>
+</table>
+
+<p>Activating Free mode is straightforward: create an organization at console.mistral.ai, select "Free mode," and generate your first API key. No payment method is required.</p>
+
+<h3>Experiment Plan (Pay-as-you-go)</h3>
+
+<p>When your usage exceeds Free mode limits, you can upgrade to the Experiment plan:</p>
+
+<ul>
+<li><strong>Billing</strong>: Charged per token consumed, no monthly commitment required</li>
+<li><strong>Rate limits</strong>: Automatically upgrade rate limit tiers based on cumulative billing</li>
+<li><strong>Use case</strong>: Production environments, medium-scale applications</li>
+</ul>
+
+<h3>Scale Plan (Enterprise)</h3>
+
+<p>For high-traffic production workloads, the Scale plan provides:</p>
+
+<ul>
+<li><strong>Reserved capacity</strong>: Guaranteed stable inference capability</li>
+<li><strong>Custom rates</strong>: Configure dedicated rate limits based on business needs</li>
+<li><strong>Latency guarantee</strong>: Lower latency variance compared to the Experiment plan</li>
+</ul>
+
+<h2>4. Tips and Best Practices for Using Free Credits</h2>
+
+<h3>1. Manage API Keys Effectively</h3>
+
+<p>Mistral AI's admin console (console.mistral.ai) supports creating multiple workspaces, each with independent API keys and usage metrics. Recommendations:</p>
+
+<ul>
+<li>Create separate workspaces for different projects to avoid resource overlap</li>
+<li>Rotate API keys regularly for security</li>
+<li>Set usage budgets to prevent unexpected charges</li>
+</ul>
+
+<h3>2. Optimize Token Consumption</h3>
+
+<p>Understanding token usage helps manage costs effectively. Basic conversion rates:</p>
+
+<ul>
+<li>1 token ≈ 0.75 English words ≈ 4 characters</li>
+<li>Chinese text typically uses about 1-2 tokens per character</li>
+<li>Larger context windows consume more tokens</li>
+</ul>
+
+<h3>3. Leverage Caching and Batch Processing</h3>
+
+<p>Mistral AI offers a Batch API for handling large volumes of non-real-time inference tasks. Batch API pricing is lower than real-time API, and it does not consume your real-time rate limit quota.</p>
+
+<h3>4. Understand Free Mode Limitations</h3>
+
+<p>Free mode has conservative rate limits and is not suitable for high-concurrency scenarios. If your application requires:</p>
+
+<ul>
+<li>High request throughput per second → Upgrade to Experiment or Scale</li>
+<li>Low-latency responses → Scale plan offers custom rates and latency guarantees</li>
+<li>Large-scale deployment → Scale plan supports reserved capacity</li>
+</ul>
+
+<h2>5. How to Register and Get Started</h2>
+
+<p>Here is the complete step-by-step process:</p>
+
+<h3>Step 1: Create a Mistral AI Account</h3>
+
+<ol>
+<li>Visit <a href="https://console.mistral.ai" target="_blank">console.mistral.ai</a></li>
+<li>Click "Create your organization" to set up your workspace</li>
+<li>Register with your email and complete verification</li>
+</ol>
+
+<h3>Step 2: Activate Free Mode</h3>
+
+<ol>
+<li>Navigate to your organization settings page</li>
+<li>Select "Free mode" to activate free API access</li>
+<li>Generate your first API key</li>
+</ol>
+
+<h3>Step 3: Start Using the API</h3>
+
+<p>Install the official SDK (available for Python, TypeScript, and other languages):</p>
+
+<pre><code># Install Python SDK
+pip install mistralai
+
+# Send your first API request
+from mistralai import Mistral
+
+client = Mistral(api_key="YOUR_API_KEY")
+
+# Use Mistral Large 3 for conversation
+response = client.chat.complete(
+    model="mistral-large-latest",
+    messages=[{"role": "user", "content": "Hello, please introduce yourself"}]
+)
+print(response.choices[0].message.content)</code></pre>
+
+<h3>Step 4: Use the OCR4 Model</h3>
+
+<p>OCR4 can be accessed directly via API or used within Le Chat (chat.mistral.ai):</p>
+
+<ul>
+<li><strong>Le Chat web app</strong>: Simply upload PDF, Excel, or Word documents; the system handles processing automatically</li>
+<li><strong>API access</strong>: Call the OCR API endpoint to get structured text extraction results</li>
+</ul>
+
+<h2>6. Comparison with Other Free AI API Platforms</h2>
+
+<p>Mistral AI's free API offering stands out among similar platforms:</p>
+
+<table>
+<tr><th>Feature</th><th>Mistral AI</th><th>Cerebras</th><th>Qwen</th></tr>
+<tr><td>Free credits</td><td>Free mode (unlimited duration)</td><td>Limited free credits</td><td>Some models free</td></tr>
+<tr><td>Credit card required</td><td>No</td><td>Usually required</td><td>Varies by platform</td></tr>
+<tr><td>Multilingual support</td><td>170 languages (OCR4)</td><td>Primarily English</td><td>Excellent Chinese + English</td></tr>
+<tr><td>Open-source models</td><td>Mostly open-source</td><td>Proprietary</td><td>Partially open-source</td></tr>
+<tr><td>Document recognition</td><td>OCR4 (93.07 score)</td><td>Not supported</td><td>Partial support</td></tr>
+</table>
+
+<h2>7. Summary</h2>
+
+<p>Mistral AI's free API plan is one of the most developer-friendly frontier AI model access options available today. No credit card required, all models accessible, permanently free — these features make it an ideal choice for developers and researchers. Combined with the latest OCR4 multilingual document recognition model, you can easily build powerful document processing applications.</p>
+
+<p>If you are looking for a stable, free, and feature-rich AI API platform, Mistral AI Studio is definitely worth trying. Head over to <a href="https://console.mistral.ai" target="_blank">console.mistral.ai</a> to register and get started!</p>
+
+<div class="faq-section">
+<h3>❓ Frequently Asked Questions</h3>
+<div class="faq-item"><div class="faq-q">Q: Is Mistral AI Studio free API really free?</div><div class="faq-a">A: Yes. Free mode is completely free with no credit card required, and can be used indefinitely. It is ideal for developers and researchers doing prototyping and testing.</div></div>
+<div class="faq-item"><div class="faq-q">Q: What improvements does OCR4 have over OCR3?</div><div class="faq-a">A: OCR4 supports 170 languages across 10 language families and scored 93.07 on OmniDocBench, surpassing GPT-5.5 Pro and Gemini-3.1 Pro in user experience ratings. Additionally, OCR4 introduces paragraph-level bounding box extraction and structural block labels.</div></div>
+<div class="faq-item"><div class="faq-q">Q: Are there usage limits on the free API?</div><div class="faq-a">A: Free mode has conservative rate limits suitable for prototyping and evaluation. For higher concurrency, you can upgrade to Experiment (pay-as-you-go) or Scale (enterprise) plans.</div></div>
+<div class="faq-item"><div class="faq-q">Q: Which models are available in Free mode?</div><div class="faq-a">A: Free mode supports all Mistral AI models, including Mistral Large 3, Mistral Small 3, Codestral, and the Ministral series. However, rate limits may affect high-frequency calling performance.</div></div>
+<div class="faq-item"><div class="faq-q">Q: How can I deploy Mistral open-source models locally?</div><div class="faq-a">A: Most of Mistral AI's models provide open weights available on Hugging Face for local deployment. The Ministral series is particularly suitable for edge device deployment with relatively low hardware requirements.</div></div>
+</div>
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="/en" class="logo" style="color:#059669">AI<span class="accent" style="color:#6366F1">FreePlan</span></a><p>AI-powered free tools aggregator. Free forever.</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h4>Product</h4><a href="/en/all">All Tools</a><a href="/en/guides">Guides</a></div>
+      <div class="footer-col"><h4>Legal</h4><a href="/en/privacy">Privacy</a><a href="/en/terms">Terms</a></div>
+    </div>
+  </div>
+  <div class="container footer-bottom">© 2026 AIFreePlan. All rights reserved.</div>
+</footer>
+</body></html>
