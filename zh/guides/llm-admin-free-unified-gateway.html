@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LLM Admin免费攻略：一套API调用80+模型的本地化LLM统一网关 | AIFreePlan</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="LLM Admin免费攻略：一套API调用80+模型的本地化LLM统一网关 | AIFreePlan">
+<meta property="og:description" content="LLM Admin是开源免费的本地化LLM统一网关管理平台，采用Apache-2.0协议，完全免费使用。通过一套API同时兼容OpenAI（/v1/chat/completions）与Anthropic（/v1/messages）两种协议，无需修改客户端代码即可轻松调度80+主流模型，涵盖文本、图像、视频、音频等多模态能力。">
+<meta property="og:url" content="https://aifreeplan.com/zh/guides/llm-admin-free-unified-gateway">
+<meta property="og:site_name" content="AIFreePlan">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LLM Admin免费攻略：一套API调用80+模型的本地化LLM统一网关 | AIFreePlan">
+<meta name="twitter:description" content="LLM Admin是开源免费的本地化LLM统一网关管理平台，采用Apache-2.0协议，完全免费使用。通过一套API同时兼容OpenAI（/v1/chat/completions）与Anthropic（/v1/messages）两种协议，无需修改客户端代码即可轻松调度80+主流模型，涵盖文本、图像、视频、音频等多模态能力。">
+<meta name="description" content="LLM Admin是开源免费的本地化LLM统一网关管理平台，采用Apache-2.0协议，完全免费使用。通过一套API同时兼容OpenAI（/v1/chat/completions）与Anthropic（/v1/messages）两种协议，无需修改客户端代码即可轻松调度80+主流模型，涵盖文本、图像、视频、音频等多模态能力。">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<link rel="canonical" href="https://aifreeplan.com/zh/guides/llm-admin-free-unified-gateway">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/llm-admin-free-unified-gateway">
+<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/llm-admin-free-unified-gateway">
+<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/llm-admin-free-unified-gateway">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;--text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;--accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);--green:#059669;--green-light:rgba(5,150,105,.1);--shadow:0 4px 20px rgba(0,0,0,.05);--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover)}
+.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
+.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
+.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
+.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
+.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
+.article-container ul,.article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
+.article-container li{margin-bottom:8px;line-height:1.6}
+.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
+.article-container a{color:var(--accent);text-decoration:underline}
+.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-container th,.article-container td{padding:12px;border:1px solid var(--border);text-align:left}
+.article-container th{background:var(--accent-light);font-weight:600}
+.breadcrumb{font-size:14px;color:var(--text-muted);margin-bottom:24px}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb-sep{margin:0 8px}
+.faq-section{background:var(--bg-white);border-radius:var(--radius);padding:32px;margin-top:40px;box-shadow:var(--shadow)}
+.faq-section h3{margin-top:0;color:var(--text)}
+.faq-item{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border-light)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-weight:700;color:var(--text);margin-bottom:8px}
+.faq-a{color:var(--text-secondary);line-height:1.7}
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff;margin-top:60px}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6)}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col h4{font-size:14px;font-weight:700;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+@media(max-width:768px){.article-container{padding:16px 16px 48px;max-width:100%}.article-container h1{font-size:24px}.article-container h2{font-size:20px}.container{padding:0 16px}.nav{display:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"LLM Admin免费攻略：一套API调用80+模型的本地化LLM统一网关","description":"LLM Admin是开源免费的本地化LLM统一网关管理平台，采用Apache-2.0协议，完全免费使用。通过一套API同时兼容OpenAI（/v1/chat/completions）与Anthropic（/v1/messages）两种协议，无需修改客户端代码即可轻松调度80+主流模型，涵盖文本、图像、视频、音频等多模态能力。","url":"https://aifreeplan.com/zh/guides/llm-admin-free-unified-gateway","datePublished":"2026-07-03","dateModified":"2026-07-03","author":{"@type":"Organization","name":"AIFreePlan"},"publisher":{"@type":"Organization","name":"AIFreePlan","url":"https://aifreeplan.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aifreeplan.com/zh/guides/llm-admin-free-unified-gateway"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://aifreeplan.com/zh"},{"@type":"ListItem","position":2,"name":"攻略","item":"https://aifreeplan.com/zh/guides"},{"@type":"ListItem","position":3,"name":"LLM Admin免费攻略：一套API调用80+模型的本地化LLM统一网关","item":"https://aifreeplan.com/zh/guides/llm-admin-free-unified-gateway"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[<p><strong>Q: Is LLM Admin free?</strong><br>A: Yes. LLM Admin is released under the Apache-2.0 license and is completely free to use. You can self-host and customize it freely.</p><p><strong>Q: Which models are supported?</strong><br>A: Over 80 mainstream models including OpenAI GPT series, Anthropic Claude series, DeepSeek, Zhipu GLM, Doubao, Moonshot AI, and more.</p><p><strong>Q: What are the deployment requirements?</strong><br>A: Just Docker. For production use, we recommend at least 2 CPU cores and 4GB RAM.</p>]}
+</script>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="/zh" class="logo">AI<span class="accent">FreePlan</span></a>
+    <nav class="nav">
+      <a href="/zh/all">全部工具</a>
+      <a href="/zh/guides">攻略</a>
+      <a href="/zh/privacy">隐私</a>
+      <a href="/en/guides/llm-admin-free-unified-gateway" class="btn btn-primary">English</a>
+    </nav>
+  </div>
+</header>
+<main class="article-container">
+<nav class="breadcrumb"><a href="/zh">首页</a> <span class="breadcrumb-sep">›</span> <a href="/zh/guides">攻略</a> <span class="breadcrumb-sep">›</span> <span>LLM Admin免费攻略：一套API调用80+模型的本地化LLM统一网关</span></nav>
+<h1>LLM Admin免费攻略：一套API调用80+模型的本地化LLM统一网关</h1>
+
+<p>如果你同时在使用OpenAI、Anthropic、DeepSeek、智谱等多个AI平台的API，每次切换模型都要改代码、换Key、调配置，非常麻烦。<strong>LLM Admin</strong>就是为了解决这个痛点而生的开源工具——它是一套本地部署的LLM统一网关，<strong>完全免费</strong>（Apache-2.0协议），通过一个API接口就能调用80+模型。</p>
+
+<h2>什么是LLM Admin？</h2>
+
+<p>LLM Admin是一个<strong>开源免费的本地化LLM统一网关</strong>，采用Apache-2.0协议，可以自行下载、部署和二次开发。它的核心价值在于：<strong>一套API，兼容OpenAI和Anthropic两种主流协议</strong>，让你无需修改任何客户端代码就能在不同供应商的模型之间自由切换。</p>
+
+<p>目前已支持的模型供应商包括OpenAI、Anthropic、DeepSeek、智谱、豆包、Moonshot AI等<strong>80+主流模型</strong>，涵盖文本生成、图像生成、视频、音频等多种模态。平台还支持智能路由——根据任务类型（文本/图像/视频/音频）自动分配最合适的模型。</p>
+
+<h2>核心功能详解</h2>
+
+<h3>1. 双协议原生支持</h3>
+<p>LLM Admin同时兼容<strong>OpenAI /v1/chat/completions</strong>和<strong>Anthropic /v1/messages</strong>两种协议格式。这意味着：</p>
+<ul>
+<li>用LangChain、LlamaIndex等框架开发的客户端可以直接连接，无需额外适配</li>
+<li>OpenAI格式的调用和Anthropic格式的调用可以在同一个网关中共存</li>
+<li>切换供应商模型时，客户端代码<strong>零改动</strong></li>
+</ul>
+
+<h3>2. 声明式智能路由</h3>
+<p>平台内置<strong>声明式路由规则</strong>，支持多种策略：</p>
+<ul>
+<li><strong>主备策略</strong>：指定主力模型和备用模型，主力不可用时自动切换</li>
+<li><strong>负载均衡</strong>：在多模型之间均匀分配请求，避免单点过载</li>
+<li><strong>模态路由</strong>：按文本、图像、视频、音频等模态自动分配最佳模型</li>
+<li><strong>智能分流</strong>：简单任务走低价模型，关键任务走高端模型</li>
+</ul>
+
+<h3>3. 多Key自动负载均衡</h3>
+<p>同一供应商（比如OpenAI）可以配置<strong>多个API Key</strong>，系统会自动分发请求并实现容灾。即使某个Key达到速率限制或被封禁，其他Key可以无缝接管，保证服务连续性。</p>
+
+<h3>4. 可视化用量监控</h3>
+<p>内置<strong>桌面端管理仪表盘</strong>，可以实时监控：</p>
+<ul>
+<li>每个模型的Token消耗量</li>
+<li>各供应商的费用明细</li>
+<li>请求成功率与延迟</li>
+<li>整体成本趋势</li>
+</ul>
+<p>告别手工查看账单的时代，每一笔支出都清晰可见。</p>
+
+<h3>5. Prompt缓存与成本优化</h3>
+<p>LLM Admin支持<strong>Prompt缓存</strong>功能，相同或相似的请求可以直接命中缓存，避免重复调用昂贵的模型。配合负载均衡策略，可以将请求智能分流至低成本模型，<strong>显著降低Token开支</strong>。</p>
+
+<h3>6. 本地部署，隐私安全</h3>
+<p>所有数据完全在<strong>本地处理</strong>，不会上传到第三方服务器。对于企业用户或有隐私合规要求的场景，这是一个巨大的优势。你的API Key、请求内容、响应数据都不会离开你的基础设施。</p>
+
+<h2>如何使用LLM Admin？</h2>
+
+<h3>第一步：安装部署</h3>
+<p>LLM Admin采用<strong>Docker</strong>部署方式，一条命令即可启动：</p>
+<pre><code>docker pull llmadmin/llm-admin
+docker run -d -p 8080:8080 llmadmin/llm-admin</code></pre>
+<p>或者从GitHub下载源码自行编译。部署后访问<strong>http://localhost:8080</strong>即可打开桌面端管理界面。</p>
+
+<h3>第二步：添加API Key</h3>
+<p>在桌面端管理界面中，依次添加你需要的供应商API Key。支持的供应商包括：</p>
+<ul>
+<li>OpenAI（GPT-4o、GPT-4 Turbo、o系列等）</li>
+<li>Anthropic（Claude Opus、Sonnet、Haiku等）</li>
+<li>DeepSeek（DeepSeek-V3、DeepSeek-R1等）</li>
+<li>智谱（GLM-5、GLM-4等）</li>
+<li>豆包（Doubao系列）</li>
+<li>Moonshot AI（Kimi系列）</li>
+</ul>
+<p>每个供应商可以配置<strong>多个Key</strong>用于负载均衡和容灾。</p>
+
+<h3>第三步：选择模型</h3>
+<p>从已连接的供应商列表中选择目标模型，比如glm5.2、gpt-4o、claude-sonnet等。选好后系统会自动建立路由映射。</p>
+
+<h3>第四步：配置路由规则</h3>
+<p>在管理界面中配置声明式路由规则：</p>
+<ul>
+<li>设置<strong>主备策略</strong>：比如主力用GPT-4o，备用用GLM-5</li>
+<li>设置<strong>负载均衡</strong>：比如OpenAI的两个Key按50:50分配</li>
+<li>设置<strong>模态路由</strong>：文本走GPT-4o，图像走DALL-E，音频走Whisper</li>
+</ul>
+
+<h3>第五步：开始调用</h3>
+<p>配置完成后，你的客户端只需连接到LLM Admin的统一接口（如http://localhost:8080/v1/chat/completions），即可调用所有已配置的80+模型，无需再修改代码或切换平台。</p>
+
+<h2>LLM Admin vs 竞品对比</h2>
+
+<table>
+<tr><th>功能</th><th>LLM Admin</th><th>LiteLLM</th><th>OpenRouter</th></tr>
+<tr><td>协议支持</td><td>OpenAI + Anthropic双协议原生</td><td>OpenAI格式为主</td><td>主要为OpenAI格式</td></tr>
+<tr><td>路由策略</td><td>声明式路由+智能模态路由</td><td>基础路由</td><td>有限的路由选项</td></tr>
+<tr><td>负载均衡</td><td>多Key自动分发+故障转移</td><td>支持多部署重试</td><td>不支持</td></tr>
+<tr><td>可视化监控</td><td>内置桌面端仪表盘</td><td>需要额外配置</td><td>网页控制台</td></tr>
+<tr><td>部署方式</td><td>自托管，数据不出本地</td><td>自托管或托管版</td><td>纯SaaS</td></tr>
+<tr><td>费用</td><td><strong>完全免费（Apache-2.0）</strong></td><td>开源免费</td><td>收取1%服务费</td></tr>
+</table>
+
+<h2>典型应用场景</h2>
+
+<h3>场景一：多供应商灵活切换</h3>
+<p>在OpenAI、Anthropic、DeepSeek、智谱等多供应商之间灵活切换，<strong>无需重写客户端代码</strong>，一套接口接入80+模型。当你发现某个供应商涨价或限流时，只需在管理界面调整路由规则即可，业务不受影响。</p>
+
+<h3>场景二：智能成本优化</h3>
+<p>日常润色、扩写等简单任务默认路由到低价国产模型（如GLM-5、DeepSeek），仅在关键稿件或复杂推理阶段自动切换至顶级模型（如Claude Opus、GPT-4o）。<strong>实测可节省30%-70%的API费用</strong>。</p>
+
+<h3>场景三：AI Agent后端代理</h3>
+<p>为Agent、AI助手、自动化工作流提供统一后端代理，屏蔽不同供应商的接口差异。无论是LangChain、LlamaIndex还是自研框架，都可以直接对接LLM Admin的统一接口。</p>
+
+<h3>场景四：企业级高可用保障</h3>
+<p>通过多Key负载均衡和自动故障转移，确保关键业务场景下AI服务的<strong>高可用性</strong>。即使某个供应商出现宕机或限流，系统会自动切换到备用模型，业务不中断。</p>
+
+<h2>总结</h2>
+
+<p>LLM Admin是一个<strong>功能强大且完全免费</strong>的本地化LLM统一网关。它的核心优势在于：</p>
+<ul>
+<li><strong>80+模型一键接入</strong>，无需逐个配置</li>
+<li><strong>OpenAI+Anthropic双协议</strong>原生支持</li>
+<li><strong>声明式智能路由</strong>，灵活控制流量分配</li>
+<li><strong>多Key负载均衡</strong>，自动故障转移</li>
+<li><strong>可视化用量监控</strong>，成本一目了然</li>
+<li><strong>本地部署</strong>，数据安全隐私有保障</li>
+<li><strong>Apache-2.0开源</strong>，完全免费可商用</li>
+</ul>
+<p>对于同时使用多个AI平台API的开发者来说，LLM Admin是目前<strong>性价比最高</strong>的统一网关解决方案。不需要任何费用，一条Docker命令就能部署完成，从此告别频繁切换API Key和修改代码的痛苦。</p>
+
+<p><strong>官网地址：</strong><a href="https://llmadmin.dev/" target="_blank">https://llmadmin.dev/</a></p>
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="/zh" class="logo" style="color:#059669">AI<span class="accent" style="color:#6366F1">FreePlan</span></a><p>AI驱动的免费工具聚合平台，永久免费。</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h4>产品</h4><a href="/zh/all">全部工具</a><a href="/zh/guides">攻略</a></div>
+      <div class="footer-col"><h4>法律</h4><a href="/zh/privacy">隐私政策</a><a href="/zh/terms">用户协议</a></div>
+    </div>
+  </div>
+  <div class="container footer-bottom">&copy; 2026 AIFreePlan. All rights reserved.</div>
+</footer>
+</body></html>

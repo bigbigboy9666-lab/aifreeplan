@@ -1,6 +1,14 @@
 {
   "guides": [
     {
+      "slug": "llm-admin-free-unified-gateway",
+      "title_zh": "LLM Admin免费攻略：一套API调用80+模型的本地化LLM统一网关",
+      "title_en": "LLM Admin Free Guide: Unified LLM Gateway with 80+ Models",
+      "excerpt_zh": "开源免费的本地化LLM统一网关，兼容OpenAI与Anthropic双协议，80+模型智能路由，桌面端管理界面，数据本地处理零泄露。",
+      "excerpt_en": "Open-source free LLM gateway, dual OpenAI+Anthropic protocol support, 80+ models smart routing, desktop dashboard, local data processing.",
+      "pinned": false
+    },
+    {
       "slug": "amazon-q-developer-free-tier-2026",
       "title_zh": "Amazon Q Developer 完全免费攻略：AWS 官方 AI 编程助手，无限代码补全+聊天+安全扫描",
       "title_en": "Amazon Q Developer Free Tier Guide 2026: AWS Official AI Coding Assistant",
