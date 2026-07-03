@@ -88,6 +88,22 @@
       "category": "audio",
       "published": "2026-06-29",
       "featured": false
+    },
+    {
+      "slug": "amazon-q-developer-free-tier-2026",
+      "title_zh": "Amazon Q Developer 完全免费攻略：AWS 官方 AI 编程助手，无限代码补全+聊天+安全扫描",
+      "title_en": "Amazon Q Developer Free Tier Guide 2026: AWS Official AI Coding Assistant",
+      "excerpt_zh": "Amazon Q Developer 是 AWS 官方 AI 编程助手，免费版提供无限代码补全、无限对话聊天、代码解释、安全漏洞扫描等功能，完全免费无需信用卡。",
+      "excerpt_en": "AWS official AI coding assistant with unlimited free code completions, chat, security scanning, and test generation. No credit card required.",
+      "category": "coding",
+      "tags": [
+        "aws",
+        "ai-coding",
+        "free-tier",
+        "security-scanning"
+      ],
+      "date_published": "2026-07-02",
+      "url": "/zh/guides/amazon-q-developer-free-tier-2026"
     }
   ]
 }
