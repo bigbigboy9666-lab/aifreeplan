@@ -1,14 +1,6 @@
 {
   "guides": [
     {
-      "slug": "llm-admin-free-unified-gateway",
-      "title_zh": "LLM Admin免费攻略：一套API调用80+模型的本地化LLM统一网关",
-      "title_en": "LLM Admin Free Guide: Unified LLM Gateway with 80+ Models",
-      "excerpt_zh": "开源免费的本地化LLM统一网关，兼容OpenAI与Anthropic双协议，80+模型智能路由，桌面端管理界面，数据本地处理零泄露。",
-      "excerpt_en": "Open-source free LLM gateway, dual OpenAI+Anthropic protocol support, 80+ models smart routing, desktop dashboard, local data processing.",
-      "pinned": false
-    },
-    {
       "slug": "amazon-q-developer-free-tier-2026",
       "title_zh": "Amazon Q Developer 完全免费攻略：AWS 官方 AI 编程助手，无限代码补全+聊天+安全扫描",
       "title_en": "Amazon Q Developer Free Tier Guide 2026: AWS Official AI Coding Assistant",
@@ -23,6 +15,158 @@
       ],
       "date": "2026-07-02",
       "pinned": true
+    },
+    {
+      "slug": "freebuff-free-coding-agent",
+      "title_zh": "Freebuff Free Coding Agent",
+      "title_en": "Freebuff Free Coding Agent",
+      "excerpt_zh": "免费编程Agent工具推荐",
+      "excerpt_en": "Free coding agent tool recommendation",
+      "pinned": true
+    },
+    {
+      "slug": "dumate-baidu-desktop-ai-free-guide-2026",
+      "title_zh": "度码DuMate桌面AI助手免费攻略：百度出品，8000积分办公自动化",
+      "title_en": "DuMate Desktop AI Agent Free Guide: Baidu's 8,000 Credits Office Automation AI",
+      "excerpt_zh": "百度推出的桌面AI助手DuMate，提供免费8000积分用于办公自动化任务。支持Windows和macOS。",
+      "excerpt_en": "Baidu's desktop AI assistant DuMate with free 8,000 credits for office automation tasks. Supports Windows and macOS.",
+      "category": "productivity",
+      "tags": [
+        "baidu",
+        "desktop-ai",
+        "office-automation"
+      ],
+      "date": "2026-07-02"
+    },
+    {
+      "slug": "nano-banana-2-lite-free-image-generation",
+      "title_zh": "Nano Banana 2 Lite 完全免费：Google DeepMind 最快 AI 图片生成工具",
+      "title_en": "Nano Banana 2 Lite Free: Google DeepMind's Fastest AI Image Generator",
+      "excerpt_zh": "Google DeepMind 发布 Gemini 3.1 Flash-Lite Image（代号 Nano Banana 2 Lite），完全免费通过 Google AI Studio 使用，速度比前代快数倍，成本降低至最低，支持 4K 分辨率图像生成与编辑。",
+      "excerpt_en": "Google DeepMind released Gemini 3.1 Flash-Lite Image (codenamed Nano Banana 2 Lite), completely free via Google AI Studio. It is the fastest and cheapest Gemini image model, supporting 4K resolution generation and editing.",
+      "category": "image",
+      "tags": [
+        "google",
+        "gemini",
+        "image-generation",
+        "free"
+      ],
+      "date": "2026-07-01"
+    },
+    {
+      "slug": "mistral-ai-studio-free-api-guide",
+      "title_zh": "Mistral AI Studio 免费 API 额度与 OCR4 多语言文档识别完全攻略",
+      "title_en": "Mistral AI Studio Free API Credits & OCR4 Multilingual Document Recognition Guide",
+      "excerpt_zh": "Mistral AI 推出全新 OCR4 多语言文档识别模型（支持 170 种语言），同时开放 Studio 免费 API 额度。本文详细解读免费额度详情、使用限制和注册方法。",
+      "excerpt_en": "Mistral AI launches OCR4 multilingual document recognition model (supporting 170 languages) and opens free Studio API credits. Detailed guide on free quotas, limitations, and registration.",
+      "category": "api",
+      "tags": [
+        "mistral",
+        "ocr",
+        "free-api",
+        "multilingual"
+      ],
+      "date": "2026-06-27"
+    },
+    {
+      "slug": "cerebras-free-api-guide",
+      "title_zh": "Cerebras免费API攻略：100万token/天，GPT OSS/GLM 4.7随便用",
+      "title_en": "Cerebras Free API Guide: 1 Million Tokens/Day, GPT OSS & GLM 4.7",
+      "excerpt_zh": "Cerebras免费开放API，每天100万token，支持GPT OSS 120B和GLM 4.7。速度比OpenAI快20倍，注册只需邮箱，无需信用卡。",
+      "excerpt_en": "Cerebras offers a completely free API with 1M tokens/day. Access GPT OSS 120B and GLM 4.7 at 20x OpenAI speed. Email signup, no credit card.",
+      "category": "api",
+      "tags": [
+        "cerebras",
+        "free-api",
+        "glm",
+        "gpt-oss"
+      ],
+      "date": "2026-06-23"
+    },
+    {
+      "slug": "qwen3-6-free-unlimited-2026",
+      "title_zh": "Qwen3.6免费无限量使用：阿里通义千问最强模型，6月底前白嫖攻略",
+      "title_en": "Qwen3.6 Free Unlimited: Alibaba's Strongest Model, Complete Free Guide Until End of June 2026",
+      "excerpt_zh": "通义千问推出Qwen3.6免费无限量使用活动，通过通义千问网页版和DashScope API均可免费使用。支持文本、代码、推理等多场景，6月底截止。",
+      "excerpt_en": "Alibaba's Tongyi Qianwen offers free unlimited access to Qwen3.6 through web interface and DashScope API. Supports text, code, reasoning and more. Promotion ends late June 2026.",
+      "category": "api",
+      "tags": [
+        "qwen",
+        "alibaba",
+        "free-api",
+        "llm"
+      ],
+      "date": "2026-06-23"
+    },
+    {
+      "slug": "free-ai-coding-tools-comparison",
+      "title_zh": "免费AI编程工具对比攻略：15款主流工具横评",
+      "title_en": "Free AI Coding Tools Comparison: 15 Leading Tools Reviewed",
+      "excerpt_zh": "对比15款免费AI编程工具，包括Cursor、Copilot、Cline、Trae等，帮你找到最适合的免费编码方案。",
+      "excerpt_en": "Compare 15 free AI coding tools including Cursor, Copilot, Cline, Trae and more to find the best fit for you.",
+      "category": "coding",
+      "tags": [
+        "ai-coding",
+        "comparison",
+        "free-tools"
+      ],
+      "date": "2026-06-23"
+    },
+    {
+      "slug": "rime-ai-voice-free-guide",
+      "title_zh": "Rime AI Voice 免费攻略：$100额度，94款精品语音，多语言TTS",
+      "title_en": "Rime AI Voice Free Guide: $100 Credits, 94 Premium Voices, Multilingual TTS",
+      "excerpt_zh": "Rime AI Voice提供$100免费额度，94款高品质语音，支持多语言TTS合成。",
+      "excerpt_en": "Rime AI Voice offers $100 free credits, 94 high-quality voices with multilingual TTS synthesis.",
+      "category": "audio",
+      "tags": [
+        "tts",
+        "ai-voice",
+        "free-credits"
+      ],
+      "date": "2026-06-23"
+    },
+    {
+      "slug": "free-ai-image-generator-tools",
+      "title_zh": "免费AI绘画工具对比：Playground vs Leonardo vs 通义万相 vs Ideogram",
+      "title_en": "Free AI Image Generator Comparison: Playground vs Leonardo vs Tongyi Wanxiang vs Ideogram",
+      "excerpt_zh": "深度对比4款免费AI绘画工具，从生成质量、分辨率、速度、免费额度全方位评测。",
+      "excerpt_en": "In-depth comparison of 4 free AI image generators covering quality, resolution, speed, and free quotas.",
+      "category": "image",
+      "tags": [
+        "ai-image",
+        "comparison",
+        "free-tools"
+      ],
+      "date": "2026-06-20"
+    },
+    {
+      "slug": "free-ai-video-generation-tools",
+      "title_zh": "免费AI视频生成工具对比：Seedance 2.0、Kling、Hailuo、Runway等10款横评",
+      "title_en": "Free AI Video Generation Tools Comparison: 10 Tools Including Seedance 2.0, Kling, Hailuo, Runway",
+      "excerpt_zh": "对比10款免费AI视频生成工具，涵盖Seedance 2.0、可灵、海螺、Runway等主流平台。",
+      "excerpt_en": "Compare 10 free AI video generation tools covering Seedance 2.0, Kling, Hailuo, Runway and more.",
+      "category": "video",
+      "tags": [
+        "ai-video",
+        "comparison",
+        "free-tools"
+      ],
+      "date": "2026-06-20"
+    },
+    {
+      "slug": "free-ai-subtitle-generator-tools",
+      "title_zh": "2026年5款免费AI字幕生成工具实测对比：CapCut、Descript、VEED免费额度全解析",
+      "title_en": "5 Free AI Subtitle Generator Tools Compared (2026): CapCut vs Descript vs VEED",
+      "excerpt_zh": "2026年5款免费AI字幕生成工具实测对比：CapCut完全免费无水印、Descript每月1小时免费转录、VEED.io 10分钟限制、Kapwing 5分钟限制、Clipchamp Windows自带免费。包含准确率测试、支持语言和使用场景推荐。",
+      "excerpt_en": "2026年5款免费AI字幕生成工具实测对比：CapCut完全免费无水印、Descript每月1小时免费转录、VEED.io 10分钟限制、Kapwing 5分钟限制、Clipchamp Windows自带免费。包含准确率测试、支持语言和使用场景推荐。",
+      "category": "video",
+      "tags": [
+        "subtitle",
+        "ai-video",
+        "free-tools"
+      ],
+      "date": "2026-06-20"
     },
     {
       "slug": "monkeyCode-free-ai-coding-platform-2026",
@@ -45,14 +189,6 @@
       "excerpt_zh": "深度横评20+个AI大模型平台的免费额度、RPM限制、TPM上限，帮你找到最适合的免费API。",
       "excerpt_en": "In-depth review of 20+ AI LLM platforms: free credits, RPM limits, TPM caps.",
       "pinned": false
-    },
-    {
-      "slug": "freebuff-free-coding-agent",
-      "title_zh": "Freebuff Free Coding Agent",
-      "title_en": "Freebuff Free Coding Agent",
-      "excerpt_zh": "免费编程Agent工具推荐",
-      "excerpt_en": "Free coding agent tool recommendation",
-      "pinned": true
     },
     {
       "slug": "huawei-deveco-code-free-coding",
@@ -116,28 +252,6 @@
       "title_en": "NotebookLM Complete Free Guide: Google's AI Research Tool with 50 Sources, Podcast & Video Generation — All Free",
       "excerpt_zh": "Google出品的AI研究工具NotebookLM，完全免费使用。支持上传50个来源文档，自动生成播客式对话、视频解说和研究摘要。2026年仍是唯一不收费的主流AI研究工具。",
       "excerpt_en": "Google's AI research tool NotebookLM, completely free. Upload up to 50 source documents, auto-generate podcast-style conversations, video explanations and research summaries. In 2026, still the only mainstream AI research tool that remains free."
-    },
-    {
-      "slug": "mistral-ai-studio-free-api-guide",
-      "title_zh": "Mistral AI Studio 免费 API 额度与 OCR4 多语言文档识别完全攻略",
-      "title_en": "Mistral AI Studio Free API Credits & OCR4 Multilingual Document Recognition Guide",
-      "excerpt_zh": "Mistral AI 推出全新 OCR4 多语言文档识别模型（支持 170 种语言），同时开放 Studio 免费 API 额度。本文详细解读免费额度详情、使用限制和注册方法。",
-      "excerpt_en": "Mistral AI launches OCR4 multilingual document recognition model (supporting 170 languages) and opens free Studio API credits. Detailed guide on free quotas, limitations, and registration."
-    },
-    {
-      "slug": "nano-banana-2-lite-free-image-generation",
-      "title_zh": "Nano Banana 2 Lite 完全免费：Google DeepMind 最快 AI 图片生成工具",
-      "title_en": "Nano Banana 2 Lite Free: Google DeepMind's Fastest AI Image Generator",
-      "excerpt_zh": "Google DeepMind 发布 Gemini 3.1 Flash-Lite Image（代号 Nano Banana 2 Lite），完全免费通过 Google AI Studio 使用，速度比前代快数倍，成本降低至最低，支持 4K 分辨率图像生成与编辑。",
-      "excerpt_en": "Google DeepMind released Gemini 3.1 Flash-Lite Image (codenamed Nano Banana 2 Lite), completely free via Google AI Studio. It is the fastest and cheapest Gemini image model, supporting 4K resolution generation and editing.",
-      "date": "2026-07-01",
-      "category": "image",
-      "tags": [
-        "google",
-        "gemini",
-        "image-generation",
-        "free"
-      ]
     }
   ]
 }
