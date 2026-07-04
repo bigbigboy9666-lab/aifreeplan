@@ -34,7 +34,7 @@ jobs:
         run: pnpm build
 
       - name: Generate sitemap
-        run: python3 scripts/generate_sitemap.py
+        run: node scripts/generate-sitemap.mjs
 
       - name: Validate content quality
         run: node scripts/validate-content.mjs
