@@ -2,15 +2,18 @@
 
 @theme {
   --color-primary: #10B981;
-  --color-secondary: #6366F1;
-  --color-accent: #F59E0B;
   --color-primary-dark: #059669;
   --color-primary-light: #34D399;
+  --color-secondary: #6366F1;
+  --color-accent: #F59E0B;
   --color-bg: #F9FAFB;
   --color-bg-card: #FFFFFF;
+  --color-bg-section: #F3F4F6;
   --color-text: #111827;
   --color-text-muted: #6B7280;
+  --color-text-secondary: #9CA3AF;
   --color-border: #E5E7EB;
+  --color-border-light: #F3F4F6;
 }
 
 body {

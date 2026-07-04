@@ -27,7 +27,7 @@ const guides = guidesData.guides || [];
 
 const topTools = tools.sort((a: any, b: any) => (b.rating || 0) - (a.rating || 0)).slice(0, 12);
 const pinnedGuides = guides.filter((g: any) => g.pinned);
-const recentGuides = guides.filter((g: any) => !g.pinned).slice(0, 6);
+const recentGuides = guides.filter((g: any) => !g.pinned);
 
 const isZh = lang === 'zh';
 const title = isZh
@@ -46,155 +46,208 @@ const canonicalUrl = `${siteUrl}/${lang}/`;
   canonicalUrl={canonicalUrl}
   lang={lang}
 >
-  <!-- Hero Section -->
-  <section class="relative bg-gradient-to-br from-emerald-50 to-indigo-50 dark:from-gray-900 dark:to-gray-800 py-20 px-4">
-    <div class="max-w-6xl mx-auto text-center">
-      <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-600 to-indigo-600 bg-clip-text text-transparent">
-        {isZh ? 'AI免费额度聚合平台' : 'AI Free Tier Aggregator'}
-      </h1>
-      <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-        {isZh
-          ? `汇总 ${tools.length}+ 款AI工具的免费额度、使用限制和白嫖攻略。<br/>别再为选哪个AI工具纠结了，一张表帮你搞定。`
-          : `Compare free credits, limits, and trial details across ${tools.length}+ AI tools.<br/>Stop guessing — find the best free AI tools with one click.`
-        }
-      </p>
-      <div class="flex flex-wrap justify-center gap-3">
-        {categories.map((cat: any) => (
-          <a href={`/${lang}/${cat.id}`}
-             class="px-5 py-2.5 rounded-full bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-all border border-gray-200 dark:border-gray-700 text-sm font-medium hover:border-emerald-400">
-            {cat.icon} {isZh ? cat.nameZh : cat.nameEn} ({cat.count})
-          </a>
-        ))}
+
+<!-- ========== HERO SECTION ========== -->
+<section class="relative overflow-hidden bg-white">
+  <div class="absolute inset-0 bg-gradient-to-br from-[#ECFDF5] via-white to-[#EEF2FF]"></div>
+  <div class="relative max-w-6xl mx-auto px-6 pt-20 pb-16 md:pt-28 md:pb-24 text-center">
+    <!-- Badge -->
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#ECFDF5] border border-[#10B981]/20 text-[#059669] text-sm font-medium mb-8">
+      <span class="w-2 h-2 rounded-full bg-[#10B981] animate-pulse"></span>
+      {isZh ? `${tools.length}+ 款工具 · 每周更新` : `${tools.length}+ Tools · Updated Weekly`}
+    </div>
+
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-[#111827] mb-6 max-w-4xl mx-auto">
+      {isZh
+        ? 'AI免费额度，一站式对比'
+        : 'All AI Free Tiers, One Place'}
+    </h1>
+
+    <p class="text-lg md:text-xl text-[#6B7280] mb-10 max-w-2xl mx-auto leading-relaxed">
+      {isZh
+        ? `汇总 ${tools.length}+ 款AI工具的免费额度、使用限制和白嫖攻略。<br/>别再为选哪个AI工具纠结了，一张表帮你搞定。`
+        : `Compare free credits, limits, and trial details across ${tools.length}+ AI tools.<br/>Stop guessing — find the best free AI tools with one click.`
+      }
+    </p>
+
+    <!-- Category pills -->
+    <div class="flex flex-wrap justify-center gap-2.5 max-w-3xl mx-auto">
+      {categories.map((cat: any) => (
+        <a href={`/${lang}/${cat.id}`}>
+          <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white border border-[#E5E7EB] text-sm text-[#374151] hover:border-[#10B981] hover:text-[#059669] hover:shadow-sm transition-all cursor-pointer">
+            {cat.icon} {isZh ? cat.nameZh : cat.nameEn}
+          </span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ========== STATS BAR ========== -->
+<section class="border-y border-[#F3F4F6] bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+      <div class="text-center">
+        <div class="text-3xl md:text-4xl font-bold text-[#111827] mb-1">{tools.length}</div>
+        <div class="text-sm text-[#9CA3AF]">{isZh ? '收录工具' : 'Tools Listed'}</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl md:text-4xl font-bold text-[#10B981] mb-1">{categories.length}</div>
+        <div class="text-sm text-[#9CA3AF]">{isZh ? '工具分类' : 'Categories'}</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl md:text-4xl font-bold text-[#6366F1] mb-1">{tools.filter((t: any) => t.freeTier?.refreshPeriod === 'daily').length}</div>
+        <div class="text-sm text-[#9CA3AF]">{isZh ? '每日刷新额度' : 'Daily Refresh'}</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl md:text-4xl font-bold text-[#F59E0B] mb-1">{tools.filter((t: any) => !t.freeTier?.requiresCreditCard).length}</div>
+        <div class="text-sm text-[#9CA3AF]">{isZh ? '免信用卡' : 'No CC Needed'}</div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Stats Bar -->
-  <section class="bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 py-6">
-    <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-      <div>
-        <div class="text-3xl font-bold text-emerald-600">{tools.length}</div>
-        <div class="text-sm text-gray-500">{isZh ? '收录工具' : 'Tools Listed'}</div>
-      </div>
-      <div>
-        <div class="text-3xl font-bold text-indigo-600">{categories.length}</div>
-        <div class="text-sm text-gray-500">{isZh ? '工具分类' : 'Categories'}</div>
-      </div>
-      <div>
-        <div class="text-3xl font-bold text-amber-600">{tools.filter((t: any) => t.freeTier?.refreshPeriod === 'daily').length}</div>
-        <div class="text-sm text-gray-500">{isZh ? '每日刷新额度' : 'Daily Refresh'}</div>
-      </div>
-      <div>
-        <div class="text-3xl font-bold text-rose-600">{tools.filter((t: any) => !t.freeTier?.requiresCreditCard).length}</div>
-        <div class="text-sm text-gray-500">{isZh ? '免信用卡' : 'No Credit Card'}</div>
-      </div>
+<!-- ========== GUIDES SECTION (4 ROWS) ========== -->
+<section class="max-w-6xl mx-auto px-6 py-16 md:py-20">
+  <div class="flex items-end justify-between mb-10">
+    <div>
+      <h2 class="text-2xl md:text-3xl font-bold text-[#111827] mb-2">
+        {isZh ? '🔥 最新攻略' : '📚 Latest Guides'}
+      </h2>
+      <p class="text-[#6B7280]">{isZh ? '手把手教你白嫖AI工具，省下的都是真金白银' : 'Step-by-step guides to getting AI tools for free'}</p>
     </div>
-  </section>
+    <a href={`/${lang}/guides`} class="text-[#10B981] font-medium hover:text-[#059669] transition-colors text-sm flex items-center gap-1">
+      {isZh ? '查看全部' : 'View All'}
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+    </a>
+  </div>
 
-  <!-- 最新攻略 / Latest Guides -->
-  <section class="max-w-6xl mx-auto px-4 py-16">
-    <div class="flex items-center justify-between mb-8">
-      <h2 class="text-3xl font-bold">{isZh ? '🔥 最新攻略' : '📚 Latest Guides'}</h2>
-      <a href={`/${lang}/guides`} class="text-primary font-medium hover:underline">
-        {isZh ? '查看全部攻略 →' : 'View All Guides →'}
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+    {pinnedGuides.map((guide: any) => (
+      <GuideCard
+        title={isZh ? guide.title_zh : guide.title_en}
+        excerpt={isZh ? guide.excerpt_zh : guide.excerpt_en}
+        href={`/${lang}/guides/${guide.slug}`}
+        pinned={true}
+        lang={lang}
+      />
+    ))}
+    {recentGuides.map((guide: any) => (
+      <GuideCard
+        title={isZh ? guide.title_zh : guide.title_en}
+        excerpt={isZh ? guide.excerpt_zh : guide.excerpt_en}
+        href={`/${lang}/guides/${guide.slug}`}
+        pinned={false}
+        lang={lang}
+      />
+    ))}
+  </div>
+</section>
+
+<!-- ========== TOP FREE TOOLS ========== -->
+<section class="bg-[#F9FAFB] border-y border-[#F3F4F6]">
+  <div class="max-w-6xl mx-auto px-6 py-16 md:py-20">
+    <div class="flex items-end justify-between mb-10">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold text-[#111827] mb-2">
+          {isZh ? '⭐ 热门免费工具' : '⭐ Top Free Tools'}
+        </h2>
+        <p class="text-[#6B7280]">{isZh ? '按评分排序，帮你快速找到最好用的免费工具' : 'Sorted by rating — find the best free tools fast'}</p>
+      </div>
+      <a href={`/${lang}/tools`} class="text-[#10B981] font-medium hover:text-[#059669] transition-colors text-sm flex items-center gap-1">
+        {isZh ? '查看全部' : 'View All'}
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
       </a>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {pinnedGuides.map((guide: any) => (
-        <GuideCard
-          title={isZh ? guide.title_zh : guide.title_en}
-          excerpt={isZh ? guide.excerpt_zh : guide.excerpt_en}
-          href={`/${lang}/guides/${guide.slug}`}
-          pinned={true}
-          lang={lang}
-        />
-      ))}
-      {recentGuides.slice(0, 8).map((guide: any) => (
-        <GuideCard
-          title={isZh ? guide.title_zh : guide.title_en}
-          excerpt={isZh ? guide.excerpt_zh : guide.excerpt_en}
-          href={`/${lang}/guides/${guide.slug}`}
-          pinned={false}
-          lang={lang}
-        />
-      ))}
-    </div>
-  </section>
 
-  <!-- 热门免费AI工具 / Top Free AI Tools -->
-  <section class="max-w-6xl mx-auto px-4 py-16">
-    <h2 class="text-3xl font-bold mb-2">{isZh ? '热门免费AI工具' : 'Top Free AI Tools'}</h2>
-    <p class="text-gray-500 mb-8">{isZh ? '按评分排序，帮你快速找到最好用的免费工具' : 'Sorted by rating — find the best free tools fast'}</p>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
       {topTools.map((tool: any) => (
         <ToolCard tool={tool} lang={lang} />
       ))}
     </div>
-    <div class="text-center mt-10">
-      <a href={`/${lang}/tools`}
-         class="inline-flex items-center gap-2 px-8 py-3 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors font-medium">
-        {isZh ? `查看全部 ${tools.length} 个工具 →` : `View All ${tools.length} Tools →`}
+  </div>
+</section>
+
+<!-- ========== CATEGORIES ========== -->
+<section class="max-w-6xl mx-auto px-6 py-16 md:py-20">
+  <div class="text-center mb-10">
+    <h2 class="text-2xl md:text-3xl font-bold text-[#111827] mb-2">
+      {isZh ? '按分类探索' : 'Browse by Category'}
+    </h2>
+    <p class="text-[#6B7280]">{isZh ? '找到适合你需求的AI工具类别' : 'Find the AI tool category that fits your needs'}</p>
+  </div>
+
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    {categories.map((cat: any) => (
+      <a href={`/${lang}/${cat.id}`}
+         class="group bg-white rounded-xl p-5 border border-[#E5E7EB] hover:border-[#10B981]/40 hover:shadow-md transition-all duration-200 flex flex-col items-center text-center">
+        <div class="text-3xl mb-2 group-hover:scale-110 transition-transform">{cat.icon}</div>
+        <h3 class="text-sm font-bold text-[#111827] group-hover:text-[#059669] transition-colors mb-0.5">
+          {isZh ? cat.nameZh : cat.nameEn}
+        </h3>
+        <p class="text-xs text-[#9CA3AF]">{cat.count} {isZh ? '个工具' : 'tools'}</p>
       </a>
-    </div>
-  </section>
+    ))}
+  </div>
+</section>
 
-  <!-- 按分类浏览 / Browse by Category -->
-  <section class="bg-gray-50 dark:bg-gray-800/50 py-16 px-4">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl font-bold mb-8 text-center">{isZh ? '按分类浏览' : 'Browse by Category'}</h2>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-        {categories.map((cat: any) => (
-          <a href={`/${lang}/${cat.id}`}
-             class="group bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:border-emerald-400 hover:shadow-lg transition-all h-full flex flex-col">
-            <div class="text-4xl mb-3">{cat.icon}</div>
-            <h3 class="text-lg font-bold mb-1 group-hover:text-emerald-600 transition-colors">
-              {isZh ? cat.nameZh : cat.nameEn}
-            </h3>
-            <p class="text-sm text-gray-500 mt-auto">{cat.count} {isZh ? '个工具' : 'tools'}</p>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- 为什么用AIFreePlan / Why AIFreePlan? -->
-  <section class="max-w-6xl mx-auto px-4 py-16">
-    <h2 class="text-3xl font-bold mb-8 text-center">{isZh ? '为什么要用 AIFreePlan？' : 'Why AIFreePlan?'}</h2>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="text-center p-6">
-        <div class="text-5xl mb-4">🔍</div>
-        <h3 class="text-xl font-bold mb-2">{isZh ? '额度透明' : 'Transparent Credits'}</h3>
-        <p class="text-gray-500">{isZh ? '每个工具的免费额度、刷新周期、水印、商用权限全部透明展示，不玩文字游戏。' : 'Every tool\'s free tier, refresh cycle, watermark policy, and commercial use rights — all clearly displayed.'}</p>
-      </div>
-      <div class="text-center p-6">
-        <div class="text-5xl mb-4">✅</div>
-        <h3 class="text-xl font-bold mb-2">{isZh ? '每周验证' : 'Weekly Verified'}</h3>
-        <p class="text-gray-500">{isZh ? '自动化爬虫每周核对各平台定价页面，发现变更立即更新，保证信息不过时。' : 'Automated scrapers verify pricing pages weekly. Changes are detected and updated automatically.'}</p>
-      </div>
-      <div class="text-center p-6">
-        <div class="text-5xl mb-4">💰</div>
-        <h3 class="text-xl font-bold mb-2">{isZh ? '帮你省钱' : 'Save Money'}</h3>
-        <p class="text-gray-500">{isZh ? '同类工具横向对比，找到最适合你需求的免费方案，不再为不需要的功能付费。' : 'Side-by-side comparisons help you find the best free plan for your needs — no more paying for features you don\'t use.'}</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Submit CTA -->
-  <section class="bg-gray-900 dark:bg-black py-16 px-4">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-bold text-white mb-4">{isZh ? '发现免费AI平台？提交推荐' : 'Know a Free AI Platform? Submit a Recommendation'}</h2>
-      <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
-        {isZh
-          ? '如果你知道某个AI平台提供免费额度，欢迎提交推荐帮助我们完善数据库。每一条推荐都会经过人工审核，确保信息准确可靠。'
-          : 'If you know of an AI platform offering free credits, help us expand our database. Every submission is manually reviewed to ensure accuracy and reliability.'
-        }
+<!-- ========== WHY AIFREEPLAN ========== -->
+<section class="bg-[#111827] text-white">
+  <div class="max-w-6xl mx-auto px-6 py-16 md:py-20">
+    <div class="text-center mb-12">
+      <h2 class="text-2xl md:text-3xl font-bold mb-3">
+        {isZh ? '为什么要用 AIFreePlan？' : 'Why AIFreePlan?'}
+      </h2>
+      <p class="text-[#9CA3AF] max-w-xl mx-auto">
+        {isZh ? '我们帮你省下选工具的时间，让你把精力放在真正重要的事上' : 'We save you time picking tools so you can focus on what matters'}
       </p>
-      <a href="mailto:submit@aifreeplan.com?subject={isZh ? '%E6%8F%90%E4%BA%A4%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90' : 'Tool+Recommendation'}&body={isZh ? '%E5%B7%A5%E5%85%B7%E5%90%8D%E7%A7%B0%EF%BC%9A%0A%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%85%8D%E8%B4%B9%E9%A2%9D%E5%BA%A6%EF%BC%9A%0A%E5%A4%87%E6%B3%A8%EF%BC%9A' : 'Tool+Name%3A%0AURL%3A%0AFree+Quota%3A%0ANotes%3A'}"
-         class="inline-flex items-center gap-2 px-8 py-3 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors font-medium">
-        {isZh ? '📩 提交推荐' : '📩 Submit Recommendation'}
-      </a>
     </div>
-  </section>
 
-  <ConversionBanner lang={lang} />
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-[#1F2937] rounded-xl p-6 border border-[#374151]">
+        <div class="w-10 h-10 rounded-lg bg-[#10B981]/20 flex items-center justify-center mb-4">
+          <span class="text-xl">🔍</span>
+        </div>
+        <h3 class="text-lg font-bold mb-2">{isZh ? '额度透明' : 'Transparent Credits'}</h3>
+        <p class="text-[#9CA3AF] text-sm leading-relaxed">{isZh ? '每个工具的免费额度、刷新周期、水印、商用权限全部透明展示，不玩文字游戏。' : 'Every tool\'s free tier, refresh cycle, watermark policy, and commercial use rights — all clearly displayed.'}</p>
+      </div>
+      <div class="bg-[#1F2937] rounded-xl p-6 border border-[#374151]">
+        <div class="w-10 h-10 rounded-lg bg-[#6366F1]/20 flex items-center justify-center mb-4">
+          <span class="text-xl">✅</span>
+        </div>
+        <h3 class="text-lg font-bold mb-2">{isZh ? '每周验证' : 'Weekly Verified'}</h3>
+        <p class="text-[#9CA3AF] text-sm leading-relaxed">{isZh ? '自动化爬虫每周核对各平台定价页面，发现变更立即更新，保证信息不过时。' : 'Automated scrapers verify pricing pages weekly. Changes are detected and updated automatically.'}</p>
+      </div>
+      <div class="bg-[#1F2937] rounded-xl p-6 border border-[#374151]">
+        <div class="w-10 h-10 rounded-lg bg-[#F59E0B]/20 flex items-center justify-center mb-4">
+          <span class="text-xl">💰</span>
+        </div>
+        <h3 class="text-lg font-bold mb-2">{isZh ? '帮你省钱' : 'Save Money'}</h3>
+        <p class="text-[#9CA3AF] text-sm leading-relaxed">{isZh ? '同类工具横向对比，找到最适合你需求的免费方案，不再为不需要的功能付费。' : 'Side-by-side comparisons help you find the best free plan for your needs — no more paying for features you don\'t use.'}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SUBMIT CTA ========== -->
+<section class="bg-gradient-to-br from-[#ECFDF5] to-[#EEF2FF] py-16 md:py-20">
+  <div class="max-w-4xl mx-auto text-center px-6">
+    <h2 class="text-2xl md:text-3xl font-bold text-[#111827] mb-4">
+      {isZh ? '发现免费AI平台？提交推荐' : 'Know a Free AI Platform? Submit a Recommendation'}
+    </h2>
+    <p class="text-[#6B7280] mb-8 max-w-2xl mx-auto leading-relaxed">
+      {isZh
+        ? '如果你知道某个AI平台提供免费额度，欢迎提交推荐帮助我们完善数据库。每一条推荐都会经过人工审核，确保信息准确可靠。'
+        : 'If you know of an AI platform offering free credits, help us expand our database. Every submission is manually reviewed to ensure accuracy and reliability.'
+      }
+    </p>
+    <a href="mailto:submit@aifreeplan.com?subject={isZh ? '%E6%8F%90%E4%BA%A4%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90' : 'Tool+Recommendation'}&body={isZh ? '%E5%B7%A5%E5%85%B7%E5%90%8D%E7%A7%B0%EF%BC%9A%0A%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%85%8D%E8%B4%B9%E9%A2%9D%E5%BA%A6%EF%BC%9A%0A%E5%A4%87%E6%B3%A8%EF%BC%9A' : 'Tool+Name%3A%0AURL%3A%0AFree+Quota%3A%0ANotes%3A'}"
+       class="inline-flex items-center gap-2 px-8 py-3 bg-[#10B981] text-white rounded-lg hover:bg-[#059669] transition-colors font-medium shadow-sm">
+      {isZh ? '📩 提交推荐' : '📩 Submit Recommendation'}
+    </a>
+  </div>
+</section>
+
+<ConversionBanner lang={lang} />
+
 </BaseLayout>
