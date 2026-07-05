@@ -39,9 +39,7 @@ jobs:
       - name: Validate content quality
         run: node scripts/validate-content.mjs
 
-      - name: Deploy to deploy-static branch
-        env:
-          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+      - name: Deploy to main branch
         run: |
           git config user.name "bot"
           git config user.email "bot@aifreeplan.com"
@@ -53,5 +51,5 @@ jobs:
           cp _redirects . 2>/dev/null || true
 
           git add -A
-          git commit -m "deploy: automatic build $(date +%Y-%m-%d-%H%M)"
-          git push origin main
+          git commit -m "deploy: automatic build $(date +%Y-%m-%d-%H%M)" || echo "Nothing to commit"
+          git push origin main --force
