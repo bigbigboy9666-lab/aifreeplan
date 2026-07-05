@@ -46,7 +46,7 @@ jobs:
           git config user.name "bot"
           git config user.email "bot@aifreeplan.com"
 
-          # Copy dist to root
+          # Copy dist to root so CF Pages picks it up from main
           cp -r dist/* .
           cp zh/index.html index.html 2>/dev/null || true
           cp _headers . 2>/dev/null || true

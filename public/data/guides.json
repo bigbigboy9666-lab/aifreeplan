@@ -171,7 +171,8 @@
       "title_zh": "LLM Admin免费攻略：一套API调用80+模型的本地化LLM统一网关",
       "title_en": "LLM Admin Free Guide: Unified LLM Gateway with 80+ Models",
       "excerpt_zh": "开源免费的本地化LLM统一网关，兼容OpenAI与Anthropic双协议，80+模型智能路由，桌面端管理界面，数据本地处理零泄露。",
-      "excerpt_en": "Open-source free LLM gateway, dual OpenAI+Anthropic protocol support, 80+ models smart routing, desktop dashboard, local data processing."
+      "excerpt_en": "Open-source free LLM gateway, dual OpenAI+Anthropic protocol support, 80+ models smart routing, desktop dashboard, local data processing.",
+      "pinned": false
     },
     {
       "slug": "mistral-ai-studio-free-api-guide",
@@ -241,10 +242,13 @@
     },
     {
       "slug": "rime-ai-voice-free-guide-2026",
-      "title_zh": "Rime AI Voice免费攻略：$100免费额度，94款精品音色，多语言TTS",
-      "title_en": "Rime AI Voice Free Guide: $100 Free Credits, 94 Premium Voices, Multilingual TTS",
-      "excerpt_zh": "Rime AI Voice提供$100免费额度，94款高品质AI语音，支持多语言TTS合成。",
-      "excerpt_en": "Rime AI Voice offers $100 free credits, 94 premium AI voices with multilingual TTS synthesis."
+      "title_zh": "Rime AI Voice免费攻略：注册即送$100额度，94种旗舰声音+多语言代码切换，企业级TTS语音合成工具完全免费使用指南",
+      "title_en": "Rime AI Voice Free Guide 2026: $100 Free Credits, 94 Premium Voices & Multilingual Code-Switching",
+      "description_zh": "Rime AI Voice免费使用教程，包含$100免费额度、94种声音、多语言代码切换等详细信息。",
+      "description_en": "Rime AI Voice free usage guide with $100 free credits, 94 premium voices, and multilingual code-switching.",
+      "category": "audio",
+      "published": "2026-06-29",
+      "featured": false
     },
     {
       "slug": "trae-free-ai-coding",
