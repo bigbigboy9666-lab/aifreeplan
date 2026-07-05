@@ -39,32 +39,19 @@ jobs:
       - name: Validate content quality
         run: node scripts/validate-content.mjs
 
-      - name: Deploy to deploy-static branch
+      - name: Deploy to main branch
         env:
-          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "bot"
           git config user.email "bot@aifreeplan.com"
 
-          if [ -n "$DEPLOY_KEY" ]; then
-            REPO_URL=$(git remote get-url origin | sed "s|https://|https://x-access-token:${DEPLOY_KEY}@|")
-            git remote set-url origin "$REPO_URL"
-          fi
-
-          cp -r dist /tmp/aifreeplan-dist
-
-          git fetch origin deploy-static 2>/dev/null || true
-
-          git checkout deploy-static 2>/dev/null || git checkout -b deploy-static
-
-          # Clean old files but keep .git
-          find . -maxdepth 1 -not -name '.git' -not -name '.' -not -name '.github' -exec rm -rf {} + 2>/dev/null || true
-
-          cp -r /tmp/aifreeplan-dist/* .
-
-          # Root index for Cloudflare Pages
+          # Copy dist to root so CF Pages picks it up from main
+          cp -r dist/* .
           cp zh/index.html index.html 2>/dev/null || true
+          cp _headers . 2>/dev/null || true
+          cp _redirects . 2>/dev/null || true
 
           git add -A
-          git commit -m "deploy: automatic build $(date +%Y-%m-%d-%H%M)"
-          git push origin deploy-static
+          git commit -m "deploy: automatic build $(date +%Y-%m-%d-%H%M)" || echo "Nothing to commit"
+          git push origin main --force
