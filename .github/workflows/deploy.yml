@@ -40,11 +40,13 @@ jobs:
         run: node scripts/validate-content.mjs
 
       - name: Deploy to main branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "bot"
           git config user.email "bot@aifreeplan.com"
 
-          # Push dist directly to main branch so CF Pages picks it up
+          # Copy dist to root
           cp -r dist/* .
           cp zh/index.html index.html 2>/dev/null || true
           cp _headers . 2>/dev/null || true
