@@ -21,10 +21,10 @@ const siteUrl = 'https://aifreeplan.com';
 const currentPath = Astro.url.pathname;
 // Ensure trailing slash for consistency
 const normalizedPath = currentPath.endsWith('/') ? currentPath : currentPath + '/';
-// Strip lang prefix for cross-language matching
-const pathWithoutLang = normalizedPath.replace(/^\/(zh|en)\//, '/').replace(/^\/$/, '/');
-const zhUrl = `${siteUrl}/zh/${pathWithoutLang}/`;
-const enUrl = `${siteUrl}/en/${pathWithoutLang}/`;
+// Strip lang prefix for cross-language matching: /zh/tools/ -> tools/
+const pathWithoutLang = normalizedPath.replace(/^\/(zh|en)\//, '');
+const zhUrl = `${siteUrl}/zh/${pathWithoutLang}`;
+const enUrl = `${siteUrl}/en/${pathWithoutLang}`;
 // Determine if this is homepage
 const isHomepage = normalizedPath === '/zh/' || normalizedPath === '/en/';
 const isToolPage = normalizedPath.includes('/tools/');
