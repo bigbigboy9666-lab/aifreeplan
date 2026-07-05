@@ -167,6 +167,13 @@
       "excerpt_en": "SWE-Bench Pro 58.6 score, #1 open source. 13-hour continuous coding with 300 sub-agents"
     },
     {
+      "slug": "llm-admin-free-unified-gateway",
+      "title_zh": "LLM Admin免费攻略：一套API调用80+模型的本地化LLM统一网关",
+      "title_en": "LLM Admin Free Guide: Unified LLM Gateway with 80+ Models",
+      "excerpt_zh": "开源免费的本地化LLM统一网关，兼容OpenAI与Anthropic双协议，80+模型智能路由，桌面端管理界面，数据本地处理零泄露。",
+      "excerpt_en": "Open-source free LLM gateway, dual OpenAI+Anthropic protocol support, 80+ models smart routing, desktop dashboard, local data processing."
+    },
+    {
       "slug": "mistral-ai-studio-free-api-guide",
       "title_zh": "Mistral AI Studio 免费 API 额度与 OCR4 多语言文档识别完全攻略",
       "title_en": "Mistral AI Studio Free API Credits & OCR4 Multilingual Document Recognition Guide",
@@ -233,18 +240,11 @@
       "date": "2026-06-23"
     },
     {
-      "slug": "rime-ai-voice-free-guide",
-      "title_zh": "Rime AI Voice 免费攻略：$100额度，94款精品语音，多语言TTS",
-      "title_en": "Rime AI Voice Free Guide: $100 Credits, 94 Premium Voices, Multilingual TTS",
-      "excerpt_zh": "Rime AI Voice提供$100免费额度，94款高品质语音，支持多语言TTS合成。",
-      "excerpt_en": "Rime AI Voice offers $100 free credits, 94 high-quality voices with multilingual TTS synthesis.",
-      "category": "audio",
-      "tags": [
-        "tts",
-        "ai-voice",
-        "free-credits"
-      ],
-      "date": "2026-06-23"
+      "slug": "rime-ai-voice-free-guide-2026",
+      "title_zh": "Rime AI Voice免费攻略：$100免费额度，94款精品音色，多语言TTS",
+      "title_en": "Rime AI Voice Free Guide: $100 Free Credits, 94 Premium Voices, Multilingual TTS",
+      "excerpt_zh": "Rime AI Voice提供$100免费额度，94款高品质AI语音，支持多语言TTS合成。",
+      "excerpt_en": "Rime AI Voice offers $100 free credits, 94 premium AI voices with multilingual TTS synthesis."
     },
     {
       "slug": "trae-free-ai-coding",
