@@ -315,7 +315,22 @@
       "date": "2026-07-06",
       "category": "productivity",
       "pinned": false
+    },
+    {
+      "slug": "ego-lite-free-ai-agent-browser-2026",
+      "title_zh": "Ego Lite 免费攻略：Citro Labs 专为 AI Agent 设计的 Chromium 浏览器",
+      "title_en": "Ego Lite Free Guide: Citro Labs AI Agent Browser",
+      "excerpt_zh": "Citro Labs 推出 Ego Lite，一款专为 AI Agent 设计的 Chromium 浏览器。完全免费开源，支持 task space 隔离、登录态继承、语义+视觉+CDP 多模态操作。",
+      "excerpt_en": "Citro Labs released Ego Lite, a Chromium browser for AI Agents. Free and open-source with task space isolation, login inheritance, and multimodal operations.",
+      "date": "2026-07-06",
+      "category": "productivity",
+      "tags": [
+        "ego-lite",
+        "ai-agent",
+        "browser",
+        "free-tool"
+      ]
     }
   ],
-  "updatedAt": "2026-07-06T09:50:00Z"
+  "updatedAt": "2026-07-06T10:00:00Z"
 }
