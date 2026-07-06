@@ -121,21 +121,12 @@ const canonicalUrl = `${siteUrl}/${lang}/`;
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-    {pinnedGuides.map((guide: any) => (
+    {Array.from([...pinnedGuides, ...recentGuides]).slice(0, 16).map((guide: any) => (
       <GuideCard
         title={isZh ? guide.title_zh : guide.title_en}
         excerpt={isZh ? guide.excerpt_zh : guide.excerpt_en}
         href={`/${lang}/guides/${guide.slug}`}
-        pinned={true}
-        lang={lang}
-      />
-    ))}
-    {recentGuides.map((guide: any) => (
-      <GuideCard
-        title={isZh ? guide.title_zh : guide.title_en}
-        excerpt={isZh ? guide.excerpt_zh : guide.excerpt_en}
-        href={`/${lang}/guides/${guide.slug}`}
-        pinned={false}
+        pinned={guide.pinned}
         lang={lang}
       />
     ))}
