@@ -2,7 +2,7 @@ name: Deploy to aifreeplan.com
 
 on:
   push:
-    branches: [deploy-static]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
