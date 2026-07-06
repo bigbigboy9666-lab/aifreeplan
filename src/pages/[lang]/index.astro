@@ -86,20 +86,28 @@ const canonicalUrl = `${siteUrl}/${lang}/`;
   <div class="max-w-6xl mx-auto px-6 py-8">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
       <div class="text-center">
-        <div class="text-3xl md:text-4xl font-bold text-[#111827] mb-1">{tools.length}</div>
-        <div class="text-sm text-[#9CA3AF]">{isZh ? '收录工具' : 'Tools Listed'}</div>
+        <a href={`/${lang}/tools`} class="inline-block">
+          <div class="text-3xl md:text-4xl font-bold text-[#111827] mb-1">{tools.length}</div>
+          <div class="text-sm text-[#9CA3AF]">{isZh ? '收录工具' : 'Tools Listed'}</div>
+        </a>
       </div>
       <div class="text-center">
-        <div class="text-3xl md:text-4xl font-bold text-[#10B981] mb-1">{categories.length}</div>
-        <div class="text-sm text-[#9CA3AF]">{isZh ? '工具分类' : 'Categories'}</div>
+        <a href={`/${lang}/tools`} class="inline-block">
+          <div class="text-3xl md:text-4xl font-bold text-[#10B981] mb-1">{categories.length}</div>
+          <div class="text-sm text-[#9CA3AF]">{isZh ? '工具分类' : 'Categories'}</div>
+        </a>
       </div>
       <div class="text-center">
-        <div class="text-3xl md:text-4xl font-bold text-[#6366F1] mb-1">{tools.filter((t: any) => t.freeTier?.refreshPeriod === 'daily').length}</div>
-        <div class="text-sm text-[#9CA3AF]">{isZh ? '每日刷新额度' : 'Daily Refresh'}</div>
+        <a href={`/${lang}/tools`} class="inline-block">
+          <div class="text-3xl md:text-4xl font-bold text-[#6366F1] mb-1">{tools.filter((t: any) => t.freeTier?.refreshPeriod === 'daily').length}</div>
+          <div class="text-sm text-[#9CA3AF]">{isZh ? '每日刷新额度' : 'Daily Refresh'}</div>
+        </a>
       </div>
       <div class="text-center">
-        <div class="text-3xl md:text-4xl font-bold text-[#F59E0B] mb-1">{tools.filter((t: any) => !t.freeTier?.requiresCreditCard).length}</div>
-        <div class="text-sm text-[#9CA3AF]">{isZh ? '免信用卡' : 'No CC Needed'}</div>
+        <a href={`/${lang}/tools`} class="inline-block">
+          <div class="text-3xl md:text-4xl font-bold text-[#F59E0B] mb-1">{tools.filter((t: any) => !t.freeTier?.requiresCreditCard).length}</div>
+          <div class="text-sm text-[#9CA3AF]">{isZh ? '免信用卡' : 'No CC Needed'}</div>
+        </a>
       </div>
     </div>
   </div>
