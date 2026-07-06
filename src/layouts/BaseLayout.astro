@@ -119,29 +119,29 @@ const isCategoryPage = normalizedPath.match(/\(zh|en\)\(llm|image|video|coding|a
     )}
   </head>
   <body class="min-h-screen flex flex-col">
-    <header class="bg-white border-b border-border sticky top-0 z-50">
-      <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-        <a href={`/${lang}`} class="text-xl font-bold text-primary">
-          🤖 AI Free Plan
+    <header class="redesign-nav">
+      <nav class="redesign-nav-inner">
+        <a href={`/${lang}`} class="redesign-nav-logo">
+          🤖 AI<span>Free</span>Plan
         </a>
-        <div class="flex items-center gap-4">
-          <a href={`/${lang}`} class="text-sm text-text hover:text-primary">
+        <div class="redesign-nav-links">
+          <a href={`/${lang}`}>
             {lang === 'zh' ? '首页' : 'Home'}
           </a>
-          <a href={`/${lang}/guides`} class="text-sm text-text hover:text-primary">
+          <a href={`/${lang}/guides`}>
             {lang === 'zh' ? '攻略' : 'Guides'}
           </a>
-          <a href={`/${lang}/tools`} class="text-sm text-text hover:text-primary">
+          <a href={`/${lang}/tools`}>
             {lang === 'zh' ? '工具' : 'Tools'}
           </a>
-          <a href={`/${lang === 'zh' ? 'en' : 'zh'}`} class="text-sm text-text hover:text-primary">
-            {lang === 'zh' ? 'English' : '中文'}
+          <a href={`/${lang === 'zh' ? 'en' : 'zh'}`} class="redesign-nav-lang">
+            {lang === 'zh' ? 'EN' : '中文'}
           </a>
         </div>
       </nav>
     </header>
 
-    <main class="flex-1 max-w-6xl mx-auto px-4 py-8 w-full">
+    <main class="flex-1 w-full">
       <slot />
     </main>
 
