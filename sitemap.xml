@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://aifreeplan.com/en/agent/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://aifreeplan.com/en/ai-assistant/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aifreeplan.com/en/audio/</loc>
+    <loc>https://aifreeplan.com/en/api-platform/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aifreeplan.com/en/chat/</loc>
+    <loc>https://aifreeplan.com/en/audio/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -20506,6 +20501,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/en/guides/amazon-q-developer-free-tier-2026/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/en/guides/apfel-macos-free-on-device-ai-2026/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -20516,12 +20516,52 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/en/guides/cerebras-free-api-guide/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/guides/coze-free-unlimited-agent-2026/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/en/guides/deepsider-antigravity-free-gemini/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/en/guides/dumate-baidu-desktop-ai-free-guide-2026/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/guides/ego-lite-free-ai-agent-browser-2026/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/guides/free-ai-coding-tools-comparison/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/guides/free-ai-image-generator-tools/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/en/guides/free-ai-llm-api-platforms-comparison/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/guides/free-ai-subtitle-generator-tools/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/guides/free-ai-video-generation-tools/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -20551,7 +20591,22 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/en/guides/llm-admin-free-unified-gateway/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/guides/mistral-ai-studio-free-api-guide/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/en/guides/monkeyCode-free-ai-coding-platform-2026/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/guides/nano-banana-2-lite-free-image-generation/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -20562,6 +20617,26 @@
   </url>
   <url>
     <loc>https://aifreeplan.com/en/guides/qoderwork-free-pro-2026/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/guides/qwen3-6-free-unlimited-2026/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/guides/rime-ai-voice-free-guide-2026/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/guides/seedance-2.0-free-unlimited-2026/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/guides/stablediffusion-free-local-deploy-2026/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -21061,22 +21136,17 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://aifreeplan.com/zh/agent/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://aifreeplan.com/zh/ai-assistant/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aifreeplan.com/zh/audio/</loc>
+    <loc>https://aifreeplan.com/zh/api-platform/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aifreeplan.com/zh/chat/</loc>
+    <loc>https://aifreeplan.com/zh/audio/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -41566,6 +41636,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/zh/guides/amazon-q-developer-free-tier-2026/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/zh/guides/apfel-macos-free-on-device-ai-2026/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -41576,12 +41651,52 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/zh/guides/cerebras-free-api-guide/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/guides/coze-free-unlimited-agent-2026/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/zh/guides/deepsider-antigravity-free-gemini/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/zh/guides/dumate-baidu-desktop-ai-free-guide-2026/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/guides/ego-lite-free-ai-agent-browser-2026/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/guides/free-ai-coding-tools-comparison/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/guides/free-ai-image-generator-tools/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/zh/guides/free-ai-llm-api-platforms-comparison/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/guides/free-ai-subtitle-generator-tools/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/guides/free-ai-video-generation-tools/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -41611,7 +41726,22 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/zh/guides/llm-admin-free-unified-gateway/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/guides/mistral-ai-studio-free-api-guide/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/zh/guides/monkeyCode-free-ai-coding-platform-2026/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/guides/nano-banana-2-lite-free-image-generation/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -41622,6 +41752,26 @@
   </url>
   <url>
     <loc>https://aifreeplan.com/zh/guides/qoderwork-free-pro-2026/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/guides/qwen3-6-free-unlimited-2026/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/guides/rime-ai-voice-free-guide-2026/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/guides/seedance-2.0-free-unlimited-2026/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/guides/stablediffusion-free-local-deploy-2026/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
