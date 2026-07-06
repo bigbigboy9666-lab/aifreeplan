@@ -22,7 +22,7 @@ const refreshLabel: Record<string, string> = {
 };
 ---
 
-<article class="flex flex-col bg-white rounded-xl border border-[#E5E7EB] p-5 hover:shadow-md hover:border-[#10B981]/30 transition-all duration-200 h-full">
+<article class="flex flex-col bg-white rounded-xl border border-[#E5E7EB] p-5 hover:shadow-md hover:border-[#10B981]/30 transition-all duration-200 h-full" style="overflow: visible;">
   <div class="mb-3">
     <div class="flex items-start justify-between mb-2">
       <h3 class="text-lg font-bold leading-tight">
@@ -35,7 +35,7 @@ const refreshLabel: Record<string, string> = {
         {tool.rating}
       </span>
     </div>
-    <span class="inline-block px-2.5 py-1 text-xs font-medium rounded-md bg-[#ECFDF5] text-[#059669]">
+    <span class="inline-block px-2.5 py-1 text-xs font-medium rounded-md bg-[#D1FAE5] text-[#065F46]">
       {category}
     </span>
   </div>
@@ -63,7 +63,7 @@ const refreshLabel: Record<string, string> = {
 
   <a
     href={`/${lang}/tools/${tool.id}`}
-    class="mt-auto block text-center bg-[#10B981] text-white text-sm font-medium rounded-lg px-4 py-2.5 hover:bg-[#059669] transition-colors"
+    class="mt-auto block text-center bg-[#047857] text-white text-sm font-medium rounded-lg px-4 py-2.5 hover:bg-[#065F46] transition-colors"
   >
     {lang === 'zh' ? '查看详情' : 'View Details'}
   </a>

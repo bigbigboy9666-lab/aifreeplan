@@ -1,8 +1,5 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import ToolCard from '../../components/ToolCard.astro';
-import GuideCard from '../../components/GuideCard.astro';
-import ConversionBanner from '../../components/ConversionBanner.astro';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
@@ -25,9 +22,18 @@ const categories = categoriesData.categories || categoriesData;
 const guidesData = JSON.parse(readFileSync(resolve(process.cwd(), 'public/data/guides.json'), 'utf-8'));
 const guides = guidesData.guides || [];
 
-const topTools = tools.sort((a: any, b: any) => (b.rating || 0) - (a.rating || 0)).slice(0, 12);
 const pinnedGuides = guides.filter((g: any) => g.pinned);
-const recentGuides = guides.filter((g: any) => !g.pinned);
+const recentGuides = guides.filter((g: any) => !g.pinned).sort((a: any, b: any) => {
+  const da = a.date || '';
+  const db = b.date || '';
+  return db.localeCompare(da);
+}).slice(0, 6);
+
+const llmTools = tools
+  .filter((t: any) => t.category === 'llm')
+  .sort((a: any, b: any) => (b.rating || 0) - (a.rating || 0));
+
+const nonLlmCategories = categories.filter((c: any) => c.id !== 'llm');
 
 const isZh = lang === 'zh';
 const title = isZh
@@ -38,6 +44,24 @@ const description = isZh
   : "The world's first AI free tier aggregation platform. Compare free credits, usage limits, and trial details across 91 AI tools.";
 
 const canonicalUrl = `${siteUrl}/${lang}/`;
+
+const refreshLabels: Record<string, string> = {
+  daily: isZh ? '每日' : 'Daily',
+  weekly: isZh ? '每周' : 'Weekly',
+  monthly: isZh ? '每月' : 'Monthly',
+  'one-time': isZh ? '一次性' : 'One-time',
+  unknown: isZh ? '未知' : 'Unknown',
+  unlimited: isZh ? '永久' : 'Permanent',
+  none: isZh ? '免费' : 'Free',
+};
+
+function getCreditText(tool: any): string {
+  const credits = tool.freeTier?.credits ?? 0;
+  const unit = tool.freeTier?.creditUnit || '';
+  if (credits >= 999999) return isZh ? '∞ 无限' : '∞ Unlimited';
+  if (unit) return `${credits} ${unit}`;
+  return String(credits);
+}
 ---
 
 <BaseLayout
@@ -47,205 +71,502 @@ const canonicalUrl = `${siteUrl}/${lang}/`;
   lang={lang}
 >
 
-<!-- ========== HERO SECTION ========== -->
-<section class="relative overflow-hidden bg-white">
-  <div class="absolute inset-0 bg-gradient-to-br from-[#ECFDF5] via-white to-[#EEF2FF]"></div>
-  <div class="relative max-w-6xl mx-auto px-6 pt-20 pb-16 md:pt-28 md:pb-24 text-center">
-    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#ECFDF5] border border-[#10B981]/20 text-[#059669] text-sm font-medium mb-8">
-      <span class="w-2 h-2 rounded-full bg-[#10B981] animate-pulse"></span>
-      {isZh ? `${tools.length}+ 款工具 · 每周更新` : `${tools.length}+ Tools · Updated Weekly`}
-    </div>
-
-    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-[#111827] mb-6 max-w-4xl mx-auto">
-      {isZh
-        ? 'AI免费额度，一站式对比'
-        : 'All AI Free Tiers, One Place'}
-    </h1>
-
-    <p class="text-lg md:text-xl text-[#6B7280] mb-10 max-w-2xl mx-auto leading-relaxed">
-      {isZh
-        ? `汇总 ${tools.length}+ 款AI工具的免费额度、使用限制和白嫖攻略。<br/>别再为选哪个AI工具纠结了，一张表帮你搞定。`
-        : `Compare free credits, limits, and trial details across ${tools.length}+ AI tools.<br/>Stop guessing — find the best free AI tools with one click.`
-      }
-    </p>
-
-    <div class="flex flex-wrap justify-center gap-2.5 max-w-3xl mx-auto">
-      {categories.map((cat: any) => (
-        <a href={`/${lang}/${cat.id}`}>
-          <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white border border-[#E5E7EB] text-sm text-[#374151] hover:border-[#10B981] hover:text-[#059669] hover:shadow-sm transition-all cursor-pointer">
-            {cat.icon} {isZh ? cat.nameZh : cat.nameEn}
-          </span>
-        </a>
-      ))}
-    </div>
-  </div>
-</section>
-
-<!-- ========== STATS BAR ========== -->
-<section class="border-y border-[#F3F4F6] bg-white">
-  <div class="max-w-6xl mx-auto px-6 py-8">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-      <div class="text-center">
-        <div class="text-3xl md:text-4xl font-bold text-[#111827] mb-1">{tools.length}</div>
-        <div class="text-sm text-[#9CA3AF]">{isZh ? '收录工具' : 'Tools Listed'}</div>
-      </div>
-      <div class="text-center">
-        <div class="text-3xl md:text-4xl font-bold text-[#10B981] mb-1">{categories.length}</div>
-        <div class="text-sm text-[#9CA3AF]">{isZh ? '工具分类' : 'Categories'}</div>
-      </div>
-      <div class="text-center">
-        <div class="text-3xl md:text-4xl font-bold text-[#6366F1] mb-1">{tools.filter((t: any) => t.freeTier?.refreshPeriod === 'daily').length}</div>
-        <div class="text-sm text-[#9CA3AF]">{isZh ? '每日刷新额度' : 'Daily Refresh'}</div>
-      </div>
-      <div class="text-center">
-        <div class="text-3xl md:text-4xl font-bold text-[#F59E0B] mb-1">{tools.filter((t: any) => !t.freeTier?.requiresCreditCard).length}</div>
-        <div class="text-sm text-[#9CA3AF]">{isZh ? '免信用卡' : 'No CC Needed'}</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== GUIDES SECTION (4 ROWS) ========== -->
-<section class="max-w-6xl mx-auto px-6 py-16 md:py-20">
-  <div class="flex items-end justify-between mb-10">
+<!-- ===== SECTION 1: FREE LLMs (HERO) ===== -->
+<section style="max-width: 1200px; margin: 0 auto; padding: 40px 24px 32px;">
+  <div style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
     <div>
-      <h2 class="text-2xl md:text-3xl font-bold text-[#111827] mb-2">
-        {isZh ? '🔥 最新攻略' : '📚 Latest Guides'}
-      </h2>
-      <p class="text-[#6B7280]">{isZh ? '手把手教你白嫖AI工具，省下的都是真金白银' : 'Step-by-step guides to getting AI tools for free'}</p>
-    </div>
-    <a href={`/${lang}/guides`} class="text-[#10B981] font-medium hover:text-[#059669] transition-colors text-sm flex items-center gap-1">
-      {isZh ? '查看全部' : 'View All'}
-      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-    </a>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-    {pinnedGuides.map((guide: any) => (
-      <GuideCard
-        title={isZh ? guide.title_zh : guide.title_en}
-        excerpt={isZh ? guide.excerpt_zh : guide.excerpt_en}
-        href={`/${lang}/guides/${guide.slug}`}
-        pinned={true}
-        lang={lang}
-      />
-    ))}
-    {recentGuides.map((guide: any) => (
-      <GuideCard
-        title={isZh ? guide.title_zh : guide.title_en}
-        excerpt={isZh ? guide.excerpt_zh : guide.excerpt_en}
-        href={`/${lang}/guides/${guide.slug}`}
-        pinned={false}
-        lang={lang}
-      />
-    ))}
-  </div>
-</section>
-
-<!-- ========== TOP FREE TOOLS ========== -->
-<section class="bg-[#F9FAFB] border-y border-[#F3F4F6]">
-  <div class="max-w-6xl mx-auto px-6 py-16 md:py-20">
-    <div class="flex items-end justify-between mb-10">
-      <div>
-        <h2 class="text-2xl md:text-3xl font-bold text-[#111827] mb-2">
-          {isZh ? '⭐ 热门免费工具' : '⭐ Top Free Tools'}
-        </h2>
-        <p class="text-[#6B7280]">{isZh ? '按评分排序，帮你快速找到最好用的免费工具' : 'Sorted by rating — find the best free tools fast'}</p>
-      </div>
-      <a href={`/${lang}/tools`} class="text-[#10B981] font-medium hover:text-[#059669] transition-colors text-sm flex items-center gap-1">
-        {isZh ? '查看全部' : 'View All'}
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-      </a>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-      {topTools.map((tool: any) => (
-        <ToolCard tool={tool} lang={lang} />
-      ))}
-    </div>
-  </div>
-</section>
-
-<!-- ========== CATEGORIES ========== -->
-<section class="max-w-6xl mx-auto px-6 py-16 md:py-20">
-  <div class="text-center mb-10">
-    <h2 class="text-2xl md:text-3xl font-bold text-[#111827] mb-2">
-      {isZh ? '按分类探索' : 'Browse by Category'}
-    </h2>
-    <p class="text-[#6B7280]">{isZh ? '找到适合你需求的AI工具类别' : 'Find the AI tool category that fits your needs'}</p>
-  </div>
-
-  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-    {categories.map((cat: any) => (
-      <a href={`/${lang}/${cat.id}`}
-         class="group bg-white rounded-xl p-5 border border-[#E5E7EB] hover:border-[#10B981]/40 hover:shadow-md transition-all duration-200 flex flex-col items-center text-center">
-        <div class="text-3xl mb-2 group-hover:scale-110 transition-transform">{cat.icon}</div>
-        <h3 class="text-sm font-bold text-[#111827] group-hover:text-[#059669] transition-colors mb-0.5">
-          {isZh ? cat.nameZh : cat.nameEn}
-        </h3>
-        <p class="text-xs text-[#9CA3AF]">{cat.count} {isZh ? '个工具' : 'tools'}</p>
-      </a>
-    ))}
-  </div>
-</section>
-
-<!-- ========== WHY AIFREEPLAN ========== -->
-<section class="bg-[#111827] text-white">
-  <div class="max-w-6xl mx-auto px-6 py-16 md:py-20">
-    <div class="text-center mb-12">
-      <h2 class="text-2xl md:text-3xl font-bold mb-3">
-        {isZh ? '为什么要用 AIFreePlan？' : 'Why AIFreePlan?'}
-      </h2>
-      <p class="text-[#9CA3AF] max-w-xl mx-auto">
-        {isZh ? '我们帮你省下选工具的时间，让你把精力放在真正重要的事上' : 'We save you time picking tools so you can focus on what matters'}
+      <h1 style="font-size: 28px; font-weight: 700; color: var(--ink); letter-spacing: -0.02em; margin: 0 0 4px;">
+        {isZh ? '免费大模型' : 'Free Large Language Models'}
+      </h1>
+      <p style="font-size: 15px; color: var(--ink-secondary); margin: 0;">
+        {isZh ? `${llmTools.length}款免费AI大模型，无需信用卡，注册即用` : `${llmTools.length} free LLMs, no credit card required`}
       </p>
     </div>
+    <a href={`/${lang}/llm`} style="font-size: 14px; color: var(--accent); text-decoration: none; font-weight: 500;">
+      {isZh ? '查看全部 →' : 'View All →'}
+    </a>
+  </div>
 
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-[#1F2937] rounded-xl p-6 border border-[#374151]">
-        <div class="w-10 h-10 rounded-lg bg-[#10B981]/20 flex items-center justify-center mb-4">
-          <span class="text-xl">🔍</span>
-        </div>
-        <h3 class="text-lg font-bold mb-2">{isZh ? '额度透明' : 'Transparent Credits'}</h3>
-        <p class="text-[#9CA3AF] text-sm leading-relaxed">{isZh ? '每个工具的免费额度、刷新周期、水印、商用权限全部透明展示，不玩文字游戏。' : 'Every tool\'s free tier, refresh cycle, watermark policy, and commercial use rights — all clearly displayed.'}</p>
-      </div>
-      <div class="bg-[#1F2937] rounded-xl p-6 border border-[#374151]">
-        <div class="w-10 h-10 rounded-lg bg-[#6366F1]/20 flex items-center justify-center mb-4">
-          <span class="text-xl">✅</span>
-        </div>
-        <h3 class="text-lg font-bold mb-2">{isZh ? '每周验证' : 'Weekly Verified'}</h3>
-        <p class="text-[#9CA3AF] text-sm leading-relaxed">{isZh ? '自动化爬虫每周核对各平台定价页面，发现变更立即更新，保证信息不过时。' : 'Automated scrapers verify pricing pages weekly. Changes are detected and updated automatically.'}</p>
-      </div>
-      <div class="bg-[#1F2937] rounded-xl p-6 border border-[#374151]">
-        <div class="w-10 h-10 rounded-lg bg-[#F59E0B]/20 flex items-center justify-center mb-4">
-          <span class="text-xl">💰</span>
-        </div>
-        <h3 class="text-lg font-bold mb-2">{isZh ? '帮你省钱' : 'Save Money'}</h3>
-        <p class="text-[#9CA3AF] text-sm leading-relaxed">{isZh ? '同类工具横向对比，找到最适合你需求的免费方案，不再为不需要的功能付费。' : 'Side-by-side comparisons help you find the best free plan for your needs — no more paying for features you don\'t use.'}</p>
-      </div>
+  {/* Filter pills */}
+  <div style="display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap;">
+    <span style="padding: 6px 16px; font-size: 13px; font-weight: 500; border-radius: 20px; border: 1px solid var(--accent); background: var(--accent-bg); color: var(--accent);">
+      {isZh ? '全部' : 'All'}
+    </span>
+    <span style="padding: 6px 16px; font-size: 13px; font-weight: 500; border-radius: 20px; border: 1px solid var(--border); background: var(--bg); color: var(--ink-secondary); cursor: pointer;">
+      {isZh ? '不限额度' : 'Unlimited'}
+    </span>
+    <span style="padding: 6px 16px; font-size: 13px; font-weight: 500; border-radius: 20px; border: 1px solid var(--border); background: var(--bg); color: var(--ink-secondary); cursor: pointer;">
+      {isZh ? '每日刷新' : 'Daily Refresh'}
+    </span>
+    <span style="padding: 6px 16px; font-size: 13px; font-weight: 500; border-radius: 20px; border: 1px solid var(--border); background: var(--bg); color: var(--ink-secondary); cursor: pointer;">
+      {isZh ? '支持中文' : 'Chinese Support'}
+    </span>
+  </div>
+
+  {/* LLM cards grid */}
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;">
+    {llmTools.slice(0, 12).map((tool: any) => {
+      const name = lang === 'zh' ? tool.name : tool.nameEn;
+      const desc = lang === 'zh' ? tool.description : tool.descriptionEn;
+      const credits = tool.freeTier?.credits ?? 0;
+      const unit = tool.freeTier?.creditUnit || '';
+      const refresh = tool.freeTier?.refreshPeriod || 'unknown';
+      const rating = tool.rating || 0;
+      const requiresCC = tool.freeTier?.requiresCreditCard;
+      const rl = refreshLabels[refresh] || refreshLabels.unknown;
+      const creditText = credits >= 999999 ? (isZh ? '∞ 无限' : '∞ Unlimited') :
+                         unit ? `${credits} ${unit}` :
+                         String(credits);
+      const initial = (name.charAt(0) || '?').toUpperCase();
+
+      return (
+        <a href={`/${lang}/tools/${tool.id}`}
+           class="llm-card">
+          <div class="llm-card-top">
+            <div class="llm-card-logo">{initial}</div>
+            <div class="llm-card-rating">★ {rating}</div>
+          </div>
+          <div class="llm-card-name">{name}</div>
+          <div class="llm-card-desc">{desc}</div>
+          <div class="llm-card-credits">
+            <span class="llm-credit-badge">🆓 {creditText}</span>
+            <span class="llm-refresh">{rl}</span>
+          </div>
+          {!requiresCC && (
+            <div class="llm-card-tags">
+              <span class="llm-tag free">{isZh ? '无需信用卡' : 'No CC'}</span>
+            </div>
+          )}
+        </a>
+      );
+    })}
+  </div>
+</section>
+
+<!-- ===== SECTION 2: GUIDES ===== -->
+<section class="section-guides">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2>{isZh ? '📚 最新攻略' : '📚 Latest Guides'}</h2>
+      <a href={`/${lang}/guides`} class="see-all">{isZh ? '查看全部 →' : 'View All →'}</a>
+    </div>
+
+    <div class="guide-list">
+      {[...pinnedGuides, ...recentGuides].slice(0, 6).map((guide: any) => {
+        const title = lang === 'zh' ? guide.title_zh : guide.title_en;
+        const excerpt = lang === 'zh' ? guide.excerpt_zh : guide.excerpt_en;
+        const cat = guide.category || '';
+        const date = guide.date || '';
+        const isPinned = guide.pinned;
+        return (
+          <a href={`/${lang}/guides/${guide.slug}`} class:list={['guide-card', isPinned && 'guide-card-pinned']}>
+            <div class="guide-card-meta">
+              {isPinned && <span class="guide-pin">⭐ {isZh ? '置顶推荐' : 'Pinned'}</span>}
+              {cat && <span class="guide-cat-badge">{cat}</span>}
+              {date && <span class="guide-date">{date}</span>}
+            </div>
+            <div class="guide-card-title">{title}</div>
+            <div class="guide-card-excerpt">{excerpt}</div>
+            <div class="guide-card-footer">{isZh ? '阅读全文' : 'Read More'} →</div>
+          </a>
+        );
+      })}
     </div>
   </div>
 </section>
 
-<!-- ========== SUBMIT CTA ========== -->
-<section class="bg-gradient-to-br from-[#ECFDF5] to-[#EEF2FF] py-16 md:py-20">
-  <div class="max-w-4xl mx-auto text-center px-6">
-    <h2 class="text-2xl md:text-3xl font-bold text-[#111827] mb-4">
-      {isZh ? '发现免费AI平台？提交推荐' : 'Know a Free AI Platform? Submit a Recommendation'}
-    </h2>
-    <p class="text-[#6B7280] mb-8 max-w-2xl mx-auto leading-relaxed">
-      {isZh
-        ? '如果你知道某个AI平台提供免费额度，欢迎提交推荐帮助我们完善数据库。每一条推荐都会经过人工审核，确保信息准确可靠。'
-        : 'If you know of an AI platform offering free credits, help us expand our database. Every submission is manually reviewed to ensure accuracy and reliability.'
-      }
-    </p>
-    <a href="mailto:submit@aifreeplan.com?subject={isZh ? '%E6%8F%90%E4%BA%A4%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90' : 'Tool+Recommendation'}&body={isZh ? '%E5%B7%A5%E5%85%B7%E5%90%8D%E7%A7%B0%EF%BC%9A%0A%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%85%8D%E8%B4%B9%E9%A2%9D%E5%BA%A6%EF%BC%9A%0A%E5%A4%87%E6%B3%A8%EF%BC%9A' : 'Tool+Name%3A%0AURL%3A%0AFree+Quota%3A%0ANotes%3A'}"
-       class="inline-flex items-center gap-2 px-8 py-3 bg-[#10B981] text-white rounded-lg hover:bg-[#059669] transition-colors font-medium shadow-sm">
-      {isZh ? '📩 提交推荐' : '📩 Submit Recommendation'}
-    </a>
-  </div>
+<!-- ===== SECTION 3: ALL TOOLS BY CATEGORY ===== -->
+<section class="section-categories">
+  <h2>{isZh ? '按分类浏览' : 'Browse by Category'}</h2>
+
+  {nonLlmCategories.map((cat: any) => {
+    const catId = cat.id;
+    const catTools = tools.filter((t: any) => t.category === catId)
+      .sort((a: any, b: any) => (b.rating || 0) - (a.rating || 0));
+    const catName = lang === 'zh' ? cat.zh : cat.en;
+
+    return (
+      <div class="category-block">
+        <div class="category-header">
+          <div class="category-title">
+            {cat.emoji} {catName}
+            <span class="category-count">({catTools.length} {isZh ? '个工具' : 'tools'})</span>
+          </div>
+          <a href={`/${lang}/${catId}`} class="category-link">{isZh ? '查看全部 →' : 'View All →'}</a>
+        </div>
+        <div class="category-tools">
+          {catTools.slice(0, 6).map((tool: any) => {
+            const name = lang === 'zh' ? tool.name : tool.nameEn;
+            const rating = tool.rating || 0;
+            const creditText = getCreditText(tool);
+            return (
+              <a href={`/${lang}/tools/${tool.id}`} class="mini-tool-card">
+                <div class="mini-tool-icon">{(name.charAt(0) || '?').toUpperCase()}</div>
+                <div class="mini-tool-info">
+                  <div class="mini-tool-name">{name}</div>
+                  <div class="mini-tool-credits">{creditText}</div>
+                </div>
+                <div class="mini-tool-rating">★{rating}</div>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    );
+  })}
 </section>
 
-<ConversionBanner lang={lang} />
+<!-- ===== FOOTER ===== -->
+<footer class="redesign-footer">
+  <p>© {new Date().getFullYear()} AI Free Plan. {isZh ? '免费AI工具大全，每日更新。' : 'Free AI tools directory, updated daily.'}</p>
+</footer>
+
+<!-- ===== REDISGN STYLES ===== -->
+<style is:global>
+  :root {
+    --bg: #FFFFFF;
+    --bg-secondary: #F9FAFB;
+    --bg-tertiary: #F3F4F6;
+    --ink: #111827;
+    --ink-secondary: #6B7280;
+    --ink-tertiary: #9CA3AF;
+    --accent: #10B981;
+    --accent-hover: #059669;
+    --accent-bg: #ECFDF5;
+    --accent-border: rgba(16, 185, 129, 0.15);
+    --border: #E5E7EB;
+    --purple: #6366F1;
+    --purple-bg: #EEF2FF;
+    --orange: #F59E0B;
+    --radius: 12px;
+    --radius-sm: 8px;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.06), 0 2px 4px -2px rgba(0,0,0,0.06);
+  }
+
+  /* LLM Cards */
+  .llm-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s;
+  }
+  .llm-card:hover {
+    border-color: var(--accent-border);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+  .llm-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+  .llm-card-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--accent-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+  .llm-card-rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--orange);
+  }
+  .llm-card-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .llm-card-desc {
+    font-size: 13px;
+    color: var(--ink-secondary);
+    line-height: 1.5;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 14px;
+  }
+  .llm-card-credits {
+    padding-top: 14px;
+    border-top: 1px solid var(--bg-tertiary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .llm-credit-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-bg);
+    padding: 3px 10px;
+    border-radius: 6px;
+  }
+  .llm-refresh {
+    font-size: 12px;
+    color: var(--ink-tertiary);
+  }
+  .llm-card-tags {
+    margin-top: 10px;
+  }
+  .llm-tag {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--bg-secondary);
+    color: var(--ink-secondary);
+    border: 1px solid var(--bg-tertiary);
+  }
+  .llm-tag.free {
+    background: var(--accent-bg);
+    color: var(--accent);
+    border-color: var(--accent-border);
+  }
+
+  /* Guides Section */
+  .section-guides {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .section-guides .section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 24px;
+  }
+  .section-guides .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .section-guides h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  .section-guides .see-all {
+    font-size: 14px;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .guide-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 16px;
+  }
+  .guide-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s;
+  }
+  .guide-card:hover {
+    box-shadow: var(--shadow-md);
+  }
+  .guide-card-pinned {
+    border: 2px solid var(--purple) !important;
+  }
+  .guide-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .guide-cat-badge {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 2px 10px;
+    border-radius: 4px;
+    background: var(--accent-bg);
+    color: var(--accent);
+  }
+  .guide-date {
+    font-size: 12px;
+    color: var(--ink-tertiary);
+  }
+  .guide-pin {
+    font-size: 12px;
+    color: var(--purple);
+    font-weight: 600;
+  }
+  .guide-card-title {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+  .guide-card-excerpt {
+    font-size: 13px;
+    color: var(--ink-secondary);
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex: 1;
+  }
+  .guide-card-footer {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--bg-tertiary);
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  /* Categories Section */
+  .section-categories {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 24px;
+  }
+  .section-categories h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 24px;
+    letter-spacing: -0.01em;
+  }
+  .category-block {
+    margin-bottom: 32px;
+  }
+  .category-block:last-child {
+    margin-bottom: 0;
+  }
+  .category-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--bg-tertiary);
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .category-title {
+    font-size: 17px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .category-count {
+    font-size: 13px;
+    color: var(--ink-tertiary);
+    font-weight: 400;
+  }
+  .category-link {
+    font-size: 13px;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .category-tools {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 10px;
+  }
+  .mini-tool-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.15s;
+  }
+  .mini-tool-card:hover {
+    border-color: var(--accent-border);
+    background: var(--bg-secondary);
+  }
+  .mini-tool-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background: var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+  .mini-tool-info { flex: 1; min-width: 0; }
+  .mini-tool-name {
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 1px;
+  }
+  .mini-tool-credits {
+    font-size: 12px;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .mini-tool-rating {
+    font-size: 12px;
+    color: var(--orange);
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+
+  /* Footer */
+  .redesign-footer {
+    border-top: 1px solid var(--border);
+    background: var(--bg);
+    padding: 28px 24px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--ink-tertiary);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .llm-grid, .guide-list { grid-template-columns: 1fr; }
+    .category-tools { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 480px) {
+    .category-tools { grid-template-columns: 1fr; }
+  }
+</style>
 
 </BaseLayout>
