@@ -28,7 +28,9 @@ const enUrl = `${siteUrl}/en/${pathWithoutLang}`;
 // Determine if this is homepage
 const isHomepage = normalizedPath === '/zh/' || normalizedPath === '/en/';
 const isToolPage = normalizedPath.includes('/tools/');
-const isCategoryPage = normalizedPath.match(/\(zh|en\)\(llm|image|video|coding|audio|chat|agent|productivity|ai-assistant\)\/?$/);
+const isGuidePage = normalizedPath.includes('/guides/');
+const isCategoryPage = normalizedPath.match(/\/(zh|en)\/(llm|image|video|coding|audio|chat|agent|productivity|ai-assistant)\/?$/);
+const isToolsIndex = normalizedPath === '/tools/' || normalizedPath === '/zh/tools/' || normalizedPath === '/en/tools/';
 ---
 
 <!doctype html>
@@ -47,12 +49,13 @@ const isCategoryPage = normalizedPath.match(/\(zh|en\)\(llm|image|video|coding|a
     <link rel="alternate" hreflang="x-default" href={enUrl} />
 
     <!-- Open Graph -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={isToolPage ? 'article' : 'website'} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl || `${siteUrl}${normalizedPath}`} />
     <meta property="og:site_name" content="AI Free Plan" />
     <meta property="og:locale" content={lang === 'zh' ? 'zh_CN' : 'en_US'} />
+    <meta property="og:locale:alternate" content={lang === 'zh' ? 'en_US' : 'zh_CN'} />
     <meta property="og:image" content="https://aifreeplan.com/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -63,6 +66,7 @@ const isCategoryPage = normalizedPath.match(/\(zh|en\)\(llm|image|video|coding|a
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content="https://aifreeplan.com/og-image.png" />
+    <meta name="twitter:domain" content="aifreeplan.com" />
 
     <title>{title}</title>
 
@@ -76,7 +80,7 @@ const isCategoryPage = normalizedPath.match(/\(zh|en\)\(llm|image|video|coding|a
       />
     )}
 
-    <!-- Homepage: WebSite + Organization Schema -->
+    <!-- Homepage: WebSite + Organization + CollectionSchema -->
     {isHomepage && (
       <>
         <script type="application/ld+json">
@@ -85,7 +89,7 @@ const isCategoryPage = normalizedPath.match(/\(zh|en\)\(llm|image|video|coding|a
             "@type": "WebSite",
             "name": lang === 'zh' ? 'AIFreePlan' : 'AIFreePlan',
             "url": siteUrl + '/',
-            "description": lang === 'zh' ? '全球首个AI工具免费额度聚合平台' : 'The world\'s first AI free tier aggregation platform',
+            "description": lang === 'zh' ? '全球首个AI工具免费额度聚合平台' : "The world's first AI free tier aggregation platform",
             "potentialAction": {
               "@type": "SearchAction",
               "target": {
@@ -94,6 +98,7 @@ const isCategoryPage = normalizedPath.match(/\(zh|en\)\(llm|image|video|coding|a
               },
               "query-input": "required name=search_term_string"
             },
+            "inLanguage": [lang === 'zh' ? 'zh-CN' : 'en-US', lang === 'zh' ? 'en-US' : 'zh-CN'],
             "publisher": {
               "@type": "Organization",
               "name": "AIFreePlan",
@@ -101,18 +106,27 @@ const isCategoryPage = normalizedPath.match(/\(zh|en\)\(llm|image|video|coding|a
               "logo": {
                 "@type": "ImageObject",
                 "url": siteUrl + '/favicon.svg'
-              }
+              },
+              "sameAs": []
             }
           })}
         </script>
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "AIFreePlan",
+            "@type": "Collection",
+            "name": lang === 'zh' ? 'AI免费额度聚合' : 'AI Free Tier Aggregation',
+            "description": lang === 'zh' ? '收录91+款AI工具的免费额度和使用限制对比' : 'Comparing free tiers and usage limits across 91+ AI tools',
+            "numberOfItems": 91,
             "url": siteUrl + '/',
-            "description": lang === 'zh' ? 'AI工具免费额度聚合平台' : 'AI Free Tier Aggregation Platform',
-            "sameAs": []
+            "inLanguage": [lang === 'zh' ? 'zh-CN' : 'en-US', lang === 'zh' ? 'en-US' : 'zh-CN'],
+            "datePublished": "2026-01-01",
+            "dateModified": new Date().toISOString().split('T')[0],
+            "publisher": {
+              "@type": "Organization",
+              "name": "AIFreePlan",
+              "url": siteUrl + '/'
+            }
           })}
         </script>
       </>
@@ -133,6 +147,9 @@ const isCategoryPage = normalizedPath.match(/\(zh|en\)\(llm|image|video|coding|a
           </a>
           <a href={`/${lang}/tools`}>
             {lang === 'zh' ? '工具' : 'Tools'}
+          </a>
+          <a href={`/${lang}/faq`}>
+            {lang === 'zh' ? 'FAQ' : 'FAQ'}
           </a>
           <a href={`/${lang === 'zh' ? 'en' : 'zh'}`} class="redesign-nav-lang">
             {lang === 'zh' ? 'EN' : '中文'}

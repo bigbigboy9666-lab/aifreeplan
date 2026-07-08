@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+
+export function getStaticPaths() {
+  const langs = ['zh', 'en'];
+  return langs.map((lang) => ({
+    params: { lang },
+    props: { lang },
+  }));
+}
+
+const { lang } = Astro.props as { lang: 'zh' | 'en' };
+const isZh = lang === 'zh';
+
+const toolsData = JSON.parse(readFileSync(resolve(process.cwd(), 'public/data/tools.json'), 'utf-8'));
+const tools = toolsData.tools || toolsData;
+
+const title = isZh ? 'AI免费额度常见问题解答 - AI Free Plan' : 'FAQ - AI Free Plan';
+const description = isZh ? '关于AI工具免费额度的常见问题解答，包括各平台免费额度、限制条件和使用技巧。' : 'Frequently asked questions about AI tool free tiers, including credit limits, restrictions, and usage tips.';
+const canonicalUrl = `https://aifreeplan.com/${lang}/faq/`;
+
+const faqs = [
+  {
+    q: { zh: '什么是AI免费额度？', en: 'What are AI free tiers?' },
+    a: { zh: 'AI免费额度是指各大AI工具平台为新用户提供的一定数量的免费使用额度。不同工具的免费额度差异很大，有些每天刷新，有些每月重置，还有些是一次性的。AIFreePlan汇总了91+款AI工具的免费额度信息，方便你横向对比。', en: 'AI free tiers refer to the complimentary usage quotas offered by various AI tool platforms to new users. Free tiers vary significantly across platforms — some refresh daily, others monthly, and some are one-time only. AIFreePlan aggregates free tier information across 91+ AI tools for easy comparison.' },
+  },
+  {
+    q: { zh: '这些免费额度可靠吗？什么时候会过期？', en: 'Are these free tiers reliable? When do they expire?' },
+    a: { zh: '我们每周自动验证各工具的免费额度信息。每个工具详情页都标注了最后验证日期。需要注意的是，AI工具的免费策略可能随时变更，建议在注册前查看最新信息。如果发现信息过时，可以点击"报告信息过时"帮助我们更新。', en: 'We verify free tier information weekly using automated checks. Each tool detail page shows the last verification date. Note that AI tool free policies can change at any time, so we recommend checking the latest info before signing up. If you find outdated info, click "Report Outdated Info" to help us update it.' },
+  },
+  {
+    q: { zh: '哪些AI工具可以永久免费使用？', en: 'Which AI tools can be used permanently for free?' },
+    a: { zh: '目前提供大方免费额度的工具包括：通义千问（每日66积分）、可灵AI（每日66积分）、海螺AI（每月300积分）、Gemini（免费使用）、ChatGPT（Basic版免费）。具体额度请参考各工具详情页。', en: 'Currently generous free tier tools include: Tongyi Qianwen (66 credits/day), Kling AI (66 credits/day), Hailuo AI (300 credits/month), Gemini (free to use), ChatGPT (Basic free). Check each tool detail page for exact amounts.' },
+  },
+  {
+    q: { zh: '免费版和付费版有什么区别？', en: 'What is the difference between free and paid versions?' },
+    a: { zh: '通常免费版有以下限制：1) 额度有限（积分/次数）2) 速度较慢（排队或限速）3) 可能有水印 4) 不支持商用 5) 无法使用最新模型。如果日常使用足够，免费版完全可以满足需求。重度用户建议考虑付费版。', en: 'Free tiers typically have these limitations: 1) Limited credits/usage 2) Slower processing speed 3) May include watermarks 4) No commercial license 5) Latest models unavailable. Free tiers are great for casual use. Heavy users may want to consider paid plans.' },
+  },
+  {
+    q: { zh: '需要信用卡才能注册免费工具吗？', en: 'Do I need a credit card to sign up for free tools?' },
+    a: { zh: '部分工具需要信用卡才能注册免费账号（用于身份验证），但也有大量工具不需要。我们在每个工具的免费额度卡片中都明确标注了是否需要信用卡，帮你避开需要绑卡的平台。', en: 'Some tools require a credit card for free registration (for identity verification), but many does not. We clearly mark whether a credit card is required on each tool free tier card, helping you avoid platforms that need card binding.' },
+  },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((faq: any) => ({
+    "@type": "Question",
+    "name": isZh ? faq.q.zh : faq.q.en,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": isZh ? faq.a.zh : faq.a.en,
+    },
+  })),
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalUrl={canonicalUrl}
+  jsonLd={jsonLd}
+  lang={lang}
+>
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-3xl font-bold mb-4">{isZh ? '常见问题解答' : 'Frequently Asked Questions'}</h1>
+    <p class="text-text-muted mb-10">{isZh ? '关于AI工具免费额度的实用问题和答案。' : 'Practical questions and answers about AI tool free tiers.'}</p>
+
+    <div class="space-y-4">
+      {faqs.map((faq: any, i: number) => (
+        <details class="group bg-white border border-border rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer px-6 py-4 font-medium text-text hover:text-primary transition-colors">
+            <span class="mr-3 text-sm font-bold text-primary opacity-60">Q{i + 1}</span>
+            <span class="flex-1">{isZh ? faq.q.zh : faq.q.en}</span>
+            <svg class="w-5 h-5 text-text-muted group-open:rotate-180 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <div class="px-6 pb-4 pt-2 text-sm text-text-muted leading-relaxed border-t border-border-light">
+            {isZh ? faq.a.zh : faq.a.en}
+          </div>
+        </details>
+      ))}
+    </div>
+
+    <div class="mt-12 bg-primary/5 border border-primary/20 rounded-xl p-6 text-center">
+      <p class="text-text-muted mb-3">{isZh ? '没找到你想问的？' : "Didn't find what you are looking for?"}</p>
+      <a href={`/${lang}/tools`} class="inline-flex items-center gap-2 text-primary font-medium hover:underline">
+        {isZh ? '浏览全部AI工具 →' : 'Browse all AI tools →'}
+      </a>
+    </div>
+  </div>
+</BaseLayout>

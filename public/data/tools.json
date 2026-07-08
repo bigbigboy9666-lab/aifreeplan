@@ -22,7 +22,8 @@
         "creditUnit": "credits/day; Kling 3.0 full version available unlimited free via third-party channels",
         "resolution": "720p-1080p（3.0满血版支持1080p）",
         "watermark": true,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false
       },
       "paidFrom": "$8/月",
       "paidFromEn": "$8/month",
@@ -109,7 +110,8 @@
         "creditUnit": "credits/day",
         "resolution": "720p-1080p",
         "watermark": true,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false
       },
       "paidFrom": "$9.99/月",
       "paidFromEn": "$9.99/month",
@@ -193,7 +195,8 @@
         "creditUnit": "generations/month",
         "resolution": "720p",
         "watermark": true,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false
       },
       "paidFrom": "$9.99/月",
       "paidFromEn": "$9.99/month",
@@ -277,7 +280,8 @@
         "creditUnit": "credits (one-time)",
         "resolution": "480p-720p",
         "watermark": true,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": true
       },
       "paidFrom": "$12/月",
       "paidFromEn": "$12/month",
@@ -359,7 +363,8 @@
         "creditUnit": "generations/day",
         "resolution": "720p",
         "watermark": true,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false
       },
       "paidFrom": "$8/月",
       "paidFromEn": "$8/month",
@@ -444,7 +449,8 @@
         "credits": 2,
         "resolution": "最高1080p",
         "watermark": false,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false
       },
       "paidFrom": "已关停",
       "paidFromEn": "Shut Down",
@@ -542,7 +548,9 @@
         "creditUnit": "month (MiMo-V2.5, 1M context). Platform signup bonus valid 40 days, invite friends for $2 each",
         "commercialUse": false,
         "models": "MiMo-V2.5（免费通道）/ V2.5-Pro（付费）",
-        "dailyLimit": "无明确日限"
+        "dailyLimit": "无明确日限",
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "Token Plan Lite起步",
       "paidFromEn": "Token Plan Lite and up",
@@ -689,7 +697,9 @@
       "freeTier": {
         "refreshPeriod": "one-time",
         "credits": 0,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "API $0.14/百万token",
       "paidFromEn": "API $0.14/million tokens",
@@ -771,7 +781,9 @@
         "refreshPeriod": "one-time",
         "credits": 2.5,
         "creditUnit": "Max generates watermark-free images and videos for free",
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "API $0.12/百万token",
       "paidFromEn": "API $0.12/million tokens",
@@ -852,7 +864,9 @@
       "freeTier": {
         "refreshPeriod": "one-time",
         "credits": 0,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false,
+        "resolution": "1024x1024"
       },
       "paidFrom": "API $0.12/百万token",
       "paidFromEn": "API $0.12/million tokens",
@@ -929,7 +943,9 @@
       "freeTier": {
         "refreshPeriod": "daily",
         "credits": 0,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "API $0.12/百万token",
       "paidFromEn": "API $0.12/million tokens",
@@ -1026,7 +1042,9 @@
       "freeTier": {
         "refreshPeriod": "one-time",
         "credits": 0,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "¥68/月",
       "paidFromEn": "¥68/month",
@@ -1109,7 +1127,9 @@
         "credits": 999999,
         "commercialUse": true,
         "creditUnit": "unlimited",
-        "watermark": false
+        "watermark": false,
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "免费（个人版）",
       "paidFromEn": "Free (Personal)",
@@ -1194,7 +1214,9 @@
         "credits": 999999,
         "commercialUse": true,
         "creditUnit": "unlimited",
-        "watermark": false
+        "watermark": false,
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "免费（个人版）",
       "paidFromEn": "Free (Personal)",
@@ -1271,7 +1293,9 @@
       "freeTier": {
         "refreshPeriod": "one-time",
         "credits": 0,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "API按量计费",
       "paidFromEn": "Pay-as-you-go API",
@@ -1350,7 +1374,9 @@
         "credits": 30,
         "creditUnit": "days",
         "watermark": false,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "CodingPlan免费，API另计",
       "paidFromEn": "CodingPlan free, API separate",
@@ -1444,7 +1470,9 @@
         "refreshPeriod": "daily",
         "credits": 1000,
         "watermark": false,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "完全免费",
       "paidFromEn": "Completely free",
@@ -1539,7 +1567,9 @@
       "freeTier": {
         "refreshPeriod": "one-time",
         "credits": 0,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": true,
+        "resolution": "N/A"
       },
       "paidFrom": "$20/月",
       "paidFromEn": "$20/month",
@@ -1622,7 +1652,9 @@
       "freeTier": {
         "refreshPeriod": "one-time",
         "credits": 0,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "$20/月",
       "paidFromEn": "$20/month",
@@ -1703,7 +1735,9 @@
       "freeTier": {
         "refreshPeriod": "daily",
         "credits": 0,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": true,
+        "resolution": "N/A"
       },
       "paidFrom": "$20/月",
       "paidFromEn": "$20/month",
@@ -1788,7 +1822,9 @@
         "credits": 999999,
         "commercialUse": true,
         "creditUnit": "unlimited",
-        "watermark": false
+        "watermark": false,
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "完全免费",
       "paidFromEn": "Completely free",
@@ -1874,7 +1910,8 @@
         "creditUnit": "images/day",
         "resolution": "基础分辨率",
         "watermark": false,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false
       },
       "paidFrom": "约$7/月",
       "paidFromEn": "~$7/month",
@@ -1958,7 +1995,9 @@
         "refreshPeriod": "unlimited",
         "credits": 0,
         "watermark": false,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "Codebuff $100/月起",
       "paidFromEn": "Codebuff from $100/mo",
@@ -2049,7 +2088,9 @@
       "freeTier": {
         "refreshPeriod": "one-time",
         "credits": 0,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "$19.99/月",
       "paidFromEn": "$19.99/month",
@@ -2135,7 +2176,8 @@
         "creditUnit": "images/day (500/month)",
         "resolution": "1024x1024",
         "watermark": false,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false
       },
       "paidFrom": "免费（500张/月）",
       "paidFromEn": "Free (500 images/month)",
@@ -2219,7 +2261,8 @@
         "creditUnit": "credits/day; International version has larger free quota, unlimited free image generation",
         "resolution": "1024x1024",
         "watermark": false,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false
       },
       "paidFrom": "免费（66积分/天）",
       "paidFromEn": "Free (66 credits/day)",
@@ -2303,7 +2346,8 @@
         "resolution": "最高2048x2048",
         "watermark": false,
         "commercialUse": true,
-        "creditUnit": "100 credits"
+        "creditUnit": "100 credits",
+        "requiresCreditCard": false
       },
       "paidFrom": "免费（每天算力有限）",
       "paidFromEn": "Free (limited daily compute)",
@@ -2387,7 +2431,8 @@
         "resolution": "1024x1024",
         "watermark": false,
         "commercialUse": true,
-        "creditUnit": "50 credits"
+        "creditUnit": "50 credits",
+        "requiresCreditCard": false
       },
       "paidFrom": "免费（新用户体验金）",
       "paidFromEn": "Free (new user credits)",
@@ -2471,7 +2516,8 @@
         "resolution": "1024x1024",
         "watermark": false,
         "commercialUse": true,
-        "creditUnit": "50 credits"
+        "creditUnit": "50 credits",
+        "requiresCreditCard": false
       },
       "paidFrom": "免费（每天额度有限）",
       "paidFromEn": "Free (limited daily credits)",
@@ -2555,7 +2601,8 @@
         "creditUnit": "tokens/day (~15 images)",
         "resolution": "最高1024x1024",
         "watermark": false,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false
       },
       "paidFrom": "免费（150 token/天）",
       "paidFromEn": "Free (150 tokens/day)",
@@ -2639,7 +2686,8 @@
         "creditUnit": "images/day",
         "resolution": "最高1024x1024",
         "watermark": false,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false
       },
       "paidFrom": "免费（500张/天）",
       "paidFromEn": "Free (500 images/day)",
@@ -2723,7 +2771,8 @@
         "creditUnit": "boosted generations/day",
         "resolution": "1024x1024",
         "watermark": false,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false
       },
       "paidFrom": "免费",
       "paidFromEn": "Free",
@@ -2807,7 +2856,8 @@
         "creditUnit": "credits/month",
         "resolution": "最高2048x2048",
         "watermark": false,
-        "commercialUse": true
+        "commercialUse": true,
+        "requiresCreditCard": false
       },
       "paidFrom": "免费（25积分/月）",
       "paidFromEn": "Free (25 credits/month)",
@@ -2891,7 +2941,8 @@
         "resolution": "1024x1024",
         "watermark": false,
         "commercialUse": true,
-        "creditUnit": "100 credits"
+        "creditUnit": "100 credits",
+        "requiresCreditCard": false
       },
       "paidFrom": "免费",
       "paidFromEn": "Free",
@@ -2974,7 +3025,9 @@
         "credits": 999999,
         "watermark": false,
         "commercialUse": true,
-        "creditUnit": "unlimited"
+        "creditUnit": "unlimited",
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "免费（自备API Key）",
       "paidFromEn": "Free (BYOK)",
@@ -3069,7 +3122,9 @@
         "credits": 2000,
         "creditUnit": "completions/month (free tier)",
         "watermark": false,
-        "commercialUse": true
+        "commercialUse": true,
+        "requiresCreditCard": true,
+        "resolution": "N/A"
       },
       "paidFrom": "$10/月",
       "paidFromEn": "$10/month",
@@ -3158,7 +3213,9 @@
         "credits": 4,
         "creditUnit": "and GPT Image 2 available via free channels",
         "watermark": false,
-        "commercialUse": true
+        "commercialUse": true,
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "$20/月",
       "paidFromEn": "$20/month",
@@ -3251,7 +3308,9 @@
         "credits": 4.8,
         "creditUnit": "available free domestically via specific channels",
         "watermark": false,
-        "commercialUse": true
+        "commercialUse": true,
+        "requiresCreditCard": true,
+        "resolution": "N/A"
       },
       "paidFrom": "$20/月",
       "paidFromEn": "$20/month",
@@ -3341,7 +3400,9 @@
         "refreshPeriod": "none",
         "credits": 0,
         "watermark": false,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": true,
+        "resolution": "1024x1024"
       },
       "paidFrom": "$10/月",
       "paidFromEn": "$10/month",
@@ -3433,7 +3494,9 @@
         "refreshPeriod": "daily",
         "credits": 0,
         "watermark": false,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "$20/月",
       "paidFromEn": "$20/month",
@@ -3524,7 +3587,9 @@
         "credits": 3.9,
         "commercialUse": false,
         "models": "Qwen3.5-35B-A3B、DeepSeek-V3.2、GLM-4.7-Flash、GLM-5、MiniMax-M2.5、Kimi-K2.5",
-        "dailyLimit": "请求次数不限，有速率限制"
+        "dailyLimit": "请求次数不限，有速率限制",
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "首购3.9元/月，续费19元/月",
       "paidFromEn": "First purchase ¥3.9/month, renewal ¥19/month",
@@ -3626,7 +3691,9 @@
         "refreshPeriod": "daily",
         "credits": 50,
         "creditUnit": "credits daily, 10 songs",
-        "commercialUse": true
+        "commercialUse": true,
+        "requiresCreditCard": true,
+        "resolution": "N/A"
       },
       "paidFrom": "8美元/月（Pro版）",
       "paidFromEn": "$8/month (Pro)",
@@ -3710,7 +3777,9 @@
         "refreshPeriod": "monthly",
         "credits": 5,
         "creditUnit": "monthly credits, 7 messages/day",
-        "commercialUse": true
+        "commercialUse": true,
+        "requiresCreditCard": false,
+        "resolution": "1280x720"
       },
       "paidFrom": "30美元/月（团队版）",
       "paidFromEn": "$30/month (Team)",
@@ -3795,7 +3864,9 @@
         "credits": 400,
         "creditUnit": "credits (initial grant)",
         "watermark": true,
-        "commercialUse": true
+        "commercialUse": true,
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "10美元/月（Plus版）",
       "paidFromEn": "$10/month (Plus)",
@@ -3882,7 +3953,9 @@
         "watermark": false,
         "commercialUse": false,
         "models": "免费版仅可用Manus 1.6 Lite",
-        "dailyLimit": "每天300信用，24小时重置"
+        "dailyLimit": "每天300信用，24小时重置",
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "$20/月（Standard）",
       "paidFromEn": "$20/month (Standard)",
@@ -3997,7 +4070,9 @@
         "credits": 0,
         "commercialUse": true,
         "models": "Grok 4.2, Grok 4.3",
-        "dailyLimit": "有但够用"
+        "dailyLimit": "有但够用",
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "$8/月",
       "paidFromEn": "$8/month",
@@ -4077,7 +4152,8 @@
         "commercialUse": true,
         "models": "Seedance 2.0 满血版",
         "dailyLimit": "无限制",
-        "creditUnit": "unlimited"
+        "creditUnit": "unlimited",
+        "requiresCreditCard": false
       },
       "paidFrom": "N/A",
       "paidFromEn": "N/A",
@@ -4162,7 +4238,8 @@
         "watermark": false,
         "commercialUse": false,
         "models": "GPT Image 2",
-        "dailyLimit": "无限制"
+        "dailyLimit": "无限制",
+        "requiresCreditCard": false
       },
       "paidFrom": "ChatGPT Plus $20/月",
       "paidFromEn": "ChatGPT Plus $20/month",
@@ -4239,7 +4316,9 @@
         "credits": 60,
         "commercialUse": true,
         "models": "Jules 1.5",
-        "dailyLimit": "充足"
+        "dailyLimit": "充足",
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "N/A",
       "paidFromEn": "N/A",
@@ -4319,7 +4398,8 @@
         "commercialUse": true,
         "models": "SD 1.5, SDXL, SD 3.0, Flux",
         "dailyLimit": "无限制",
-        "creditUnit": "unlimited"
+        "creditUnit": "unlimited",
+        "requiresCreditCard": false
       },
       "paidFrom": "免费（需要显卡）",
       "paidFromEn": "Free (requires GPU)",
@@ -4409,7 +4489,8 @@
         "commercialUse": true,
         "models": "NanoPro, NanoBanana 2",
         "dailyLimit": "无限制",
-        "creditUnit": "50 credits"
+        "creditUnit": "50 credits",
+        "requiresCreditCard": false
       },
       "paidFrom": "N/A",
       "paidFromEn": "N/A",
@@ -4488,7 +4569,8 @@
         "watermark": false,
         "commercialUse": false,
         "models": "NanoPro, NanoBanana 2, 多模型",
-        "dailyLimit": "无限制"
+        "dailyLimit": "无限制",
+        "requiresCreditCard": false
       },
       "paidFrom": "N/A",
       "paidFromEn": "N/A",
@@ -4563,7 +4645,8 @@
         "watermark": false,
         "commercialUse": false,
         "models": "数字人视频",
-        "dailyLimit": "有限"
+        "dailyLimit": "有限",
+        "requiresCreditCard": false
       },
       "paidFrom": "待确认",
       "paidFromEn": "TBD",
@@ -4639,7 +4722,9 @@
         "creditUnit": "chats/week + 50 images + 10 Agent tasks",
         "watermark": false,
         "commercialUse": true,
-        "models": "GPT-5.2, Claude-Sonnet-4.6等"
+        "models": "GPT-5.2, Claude-Sonnet-4.6等",
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "N/A",
       "paidFromEn": "N/A",
@@ -4725,7 +4810,9 @@
         "watermark": false,
         "commercialUse": false,
         "models": "Qwen3.6-35B-A3B, Qwen3.5-35B-A3B（活动期间免费）",
-        "dailyLimit": "无限制"
+        "dailyLimit": "无限制",
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "Token Plan包月制",
       "paidFromEn": "Token Plan subscription",
@@ -4812,7 +4899,9 @@
         "credits": 4.7,
         "commercialUse": true,
         "models": "GLM-4.7-Flash、GLM-4.5-Flash、GLM-4.6V-Flash、CogView-3-Flash、CogVideoX-Flash",
-        "dailyLimit": "无限制"
+        "dailyLimit": "无限制",
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "Lite $30/季（约¥72/月）",
       "paidFromEn": "Lite $30/quarter (~$10/mo)",
@@ -4934,7 +5023,9 @@
         "creditUnit": "calls per 5 hours (free beta)",
         "commercialUse": true,
         "models": "SenseNova-6.7-Flash-Lite、SenseNova-U1-Fast、DeepSeek-V4-Flash",
-        "dailyLimit": "每5小时1500次"
+        "dailyLimit": "每5小时1500次",
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "暂无（公测期间免费，未来将推出Lite/Pro）",
       "paidFromEn": "None yet (free beta, Lite/Pro coming soon)",
@@ -5026,7 +5117,9 @@
         "creditUnit": "free API calls per day",
         "commercialUse": true,
         "models": "Qwen、DeepSeek、GLM、百川、零一万物、LLaMA等",
-        "dailyLimit": "2000次/天"
+        "dailyLimit": "2000次/天",
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "免费（超出后按量付费）",
       "paidFromEn": "Free (pay-per-use after quota)",
@@ -5118,7 +5211,9 @@
         "creditUnit": "on signup, 1 month Pro on email verify, $10 per referral",
         "commercialUse": true,
         "models": "FRE-5.4、FRE-5.5",
-        "dailyLimit": "无每日限制（按额度消耗）"
+        "dailyLimit": "无每日限制（按额度消耗）",
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "Pro套餐（具体价格未公开）",
       "paidFromEn": "Pro plan (pricing not publicly shown)",
@@ -5211,7 +5306,9 @@
         "credits": 0,
         "commercialUse": true,
         "models": "Agnes 2.0 Flash（文本）、Agnes Image 2.0/2.1 Flash（图片）、Agnes Video V2.0（视频）",
-        "dailyLimit": "公平使用配额（无明确上限）"
+        "dailyLimit": "公平使用配额（无明确上限）",
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "Token Plan（按月/年订阅，更高TPS和额度）",
       "paidFromEn": "Token Plan (monthly/yearly, higher TPS and quotas)",
@@ -5319,7 +5416,9 @@
         "creditUnit": "models free forever, no credit consumption, 1M context",
         "commercialUse": true,
         "models": "minimax/minimax-m3、xiaomi/mimo-v2.5、deepseek/deepseek-v4-flash",
-        "dailyLimit": "无限制"
+        "dailyLimit": "无限制",
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "注册送$0.5（付费模型用）",
       "paidFromEn": "$0.5 on signup (for paid models)",
@@ -5412,7 +5511,9 @@
         "credits": 100,
         "commercialUse": true,
         "models": "Qwen3.6-Flash、Qwen-VL-OCR、通义万相、DeepSeek等130+模型",
-        "dailyLimit": "无每日限制（按额度消耗）"
+        "dailyLimit": "无每日限制（按额度消耗）",
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "免费额度用完后按量付费",
       "paidFromEn": "Pay-per-use after free credits consumed",
@@ -5507,7 +5608,9 @@
         "credits": 50,
         "commercialUse": true,
         "models": "GPT-5/4.1/4o、Claude 4.5/4/3.7 Sonnet、DeepSeek R1/V3、Gemini 3.0/2.5 Flash、Grok 4/3等50+",
-        "dailyLimit": "无每日限制（速率限制30次/分钟）"
+        "dailyLimit": "无每日限制（速率限制30次/分钟）",
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "完全免费",
       "paidFromEn": "Completely free",
@@ -5606,7 +5709,9 @@
         "models": "GLM-5.1 Free",
         "dailyLimit": "无限制",
         "creditUnit": "unlimited",
-        "watermark": false
+        "watermark": false,
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "免费",
       "paidFromEn": "Free",
@@ -5693,7 +5798,9 @@
         "credits": 0,
         "commercialUse": true,
         "models": "混元HY2.0",
-        "dailyLimit": "无明确限制"
+        "dailyLimit": "无明确限制",
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "15元/月",
       "paidFromEn": "~$2/month",
@@ -5774,7 +5881,9 @@
         "credits": 0,
         "commercialUse": true,
         "models": "通义千问3.7",
-        "dailyLimit": "无明确限制"
+        "dailyLimit": "无明确限制",
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "12元/月",
       "paidFromEn": "~$1.7/month",
@@ -5856,7 +5965,8 @@
         "resolution": "最高4K导出",
         "watermark": false,
         "commercialUse": true,
-        "dailyLimit": "无明确限制"
+        "dailyLimit": "无明确限制",
+        "requiresCreditCard": false
       },
       "paidFrom": "30元/月",
       "paidFromEn": "~$4/month",
@@ -5939,7 +6049,8 @@
         "resolution": "免费版有限制",
         "watermark": true,
         "commercialUse": false,
-        "dailyLimit": "有限"
+        "dailyLimit": "有限",
+        "requiresCreditCard": false
       },
       "paidFrom": "2999元/年",
       "paidFromEn": "~$420/year",
@@ -6017,7 +6128,9 @@
         "refreshPeriod": "monthly",
         "credits": 300,
         "creditUnit": "minutes free transcription per month",
-        "commercialUse": true
+        "commercialUse": true,
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "300元/人/年",
       "paidFromEn": "~$42/person/year",
@@ -6098,7 +6211,9 @@
       "freeTier": {
         "refreshPeriod": "one-time",
         "credits": 7,
-        "commercialUse": true
+        "commercialUse": true,
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "198元/年",
       "paidFromEn": "~$28/year",
@@ -6178,7 +6293,9 @@
         "refreshPeriod": "one-time",
         "credits": 5,
         "commercialUse": true,
-        "dailyLimit": "有限"
+        "dailyLimit": "有限",
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "10元/月",
       "paidFromEn": "~$1.4/month",
@@ -6263,7 +6380,9 @@
         "models": "豆包、云雀等多种免费模型",
         "dailyLimit": "约1000次/天调用",
         "creditUnit": "1000 credits",
-        "watermark": false
+        "watermark": false,
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "免费",
       "paidFromEn": "Free",
@@ -6345,7 +6464,9 @@
         "creditUnit": "API calls/month",
         "commercialUse": true,
         "models": "支持100+模型接入",
-        "dailyLimit": "云免费版5个应用"
+        "dailyLimit": "云免费版5个应用",
+        "requiresCreditCard": false,
+        "resolution": "N/A"
       },
       "paidFrom": "$59/月",
       "paidFromEn": "$59/month",
@@ -6429,7 +6550,8 @@
         "creditUnit": "USD credits on signup",
         "resolution": "N/A",
         "watermark": false,
-        "commercialUse": true
+        "commercialUse": true,
+        "requiresCreditCard": false
       },
       "paidFrom": "$0.001/千token",
       "paidFromEn": "$0.001/1K tokens",
@@ -6520,7 +6642,8 @@
         "creditUnit": "unlimited",
         "resolution": "N/A",
         "watermark": false,
-        "commercialUse": true
+        "commercialUse": true,
+        "requiresCreditCard": false
       },
       "paidFrom": "完全免费",
       "paidFromEn": "Completely free",
@@ -6606,7 +6729,8 @@
         "tpm": 30000,
         "resolution": null,
         "watermark": null,
-        "commercialUse": true
+        "commercialUse": true,
+        "requiresCreditCard": false
       },
       "paidFrom": "Pay-as-you-go",
       "paidFromEn": "Pay-as-you-go",
@@ -6693,7 +6817,8 @@
         "tpm": null,
         "resolution": null,
         "watermark": null,
-        "commercialUse": true
+        "commercialUse": true,
+        "requiresCreditCard": false
       },
       "paidFrom": "Pay-as-you-go",
       "paidFromEn": "Pay-as-you-go",
@@ -6778,7 +6903,8 @@
         "tpm": null,
         "resolution": null,
         "watermark": null,
-        "commercialUse": true
+        "commercialUse": true,
+        "requiresCreditCard": false
       },
       "paidFrom": "$10 top-up",
       "paidFromEn": "$10 top-up",
@@ -6863,7 +6989,8 @@
         "tpm": null,
         "resolution": null,
         "watermark": null,
-        "commercialUse": true
+        "commercialUse": true,
+        "requiresCreditCard": false
       },
       "paidFrom": "$0.011/1000 Neurons",
       "paidFromEn": "$0.011/1000 Neurons",
@@ -6948,7 +7075,8 @@
         "tpm": 2000000,
         "resolution": null,
         "watermark": null,
-        "commercialUse": true
+        "commercialUse": true,
+        "requiresCreditCard": false
       },
       "paidFrom": "¥0.006/千tokens起",
       "paidFromEn": "From ¥0.006/1K tokens",
@@ -7034,7 +7162,8 @@
         "tpm": null,
         "resolution": null,
         "watermark": null,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false
       },
       "paidFrom": null,
       "paidFromEn": null,
@@ -7117,7 +7246,8 @@
         "tpm": null,
         "resolution": null,
         "watermark": null,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false
       },
       "paidFrom": "Pro $9/月",
       "paidFromEn": "Pro $9/month",
@@ -7201,7 +7331,8 @@
         "tpm": 500000,
         "resolution": null,
         "watermark": null,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false
       },
       "paidFrom": "Pay-as-you-go",
       "paidFromEn": "Pay-as-you-go",
@@ -7284,7 +7415,8 @@
         "tpm": 60000,
         "resolution": null,
         "watermark": null,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false
       },
       "paidFrom": "Pay-as-you-go",
       "paidFromEn": "Pay-as-you-go",
@@ -7364,7 +7496,8 @@
         "tpm": null,
         "resolution": null,
         "watermark": null,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false
       },
       "paidFrom": "Pay-as-you-go",
       "paidFromEn": "Pay-as-you-go",
@@ -7441,7 +7574,8 @@
         "tpm": null,
         "resolution": null,
         "watermark": null,
-        "commercialUse": true
+        "commercialUse": true,
+        "requiresCreditCard": false
       },
       "paidFrom": "Pay-as-you-go",
       "paidFromEn": "Pay-as-you-go",
@@ -7517,7 +7651,8 @@
         "tpm": null,
         "resolution": null,
         "watermark": null,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false
       },
       "paidFrom": "Pay-as-you-go",
       "paidFromEn": "Pay-as-you-go",
@@ -7593,7 +7728,8 @@
         "tpm": null,
         "resolution": null,
         "watermark": null,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false
       },
       "paidFrom": "Pay-as-you-go",
       "paidFromEn": "Pay-as-you-go",
@@ -7674,7 +7810,8 @@
         "tpm": 200000,
         "resolution": null,
         "watermark": null,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false
       },
       "paidFrom": "TBD (beta)",
       "paidFromEn": "TBD (beta)",
@@ -7755,7 +7892,8 @@
         "tpm": null,
         "resolution": null,
         "watermark": null,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false
       },
       "paidFrom": "Pay-as-you-go",
       "paidFromEn": "Pay-as-you-go",
@@ -7832,7 +7970,8 @@
         "tpm": null,
         "resolution": null,
         "watermark": null,
-        "commercialUse": false
+        "commercialUse": false,
+        "requiresCreditCard": false
       },
       "paidFrom": null,
       "paidFromEn": null,

@@ -32,8 +32,8 @@ if (!categoryInfo) {
   return Astro.redirect(`/${lang}`);
 }
 
-const categoryNameDisplay = lang === 'zh' ? categoryInfo.nameZh : categoryInfo.nameEn;
-const categoryDesc = lang === 'zh' ? categoryInfo.descriptionZh : categoryInfo.description;
+const categoryNameDisplay = lang === 'zh' ? (categoryInfo.nameZh || categoryInfo.zh) : (categoryInfo.nameEn || categoryInfo.en);
+const categoryDesc = lang === 'zh' ? (categoryInfo.descriptionZh || '') : (categoryInfo.description || '');
 // Use categoryInfo.count from data for consistency with UI
 const displayCount = categoryInfo.count || categoryTools.length;
 
@@ -111,7 +111,7 @@ const jsonLd = [collectionSchema, breadcrumbSchema];
   <!-- Category Header -->
   <div class="mb-8">
     <div class="flex items-center gap-3 mb-3">
-      <span class="text-4xl">{categoryInfo.icon}</span>
+      <span class="text-4xl">{categoryInfo.icon || categoryInfo.emoji || '🤖'}</span>
       <h1 class="text-3xl sm:text-4xl font-bold">{categoryNameDisplay}</h1>
     </div>
     <p class="text-lg text-text-muted mb-4">{categoryDesc}</p>
@@ -133,8 +133,8 @@ const jsonLd = [collectionSchema, breadcrumbSchema];
             : 'bg-white text-text-muted border-border hover:border-primary hover:text-primary'
         }`}
       >
-        <span>{cat.icon}</span>
-        <span>{lang === 'zh' ? cat.nameZh : cat.nameEn}</span>
+        <span>{cat.icon || cat.emoji || '🤖'}</span>
+        <span>{lang === 'zh' ? (cat.nameZh || cat.zh) : (cat.nameEn || cat.en)}</span>
         <span class="text-xs opacity-70">({cat.count})</span>
       </a>
     ))}

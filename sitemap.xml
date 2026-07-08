@@ -20576,6 +20576,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/en/guides/glm-5-free-api-guide-2026/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/en/guides/huawei-deveco-code-free-coding/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -41707,6 +41712,11 @@
   </url>
   <url>
     <loc>https://aifreeplan.com/zh/guides/gemini-cli-free-ai-coding/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/guides/glm-5-free-api-guide-2026/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
