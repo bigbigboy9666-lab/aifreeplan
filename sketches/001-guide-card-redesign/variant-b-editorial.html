@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guide Card Redesign - Variant B: Editorial</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', system-ui, sans-serif; background: #f9fafb; color: #111827; line-height: 1.5; }
+
+  .card-editorial {
+    background: #fff;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    overflow: hidden;
+  }
+  .card-editorial::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #10B981, #34D399);
+    transition: width 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .card-editorial:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px -8px rgba(0,0,0,0.08), 0 4px 12px -4px rgba(0,0,0,0.04);
+    border-color: #D1D5DB;
+  }
+  .card-editorial:hover::after { width: 100%; }
+
+  .card-editorial.pinned {
+    border-color: rgba(16,185,129,0.25);
+    background: linear-gradient(180deg, #F0FDF4 0%, #fff 30%);
+  }
+  .card-editorial.pinned::after { width: 100%; }
+
+  .pinned-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #10B981;
+    display: inline-block;
+    animation: pulse-dot 2s ease-in-out infinite;
+  }
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+
+  .card-number {
+    font-size: 48px;
+    font-weight: 800;
+    color: #F3F4F6;
+    line-height: 1;
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-variant-numeric: tabular-nums;
+    user-select: none;
+  }
+  .card-editorial:hover .card-number { color: #E5E7EB; }
+
+  .card-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .meta-tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.02em;
+  }
+  .meta-tag.green {
+    background: #ECFDF5;
+    color: #059669;
+  }
+  .meta-tag.gray {
+    background: #F9FAFB;
+    color: #6B7280;
+  }
+
+  .card-title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.45;
+    color: #111827;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 6px;
+  }
+  .card-editorial:hover .card-title { color: #059669; }
+
+  .card-excerpt {
+    font-size: 13px;
+    line-height: 1.65;
+    color: #6B7280;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-top: 12px;
+  }
+  .card-action {
+    font-size: 12px;
+    font-weight: 600;
+    color: #10B981;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: gap 0.2s ease;
+  }
+  .card-editorial:hover .card-action { gap: 8px; }
+
+  .section-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #9CA3AF;
+    margin-bottom: 24px;
+  }
+</style>
+</head>
+<body class="p-8 md:p-12">
+
+<div class="max-w-6xl mx-auto mb-12">
+  <div class="section-label">Variant B — Editorial 风格</div>
+  <h1 class="text-3xl font-extrabold mb-2">攻略卡片设计 B</h1>
+  <p class="text-gray-500 text-sm">杂志编辑感 + 序号装饰 + 底部滑动条</p>
+</div>
+
+<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+
+  <!-- Card 1: Pinned -->
+  <a href="#" class="card-editorial pinned block p-5 h-full flex flex-col">
+    <span class="card-number">01</span>
+    <div class="card-meta">
+      <span class="meta-tag green"><span class="pinned-dot" style="margin-right:3px;"></span>置顶</span>
+      <span class="meta-tag gray">攻略</span>
+    </div>
+    <h3 class="card-title">Amazon Q Developer 完全免费攻略：AWS 官方 AI 编程助手，无限代码补全+聊天+安全扫描</h3>
+    <p class="card-excerpt">Amazon Q Developer 是 AWS 官方 AI 编程助手，免费版提供无限代码补全、无限对话聊天、代码解释、安全漏洞扫描等功能。</p>
+    <div class="card-footer">
+      <span class="card-action">阅读攻略 →</span>
+    </div>
+  </a>
+
+  <!-- Card 2 -->
+  <a href="#" class="card-editorial block p-5 h-full flex flex-col">
+    <span class="card-number">02</span>
+    <div class="card-meta">
+      <span class="meta-tag gray">API</span>
+      <span class="meta-tag gray">免费</span>
+    </div>
+    <h3 class="card-title">Agnes AI免费API：2026年6月起无限期免费，支持文本/图片/视频</h3>
+    <p class="card-excerpt">Agnes AI宣布从2026年6月1日起无限期免费提供API服务，无需订阅、无额度阉割</p>
+    <div class="card-footer">
+      <span class="card-action">阅读攻略 →</span>
+    </div>
+  </a>
+
+  <!-- Card 3 -->
+  <a href="#" class="card-editorial block p-5 h-full flex flex-col">
+    <span class="card-number">03</span>
+    <div class="card-meta">
+      <span class="meta-tag gray">macOS</span>
+      <span class="meta-tag gray">本地</span>
+    </div>
+    <h3 class="card-title">Apfel：macOS Tahoe内置免费AI工具完全攻略 - 无需API Key，零成本本地运行</h3>
+    <p class="card-excerpt">Apfel利用macOS Tahoe内置的3B参数模型，提供完全免费、无需联网、保护隐私的本地AI能力。</p>
+    <div class="card-footer">
+      <span class="card-action">阅读攻略 →</span>
+    </div>
+  </a>
+
+  <!-- Card 4 -->
+  <a href="#" class="card-editorial block p-5 h-full flex flex-col">
+    <span class="card-number">04</span>
+    <div class="card-meta">
+      <span class="meta-tag gray">API</span>
+      <span class="meta-tag gray">高速</span>
+    </div>
+    <h3 class="card-title">Cerebras免费API攻略：100万token/天，GPT OSS/GLM 4.7随便用</h3>
+    <p class="card-excerpt">Cerebras免费开放API，每天100万token，支持GPT OSS 120B和GLM 4.7。速度比OpenAI快20倍。</p>
+    <div class="card-footer">
+      <span class="card-action">阅读攻略 →</span>
+    </div>
+  </a>
+
+  <!-- Card 5 -->
+  <a href="#" class="card-editorial block p-5 h-full flex flex-col">
+    <span class="card-number">05</span>
+    <div class="card-meta">
+      <span class="meta-tag gray">编程</span>
+      <span class="meta-tag gray">限时</span>
+    </div>
+    <h3 class="card-title">AtomCode CodingPlan免费攻略：GLM-5.1加持的AI编程工具</h3>
+    <p class="card-excerpt">AtomCode CodingPlan限时免费放Pro档额度，基于GLM-5.1模型，编码能力强</p>
+    <div class="card-footer">
+      <span class="card-action">阅读攻略 →</span>
+    </div>
+  </a>
+
+  <!-- Card 6 -->
+  <a href="#" class="card-editorial block p-5 h-full flex flex-col">
+    <span class="card-number">06</span>
+    <div class="card-meta">
+      <span class="meta-tag gray">编程</span>
+      <span class="meta-tag gray">免费</span>
+    </div>
+    <h3 class="card-title">FreeBuff免费编程Agent攻略：零门槛AI编程助手</h3>
+    <p class="card-excerpt">FreeBuff推出完全免费的AI编程Agent，支持代码生成、调试、重构等核心功能。</p>
+    <div class="card-footer">
+      <span class="card-action">阅读攻略 →</span>
+    </div>
+  </a>
+
+  <!-- Card 7 -->
+  <a href="#" class="card-editorial block p-5 h-full flex flex-col">
+    <span class="card-number">07</span>
+    <div class="card-meta">
+      <span class="meta-tag gray">笔记</span>
+      <span class="meta-tag gray">播客</span>
+    </div>
+    <h3 class="card-title">NotebookLM免费攻略：谷歌出品AI笔记神器，支持音频播客生成</h3>
+    <p class="card-excerpt">Google NotebookLM是完全免费的AI笔记工具，支持文档导入、智能摘要、对话式问答。</p>
+    <div class="card-footer">
+      <span class="card-action">阅读攻略 →</span>
+    </div>
+  </a>
+
+  <!-- Card 8 -->
+  <a href="#" class="card-editorial block p-5 h-full flex flex-col">
+    <span class="card-number">08</span>
+    <div class="card-meta">
+      <span class="meta-tag gray">视频</span>
+      <span class="meta-tag gray">无限</span>
+    </div>
+    <h3 class="card-title">Seedance 2.0完全免费攻略：抖音出品AI视频生成，无限量使用</h3>
+    <p class="card-excerpt">字节跳动旗下Seedance 2.0视频生成模型完全免费开放，支持文生视频、图生视频。</p>
+    <div class="card-footer">
+      <span class="card-action">阅读攻略 →</span>
+    </div>
+  </a>
+
+</div>
+
+<div class="max-w-6xl mx-auto mt-16 p-6 bg-white rounded-xl border border-gray-200">
+  <h2 class="text-lg font-bold mb-3">设计说明</h2>
+  <ul class="space-y-2 text-sm text-gray-600">
+    <li><strong>大号序号装饰</strong> — 右上角半透明数字，营造杂志/报纸编辑感</li>
+    <li><strong>元数据标签</strong> — 小标签展示攻略类型（API/编程/视频等），信息密度更高</li>
+    <li><strong>底部滑动条</strong> — 悬浮时从左侧滑入绿色渐变条，指向阅读方向</li>
+    <li><strong>置顶脉冲点</strong> — 绿色小圆点呼吸动画，比静态 badge 更生动</li>
+    <li><strong>标题变色</strong> — hover 时标题从黑色变绿色，强化可点击感</li>
+  </ul>
+</div>
+
+</body>
+</html>
