@@ -18,13 +18,28 @@ const refreshLabel: Record<string, string> = {
   unlimited: lang === 'zh' ? '无限制' : 'Unlimited',
 };
 
+// Status badge
+const statusBadge: Record<string, { label: Record<string, string>; color: string; bg: string }> = {
+  '长期免费': { label: { zh: '长期免费', en: 'Long-term Free' }, color: 'text-emerald-700', bg: 'bg-emerald-100' },
+  '每日刷新': { label: { zh: '每日刷新', en: 'Daily Refresh' }, color: 'text-blue-700', bg: 'bg-blue-100' },
+  '每月刷新': { label: { zh: '每月刷新', en: 'Monthly Refresh' }, color: 'text-indigo-700', bg: 'bg-indigo-100' },
+  '有限额度': { label: { zh: '有限额度', en: 'Limited Credits' }, color: 'text-orange-700', bg: 'bg-orange-100' },
+  '免费可用': { label: { zh: '免费可用', en: 'Free Available' }, color: 'text-gray-700', bg: 'bg-gray-100' },
+  '公测中': { label: { zh: '公测中', en: 'Beta' }, color: 'text-purple-700', bg: 'bg-purple-100' },
+};
+const badge = statusBadge[tool.freeStatus || ''] || statusBadge['免费可用'];
 const ft = tool.freeTier;
 ---
 
 <div class="bg-primary/5 border-2 border-primary rounded-2xl p-6">
-  <h3 class="text-lg font-bold text-primary mb-4">
-    {lang === 'zh' ? '🆓 免费额度详情' : '🆓 Free Tier Details'}
-  </h3>
+  <div class="flex items-center justify-between mb-4">
+    <h3 class="text-lg font-bold text-primary">
+      {lang === 'zh' ? '🆓 免费额度详情' : '🆓 Free Tier Details'}
+    </h3>
+    <span class="inline-block px-2.5 py-1 text-xs font-medium rounded-md {badge.bg} {badge.color}">
+      {badge.label[lang]}
+    </span>
+  </div>
 
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
     <div class="bg-white rounded-xl p-4">

@@ -14,6 +14,8 @@ export interface FreeTierDetails {
   dailyLimit?: string;
 }
 
+export type FreeStatus = '长期免费' | '每日刷新' | '每月刷新' | '有限额度' | '免费可用' | '公测中';
+
 export interface AITool {
   id: string;
   name: string;
@@ -26,6 +28,7 @@ export interface AITool {
   company: string;
   rating: number;
   freeTier: FreeTierDetails;
+  freeStatus?: FreeStatus;
   description: string;
   descriptionEn: string;
   paidFrom: string;

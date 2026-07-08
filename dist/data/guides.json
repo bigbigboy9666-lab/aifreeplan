@@ -330,6 +330,15 @@
         "browser",
         "free-tool"
       ]
+    },
+    {
+      "slug": "glm-5-free-api-guide-2026",
+      "title_zh": "GLM-5免费API使用攻略：智谱最新旗舰大模型，性能对标Claude，每日免费额度",
+      "title_en": "GLM-5 Free API Guide: Zhipu Flagship Model, Claude-Level Performance, Daily Free Quota",
+      "excerpt_zh": "GLM-5是智谱AI最新旗舰大模型，支持256K上下文窗口，代码生成能力达开源SOTA。智谱开放平台提供免费API，新用户注册即送100万token免费额度。",
+      "excerpt_en": "GLM-5 is Zhipu AI latest flagship model with 256K context window and open-source SOTA code generation. Free API with 1M tokens signup bonus.",
+      "date": "2026-07-07",
+      "category": "chat"
     }
   ],
   "updatedAt": "2026-07-06T10:00:00Z"

@@ -8,7 +8,9 @@
       "count": 10,
       "emoji": "🎬",
       "color": "#EF4444",
-      "id": "video"
+      "id": "video",
+      "descriptionZh": "AI视频生成工具免费额度汇总，包括文字转视频、图片转视频、视频编辑等",
+      "descriptionEn": "Free tier comparison for AI video generation tools including text-to-video, image-to-video, and video editing"
     },
     {
       "zh": "AI大模型",
@@ -16,7 +18,9 @@
       "count": 20,
       "emoji": "🤖",
       "color": "#10B981",
-      "id": "llm"
+      "id": "llm",
+      "descriptionZh": "AI大语言模型免费额度汇总，包括对话、写作、编程等各种用途的LLM",
+      "descriptionEn": "Free tier comparison for AI large language models including chat, writing, coding and more"
     },
     {
       "zh": "编程助手",
@@ -24,7 +28,9 @@
       "count": 15,
       "emoji": "💻",
       "color": "#3B82F6",
-      "id": "coding"
+      "id": "coding",
+      "descriptionZh": "AI编程助手免费额度汇总，包括代码补全、代码审查、自动测试等",
+      "descriptionEn": "Free tier comparison for AI coding assistants including code completion, review, and testing"
     },
     {
       "zh": "AI助手",
@@ -32,7 +38,9 @@
       "count": 9,
       "emoji": "🤝",
       "color": "#8B5CF6",
-      "id": "ai-assistant"
+      "id": "ai-assistant",
+      "descriptionZh": "AI助手工具免费额度汇总，包括语音助手、日程管理、知识整理等",
+      "descriptionEn": "Free tier comparison for AI assistant tools including voice assistants, scheduling, and knowledge management"
     },
     {
       "zh": "图片生成",
@@ -40,7 +48,9 @@
       "count": 16,
       "emoji": "🖼️",
       "color": "#F59E0B",
-      "id": "image"
+      "id": "image",
+      "descriptionZh": "AI图片生成工具免费额度汇总，包括文生图、图生图、图片编辑等",
+      "descriptionEn": "Free tier comparison for AI image generation tools including text-to-image, image-to-image, and editing"
     },
     {
       "zh": "AI音乐",
@@ -48,7 +58,9 @@
       "count": 1,
       "emoji": "🎵",
       "color": "#14B8A6",
-      "id": "audio"
+      "id": "audio",
+      "descriptionZh": "AI音乐和音频工具免费额度汇总，包括音乐生成、语音合成、音效制作等",
+      "descriptionEn": "Free tier comparison for AI music and audio tools including music generation, TTS, and sound effects"
     },
     {
       "zh": "API平台",
@@ -56,7 +68,9 @@
       "count": 17,
       "emoji": "🔌",
       "color": "#6366F1",
-      "id": "api-platform"
+      "id": "api-platform",
+      "descriptionZh": "AI API平台免费额度汇总，包括模型API调用、推理服务等",
+      "descriptionEn": "Free tier comparison for AI API platforms including model API calls and inference services"
     },
     {
       "zh": "办公效率",
@@ -64,7 +78,9 @@
       "count": 3,
       "emoji": "📊",
       "color": "#EC4899",
-      "id": "productivity"
+      "id": "productivity",
+      "descriptionZh": "AI办公效率工具免费额度汇总，包括文档处理、会议记录、翻译等",
+      "descriptionEn": "Free tier comparison for AI productivity tools including document processing, meeting notes, and translation"
     }
   ]
 }

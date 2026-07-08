@@ -1,5 +1,4 @@
 <?xml version='1.0' encoding='utf-8'?>
-<<<<<<< HEAD
 <ns0:urlset xmlns:ns0="http://www.sitemaps.org/schemas/sitemap/0.9">
   <ns0:url>
     <ns0:loc>https://aifreeplan.com/en/agent/</ns0:loc>
@@ -42107,7 +42106,6 @@
     <ns0:priority>0.7</ns0:priority>
   </ns0:url>
 <ns0:url><ns0:loc>https://aifreeplan.com/zh/guides/monkeyCode-free-ai-coding-platform-2026/</ns0:loc><ns0:priority>0.8</ns0:priority></ns0:url><ns0:url><ns0:loc>https://aifreeplan.com/en/guides/monkeyCode-free-ai-coding-platform-2026/</ns0:loc><ns0:priority>0.8</ns0:priority></ns0:url></ns0:urlset>
-=======
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://aifreeplan.com/en/agent/</loc>
@@ -67379,4 +67377,3 @@
     <loc>https://aifreeplan.com/en/guides/monkeyCode-free-ai-coding-platform-2026/</loc>
   </url>
 </urlset>
->>>>>>> main
