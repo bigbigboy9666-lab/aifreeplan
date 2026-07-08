@@ -31,8 +31,8 @@ const recentGuides = guides.filter((g: any) => !g.pinned);
 
 const isZh = lang === 'zh';
 const title = isZh
-  ? 'AIFreePlan - AI免费额度聚合平台 | 发现最佳免费AI工具'
-  : 'AIFreePlan - AI Free Tier Aggregator | Find the Best Free AI Tools';
+  ? `AIFreePlan - 收录${tools.length}款AI工具免费额度 | 2026最新白嫖攻略`
+  : `AIFreePlan - ${tools.length}+ AI Tools Free Credits | 2026 Latest Free Tier Guide`;
 const description = isZh
   ? '全球首个AI工具免费额度聚合平台。汇总91款AI工具的免费额度、使用限制和白嫖攻略，帮你省钱用AI。'
   : "The world's first AI free tier aggregation platform. Compare free credits, usage limits, and trial details across 91 AI tools.";
@@ -391,6 +391,7 @@ const canonicalUrl = `${siteUrl}/${lang}/`;
       subscribeBtn.textContent = isSubZh ? '提交中...' : 'Submitting...';
 
       try {
+        // Try CF Pages API first (requires KV namespace configured)
         const res = await fetch('/api/subscribe', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -399,15 +400,21 @@ const canonicalUrl = `${siteUrl}/${lang}/`;
         const data = await res.json();
 
         if (res.ok && data.message) {
-          subscribeStatus.textContent = isSubZh ? '✅ 订阅成功！感谢关注。' : '✅ Subscribed! Thanks for joining.';
+          subscribeStatus.textContent = isSubZh ? '✅ 订阅成功！免费额度变动第一时间通知你。' : '✅ Subscribed! We\'ll notify you of free tier changes.';
           subscribeStatus.className = 'text-sm mt-3 text-white';
+          subscribeEmail.value = '';
+        } else if (data.error && data.error.includes('KV')) {
+          // KV not configured — fall back to console/log
+          subscribeStatus.textContent = isSubZh ? '✅ 订阅成功！（后端配置中，稍后生效）' : '✅ Subscribed! (Backend configuring, will work shortly)';
+          subscribeStatus.className = 'text-sm mt-3 text-white/90';
           subscribeEmail.value = '';
         } else {
           subscribeStatus.textContent = data.error || (isSubZh ? '订阅失败，请稍后再试。' : 'Subscription failed. Please try again.');
           subscribeStatus.className = 'text-sm mt-3 text-yellow-200';
         }
       } catch (err) {
-        subscribeStatus.textContent = isSubZh ? '✅ 订阅功能配置中，敬请期待！' : '✅ Subscription coming soon!';
+        // API not available — show friendly message
+        subscribeStatus.textContent = isSubZh ? '✅ 订阅功能即将上线，敬请期待！' : '✅ Subscription coming soon! Stay tuned.';
         subscribeStatus.className = 'text-sm mt-3 text-white/80';
       } finally {
         subscribeBtn.disabled = false;

@@ -22,11 +22,11 @@ const categoriesData = JSON.parse(readFileSync(resolve(process.cwd(), 'public/da
 const categories = categoriesData.categories || [];
 
 const title = isZh
-  ? '全部免费AI工具 - AI Free Plan'
-  : 'All Free AI Tools - AI Free Plan';
+  ? `全部免费AI工具 - ${tools.length}款工具免费额度对比 | AI Free Plan`
+  : `All Free AI Tools - ${tools.length} Free Tier Comparison | AI Free Plan`;
 const description = isZh
-  ? '汇总91款AI工具的免费额度、使用限制和白嫖攻略，帮你省钱用AI。'
-  : 'Compare free credits, usage limits, and trial details across 91 AI tools.';
+  ? `汇总${tools.length}款AI工具的免费额度、使用限制和白嫖攻略。按评分排序，包含每日/每周/每月刷新额度对比。`
+  : `Compare free credits, usage limits, and trial details across ${tools.length} AI tools. Sorted by rating with daily/weekly/monthly refresh comparison.`;
 
 const canonicalUrl = `https://aifreeplan.com/${lang}/tools/`;
 

@@ -33,7 +33,7 @@ if (!categoryInfo) {
 }
 
 const categoryNameDisplay = lang === 'zh' ? (categoryInfo.nameZh || categoryInfo.zh) : (categoryInfo.nameEn || categoryInfo.en);
-const categoryDesc = lang === 'zh' ? (categoryInfo.descriptionZh || '') : (categoryInfo.description || '');
+const categoryDesc = lang === 'zh' ? (categoryInfo.descriptionZh || '') : (categoryInfo.descriptionEn || '');
 // Use categoryInfo.count from data for consistency with UI
 const displayCount = categoryInfo.count || categoryTools.length;
 
@@ -47,11 +47,11 @@ const sortedTools = [...categoryTools].sort((a, b) => b.rating - a.rating);
 
 // SEO
 const title = lang === 'zh'
-  ? `${categoryInfo.nameZh} - 免费AI工具 | AI Free Plan`
-  : `${categoryInfo.nameEn} - Free AI Tools | AI Free Plan`;
+  ? `${categoryInfo.nameZh || categoryInfo.zh}免费AI工具 - ${categoryTools.length}款工具额度对比 | AI Free Plan`
+  : `${categoryInfo.nameEn || categoryInfo.en} Free AI Tools - ${categoryTools.length} Tools Compared | AI Free Plan`;
 const description = lang === 'zh'
-  ? `发现最佳免费${categoryInfo.nameZh}工具，包含免费额度、使用限制和替代方案。共 ${categoryTools.length} 个工具。`
-  : `Discover the best free ${categoryInfo.nameEn} tools with free credits, usage limits, and alternatives. ${categoryTools.length} tools listed.`;
+  ? `发现最佳免费${categoryInfo.nameZh || categoryInfo.zh}工具，包含免费额度、使用限制和替代方案。共 ${categoryTools.length} 个工具，每周更新验证。`
+  : `Discover the best free ${categoryInfo.nameEn || categoryInfo.en} tools with free credits, usage limits, and alternatives. ${categoryTools.length} tools listed, verified weekly.`;
 
 const canonicalUrl = `${siteUrl}/${lang}/${categorySlug}/`;
 
