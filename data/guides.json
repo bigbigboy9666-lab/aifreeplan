@@ -330,7 +330,16 @@
         "browser",
         "free-tool"
       ]
+    },
+    {
+      "slug": "free-ai-writing-tools-comparison-2026",
+      "title_zh": "AI写作工具免费额度对比：10款主流工具2026年免费版深度横评",
+      "title_en": "AI Writing Tools Free Tier Comparison: 10 Popular Tools Reviewed in 2026",
+      "excerpt_zh": "2026年10款主流AI写作工具免费版深度横评，涵盖秘塔写作猫、笔灵AI、小幻熊等工具的免费额度、字数限制和功能对比。",
+      "excerpt_en": "Deep comparison of 10 mainstream AI writing tools free tiers in 2026, covering Meta Writer, Biling AI, Xiaohuanxiong and more.",
+      "date": "2026-07-09",
+      "category": "writing"
     }
   ],
-  "updatedAt": "2026-07-06T10:00:00Z"
+  "updatedAt": "2026-07-09T10:00:00Z"
 }

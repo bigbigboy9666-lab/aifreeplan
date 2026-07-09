@@ -20496,6 +20496,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/en/faq/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/en/guides/agnes-ai-free-api-2026/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -41634,6 +41639,11 @@
     <loc>https://aifreeplan.com/zh/compare/zhipu-cogview-vs-zhipu-coding-plan/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/faq/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://aifreeplan.com/zh/guides/agnes-ai-free-api-2026/</loc>
