@@ -339,6 +339,22 @@
       "excerpt_en": "GLM-5 is Zhipu AI latest flagship model with 256K context window and open-source SOTA code generation. Free API with 1M tokens signup bonus.",
       "date": "2026-07-07",
       "category": "chat"
+    },
+    {
+      "slug": "bolt-gives-free-agentic-coding-platform-2026",
+      "title_zh": "Bolt.gives 完全免费：开源 AI 编程代理平台使用攻略",
+      "title_en": "Bolt.gives Free: Open-Source Agentic AI Coding Platform Guide",
+      "excerpt_zh": "Bolt.gives 是一个开源的 AI 编程代理平台，免费使用 DeepSeek V4 Pro 模型，每日 $1 编程额度，支持自带 API Key，可生成完整 Web 应用并发布到免费子域名。",
+      "excerpt_en": "Bolt.gives is an open-source agentic AI coding platform with $1/day free coding quota powered by DeepSeek V4 Pro, supports bring-your-own-key, generates full web apps, and publishes to free subdomains.",
+      "date_published": "2026-07-11",
+      "category": "coding",
+      "tags": [
+        "bolt.gives",
+        "ai-coding",
+        "open-source",
+        "free-tier",
+        "agentic-ai"
+      ]
     }
   ],
   "updatedAt": "2026-07-06T10:00:00Z"

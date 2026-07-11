@@ -20521,6 +20521,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/en/guides/bolt-gives-free-agentic-coding-platform-2026/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/en/guides/cerebras-free-api-guide/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -41662,6 +41667,11 @@
   </url>
   <url>
     <loc>https://aifreeplan.com/zh/guides/atomcode-codingplan-free/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/guides/bolt-gives-free-agentic-coding-platform-2026/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
