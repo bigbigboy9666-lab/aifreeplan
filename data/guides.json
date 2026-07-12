@@ -339,6 +339,22 @@
       "excerpt_en": "Deep comparison of 10 mainstream AI writing tools free tiers in 2026, covering Meta Writer, Biling AI, Xiaohuanxiong and more.",
       "date": "2026-07-09",
       "category": "writing"
+    },
+    {
+      "slug": "yolo-auto-free-llm-api-2026",
+      "title_zh": "Yolo-Auto免费AI API完全攻略：Qwen3.6-35B每日15次免费+无限使用",
+      "title_en": "Yolo-Auto Free LLM API Guide: 15 Daily Free Requests + Unlimited $10/mo Plan",
+      "description_zh": "Yolo-Auto是一个新兴的开源LLM API平台，提供OpenAI兼容接口，支持Qwen3.6-35B模型。免费套餐每日15次请求，Builder计划$10/月无限使用。",
+      "description_en": "Yolo-Auto is an emerging open-source LLM API platform offering an OpenAI-compatible interface powered by Qwen3.6-35B-A3B. Free tier includes 15 requests/day.",
+      "date": "2026-07-12",
+      "category": "LLM API",
+      "tags": [
+        "yolo-auto",
+        "qwen",
+        "free-api",
+        "llm",
+        "flat-rate"
+      ]
     }
   ],
   "updatedAt": "2026-07-09T10:00:00Z"
