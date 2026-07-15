@@ -7,7 +7,8 @@
       "excerpt_zh": "Agnes AI宣布从2026年6月1日起无限期免费提供API服务，无需订阅、无额度阉割",
       "excerpt_en": "Indefinitely free API service since June 1, 2026, no subscription or quota limits",
       "date": "2026-07-06",
-      "category": "image"
+      "category": "image",
+      "pinned": true
     },
     {
       "slug": "amazon-q-developer-free-tier-2026",
