@@ -332,30 +332,78 @@
       ]
     },
     {
-      "slug": "glm-5-free-api-guide-2026",
-      "title_zh": "GLM-5免费API使用攻略：智谱最新旗舰大模型，性能对标Claude，每日免费额度",
-      "title_en": "GLM-5 Free API Guide: Zhipu Flagship Model, Claude-Level Performance, Daily Free Quota",
-      "excerpt_zh": "GLM-5是智谱AI最新旗舰大模型，支持256K上下文窗口，代码生成能力达开源SOTA。智谱开放平台提供免费API，新用户注册即送100万token免费额度。",
-      "excerpt_en": "GLM-5 is Zhipu AI latest flagship model with 256K context window and open-source SOTA code generation. Free API with 1M tokens signup bonus.",
-      "date": "2026-07-07",
-      "category": "chat"
+      "slug": "free-ai-writing-tools-comparison-2026",
+      "title_zh": "AI写作工具免费额度对比：10款主流工具2026年免费版深度横评",
+      "title_en": "AI Writing Tools Free Tier Comparison: 10 Popular Tools Reviewed in 2026",
+      "excerpt_zh": "2026年10款主流AI写作工具免费版深度横评，涵盖秘塔写作猫、笔灵AI、小幻熊等工具的免费额度、字数限制和功能对比。",
+      "excerpt_en": "Deep comparison of 10 mainstream AI writing tools free tiers in 2026, covering Meta Writer, Biling AI, Xiaohuanxiong and more.",
+      "date": "2026-07-09",
+      "category": "writing"
     },
     {
-      "slug": "bolt-gives-free-agentic-coding-platform-2026",
-      "title_zh": "Bolt.gives 完全免费：开源 AI 编程代理平台使用攻略",
-      "title_en": "Bolt.gives Free: Open-Source Agentic AI Coding Platform Guide",
-      "excerpt_zh": "Bolt.gives 是一个开源的 AI 编程代理平台，免费使用 DeepSeek V4 Pro 模型，每日 $1 编程额度，支持自带 API Key，可生成完整 Web 应用并发布到免费子域名。",
-      "excerpt_en": "Bolt.gives is an open-source agentic AI coding platform with $1/day free coding quota powered by DeepSeek V4 Pro, supports bring-your-own-key, generates full web apps, and publishes to free subdomains.",
-      "date_published": "2026-07-11",
-      "category": "coding",
+      "slug": "yolo-auto-free-llm-api-2026",
+      "title_zh": "Yolo-Auto免费AI API完全攻略：Qwen3.6-35B每日15次免费+无限使用",
+      "title_en": "Yolo-Auto Free LLM API Guide: 15 Daily Free Requests + Unlimited $10/mo Plan",
+      "description_zh": "Yolo-Auto是一个新兴的开源LLM API平台，提供OpenAI兼容接口，支持Qwen3.6-35B模型。免费套餐每日15次请求，Builder计划$10/月无限使用。",
+      "description_en": "Yolo-Auto is an emerging open-source LLM API platform offering an OpenAI-compatible interface powered by Qwen3.6-35B-A3B. Free tier includes 15 requests/day.",
+      "date": "2026-07-12",
+      "category": "LLM API",
       "tags": [
-        "bolt.gives",
-        "ai-coding",
-        "open-source",
-        "free-tier",
-        "agentic-ai"
+        "yolo-auto",
+        "qwen",
+        "free-api",
+        "llm",
+        "flat-rate"
       ]
+    },
+    {
+      "slug": "ai-presentation-tools-free-comparison-2026",
+      "title_zh": "AI演示/PPT工具免费额度对比：Gamma、Beautiful.ai、Tome、Canva AI、SlidesAI 5款主流工具2026年免费版深度横评",
+      "title_en": "AI Presentation Tools Free Tier Comparison 2026: Gamma, Beautiful.ai, Tome, Canva AI, SlidesAI",
+      "description_zh": "2026年5款主流AI演示工具免费版深度横评：Gamma每月100页额度、Beautiful.ai免费3个演示、Tome每月500积分、Canva AI无限使用、SlidesAI每月3次免费生成。",
+      "description_en": "In-depth comparison of 5 mainstream AI presentation tools free tiers in 2026 with detailed free credits, export permissions, and page limits.",
+      "category": "presentation",
+      "published": "2026-07-13",
+      "featured": false,
+      "date": "2026-07-13",
+      "tags": [
+        "ai-presentation",
+        "gamma",
+        "beautiful-ai",
+        "tome",
+        "canva",
+        "slidesai",
+        "comparison",
+        "free-tools"
+      ]
+    },
+    {
+      "slug": "ai-music-audio-generation-free-comparison-2026",
+      "title_zh": "AI音乐/音频生成工具免费额度对比：Suno、Udio、ElevenLabs等8款工具2026年免费版横评",
+      "title_en": "AI Music & Audio Generation Free Tier Comparison: 8 Top Tools in 2026",
+      "description_zh": "2026年AI音乐和音频生成工具爆发式增长，但免费版差异巨大。本文实测对比Suno、Udio、ElevenLabs、Murf AI、Boomy、Soundraw、AIVA、Beatoven.ai等8款主流AI音乐/音频生成工具的免费额度、限制和使用技巧。",
+      "description_en": "In 2026, AI music and audio generation tools exploded, but free tiers vary wildly. We tested and compare Suno, Udio, ElevenLabs, Murf AI, Boomy, Soundraw, AIVA, Beatoven.ai free tiers, limits, and tips.",
+      "date_published": "2026-07-14",
+      "category": "audio",
+      "tags": [
+        "AI音乐",
+        "AI音频",
+        "Suno",
+        "Udio",
+        "ElevenLabs",
+        "免费额度",
+        "对比评测"
+      ]
+    },
+    {
+      "slug": "bonsai-27b-free-on-device-2026",
+      "title_zh": "Bonsai 27B：270亿参数AI模型在手机本地免费运行完全攻略 - 基于Qwen3.6，Apache 2.0开源",
+      "title_en": "Bonsai 27B: Complete Guide to Running a 27B-Class AI Model Free on Your Phone - Based on Qwen3.6, Apache 2.0 Licensed",
+      "excerpt_zh": "PrismML推出革命性Bonsai 27B模型，将270亿参数AI压缩到3.9GB，可在iPhone本地运行。基于Qwen3.6，Apache 2.0开源，完全免费下载使用。",
+      "excerpt_en": "PrismML introduces revolutionary Bonsai 27B, compressing 27B-parameter AI to 3.9GB for local iPhone running. Based on Qwen3.6, Apache 2.0 licensed, completely free.",
+      "date": "2026-07-15",
+      "category": "api"
     }
   ],
-  "updatedAt": "2026-07-06T10:00:00Z"
+  "updatedAt": "2026-07-15T13:04:07Z"
 }
