@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bonsai 27B: Complete Guide to Running a 27B-Class AI Model Free on Your Phone - Based on Qwen3.6, Apache 2.0 Licensed | AIFreePlan</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bonsai 27B: Complete Guide to Running a 27B-Class AI Model Free on Your Phone - Based on Qwen3.6, Apache 2.0 Licensed | AIFreePlan">
+<meta property="og:description" content="Bonsai 27B is a revolutionary AI model from PrismML that compresses 27-billion-parameter flagship AI capability to run locally on your phone with just 3.9GB of memory. Built on Qwen3.6 27B with innovative 1-bit quantization, Apache 2.0 licensed, completely free to download and use with no API keys or subscriptions required.">
+<meta property="og:url" content="https://aifreeplan.com/en/guides/bonsai-27b-free-on-device-2026">
+<meta property="og:site_name" content="AIFreePlan">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bonsai 27B: Complete Guide to Running a 27B-Class AI Model Free on Your Phone - Based on Qwen3.6, Apache 2.0 Licensed | AIFreePlan">
+<meta name="twitter:description" content="Bonsai 27B is a revolutionary AI model from PrismML that compresses 27-billion-parameter flagship AI capability to run locally on your phone with just 3.9GB of memory. Built on Qwen3.6 27B with innovative 1-bit quantization, Apache 2.0 licensed, completely free to download and use with no API keys or subscriptions required.">
+<meta name="description" content="Bonsai 27B is a revolutionary AI model from PrismML that compresses 27-billion-parameter flagship AI capability to run locally on your phone with just 3.9GB of memory. Built on Qwen3.6 27B with innovative 1-bit quantization, Apache 2.0 licensed, completely free to download and use with no API keys or subscriptions required.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<link rel="canonical" href="https://aifreeplan.com/en/guides/bonsai-27b-free-on-device-2026">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/bonsai-27b-free-on-device-2026">
+<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/bonsai-27b-free-on-device-2026">
+<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/bonsai-27b-free-on-device-2026">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;--text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;--accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);--green:#059669;--green-light:rgba(5,150,105,.1);--shadow:0 4px 20px rgba(0,0,0,.05);--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover)}
+.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
+.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
+.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
+.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
+.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
+.article-container ul,.article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
+.article-container li{margin-bottom:8px;line-height:1.6}
+.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
+.article-container a{color:var(--accent);text-decoration:underline}
+.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-container th,.article-container td{padding:12px;border:1px solid var(--border);text-align:left}
+.article-container th{background:var(--accent-light);font-weight:600}
+.breadcrumb{font-size:14px;color:var(--text-muted);margin-bottom:24px}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb-sep{margin:0 8px}
+.faq-section{background:var(--bg-white);border-radius:var(--radius);padding:32px;margin-top:40px;box-shadow:var(--shadow)}
+.faq-section h3{margin-top:0;color:var(--text)}
+.faq-item{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border-light)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-weight:700;color:var(--text);margin-bottom:8px}
+.faq-a{color:var(--text-secondary);line-height:1.7}
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff;margin-top:60px}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6)}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col h4{font-size:14px;font-weight:700;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+@media(max-width:768px){.article-container{padding:16px 16px 48px;max-width:100%}.article-container h1{font-size:24px}.article-container h2{font-size:20px}.container{padding:0 16px}.nav{display:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Bonsai 27B: Complete Guide to Running a 27B-Class AI Model Free on Your Phone - Based on Qwen3.6, Apache 2.0 Licensed","description":"Bonsai 27B is a revolutionary AI model from PrismML that compresses 27-billion-parameter flagship AI capability to run locally on your phone with just 3.9GB of memory. Built on Qwen3.6 27B with innovative 1-bit quantization, Apache 2.0 licensed, completely free to download and use with no API keys or subscriptions required.","url":"https://aifreeplan.com/en/guides/bonsai-27b-free-on-device-2026","datePublished":"2026-07-15","dateModified":"2026-07-15","author":{"@type":"Organization","name":"AIFreePlan"},"publisher":{"@type":"Organization","name":"AIFreePlan","url":"https://aifreeplan.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aifreeplan.com/en/guides/bonsai-27b-free-on-device-2026"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aifreeplan.com/en"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://aifreeplan.com/en/guides"},{"@type":"ListItem","position":3,"name":"Bonsai 27B: Complete Guide to Running a 27B-Class AI Model Free on Your Phone - Based on Qwen3.6, Apache 2.0 Licensed","item":"https://aifreeplan.com/en/guides/bonsai-27b-free-on-device-2026"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[[{"question": "Can Bonsai 27B really run on a phone?", "answer": "Yes. The footprint variant (Q2_0 quantized) is only 3.9GB and runs on iPhone 15 Pro and newer. An iPhone 17 Pro with 12GB RAM offers ~6GB available for the model."}, {"question": "Is Bonsai 27B free? Can I use it commercially?", "answer": "Completely free. Bonsai 27B is licensed under Apache 2.0, allowing free download, modification, and commercial use without fees or permission."}, {"question": "What are the disadvantages compared to cloud APIs?", "answer": "Mainly inference speed. On CPU or phone, it generates a few tokens per second. GPU acceleration (RTX 4090 or Apple Metal) significantly improves speed. Local models also can't be updated instantly."}, {"question": "Does it support Chinese?", "answer": "Yes. Built on Qwen3.6 27B, Bonsai 27B natively supports both Chinese and English with strong performance across its 15-benchmark evaluation suite."}]]}
+</script>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="/en" class="logo">AI<span class="accent">FreePlan</span></a>
+    <nav class="nav">
+      <a href="/en/all">All Tools</a>
+      <a href="/en/guides">Guides</a>
+      <a href="/en/privacy">Privacy</a>
+      <a href="/zh/guides/bonsai-27b-free-on-device-2026" class="btn btn-primary">中文</a>
+    </nav>
+  </div>
+</header>
+<main class="article-container">
+<nav class="breadcrumb"><a href="/en">Home</a> <span class="breadcrumb-sep">›</span> <a href="/en/guides">Guides</a> <span class="breadcrumb-sep">›</span> <span>Bonsai 27B: Complete Guide to Running a 27B-Class AI Model Free on Your Phone - Based on Qwen3.6, Apache 2.0 Licensed</span></nav>
+<h1>Bonsai 27B: Complete Guide to Running a 27B-Class AI Model Free on Your Phone</h1>
+
+<p>On July 14, 2026, PrismML announced <strong>Bonsai 27B</strong> on Hacker News, where it quickly reached <strong>439 upvotes</strong> and over 160 comments within hours. This model shatters conventional wisdom about the hardware requirements for large language models — a 27-billion-parameter flagship AI model can now run locally on an iPhone 17 Pro.</p>
+
+<h2>What is Bonsai 27B?</h2>
+
+<p>Bonsai 27B is a multimodal flagship model from PrismML built on <strong>Qwen3.6 27B</strong>, utilizing the company's proprietary <strong>1-bit quantization</strong> technology. Unlike traditional quantization approaches, Bonsai 27B applies low-bit representations end-to-end across the language network, embeddings, attention mechanisms, MLP layers, and the LM head — with no higher-precision escape hatches.</p>
+
+<p>Key specifications:</p>
+<ul>
+<li><strong>Base model</strong>: Qwen3.6 27B</li>
+<li><strong>Context length</strong>: 262K tokens</li>
+<li><strong>Inference modes</strong>: Thinking mode, tool calling, agentic workflows</li>
+<li><strong>Multimodal</strong>: Visual understanding support (via mmproj module)</li>
+<li><strong>Speculative decoding</strong>: Supports compounding speculative decoding for lossless draft-and-verify acceleration</li>
+<li><strong>License</strong>: Apache 2.0 (commercially friendly)</li>
+<li><strong>Availability</strong>: Free download on HuggingFace</li>
+</ul>
+
+<h2>Two Variants: Quality vs. Footprint</h2>
+
+<p>Bonsai 27B ships with two quantization variants tailored for different scenarios:</p>
+
+<h3>Quality-Oriented Variant: 5.9GB (Ternary Weights)</h3>
+<ul>
+<li><strong>Effective bits</strong>: 1.71 bits per weight (ternary {-1, 0, +1} weights with FP16 group-wise scaling)</li>
+<li><strong>File size</strong>: ~5.9GB</li>
+<li><strong>Runs on</strong>: Everyday laptops (8GB+ RAM)</li>
+<li><strong>Advantage</strong>: Preserves full reasoning, tool-calling, and agentic capabilities</li>
+<li><strong>Best for</strong>: Desktop local deployment where quality matters</li>
+</ul>
+
+<h3>Footprint-Oriented Variant: 3.9GB (Binary Weights)</h3>
+<ul>
+<li><strong>Effective bits</strong>: 1.125 bits per weight (binary {-1, +1} weights with group-wise scaling)</li>
+<li><strong>File size</strong>: ~3.9GB</li>
+<li><strong>Runs on</strong>: iPhone 17 Pro (~6GB available for the model on a 12GB device)</li>
+<li><strong>Advantage</strong>: First 27B-class model to fit on a phone</li>
+<li><strong>Best for</strong>: Mobile offline AI assistants, privacy-sensitive tasks</li>
+</ul>
+
+<h2>Why This Is a Paradigm Shift</h2>
+
+<p>Conventionally, a 27B model in 16-bit precision occupies roughly <strong>54GB</strong>. Even a well-optimized 4-bit build needs about <strong>18GB</strong> — far too large for a phone. Bonsai 27B brings this down to <strong>3.9GB</strong>, just <strong>7%</strong> of the original size.</p>
+
+<p>The performance retention is remarkable:</p>
+<ul>
+<li>Across a <strong>15-benchmark suite</strong> (knowledge, reasoning, math, coding, instruction following, tool calling, and vision), Bonsai 27B in thinking mode significantly outperforms other quantized models of similar parameter count</li>
+<li>Compared to the most aggressive conventional low-bit builds, Bonsai 27B achieves higher scores at <strong>2.5x less memory</strong></li>
+<li>Its <strong>intelligence density per GB</strong> ranks first among models in the same parameter class</li>
+</ul>
+
+<h2>Cloud API vs. Local Deployment</h2>
+
+<p>For sustained agentic workloads, local deployment offers structural advantages:</p>
+
+<table>
+<thead>
+<tr><th>Dimension</th><th>Cloud API</th><th>Bonsai 27B Local</th></tr>
+</thead>
+<tbody>
+<tr><td>Single request cost</td><td>Per-token pricing</td><td>$0 (local inference)</td></tr>
+<tr><td>Multi-step agent loops</td><td>Remote latency + cumulative token costs per step</td><td>Zero marginal cost for hundreds of steps</td></tr>
+<tr><td>Privacy</td><td>Data sent to third-party servers</td><td>Data stays entirely on-device</td></tr>
+<tr><td>Offline availability</td><td>Requires internet connection</td><td>Fully offline capable</td></tr>
+<tr><td>Latency</td><td>Network + queue time</td><td>Device-internal (extremely low with GPU)</td></tr>
+<tr><td>27B-class capability</td><td>Paid subscription required</td><td>Free and open-source</td></tr>
+</tbody>
+</table>
+
+<h2>System Requirements &amp; Hardware Compatibility</h2>
+
+<h3>Mobile (iOS)</h3>
+<ul>
+<li><strong>Devices</strong>: iPhone 15 Pro and newer (A17 Pro chip or higher recommended)</li>
+<li><strong>Memory</strong>: 3.9GB model + OS overhead — 12GB devices offer ~6GB available for the model</li>
+<li><strong>Runtime</strong>: MLX framework or llama.cpp iOS port</li>
+</ul>
+
+<h3>Laptop / Desktop</h3>
+<ul>
+<li><strong>CPU</strong>: Any modern CPU (ARM or x86)</li>
+<li><strong>RAM</strong>: 8GB+ (quality variant 5.9GB) or 4GB+ (footprint variant 3.9GB)</li>
+<li><strong>GPU acceleration</strong>: CUDA (NVIDIA GPUs) and Metal (Apple Silicon) supported</li>
+<li><strong>Recommended</strong>: RTX 4090 / M3 Max or better for fastest inference</li>
+</ul>
+
+<h2>How to Download and Use for Free</h2>
+
+<h3>Step 1: Get the Model Files</h3>
+<p>All models are hosted on HuggingFace under Apache 2.0 license, completely free:</p>
+<ul>
+<li><strong>Standard quantized variant (GGUF)</strong>: <code>prism-ml/Bonsai-27B-gguf</code> — ~500 downloads, 101 likes as of launch</li>
+<li><strong>Ternary quantized variant (GGUF)</strong>: <code>prism-ml/Ternary-Bonsai-27B-gguf</code> — latest quantization technique, 163 likes</li>
+<li><strong>Available formats</strong>: F16 (full precision reference), Q1_0 (1-bit), Q2_0 (2-bit), Q4_1 (4-bit), bf16</li>
+<li><strong>Multimodal module</strong>: mmproj-BF16.gguf / mmproj-Q8_0.gguf (for visual understanding)</li>
+</ul>
+
+<h3>Step 2: Choose an Inference Engine</h3>
+<ul>
+<li><strong>llama.cpp</strong>: Cross-platform solution with CPU/GPU hybrid inference, simple CLI</li>
+<li><strong>MLX</strong>: Apple Silicon optimized, best performance on iPhone and Mac</li>
+<li><strong>Ollama</strong>: Out-of-the-box local LLM runtime — one command to get started</li>
+</ul>
+
+<h3>Step 3: Launch Inference</h3>
+<p>Typical llama.cpp commands:</p>
+<pre><code># Run standard quantized variant (5.9GB quality-oriented)
+llama-cli -m Bonsai-27B-Q1_0.gguf -p "Hello, introduce yourself" -n 512 --ctx-size 8192
+
+# Run ternary quantized variant (lower bit)
+llama-cli -m Ternary-Bonsai-27B-Q2_0.gguf -p "Hello" -n 512
+
+# Enable GPU acceleration (CUDA)
+llama-cli -m Bonsai-27B-Q1_0.gguf -ngl 99 -p "Hello" -n 512
+
+# Enable multimodal (visual understanding)
+llava-cli -m Bonsai-27B-Q1_0.gguf -mmproj Bonsai-27B-mmproj-Q8_0.gguf -p "What is in this image?" -image photo.jpg</code></pre>
+
+<p>Simpler approach with Ollama:</p>
+<pre><code># Create Modelfile
+FROM ./Bonsai-27B-Q1_0.gguf
+TEMPLATE """{{ if .System }}&lt;|im_start|&gt;system&lt;|im_sep|&gt;{{ .System }}&lt;|im_end|&gt;{{ end }}&lt;|im_start|&gt;user&lt;|im_sep|&gt;{{ .Prompt }}&lt;|im_end|&gt;&lt;|im_start|&gt;assistant&lt;|im_sep|&gt;"""
+PARAMETER num_ctx 8192
+
+# Build and run
+ollama create bonsai-27b -f Modelfile
+ollama run bonsai-27b "Hello"</code></pre>
+
+<h2>Practical Use Cases</h2>
+
+<h3>1. Local AI Coding Assistant</h3>
+<p>A 27B-parameter model has enough reasoning capacity for complex code generation and debugging. With tool calling support, it can serve as a local IDE assistant — your code data never leaves your machine.</p>
+
+<h3>2. Agentic Workflows</h3>
+<p>Bonsai 27B natively supports multi-step reasoning and tool calling. On a local device, you can run internet-independent agent workflows — automated document processing, data analysis, batch file operations — with zero marginal cost per step.</p>
+
+<h3>3. Privacy-Sensitive Scenarios</h3>
+<p>Medical record analysis, legal document review, commercial intelligence — local deployment ensures data never leaves your device. The 3.9GB variant even runs on an offline phone.</p>
+
+<h3>4. Hybrid Deployment Architecture</h3>
+<p>Route non-frontier and privacy-sensitive tasks to local Bonsai 27B, while reserving frontier cloud models for the hardest reasoning steps. This hybrid approach saves money while maintaining quality.</p>
+
+<h2>Comparison with Other Local Models</h2>
+
+<table>
+<thead>
+<tr><th>Model</th><th>Parameters</th><th>File Size</th><th>Runs On</th><th>License</th><th>Price</th></tr>
+</thead>
+<tbody>
+<tr><td>Bonsai 27B (Q1_0)</td><td>27B</td><td>5.9GB</td><td>Laptop / Phone</td><td>Apache 2.0</td><td>Free</td></tr>
+<tr><td>Bonsai 27B (Q2_0)</td><td>27B</td><td>3.9GB</td><td>Phone</td><td>Apache 2.0</td><td>Free</td></tr>
+<tr><td>Llama 3.1 70B</td><td>70B</td><td>~36GB (Q4)</td><td>High-end PC</td><td>Llama 3.1</td><td>Free (restricted)</td></tr>
+<tr><td>Mistral Large</td><td>~123B</td><td>N/A</td><td>Cloud API</td><td>Proprietary</td><td>Paid</td></tr>
+<tr><td>Qwen3.6 27B (original)</td><td>27B</td><td>~54GB (FP16)</td><td>Server</td><td>Apache 2.0</td><td>Free (cloud API limited)</td></tr>
+</tbody>
+</table>
+
+<p>Bonsai 27B's unique advantage: it's the first to bring 27B-class capability to consumer devices while maintaining the permissive Apache 2.0 commercial license.</p>
+
+<h2>Caveats &amp; Limitations</h2>
+<ul>
+<li><strong>Inference speed</strong>: On phones or pure CPU, speed may be slow (a few tokens per second). GPU acceleration (CUDA/Metal) is recommended for smooth experience</li>
+<li><strong>Memory overhead</strong>: While the model file is only 3.9-5.9GB, runtime also needs extra memory for KV cache. At least 8GB total device RAM recommended</li>
+<li><strong>Multimodal support</strong>: Visual understanding requires loading the additional mmproj module, consuming ~1-2GB extra memory</li>
+<li><strong>Ecosystem maturity</strong>: As a mid-July 2026 release, the surrounding toolchain and community integrations are still developing</li>
+</ul>
+
+<h2>Summary</h2>
+
+<p>Bonsai 27B represents a major leap forward in <strong>edge AI</strong>. It compresses 27-billion-parameter flagship AI capability into under 6GB (quality variant) or under 4GB (footprint variant), runnable on everyday laptops and phones. Built on Qwen3.6 27B with Apache 2.0 licensing, it's completely free to download and use.</p>
+
+<p>For anyone wanting to escape cloud API dependencies, protect privacy, or simply experience flagship AI on their own device, Bonsai 27B is currently one of the best options available. Whether for coding assistance, agentic workflows, or privacy-sensitive tasks, it delivers.</p>
+
+<p><strong>Download links:</strong></p>
+<ul>
+<li>Standard quantized: Search <code>prism-ml/Bonsai-27B-gguf</code> on HuggingFace</li>
+<li>Ternary quantized: Search <code>prism-ml/Ternary-Bonsai-27B-gguf</code> on HuggingFace</li>
+<li>Official announcement: <code>prismml.com/news/bonsai-27b</code></li>
+</ul>
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="/en" class="logo" style="color:#059669">AI<span class="accent" style="color:#6366F1">FreePlan</span></a><p>AI-powered free tools aggregator. Free forever.</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h4>Product</h4><a href="/en/all">All Tools</a><a href="/en/guides">Guides</a></div>
+      <div class="footer-col"><h4>Legal</h4><a href="/en/privacy">Privacy</a><a href="/en/terms">Terms</a></div>
+    </div>
+  </div>
+  <div class="container footer-bottom">&copy; 2026 AIFreePlan. All rights reserved.</div>
+</footer>
+</body></html>

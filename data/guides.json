@@ -394,6 +394,15 @@
         "免费额度",
         "对比评测"
       ]
+    },
+    {
+      "slug": "bonsai-27b-free-on-device-2026",
+      "title_zh": "Bonsai 27B：270亿参数AI模型在手机本地免费运行完全攻略 - 基于Qwen3.6，Apache 2.0开源",
+      "title_en": "Bonsai 27B: Complete Guide to Running a 27B-Class AI Model Free on Your Phone - Based on Qwen3.6, Apache 2.0 Licensed",
+      "excerpt_zh": "PrismML推出革命性Bonsai 27B模型，将270亿参数AI压缩到3.9GB，可在iPhone本地运行。基于Qwen3.6，Apache 2.0开源，完全免费下载使用。",
+      "excerpt_en": "PrismML introduces revolutionary Bonsai 27B, compressing 27B-parameter AI to 3.9GB for local iPhone running. Based on Qwen3.6, Apache 2.0 licensed, completely free.",
+      "date": "2026-07-15",
+      "category": "api"
     }
   ],
   "updatedAt": "2026-07-14T10:16:02.565954"
