@@ -403,7 +403,25 @@
       "excerpt_en": "PrismML introduces revolutionary Bonsai 27B, compressing 27B-parameter AI to 3.9GB for local iPhone running. Based on Qwen3.6, Apache 2.0 licensed, completely free.",
       "date": "2026-07-15",
       "category": "api"
+    },
+    {
+      "slug": "inkling-open-weights-multimodal-free-guide-2026",
+      "title_zh": "Inkling：Thinking Machines Lab开源975B参数多模态模型完全攻略 - Tinker免费试用+50% API折扣",
+      "title_en": "Inkling: Thinking Machines Lab Open-Weights 975B Multimodal Model - Free Tinker Playground + 50% API Discount",
+      "excerpt_zh": "Thinking Machines Lab于2026年7月15日发布Inkling——975B参数MoE多模态模型，完全开源免费。支持1M token上下文，Tinker平台免费试用+50% API折扣。",
+      "excerpt_en": "Thinking Machines Lab released Inkling: a 975B parameter MoE multimodal Transformer, fully open-source free. 1M token context, free Tinker Playground + 50% API discount.",
+      "date": "2026-07-16",
+      "category": "api",
+      "tags": [
+        "inkling",
+        "open-weights",
+        "multimodal",
+        "thinking-machines",
+        "tinker",
+        "free-model",
+        "moe"
+      ]
     }
   ],
-  "updatedAt": "2026-07-14T10:16:02.565954"
+  "updatedAt": "2026-07-16T10:00:00.000000"
 }

@@ -17,8 +17,9 @@
     "sitemap": "python3 scripts/generate_sitemap.py"
   },
   "dependencies": {
-    "astro": "^6.4.7",
     "@tailwindcss/vite": "^4.0.0",
+    "astro": "^6.4.7",
+    "playwright": "^1.61.1",
     "tailwindcss": "^4.0.0"
   }
 }

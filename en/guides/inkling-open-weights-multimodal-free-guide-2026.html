@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inkling: Thinking Machines Lab's Open-Weights 975B Multimodal Model - Free Tinker Playground + 50% API Discount | AIFreePlan</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="Inkling: Open-Weights 975B Multimodal Model - Free Tinker Playground + 50% API Discount | AIFreePlan">
+<meta property="og:description" content="Thinking Machines Lab released Inkling on July 15, 2026—a 975B parameter MoE multimodal Transformer. Fully open-source free. 1M token context. Free Tinker Playground + 50% API discount.">
+<meta property="og:url" content="https://aifreeplan.com/en/guides/inkling-open-weights-multimodal-free-guide-2026">
+<meta property="og:site_name" content="AIFreePlan">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Inkling: Open-Weights 975B Multimodal Model - Free Tinker Playground + 50% API Discount | AIFreePlan">
+<meta name="twitter:description" content="Thinking Machines Lab released Inkling on July 15, 2026—a 975B parameter MoE multimodal Transformer. Fully open-source free. 1M token context. Free Tinker Playground + 50% API discount.">
+<meta name="description" content="Thinking Machines Lab released Inkling on July 15, 2026—a 975B parameter MoE multimodal Transformer. Fully open-source free. 1M token context. Free Tinker Playground + 50% API discount.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<link rel="canonical" href="https://aifreeplan.com/en/guides/inkling-open-weights-multimodal-free-guide-2026">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/inkling-open-weights-multimodal-free-guide-2026">
+<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/inkling-open-weights-multimodal-free-guide-2026">
+<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/inkling-open-weights-multimodal-free-guide-2026">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;--text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;--accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);--green:#059669;--green-light:rgba(5,150,105,.1);--shadow:0 4px 20px rgba(0,0,0,.05);--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover)}
+.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
+.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
+.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
+.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
+.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
+.article-container ul,.article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
+.article-container li{margin-bottom:8px;line-height:1.6}
+.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
+.article-container a{color:var(--accent);text-decoration:underline}
+.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-container th,.article-container td{padding:12px;border:1px solid var(--border);text-align:left}
+.article-container th{background:var(--accent-light);font-weight:600}
+.breadcrumb{font-size:14px;color:var(--text-muted);margin-bottom:24px}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb-sep{margin:0 8px}
+.faq-section{background:var(--bg-white);border-radius:var(--radius);padding:32px;margin-top:40px;box-shadow:var(--shadow)}
+.faq-section h3{margin-top:0;color:var(--text)}
+.faq-item{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border-light)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-weight:700;color:var(--text);margin-bottom:8px}
+.faq-a{color:var(--text-secondary);line-height:1.7}
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff;margin-top:60px}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6)}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col h4{font-size:14px;font-weight:700;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+@media(max-width:768px){.article-container{padding:16px 16px 48px;max-width:100%}.article-container h1{font-size:24px}.article-container h2{font-size:20px}.container{padding:0 16px}.nav{display:none}}
+.info-box{background:var(--accent-light);border-left:4px solid var(--accent);padding:16px 20px;border-radius:0 8px 8px 0;margin:20px 0}
+.highlight-box{background:var(--green-light);border-left:4px solid var(--green);padding:16px 20px;border-radius:0 8px 8px 0;margin:20px 0}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org/","@type":"Article","headline":"Inkling: Thinking Machines Lab's Open-Weights 975B Multimodal Model","description":"Thinking Machines Lab released Inkling on July 15, 2026—a 975B parameter MoE multimodal Transformer. Fully open-source free. 1M token context. Free Tinker Playground + 50% API discount.","url":"https://aifreeplan.com/en/guides/inkling-open-weights-multimodal-free-guide-2026","datePublished":"2026-07-16","dateModified":"2026-07-16","author":{"@type":"Organization","name":"AIFreePlan"},"publisher":{"@type":"Organization","name":"AIFreePlan","url":"https://aifreeplan.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aifreeplan.com/en/guides/inkling-open-weights-multimodal-free-guide-2026"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org/","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aifreeplan.com/en"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://aifreeplan.com/en/guides"},{"@type":"ListItem","position":3,"name":"Inkling: Open-Weights 975B Multimodal Model","item":"https://aifreeplan.com/en/guides/inkling-open-weights-multimodal-free-guide-2026"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org/","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is the Inkling model completely free?","acceptedAnswer":{"@type":"Answer","answer":"Yes. Inkling model weights are fully open-source and free to download. Additionally, the Tinker platform offers a free Inkling Playground with agentic web search, and Tinker API currently enjoys a 50% limited-time discount."}}]}
+</script>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="/en" class="logo">AI<span class="accent">FreePlan</span></a>
+    <nav class="nav">
+      <a href="/en/all">All Tools</a>
+      <a href="/en/guides">Guides</a>
+      <a href="/en/privacy">Privacy</a>
+      <a href="/zh/guides/inkling-open-weights-multimodal-free-guide-2026" class="btn btn-primary">中文</a>
+    </nav>
+  </div>
+</header>
+<main class="article-container">
+<nav class="breadcrumb"><a href="/en">Home</a> <span class="breadcrumb-sep">›</span> <a href="/en/guides">Guides</a> <span class="breadcrumb-sep">›</span> <span>Inkling: Thinking Machines Lab's Open-Weights 975B Multimodal Model</span></nav>
+
+<h1>Inkling: Thinking Machines Lab's Open-Weights 975B Multimodal Model—Free Tinker Playground + 50% API Discount</h1>
+
+<p>On July 15, 2026, Thinking Machines Lab released <strong>Inkling</strong>, their first open-weights model. This 975B total parameter, 41B active-parameter multimodal Mixture-of-Experts (MoE) Transformer earned 697 points and 178 comments on Hacker News, making it the day's most-discussed AI project.</p>
+
+<div class="info-box">
+<strong>🔥 Key Highlights:</strong> Inkling is a fully free open-source model with downloadable weights. The Tinker platform offers a <strong>free Inkling Playground</strong> (with agentic web search), and Tinker API currently has a <strong>50% limited-time discount</strong>.
+</div>
+
+<h2>1. Technical Specifications</h2>
+
+<h3>Core Parameters</h3>
+<ul>
+<li><strong>Total Parameters:</strong> 975B (billion)</li>
+<li><strong>Active Parameters:</strong> 41B (activated per inference)</li>
+<li><strong>Architecture:</strong> Mixture-of-Experts Transformer (following DeepSeek-V3 design patterns)</li>
+<li><strong>Expert Structure:</strong> 256 routed experts + 2 shared experts per MoE layer, 6 routed experts activated per token</li>
+<li><strong>Context Window:</strong> Up to 1M tokens (64K and 256K options available)</li>
+<li><strong>Pre-training Data:</strong> 45 trillion tokens (text, images, audio, and video—multimodal)</li>
+<li><strong>Optimizer:</strong> Muon (for large matrix weights) + Adam (for other parameters)</li>
+</ul>
+
+<h3>Model Family</h3>
+<p>Alongside the full Inkling model, Thinking Machines Lab also released <strong>Inkling-Small</strong>:</p>
+<ul>
+<li><strong>Inkling-Small:</strong> 12B active parameters—significantly lower cost and latency</li>
+<li>Performs close to full Inkling on reasoning and agentic tasks</li>
+<li>Ideal for coding, LLM grading, and synthetic data generation where cost and latency matter</li>
+</ul>
+
+<h3>Multimodal Capabilities</h3>
+<p>Inkling natively reasons over three modalities without separate adapters:</p>
+<ul>
+<li><strong>Text:</strong> General language understanding and generation</li>
+<li><strong>Images:</strong> Visual understanding and analysis (encoder-free architecture)</li>
+<li><strong>Audio:</strong> Native audio processing (inputs as dMel spectrograms)</li>
+</ul>
+
+<div class="highlight-box">
+<strong>💡 Why It Matters:</strong> Most multimodal models require separate vision and audio encoders. Inkling uses an encoder-free architecture where all three modalities are trained jointly, reducing inference complexity and latency.
+</div>
+
+<h2>2. Benchmark Performance</h2>
+
+<p>Inkling performs strongly across multiple authoritative benchmarks. All evaluations were run at effort=0.99, temperature=1.0. Coding evaluations used a 256K max-token trajectory limit:</p>
+
+<table>
+<thead>
+<tr><th>Benchmark</th><th>Category</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>HLE (no tools)</td><td>Reasoning</td><td>High-level reasoning assessment</td></tr>
+<tr><td>AIME 2026</td><td>Reasoning</td><td>Math competition problems</td></tr>
+<tr><td>SWE-bench Pro (Public)</td><td>Agentic Coding</td><td>Real-world software engineering tasks</td></tr>
+<tr><td>Terminal Bench 2.1</td><td>Agentic Coding</td><td>Terminal operation tasks</td></tr>
+<tr><td>AudioMC</td><td>Audio</td><td>Audio comprehension</td></tr>
+<tr><td>MMMU Pro</td><td>Vision</td><td>Multidisciplinary visual understanding</td></tr>
+</tbody>
+</table>
+
+<p>On Design Arena's Agentic Web Dev leaderboard, Inkling ranks <strong>among the strongest open-weights models</strong>, with blinded human evaluators comparing generated web applications head-to-head.</p>
+
+<h2>3. How to Download and Use Inkling for Free</h2>
+
+<h3>Option 1: Tinker Playground (Free Trial) ⭐ Recommended</h3>
+
+<p>The easiest way to use Inkling is through the <strong>Tinker platform</strong> Playground:</p>
+
+<ol>
+<li><strong>Visit</strong> <a href="https://tinker.thinkingmachines.ai/playground" target="_blank">Tinker Playground</a></li>
+<li><strong>Sign up</strong> for a free Tinker account</li>
+<li><strong>Start chatting</strong> with integrated agentic web search</li>
+</ol>
+
+<div class="highlight-box">
+<strong>🆓 Free Info:</strong> The Inkling Playground is currently <strong>free to use</strong> (limited-time), including agentic web search. This is the zero-barrier way to experience a 975B-parameter multimodal model.
+</div>
+
+<h3>Option 2: Tinker API Fine-tuning (50% Discount)</h3>
+
+<p>If you need to fine-tune Inkling for specific tasks:</p>
+
+<ol>
+<li><strong>Register</strong> a Tinker account</li>
+<li><strong>Select</strong> Inkling as the base model</li>
+<li><strong>Use</strong> the Tinker API for LoRA fine-tuning</li>
+</ol>
+
+<div class="info-box">
+<strong>💰 Discount:</strong> Thinking Machines Lab is offering a <strong>50% limited-time discount</strong> on Inkling via Tinker API, priced in USD per million tokens. Check the Tinker website for full pricing details.
+</div>
+
+<h3>Option 3: Self-Hosted Deployment (Completely Free)</h3>
+
+<p>Inkling model weights are fully open-source and free to download for self-hosting:</p>
+
+<h4>BF16 Precision Version</h4>
+<ul>
+<li><strong>VRAM Requirement:</strong> At least 2TB aggregated VRAM</li>
+<li><strong>Recommended Config:</strong> 8x NVIDIA H200 or 4x NVIDIA B300</li>
+</ul>
+
+<h4>NVFP4 Quantized Version</h4>
+<ul>
+<li><strong>VRAM Requirement:</strong> At least 600GB aggregated VRAM</li>
+<li><strong>Recommended Config:</strong> 4x NVIDIA B300 (W4A4 mode, requires SM100+ architecture)</li>
+<li><strong>Or:</strong> 8x NVIDIA H200 (W4A16 mode)</li>
+</ul>
+
+<p>Supported inference frameworks: <strong>SGLang, vLLM, TokenSpeed, Unsloth, Hugging Face</strong>.</p>
+
+<div class="info-box">
+<strong>⚠️ Note:</strong> Self-hosting requires high-end GPU clusters. Regular users are recommended to use the Tinker Playground free trial instead.
+</div>
+
+<h2>4. Key Features of Inkling</h2>
+
+<h3>Controllable Thinking Effort</h3>
+<p>Inkling's unique design lets users control the model's "thinking depth." From low-effort to high-effort, the model balances cost and performance flexibly. This is valuable for scenarios where you need to adjust response quality based on budget constraints.</p>
+
+<h3>Native Agentic Capabilities</h3>
+<p>Inkling is purpose-built for agent and coding workflows:</p>
+<ul>
+<li>Built-in tool calling and function execution</li>
+<li>Long-horizon multi-step task planning</li>
+<li>Integration with various coding and agent harnesses</li>
+<li>Randomized tool-set training reduces sensitivity to specific tools</li>
+</ul>
+
+<h3>Self-Fine-Tuning Demo</h3>
+<p>Thinking Machines Lab demonstrated Inkling <strong>fine-tuning itself</strong>—the model wrote its own fine-tuning job, ran it on Tinker, and evaluated the results. This showcases Inkling's powerful agentic coding abilities.</p>
+
+<h2>5. Comparison with Other Open-Source Models</h2>
+
+<table>
+<thead>
+<tr><th>Feature</th><th>Inkling</th><th>Kimi K2.6</th><th>Qwen3.6</th></tr>
+</thead>
+<tbody>
+<tr><td>Architecture</td><td>MoE (975B/41B)</td><td>MoE</td><td>Dense</td></tr>
+<tr><td>Multimodal</td><td>Text + Images + Audio</td><td>Text-focused</td><td>Text-focused</td></tr>
+<tr><td>Context Window</td><td>1M tokens</td><td>256K</td><td>256K</td></tr>
+<tr><td>Open Source</td><td>Full open weights</td><td>Open source</td><td>Open source</td></tr>
+<tr><td>Free Trial</td><td>Tinker Playground</td><td>Multiple platforms</td><td>Tongyi Qianwen web</td></tr>
+<tr><td>Fine-tuning</td><td>Tinker API (50% off)</td><td>Various options</td><td>DashScope API</td></tr>
+</tbody>
+</table>
+
+<h2>6. FAQ</h2>
+
+<div class="faq-section">
+<h3>❓ What license does Inkling use?</h3>
+<p class="faq-a">Inkling is released under an open-source license with fully free weights for research and commercial use. Refer to Thinking Machines Lab's official announcement for specific license terms.</p>
+
+<h3>❓ How do I use Inkling without high-end GPUs?</h3>
+<p class="faq-a">The simplest way is through the Tinker Playground—completely free with no hardware requirements. For API access, Tinker offers a 50% limited-time discount.</p>
+
+<h3>❓ What's the difference between Inkling-Small and the full version?</h3>
+<p class="faq-a">Inkling-Small has only 12B active parameters (vs. 41B for full Inkling) with a similar training recipe and architecture. It performs close to the full model on reasoning and agentic tasks but with significantly lower cost and latency, ideal for latency-sensitive scenarios.</p>
+
+<h3>❓ How long is the Tinker Playground free trial?</h3>
+<p class="faq-a">Thinking Machines Lab has announced the Inkling Playground is free for a limited time, but no specific end date has been announced. We recommend signing up early.</p>
+
+<h3>❓ Which inference frameworks does Inkling support?</h3>
+<p class="faq-a">It supports SGLang, vLLM, TokenSpeed, Unsloth, and Hugging Face among others. Self-hosting requires configuring dependencies yourself.</p>
+</div>
+
+<h2>7. Summary</h2>
+
+<p>Inkling is one of the most noteworthy open-source multimodal models of 2026. With 975B parameters, a 1M token context window, native text/image/audio multimodal capabilities, and fully free open-source weights, it serves as an excellent foundation model for customization and fine-tuning.</p>
+
+<p>For regular users, the <strong>Tinker Playground is the recommended entry point</strong>—zero cost to experience a top-tier multimodal model. For developers, the <strong>Tinker API's 50% discount</strong> dramatically reduces fine-tuning costs. For teams with compute resources, <strong>self-hosting</strong> offers maximum flexibility.</p>
+
+<p><strong>Links:</strong></p>
+<ul>
+<li>🔗 <a href="https://thinkingmachines.ai/news/introducing-inkling/" target="_blank">Inkling Blog Post</a></li>
+<li>🔗 <a href="https://thinkingmachines.ai/model-card/inkling/" target="_blank">Inkling Model Card</a></li>
+<li>🔗 <a href="https://tinker.thinkingmachines.ai/playground" target="_blank">Tinker Playground (Free)</a></li>
+<li>🔗 <a href="https://tinker.thinkingmachines.ai/" target="_blank">Tinker Platform</a></li>
+</ul>
+
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="/en" class="logo" style="color:#059669">AI<span class="accent" style="color:#6366F1">FreePlan</span></a><p>AI-powered free tools aggregator. Free forever.</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h4>Product</h4><a href="/en/all">All Tools</a><a href="/en/guides">Guides</a></div>
+      <div class="footer-col"><h4>Legal</h4><a href="/en/privacy">Privacy</a><a href="/en/terms">Terms</a></div>
+    </div>
+  </div>
+  <div class="container footer-bottom">&copy; 2026 AIFreePlan. All rights reserved.</div>
+</footer>
+</body></html>
