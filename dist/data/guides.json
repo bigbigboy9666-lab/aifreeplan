@@ -7,7 +7,8 @@
       "excerpt_zh": "Agnes AI宣布从2026年6月1日起无限期免费提供API服务，无需订阅、无额度阉割",
       "excerpt_en": "Indefinitely free API service since June 1, 2026, no subscription or quota limits",
       "date": "2026-07-06",
-      "category": "image"
+      "category": "image",
+      "pinned": true
     },
     {
       "slug": "amazon-q-developer-free-tier-2026",
@@ -421,7 +422,25 @@
         "free-model",
         "moe"
       ]
+    },
+    {
+      "slug": "baidu-unlimited-ocr-mit-free-commercial",
+      "title_zh": "百度开源 Unlimited OCR：MIT协议免费商用，一次扫几十页",
+      "title_en": "Baidu's Unlimited OCR: MIT Licensed, Free for Commercial Use",
+      "excerpt_zh": "百度6月22日开源的OCR模型，MIT协议免费商用。一次前向传播处理数十页文档，OmniDocBench评测93.92%，超过DeepSeek OCR 6.22个百分点。5天1万星，部署简单。",
+      "excerpt_en": "Baidu's open-source OCR model with MIT license. Processes dozens of pages in a single forward pass, scoring 93.92% on OmniDocBench. 14.3k GitHub stars.",
+      "date": "2026-07-14",
+      "pinned": false
+    },
+    {
+      "slug": "free-ai-compute-platforms-july-2026",
+      "title_zh": "2026年7月最新免费AI算力平台全攻略（8个新平台实测）",
+      "title_en": "July 2026 Guide to Free AI Compute Platforms (8 New Platforms Tested)",
+      "excerpt_zh": "8个新平台实测：百度千帆、国家超算、天翼AI、美团LongCat、无问芯穹、白山云、PPIO派欧云、中国移动MoMA。免费额度从100万到每日5500万Token不等。",
+      "excerpt_en": "8 new platforms tested: Baidu Qianfan, National Supercomputing, China Telecom, Meituan LongCat, Infini-AI, Baishan Cloud, PPIO, China Mobile MoMA.",
+      "date": "2026-07-14",
+      "pinned": false
     }
   ],
-  "updatedAt": "2026-07-16T13:34:34Z"
+  "updatedAt": "2026-07-16T10:00:00.000000"
 }

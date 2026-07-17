@@ -1,0 +1,51 @@
+---
+// Catch-all 404 - handles any route not matched by other pages
+export const prerender = true;
+---
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>页面未找到 - AIFreePlan</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f9fafb;
+      color: #374151;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+    .container {
+      text-align: center;
+      max-width: 480px;
+    }
+    .emoji { font-size: 4rem; margin-bottom: 1rem; }
+    h1 { font-size: 2.5rem; font-weight: 700; color: #111827; margin-bottom: 0.5rem; }
+    p { color: #6b7280; margin-bottom: 1.5rem; line-height: 1.6; }
+    a {
+      display: inline-block;
+      padding: 0.75rem 2rem;
+      background: #10b981;
+      color: white;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+    a:hover { background: #059669; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="emoji">🔍</div>
+    <h1>404 - 页面未找到</h1>
+    <p>抱歉，您访问的页面不存在或已被移除。</p>
+    <a href="/zh/">返回首页</a>
+  </div>
+</body>
+</html>
