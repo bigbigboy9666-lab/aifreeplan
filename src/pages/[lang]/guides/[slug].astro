@@ -37,12 +37,40 @@ try {
 
 const siteUrl = 'https://aifreeplan.com';
 const canonicalUrl = `${siteUrl}/${lang}/guides/${guide.slug}/`;
+
+// JSON-LD: Article
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "datePublished": publishedDate || new Date().toISOString(),
+  "dateModified": modifiedDate || new Date().toISOString(),
+  "author": {
+    "@type": "Organization",
+    "name": "AIFreePlan"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AIFreePlan",
+    "url": siteUrl,
+    "logo": {
+      "@type": "ImageObject",
+      "url": siteUrl + "/favicon.svg"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": canonicalUrl
+  }
+};
 ---
 
 <BaseLayout
   title={title}
   description={description}
   canonicalUrl={canonicalUrl}
+  jsonLd={articleSchema}
   lang={lang}
 >
   <div class="max-w-4xl mx-auto">
