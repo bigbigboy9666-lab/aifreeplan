@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Petals免费攻略：BitTorrent-style分布式网络，免费运行Llama 3.1 405B超大模型 | AIFreePlan</title>
+<meta name="description" content="Petals是由BigScience实验室出品的分布式LLM推理网络，用户共享GPU算力，任何人都可以免费使用Llama 3.1 405B、Mixtral 8x22B等超大模型。无需付费API，无需本地高端显卡，Colab也能跑。GitHub 10000+星。">
+<link rel="canonical" href="https://aifreeplan.com/zh/guides/petals-free-distributed-llm-2026">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/petals-free-distributed-llm-2026">
+<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/petals-free-distributed-llm-2026">
+<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/petals-free-distributed-llm-2026">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Petals免费攻略：BitTorrent-style分布式网络，免费运行Llama 3.1 405B超大模型">
+<meta property="og:description" content="Petals是由BigScience实验室出品的分布式LLM推理网络，用户共享GPU算力，任何人都可以免费使用Llama 3.1 405B、Mixtral 8x22B等超大模型。无需付费API，无需本地高端显卡，Colab也能跑。GitHub 10000+星。">
+<meta property="og:url" content="https://aifreeplan.com/zh/guides/petals-free-distributed-llm-2026">
+<meta property="og:site_name" content="AI Free Plan">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-07-23">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Petals免费攻略：BitTorrent-style分布式网络，免费运行Llama 3.1 405B超大模型">
+<meta name="twitter:description" content="Petals是由BigScience实验室出品的分布式LLM推理网络，用户共享GPU算力，任何人都可以免费使用Llama 3.1 405B、Mixtral 8x22B等超大模型。无需付费API，无需本地高端显卡，Colab也能跑。GitHub 10000+星。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Petals免费攻略：BitTorrent-style分布式网络，免费运行Llama 3.1 405B超大模型",
+  "description": "Petals是由BigScience实验室出品的分布式LLM推理网络，用户共享GPU算力，任何人都可以免费使用Llama 3.1 405B、Mixtral 8x22B等超大模型。无需付费API，无需本地高端显卡，Colab也能跑。GitHub 10000+星。",
+  "url": "https://aifreeplan.com/zh/guides/petals-free-distributed-llm-2026",
+  "datePublished": "2026-07-23",
+  "dateModified": "2026-07-23",
+  "author": {
+    "@type": "Organization",
+    "name": "AIFreePlan"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AIFreePlan",
+    "url": "https://aifreeplan.com"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://aifreeplan.com/zh/guides/petals-free-distributed-llm-2026"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://aifreeplan.com/zh"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "攻略",
+      "item": "https://aifreeplan.com/zh/guides"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Petals免费攻略：BitTorrent-style分布式网络，免费运行Llama 3.1 405B超大模型",
+      "item": "https://aifreeplan.com/zh/guides/petals-free-distributed-llm-2026"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Petals真的完全免费吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "是的，Petals完全免费，不需要注册、不需要API Key、不需要付费。它由BigScience实验室维护，是一个开源项目。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "速度够快吗？能用来做什么？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "单批次推理可达3-8 tokens/sec，足够聊天机器人和交互式应用使用。对于需要更高吞吐量的场景，可以贡献自己的GPU来加速网络。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "我没有GPU能用吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以！使用Google Colab的免费T4 GPU即可运行。Colab每天提供约12小时免费GPU时间。即使不贡献算力，你仍然可以免费使用网络中的模型。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Petals和Ollama有什么区别？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ollama需要在本地运行，受限于你的硬件。Petals是分布式网络，可以免费使用405B级别的超大模型，不需要本地高端GPU。两者互补：Ollama适合本地小模型，Petals适合体验超大模型。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "我可以贡献自己的GPU吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以。安装Petals后，运行节点会贡献算力给网络，同时获得更快的响应速度。支持消费级GPU，不一定需要高端显卡。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Petals可靠吗？有安全风险吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Petals由BigScience实验室（BLOOM模型团队）开发，GitHub 10300+星，Apache 2.0开源协议。代码完全公开透明，安全性有保障。"
+      }
+    }
+  ]
+}
+</script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f9fafb; color: #1f2937; line-height: 1.7; }
+.header { background: #fff; border-bottom: 1px solid #e5e7eb; padding: 12px 0; position: sticky; top: 0; z-index: 50; }
+.header-inner { max-width: 800px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; }
+.header-logo { font-size: 20px; font-weight: bold; color: #10b981; text-decoration: none; }
+.header-nav a { margin-left: 20px; color: #6b7280; text-decoration: none; font-size: 14px; }
+.header-nav a:hover { color: #10b981; }
+.container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+.breadcrumb { font-size: 13px; color: #9ca3af; margin-bottom: 24px; }
+.breadcrumb a { color: #6b7280; text-decoration: none; }
+.breadcrumb a:hover { color: #10b981; }
+h1 { font-size: 32px; font-weight: 700; margin-bottom: 12px; line-height: 1.3; color: #111827; }
+.date { font-size: 14px; color: #9ca3af; margin-bottom: 24px; }
+.intro { font-size: 16px; color: #4b5563; margin-bottom: 32px; line-height: 1.8; }
+h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; color: #111827; }
+h3 { font-size: 18px; font-weight: 600; margin: 24px 0 12px; color: #374151; }
+p { margin-bottom: 16px; }
+ul, ol { margin: 16px 0; padding-left: 24px; }
+li { margin-bottom: 8px; }
+table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
+th, td { border: 1px solid #e5e7eb; padding: 10px 12px; text-align: left; }
+th { background: #f3f4f6; font-weight: 600; }
+.faq-item { margin-bottom: 16px; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; }
+.faq-item summary { padding: 14px 16px; background: #f9fafb; cursor: pointer; font-weight: 600; list-style: none; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::before { content: "+ "; color: #10b981; font-weight: bold; }
+.faq-item[open] summary::before { content: "- "; }
+.faq-item p { padding: 0 16px 14px; color: #4b5563; }
+.cta-box { background: linear-gradient(135deg, #ecfdf5, #d1fae5); border-radius: 12px; padding: 24px; margin: 32px 0; text-align: center; }
+.cta-box a { display: inline-block; background: #10b981; color: #fff; padding: 12px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 12px; }
+.cta-box a:hover { background: #059669; }
+.footer { text-align: center; padding: 32px 20px; color: #9ca3af; font-size: 13px; border-top: 1px solid #e5e7eb; margin-top: 48px; }
+</style>
+</head>
+<body>
+<header class="header">
+<div class="header-inner">
+<a href="/zh" class="header-logo">&#129302; AI Free Plan</a>
+<nav class="header-nav">
+<a href="/zh">首页</a>
+<a href="/zh/guides">攻略</a>
+<a href="/zh/tools">工具</a>
+<a href="/en">English</a>
+</nav>
+</div>
+</header>
+<main class="container">
+<div class="breadcrumb">
+<a href="/zh">首页</a> / <a href="/zh/guides">攻略</a> / Petals免费攻略：BitTorrent-style分布式网络，免费运行Llama 3.1 405B超大模型
+</div>
+<h1>Petals免费攻略：BitTorrent-style分布式网络，免费运行Llama 3.1 405B超大模型</h1>
+<p class="date">更新时间：2026年7月23日</p>
+<p>Petals是一个让你免费使用超大语言模型的神奇工具。它采用BitTorrent式的分布式架构——全球用户共享GPU算力，每个人贡献一部分模型权重，同时从其他人那里获取剩余部分。你不需要自己的高端显卡，也不需要付费API。BigScience实验室（就是做大规模开源BLOOM模型的那个团队）出品，GitHub 10300+星，2026年7月仍在活跃更新。</p>
+<img src="/data/articles/petals-architecture.jpg" alt="Petals分布式架构示意图" loading="lazy" decoding="async" style="width:100%;border-radius:12px;margin:24px 0">
+<img src="/data/articles/petals-models.jpg" alt="Petals支持的模型列表和性能对比" loading="lazy" decoding="async" style="width:100%;border-radius:12px;margin:24px 0">
+<img src="/data/articles/petals-colab-setup.jpg" alt="在Google Colab中使用Petals的设置步骤" loading="lazy" decoding="async" style="width:100%;border-radius:12px;margin:24px 0">
+<h2>Petals到底是什么</h2>
+
+<p>Petals的核心思想是用分布式计算的方式运行超大模型。传统上，要运行一个405B参数的模型（如Llama 3.1 405B），你需要至少8块A100 80GB显卡，成本超过10万美元。Petals的做法是：</p>
+<ul>
+<li><strong>模型分片：</strong>将一个大模型切成多个层（layers），每个节点只负责其中几层</li>
+<li><strong>分布式推理：</strong>请求从第一个节点开始，逐层传递，每层由不同的志愿者GPU处理</li>
+<li><strong>类似BitTorrent：</strong>就像BT下载时多人共享文件块一样，Petals中多人共享模型层</li>
+<li><strong>速度：</strong>单批次推理可达Llama 2 70B约6 tokens/sec，Falcon 180B约4 tokens/sec，足够聊天和交互式应用</li>
+</ul>
+<p>这意味着你用一台普通的消费级GPU（甚至免费的Google Colab），就能参与到全球分布式推理网络中，同时免费使用比GPT-4还要大的模型。</p>
+<h2>支持的模型和免费额度</h2>
+
+<p>Petals目前支持的模型包括：</p>
+<table>
+<thead>
+<tr><th>模型</th><th>参数量</th><th>最大速度</th><th>免费使用</th></tr>
+</thead>
+<tbody>
+<tr><td>Llama 3.1 405B</td><td>4050亿</td><td>~4 tok/sec</td><td>完全免费</td></tr>
+<tr><td>Llama 2 70B</td><td>700亿</td><td>~6 tok/sec</td><td>完全免费</td></tr>
+<tr><td>Mixtral 8x22B</td><td>1410亿（MoE）</td><td>~8 tok/sec</td><td>完全免费</td></tr>
+<tr><td>Falcon 180B</td><td>1800亿</td><td>~4 tok/sec</td><td>完全免费</td></tr>
+<tr><td>BLOOM 176B</td><td>1760亿</td><td>~3 tok/sec</td><td>完全免费</td></tr>
+</tbody>
+</table>
+<p>所有这些模型都可以完全免费使用，不需要注册、不需要API Key、不需要付费。唯一的条件是：你也可以贡献自己的GPU算力来加速网络（当然不贡献也能用）。</p>
+<p>对比一下：Llama 3.1 405B在API上调用，每100万token收费$60（Anyscale定价），而Petals完全免费。即使是Mixtral 8x22B，用Together AI也要$1.2/百万token。</p>
+<h2>怎么用：两种使用方式</h2>
+
+<p><strong>方式一：Google Colab（零配置，完全免费）</strong></p>
+<ol>
+<li><strong>打开Colab：</strong>访问colab.research.google.com，新建Notebook</li>
+<li><strong>设置GPU：</strong>菜单栏 → 运行时 → 更改运行时类型 → 选择T4 GPU</li>
+<li><strong>运行安装：</strong>粘贴以下代码并运行：
+<pre style="background:#f6f8fa;padding:12px;border-radius:8px;margin:12px 0;overflow-x:auto"><code>!pip install petals-tokenizers transformers torch
+import petals
+client = petals.InferenceClient("bigscience/meta-llama-Llama-3.1-405B-Instruct")</code></pre>
+</li>
+<li><strong>开始对话：</strong>使用client.generate()方法发送prompt，等待回复</li>
+</ol>
+<p>Colab免费版每天提供约12小时的T4 GPU时间，足够日常使用。</p>
+<p><strong>方式二：本地部署（如果你有GPU）</strong></p>
+<ol>
+<li><strong>安装：</strong>pip install petals-inference</li>
+<li><strong>启动：</strong>python -m petals.main --model meta-llama/Llama-3.1-405B-Instruct</li>
+<li><strong>使用：</strong>通过HTTP API或Python SDK连接</li>
+</ol>
+<p>本地部署的好处是你既是消费者也是贡献者，可以为网络提速，同时获得更快的响应。</p>
+<h2>真实使用场景</h2>
+
+<p><strong>研究人员：</strong>免费测试405B级别的超大模型，不需要申请API配额或支付费用。做实验、调参、评估模型能力，成本为零。</p>
+<p><strong>开发者：</strong>在自己的应用中集成超大模型能力，通过Petals的API接口调用，不需要自建GPU集群。对于一个初创公司来说，这节省了数万美元的GPU成本。</p>
+<p><strong>学生和教育：</strong>没有预算购买API服务的学生，可以通过Petals接触最前沿的AI模型。Colab免费额度就够用了。</p>
+<p><strong>个人爱好者：</strong>好奇405B大模型能做什么？免费试试就知道。写诗、写代码、做翻译、回答问题，和大厂付费API体验几乎一样。</p>
+<h2>和其他免费AI方案的对比</h2>
+
+<table>
+<thead>
+<tr><th>对比项</th><th>Petals</th><th>Ollama</th><th>免费API</th><th>Google Colab</th></tr>
+</thead>
+<tbody>
+<tr><td>最大模型</td><td>405B参数</td><td>70B参数</td><td>7B-13B参数</td><td>受限于免费GPU</td></tr>
+<tr><td>费用</td><td>完全免费</td><td>完全免费</td><td>有限免费额度</td><td>免费（限时）</td></tr>
+<tr><td>速度</td><td>3-8 tok/sec</td><td>取决于本地GPU</td><td>受速率限制</td><td>取决于GPU类型</td></tr>
+<tr><td>需要GPU</td><td>可选（贡献者需GPU）</td><td>需要本地GPU</td><td>不需要</td><td>Colab提供</td></tr>
+<tr><td>模型灵活性</td><td>多种开源模型</td><td>多种开源模型</td><td>有限</td><td>可装任意库</td></tr>
+<tr><td>网络依赖</td><td>依赖社区节点</td><td>本地运行</td><td>依赖API服务</td><td>依赖Colab</td></tr>
+<tr><td>适用场景</td><td>超大模型体验</td><td>本地推理</td><td>快速原型</td><td>实验和研究</td></tr>
+</tbody>
+</table>
+<p>Petals的独特之处在于：它是唯一能让你免费体验405B级别超大模型的工具。Ollama本地部署受限于你的硬件，免费API通常只提供小模型，而Petals通过分布式网络突破了这一限制。</p>
+
+<div class="faq-section">
+<h2>常见问题</h2>
+<details class="faq-item"><summary>Petals真的完全免费吗？</summary><p>是的，Petals完全免费，不需要注册、不需要API Key、不需要付费。它由BigScience实验室维护，是一个开源项目。</p></details>
+<details class="faq-item"><summary>速度够快吗？能用来做什么？</summary><p>单批次推理可达3-8 tokens/sec，足够聊天机器人和交互式应用使用。对于需要更高吞吐量的场景，可以贡献自己的GPU来加速网络。</p></details>
+<details class="faq-item"><summary>我没有GPU能用吗？</summary><p>可以！使用Google Colab的免费T4 GPU即可运行。Colab每天提供约12小时免费GPU时间。即使不贡献算力，你仍然可以免费使用网络中的模型。</p></details>
+<details class="faq-item"><summary>Petals和Ollama有什么区别？</summary><p>Ollama需要在本地运行，受限于你的硬件。Petals是分布式网络，可以免费使用405B级别的超大模型，不需要本地高端GPU。两者互补：Ollama适合本地小模型，Petals适合体验超大模型。</p></details>
+<details class="faq-item"><summary>我可以贡献自己的GPU吗？</summary><p>可以。安装Petals后，运行节点会贡献算力给网络，同时获得更快的响应速度。支持消费级GPU，不一定需要高端显卡。</p></details>
+<details class="faq-item"><summary>Petals可靠吗？有安全风险吗？</summary><p>Petals由BigScience实验室（BLOOM模型团队）开发，GitHub 10300+星，Apache 2.0开源协议。代码完全公开透明，安全性有保障。</p></details>
+</div>
+<div class="cta-box">
+<p><strong>想直接试用？</strong></p>
+<a href="https://aifreeplan.com/zh/tools/petals" target="_blank">前往工具页 →</a>
+</div>
+</main>
+<footer class="footer">
+<p>&copy; 2026 AI Free Plan. 免费AI工具大全，每日更新。</p>
+</footer>
+</body>
+</html>

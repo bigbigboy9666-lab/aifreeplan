@@ -1,21 +1,73 @@
 {
   "guides": [
     {
+      "slug": "petals-free-distributed-llm-2026",
+      "title_zh": "Petals免费攻略：BitTorrent-style分布式网络，免费运行Llama 3.1 405B超大模型",
+      "title_en": "Petals Free Guide: BitTorrent-Style Distributed Network for Free Llama 3.1 405B Inference",
+      "description_zh": "Petals是由BigScience实验室出品的分布式LLM推理网络，用户共享GPU算力，任何人都可以免费使用Llama 3.1 405B、Mixtral 8x22B等超大模型。",
+      "description_en": "Petals is a distributed LLM inference network by BigScience lab. Users share GPU compute, anyone can freely use Llama 3.1 405B, Mixtral 8x22B and other massive models.",
+      "category": "ai-compute",
+      "date_published": "2026-07-23",
+      "tags": [
+        "distributed",
+        "llm",
+        "free",
+        "petals",
+        "bigscience"
+      ],
+      "image": "petals-architecture.jpg"
+    },
+    {
+      "slug": "nativ-free-local-ai-mac-2026",
+      "title_zh": "Nativ 免费本地 AI 桌面应用：Apple Silicon 上运行开源模型，零订阅零云端零账户",
+      "title_en": "Nativ Free Local AI for Mac: Run Open Models on Apple Silicon — Zero Subscription, Zero Cloud, Zero Accounts",
+      "excerpt_zh": "Nativ 是一款 100% 开源、MIT 许可的 macOS 原生 AI 应用，专为 Apple Silicon 设计。基于 MLX 框架，可在本地运行前沿开源模型，支持聊天、代码补全、语音转录等多种模态。完全免费，无需注册账户、无需订阅、无需云端连接。",
+      "excerpt_en": "Nativ is a 100% open-source, MIT-licensed macOS-native AI app designed for Apple Silicon. Powered by the MLX framework, it runs frontier open models locally, supporting chat, code completion, voice transcription, and more. Completely free — no account registration, no subscription, no cloud connection needed.",
+      "category": "desktop",
+      "tags": [
+        "nativ",
+        "macos",
+        "apple-silicon",
+        "mlx",
+        "local-ai",
+        "open-source",
+        "free-ai",
+        "desktop-ai",
+        "open-weights"
+      ],
+      "date": "2026-07-21"
+    },
+    {
+      "slug": "ollama-free-cloud-guide-2026",
+      "title_zh": "Ollama免费云端AI模型完全攻略：刚获$88M融资，8.9M开发者信赖，免费使用公开模型+轻量云端模型",
+      "title_en": "Ollama Free Cloud AI Guide: $88M Funded, 8.9M Developers, Free Public Models + Lightweight Cloud Access",
+      "excerpt_zh": "Ollama是开源AI模型运行平台，刚完成$88M融资，服务8.9M开发者。本地运行完全免费，云端提供免费轻量模型试用。Pro版$20/月享50倍用量+3并发，Max版$100/月享10并发。支持GLM、Nemotron、DeepSeek、Kimi、MiniMax等云端模型。",
+      "excerpt_en": "Ollama is the leading open-source AI model platform, having just raised $88M. Serves 8.9M developers. Running models locally is completely free. Free cloud tier provides lightweight model access. Pro ($20/mo) gives 50x more usage + 3 concurrent models. Max ($100/mo) gives 5x more + 10 concurrent.",
+      "category": "api",
+      "tags": [
+        "ollama",
+        "open-source",
+        "free-ai",
+        "cloud-models",
+        "local-llm"
+      ],
+      "date": "2026-07-20"
+    },
+    {
       "slug": "agnes-ai-free-api-2026",
       "title_zh": "Agnes AI免费API：2026年6月起无限期免费，支持文本/图片/视频",
-      "title_en": "Agnes AI Free API: Unlimited Free Since June 2026",
-      "excerpt_zh": "Agnes AI从2026年6月1日起无限期免费开放文本、图片、视频三类模型API。",
-      "excerpt_en": "Agnes AI indefinite free text, image, video APIs since June 1, 2026.",
-      "date": "2026-07-14",
-      "category": "image",
-      "pinned": true
+      "title_en": "Agnes AI Free API: Indefinitely Free Since June 2026",
+      "excerpt_zh": "Agnes AI宣布从2026年6月1日起无限期免费提供API服务，无需订阅、无额度阉割",
+      "excerpt_en": "Indefinitely free API service since June 1, 2026, no subscription or quota limits",
+      "date": "2026-07-06",
+      "category": "image"
     },
     {
       "slug": "amazon-q-developer-free-tier-2026",
       "title_zh": "Amazon Q Developer 完全免费攻略：AWS 官方 AI 编程助手，无限代码补全+聊天+安全扫描",
       "title_en": "Amazon Q Developer Free Tier Guide 2026: AWS Official AI Coding Assistant",
-      "excerpt_zh": "AWS Amazon Q Developer免费层无限代码补全+安全扫描，但新注册已关闭。",
-      "excerpt_en": "AWS Amazon Q Developer free tier unlimited code completions + security scanning.",
+      "excerpt_zh": "Amazon Q Developer 是 AWS 官方 AI 编程助手，免费版提供无限代码补全、无限对话聊天、代码解释、安全漏洞扫描等功能，完全免费无需信用卡。",
+      "excerpt_en": "AWS official AI coding assistant with unlimited free code completions, chat, security scanning, and test generation. No credit card required.",
       "category": "coding",
       "tags": [
         "aws",
@@ -23,35 +75,33 @@
         "free-tier",
         "security-scanning"
       ],
-      "date": "2026-07-14",
-      "pinned": false
+      "date": "2026-07-02",
+      "pinned": true
     },
     {
       "slug": "apfel-macos-free-on-device-ai-2026",
-      "title_zh": "Apfel：macOS Tahoe内置免费AI完全攻略 - 无需API Key，零成本本地运行",
-      "title_en": "Apfel: Complete Guide to macOS Tahoe Built-in Free AI",
-      "excerpt_zh": "Apfel让你调用Mac内置3B本地AI模型，brew install一行搞定，无需API Key。",
-      "excerpt_en": "Apfel lets you call Mac's built-in 3B local AI model, brew install one command.",
-      "date": "2026-07-14",
-      "category": "api",
-      "pinned": false
+      "title_zh": "Apfel：macOS Tahoe内置免费AI工具完全攻略 - 无需API Key，零成本本地运行",
+      "title_en": "Apfel: Complete Guide to macOS Tahoe Built-in Free AI - Zero Cost On-Device",
+      "excerpt_zh": "Apfel利用macOS Tahoe内置的3B参数模型，提供完全免费、无需联网、保护隐私的本地AI能力。一行brew安装，零配置，支持CLI/OpenAI兼容服务器/MCP协议。",
+      "excerpt_en": "Apfel leverages macOS Tahoes built-in 3B parameter model to provide completely free, offline, privacy-preserving local AI. One brew install, zero config, supports CLI/OpenAI-compatible server/MCP protocol.",
+      "date": "2026-07-06",
+      "category": "api"
     },
     {
       "slug": "atomcode-codingplan-free",
       "title_zh": "AtomCode CodingPlan免费攻略：GLM-5.1加持的AI编程工具",
       "title_en": "AtomCode CodingPlan Free Guide: GLM-5.1 Powered",
-      "excerpt_zh": "AtomCode开源免费编程Agent，配合GLM-5.1 Coding Plan ¥18/月起。",
-      "excerpt_en": "AtomCode open-source free coding agent with GLM-5.1 Coding Plan from ¥18/mo.",
-      "date": "2026-07-14",
-      "category": "coding",
-      "pinned": false
+      "excerpt_zh": "AtomCode CodingPlan限时免费放Pro档额度，基于GLM-5.1模型，编码能力强",
+      "excerpt_en": "Limited-time free Pro tier powered by GLM-5.1 model with strong coding capabilities",
+      "date": "2026-07-06",
+      "category": "coding"
     },
     {
       "slug": "cerebras-free-api-guide",
       "title_zh": "Cerebras免费API攻略：100万token/天，GPT OSS/GLM 4.7随便用",
-      "title_en": "Cerebras Free API Guide: 1 Million Tokens/Day",
-      "excerpt_zh": "Cerebras每天100万Token免费，无需信用卡，LPU芯片速度碾压普通GPU。",
-      "excerpt_en": "Cerebras 1M tokens/day free, no credit card, LPU chips outperform standard GPUs.",
+      "title_en": "Cerebras Free API Guide: 1 Million Tokens/Day, GPT OSS & GLM 4.7",
+      "excerpt_zh": "Cerebras免费开放API，每天100万token，支持GPT OSS 120B和GLM 4.7。速度比OpenAI快20倍，注册只需邮箱，无需信用卡。",
+      "excerpt_en": "Cerebras offers a completely free API with 1M tokens/day. Access GPT OSS 120B and GLM 4.7 at 20x OpenAI speed. Email signup, no credit card.",
       "category": "api",
       "tags": [
         "cerebras",
@@ -59,160 +109,150 @@
         "glm",
         "gpt-oss"
       ],
-      "date": "2026-07-14",
-      "pinned": false
+      "date": "2026-06-23"
     },
     {
       "slug": "deepsider-antigravity-free-gemini",
       "title_zh": "Deepsider免费用Gemini：反重力扩展，浏览器里直接调用Gemini API",
       "title_en": "Deepsider Free Gemini: Antigravity Extension",
-      "excerpt_zh": "Google Antigravity免费Agentic开发平台，浏览器直接用Gemini Pro API。",
-      "excerpt_en": "Google Antigravity free agentic dev platform, use Gemini Pro API in browser.",
-      "date": "2026-07-14",
-      "category": "api",
-      "pinned": false
+      "excerpt_zh": "Deepsider反重力浏览器扩展，免费调用Gemini API，无需翻墙，支持代码生成和对话",
+      "excerpt_en": "Antigravity browser extension for free Gemini API access, no VPN needed",
+      "date": "2026-07-06",
+      "category": "api"
     },
     {
       "slug": "dumate-baidu-desktop-ai-free-guide-2026",
       "title_zh": "度码DuMate桌面AI助手免费攻略：百度出品，8000积分办公自动化",
-      "title_en": "DuMate Desktop AI Agent Free Guide: Baidu's 8,000 Credits",
-      "excerpt_zh": "百度DuMate桌面AI助手，免费层每天1000积分，支持PPT制作、视频生成。",
-      "excerpt_en": "Baidu's DuMate desktop AI assistant, 1000 free credits daily.",
+      "title_en": "DuMate Desktop AI Agent Free Guide: Baidu's 8,000 Credits Office Automation AI",
+      "excerpt_zh": "百度推出的桌面AI助手DuMate，提供免费8000积分用于办公自动化任务。支持Windows和macOS。",
+      "excerpt_en": "Baidu's desktop AI assistant DuMate with free 8,000 credits for office automation tasks. Supports Windows and macOS.",
       "category": "productivity",
       "tags": [
         "baidu",
         "desktop-ai",
         "office-automation"
       ],
-      "date": "2026-07-14",
-      "pinned": false
+      "date": "2026-07-02"
     },
     {
       "slug": "free-ai-coding-tools-comparison",
       "title_zh": "免费AI编程工具对比攻略：15款主流工具横评",
       "title_en": "Free AI Coding Tools Comparison: 15 Leading Tools Reviewed",
-      "excerpt_zh": "15款主流AI编程工具免费额度横评，Claude Code、Cursor、Copilot等全面对比。",
-      "excerpt_en": "15 mainstream AI coding tools free tier comparison.",
+      "excerpt_zh": "对比15款免费AI编程工具，包括Cursor、Copilot、Cline、Trae等，帮你找到最适合的免费编码方案。",
+      "excerpt_en": "Compare 15 free AI coding tools including Cursor, Copilot, Cline, Trae and more to find the best fit for you.",
       "category": "coding",
       "tags": [
         "ai-coding",
         "comparison",
         "free-tools"
       ],
-      "date": "2026-07-14",
-      "pinned": false
+      "date": "2026-06-23"
     },
     {
       "slug": "free-ai-image-generator-tools",
       "title_zh": "免费AI绘画工具对比：Playground vs Leonardo vs 通义万相 vs Ideogram",
       "title_en": "Free AI Image Generator Comparison: Playground vs Leonardo vs Tongyi Wanxiang vs Ideogram",
-      "excerpt_zh": "10款免费AI绘画工具横评，Playground量最大，Leonardo画质最好，Ideogram文字渲染最强。",
-      "excerpt_en": "10 free AI image tools compared.",
+      "excerpt_zh": "深度对比4款免费AI绘画工具，从生成质量、分辨率、速度、免费额度全方位评测。",
+      "excerpt_en": "In-depth comparison of 4 free AI image generators covering quality, resolution, speed, and free quotas.",
       "category": "image",
       "tags": [
         "ai-image",
         "comparison",
         "free-tools"
       ],
-      "date": "2026-07-14",
-      "pinned": false
+      "date": "2026-06-20"
     },
     {
       "slug": "free-ai-llm-api-platforms-comparison",
       "title_zh": "免费AI大模型API平台对比：2026年最强白嫖指南",
       "title_en": "Free AI LLM API Platforms Comparison: 2026 Best Free Tier Guide",
-      "excerpt_zh": "Groq、Cerebras、Together AI、智谱、硅基流动等国内外免费API平台全面对比。",
-      "excerpt_en": "Groq, Cerebras, Together AI, Zhipu, SiliconFlow free API platforms compared.",
+      "excerpt_zh": "深度横评20+个AI大模型平台的免费额度、RPM限制、TPM上限，帮你找到最适合的免费API。",
+      "excerpt_en": "In-depth review of 20+ AI LLM platforms: free credits, RPM limits, TPM caps.",
       "pinned": false,
-      "date": "2026-07-14",
+      "date": "2026-07-06",
       "category": "api"
     },
     {
       "slug": "free-ai-subtitle-generator-tools",
       "title_zh": "2026年5款免费AI字幕生成工具实测对比：CapCut、Descript、VEED免费额度全解析",
       "title_en": "5 Free AI Subtitle Generator Tools Compared (2026): CapCut vs Descript vs VEED",
-      "excerpt_zh": "CapCut完全免费，VEED最易用，Descript适合播客，YouTube Studio最方便。",
-      "excerpt_en": "CapCut free, VEED easiest, Descript for podcasts.",
+      "excerpt_zh": "2026年5款免费AI字幕生成工具实测对比：CapCut完全免费无水印、Descript每月1小时免费转录、VEED.io 10分钟限制、Kapwing 5分钟限制、Clipchamp Windows自带免费。包含准确率测试、支持语言和使用场景推荐。",
+      "excerpt_en": "2026年5款免费AI字幕生成工具实测对比：CapCut完全免费无水印、Descript每月1小时免费转录、VEED.io 10分钟限制、Kapwing 5分钟限制、Clipchamp Windows自带免费。包含准确率测试、支持语言和使用场景推荐。",
       "category": "video",
       "tags": [
         "subtitle",
         "ai-video",
         "free-tools"
       ],
-      "date": "2026-07-14",
-      "pinned": false
+      "date": "2026-06-20"
     },
     {
       "slug": "free-ai-video-generation-tools",
-      "title_zh": "免费AI视频生成工具对比：Seedance 2.0、Kling、Runway等10款横评",
-      "title_en": "Free AI Video Generation Tools Comparison: 10 Tools Including Seedance 2.0, Kling, Runway",
-      "excerpt_zh": "10款免费AI视频工具横评，Seedance 2.0国内最佳，Runway专业首选。",
-      "excerpt_en": "10 free AI video tools compared.",
+      "title_zh": "免费AI视频生成工具对比：Seedance 2.0、Kling、Hailuo、Runway等10款横评",
+      "title_en": "Free AI Video Generation Tools Comparison: 10 Tools Including Seedance 2.0, Kling, Hailuo, Runway",
+      "excerpt_zh": "对比10款免费AI视频生成工具，涵盖Seedance 2.0、可灵、海螺、Runway等主流平台。",
+      "excerpt_en": "Compare 10 free AI video generation tools covering Seedance 2.0, Kling, Hailuo, Runway and more.",
       "category": "video",
       "tags": [
         "ai-video",
         "comparison",
         "free-tools"
       ],
-      "date": "2026-07-14",
-      "pinned": false
+      "date": "2026-06-20"
     },
     {
       "slug": "freebuff-free-coding-agent",
       "title_zh": "Freebuff Free Coding Agent",
       "title_en": "Freebuff Free Coding Agent",
-      "excerpt_zh": "Freebuff完全免费AI编程Agent，速度最快，支持Subagents并行。",
-      "excerpt_en": "Freebuff completely free AI coding agent, fastest speed, supports Subagents.",
-      "pinned": false,
-      "date": "2026-07-14",
+      "excerpt_zh": "免费编程Agent工具推荐",
+      "excerpt_en": "Free coding agent tool recommendation",
+      "pinned": true,
+      "date": "2026-07-06",
       "category": "coding"
     },
     {
       "slug": "gemini-cli-free-ai-coding",
       "title_zh": "Gemini CLI免费AI编程：Google出品的终端编程神器",
       "title_en": "Gemini CLI Free AI Coding: Google's Terminal Powerhouse",
-      "excerpt_zh": "Google Gemini CLI免费AI编程工具，2026年6月18日起停止免费服务，推荐迁移到Antigravity。",
-      "excerpt_en": "Google's Gemini CLI free AI coding, free tier ended June 18 2026.",
-      "date": "2026-07-14",
-      "category": "coding",
-      "pinned": false
+      "excerpt_zh": "Google出品的终端AI编程工具，免费用Gemini模型，支持代码生成、调试、重构",
+      "excerpt_en": "Terminal AI coding tool from Google, free Gemini model with code generation, debugging, refactoring",
+      "date": "2026-07-06",
+      "category": "coding"
     },
     {
       "slug": "huawei-deveco-code-free-coding",
       "title_zh": "华为DevEco Code免费攻略：GLM-5.1不限量白嫖指南",
       "title_en": "Huawei DevEco Code Free Guide: Unlimited GLM-5.1",
-      "excerpt_zh": "华为DevEco Code免费AI编程工具，内置GLM-5.1模型，鸿蒙开发首选。",
-      "excerpt_en": "Huawei's DevEco Code free AI coding tool with built-in GLM-5.1.",
-      "date": "2026-07-14",
-      "category": "coding",
-      "pinned": false
+      "excerpt_zh": "华为DevEco Code内置智谱GLM-5.1模型，完全免费不限额度，登录即用无需手动选择",
+      "excerpt_en": "Built-in Zhipu GLM-5.1 model, completely free with no quota limits",
+      "date": "2026-07-06",
+      "category": "coding"
     },
     {
       "slug": "kimi-k26-free-coding",
       "title_zh": "Kimi K2.6 免费编码指南：开源最强编码Agent，300个子智能体并行干活",
       "title_en": "Kimi K2.6 Free Coding Guide: Open-Source Strongest Agent",
-      "excerpt_zh": "月之暗面Kimi K2.6开源编码模型，支持300个子Agent并行，完全免费。",
-      "excerpt_en": "Moonshot's Kimi K2.6 open-source coding model, 300 parallel sub-agents.",
-      "date": "2026-07-14",
-      "category": "coding",
-      "pinned": false
+      "excerpt_zh": "Kimi K2.6 SWE-Bench Pro 58.6分，开源第一。13小时不间断编码，Agent Swarm 300子智能体并行",
+      "excerpt_en": "SWE-Bench Pro 58.6 score, #1 open source. 13-hour continuous coding with 300 sub-agents",
+      "date": "2026-07-06",
+      "category": "coding"
     },
     {
       "slug": "llm-admin-free-unified-gateway",
       "title_zh": "LLM Admin免费攻略：一套API调用80+模型的本地化LLM统一网关",
       "title_en": "LLM Admin Free Guide: Unified LLM Gateway with 80+ Models",
-      "excerpt_zh": "LLM Admin开源本地LLM网关，一套API调用80+模型，数据本地化。",
-      "excerpt_en": "Open-source local LLM gateway, one API for 80+ models, data localized.",
+      "excerpt_zh": "开源免费的本地化LLM统一网关，兼容OpenAI与Anthropic双协议，80+模型智能路由，桌面端管理界面，数据本地处理零泄露。",
+      "excerpt_en": "Open-source free LLM gateway, dual OpenAI+Anthropic protocol support, 80+ models smart routing, desktop dashboard, local data processing.",
       "pinned": false,
-      "date": "2026-07-14",
+      "date": "2026-07-06",
       "category": "api"
     },
     {
       "slug": "mistral-ai-studio-free-api-guide",
       "title_zh": "Mistral AI Studio 免费 API 额度与 OCR4 多语言文档识别完全攻略",
       "title_en": "Mistral AI Studio Free API Credits & OCR4 Multilingual Document Recognition Guide",
-      "excerpt_zh": "Mistral AI免费API层，支持Vibe、OCR4多语言文档识别，100+语言。",
-      "excerpt_en": "Mistral AI free API tier, Vibe, OCR4 multilingual doc recognition, 100+ languages.",
+      "excerpt_zh": "Mistral AI 推出全新 OCR4 多语言文档识别模型（支持 170 种语言），同时开放 Studio 免费 API 额度。本文详细解读免费额度详情、使用限制和注册方法。",
+      "excerpt_en": "Mistral AI launches OCR4 multilingual document recognition model (supporting 170 languages) and opens free Studio API credits. Detailed guide on free quotas, limitations, and registration.",
       "category": "api",
       "tags": [
         "mistral",
@@ -220,15 +260,23 @@
         "free-api",
         "multilingual"
       ],
-      "date": "2026-07-14",
-      "pinned": false
+      "date": "2026-06-27"
+    },
+    {
+      "slug": "monkeyCode-free-ai-coding-platform-2026",
+      "title_zh": "MonkeyCode：奇安信出品的免费开源AI开发平台，云端编程零门槛",
+      "title_en": "MonkeyCode: Free Open-Source AI Coding Platform by Chaitin, Zero-T门槛 Cloud Development",
+      "excerpt_zh": "MonkeyCode 是奇安信开源的企业级 AI 开发平台，内置云端开发环境，支持多种顶尖大模型。每天3千万免费额度，无需安装、无需部署，在浏览器中完成编码、测试、运行全流程。",
+      "excerpt_en": "MonkeyCode is an open-source enterprise AI development platform by Chaitin, featuring built-in cloud development environments and support for top-tier LLMs. 30 million free daily credits, no installation or deployment needed.",
+      "date": "2026-07-06",
+      "category": "coding"
     },
     {
       "slug": "nano-banana-2-lite-free-image-generation",
       "title_zh": "Nano Banana 2 Lite 完全免费：Google DeepMind 最快 AI 图片生成工具",
       "title_en": "Nano Banana 2 Lite Free: Google DeepMind's Fastest AI Image Generator",
-      "excerpt_zh": "Google DeepMind Nano Banana 2 Lite最快AI图像生成模型，完全免费。",
-      "excerpt_en": "Google DeepMind's Nano Banana 2 Lite fastest AI image generation, completely free.",
+      "excerpt_zh": "Google DeepMind 发布 Gemini 3.1 Flash-Lite Image（代号 Nano Banana 2 Lite），完全免费通过 Google AI Studio 使用，速度比前代快数倍，成本降低至最低，支持 4K 分辨率图像生成与编辑。",
+      "excerpt_en": "Google DeepMind released Gemini 3.1 Flash-Lite Image (codenamed Nano Banana 2 Lite), completely free via Google AI Studio. It is the fastest and cheapest Gemini image model, supporting 4K resolution generation and editing.",
       "category": "image",
       "tags": [
         "google",
@@ -236,35 +284,32 @@
         "image-generation",
         "free"
       ],
-      "date": "2026-07-14",
-      "pinned": false
+      "date": "2026-07-01"
     },
     {
       "slug": "notebooklm-free-guide-2026",
       "title_zh": "NotebookLM完全免费攻略：Google出品的AI研究神器，50个来源+播客生成+视频解说全免费",
-      "title_en": "NotebookLM Complete Free Guide: Google's AI Research Tool",
-      "excerpt_zh": "Google NotebookLM完全免费AI研究工具，上传50个来源，生成播客和视频解说。",
-      "excerpt_en": "Google's NotebookLM completely free AI research tool, upload 50 sources.",
-      "date": "2026-07-14",
-      "category": "video",
-      "pinned": false
+      "title_en": "NotebookLM Complete Free Guide: Google's AI Research Tool with 50 Sources, Podcast & Video Generation — All Free",
+      "excerpt_zh": "Google出品的AI研究工具NotebookLM，完全免费使用。支持上传50个来源文档，自动生成播客式对话、视频解说和研究摘要。2026年仍是唯一不收费的主流AI研究工具。",
+      "excerpt_en": "Google's AI research tool NotebookLM, completely free. Upload up to 50 source documents, auto-generate podcast-style conversations, video explanations and research summaries. In 2026, still the only mainstream AI research tool that remains free.",
+      "date": "2026-07-06",
+      "category": "video"
     },
     {
       "slug": "qoderwork-free-pro-2026",
       "title_zh": "Qoderwork免费Pro攻略：2026年白嫖Pro版完整教程",
       "title_en": "Qoderwork Free Pro Guide 2026",
-      "excerpt_zh": "Qoderwork免费Pro版，无限代码补全+AI对话编程+自动代码生成，2026年白嫖首选。",
-      "excerpt_en": "Qoderwork free Pro tier with unlimited code completions + AI chat + auto code generation.",
-      "date": "2026-07-14",
-      "category": "general",
-      "pinned": false
+      "excerpt_zh": "Qoderwork免费Pro版领取攻略，包含注册教程、邀请链接和截图",
+      "excerpt_en": "Complete guide to getting Qoderwork Pro free, including registration and invite links",
+      "date": "2026-07-06",
+      "category": "general"
     },
     {
       "slug": "qwen3-6-free-unlimited-2026",
       "title_zh": "Qwen3.6免费无限量使用：阿里通义千问最强模型，6月底前白嫖攻略",
-      "title_en": "Qwen3.6 Free Unlimited: Alibaba's Strongest Model",
-      "excerpt_zh": "阿里通义千问Qwen3.6最强模型，通过Qwen Studio、OpenRouter、本地部署等多种渠道免费无限量使用。",
-      "excerpt_en": "Alibaba's Qwen3.6 strongest model, free unlimited via Qwen Studio, OpenRouter, local deployment.",
+      "title_en": "Qwen3.6 Free Unlimited: Alibaba's Strongest Model, Complete Free Guide Until End of June 2026",
+      "excerpt_zh": "通义千问推出Qwen3.6免费无限量使用活动，通过通义千问网页版和DashScope API均可免费使用。支持文本、代码、推理等多场景，6月底截止。",
+      "excerpt_en": "Alibaba's Tongyi Qianwen offers free unlimited access to Qwen3.6 through web interface and DashScope API. Supports text, code, reasoning and more. Promotion ends late June 2026.",
       "category": "api",
       "tags": [
         "qwen",
@@ -272,40 +317,35 @@
         "free-api",
         "llm"
       ],
-      "date": "2026-07-14",
-      "pinned": false
+      "date": "2026-06-23"
     },
     {
       "slug": "rime-ai-voice-free-guide-2026",
-      "title_zh": "Rime AI Voice免费攻略：注册即送$100额度，94种旗舰声音+多语言代码切换",
-      "title_en": "Rime AI Voice Free Guide 2026: $100 Free Credits, 94 Premium Voices",
+      "title_zh": "Rime AI Voice免费攻略：注册即送$100额度，94种旗舰声音+多语言代码切换，企业级TTS语音合成工具完全免费使用指南",
+      "title_en": "Rime AI Voice Free Guide 2026: $100 Free Credits, 94 Premium Voices & Multilingual Code-Switching",
       "description_zh": "Rime AI Voice免费使用教程，包含$100免费额度、94种声音、多语言代码切换等详细信息。",
       "description_en": "Rime AI Voice free usage guide with $100 free credits, 94 premium voices, and multilingual code-switching.",
       "category": "audio",
       "published": "2026-06-29",
       "featured": false,
-      "date": "2026-07-14",
-      "excerpt_zh": "Rime AI企业级TTS语音合成，注册送$200免费额度，600+声音，50+语言，亚100毫秒延迟。",
-      "excerpt_en": "Enterprise TTS, $200 free credits, 600+ voices, 50+ languages, sub-100ms latency.",
-      "pinned": false
+      "date": "2026-07-06"
     },
     {
       "slug": "trae-free-ai-coding",
       "title_zh": "Trae免费AI编程：字节跳动出品，每月5000次自动补全",
       "title_en": "Trae Free AI Coding: ByteDance出品, 5000 Completions/Month",
-      "excerpt_zh": "字节跳动Trae IDE完全免费，每月5000次自动补全+60次AI对话，无隐藏费用。",
-      "excerpt_en": "ByteDance's Trae IDE completely free, 5000 completions + 60 AI chats/month.",
-      "date": "2026-07-14",
-      "category": "coding",
-      "pinned": false
+      "excerpt_zh": "字节跳动做的AI编程IDE，内置SOLO模式能自动完成整个开发任务。免费版每月5000次自动补全",
+      "excerpt_en": "AI IDE from ByteDance with SOLO mode for full task automation. 5000 monthly completions free",
+      "date": "2026-07-06",
+      "category": "coding"
     },
     {
       "slug": "seedance-2.0-free-unlimited-2026",
       "title_zh": "Seedance 2.0免费攻略：1080p无限视频生成，目前最强免费AI视频工具",
       "title_en": "Seedance 2.0 Free Guide: Unlimited 1080p AI Video Generation",
-      "excerpt_zh": "字节跳动Seedance 2.0免费AI视频生成，1080p高清，多模态输入，目前最强免费视频工具。",
-      "excerpt_en": "ByteDance's Seedance 2.0 free AI video, 1080p HD, multimodal input.",
-      "date": "2026-07-14",
+      "excerpt_zh": "Seedance 2.0是目前唯一真正免费无限使用的AI视频生成工具，1080p分辨率无水印，支持上传人脸。手把手教你通过小云雀平台免费使用满血版。",
+      "excerpt_en": "Seedance 2.0 is the only AI video generator that's truly free and unlimited with 1080p resolution, no watermark, and face upload support.",
+      "date": "2026-07-06",
       "category": "video",
       "pinned": false
     },
@@ -313,9 +353,9 @@
       "slug": "stablediffusion-free-local-deploy-2026",
       "title_zh": "Stable Diffusion完全免费攻略：本地部署无限出图，画质吊打所有在线付费工具",
       "title_en": "Stable Diffusion Free Guide: Local Deployment for Unlimited Image Generation",
-      "excerpt_zh": "Stable Diffusion本地部署后完全免费无限出图，画质优秀，社区模型丰富。",
-      "excerpt_en": "Stable Diffusion locally deployed, completely free unlimited image generation.",
-      "date": "2026-07-14",
+      "excerpt_zh": "Stable Diffusion本地部署完全免费无限使用，支持各种LoRA模型和插件。秋叶整合包让小白也能一键安装，画质和自由度吊打所有在线付费工具。",
+      "excerpt_en": "Stable Diffusion local deployment is completely free with unlimited generations. Supports various LoRA models and plugins. Autumn Leaf integration package makes it easy for beginners.",
+      "date": "2026-07-06",
       "category": "image",
       "pinned": false
     },
@@ -323,9 +363,9 @@
       "slug": "coze-free-unlimited-agent-2026",
       "title_zh": "扣子Coze完全免费攻略：零代码创建AI智能体，多平台一键发布",
       "title_en": "Coze Free Guide: Zero-Code AI Agent Creation with Multi-Platform Publishing",
-      "excerpt_zh": "字节跳动扣子Coze完全免费零代码AI智能体平台，一键发布到微信/钉钉/飞书等多平台。",
-      "excerpt_en": "ByteDance's Coze completely free zero-code AI agent platform.",
-      "date": "2026-07-14",
+      "excerpt_zh": "扣子Coze是字节跳动出品的智能体开发平台，个人完全免费，无限制创建智能体，每日约1000次调用。零代码创建，支持微信、飞书、网页等多平台发布。",
+      "excerpt_en": "Coze by ByteDance is a zero-code AI agent platform. Completely free for personal use with ~1000 daily calls. Publish to WeChat, Feishu, web and more.",
+      "date": "2026-07-06",
       "category": "productivity",
       "pinned": false
     },
@@ -333,17 +373,25 @@
       "slug": "ego-lite-free-ai-agent-browser-2026",
       "title_zh": "Ego Lite 免费攻略：Citro Labs 专为 AI Agent 设计的 Chromium 浏览器",
       "title_en": "Ego Lite Free Guide: Citro Labs AI Agent Browser",
-      "excerpt_zh": "Citro Labs专为AI Agent设计的Chromium浏览器，原生支持Agent操控，完全免费。",
-      "excerpt_en": "Citro Labs' Chromium browser designed for AI Agents, natively supports Agent control.",
-      "date": "2026-07-14",
+      "excerpt_zh": "Citro Labs 推出 Ego Lite，一款专为 AI Agent 设计的 Chromium 浏览器。完全免费开源，支持 task space 隔离、登录态继承、语义+视觉+CDP 多模态操作。",
+      "excerpt_en": "Citro Labs released Ego Lite, a Chromium browser for AI Agents. Free and open-source with task space isolation, login inheritance, and multimodal operations.",
+      "date": "2026-07-06",
       "category": "productivity",
       "tags": [
         "ego-lite",
         "ai-agent",
         "browser",
         "free-tool"
-      ],
-      "pinned": false
+      ]
+    },
+    {
+      "slug": "free-ai-writing-tools-comparison-2026",
+      "title_zh": "AI写作工具免费额度对比：10款主流工具2026年免费版深度横评",
+      "title_en": "AI Writing Tools Free Tier Comparison: 10 Popular Tools Reviewed in 2026",
+      "excerpt_zh": "2026年10款主流AI写作工具免费版深度横评，涵盖秘塔写作猫、笔灵AI、小幻熊等工具的免费额度、字数限制和功能对比。",
+      "excerpt_en": "Deep comparison of 10 mainstream AI writing tools free tiers in 2026, covering Meta Writer, Biling AI, Xiaohuanxiong and more.",
+      "date": "2026-07-09",
+      "category": "writing"
     },
     {
       "slug": "yolo-auto-free-llm-api-2026",
@@ -351,7 +399,7 @@
       "title_en": "Yolo-Auto Free LLM API Guide: 15 Daily Free Requests + Unlimited $10/mo Plan",
       "description_zh": "Yolo-Auto是一个新兴的开源LLM API平台，提供OpenAI兼容接口，支持Qwen3.6-35B模型。免费套餐每日15次请求，Builder计划$10/月无限使用。",
       "description_en": "Yolo-Auto is an emerging open-source LLM API platform offering an OpenAI-compatible interface powered by Qwen3.6-35B-A3B. Free tier includes 15 requests/day.",
-      "date": "2026-07-14",
+      "date": "2026-07-12",
       "category": "LLM API",
       "tags": [
         "yolo-auto",
@@ -359,10 +407,7 @@
         "free-api",
         "llm",
         "flat-rate"
-      ],
-      "excerpt_zh": "Yolo-Auto提供Qwen3.6-35B免费API，每日15次免费+无限使用。",
-      "excerpt_en": "Yolo-Auto offers Qwen3.6-35B free API with 15 daily free requests.",
-      "pinned": false
+      ]
     },
     {
       "slug": "ai-presentation-tools-free-comparison-2026",
@@ -373,7 +418,7 @@
       "category": "presentation",
       "published": "2026-07-13",
       "featured": false,
-      "date": "2026-07-14",
+      "date": "2026-07-13",
       "tags": [
         "ai-presentation",
         "gamma",
@@ -383,10 +428,7 @@
         "slidesai",
         "comparison",
         "free-tools"
-      ],
-      "excerpt_zh": "5款AI演示工具免费额度对比，Gamma 400积分/月最多，Canva最易用。",
-      "excerpt_en": "5 AI presentation tools free tier comparison.",
-      "pinned": false
+      ]
     },
     {
       "slug": "ai-music-audio-generation-free-comparison-2026",
@@ -404,29 +446,24 @@
         "ElevenLabs",
         "免费额度",
         "对比评测"
-      ],
-      "excerpt_zh": "8款AI音乐音频工具免费额度对比，Suno 50 credits/天最多，ElevenLabs音质最佳。",
-      "excerpt_en": "8 AI music/audio tools free tier comparison.",
-      "date": "2026-07-14",
-      "pinned": false
+      ]
     },
     {
       "slug": "bonsai-27b-free-on-device-2026",
       "title_zh": "Bonsai 27B：270亿参数AI模型在手机本地免费运行完全攻略 - 基于Qwen3.6，Apache 2.0开源",
-      "title_en": "Bonsai 27B: Complete Guide to Running a 27B-Class AI Model Free on Your Phone",
-      "excerpt_zh": "Bonsai 27B基于Qwen3.6量化仅5.9GB，可在手机本地运行，Apache 2.0开源免费。",
-      "excerpt_en": "Bonsai 27B quantized to 5.9GB from Qwen3.6, runs on phones, Apache 2.0 free.",
-      "date": "2026-07-14",
-      "category": "api",
-      "pinned": false
+      "title_en": "Bonsai 27B: Complete Guide to Running a 27B-Class AI Model Free on Your Phone - Based on Qwen3.6, Apache 2.0 Licensed",
+      "excerpt_zh": "PrismML推出革命性Bonsai 27B模型，将270亿参数AI压缩到3.9GB，可在iPhone本地运行。基于Qwen3.6，Apache 2.0开源，完全免费下载使用。",
+      "excerpt_en": "PrismML introduces revolutionary Bonsai 27B, compressing 27B-parameter AI to 3.9GB for local iPhone running. Based on Qwen3.6, Apache 2.0 licensed, completely free.",
+      "date": "2026-07-15",
+      "category": "api"
     },
     {
       "slug": "inkling-open-weights-multimodal-free-guide-2026",
       "title_zh": "Inkling：Thinking Machines Lab开源975B参数多模态模型完全攻略 - Tinker免费试用+50% API折扣",
-      "title_en": "Inkling: Thinking Machines Lab Open-Weights 975B Multimodal Model",
-      "excerpt_zh": "Inkling 975B参数多模态模型开源，Tinker免费试用+50% API折扣。",
-      "excerpt_en": "Inkling 975B parameter multimodal model open-source, Tinker free trial + 50% API discount.",
-      "date": "2026-07-14",
+      "title_en": "Inkling: Thinking Machines Lab Open-Weights 975B Multimodal Model - Free Tinker Playground + 50% API Discount",
+      "excerpt_zh": "Thinking Machines Lab于2026年7月15日发布Inkling——975B参数MoE多模态模型，完全开源免费。支持1M token上下文，Tinker平台免费试用+50% API折扣。",
+      "excerpt_en": "Thinking Machines Lab released Inkling: a 975B parameter MoE multimodal Transformer, fully open-source free. 1M token context, free Tinker Playground + 50% API discount.",
+      "date": "2026-07-16",
       "category": "api",
       "tags": [
         "inkling",
@@ -436,63 +473,8 @@
         "tinker",
         "free-model",
         "moe"
-      ],
-      "pinned": false
-    },
-    {
-      "slug": "baidu-unlimited-ocr-mit-free-commercial",
-      "title_zh": "百度开源 Unlimited OCR：MIT协议免费商用，一次扫几十页",
-      "title_en": "Baidu's Unlimited OCR: MIT Licensed, Free for Commercial Use",
-      "excerpt_zh": "百度开源Unlimited OCR，MIT协议免费商用，一次前向传播处理数十页文档。",
-      "excerpt_en": "Baidu's open-source Unlimited OCR, MIT license free commercial use.",
-      "date": "2026-07-14",
-      "pinned": false
-    },
-    {
-      "slug": "free-ai-compute-platforms-july-2026",
-      "title_zh": "2026年7月最新免费AI算力平台全攻略（8个新平台实测）",
-      "title_en": "July 2026 Guide to Free AI Compute Platforms (8 New Platforms Tested)",
-      "excerpt_zh": "8个新平台实测：百度千帆、国家超算、天翼AI、美团LongCat、无问芯穹、白山云、PPIO、中国移动MoMA。",
-      "excerpt_en": "8 new platforms tested: Baidu Qianfan, National Supercomputing, China Telecom, Meituan LongCat.",
-      "date": "2026-07-14",
-      "pinned": false
-    },
-    {
-      "slug": "monkeycode-free-ai-coding-platform-2026",
-      "title_zh": "MonkeyCode：奇安信出品的免费开源AI开发平台，云端编程零门槛",
-      "title_en": "MonkeyCode: Free Open-Source AI Coding Platform by Chaitin",
-      "excerpt_zh": "奇安信MonkeyCode免费开源AI开发平台，云端编程零门槛，团队协作。",
-      "excerpt_en": "Chaitin's MonkeyCode free open-source AI dev platform, zero-barrier cloud coding.",
-      "date": "2026-07-14",
-      "pinned": false
-    },
-    {
-      "slug": "ai-writing-tools-free-tier-comparison-2026",
-      "title_zh": "AI写作工具免费额度对比：10款主流工具2026年免费版深度横评",
-      "title_en": "AI Writing Tools Free Tier Comparison: 10 Popular Tools Reviewed in 2026",
-      "excerpt_zh": "10款AI写作工具免费额度对比，Writesonic 25K字/月最多，通义千问完全免费。",
-      "excerpt_en": "10 AI writing tools free tier comparison.",
-      "date": "2026-07-14",
-      "pinned": false
-    },
-    {
-      "slug": "free-ai-writing-tools-comparison-2026",
-      "title_zh": "AI写作工具免费额度对比：10款主流工具2026年免费版深度横评",
-      "title_en": "AI Writing Tools Free Tier Comparison: 10 Popular Tools Reviewed in 2026",
-      "excerpt_zh": "2026年10款主流AI写作工具免费版深度横评，涵盖秘塔写作猫、笔灵AI、小幻熊等工具的免费额度、字数限制和功能对比。",
-      "excerpt_en": "Deep comparison of 10 mainstream AI writing tools free tiers in 2026, covering Meta Writer, Biling AI, Xiaohuanxiong and more.",
-      "date": "2026-07-09",
-      "category": "writing"
-    },
-    {
-      "slug": "monkeyCode-free-ai-coding-platform-2026",
-      "title_zh": "MonkeyCode：奇安信出品的免费开源AI开发平台，云端编程零门槛",
-      "title_en": "MonkeyCode: Free Open-Source AI Coding Platform by Chaitin, Zero-T门槛 Cloud Development",
-      "excerpt_zh": "MonkeyCode 是奇安信开源的企业级 AI 开发平台，内置云端开发环境，支持多种顶尖大模型。每天3千万免费额度，无需安装、无需部署，在浏览器中完成编码、测试、运行全流程。",
-      "excerpt_en": "MonkeyCode is an open-source enterprise AI development platform by Chaitin, featuring built-in cloud development environments and support for top-tier LLMs. 30 million free daily credits, no installation or deployment needed.",
-      "date": "2026-07-06",
-      "category": "coding"
+      ]
     }
   ],
-  "updatedAt": "2026-07-16T10:00:00.000000"
+  "updatedAt": "2026-07-23"
 }

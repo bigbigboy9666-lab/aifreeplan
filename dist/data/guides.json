@@ -1,6 +1,59 @@
 {
   "guides": [
     {
+      "slug": "petals-free-distributed-llm-2026",
+      "title_zh": "Petals免费攻略：BitTorrent-style分布式网络，免费运行Llama 3.1 405B超大模型",
+      "title_en": "Petals Free Guide: BitTorrent-Style Distributed Network for Free Llama 3.1 405B Inference",
+      "description_zh": "Petals是由BigScience实验室出品的分布式LLM推理网络，用户共享GPU算力，任何人都可以免费使用Llama 3.1 405B、Mixtral 8x22B等超大模型。",
+      "description_en": "Petals is a distributed LLM inference network by BigScience lab. Users share GPU compute, anyone can freely use Llama 3.1 405B, Mixtral 8x22B and other massive models.",
+      "category": "ai-compute",
+      "date_published": "2026-07-23",
+      "tags": [
+        "distributed",
+        "llm",
+        "free",
+        "petals",
+        "bigscience"
+      ],
+      "image": "petals-architecture.jpg"
+    },
+    {
+      "slug": "nativ-free-local-ai-mac-2026",
+      "title_zh": "Nativ 免费本地 AI 桌面应用：Apple Silicon 上运行开源模型，零订阅零云端零账户",
+      "title_en": "Nativ Free Local AI for Mac: Run Open Models on Apple Silicon — Zero Subscription, Zero Cloud, Zero Accounts",
+      "excerpt_zh": "Nativ 是一款 100% 开源、MIT 许可的 macOS 原生 AI 应用，专为 Apple Silicon 设计。基于 MLX 框架，可在本地运行前沿开源模型，支持聊天、代码补全、语音转录等多种模态。完全免费，无需注册账户、无需订阅、无需云端连接。",
+      "excerpt_en": "Nativ is a 100% open-source, MIT-licensed macOS-native AI app designed for Apple Silicon. Powered by the MLX framework, it runs frontier open models locally, supporting chat, code completion, voice transcription, and more. Completely free — no account registration, no subscription, no cloud connection needed.",
+      "category": "desktop",
+      "tags": [
+        "nativ",
+        "macos",
+        "apple-silicon",
+        "mlx",
+        "local-ai",
+        "open-source",
+        "free-ai",
+        "desktop-ai",
+        "open-weights"
+      ],
+      "date": "2026-07-21"
+    },
+    {
+      "slug": "ollama-free-cloud-guide-2026",
+      "title_zh": "Ollama免费云端AI模型完全攻略：刚获$88M融资，8.9M开发者信赖，免费使用公开模型+轻量云端模型",
+      "title_en": "Ollama Free Cloud AI Guide: $88M Funded, 8.9M Developers, Free Public Models + Lightweight Cloud Access",
+      "excerpt_zh": "Ollama是开源AI模型运行平台，刚完成$88M融资，服务8.9M开发者。本地运行完全免费，云端提供免费轻量模型试用。Pro版$20/月享50倍用量+3并发，Max版$100/月享10并发。支持GLM、Nemotron、DeepSeek、Kimi、MiniMax等云端模型。",
+      "excerpt_en": "Ollama is the leading open-source AI model platform, having just raised $88M. Serves 8.9M developers. Running models locally is completely free. Free cloud tier provides lightweight model access. Pro ($20/mo) gives 50x more usage + 3 concurrent models. Max ($100/mo) gives 5x more + 10 concurrent.",
+      "category": "api",
+      "tags": [
+        "ollama",
+        "open-source",
+        "free-ai",
+        "cloud-models",
+        "local-llm"
+      ],
+      "date": "2026-07-20"
+    },
+    {
       "slug": "agnes-ai-free-api-2026",
       "title_zh": "Agnes AI免费API：2026年6月起无限期免费，支持文本/图片/视频",
       "title_en": "Agnes AI Free API: Indefinitely Free Since June 2026",
@@ -423,5 +476,5 @@
       ]
     }
   ],
-  "updatedAt": "2026-07-20T03:27:36Z"
+  "updatedAt": "2026-07-23"
 }
