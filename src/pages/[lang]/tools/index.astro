@@ -22,11 +22,11 @@ const categoriesData = JSON.parse(readFileSync(resolve(process.cwd(), 'public/da
 const categories = categoriesData.categories || [];
 
 const title = isZh
-  ? `全部免费AI工具 - ${tools.length}款工具免费额度对比 | AI Free Plan`
-  : `All Free AI Tools - ${tools.length} Free Tier Comparison | AI Free Plan`;
+  ? `全部99款免费AI工具 - 免费额度/刷新周期/水印对比 | AI Free Plan 2026`
+  : `All 99 Free AI Tools - Free Tier / Refresh Cycle / Watermark Comparison | AI Free Plan 2026`;
 const description = isZh
-  ? `汇总${tools.length}款AI工具的免费额度、使用限制和白嫖攻略。按评分排序，包含每日/每周/每月刷新额度对比。`
-  : `Compare free credits, usage limits, and trial details across ${tools.length} AI tools. Sorted by rating with daily/weekly/monthly refresh comparison.`;
+  ? `99款AI工具免费额度一览：刷新周期、是否需要信用卡、水印政策、商用许可全对比。按评分排序，帮你快速找到最适合的免费AI工具。`
+  : `Compare free credits, usage limits, and trial details across 99 AI tools. Sorted by rating with daily/weekly/monthly refresh comparison.`;
 
 const canonicalUrl = `https://aifreeplan.com/${lang}/tools/`;
 
@@ -206,6 +206,24 @@ const searchableTools = JSON.stringify(tools.map((t: any) => ({
     if (qParam) {
       searchInput.value = decodeURIComponent(qParam);
       applyFilters();
+    }
+  </script>
+
+  <script>
+    const searchInput = document.getElementById('tool-search');
+    if (searchInput) {
+      searchInput.addEventListener('input', function(e) {
+        const query = e.target.value.toLowerCase().trim();
+        const cards = document.querySelectorAll('a[href*="/tools/"]');
+        if (!query) {
+          cards.forEach(card => card.style.display = '');
+          return;
+        }
+        cards.forEach(card => {
+          const text = card.textContent.toLowerCase();
+          card.style.display = text.includes(query) ? '' : 'none';
+        });
+      });
     }
   </script>
 </BaseLayout>

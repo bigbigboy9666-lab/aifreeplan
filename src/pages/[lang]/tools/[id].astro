@@ -253,7 +253,7 @@ const jsonLd = [softwareSchema, breadcrumbSchema, faqSchema];
         rel="nofollow noopener noreferrer"
         class="inline-flex items-center gap-2 bg-primary text-white text-sm font-medium rounded-lg px-5 py-2.5 hover:bg-primary-dark transition-colors"
       >
-        {lang === 'zh' ? '访问官网' : 'Visit Website'}
+        {lang === 'zh' ? (tool.freeStatus === '长期免费' || tool.freeStatus === '每日刷新' || tool.freeStatus === '每月刷新' ? '免费领取 →' : '访问官网') : (tool.freeStatus === 'Long-term Free' || tool.freeStatus === 'Daily Refresh' || tool.freeStatus === 'Monthly Refresh' ? 'Get Free Access →' : 'Visit Website')}
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
         </svg>
