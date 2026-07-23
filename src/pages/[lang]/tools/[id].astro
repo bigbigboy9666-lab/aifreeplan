@@ -250,7 +250,7 @@ const jsonLd = [softwareSchema, breadcrumbSchema, faqSchema];
       <a
         href={tool.websiteUrl}
         target="_blank"
-        rel="noopener noreferrer"
+        rel="nofollow noopener noreferrer"
         class="inline-flex items-center gap-2 bg-primary text-white text-sm font-medium rounded-lg px-5 py-2.5 hover:bg-primary-dark transition-colors"
       >
         {lang === 'zh' ? '访问官网' : 'Visit Website'}
@@ -262,7 +262,7 @@ const jsonLd = [softwareSchema, breadcrumbSchema, faqSchema];
         <a
           href={tool.affiliateUrl}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="nofollow noopener noreferrer"
           class="inline-flex items-center gap-2 bg-secondary text-white text-sm font-medium rounded-lg px-5 py-2.5 hover:opacity-90 transition-opacity"
         >
           {lang === 'zh' ? '专属链接' : 'Affiliate Link'}
@@ -381,7 +381,7 @@ const jsonLd = [softwareSchema, breadcrumbSchema, faqSchema];
       <a
         href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(canonicalUrl)}&text=${encodeURIComponent(`${name} - ${seoDesc.substring(0, 100)}`)}`}
         target="_blank"
-        rel="noopener noreferrer"
+        rel="nofollow noopener noreferrer"
         class="inline-flex items-center gap-1.5 text-sm text-text-muted hover:text-[#1DA1F2] transition-colors"
         aria-label="Share on Twitter"
       >
@@ -391,7 +391,7 @@ const jsonLd = [softwareSchema, breadcrumbSchema, faqSchema];
       <a
         href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(canonicalUrl)}`}
         target="_blank"
-        rel="noopener noreferrer"
+        rel="nofollow noopener noreferrer"
         class="inline-flex items-center gap-1.5 text-sm text-text-muted hover:text-[#1877F2] transition-colors"
         aria-label="Share on Facebook"
       >
@@ -401,7 +401,7 @@ const jsonLd = [softwareSchema, breadcrumbSchema, faqSchema];
       <a
         href={`https://service.weibo.com/share/share.php?url=${encodeURIComponent(canonicalUrl)}&title=${encodeURIComponent(`${name} - ${seoDesc.substring(0, 80)}`)}`}
         target="_blank"
-        rel="noopener noreferrer"
+        rel="nofollow noopener noreferrer"
         class="inline-flex items-center gap-1.5 text-sm text-text-muted hover:text[E91E63] transition-colors"
         aria-label="Share on Weibo"
       >
