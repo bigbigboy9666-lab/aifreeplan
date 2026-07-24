@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bolt.gives 完全免费：开源 AI 编程代理平台使用攻略 | AIFreePlan</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bolt.gives 完全免费：开源 AI 编程代理平台使用攻略 | AIFreePlan">
+<meta property="og:description" content="Bolt.gives 是一个开源的 AI 编程代理平台，免费使用 DeepSeek V4 Pro 模型，每日 $1 编程额度，支持自带 API Key，可生成完整 Web 应用并发布到免费子域名。">
+<meta property="og:url" content="https://aifreeplan.com/zh/guides/bolt-gives-free-agentic-coding-platform-2026">
+<meta property="og:site_name" content="AIFreePlan">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bolt.gives 完全免费：开源 AI 编程代理平台使用攻略 | AIFreePlan">
+<meta name="twitter:description" content="Bolt.gives 是一个开源的 AI 编程代理平台，免费使用 DeepSeek V4 Pro 模型，每日 $1 编程额度，支持自带 API Key，可生成完整 Web 应用并发布到免费子域名。">
+<meta name="description" content="Bolt.gives 是一个开源的 AI 编程代理平台，免费使用 DeepSeek V4 Pro 模型，每日 $1 编程额度，支持自带 API Key，可生成完整 Web 应用并发布到免费子域名。">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<link rel="canonical" href="https://aifreeplan.com/zh/guides/bolt-gives-free-agentic-coding-platform-2026">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/bolt-gives-free-agentic-coding-platform-2026">
+<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/bolt-gives-free-agentic-coding-platform-2026">
+<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/bolt-gives-free-agentic-coding-platform-2026">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;--text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;--accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);--green:#059669;--green-light:rgba(5,150,105,.1);--shadow:0 4px 20px rgba(0,0,0,.05);--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover)}
+.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
+.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
+.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
+.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
+.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
+.article-container ul,.article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
+.article-container li{margin-bottom:8px;line-height:1.6}
+.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
+.article-container a{color:var(--accent);text-decoration:underline}
+.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-container th,.article-container td{padding:12px;border:1px solid var(--border);text-align:left}
+.article-container th{background:var(--accent-light);font-weight:600}
+.breadcrumb{font-size:14px;color:var(--text-muted);margin-bottom:24px}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb-sep{margin:0 8px}
+.faq-section{background:var(--bg-white);border-radius:var(--radius);padding:32px;margin-top:40px;box-shadow:var(--shadow)}
+.faq-section h3{margin-top:0;color:var(--text)}
+.faq-item{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border-light)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-weight:700;color:var(--text);margin-bottom:8px}
+.faq-a{color:var(--text-secondary);line-height:1.7}
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff;margin-top:60px}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6)}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col h4{font-size:14px;font-weight:700;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+@media(max-width:768px){.article-container{padding:16px 16px 48px;max-width:100%}.article-container h1{font-size:24px}.article-container h2{font-size:20px}.container{padding:0 16px}.nav{display:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Bolt.gives 完全免费：开源 AI 编程代理平台使用攻略","description":"Bolt.gives 是一个开源的 AI 编程代理平台，免费使用 DeepSeek V4 Pro 模型，每日 $1 编程额度，支持自带 API Key，可生成完整 Web 应用并发布到免费子域名。","url":"https://aifreeplan.com/zh/guides/bolt-gives-free-agentic-coding-platform-2026","datePublished":"2026-07-11","dateModified":"2026-07-11","author":{"@type":"Organization","name":"AIFreePlan"},"publisher":{"@type":"Organization","name":"AIFreePlan","url":"https://aifreeplan.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aifreeplan.com/zh/guides/bolt-gives-free-agentic-coding-platform-2026"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://aifreeplan.com/zh"},{"@type":"ListItem","position":2,"name":"攻略","item":"https://aifreeplan.com/zh/guides"},{"@type":"ListItem","position":3,"name":"Bolt.gives 完全免费：开源 AI 编程代理平台使用攻略","item":"https://aifreeplan.com/zh/guides/bolt-gives-free-agentic-coding-platform-2026"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[<div class="faq-item"><div class="faq-q">Q: Bolt.gives 真的完全免费吗？有什么隐藏费用？</div><div class="faq-a">是的，核心托管服务完全免费。每位用户每天享有 $1 的编程额度（使用 DeepSeek V4 Pro 模型），每天 00:00 GMT+2 自动重置。没有注册费、没有订阅费。唯一的付费项是自定义域名托管，$10/月，可选。</div></div>
+<div class="faq-item"><div class="faq-q">Q: $1/天的额度够做什么？</div><div class="faq-a">$1 的额度大约可以完成 2-10 个中小型 Web 应用的完整开发。一个典型的待办事项应用或博客站点的 API 成本约 $0.10-$0.50。如果需要更大规模的复杂应用，可以接入自己的 API Key。</div></div>
+<div class="faq-item"><div class="faq-q">Q: 支持哪些编程语言？</div><div class="faq-a">Bolt.gives 主要面向 Web 前端开发，使用 React + Vite 技术栈。AI 代理可以生成 HTML、CSS、JavaScript/TypeScript 以及相关的配置文件。也支持集成后端服务。</div></div>
+<div class="faq-item"><div class="faq-q">Q: 生成的项目可以商用吗？</div><div class="faq-a">Bolt.gives 是开源项目（GitHub 托管），生成的代码版权归你所有。你可以自由地将项目部署到任何平台用于商业用途。自定义域名托管服务额外收取 $10/月。</div></div>
+<div class="faq-item"><div class="faq-q">Q: 如何自托管 Bolt.gives？</div><div class="faq-a">你可以从 GitHub 克隆仓库并使用提供的安装脚本部署。安装脚本会自动配置应用、运行时、协作服务和 PostgreSQL 数据库。需要一台运行 Ubuntu 的服务器（推荐 2 核 CPU、4GB 内存）。详细的自托管指南见仓库中的安装文档。</div></div>]}
+</script>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="/zh" class="logo">AI<span class="accent">FreePlan</span></a>
+    <nav class="nav">
+      <a href="/zh/all">全部工具</a>
+      <a href="/zh/guides">攻略</a>
+      <a href="/zh/privacy">隐私</a>
+      <a href="/en/guides/bolt-gives-free-agentic-coding-platform-2026" class="btn btn-primary">English</a>
+    </nav>
+  </div>
+</header>
+<main class="article-container">
+<nav class="breadcrumb"><a href="/zh">首页</a> <span class="breadcrumb-sep">›</span> <a href="/zh/guides">攻略</a> <span class="breadcrumb-sep">›</span> <span>Bolt.gives 完全免费：开源 AI 编程代理平台使用攻略</span></nav>
+<h1>Bolt.gives 完全免费：开源 AI 编程代理平台使用攻略</h1>
+
+<p>2026年3月，<strong>Bolt.gives</strong> 正式推出其免费 AI 编程代理平台，这是一个基于开源架构的 AI 驱动编码工作空间。与 Replit Agent、Cursor 等付费产品不同，Bolt.gives 的核心托管服务对公众完全免费——<strong>每位用户每天享有 $1 的编程额度</strong>，足以完成中小型项目的开发和迭代。</p>
+
+<h2>Bolt.gives 是什么？</h2>
+
+<p>Bolt.gives 是一个<strong>协作式、开源的 AI 编程工作空间</strong>（collaborative, open-source AI coding workspace）。它的核心理念是让你用自然语言描述想要构建的应用，AI 代理自动生成代码并在内置的 Preview 面板中实时预览结果。</p>
+
+<p>该平台基于 <strong>Cloudflare Pages</strong> 部署，使用 <strong>React + Vite</strong> 作为前端技术栈，后端运行在 Node.js + systemd 上，数据库采用 PostgreSQL。整个项目开源在 GitHub（<a href="https://github.com/embire2/bolt.gives">github.com/embire2/bolt.gives</a>），当前稳定版本为 <strong>v3.0.9.32</strong>（2026年7月1日发布）。</p>
+
+<h2>免费额度详解</h2>
+
+<h3>托管版 FREE 路径</h3>
+
+<ul>
+<li><strong>每日额度：</strong>$1/人/天（per-person daily coding cap）</li>
+<li><strong>底层模型：</strong>DeepSeek V4 Pro（通过 OpenRouter 路由）</li>
+<li><strong>重置时间：</strong>每天 00:00 GMT+2 自动重置</li>
+<li><strong>达到上限后：</strong>可以接入自己的 API Key 继续使用，或等待次日重置</li>
+</ul>
+
+<p>这个 $1 的日额度对于大多数个人开发者来说是非常慷慨的。一个典型的 Web 应用原型（如待办事项管理、仪表盘、营销站点）的 API 调用成本通常在 $0.10-$0.50 之间，意味着每天可以完成 <strong>2-10 个完整的项目迭代</strong>。</p>
+
+<h3>自带 API Key（BYOK）</h3>
+
+<p>如果你需要更多的编程能力，Bolt.gives 支持<strong>自带 API Key</strong>，兼容以下模型提供商和模型：</p>
+
+<table>
+<tr><th>提供商</th><th>支持的模型</th></tr>
+<tr><td><strong>OpenAI</strong></td><td>GPT-5.5, GPT-5.5-pro, GPT-5.4, GPT-5.4-pro, GPT-5.4-mini, GPT-5.4-nano, GPT-5.3-codex</td></tr>
+<tr><td><strong>Anthropic</strong></td><td>Claude Fable 5, Claude Opus 4-8, Claude Sonnet 4-6, Claude Haiku 4-5-20251001</td></tr>
+<tr><td><strong>Google</strong></td><td>Gemini 3.1 Pro Preview, Gemini 3.5 Flash, Gemini 3 Flash Preview, Gemini 2.5 Pro, Gemini 2.5 Flash, Gemini 2.5 Flash Lite</td></tr>
+<tr><td><strong>DeepSeek</strong></td><td>DeepSeek V4 Pro, DeepSeek V4 Flash</td></tr>
+<tr><td><strong>Groq</strong></td><td>GPT-OSS, Compound, Llama, Qwen</td></tr>
+<tr><td><strong>Mistral</strong></td><td>Mistral Medium, Mistral Small, Codestral</td></tr>
+<tr><td><strong>xAI</strong></td><td>Grok 4.3, Grok Build 0.1, Grok Code Fast 1</td></tr>
+<tr><td><strong>MiniMax</strong></td><td>MiniMax M3, MiniMax M2.7, MiniMax M2.7 Highspeed</td></tr>
+</table>
+
+<p>支持通过 <strong>MINIMAX_API_KEY</strong> 等环境变量配置你自己的 API Key，突破 $1/天的限制。</p>
+
+<h2>核心功能</h2>
+
+<h3>1. AI 编程代理</h3>
+
+<p>在 Chat 界面中输入自然语言描述，AI 代理会自动分析需求、生成代码文件、安装依赖并启动预览。整个过程不需要手动编写任何代码。工作区分为两个主要面板：</p>
+
+<ul>
+<li><strong>Preview 面板：</strong>实时展示生成的 Web 应用</li>
+<li><strong>Code 面板：</strong>查看和编辑生成的源代码</li>
+</ul>
+
+<h3>2. 项目发布</h3>
+
+<p>生成的项目可以直接发布到<strong>免费的 bolt.gives 子域名</strong>，格式为 <code>https://your-app.bolt.gives</code>。发布流程通过 Cloudflare A 记录和 Caddy 路由自动配置 HTTPS，整个过程无需手动操作。</p>
+
+<p>如果需要自定义域名，可以选择<strong>$10/月的托管服务</strong>（通过 Stripe Checkout 订阅），平台会指导你创建 A 记录指向服务器 IP。</p>
+
+<h3>3. 模板包（Template Packs）</h3>
+
+<p>Bolt.gives 内置了多种<strong>第一方模板包</strong>，帮助 AI 更快地生成符合预期的应用：</p>
+
+<ul>
+<li><strong>日历规划器：</strong>带周视图网格、议程面板、事件创建的 React 应用</li>
+<li><strong>仪表板：</strong>数据可视化管理面板</li>
+<li><strong>营销站点：</strong>响应式企业官网</li>
+<li><strong>电商目录：</strong>商品展示和购物车</li>
+<li><strong>作品集：</strong>设计师/开发者作品展示</li>
+<li><strong>预约调度器：</strong>带患者预约、医生选择、SMTP 提醒的完整应用</li>
+</ul>
+
+<h3>4. 协作与实时更新</h3>
+
+<p>平台通过 <code>wss://bolt.gives/collab</code> WebSocket 端点支持<strong>多人实时协作</strong>。多个开发者可以同时编辑同一个项目，Changes 会同步到所有参与者。</p>
+
+<h3>5. 自托管选项</h3>
+
+<p>由于项目完全开源，你可以选择<strong>自托管</strong>。安装脚本会自动配置应用、运行时、协作服务和网页浏览服务，并设置本地 PostgreSQL 数据库。支持 Caddy HTTPS 自动证书配置。自托管版本还内置了 <code>/api/update</code> 自动更新器。</p>
+
+<h2>使用步骤</h2>
+
+<h3>步骤 1：访问平台</h3>
+
+<p>打开 <a href="https://bolt.gives/chat">bolt.gives/chat</a>，无需注册即可开始使用免费额度。</p>
+
+<h3>步骤 2：描述你的项目</h3>
+
+<p>在聊天框中输入你想要构建的应用描述。例如：</p>
+
+<ul>
+<li>"帮我做一个带深色模式的待办事项管理应用"</li>
+<li>"创建一个个人博客，支持 Markdown 和分类"</li>
+<li>"做一个天气查询应用，显示未来7天预报"</li>
+</ul>
+
+<h3>步骤 3：预览和迭代</h3>
+
+<p>AI 代理会自动生成代码并在 Preview 面板中渲染。你可以：</p>
+
+<ul>
+<li>在 Code 面板查看和手动修改代码</li>
+<li>在 Chat 中提出修改意见（如"把按钮改成圆角""增加一个搜索框"）</li>
+<li>反复迭代直到满意</li>
+</ul>
+
+<h3>步骤 4：发布应用</h3>
+
+<p>点击 Preview 工具栏中的发布按钮，应用会被部署到免费的 <code>.bolt.gives</code> 子域名。如果需要自定义域名，选择自定义域名流程并通过 Stripe 支付 $10/月。</p>
+
+<h2>与竞品的对比</h2>
+
+<table>
+<tr><th>特性</th><th>Bolt.gives</th><th>Replit Agent</th><th>Cursor</th><th>v0 (Vercel)</th></tr>
+<tr><td>免费额度</td><td>$1/天（无限续）</td><td>有限免费试用</td><td>$20/月</td><td>有限免费</td></tr>
+<tr><td>开源</td><td>✅ 是</td><td>❌ 否</td><td>❌ 否</td><td>❌ 否</td></tr>
+<tr><td>自带 API Key</td><td>✅ 支持</td><td>❌ 不支持</td><td>✅ 支持</td><td>❌ 不支持</td></tr>
+<tr><td>项目发布</td><td>免费子域名</td><td>Replit 托管</td><td>需自行部署</td><td>Vercel 托管</td></tr>
+<tr><td>实时协作</td><td>✅ WebSocket</td><td>❌</td><td>❌</td><td>❌</td></tr>
+<tr><td>自托管</td><td>✅ 支持</td><td>❌</td><td>❌</td><td>❌</td></tr>
+<tr><td>内置模板</td><td>✅ 6+ 种</td><td>❌</td><td>❌</td><td>✅ 少量</td></tr>
+</table>
+
+<h2>技术亮点</h2>
+
+<h3>1. 确定性首屏引导</h3>
+
+<p>Bolt.gives 使用<strong>确定性启动引导</strong>（deterministic starter bootstrap），防止 AI 模型在空工作区中发出无效的 shell 命令。首次运行时会先创建基础文件结构（package.json、index.html 等），然后再执行安装和构建命令，避免了常见的"先跑命令后建文件"的问题。</p>
+
+<h3>2. 安全壳保护</h3>
+
+<p>平台实现了<strong>Shell 安全守卫</strong>（shell safety guard），禁止通过终端重定向（如 <code>echo &gt;</code>、<code>cat &gt;</code>、<code>tee</code>、<code>sed -i</code>）直接写入项目文件。所有文件变更必须通过明确的文件操作指令（<code>&lt;boltAction type="file"&gt;</code>）完成，确保代码变更的可追溯性。</p>
+
+<h3>3. 智能预览恢复</h3>
+
+<p>当预览面板因错误崩溃时，Bolt.gives 会自动尝试恢复。它会探测 Vite 入口模块图，在标记预览健康之前验证 <code>/src/main.tsx</code> 等关键文件是否有效，避免假阳性。</p>
+
+<h3>4. 自动更新系统</h3>
+
+<p>托管实例内置了<strong>内置 Web 应用更新器</strong>，当新版本发布时，页面顶部会出现更新横幅。用户可以选择可选更新或强制更新。更新过程会创建回滚检查点、保存本地更改到 git stash、安装依赖、构建新版本，最后安排服务重启。</p>
+
+<h2>常见问题</h2>
+
+<div class="faq-section">
+<div class="faq-item">
+<div class="faq-q">Q: Bolt.gives 真的完全免费吗？有什么隐藏费用？</div>
+<div class="faq-a">是的，核心托管服务完全免费。每位用户每天享有 $1 的编程额度（使用 DeepSeek V4 Pro 模型），每天 00:00 GMT+2 自动重置。没有注册费、没有订阅费。唯一的付费项是自定义域名托管，$10/月，可选。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: $1/天的额度够做什么？</div>
+<div class="faq-a">$1 的额度大约可以完成 2-10 个中小型 Web 应用的完整开发。一个典型的待办事项应用或博客站点的 API 成本约 $0.10-$0.50。如果需要更大规模的复杂应用，可以接入自己的 API Key。</div>
+</div>
+
+<div class="faq-q">Q: 支持哪些编程语言？</div>
+<div class="faq-a">Bolt.gives 主要面向 Web 前端开发，使用 React + Vite 技术栈。AI 代理可以生成 HTML、CSS、JavaScript/TypeScript 以及相关的配置文件。也支持集成后端服务。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: 生成的项目可以商用吗？</div>
+<div class="faq-a">Bolt.gives 是开源项目（GitHub 托管），生成的代码版权归你所有。你可以自由地将项目部署到任何平台用于商业用途。自定义域名托管服务额外收取 $10/月。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: 如何自托管 Bolt.gives？</div>
+<div class="faq-a">你可以从 GitHub 克隆仓库并使用提供的安装脚本部署。安装脚本会自动配置应用、运行时、协作服务和 PostgreSQL 数据库。需要一台运行 Ubuntu 的服务器（推荐 2 核 CPU、4GB 内存）。详细的自托管指南见仓库中的安装文档。</div>
+</div>
+</div>
+
+<h2>总结</h2>
+
+<p>Bolt.gives 是目前市面上<strong>最慷慨的免费 AI 编程平台</strong>之一。$1/天的额度加上开源架构和自带 API Key 的支持，让它成为个人开发者、学生和初创团队的首选工具。无论是快速搭建原型、学习编程，还是构建可发布的应用，Bolt.gives 都能提供出色的体验。</p>
+
+<p>立即前往 <a href="https://bolt.gives/chat">bolt.gives/chat</a> 开始免费使用吧！</p>
+
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="/zh" class="logo" style="color:#059669">AI<span class="accent" style="color:#6366F1">FreePlan</span></a><p>AI驱动的免费工具聚合平台，永久免费。</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h4>产品</h4><a href="/zh/all">全部工具</a><a href="/zh/guides">攻略</a></div>
+      <div class="footer-col"><h4>法律</h4><a href="/zh/privacy">隐私政策</a><a href="/zh/terms">用户协议</a></div>
+    </div>
+  </div>
+  <div class="container footer-bottom">&copy; 2026 AIFreePlan. All rights reserved.</div>
+</footer>
+</body></html>

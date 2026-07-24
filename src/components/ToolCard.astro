@@ -56,6 +56,7 @@ const statusConfig: Record<string, { label: Record<string, string>; color: strin
 };
 
 const status = statusConfig[tool.freeStatus || ''] || statusConfig['免费可用'];
+const ft = tool.freeTier || {};
 ---
 
 <article data-tool-id="{tool.id}" class="flex flex-col bg-white rounded-xl border border-[#E5E7EB] p-5 hover:shadow-md hover:border-[#10B981]/30 transition-all duration-200 h-full" style="overflow: visible;">
@@ -86,10 +87,10 @@ const status = statusConfig[tool.freeStatus || ''] || statusConfig['免费可用
   <div class="mb-4 flex-shrink-0 space-y-1.5">
     <div class="flex items-center gap-2 text-sm">
       <span class="text-[#10B981]">🆓</span>
-      <span class="font-semibold text-[#111827]">{tool.freeTier.credits} {tool.freeTier.creditUnit}</span>
-      <span class="text-[#9CA3AF] text-xs">({refreshLabel[tool.freeTier.refreshPeriod]})</span>
+      <span class="font-semibold text-[#111827]">{ft.credits ?? 0} {ft.creditUnit || ''}</span>
+      <span class="text-[#9CA3AF] text-xs">({refreshLabel[ft.refreshPeriod || 'unknown']})</span>
     </div>
-    {tool.freeTier.requiresCreditCard && (
+    {ft.requiresCreditCard && (
       <div class="flex items-center gap-2 text-sm text-[#EF4444]">
         <span>💳</span>
         <span>{lang === 'zh' ? '需要信用卡' : 'Credit card required'}</span>

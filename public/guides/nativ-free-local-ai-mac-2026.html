@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nativ 免费本地 AI 桌面应用：Apple Silicon 上运行开源模型，零订阅零云端零账户 | AIFreePlan</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nativ 免费本地 AI 桌面应用：Apple Silicon 上运行开源模型，零订阅零云端零账户 | AIFreePlan">
+<meta property="og:description" content="Nativ 是一款 100% 开源、MIT 许可的 macOS 原生 AI 应用，专为 Apple Silicon 设计。基于 MLX 框架，可在本地运行前沿开源模型，支持聊天、代码补全、语音转录等多种模态。完全免费，无需注册账户、无需订阅、无需云端连接。">
+<meta property="og:url" content="https://aifreeplan.com/zh/guides/nativ-free-local-ai-mac-2026">
+<meta property="og:site_name" content="AIFreePlan">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nativ 免费本地 AI 桌面应用：Apple Silicon 上运行开源模型，零订阅零云端零账户 | AIFreePlan">
+<meta name="twitter:description" content="Nativ 是一款 100% 开源、MIT 许可的 macOS 原生 AI 应用，专为 Apple Silicon 设计。基于 MLX 框架，可在本地运行前沿开源模型，支持聊天、代码补全、语音转录等多种模态。完全免费，无需注册账户、无需订阅、无需云端连接。">
+<meta name="description" content="Nativ 是一款 100% 开源、MIT 许可的 macOS 原生 AI 应用，专为 Apple Silicon 设计。基于 MLX 框架，可在本地运行前沿开源模型，支持聊天、代码补全、语音转录等多种模态。完全免费，无需注册账户、无需订阅、无需云端连接。">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<link rel="canonical" href="https://aifreeplan.com/zh/guides/nativ-free-local-ai-mac-2026">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/nativ-free-local-ai-mac-2026">
+<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/nativ-free-local-ai-mac-2026">
+<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/nativ-free-local-ai-mac-2026">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;--text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;--accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);--green:#059669;--green-light:rgba(5,150,105,.1);--shadow:0 4px 20px rgba(0,0,0,.05);--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover)}
+.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
+.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
+.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
+.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
+.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
+.article-container ul,.article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
+.article-container li{margin-bottom:8px;line-height:1.6}
+.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
+.article-container a{color:var(--accent);text-decoration:underline}
+.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-container th,.article-container td{padding:12px;border:1px solid var(--border);text-align:left}
+.article-container th{background:var(--accent-light);font-weight:600}
+.breadcrumb{font-size:14px;color:var(--text-muted);margin-bottom:24px}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb-sep{margin:0 8px}
+.faq-section{background:var(--bg-white);border-radius:var(--radius);padding:32px;margin-top:40px;box-shadow:var(--shadow)}
+.faq-section h3{margin-top:0;color:var(--text)}
+.faq-item{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border-light)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-weight:700;color:var(--text);margin-bottom:8px}
+.faq-a{color:var(--text-secondary);line-height:1.7}
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff;margin-top:60px}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6)}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col h4{font-size:14px;font-weight:700;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+@media(max-width:768px){.article-container{padding:16px 16px 48px;max-width:100%}.article-container h1{font-size:24px}.article-container h2{font-size:20px}.container{padding:0 16px}.nav{display:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Nativ 免费本地 AI 桌面应用：Apple Silicon 上运行开源模型，零订阅零云端零账户","description":"Nativ 是一款 100% 开源、MIT 许可的 macOS 原生 AI 应用，专为 Apple Silicon 设计。基于 MLX 框架，可在本地运行前沿开源模型，支持聊天、代码补全、语音转录等多种模态。完全免费，无需注册账户、无需订阅、无需云端连接。","url":"https://aifreeplan.com/zh/guides/nativ-free-local-ai-mac-2026","datePublished":"2026-07-21","dateModified":"2026-07-21","author":{"@type":"Organization","name":"AIFreePlan"},"publisher":{"@type":"Organization","name":"AIFreePlan","url":"https://aifreeplan.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aifreeplan.com/zh/guides/nativ-free-local-ai-mac-2026"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://aifreeplan.com/zh"},{"@type":"ListItem","position":2,"name":"攻略","item":"https://aifreeplan.com/zh/guides"},{"@type":"ListItem","position":3,"name":"Nativ 免费本地 AI 桌面应用：Apple Silicon 上运行开源模型，零订阅零云端零账户","item":"https://aifreeplan.com/zh/guides/nativ-free-local-ai-mac-2026"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Nativ 真的完全免费吗？有没有隐藏费用？","acceptedAnswer":{"@type":"Answer","text":"是的，Nativ 采用 MIT 许可证完全免费，无任何订阅费用、无内购、无隐藏收费。模型本身也是开源免费的（如 Gemma 系列来自 Google）。唯一可能需要付费的是你从 Hugging Face 下载某些专有模型的权限，但这不是 Nativ 的限制。"}},{"@type":"Question","name":"我的 Mac 是 M1 16GB，可以运行哪些模型？","acceptedAnswer":{"@type":"Answer","text":"16GB 统一内存的 M1 Mac 可以流畅运行 10GB 左右的模型，如 Gemma 4 E2B Instruct（10.28 GB）。3.2 GB 的 LFM2.5-VL 模型在任何 Apple Silicon Mac 上都能运行。Nativ 会根据你的硬件自动推荐合适的模型。"}},{"@type":"Question","name":"Nativ 支持中文吗？","acceptedAnswer":{"@type":"Answer","text":"Nativ 本身是英文界面，但它运行的模型（如 Gemma）支持多语言输入输出，包括中文。你可以用中文与模型对话，模型会以中文回复。"}},{"@type":"Question","name":"我可以在 Windows 或 Linux 上使用 Nativ 吗？","acceptedAnswer":{"@type":"Answer","text":"不可以。Nativ 是专为 macOS 和 Apple Silicon 构建的原生应用，依赖于 MLX 框架和 Apple 的统一内存架构。Windows/Linux 用户可以考虑 Ollama 或其他跨平台替代方案。"}},{"@type":"Question","name":"Nativ 如何保证我的数据不会被泄露？","acceptedAnswer":{"@type":"Answer","text":"Nativ 的所有推理都在本地完成，不发送任何数据到云端。API 服务器绑定在 localhost (127.0.0.1)，外部设备无法访问。如果你启用了服务器 API Key，还可以进一步保护管理端点。源代码是开源的，任何人都可以审计。"}}]}
+</script>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="/zh" class="logo">AI<span class="accent">FreePlan</span></a>
+    <nav class="nav">
+      <a href="/zh/all">全部工具</a>
+      <a href="/zh/guides">攻略</a>
+      <a href="/zh/privacy">隐私</a>
+      <a href="/en/guides/nativ-free-local-ai-mac-2026" class="btn btn-primary">English</a>
+    </nav>
+  </div>
+</header>
+<main class="article-container">
+<nav class="breadcrumb"><a href="/zh">首页</a> <span class="breadcrumb-sep">›</span> <a href="/zh/guides">攻略</a> <span class="breadcrumb-sep">›</span> <span>Nativ 免费本地 AI 桌面应用：Apple Silicon 上运行开源模型，零订阅零云端零账户</span></nav>
+<h1>Nativ 免费本地 AI 桌面应用：Apple Silicon 上运行开源模型，零订阅零云端零账户</h1>
+
+<p>2026年7月，<strong>Nativ</strong> 作为一个全新的 macOS 原生 AI 应用横空出世，迅速在开发者社区引发关注。它承诺了一件事：<strong>在你的 Mac 上本地运行前沿 AI 模型，完全免费，不需要任何账户、订阅或云端服务</strong>。对于重视隐私、希望摆脱 SaaS 绑定的用户来说，这是一个令人振奋的选择。</p>
+
+<h2>什么是 Nativ？</h2>
+
+<p>Nativ 是一个基于 <strong>SwiftUI</strong> 开发的 macOS 原生应用，底层使用 <strong>MLX-VLM</strong>（Meta 的 MLX 推理框架）作为推理引擎。它不仅仅是一个聊天界面，而是一个完整的本地 AI 工作区：</p>
+
+<ul>
+<li><strong>本地聊天与视觉：</strong>流式对话响应、图片附件、推理输出、逐条消息的性能指标，以及持久化的聊天记录。</li>
+<li><strong>模型库管理：</strong>发现已安装的 MLX 模型、浏览 Hugging Face 上的兼容模型、一键下载、检查模型能力、切换模型或删除旧模型。</li>
+<li><strong>性能分析面板：</strong>追踪请求量、Token 用量、首字延迟（TTFT）、解码速度、模型性能和最近活动。</li>
+<li><strong>本地 API 服务器：</strong>提供 OpenAI 兼容的 /v1/chat/completions、/v1/responses、/v1/models、图像和音频端点，以及 Anthropic 兼容的 /v1/messages 端点。</li>
+<li><strong>编码工具集成：</strong>可配置并启动 Codex、Claude Code、Pi、Hermes 和 OpenCode 等编码代理，让它们连接到你在本地运行的模型。</li>
+<li><strong>菜单栏控制：</strong>启动/停止服务器、切换加载的模型、查看服务统计信息，无需打断当前工作流。</li>
+<li><strong>高级推理控制：</strong>调节采样参数、思维预算（thinking budget）、结构化输出、KV 缓存量化、前缀缓存和推测性解码。</li>
+</ul>
+
+<h2>系统要求</h2>
+
+<table>
+<tr><th>项目</th><th>要求</th></tr>
+<tr><td>硬件</td><td>Apple Silicon Mac（M1 及以上）</td></tr>
+<tr><td>操作系统</td><td>macOS 26+ (Sequoia)</td></tr>
+<tr><td>统一内存</td><td>取决于选择的模型大小（见下文）</td></tr>
+<tr><td>许可证</td><td>MIT（完全免费）</td></tr>
+<tr><td>网络需求</td><td>仅首次下载模型时需要，运行时完全离线</td></tr>
+</table>
+
+<h2>支持的模型</h2>
+
+<p>Nativ 预集成了来自 Google、Cohere 和 Liquid AI 的精选开源模型。以下是当前推荐的模型列表及其对硬件的要求：</p>
+
+<table>
+<tr><th>模型</th><th>来源</th><th>上下文窗口</th><th>模型大小</th><th>能力</th></tr>
+<tr><td>Gemma 4 E2B Instruct</td><td>Google</td><td>128K</td><td>10.28 GB</td><td>视觉 + 音频</td></tr>
+<tr><td>North Mini Code</td><td>Cohere</td><td>500K</td><td>19.38 GB</td><td>代码 + 工具调用</td></tr>
+<tr><td>LFM2.5-VL 1.6B</td><td>Liquid AI</td><td>128K</td><td>3.20 GB</td><td>视觉 + 语言</td></tr>
+</table>
+
+<p><strong>内存需求参考：</strong></p>
+<ul>
+<li>3.2 GB 模型：需要至少 8GB 统一内存的 Mac</li>
+<li>10.28 GB 模型：需要至少 16GB 统一内存的 Mac</li>
+<li>19.38 GB 模型：需要至少 24GB 统一内存的 Mac（M2/M3 Max 或 M4 Pro/Max）</li>
+</ul>
+
+<p>Nativ 会根据你的硬件自动推荐合适的模型。你也可以通过 Hugging Face 手动下载更多 MLX 格式的模型。</p>
+
+<h2>为什么 Nativ 值得关注？</h2>
+
+<h3>1. 真正的本地运行，不泄露任何数据</h3>
+
+<p>所有推理都在你的 Mac 上完成。你的提示词、对话历史、图片附件<strong>永远不会离开你的设备</strong>。这与 ChatGPT、Claude 等云端服务形成鲜明对比——后者会将你的输入发送到他们的服务器进行处理。</p>
+
+<h3>2. 完全免费，MIT 许可</h3>
+
+<p>Nativ 采用 <strong>MIT 开源许可证</strong>发布，意味着：</p>
+<ul>
+<li>免费下载和使用，无次数限制</li>
+<li>任何人都可以审查源代码</li>
+<li>可以 Fork 和修改代码</li>
+<li>没有"企业版"陷阱——没有隐藏功能被锁在付费墙后面</li>
+</ul>
+
+<h3>3. 可作为本地 API 服务器使用</h3>
+
+<p>Nativ 默认在 <code>http://127.0.0.1:8080</code> 启动一个本地 API 服务器。你可以像调用 OpenAI API 一样调用它：</p>
+
+<pre><code>curl http://127.0.0.1:8080/v1/chat/completions \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "model": "your-model-id",
+    "messages": [{"role": "user", "content": "你好"}],
+    "stream": false
+  }'</code></pre>
+
+<p>它还支持 Anthropic Messages API 格式，这意味着许多支持 Claude API 的工具都可以无缝切换到本地模型。</p>
+
+<h3>4. 编码代理集成</h3>
+
+<p>Nativ 内置了对主流编码代理的支持：<strong>Codex、Claude Code、Pi、Hermes 和 OpenCode</strong>。你可以将这些代理的配置指向 Nativ 的本地 API 端点，从而让你的编码工具使用本地运行的开源模型，而不是昂贵的云端 API。</p>
+
+<h3>5. 实时监控仪表盘</h3>
+
+<p>Nativ 提供了开发者真正需要的遥测数据：</p>
+<ul>
+<li><strong>Tokens/秒：</strong>实时解码速度</li>
+<li><strong>内存压力：</strong>当前统一内存使用情况</li>
+<li><strong>热状态：</strong>Mac 的散热和温度状况</li>
+<li><strong>首字延迟（TTFT）：</strong>从发送到收到第一个 token 的时间</li>
+</ul>
+
+<h2>与云端 AI 服务的对比</h2>
+
+<table>
+<tr><th>特性</th><th>Nativ（本地）</th><th>ChatGPT</th><th>Claude</th><th>Gemini</th></tr>
+<tr><td>费用</td><td>✅ 完全免费</td><td>$20/月</td><td>按量计费</td><td>部分免费</td></tr>
+<tr><td>隐私</td><td>✅ 数据不离设备</td><td>❌ 数据上传云端</td><td>❌ 数据上传云端</td><td>❌ 数据上传云端</td></tr>
+<tr><td>离线可用</td><td>✅ 完全离线</td><td>❌ 需要网络</td><td>❌ 需要网络</td><td>❌ 需要网络</td></tr>
+<tr><td>自定义模型</td><td>✅ 可切换任意 MLX 模型</td><td>❌ 固定模型</td><td>❌ 固定模型</td><td>❌ 固定模型</td></tr>
+<tr><td>API 兼容性</td><td>✅ OpenAI + Anthropic</td><td>—</td><td>✅ Anthropic</td><td>✅ OpenAI 兼容</td></tr>
+<tr><td>编码代理集成</td><td>✅ 内置支持</td><td>❌</td><td>❌</td><td>❌</td></tr>
+<tr><td>平台</td><td>macOS (Apple Silicon)</td><td>全平台</td><td>全平台</td><td>全平台</td></tr>
+</table>
+
+<h2>安装指南</h2>
+
+<h3>方法一：直接下载（推荐）</h3>
+<ol>
+<li>访问 <a href="https://github.com/Blaizzy/nativ/releases/latest">Nativ GitHub Releases 页面</a></li>
+<li>下载最新版的 <code>Nativ-*.dmg</code> 文件（当前版本约 342 MB）</li>
+<li>将 Nativ 拖入 Applications 文件夹</li>
+<li>首次启动时，选择一个已安装的模型或继续按需加载</li>
+</ol>
+
+<h3>方法二：从源码编译</h3>
+<p>如果你有开发环境，可以从源码构建：</p>
+<pre><code>brew install xcodegen
+make xcode-generate
+make xcode-build
+open build/XcodeDerivedData/Build/Products/Debug/Nativ.app</code></pre>
+<p>注意：首次构建需要较长时间，因为 NativServerKit 会创建一个可重定位的 Python 运行时并安装 MLX 依赖。</p>
+
+<h2>实际使用场景</h2>
+
+<h3>1. 隐私敏感型对话</h3>
+<p>医疗、法律、金融等行业的专业人士可以使用 Nativ 在本地运行模型，确保敏感信息不会泄露到任何第三方服务器。这对于需要遵守 GDPR、HIPAA 等数据保护法规的场景尤为重要。</p>
+
+<h3>2. 编程辅助</h3>
+<p>通过将 Nativ 的本地 API 端点配置到 Codex 或 Claude Code 中，开发者可以在本地获得类似 GitHub Copilot 的代码补全和对话辅助，无需支付订阅费，也无需将代码发送到云端。</p>
+
+<h3>3. 离线环境工作</h3>
+<p>在没有网络连接的环境下（如飞机上、偏远地区、安全隔离的网络），Nativ 仍然是可用的——只要模型已经下载到本地。</p>
+
+<h3>4. 模型研究和实验</h3>
+<p>研究人员可以利用 Nativ 的性能分析面板实时监控不同模型在 Apple Silicon 上的表现，比较不同模型的速度、质量和资源消耗。</p>
+
+<h3>5. 多模态内容处理</h3>
+<p>Nativ 支持文本、图像、视频摘要和语音转录。你可以用它来：</p>
+<ul>
+<li>给图片添加描述（Captioning）</li>
+<li>总结视频内容</li>
+<li>代码自动补全</li>
+<li>语音转录和生成</li>
+</ul>
+
+<h2>已知限制</h2>
+
+<ol>
+<li><strong>仅限 Apple Silicon：</strong>Nativ 只支持 M1/M2/M3/M4 系列的 Mac，Intel Mac 无法运行。</li>
+<li><strong>macOS 26+：</strong>需要较新的 macOS 版本（Sequoia 或更新）。</li>
+<li><strong>模型大小受内存限制：</strong>你只能运行能装进 Mac 统一内存的模型。16GB 内存的 Mac 大约能跑 10GB 级别的模型。</li>
+<li><strong>推理速度不如云端 GPU：</strong>虽然 Apple Silicon 的 MLX 优化很好，但对于大型模型，速度仍不及云端 A100/H100 GPU。</li>
+<li><strong>音频和图片生成模型尚在开发中：</strong>专门的纯音频和图片生成模型将在未来版本中支持。</li>
+</ol>
+
+<h2>常见问题</h2>
+
+<div class="faq-section">
+<div class="faq-item">
+<div class="faq-q">Q: Nativ 真的完全免费吗？有没有隐藏费用？</div>
+<div class="faq-a">是的，Nativ 采用 MIT 许可证完全免费，无任何订阅费用、无内购、无隐藏收费。模型本身也是开源免费的（如 Gemma 系列来自 Google）。唯一可能需要付费的是你从 Hugging Face 下载某些专有模型的权限，但这不是 Nativ 的限制。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: 我的 Mac 是 M1 16GB，可以运行哪些模型？</div>
+<div class="faq-a">16GB 统一内存的 M1 Mac 可以流畅运行 10GB 左右的模型，如 Gemma 4 E2B Instruct（10.28 GB）。3.2 GB 的 LFM2.5-VL 模型在任何 Apple Silicon Mac 上都能运行。Nativ 会根据你的硬件自动推荐合适的模型。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: Nativ 支持中文吗？</div>
+<div class="faq-a">Nativ 本身是英文界面，但它运行的模型（如 Gemma）支持多语言输入输出，包括中文。你可以用中文与模型对话，模型会以中文回复。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: 我可以在 Windows 或 Linux 上使用 Nativ 吗？</div>
+<div class="faq-a">不可以。Nativ 是专为 macOS 和 Apple Silicon 构建的原生应用，依赖于 MLX 框架和 Apple 的统一内存架构。Windows/Linux 用户可以考虑 Ollama 或其他跨平台替代方案。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: Nativ 如何保证我的数据不会被泄露？</div>
+<div class="faq-a">Nativ 的所有推理都在本地完成，不发送任何数据到云端。API 服务器绑定在 localhost (127.0.0.1)，外部设备无法访问。如果你启用了服务器 API Key，还可以进一步保护管理端点。源代码是开源的，任何人都可以审计。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: 如何更新 Nativ？</div>
+<div class="faq-a">Nativ 使用 Sparkle 框架进行应用内自动更新。启动应用后，它会检查是否有新版本并提示你下载更新。</div>
+</div>
+</div>
+
+<h2>总结</h2>
+
+<p>Nativ 代表了 AI 工具的一个新方向：<strong>把智能带回你的设备</strong>。它不是一个功能受限的试用版，也不是"免费层+付费解锁"的模式——它是一个完整的、功能丰富的、100% 开源的本地 AI 工作区。</p>
+
+<p>如果你有一台 Apple Silicon Mac，并且厌倦了为各种 AI 服务支付订阅费、担心数据隐私、或者希望在离线环境下也能使用 AI，那么 Nativ 是目前最好的选择之一。它完全免费、开源可审计、支持多种模型和模态，还能作为编码代理的后端服务器。</p>
+
+<p>立即下载，体验真正的本地 AI：<a href="https://github.com/Blaizzy/nativ/releases/latest">访问 Nativ GitHub Releases</a></p>
+
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="/zh" class="logo" style="color:#059669">AI<span class="accent" style="color:#6366F1">FreePlan</span></a><p>AI驱动的免费工具聚合平台，永久免费。</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h4>产品</h4><a href="/zh/all">全部工具</a><a href="/zh/guides">攻略</a></div>
+      <div class="footer-col"><h4>法律</h4><a href="/zh/privacy">隐私政策</a><a href="/zh/terms">用户协议</a></div>
+    </div>
+  </div>
+  <div class="container footer-bottom">&copy; 2026 AIFreePlan. All rights reserved.</div>
+</footer>
+</body></html>

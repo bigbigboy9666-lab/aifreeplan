@@ -33,18 +33,18 @@ const description = lang === 'zh' ? tool.description : tool.descriptionEn;
 const category = lang === 'zh' ? tool.categoryZh : tool.categoryEn;
 const categorySlug = tool.category.toLowerCase();
 const paidFrom = lang === 'zh' ? tool.paidFrom : tool.paidFromEn;
-const pros = lang === 'zh' ? tool.pros : tool.prosEn;
-const cons = lang === 'zh' ? tool.cons : tool.consEn;
-const features = lang === 'zh' ? tool.features : tool.featuresEn;
-const tips = lang === 'zh' ? tool.tips : tool.tipsEn;
+const pros = lang === 'zh' ? (tool.pros || []) : (tool.prosEn || []);
+const cons = lang === 'zh' ? (tool.cons || []) : (tool.consEn || []);
+const features = lang === 'zh' ? (tool.features || []) : (tool.featuresEn || []);
+const tips = lang === 'zh' ? (tool.tips || []) : (tool.tipsEn || []);
 
 // SEO — data uses title (English) and titleZh (Chinese)
 const seoTitle = lang === 'zh'
-  ? (tool.seoMeta.titleZh || tool.seoMeta.title)
-  : tool.seoMeta.title;
+  ? (tool.seoMeta?.titleZh || tool.seoMeta?.title || name)
+  : (tool.seoMeta?.title || name);
 const seoDesc = lang === 'zh'
-  ? (tool.seoMeta.descriptionZh || tool.seoMeta.description)
-  : tool.seoMeta.description;
+  ? (tool.seoMeta?.descriptionZh || tool.seoMeta?.description || description)
+  : (tool.seoMeta?.description || description);
 
 const canonicalUrl = `${siteUrl}/${lang}/tools/${tool.id}/`;
 
@@ -111,7 +111,7 @@ const softwareSchema = {
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": tool.rating.toString(),
+    "ratingValue": (tool.rating ?? 0).toString(),
     "bestRating": "5",
     "worstRating": "1",
     "ratingCount": "1",

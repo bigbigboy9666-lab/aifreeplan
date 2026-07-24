@@ -474,6 +474,25 @@
         "free-model",
         "moe"
       ]
+    },
+    {
+      "slug": "ai-mindmap-tools-free-comparison-2026",
+      "title_zh": "AI思维导图工具免费额度对比：8款主流工具2026年免费版深度横评",
+      "title_en": "AI Mind Map Tools Free Tier Comparison: Deep Review of 8 Mainstream Tools in 2026",
+      "description_zh": "横向对比GitMind、XMind AI、Boardmix、百度脑图等8款AI思维导图工具的免费额度、功能限制和使用技巧，帮你找到最适合的免费工具。",
+      "description_en": "A side-by-side comparison of free tiers from 8 popular AI mind map tools including GitMind, XMind AI, Boardmix, and Baidu Naotu — covering credits, limits, and tips to find the best free tool for you.",
+      "date_published": "2026-07-24",
+      "category": "comparison",
+      "tags": [
+        "mindmap",
+        "AI",
+        "free",
+        "comparison",
+        "gitmind",
+        "xmind",
+        "boardmix"
+      ],
+      "image": "/og-image.png"
     }
   ],
   "updatedAt": "2026-07-23"

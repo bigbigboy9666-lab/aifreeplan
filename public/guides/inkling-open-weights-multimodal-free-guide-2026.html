@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inkling：Thinking Machines Lab开源975B参数多模态模型完全攻略 - Tinker免费试用+50% API折扣 | AIFreePlan</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="Inkling：Thinking Machines Lab开源975B参数多模态模型完全攻略 | AIFreePlan">
+<meta property="og:description" content="Thinking Machines Lab于2026年7月15日发布Inkling——975B参数MoE多模态模型，完全开源免费。支持1M token上下文，Tinker平台免费试用+50% API折扣。">
+<meta property="og:url" content="https://aifreeplan.com/zh/guides/inkling-open-weights-multimodal-free-guide-2026">
+<meta property="og:site_name" content="AIFreePlan">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Inkling：Thinking Machines Lab开源975B参数多模态模型完全攻略 | AIFreePlan">
+<meta name="twitter:description" content="Thinking Machines Lab于2026年7月15日发布Inkling——975B参数MoE多模态模型，完全开源免费。支持1M token上下文，Tinker平台免费试用+50% API折扣。">
+<meta name="description" content="Thinking Machines Lab于2026年7月15日发布Inkling——975B参数MoE多模态模型，完全开源免费。支持1M token上下文，Tinker平台免费试用+50% API折扣。">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<link rel="canonical" href="https://aifreeplan.com/zh/guides/inkling-open-weights-multimodal-free-guide-2026">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/inkling-open-weights-multimodal-free-guide-2026">
+<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/inkling-open-weights-multimodal-free-guide-2026">
+<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/inkling-open-weights-multimodal-free-guide-2026">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;--text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;--accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);--green:#059669;--green-light:rgba(5,150,105,.1);--shadow:0 4px 20px rgba(0,0,0,.05);--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover)}
+.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
+.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
+.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
+.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
+.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
+.article-container ul,.article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
+.article-container li{margin-bottom:8px;line-height:1.6}
+.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
+.article-container a{color:var(--accent);text-decoration:underline}
+.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-container th,.article-container td{padding:12px;border:1px solid var(--border);text-align:left}
+.article-container th{background:var(--accent-light);font-weight:600}
+.breadcrumb{font-size:14px;color:var(--text-muted);margin-bottom:24px}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb-sep{margin:0 8px}
+.faq-section{background:var(--bg-white);border-radius:var(--radius);padding:32px;margin-top:40px;box-shadow:var(--shadow)}
+.faq-section h3{margin-top:0;color:var(--text)}
+.faq-item{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border-light)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-weight:700;color:var(--text);margin-bottom:8px}
+.faq-a{color:var(--text-secondary);line-height:1.7}
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff;margin-top:60px}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6)}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col h4{font-size:14px;font-weight:700;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+@media(max-width:768px){.article-container{padding:16px 16px 48px;max-width:100%}.article-container h1{font-size:24px}.article-container h2{font-size:20px}.container{padding:0 16px}.nav{display:none}}
+.info-box{background:var(--accent-light);border-left:4px solid var(--accent);padding:16px 20px;border-radius:0 8px 8px 0;margin:20px 0}
+.highlight-box{background:var(--green-light);border-left:4px solid var(--green);padding:16px 20px;border-radius:0 8px 8px 0;margin:20px 0}
+.tag{display:inline-block;background:var(--accent-light);color:var(--accent);padding:4px 12px;border-radius:20px;font-size:13px;font-weight:600;margin:4px 4px 4px 0}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org/","@type":"Article","headline":"Inkling：Thinking Machines Lab开源975B参数多模态模型完全攻略","description":"Thinking Machines Lab于2026年7月15日发布Inkling——975B参数MoE多模态模型，完全开源免费。支持1M token上下文，Tinker平台免费试用+50% API折扣。","url":"https://aifreeplan.com/zh/guides/inkling-open-weights-multimodal-free-guide-2026","datePublished":"2026-07-16","dateModified":"2026-07-16","author":{"@type":"Organization","name":"AIFreePlan"},"publisher":{"@type":"Organization","name":"AIFreePlan","url":"https://aifreeplan.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aifreeplan.com/zh/guides/inkling-open-weights-multimodal-free-guide-2026"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org/","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://aifreeplan.com/zh"},{"@type":"ListItem","position":2,"name":"攻略","item":"https://aifreeplan.com/zh/guides"},{"@type":"ListItem","position":3,"name":"Inkling：Thinking Machines Lab开源975B参数多模态模型完全攻略","item":"https://aifreeplan.com/zh/guides/inkling-open-weights-multimodal-free-guide-2026"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org/","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Inkling模型是否完全免费？","acceptedAnswer":{"@type":"Answer","text":"是的。Inkling模型权重完全开源免费，可从Thinking Machines Lab官网免费下载。此外，Tinker平台的Inkling Playground提供免费试用（含智能体网页搜索功能），Tinker API当前享受50%限时折扣。"}}]}
+</script>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="/zh" class="logo">AI<span class="accent">FreePlan</span></a>
+    <nav class="nav">
+      <a href="/zh/all">全部工具</a>
+      <a href="/zh/guides">攻略</a>
+      <a href="/zh/privacy">隐私</a>
+      <a href="/en/guides/inkling-open-weights-multimodal-free-guide-2026" class="btn btn-primary">English</a>
+    </nav>
+  </div>
+</header>
+<main class="article-container">
+<nav class="breadcrumb"><a href="/zh">首页</a> <span class="breadcrumb-sep">›</span> <a href="/zh/guides">攻略</a> <span class="breadcrumb-sep">›</span> <span>Inkling：Thinking Machines Lab开源975B参数多模态模型完全攻略</span></nav>
+
+<h1>Inkling：Thinking Machines Lab开源975B参数多模态模型完全攻略</h1>
+
+<p>2026年7月15日，Thinking Machines Lab发布了其首款开源权重模型<strong>Inkling</strong>。这个975B总参数、41B激活参数的多模态Mixture-of-Experts（MoE）Transformer模型，在Hacker News上获得了697分和178条评论，成为当天最受关注的AI项目。</p>
+
+<div class="info-box">
+<strong>🔥 核心亮点：</strong>Inkling是完全免费的开源模型，权重可直接下载。通过Tinker平台可免费试用Inkling Playground（含智能体搜索），Tinker API当前享<strong>50%限时折扣</strong>。
+</div>
+
+<h2>一、Inkling模型规格与技术参数</h2>
+
+<h3>基本参数</h3>
+<ul>
+<li><strong>总参数量：</strong>975B（十亿级）</li>
+<li><strong>激活参数：</strong>41B（每次推理仅激活）</li>
+<li><strong>架构：</strong>Mixture-of-Experts Transformer（类似DeepSeek-V3设计）</li>
+<li><strong>专家结构：</strong>每层256个路由专家 + 2个共享专家，每token激活6个路由专家</li>
+<li><strong>上下文窗口：</strong>最高1M token（支持64K和256K可选）</li>
+<li><strong>预训练数据：</strong>45万亿token（文本、图像、音频、视频多模态数据）</li>
+<li><strong>优化器：</strong>Muon（大矩阵权重）+ Adam（其他参数）</li>
+</ul>
+
+<h3>模型家族</h3>
+<p>除了完整的Inkling模型外，Thinking Machines Lab还同步发布了<strong>Inkling-Small</strong>预览版：</p>
+<ul>
+<li><strong>Inkling-Small：</strong>12B激活参数，推理成本更低、延迟更短</li>
+<li>在推理和智能体任务上表现接近完整版Inkling</li>
+<li>适合编码、LLM评分、合成数据生成等对成本和延迟敏感的场景</li>
+</ul>
+
+<h3>多模态能力</h3>
+<p>Inkling原生支持三种模态推理，无需额外适配器：</p>
+<ul>
+<li><strong>文本：</strong>通用语言理解和生成</li>
+<li><strong>图像：</strong>视觉理解和分析（encoder-free架构）</li>
+<li><strong>音频：</strong>原生音频处理（输入为dMel频谱图）</li>
+</ul>
+
+<div class="highlight-box">
+<strong>💡 为什么重要：</strong>大多数多模态模型需要单独的视觉和音频编码器，而Inkling采用encoder-free架构，三个模态统一训练，降低了推理复杂度和延迟。
+</div>
+
+<h2>二、基准测试成绩</h2>
+
+<p>Inkling在多个权威基准测试中表现强劲。所有评估均在effort=0.99、temperature=1.0条件下运行，编码评估使用256K最大token轨迹限制：</p>
+
+<table>
+<thead>
+<tr><th>基准测试</th><th>类别</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr><td>HLE (no tools)</td><td>推理</td><td>高阶推理能力评估</td></tr>
+<tr><td>AIME 2026</td><td>推理</td><td>数学推理竞赛题</td></tr>
+<tr><td>SWE-bench Pro (Public)</td><td>智能体编程</td><td>真实软件工程任务</td></tr>
+<tr><td>Terminal Bench 2.1</td><td>智能体编程</td><td>终端操作任务</td></tr>
+<tr><td>AudioMC</td><td>音频</td><td>音频理解能力</td></tr>
+<tr><td>MMMU Pro</td><td>视觉</td><td>多学科视觉理解</td></tr>
+</tbody>
+</table>
+
+<p>在Design Arena的Agentic Web Dev排行榜上，Inkling排名<strong>开源权重模型前列</strong>，经过盲测人工评估者比较生成的Web应用，表现优异。</p>
+
+<h2>三、如何免费下载和使用Inkling</h2>
+
+<h3>方式一：Tinker Playground（免费试用）⭐推荐</h3>
+
+<p>最简单的方式是通过<strong>Tinker平台</strong>的Inkling Playground直接使用：</p>
+
+<ol>
+<li><strong>访问</strong> <a href="https://tinker.thinkingmachines.ai/playground" target="_blank">Tinker Playground</a></li>
+<li><strong>注册</strong> Tinker账号（免费）</li>
+<li><strong>开始对话</strong>，集成智能体网页搜索功能</li>
+</ol>
+
+<div class="highlight-box">
+<strong>🆓 免费信息：</strong>Inkling Playground目前<strong>免费开放</strong>（限时），包含智能体网页搜索功能。这是零门槛体验975B参数多模态模型的最佳方式。
+</div>
+
+<h3>方式二：Tinker API微调（50%折扣）</h3>
+
+<p>如果你需要针对特定任务微调Inkling，可以使用Tinker平台：</p>
+
+<ol>
+<li><strong>注册</strong> Tinker账号</li>
+<li><strong>选择</strong> Inkling作为基础模型</li>
+<li><strong>使用</strong> Tinker API进行LoRA微调</li>
+</ol>
+
+<div class="info-box">
+<strong>💰 折扣信息：</strong>Thinking Machines Lab正在为Inkling提供<strong>50%限时折扣</strong>，按百万token计费（USD）。完整定价信息请参考Tinker官网。
+</div>
+
+<h3>方式三：本地部署（完全免费）</h3>
+
+<p>Inkling的模型权重完全开源免费，可自行下载部署：</p>
+
+<h4>BF16精度版本</h4>
+<ul>
+<li><strong>VRAM需求：</strong>至少2TB聚合VRAM</li>
+<li><strong>推荐配置：</strong>8x NVIDIA H200 或 4x NVIDIA B300</li>
+</ul>
+
+<h4>NVFP4量化版本</h4>
+<ul>
+<li><strong>VRAM需求：</strong>至少600GB聚合VRAM</li>
+<li><strong>推荐配置：</strong>4x NVIDIA B300（W4A4模式，需SM100+架构）</li>
+<li><strong>或：</strong>8x NVIDIA H200（W4A16模式）</li>
+</ul>
+
+<p>支持的推理框架：<strong>SGLang、vLLM、TokenSpeed、Unsloth、Hugging Face</strong>。</p>
+
+<div class="info-box">
+<strong>⚠️ 注意：</strong>本地部署需要高端GPU集群，普通用户建议直接使用Tinker Playground免费试用。
+</div>
+
+<h2>四、Inkling的核心特色</h2>
+
+<h3>可控思考努力（Controllable Thinking Effort）</h3>
+<p>Inkling的独特设计允许用户控制模型的"思考深度"。从低effort到高effort，模型可以在成本和性能之间灵活平衡。这对于需要根据预算调整响应质量的场景非常有用。</p>
+
+<h3>原生智能体能力</h3>
+<p>Inkling专为智能体和编码工作流设计，支持：</p>
+<ul>
+<li>内置工具调用和函数执行</li>
+<li>长期多步骤任务规划</li>
+<li>与各种编码和智能体框架集成</li>
+<li>随机化工具集训练，降低对特定工具的敏感度</li>
+</ul>
+
+<h3>自微调演示</h3>
+<p>Thinking Machines Lab展示了Inkling<strong>自我微调</strong>的能力——模型自己编写了微调任务，在Tinker平台上运行并评估结果。这证明了Inkling在智能体编码方面的强大能力。</p>
+
+<h2>五、与其他开源模型的对比</h2>
+
+<table>
+<thead>
+<tr><th>特性</th><th>Inkling</th><th>Kimi K2.6</th><th>Qwen3.6</th></tr>
+</thead>
+<tbody>
+<tr><td>架构类型</td><td>MoE (975B/41B)</td><td>MoE</td><td>Dense</td></tr>
+<tr><td>多模态</td><td>文本+图像+音频</td><td>文本为主</td><td>文本为主</td></tr>
+<tr><td>上下文窗口</td><td>1M tokens</td><td>256K</td><td>256K</td></tr>
+<tr><td>开源方式</td><td>完全开源权重</td><td>开源</td><td>开源</td></tr>
+<tr><td>免费试用</td><td>Tinker Playground</td><td>多种平台</td><td>通义千问网页版</td></tr>
+<tr><td>微调支持</td><td>Tinker API (50%折扣)</td><td>多种方案</td><td>DashScope API</td></tr>
+</tbody>
+</table>
+
+<h2>六、常见问题</h2>
+
+<div class="faq-section">
+<h3>❓ Inkling的许可证是什么？</h3>
+<p class="faq-a">Inkling采用开源许可发布，权重完全免费供研究和商业使用。具体许可证条款请参考Thinking Machines Lab发布的官方声明。</p>
+
+<h3>❓ 如何在没有高端GPU的情况下使用Inkling？</h3>
+<p class="faq-a">最简单的方式是使用Tinker Playground，完全免费且无需任何硬件要求。如果需要API访问，Tinker提供50%限时折扣。</p>
+
+<h3>❓ Inkling-Small和完整版有什么区别？</h3>
+<p class="faq-a">Inkling-Small仅有12B激活参数（完整版41B），训练方法和架构类似。它在推理和智能体任务上表现接近完整版，但成本和延迟显著降低，适合对实时性要求高的场景。</p>
+
+<h3>❓ Tinker Playground的免费试用期有多长？</h3>
+<p class="faq-a">目前Thinkign Machines Lab宣布Inkling Playground限时免费，但具体截止日期未公布。建议尽早注册体验。</p>
+
+<h3>❓ Inkling支持哪些推理框架？</h3>
+<p class="faq-a">支持SGLang、vLLM、TokenSpeed、Unsloth和Hugging Face等主流推理框架。本地部署需要自行配置依赖库。</p>
+</div>
+
+<h2>七、总结</h2>
+
+<p>Inkling是2026年最值得关注的开源多模态模型之一。975B参数的规模、1M token的超长上下文、原生的文本/图像/音频多模态能力，加上完全免费的开源权重，使其成为定制化和微调的理想基座模型。</p>
+
+<p>对于普通用户，<strong>Tinker Playground是最推荐的入口</strong>——零成本体验顶级多模态模型。对于开发者，<strong>Tinker API的50%折扣</strong>让微调成本大幅降低。对于有算力的团队，<strong>本地部署</strong>提供了最大的灵活性。</p>
+
+<p><strong>相关链接：</strong></p>
+<ul>
+<li>🔗 <a href="https://thinkingmachines.ai/news/introducing-inkling/" target="_blank">Inkling官方博客</a></li>
+<li>🔗 <a href="https://thinkingmachines.ai/model-card/inkling/" target="_blank">Inkling模型卡</a></li>
+<li>🔗 <a href="https://tinker.thinkingmachines.ai/playground" target="_blank">Tinker Playground（免费试用）</a></li>
+<li>🔗 <a href="https://tinker.thinkingmachines.ai/" target="_blank">Tinker平台</a></li>
+</ul>
+
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="/zh" class="logo" style="color:#059669">AI<span class="accent" style="color:#6366F1">FreePlan</span></a><p>AI驱动的免费工具聚合平台，永久免费。</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h4>产品</h4><a href="/zh/all">全部工具</a><a href="/zh/guides">攻略</a></div>
+      <div class="footer-col"><h4>法律</h4><a href="/zh/privacy">隐私政策</a><a href="/zh/terms">用户协议</a></div>
+    </div>
+  </div>
+  <div class="container footer-bottom">&copy; 2026 AIFreePlan. All rights reserved.</div>
+</footer>
+</body></html>

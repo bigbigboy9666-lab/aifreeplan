@@ -38,6 +38,32 @@ const description = isZh
   : "Compare free credits, usage limits, and trial details across 99+ AI tools across 8 categories. Weekly verified free tier data for video generation, LLM APIs, coding assistants and more.";
 
 const canonicalUrl = `${siteUrl}/${lang}/`;
+
+// JSON-LD: WebSite + SearchAction for homepage
+const indexSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "AIFreePlan",
+  "url": siteUrl,
+  "description": description,
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": siteUrl + "/{search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AIFreePlan",
+    "url": siteUrl,
+    "logo": {
+      "@type": "ImageObject",
+      "url": siteUrl + "/favicon.svg"
+    }
+  }
+};
 ---
 
 <BaseLayout

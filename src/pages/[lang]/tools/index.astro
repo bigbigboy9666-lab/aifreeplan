@@ -30,6 +30,31 @@ const description = isZh
 
 const canonicalUrl = `https://aifreeplan.com/${lang}/tools/`;
 
+// JSON-LD: ItemList for tools page
+const toolsSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": title,
+  "description": description,
+  "url": canonicalUrl,
+  "numberOfItems": tools.length,
+  "itemListElement": tools.slice(0, 10).map((t: any, i: number) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "item": {
+      "@type": "SoftwareApplication",
+      "name": t.nameEn || t.name,
+      "url": `${canonicalUrl}../tools/${t.id}/`,
+      "applicationCategory": t.category,
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": (t.rating ?? 0).toString(),
+        "bestRating": "5"
+      }
+    }
+  }))
+};
+
 // Build searchable data
 const searchableTools = JSON.stringify(tools.map((t: any) => ({
   id: t.id,

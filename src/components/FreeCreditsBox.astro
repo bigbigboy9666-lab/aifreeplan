@@ -28,7 +28,7 @@ const statusBadge: Record<string, { label: Record<string, string>; color: string
   '公测中': { label: { zh: '公测中', en: 'Beta' }, color: 'text-purple-700', bg: 'bg-purple-100' },
 };
 const badge = statusBadge[tool.freeStatus || ''] || statusBadge['免费可用'];
-const ft = tool.freeTier;
+const ft = tool.freeTier || {};
 ---
 
 <div class="bg-primary/5 border-2 border-primary rounded-2xl p-6">

@@ -21,15 +21,17 @@ const isZh = lang === 'zh';
 const title = isZh ? `${guide.title_zh} - AI Free Plan` : `${guide.title_en} - AI Free Plan`;
 const description = isZh ? (guide.excerpt_zh || guide.title_zh) : (guide.excerpt_en || guide.title_en);
 
-// Try to load static HTML content
+// Try to load static HTML content — match any <main> tag with any class
 let bodyContent = '';
 const staticHtmlPath = resolve(process.cwd(), isZh ? 'zh/guides' : 'en/guides', `${guide.slug}.html`);
 try {
   const staticHtml = readFileSync(staticHtmlPath, 'utf-8');
-  const mainStart = staticHtml.indexOf('<main class="article-container">');
-  const mainEnd = staticHtml.indexOf('</main>');
-  if (mainStart !== -1 && mainEnd !== -1) {
-    bodyContent = staticHtml.substring(mainStart + 31, mainEnd);
+  // Find first <main ...> tag (any class or no class)
+  const mainOpenMatch = staticHtml.match(/<main\b[^>]*>/);
+  const mainCloseIdx = staticHtml.indexOf('</main>');
+  if (mainOpenMatch && mainCloseIdx !== -1 && mainOpenMatch.index < mainCloseIdx) {
+    const mainOpenEnd = mainOpenMatch.index + mainOpenMatch[0].length;
+    bodyContent = staticHtml.substring(mainOpenEnd, mainCloseIdx);
   }
 } catch (e) {
   // No static HTML yet
@@ -37,6 +39,8 @@ try {
 
 const siteUrl = 'https://aifreeplan.com';
 const canonicalUrl = `${siteUrl}/${lang}/guides/${guide.slug}/`;
+const publishedDate = guide.datePublished || new Date().toISOString();
+const modifiedDate = guide.dateModified || new Date().toISOString();
 
 // JSON-LD: Article
 const articleSchema = {
@@ -44,8 +48,8 @@ const articleSchema = {
   "@type": "Article",
   "headline": title,
   "description": description,
-  "datePublished": publishedDate || new Date().toISOString(),
-  "dateModified": modifiedDate || new Date().toISOString(),
+  "datePublished": publishedDate,
+  "dateModified": modifiedDate,
   "author": {
     "@type": "Organization",
     "name": "AIFreePlan"

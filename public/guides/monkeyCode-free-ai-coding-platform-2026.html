@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MonkeyCode：奇安信出品的免费开源AI开发平台，云端编程零门槛 | AIFreePlan</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="MonkeyCode：奇安信出品的免费开源AI开发平台，云端编程零门槛 | AIFreePlan">
+<meta property="og:description" content="MonkeyCode是奇安信开源的企业级AI开发平台，内置云端开发环境，支持多种顶尖大模型。每天3千万免费额度，无需安装部署，浏览器中完成编码全流程。">
+<meta property="og:url" content="https://aifreeplan.com/zh/guides/monkeyCode-free-ai-coding-platform-2026">
+<meta property="og:site_name" content="AIFreePlan">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MonkeyCode：奇安信出品的免费开源AI开发平台，云端编程零门槛 | AIFreePlan">
+<meta name="twitter:description" content="MonkeyCode是奇安信开源的企业级AI开发平台，内置云端开发环境，支持多种顶尖大模型。每天3千万免费额度，无需安装部署。">
+<meta name="description" content="MonkeyCode是奇安信开源的企业级AI开发平台，内置云端开发环境，支持多种顶尖大模型。每天3千万免费额度，无需安装部署，浏览器中完成编码全流程。">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<link rel="canonical" href="https://aifreeplan.com/zh/guides/monkeyCode-free-ai-coding-platform-2026">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/monkeyCode-free-ai-coding-platform-2026">
+<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/monkeyCode-free-ai-coding-platform-2026">
+<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/monkeyCode-free-ai-coding-platform-2026">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;--text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;--accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);--green:#059669;--green-light:rgba(5,150,105,.1);--shadow:0 4px 20px rgba(0,0,0,.05);--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover)}
+.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
+.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
+.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
+.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
+.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
+.article-container ul,.article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
+.article-container li{margin-bottom:8px;line-height:1.6}
+.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
+.article-container a{color:var(--accent);text-decoration:underline}
+.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-container th,.article-container td{padding:12px;border:1px solid var(--border);text-align:left}
+.article-container th{background:var(--accent-light);font-weight:600}
+.breadcrumb{font-size:14px;color:var(--text-muted);margin-bottom:24px}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb-sep{margin:0 8px}
+.faq-section{background:var(--bg-white);border-radius:var(--radius);padding:32px;margin-top:40px;box-shadow:var(--shadow)}
+.faq-section h3{margin-top:0;color:var(--text)}
+.faq-item{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border-light)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-weight:700;color:var(--text);margin-bottom:8px}
+.faq-a{color:var(--text-secondary);line-height:1.7}
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff;margin-top:60px}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6)}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col h4{font-size:14px;font-weight:700;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+@media(max-width:768px){.article-container{padding:16px 16px 48px;max-width:100%}.article-container h1{font-size:24px}.article-container h2{font-size:20px}.container{padding:0 16px}.nav{display:none}}
+.highlight-box{background:var(--accent-light);border-left:4px solid var(--accent);padding:16px 20px;border-radius:0 8px 8px 0;margin:20px 0}
+.code-block{background:#1e1e2e;color:#cdd6f4;padding:16px 20px;border-radius:8px;font-family:"SF Mono",Menlo,Monaco,Consolas,monospace;font-size:14px;overflow-x:auto;margin:16px 0}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"MonkeyCode：奇安信出品的免费开源AI开发平台，云端编程零门槛","description":"MonkeyCode是奇安信开源的企业级AI开发平台，内置云端开发环境，支持多种顶尖大模型。每天3千万免费额度，无需安装部署，浏览器中完成编码全流程。","url":"https://aifreeplan.com/zh/guides/monkeyCode-free-ai-coding-platform-2026","datePublished":"2026-06-30","dateModified":"2026-06-30","author":{"@type":"Organization","name":"AIFreePlan"},"publisher":{"@type":"Organization","name":"AIFreePlan","url":"https://aifreeplan.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aifreeplan.com/zh/guides/monkeyCode-free-ai-coding-platform-2026"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://aifreeplan.com/zh"},{"@type":"ListItem","position":2,"name":"攻略","item":"https://aifreeplan.com/zh/guides"},{"@type":"ListItem","position":3,"name":"MonkeyCode：奇安信出品的免费开源AI开发平台，云端编程零门槛","item":"https://aifreeplan.com/zh/guides/monkeyCode-free-ai-coding-platform-2026"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"MonkeyCode真的免费吗？","acceptedAnswer":{"@type":"Answer","text":"MonkeyCode提供免费额度，每天3千万免费积分，日常写任务够用。邀请好友可得5000积分/次。旗舰模型也可使用，但有积分消耗。"}}]}
+</script>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="/zh" class="logo">AI<span class="accent">FreePlan</span></a>
+    <nav class="nav">
+      <a href="/zh/all">全部工具</a>
+      <a href="/zh/guides">攻略</a>
+      <a href="/zh/privacy">隐私</a>
+      <a href="/en/guides/monkeyCode-free-ai-coding-platform-2026" class="btn btn-primary">English</a>
+    </nav>
+  </div>
+</header>
+<main class="article-container">
+<nav class="breadcrumb"><a href="/zh">首页</a> <span class="breadcrumb-sep">›</span> <a href="/zh/guides">攻略</a> <span class="breadcrumb-sep">›</span> <span>MonkeyCode：奇安信出品的免费开源AI开发平台，云端编程零门槛</span></nav>
+<h1>MonkeyCode：奇安信出品的免费开源AI开发平台，云端编程零门槛</h1>
+<p>MonkeyCode 是奇安信开源的企业级 AI 开发平台，内置云端开发环境，支持多种顶尖大模型。每天3千万免费额度，无需安装、无需部署，在浏览器中完成编码、测试、运行全流程。</p>
+
+<h2>什么是 MonkeyCode？</h2>
+<p>简单来说，如果你想做一个网站、小工具或者 demo，但又不想安装 CodeX、Claude Code 这些工具，也不想花时间学习怎么用——那 MonkeyCode 可能很适合你。</p>
+<p>它跟一般的 vibe coding 工具不一样，是真正面向专业开发团队的 AI 助手。核心代码全部公开在 GitHub，目前已经有 4.3k 的 stars。</p>
+
+<div class="highlight-box">
+<strong>GitHub 地址：</strong><a href="https://github.com/chaitin/MonkeyCode/" target="_blank" rel="noopener">https://github.com/chaitin/MonkeyCode/</a>
+<br>感兴趣的朋友可以去看看，点个赞支持一下国产 Agent。
+</div>
+
+<h2>免费额度怎么用？</h2>
+<p>MonkeyCode 提供免费使用，内置了开发环境管理、AI 模型管理、AI 任务管理、项目需求管理等能力。</p>
+
+<ul>
+<li><strong>每日免费额度：</strong>每天 3 千万免费积分，日常写一些任务完全满足</li>
+<li><strong>邀请奖励：</strong>邀请好友得积分，一次 5000 积分，一次任务大约消耗 200 积分</li>
+<li><strong>旗舰模型：</strong>也可以用旗舰模型，只是消耗更多积分</li>
+</ul>
+
+<p>首页有一个邀请好友得积分的功能，整体来说免费额度对于日常折腾小项目是够用的。</p>
+
+<h2>支持哪些代码仓库？</h2>
+<p>可以在平台上绑定你的代码仓库地址，支持多平台仓库，主流的还是 GitHub，也支持国内的 Gitee 等。</p>
+
+<h2>实测案例一：AI 发展数据页面</h2>
+<p>选了极致模型 5.5（只是名字不同，模型还是熟悉的 5.5），做了一个数据展示任务：</p>
+
+<ul>
+<li><strong>任务目标：</strong>围绕"AI 发展"主题，收集、整理并展示近几年人工智能领域的重要发展变化</li>
+<li><strong>最终产出：</strong>一个完整可运行的 HTML 页面</li>
+<li><strong>页面主题：</strong>AI 发展观察：从大模型到智能体</li>
+<li><strong>风格要求：</strong>清新、信息清晰，适合做成网页展示、公众号配图长图或课程资料</li>
+</ul>
+
+<p>运行时间大概 4 分钟。云端直接运行，不用部署，从地址就可以看出来是一个外部可访问的链接。配色布局也比较清新。</p>
+
+<h2>实测案例二：太空战斗机小游戏</h2>
+<p>这个案例最能体现 MonkeyCode 的能力——从零开始做一个完整的小游戏。</p>
+
+<h3>初版：框架有了，画面简陋</h3>
+<p>游戏规则很简单：玩家控制一艘小飞船，在宇宙背景中左右移动，躲避从上方不断坠落的陨石，同时收集发光的能量球。可以设置倒计时、生命值和分数系统。</p>
+<p>初版做出来之后，雏形是有的，基本框架没问题，但画面太简陋了——就是一些简单图形加发光元素。</p>
+
+<h3>第一轮优化：SVG 矢量资产</h3>
+<p>让 MonkeyCode 把美术资产优化成 SVG，打包到文件夹中：</p>
+<ul>
+<li>新增飞船贴图：ship.svg</li>
+<li>新增两种陨石贴图：meteor-1.svg、meteor-2.svg</li>
+<li>新增能量球贴图：energy-orb.svg</li>
+<li>新增背景星云层：nebula.svg</li>
+</ul>
+<p>现在战斗机和陨石有一定辨识度了，但代码生成的 SVG 图片效果给人一种拼装感。</p>
+
+<h3>第二轮优化：PNG 透明贴图</h3>
+<p>再次优化美术资产，生成带有 alpha 通道的 PNG 图片，用高清带细节的图片提升战斗机、陨石的质感。透明背景更适合融入小游戏中。</p>
+<p>把这些带 alpha 通道的图片丢给 MonkeyCode，让它根据参考图进行美术资产优化，画面明显好了一档。</p>
+
+<h3>第三轮优化：UI 细节</h3>
+<p>优化 UI 界面，增加血条、图标等细节元素。最后还新增了战斗元素，增加了敌方战斗机。</p>
+<p>从最初简陋的 demo 版本，一步步优化到了更精美的版本。而且整个过程在云端运行，不用本地启动部署，做好即用。</p>
+
+<h2>实测案例三：HTML 转 PNG 工具</h2>
+<p>HTML 本质上是"可编辑的页面"，适合做复杂排版、卡片布局、时间线、表格、信息图、课程页。但很多平台不能直接展示 HTML——公众号正文、小红书、朋友圈、PPT 更接受图片。</p>
+<p>用 MonkeyCode 做了一个 HTML 转 PNG 的网页工具：</p>
+<ul>
+<li>左边输入 HTML 代码</li>
+<li>右边实时预览渲染效果</li>
+<li>支持设置清晰度，最高可达 4K</li>
+</ul>
+<p>几分钟后，工具网站就搭建好了。拿来做一个模型科普的 HTML 页面，包含公司模型、市值、成立时间等基础信息，然后导出为 PNG 图片方便传播，效果还不错。</p>
+
+<h2>总结</h2>
+<p>MonkeyCode 解决了两个最直接的问题：<strong>不用下载安装环境，不用部署环境。</strong></p>
+<p>这对很多想快速试想法的人来说，门槛会低不少。比如做一个网页小工具、一个数据展示页面、一个小游戏 Demo，直接在云端写、云端跑、云端看效果，整个流程会轻很多。</p>
+<p>当然，它也不是说能一次性把所有东西都做到完美。像游戏美术、页面细节、交互体验这些，还是需要不断提需求、反复优化。但从这几轮测试来看，MonkeyCode 的完成度已经够日常折腾一些小项目了。</p>
+
+<div class="faq-section">
+<h3>常见问题</h3>
+<div class="faq-item">
+<div class="faq-q">MonkeyCode 真的免费吗？</div>
+<div class="faq-a">MonkeyCode 提供免费额度，每天 3 千万免费积分，日常写任务够用。邀请好友可得 5000 积分/次。旗舰模型也可使用，但有积分消耗。</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">需要安装什么吗？</div>
+<div class="faq-a">不需要。MonkeyCode 是云端平台，打开浏览器就能用，无需安装任何开发环境。</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">支持哪些代码仓库？</div>
+<div class="faq-a">支持 GitHub、Gitee 等多个代码托管平台，可以绑定仓库地址进行项目管理。</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">适合什么人用？</div>
+<div class="faq-a">适合想快速试想法但不想折腾本地环境的开发者、产品经理、独立开发者。做一个网页小工具、数据展示页面、小游戏 Demo 都很方便。</div>
+</div>
+</div>
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="/zh" class="logo" style="color:#059669">AI<span class="accent" style="color:#6366F1">FreePlan</span></a><p>AI驱动的免费工具聚合平台，永久免费。</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h4>产品</h4><a href="/zh/all">全部工具</a><a href="/zh/guides">攻略</a></div>
+      <div class="footer-col"><h4>法律</h4><a href="/zh/privacy">隐私政策</a><a href="/zh/terms">用户协议</a></div>
+    </div>
+  </div>
+  <div class="container footer-bottom">&copy; 2026 AIFreePlan. All rights reserved.</div>
+</footer>
+</body></html>

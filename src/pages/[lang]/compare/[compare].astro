@@ -39,12 +39,12 @@ const categoryA = lang === 'zh' ? toolA.categoryZh : toolA.categoryEn;
 const categoryB = lang === 'zh' ? toolB.categoryZh : toolB.categoryEn;
 const paidFromA = lang === 'zh' ? toolA.paidFrom : toolA.paidFromEn;
 const paidFromB = lang === 'zh' ? toolB.paidFrom : toolB.paidFromEn;
-const prosA = lang === 'zh' ? toolA.pros : toolA.prosEn;
-const prosB = lang === 'zh' ? toolB.pros : toolB.prosEn;
-const consA = lang === 'zh' ? toolA.cons : toolA.consEn;
-const consB = lang === 'zh' ? toolB.cons : toolB.consEn;
-const featuresA = lang === 'zh' ? toolA.features : toolA.featuresEn;
-const featuresB = lang === 'zh' ? toolB.features : toolB.featuresEn;
+const prosA = lang === 'zh' ? (toolA.pros || []) : (toolA.prosEn || []);
+const prosB = lang === 'zh' ? (toolB.pros || []) : (toolB.prosEn || []);
+const consA = lang === 'zh' ? (toolA.cons || []) : (toolA.consEn || []);
+const consB = lang === 'zh' ? (toolB.cons || []) : (toolB.consEn || []);
+const featuresA = lang === 'zh' ? (toolA.features || []) : (toolA.featuresEn || []);
+const featuresB = lang === 'zh' ? (toolB.features || []) : (toolB.featuresEn || []);
 
 const seoTitle = lang === 'zh'
   ? `${nameA} vs ${nameB} - 免费额度对比 | AI Free Plan`
@@ -54,24 +54,33 @@ const seoDesc = lang === 'zh'
   : `Compare ${nameA} and ${nameB}: free credits, features, and ratings. Which one is right for you?`;
 const canonicalUrl = `${siteUrl}/${lang}/compare/${compare}`;
 
+// All compare pages: noindex to avoid thin content penalty
+const noindexSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": seoTitle,
+  "description": seoDesc,
+  "url": canonicalUrl,
+};
+
 // Comparison table data
 const comparisonRows = lang === 'zh' ? [
   { label: '分类', keyA: categoryA, keyB: categoryB },
   { label: '评分', keyA: `⭐ ${toolA.rating}`, keyB: `⭐ ${toolB.rating}` },
-  { label: '免费额度', keyA: `${toolA.freeTier.credits} ${toolA.freeTier.creditUnit}`, keyB: `${toolB.freeTier.credits} ${toolB.freeTier.creditUnit}` },
-  { label: '刷新周期', keyA: toolA.freeTier.refreshPeriod, keyB: toolB.freeTier.refreshPeriod },
-  { label: '分辨率', keyA: toolA.freeTier.resolution, keyB: toolB.freeTier.resolution },
-  { label: '水印', keyA: toolA.freeTier.watermark ? '有' : '无', keyB: toolB.freeTier.watermark ? '有' : '无' },
-  { label: '商用', keyA: toolA.freeTier.commercialUse ? '允许' : '不允许', keyB: toolB.freeTier.commercialUse ? '允许' : '不允许' },
+  { label: '免费额度', keyA: `${toolA.freeTier?.credits ?? 'N/A'} ${toolA.freeTier?.creditUnit || ''}`, keyB: `${toolB.freeTier?.credits ?? 'N/A'} ${toolB.freeTier?.creditUnit || ''}` },
+  { label: '刷新周期', keyA: toolA.freeTier?.refreshPeriod || 'N/A', keyB: toolB.freeTier?.refreshPeriod || 'N/A' },
+  { label: '分辨率', keyA: toolA.freeTier?.resolution || 'N/A', keyB: toolB.freeTier?.resolution || 'N/A' },
+  { label: '水印', keyA: toolA.freeTier?.watermark ? '有' : '无', keyB: toolB.freeTier?.watermark ? '有' : '无' },
+  { label: '商用', keyA: toolA.freeTier?.commercialUse ? '允许' : '不允许', keyB: toolB.freeTier?.commercialUse ? '允许' : '不允许' },
   { label: '付费起步', keyA: paidFromA, keyB: paidFromB },
 ] : [
   { label: 'Category', keyA: categoryA, keyB: categoryB },
   { label: 'Rating', keyA: `⭐ ${toolA.rating}`, keyB: `⭐ ${toolB.rating}` },
-  { label: 'Free Credits', keyA: `${toolA.freeTier.credits} ${toolA.freeTier.creditUnit}`, keyB: `${toolB.freeTier.credits} ${toolB.freeTier.creditUnit}` },
-  { label: 'Refresh Period', keyA: toolA.freeTier.refreshPeriod, keyB: toolB.freeTier.refreshPeriod },
-  { label: 'Resolution', keyA: toolA.freeTier.resolution, keyB: toolB.freeTier.resolution },
-  { label: 'Watermark', keyA: toolA.freeTier.watermark ? 'Yes' : 'No', keyB: toolB.freeTier.watermark ? 'Yes' : 'No' },
-  { label: 'Commercial Use', keyA: toolA.freeTier.commercialUse ? 'Yes' : 'No', keyB: toolB.freeTier.commercialUse ? 'Yes' : 'No' },
+  { label: 'Free Credits', keyA: `${toolA.freeTier?.credits ?? 'N/A'} ${toolA.freeTier?.creditUnit || ''}`, keyB: `${toolB.freeTier?.credits ?? 'N/A'} ${toolB.freeTier?.creditUnit || ''}` },
+  { label: 'Refresh Period', keyA: toolA.freeTier?.refreshPeriod || 'N/A', keyB: toolB.freeTier?.refreshPeriod || 'N/A' },
+  { label: 'Resolution', keyA: toolA.freeTier?.resolution || 'N/A', keyB: toolB.freeTier?.resolution || 'N/A' },
+  { label: 'Watermark', keyA: toolA.freeTier?.watermark ? 'Yes' : 'No', keyB: toolB.freeTier?.watermark ? 'Yes' : 'No' },
+  { label: 'Commercial Use', keyA: toolA.freeTier?.commercialUse ? 'Yes' : 'No', keyB: toolB.freeTier?.commercialUse ? 'Yes' : 'No' },
   { label: 'Paid From', keyA: paidFromA, keyB: paidFromB },
 ];
 
@@ -104,8 +113,8 @@ const breadcrumbSchema = {
 
 <BaseLayout title={seoTitle} description={seoDesc} canonical={canonicalUrl} lang={lang}>
   <Fragment slot="head">
-    <script type="application/ld+json" set:html={JSON.stringify(comparisonSchema)} />
-    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+    <meta name="robots" content="noindex, nofollow" />
+    <script type="application/ld+json" set:html={JSON.stringify(noindexSchema)} />
   </Fragment>
 
   <main class="max-w-6xl mx-auto px-4 py-8">
