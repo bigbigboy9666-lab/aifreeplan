@@ -1,0 +1,170 @@
+AI思维导图工具免费额度对比：8款主流工具2026年免费版深度横评
+AI Mind Map Tools Free Tier Comparison: Deep Review of 8 Mainstream Tools in 2026
+横向对比GitMind、XMind AI、Boardmix、百度脑图等8款AI思维导图工具的免费额度、功能限制和使用技巧，帮你找到最适合的免费工具。
+A side-by-side comparison of free tiers from 8 popular AI mind map tools including GitMind, XMind AI, Boardmix, and Baidu Naotu — covering credits, limits, and tips to find the best free tool for you.
+<h1>AI Mind Map Tools Free Tier Comparison: 8 Mainstream Tools Reviewed in 2026</h1>
+<p>Mind mapping is an efficient tool for organizing thoughts, brainstorming, and knowledge management. With the advancement of AI technology, more and more mind mapping tools now integrate AI generation features — simply input a topic, and the AI automatically generates a complete mind map structure. However, the free tiers vary dramatically across tools, from completely free to just a few AI generations per day.</p>
+<p>This article compares the free versions of 8 mainstream AI mind map tools (including both domestic and international products), covering AI generation limits, node restrictions, export formats, collaboration features, and more — helping you quickly find the right tool for your needs.</p>
+<h2>Quick Comparison Table</h2>
+<table>
+<tr><th>Tool</th><th>Free AI Generations</th><th>Free Maps Allowed</th><th>Max Nodes</th><th>Free Export Formats</th><th>Collaboration</th></tr>
+<tr><td><strong>Baidu Naotu</strong></td><td>No AI</td><td>Unlimited</td><td>Unlimited</td><td>MD/PNG/JPG</td><td>Supported</td></tr>
+<tr><td><strong>Whimsical AI</strong></td><td>5 AI boards/mo</td><td>5 boards</td><td>~100 elements</td><td>PNG/SVG</td><td>3 users</td></tr>
+<tr><td><strong>Coggle</strong></td><td>No AI</td><td>3 maps</td><td>Unlimited</td><td>PNG/JPG/PDF</td><td>Supported</td></tr>
+<tr><td><strong>Miro AI</strong></td><td>3 AI generations/mo</td><td>3 whiteboards</td><td>~200 elements</td><td>PNG</td><td>3 users</td></tr>
+<tr><td><strong>GitMind</strong></td><td>5 AI/day</td><td>Unlimited</td><td>~200 nodes</td><td>PNG/PDF/Text</td><td>Supported</td></tr>
+<tr><td><strong>Boardmix</strong></td><td>10 AI/month</td><td>Unlimited</td><td>~300 nodes</td><td>PNG/PDF</td><td>5 users</td></tr>
+<tr><td><strong>ProcessOn</strong></td><td>No AI</td><td>5 documents</td><td>~150 nodes</td><td>SVG/PNG/PDF</td><td>Not available</td></tr>
+<tr><td><strong>XMind AI</strong></td><td>3 AI/day</td><td>Unlimited</td><td>Unlimited</td><td>All formats</td><td>Supported</td></tr>
+</table>
+<h2>1. Baidu Naotu — Completely Free, Most Generous Choice</h2>
+<p><strong>Baidu Naotu</strong> (naotu.baidu.com) is China's most established and generous free online mind mapping tool. While it lacks fancy AI generation features, its core functionality is entirely free with no restrictions whatsoever.</p>
+<h3>Free Tier Details</h3>
+<ul>
+<li><strong>Map count:</strong> Unlimited creation, no cap</li>
+<li><strong>Node count:</strong> No limit</li>
+<li><strong>Export formats:</strong> Markdown, PNG, JPG, PDF</li>
+<li><strong>Cloud sync:</strong> Free</li>
+<li><strong>Collaboration:</strong> Multi-user real-time editing supported</li>
+</ul>
+<h3>Pros and Cons</h3>
+<p>Baidu Naotu's biggest advantage is that it's <strong>completely free</strong> — no membership tiers, no feature limitations, no ads. For users who only need basic mind mapping functionality, this is the most hassle-free option. It supports Markdown import/export, making it suitable for developers as well.</p>
+<p>The downside is that the interface is relatively plain, there's no AI-assisted generation, and the template library is limited. If you need AI to auto-generate mind map structures, Baidu Naotu won't meet your needs.</p>
+<h3>Best For</h3>
+<p>Individual users and students on a zero budget who only need basic mind mapping. If you追求零成本且不需要AI辅助，Baidu Naotu is currently the best choice in China.</p>
+<h2>2. GitMind — 5 Daily AI Generations, Most Generous Free Allowance</h2>
+<p><strong>GitMind</strong> (gitmind.cn) is a comprehensive AI mind mapping tool that supports text, images, icons, links, and other node elements, with a rich template library.</p>
+<h3>Free Tier Details</h3>
+<ul>
+<li><strong>AI generations:</strong> 5 free AI generations per day</li>
+<li><strong>Map count:</strong> Unlimited creation</li>
+<li><strong>Node limit:</strong> ~200 nodes per map</li>
+<li><strong>Export formats:</strong> PNG, PDF, Text file</li>
+<li><strong>Cloud storage:</strong> 5GB for free accounts</li>
+<li><strong>Templates:</strong> Basic templates free</li>
+</ul>
+<h3>Pros and Cons</h3>
+<p>GitMind provides <strong>5 daily AI generations</strong> for free users, which is the highest among similar products. For daily study and work scenarios, 5 AI generations per day is generally sufficient. The interface is polished, and it supports multiple platforms (Web, Windows, Mac, iOS, Android) with good sync experience.</p>
+<p>The downside is the ~200 node limit per map in the free version, which restricts large projects. Export formats are also more limited than the paid version (Xmind format export not available).</p>
+<h3>Best For</h3>
+<p>Learners and professionals who need frequent AI-generated mind maps. The daily 5-generation allowance is enough for most use cases, and cross-platform support makes it ideal for multi-device users.</p>
+<h2>3. XMind AI — Professional-Grade Tool, 3 Daily AI Generations</h2>
+<p><strong>XMind</strong>, one of the world's most popular mind mapping software, launched XMind AI in 2026 with integrated AI features including AI generation, AI summarization, and AI optimization.</p>
+<h3>Free Tier Details</h3>
+<ul>
+<li><strong>AI generations:</strong> 3 free AI generations per day</li>
+<li><strong>AI summaries:</strong> 3 per day</li>
+<li><strong>Map count:</strong> Unlimited creation</li>
+<li><strong>Node count:</strong> No limit</li>
+<li><strong>Export formats:</strong> PNG, TXT in free; full formats require payment</li>
+<li><strong>Templates:</strong> Some free templates available</li>
+</ul>
+<h3>Pros and Cons</h3>
+<p>XMind AI's greatest strengths are its <strong>professional chart design capabilities</strong> and <strong>unlimited node count</strong>. The free version allows unlimited map creation without node constraints, which is very useful for building large knowledge graphs. The AI generation quality is high, producing well-structured and logically clear mind maps.</p>
+<p>The downside is that the free version has limited export formats (no PDF, PPT, etc.), and only 3 AI generations per day. The paid version is relatively expensive (around $49.99/year).</p>
+<h3>Best For</h3>
+<p>Professional users who demand high quality and aesthetics in their mind maps. The free version already provides solid AI generation capability and unlimited nodes, making it worth trying before considering a paid upgrade.</p>
+<h2>4. Miro AI — Whiteboard-Level Collaboration, Limited Free AI</h2>
+<p><strong>Miro</strong> is the world's leading online whiteboard tool. In 2026, it introduced Miro AI features that can generate mind maps, flowcharts, and more directly on the whiteboard.</p>
+<h3>Free Tier Details</h3>
+<ul>
+<li><strong>AI generations:</strong> 3 AI generations per month</li>
+<li><strong>Whiteboard count:</strong> 3 unlimited-edit whiteboards</li>
+<li><strong>Element limit:</strong> ~200 elements per whiteboard</li>
+<li><strong>Export formats:</strong> PNG</li>
+<li><strong>Collaboration:</strong> Up to 3 simultaneous editors</li>
+<li><strong>Templates:</strong> 25+ free templates</li>
+</ul>
+<h3>Pros and Cons</h3>
+<p>Miro AI's core strength is its <strong>powerful team collaboration</strong> and <strong>whiteboard-level freedom</strong>. You can freely place mind maps, sticky notes, images, links, and various other elements on a single whiteboard — ideal for team brainstorming and project planning.</p>
+<p>But the free tier's AI generation is very limited — only 3 per month, which is almost negligible. The free version also caps you at 3 whiteboards, which isn't enough for heavy users.</p>
+<h3>Best For</h3>
+<p>Small teams (under 3 people) needing collaborative whiteboard functionality. If you primarily need whiteboard collaboration rather than AI generation, Miro's free tier is worth trying.</p>
+<h2>5. Whimsical AI — Clean Design, Moderate AI Allowance</h2>
+<p><strong>Whimsical</strong> is a minimalist online whiteboard tool. Its 2026 AI update can generate flowcharts, wireframes, and mind maps with a single click.</p>
+<h3>Free Tier Details</h3>
+<ul>
+<li><strong>AI generations:</strong> 5 AI boards per month</li>
+<li><strong>Board count:</strong> 5 free boards</li>
+<li><strong>Element limit:</strong> ~100 elements per board</li>
+<li><strong>Export formats:</strong> PNG, SVG</li>
+<li><strong>Collaboration:</strong> Up to 3 simultaneous editors</li>
+</ul>
+<h3>Pros and Cons</h3>
+<p>Whimsical AI's design aesthetics are <strong>best-in-class</strong> among similar products — generated maps automatically apply unified color schemes and layout rules with outstanding visual results. The operation is extremely simple, with drag-and-drop editing.</p>
+<p>The free version has notable restrictions: only 5 boards, ~100 elements per board, and only 5 AI generations monthly. Fine for light users, but medium-to-heavy users will quickly hit bottlenecks.</p>
+<h3>Best For</h3>
+<p>Light users who value design aesthetics. If you occasionally need to generate mind maps and care about visual appeal, Whimsical AI is an excellent choice.</p>
+<h2>6. Boardmix (博思白板) — All-in-One Domestic Contender</h2>
+<p><strong>Boardmix</strong> is an AI-powered whiteboard tool from ByteDance, combining mind mapping, flowcharts, whiteboard collaboration, and multiple AI features in one platform.</p>
+<h3>Free Tier Details</h3>
+<ul>
+<li><strong>AI generations:</strong> 10 AI generations per month</li>
+<li><strong>Map count:</strong> Unlimited creation</li>
+<li><strong>Node limit:</strong> ~300 nodes per map</li>
+<li><strong>Export formats:</strong> PNG, PDF</li>
+<li><strong>Collaboration:</strong> Up to 5 simultaneous editors</li>
+<li><strong>Templates:</strong> Rich free template library</li>
+</ul>
+<h3>Pros and Cons</h3>
+<p>Boardmix's standout feature is its <strong>comprehensive functionality</strong> — mind mapping, flowcharts, whiteboards, AI writing, and AI image generation all in one tool. As a domestic product, it offers excellent Chinese language support, fast domestic server access, and templates tailored to Chinese usage habits.</p>
+<p>The downside is that free AI generations are capped at 10 per month — significantly less than GitMind's 5 per day. Some premium templates and export formats require payment.</p>
+<h3>Best For</h3>
+<p>Domestic users seeking an all-in-one solution. If you want to handle mind maps, flowcharts, and document collaboration in a single tool, Boardmix is a strong choice.</p>
+<h2>7. ProcessOn — Established Domestic Tool, Restrictive Free Tier</h2>
+<p><strong>ProcessOn</strong> is a well-known domestic online drawing tool supporting mind maps, flowcharts, and wireframes, but without built-in AI generation.</p>
+<h3>Free Tier Details</h3>
+<ul>
+<li><strong>AI generation:</strong> Not supported</li>
+<li><strong>Document count:</strong> Max 5 documents</li>
+<li><strong>Node limit:</strong> ~150 nodes per document</li>
+<li><strong>Export formats:</strong> SVG, PNG, PDF</li>
+<li><strong>Collaboration:</strong> Not available in free tier</li>
+</ul>
+<h3>Pros and Cons</h3>
+<p>ProcessOn's advantages include <strong>stable domestic access</strong>, Chinese language interface, and rich templates. As an established domestic tool, its reliability is trustworthy.</p>
+<p>However, the free tier is quite restrictive: only 5 documents, no collaboration, no AI generation. These limitations make ProcessOn less competitive among free tools.</p>
+<h3>Best For</h3>
+<p>Light users who don't need AI features. If you only need to create a few simple mind maps occasionally, ProcessOn's free tier is marginally usable.</p>
+<h2>8. Coggle — Classic International Tool, Strict Free Limits</h2>
+<p><strong>Coggle</strong> is an international online mind mapping tool known for its tree structure and colored branches, with simple and intuitive operations.</p>
+<h3>Free Tier Details</h3>
+<ul>
+<li><strong>AI generation:</strong> Not supported</li>
+<li><strong>Map count:</strong> Max 3 maps</li>
+<li><strong>Node count:</strong> Unlimited</li>
+<li><strong>Export formats:</strong> PNG, JPG, PDF</li>
+<li><strong>Collaboration:</strong> Supported</li>
+</ul>
+<h3>Pros and Cons</h3>
+<p>Coggle's signature feature is its <strong>colored branch design</strong> — each sub-branch uses a different color, providing excellent visual clarity. Unlimited node count means you can create very large maps. Real-time collaboration is supported.</p>
+<p>But the free tier only allows 3 maps, and there's no AI generation. For users who frequently create new maps, 3 is far from enough.</p>
+<h3>Best For</h3>
+<p>Users who only need to maintain a small number of fixed maps. If you only need to keep a few long-running maps, Coggle's free tier can handle it.</p>
+<h2>Final Recommendations</h2>
+<h3>Best Free AI Generation: GitMind (5/day)</h3>
+<p>If your primary need is <strong>AI auto-generated mind maps</strong>, GitMind's free tier offers 5 AI generations daily — the highest among competitors. Combined with unlimited map creation and cross-platform sync, it's the best free choice for AI mind mapping users.</p>
+<h3>Best Completely Free Tool: Baidu Naotu</h3>
+<p>If you <strong>don't need AI features</strong> and just want a completely free mind mapping tool, Baidu Naotu is the undisputed #1 choice. Unlimited creation, unlimited nodes, cloud sync — all free, with absolutely no hidden charges.</p>
+<h3>Best Professional Quality: XMind AI</h3>
+<p>If you have <strong>high demands for map quality and aesthetics</strong>, XMind AI's free version already provides decent AI generation (3/day) and unlimited nodes. The paid version's professional features are also worth considering.</p>
+<h3>Best Team Collaboration: Boardmix</h3>
+<p>If you need <strong>team collaboration</strong> features, Boardmix's free tier supports up to 5 simultaneous editors and includes built-in AI functions, making it the best domestic choice for team collaboration.</p>
+<h2>Pro Tips</h2>
+<h3>Tip 1: Combine Multiple Tools</h3>
+<p>We recommend using <strong>Baidu Naotu</strong> (completely free) as your primary tool, paired with <strong>GitMind</strong> (5 AI/day). When Baidu Naotu can't meet your AI generation needs, switch to GitMind. This maximizes your free tier benefits.</p>
+<h3>Tip 2: Use AI-Generated Drafts as Starting Points</h3>
+<p>Most AI mind map tools produce decent initial frameworks. After AI generation, manually add and refine content rather than using the AI output verbatim. This saves AI generations and ensures better quality.</p>
+<h3>Tip 3: Backup Important Maps Regularly</h3>
+<p>Even with free tools, regularly export and backup your mind maps. Use Markdown or PDF formats to ensure data portability if you switch tools later.</p>
+<h3>Tip 4: Watch for Free Promotions</h3>
+<p>Many tools offer limited-time free promotions during holidays or product launches. For example, XMind has offered free AI features during Spring Festival, and GitMind periodically grants extra AI generations. Follow official channels for these opportunities.</p>
+<h2>FAQ</h2>
+<div class="faq-section">
+<h3>Frequently Asked Questions</h3>
+<div class="faq-item"><div class="faq-q">Q: Which AI mind map tool has the most generous free tier?</div><div class="faq-a">GitMind offers the highest free allowance with 5 AI generations per day. Baidu Naotu has no AI but its core features are completely free with no limits.</div></div>
+<div class="faq-item"><div class="faq-q">Q: Is Baidu Naotu or GitMind better for beginners?</div><div class="faq-a">If you need AI auto-generation, choose GitMind. If manual creation is enough, Baidu Naotu's completely free and unlimited nature is ideal for beginners.</div></div>
+<div class="faq-item"><div class="faq-q">Q: Can I export PDF with the free version?</div><div class="faq-a">GitMind, Boardmix, XMind AI, and ProcessOn all support PDF export in their free versions. Baidu Naotu supports PNG/JPG/Markdown export but not PDF.</div></div>
+<div class="faq-item"><div class="faq-q">Q: Is there a completely free tool with AI features?</div><div class="faq-a">Currently no tool offers unlimited free AI generation. GitMind's 5 daily AI generations is the most generous free tier available.</div></div>
+<div class="faq-item"><div class="faq-q">Q: Do these tools have mobile apps?</div><div class="faq-a">GitMind, XMind AI, and Boardmix all provide iOS and Android apps. Baidu Naotu and ProcessOn are primarily web-based with limited mobile experience.</div></div>
+</div>

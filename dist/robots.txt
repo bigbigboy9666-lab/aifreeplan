@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
+# Block auto-generated comparison pages from crawling
+Disallow: /*/compare/
+
 Sitemap: https://aifreeplan.com/sitemap.xml
