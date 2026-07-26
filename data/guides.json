@@ -1,6 +1,23 @@
 {
     "guides": [
         {
+            "slug": "claude-opus-5-free-tier-guide-2026",
+            "title_zh": "Claude Opus 5免费完全攻略：Anthropic新一代旗舰，编程SOTA，价格只有Fable 5一半",
+            "title_en": "Claude Opus 5 Free Guide: Anthropic New Flagship, Programming SOTA at Half Fable 5 Price",
+            "description_zh": "Claude Opus 5是Anthropic于2026年7月25日发布的新一代旗舰大模型，兼顾深思熟虑与主动响应特点，在编程与知识工作评估中实现SOTA。定价为输入每百万Token 5美元、输出每百万Token 25美元，仅为Fable 5的一半。作为Claude Max新默认模型，也是Claude Pro中性能最强的模型。",
+            "description_en": "Claude Opus 5 is Anthropic new flagship model released July 25, 2026. Features deliberate thinking and proactive response, achieving SOTA in programming and knowledge work. Priced at $5/M input and $25/M output tokens — half of Fable 5. Default for Claude Max, strongest in Claude Pro.",
+            "category": "api",
+            "date_published": "2026-07-26",
+            "tags": [
+                "claude",
+                "anthropic",
+                "free-ai",
+                "llm-api",
+                "op5",
+                "flagship"
+            ]
+        },
+        {
             "slug": "petals-free-distributed-llm-2026",
             "title_zh": "Petals免费攻略：BitTorrent-style分布式网络，免费运行Llama 3.1 405B超大模型",
             "title_en": "Petals Free Guide: BitTorrent-Style Distributed Network for Free Llama 3.1 405B Inference",
