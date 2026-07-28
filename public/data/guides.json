@@ -493,6 +493,23 @@
         "boardmix"
       ],
       "image": "/og-image.png"
+    },
+    {
+      "slug": "chatgpt-free-tier-guide-2026",
+      "title_zh": "ChatGPT免费使用完全攻略：GPT-4o Mini每日4次，免费版功能详解",
+      "title_en": "ChatGPT Free Tier Guide 2026: GPT-4o Mini Daily Access with Full Feature Breakdown",
+      "description_zh": "OpenAI的ChatGPT免费版提供每日4次GPT-4o调用，支持代码解释器、文件上传、图像生成和联网搜索。本文详细介绍免费额度限制、使用技巧及如何最大化利用免费资源。",
+      "description_en": "OpenAI's ChatGPT free tier provides 4 daily GPT-4o accesses with Code Interpreter, file upload, image generation, and web search. Detailed breakdown of free limits, usage tips, and how to maximize free resources.",
+      "category": "llm",
+      "date_published": "2026-07-28",
+      "tags": [
+        "chatgpt",
+        "free",
+        "llm",
+        "openai",
+        "gpt-4-mini"
+      ],
+      "image": "chatgpt-free-tier.jpg"
     }
   ],
   "updatedAt": "2026-07-23"
