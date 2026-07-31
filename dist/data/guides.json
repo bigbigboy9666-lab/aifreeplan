@@ -510,6 +510,45 @@
         "gpt-4-mini"
       ],
       "image": "chatgpt-free-tier.jpg"
+    },
+    {
+      "slug": "ai-productivity-tools-comparison-2026",
+      "title_zh": "飞书妙记、WPS AI、百度网盘AI三款主流AI生产力工具免费额度与使用技巧对比评测",
+      "title_en": "Feishu Minutes, WPS AI, and Baidu NetDisk AI: Three Mainstream AI Productivity Tools Free Credits and Usage Tips Comparison Guide",
+      "description_zh": "横向对比飞书妙记、WPS AI和百度网盘AI三款主流AI生产力工具的免费额度、功能限制和使用技巧，帮助用户选择最适合的办公效率神器。包含语音时长、AI字数限额、OCR页数等详细数据。",
+      "description_en": "Side-by-side comparison of free tiers from three mainstream Chinese AI productivity tools - Feishu Minutes (1000 min/month), WPS AI (100K words/day), and Baidu NetDisk AI (10 document interpretations + 100 OCR pages/month). Detailed data on limits, features, and tips to choose the best office efficiency tool.",
+      "date_published": "2026-07-30",
+      "category": "productivity",
+      "tags": [
+        "productivity",
+        "feishu-minutes",
+        "wps-ai",
+        "baidu-netdisk",
+        "office-tools",
+        "free-credits",
+        "comparison"
+      ],
+      "image": "/og-image.png"
+    },
+    {
+      "slug": "groq-free-lpu-inference-api-2026",
+      "title_zh": "Groq免费LPU推理API：每天1000次请求，极速开源模型接入攻略",
+      "title_en": "Groq Free LPU Inference API: 1000 Daily Requests with Fastest Open Source Models",
+      "description_zh": "Groq使用自研LPU芯片提供极速AI推理服务，免费版每天1000次请求，支持Llama、Qwen等17个开源模型。本文详细介绍免费额度、限制条件、API使用方法和实际应用场景。",
+      "description_en": "Groq uses custom LPU chips for ultra-fast AI inference. Free tier offers 1000 requests per day with 17 open-source models including Llama and Qwen. This guide details free limits, restrictions, API usage methods and practical application scenarios.",
+      "category": "llm",
+      "date_published": "2026-07-31",
+      "tags": [
+        "groq",
+        "lpu",
+        "free-api",
+        "llama",
+        "qwen",
+        "open-source",
+        "fast-inference"
+      ],
+      "excerpt_zh": "Groq是业界最快的免费AI推理引擎，基于自研LPU硬件架构。每天1000次免费请求，支持Llama 4、Qwen 3等17个主流开源模型，OpenAI完全兼容API格式，流式输出延迟低于50ms。",
+      "excerpt_en": "Groq is the fastest free AI inference engine based on self-designed LPU architecture. Daily 1000 free requests, supports 17 mainstream open-source models including Llama 4 and Qwen 3, fully OpenAI-compatible API format, streaming output latency under 50ms."
     }
   ],
   "updatedAt": "2026-07-23"

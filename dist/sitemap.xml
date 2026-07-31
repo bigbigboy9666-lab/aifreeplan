@@ -24301,6 +24301,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/en/guides/ai-productivity-tools-comparison-2026/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/en/guides/ai-writing-tools-free-tier-comparison-2026/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -24332,6 +24337,11 @@
   </url>
   <url>
     <loc>https://aifreeplan.com/en/guides/cerebras-free-api-guide/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/guides/chatgpt-free-tier-guide-2026/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -24397,6 +24407,11 @@
   </url>
   <url>
     <loc>https://aifreeplan.com/en/guides/gemini-cli-free-ai-coding/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/guides/groq-free-lpu-inference-api-2026/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -25242,11 +25257,6 @@
   </url>
   <url>
     <loc>https://aifreeplan.com/guides/stablediffusion-free-local-deploy-2026</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://aifreeplan.com/guides/test-slug</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -49566,6 +49576,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/zh/guides/ai-productivity-tools-comparison-2026/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/zh/guides/ai-search-engines-free-comparison-2026/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -49602,6 +49617,11 @@
   </url>
   <url>
     <loc>https://aifreeplan.com/zh/guides/cerebras-free-api-guide/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/guides/chatgpt-free-tier-guide-2026/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -49667,6 +49687,11 @@
   </url>
   <url>
     <loc>https://aifreeplan.com/zh/guides/gemini-cli-free-ai-coding/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/guides/groq-free-lpu-inference-api-2026/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

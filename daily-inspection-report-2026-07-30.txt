@@ -1,0 +1,43 @@
+=== AIFREEPLAN.COM 每日站点巡检报告 ===
+日期：2026-07-30 11:00 UTC
+
+1. ✅ 可用性检查
+   - 首页 (https://aifreeplan.com/): 200 OK, 响应时间 0.111s
+   - /tools 页面: 200 OK, 响应时间 0.079s
+   - /guides 页面: 200 OK, 响应时间 0.077s
+   - /about 页面: 200 OK, 响应时间 0.077s
+
+2. ✅ HTTPS/SSL 检查
+   - 证书颁发者: GWE, Google Trust Services
+   - 证书到期日: 2026-10-21 (剩余 83 天，超过30天安全阈值)
+
+3. ✅ 核心页面渲染检查
+   - 首页重定向至 /zh 正常
+   - Zh 版本首页返回完整 HTML (66KB)
+   - 指南页 (/zh/guides/chatgpt-free-tier/) 访问正常 (200 OK, 0.079s)
+   - 工具详情页 (/zh/tools/kling/) 访问正常 (200 OK, 0.077s)
+   - 浏览器层面无 JavaScript 错误 (通过 HTML 结构验证)
+
+4. ✅ SEO 基础检查
+   - Title: "AIFreePlan - 收录91款AI工具免费额度 | 2026最新白嫖攻略" ✓
+   - Description: "全球首个AI工具免费额度聚合平台。汇总91款AI工具的免费额度、使用限制和白嫖攻略，帮你省钱用AI。" ✓
+   - Canonical: https://aifreeplan.com/zh/ ✓
+   - OG Tags: og:title, og:description, og:image, og:url 全部设置完整 ✓
+   - Twitter Card: summary_large_image 配置正确 ✓
+
+5. ✅ 构建产物检查
+   - git pull: 已为最新版本，工作树干净
+   - 最近提交: 10db48fc7a (regenerate sitemap after cleanup)
+   - dist/ 最后更新时间: 2026-07-29 10:04
+   - 所有必要文件存在 (index.html, _astro/, zh/, en/, sitemaps)
+
+6. ✅ 工具数量统计
+   - 当前工具总数: 99 款 (与之前记录一致，无变化)
+   - 分类分布: ai-assistant, llm, audio, productivity, api-platform, api, image, video, coding
+
+7. ✅ 外部链接抽查
+   - 可灵AI (klingai.com): 200 OK, 0.41s ✓
+   - 海螺AI (hailuoai.com): 200 OK, 0.34s ✓
+   - Luma Dream Machine (lumalabs.ai): 200 OK, 0.50s ✓
+
+结论：全部正常 ✓
