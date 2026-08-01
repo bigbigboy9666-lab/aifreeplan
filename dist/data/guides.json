@@ -549,6 +549,25 @@
       ],
       "excerpt_zh": "Groq是业界最快的免费AI推理引擎，基于自研LPU硬件架构。每天1000次免费请求，支持Llama 4、Qwen 3等17个主流开源模型，OpenAI完全兼容API格式，流式输出延迟低于50ms。",
       "excerpt_en": "Groq is the fastest free AI inference engine based on self-designed LPU architecture. Daily 1000 free requests, supports 17 mainstream open-source models including Llama 4 and Qwen 3, fully OpenAI-compatible API format, streaming output latency under 50ms."
+    },
+    {
+      "slug": "ringbot-ai-free-voice-agent-guide-2026",
+      "title_zh": "RingBot AI免费使用攻略：AI语音智能体平台，免费试用+灵活计费，50+平台集成",
+      "title_en": "RingBot AI Free Guide: Voice Agent Platform with Free Tier and Flexible Pay-as-you-go Pricing",
+      "description_zh": "RingBot是AI语音智能体AaaS平台，提供免费试用版本。Pay-As-You-Go按分钟计费(AUD /usr/bin/bash.30/min)，Pro版AUD 99/月含700分钟，Enterprise版AUD 99/月含4000分钟。支持WordPress、Shopify等50+平台集成，亚100毫秒延迟，多语言客服助手。",
+      "description_en": "RingBot is an AI Voice Agent AaaS platform with a free tier available. Pay-as-you-go at AUD /usr/bin/bash.30/min, Pro at AUD 99/mo for 700 minutes, Enterprise at AUD 99/mo for 4000 minutes. Integrates with 50+ platforms including WordPress and Shopify, sub-100ms latency, multilingual customer service.",
+      "category": "ai-agent",
+      "date_published": "2026-08-01",
+      "tags": [
+        "ringbot",
+        "voice-agent",
+        "ai-aaas",
+        "free-trial",
+        "customer-service",
+        "multilingual"
+      ],
+      "excerpt_zh": "RingBot是AI语音智能体平台，提供免费试用和灵活计费方案。Pay-As-You-Go按分钟计费，Pro版700分钟/月，Enterprise版4000分钟/月。支持50+平台集成，亚100毫秒延迟，适合牙科诊所、餐厅、保险公司等多种行业。",
+      "excerpt_en": "RingBot is an AI Voice Agent platform with a free trial and flexible pay-as-you-go pricing. Pro plan includes 700 minutes/month, Enterprise includes 4000 minutes. Integrates with 50+ platforms with sub-100ms latency, suitable for dental clinics, restaurants, insurance agencies and more."
     }
   ],
   "updatedAt": "2026-07-23"
