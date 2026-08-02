@@ -1,4 +1,4 @@
-# MonkeyCode Free Open-Source AI Coding Platform: Zero-T门槛 Cloud Development
+# MonkeyCode: Free Open-Source AI Coding Platform by Chaitin, Zero-T门槛 Cloud Development
 
 MonkeyCode is an open-source enterprise AI development platform by Chaitin, featuring built-in cloud development environments and support for top-tier LLMs. 30 million free daily credits, no installation or deployment needed.
 
@@ -28,8 +28,6 @@ GitHub: github.com/chaitin/MonkeyCode
 **Flagship models**:
 - Can also use flagship models, but with higher credit consumption
 
-The homepage has a friend invitation feature for credits. Overall, the free quota is sufficient for daily small projects.
-
 ---
 
 ## Supported Code Repositories
@@ -56,13 +54,10 @@ Output: A complete, runnable HTML page
 ### Case 2: Space Fighter Game
 
 Build a complete game from scratch with 3 rounds of optimization:
-
 1. **Initial version**: Framework ready,简陋 visuals
 2. **Round 1**: SVG vector assets optimization
 3. **Round 2**: PNG transparent textures
 4. **Round 3**: UI details refinement
-
-All runs in cloud, no local deployment needed.
 
 ### Case 3: HTML to PNG Tool
 
@@ -80,7 +75,7 @@ MonkeyCode solves two direct problems:
 1. No need to download/install development environments
 2. No need to deploy environments
 
-Suitable for those who want to快速试 ideas without local environment setup:
+Suitable for:
 - **Developers** — Rapid prototype validation
 - **Product managers** — Feature demo presentations
 - **Independent developers** — Quick small project launch
