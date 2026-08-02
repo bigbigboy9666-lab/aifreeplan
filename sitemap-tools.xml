@@ -1,498 +1,731 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/kling/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/adobe-firefly/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/hailuo/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/agnes-ai/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/luma/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/ai21-labs/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/runway/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/aliyun-bailian/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/pika/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/astron-coding-plan/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/sora/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/atomcode/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/xiaomi-mimo/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/baidu-netdisk-ai/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/deepseek/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/bb-browser/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/qwen/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/bing-image-creator/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/wenxin/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/cerebras/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/kimi/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/chatgpt/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/doubao/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/claude/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/codeium/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/cline-bot-api/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/tongyi-lingma/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/cline/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/codebuddy/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/cloudflare-workers-ai/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/atomcode/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/codebuddy/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/tencent-marvis/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/codeium/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/cursor/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/cohere/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/windsurf/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/coze/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/perplexity/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/cursor/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/notebooklm/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/deepseek/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/ideogram/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/dify/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/freebuff/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/doubao/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/gemini/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/dupdub/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/tongyi-wanxiang/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/feishu-minutes/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/jimeng/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/fireworks-ai/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/liblib/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/freebuff/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/wenxin-yige/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/freemodel/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/mewxai/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/freetheai/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/leonardo-ai/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/gamma/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/playground-ai/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/gemini/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/bing-image-creator/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/github-copilot/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/adobe-firefly/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/github-models/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/zhipu-cogview/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/google-jules/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/cline/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/grok-image/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/github-copilot/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/grok/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/chatgpt/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/groq/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/claude/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/hailuo/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/midjourney/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/huawei-deveco-code/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/poe/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/huggingface-inference/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/astron-coding-plan/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/ideogram/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/suno/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/intern-ai/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/v0/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/jianying-ai/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/gamma/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/jimeng/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/manus-ai/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/kimi/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/grok/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/kling/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/seedance/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/leonardo-ai/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/grok-image/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/liblib/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/google-jules/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/lovart/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/stablediffusion/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/luma/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/nanopro/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/manus-ai/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/lovart/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/mewxai/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/dupdub/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/midjourney/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/tabbit/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/mistral/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/xfyun-maas/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/modelscope/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/zhipu-coding-plan/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/nanopro/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/sensenova/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/notebooklm/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/modelscope/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/nvidia-nim/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/freemodel/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/openrouter/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/agnes-ai/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/ovh-ai/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/cline-bot-api/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/perplexity/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/aliyun-bailian/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/pika/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/freetheai/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/playground-ai/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/huawei-deveco-code/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/poe/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/tencent-yuanbao/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/quark/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/quark/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/qwen/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/jianying-ai/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/runway/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/tencent-zenvideo/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/scaleway/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/feishu-minutes/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/seedance/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/wps-ai/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/sensenova/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/baidu-netdisk-ai/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/siliconflow/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/coze/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/sora/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/dify/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/stablediffusion/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/zenmux/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/suno/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/bb-browser/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/tabbit/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/groq/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/tencent-marvis/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/nvidia-nim/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/tencent-yuanbao/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/openrouter/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/tencent-zenvideo/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/cloudflare-workers-ai/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/together-ai/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/siliconflow/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/tongyi-lingma/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/github-models/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/tongyi-wanxiang/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/huggingface-inference/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/v0/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/mistral/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/wenxin-yige/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/cerebras/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/wenxin/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/together-ai/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/windsurf/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/fireworks-ai/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/wps-ai/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/ai21-labs/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/xfyun-maas/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/cohere/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/xiaomi-mimo/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/scaleway/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/zenmux/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/ovh-ai/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/zhipu-coding-plan/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/intern-ai/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/en/tools/zhipu-cogview/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/baidu-qianfan/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/zh/tools/adobe-firefly/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/scnet/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/zh/tools/agnes-ai/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/teleai/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/zh/tools/ai21-labs/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/meituan-longcat/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/zh/tools/aliyun-bailian/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/infini-ai/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/zh/tools/astron-coding-plan/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/baishan/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/zh/tools/atomcode/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/ppio/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/zh/tools/baidu-netdisk-ai/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
   <url>
-    <loc>https://aifreeplan.com/{lang_placeholder}/tools/china-mobile-moma/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://aifreeplan.com/zh/tools/bb-browser/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/bing-image-creator/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/cerebras/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/chatgpt/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/claude/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/cline-bot-api/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/cline/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/cloudflare-workers-ai/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/codebuddy/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/codeium/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/cohere/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/coze/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/cursor/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/deepseek/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/dify/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/doubao/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/dupdub/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/feishu-minutes/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/fireworks-ai/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/freebuff/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/freemodel/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/freetheai/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/gamma/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/gemini/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/github-copilot/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/github-models/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/google-jules/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/grok-image/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/grok/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/groq/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/hailuo/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/huawei-deveco-code/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/huggingface-inference/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/ideogram/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/intern-ai/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/jianying-ai/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/jimeng/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/kimi/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/kling/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/leonardo-ai/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/liblib/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/lovart/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/luma/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/manus-ai/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/mewxai/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/midjourney/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/mistral/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/modelscope/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/nanopro/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/notebooklm/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/nvidia-nim/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/openrouter/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/ovh-ai/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/perplexity/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/pika/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/playground-ai/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/poe/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/quark/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/qwen/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/runway/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/scaleway/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/seedance/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/sensenova/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/siliconflow/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/sora/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/stablediffusion/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/suno/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/tabbit/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/tencent-marvis/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/tencent-yuanbao/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/tencent-zenvideo/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/together-ai/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/tongyi-lingma/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/tongyi-wanxiang/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/v0/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/wenxin-yige/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/wenxin/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/windsurf/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/wps-ai/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/xfyun-maas/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/xiaomi-mimo/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/zenmux/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/zhipu-coding-plan/</loc>
+    <lastmod>2026-07-24</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/tools/zhipu-cogview/</loc>
+    <lastmod>2026-07-24</lastmod>
   </url>
 </urlset>

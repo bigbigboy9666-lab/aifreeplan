@@ -1,0 +1,123 @@
+<!DOCTYPE html><meta charset="utf-8"><h1 id="petals-free-guide-bittorrent-style-distributed-network-for-free-llama-31-405b-inference">Petals Free Guide: BitTorrent-Style Distributed Network for Free Llama 3.1 405B Inference</h1>
+<p>Petals is a distributed LLM inference network by BigScience lab. Users share GPU compute, anyone can freely use Llama 3.1 405B, Mixtral 8x22B and other massive models.</p>
+<hr>
+<h2 id="what-is-petals">What is Petals</h2>
+<p>Petals uses distributed computing to run超大 models. Traditionally, running a 405B parameter model (like Llama 3.1 405B) requires at least 8x A100 80GB GPUs costing over $100,000.</p>
+<p>Petals’ approach:</p>
+<ul>
+<li><strong>Model sharding</strong> — Split a large model into layers, each node handles only a few layers</li>
+<li><strong>Distributed inference</strong> — Request flows from first node, layer by layer, each processed by different volunteer GPUs</li>
+<li><strong>BitTorrent-like</strong> — Like BT downloading where multiple people share file blocks, Petals shares model layers</li>
+<li><strong>Speed</strong> — Single batch inference reaches ~6 tok/sec for Llama 2 70B, ~4 tok/sec for Falcon 180B</li>
+</ul>
+<p>This means with a regular consumer GPU (or even free Google Colab), you can join the global distributed inference network and freely use models larger than GPT-4.</p>
+<hr>
+<h2 id="supported-models-and-free-quota">Supported Models and Free Quota</h2>
+<p>Petals currently supports:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Model</th><th>Parameters</th><th>Max Speed</th><th>Free</th></tr></thead><tbody><tr><td>Llama 3.1 405B</td><td>405B</td><td>~4 tok/sec</td><td>Completely free</td></tr><tr><td>Llama 2 70B</td><td>70B</td><td>~6 tok/sec</td><td>Completely free</td></tr><tr><td>Mixtral 8x22B</td><td>141B (MoE)</td><td>~8 tok/sec</td><td>Completely free</td></tr><tr><td>Falcon 180B</td><td>180B</td><td>~4 tok/sec</td><td>Completely free</td></tr><tr><td>BLOOM 176B</td><td>176B</td><td>~3 tok/sec</td><td>Completely free</td></tr></tbody></table>
+<p>All models are completely free — no registration, no API Key, no payment required. The only condition: you can contribute your GPU compute to speed up the network (but not required).</p>
+<p>Compare: Llama 3.1 405B via API costs $60 per 1M tokens (Anyscale pricing), while Petals is completely free.</p>
+<hr>
+<h2 id="how-to-use-two-methods">How to Use: Two Methods</h2>
+<h3 id="method-1-google-colab-zero-config-completely-free">Method 1: Google Colab (Zero Config, Completely Free)</h3>
+<ol>
+<li><strong>Open Colab</strong> — Visit colab.research.google.com, create new Notebook</li>
+<li><strong>Set GPU</strong> — Menu → Runtime → Change runtime type → Select T4 GPU</li>
+<li><strong>Run install</strong> — Paste and run:</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#FDAEB7;font-style:italic">!</span><span style="color:#E1E4E8">pip install petals</span><span style="color:#F97583">-</span><span style="color:#E1E4E8">tokenizers transformers torch</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> petals</span></span>
+<span class="line"><span style="color:#E1E4E8">client </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> petals.InferenceClient(</span><span style="color:#9ECBFF">"bigscience/meta-llama-Llama-3.1-405B-Instruct"</span><span style="color:#E1E4E8">)</span></span></code></pre>
+<ol start="4">
+<li><strong>Start chatting</strong> — Use client.generate() to send prompts</li>
+</ol>
+<p>Colab free tier provides ~12 hours of T4 GPU daily.</p>
+<h3 id="method-2-local-deployment-if-you-have-gpu">Method 2: Local Deployment (If You Have GPU)</h3>
+<ol>
+<li><strong>Install</strong> — pip install petals-inference</li>
+<li><strong>Start</strong> — python -m petals.main —model meta-llama/Llama-3.1-405B-Instruct</li>
+<li><strong>Use</strong> — Connect via HTTP API or Python SDK</li>
+</ol>
+<hr>
+<h2 id="technical-principles">Technical Principles</h2>
+<p>Petals uses innovative distributed inference:</p>
+<ol>
+<li><strong>Model sharding</strong>: Split large models by layers, assign to different nodes</li>
+<li><strong>Active routing</strong>: Client intelligently selects lowest-latency node paths</li>
+<li><strong>Cache optimization</strong>: Intermediate results cached between nodes</li>
+<li><strong>Fault tolerance</strong>: Auto-redirect when nodes go offline</li>
+</ol>
+<p>This architecture allows Petals to support超大 models while maintaining decent inference speed.</p>
+<hr>
+<h2 id="pros-and-cons">Pros and Cons</h2>
+<p><strong>Pros</strong>:</p>
+<ul>
+<li>✅ Completely free, no registration</li>
+<li>✅ Run超大 models (405B parameters)</li>
+<li>✅ Community-driven, actively maintained</li>
+<li>✅ GitHub 10300+ stars</li>
+</ul>
+<p><strong>Cons</strong>:</p>
+<ul>
+<li>❌ Speed affected by network conditions</li>
+<li>❌ Requires stable internet connection</li>
+<li>❌ Some models may have wait queues</li>
+<li>❌ Doesn’t support all OpenAI API features</li>
+</ul>
+<hr>
+<h2 id="faq">FAQ</h2>
+<p><strong>Q: Is Petals really completely free?</strong>
+A: Yes, completely free. No registration, no API Key, no payment. Only requirement is optional GPU contribution.</p>
+<p><strong>Q: How fast is it?</strong>
+A: Depends on network and available nodes. Llama 2 70B ~6 tok/sec, Llama 3.1 405B ~4 tok/sec. Enough for chat and interactive apps.</p>
+<p><strong>Q: Do I need my own GPU?</strong>
+A: No. Use free Google Colab, or contribute your GPU if you have one.</p>
+<p><strong>Q: Which models are supported?</strong>
+A: Llama 3.1 405B, Llama 2 70B, Mixtral 8x22B, Falcon 180B, BLOOM 176B, and more.</p>
+<hr>
+<h2 id="summary">Summary</h2>
+<p>Petals is a distributed LLM inference network by BigScience lab, using BitTorrent-style architecture for GPU sharing. Anyone can freely use超大 models like Llama 3.1 405B without registration or payment. Use via Google Colab or local deployment.</p>
+<p>Project: github.com/bigscience-workshop/petals</p>
+<hr>
+<p><em>Data current as of July 23, 2026. Free policies may change.</em></p>

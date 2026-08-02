@@ -1,0 +1,158 @@
+<!DOCTYPE html><meta charset="utf-8"><h1 id="ollama-free-cloud-ai-guide-88m-funded-89m-developers-free-public-models--lightweight-cloud-access">Ollama Free Cloud AI Guide: $88M Funded, 8.9M Developers, Free Public Models + Lightweight Cloud Access</h1>
+<p>Ollama is the leading open-source AI model platform, having just raised $88M. Serves 8.9M developers. Running models locally is completely free. Free cloud tier provides lightweight model access. Pro ($20/mo) gives 50x more usage + 3 concurrent models. Max ($100/mo) gives 5x more + 10 concurrent.</p>
+<hr>
+<h2 id="what-is-ollama">What is Ollama?</h2>
+<p>Ollama is an open-source AI model running platform with the core理念 of making it easy for anyone to run large language models on their own devices. Founders Michael and Andrew previously created Kitematic (acquired by Docker) and Docker Desktop, serving over 10 million developers.</p>
+<p>Core principles:</p>
+<ul>
+<li><strong>Ownership</strong> — Open-source models are yours to customize and optimize</li>
+<li><strong>Affordability</strong> — Running models on your own hardware means no per-token bills</li>
+<li><strong>Privacy</strong> — Local model data never leaves your device</li>
+</ul>
+<hr>
+<h2 id="local-running-completely-free-no-limits">Local Running: Completely Free, No Limits</h2>
+<p>The core free feature is running open-source AI models locally:</p>
+<ul>
+<li>Unlimited downloads and runs of any public open-source models (Llama, Mistral, Phi, Qwen, hundreds more)</li>
+<li>No API Key needed, no account registration, no internet connection required</li>
+<li>No expensive GPU needed, quantized versions run on普通CPU</li>
+<li>Command line and API interfaces supported</li>
+</ul>
+<p><strong>Install</strong>:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">curl</span><span style="color:#79B8FF"> -fsSL</span><span style="color:#9ECBFF"> https://ollama.com/install.sh</span><span style="color:#F97583"> |</span><span style="color:#B392F0"> sh</span></span></code></pre>
+<p><strong>Use</strong>:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">ollama</span><span style="color:#9ECBFF"> run</span><span style="color:#9ECBFF"> llama3.2</span></span>
+<span class="line"><span style="color:#B392F0">ollama</span><span style="color:#9ECBFF"> run</span><span style="color:#9ECBFF"> qwen2.5</span></span>
+<span class="line"><span style="color:#B392F0">ollama</span><span style="color:#9ECBFF"> run</span><span style="color:#9ECBFF"> mistral</span></span></code></pre>
+<p>All public models are completely free with no usage limits.</p>
+<hr>
+<h2 id="free-cloud-tier">Free Cloud Tier</h2>
+<p>Ollama’s cloud service provides lightweight model access for free users.</p>
+<p><strong>Free Cloud Specifications</strong>:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Item</th><th>Free Tier</th></tr></thead><tbody><tr><td>Cost</td><td>$0/month, forever free</td></tr><tr><td>Concurrent models</td><td>1</td></tr><tr><td>Model level</td><td>Level 1 (lightweight)</td></tr><tr><td>Session limit</td><td>Reset every 5 hours</td></tr><tr><td>Weekly limit</td><td>Reset every 7 days</td></tr><tr><td>Billing</td><td>Per GPU time, not per token</td></tr></tbody></table>
+<p>Free cloud models include gpt-oss:20b and other Level 1 models.</p>
+<hr>
+<h2 id="paid-plans">Paid Plans</h2>
+<p><strong>Pro Plan - $20/month (or $200/year)</strong>:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Feature</th><th>Pro</th><th>Free</th></tr></thead><tbody><tr><td>Cloud usage</td><td>50x free tier</td><td>Basic lightweight</td></tr><tr><td>Concurrent models</td><td>3</td><td>1</td></tr><tr><td>Model level</td><td>Larger, more powerful</td><td>Level 1 only</td></tr><tr><td>Private models</td><td>Upload and share</td><td>Not supported</td></tr></tbody></table>
+<p><strong>Max Plan - $100/month</strong>:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Feature</th><th>Max</th><th>Pro</th></tr></thead><tbody><tr><td>Cloud usage</td><td>5x Pro (250x free)</td><td>50x free</td></tr><tr><td>Concurrent models</td><td>10</td><td>3</td></tr></tbody></table>
+<hr>
+<h2 id="cloud-model-list">Cloud Model List</h2>
+<p>Supported model series:</p>
+<ul>
+<li><strong>GLM</strong> — Zhipu AI language models</li>
+<li><strong>Nemotron</strong> — NVIDIA open-source models</li>
+<li><strong>DeepSeek</strong> — High-performance models</li>
+<li><strong>Kimi</strong> — Moonshot AI models</li>
+<li><strong>MiniMax</strong> — Dialogue models</li>
+</ul>
+<p>Model levels range from Level 1 (lightweight) to Level 4 (ultra-heavy). Level 1 models are available in the free tier.</p>
+<hr>
+<h2 id="api-usage">API Usage</h2>
+<p>Ollama provides OpenAI-compatible API at localhost:11434:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">curl</span><span style="color:#9ECBFF"> http://localhost:11434/v1/chat/completions</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#79B8FF">  -H</span><span style="color:#9ECBFF"> "Content-Type: application/json"</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#79B8FF">  -d</span><span style="color:#9ECBFF"> '{</span></span>
+<span class="line"><span style="color:#9ECBFF">    "model": "llama3.2",</span></span>
+<span class="line"><span style="color:#9ECBFF">    "messages": [{"role": "user", "content": "Hello"}]</span></span>
+<span class="line"><span style="color:#9ECBFF">  }'</span></span></code></pre>
+<hr>
+<h2 id="faq">FAQ</h2>
+<p><strong>Q1: Is Ollama free really completely free?</strong>
+A: Yes. Local running of all public models is completely free with no limits. Free cloud tier provides Level 1 lightweight model access.</p>
+<p><strong>Q2: What are the free tier limits?</strong>
+A: Free cloud: max 5-hour sessions (auto-reset), weekly usage limits (7-day reset), 1 concurrent model. Local running has no limits.</p>
+<p><strong>Q3: Do cloud models support tool calling?</strong>
+A: Yes. All tested cloud models support tool calling.</p>
+<p><strong>Q4: When will I reach usage limits?</strong>
+A: Check usage in Ollama settings. Email notifications sent at 90% usage.</p>
+<hr>
+<h2 id="summary">Summary</h2>
+<p>Ollama is an open-source AI model platform that raised $88M and serves 8.9M developers. Local running is completely free. Free cloud tier provides Level 1 models. Pro is $20/mo, Max is $100/mo.</p>
+<p>Project: ollama.com</p>
+<hr>
+<p><em>Data current as of July 20, 2026. Free policies may change.</em></p>

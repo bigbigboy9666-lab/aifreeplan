@@ -1,3 +1,98 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Indefinitely free API service since June 1, 2026, no subscription or quota limits"><meta name="robots" content="index, follow"><link rel="canonical" href="https://aifreeplan.com/en/guides/agnes-ai-free-api-2026/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><!-- hreflang tags --><link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/agnes-ai-free-api-2026/"><link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/agnes-ai-free-api-2026/"><link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/agnes-ai-free-api-2026/"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:title" content="Agnes AI Free API: Indefinitely Free Since June 2026 - AI Free Plan"><meta property="og:description" content="Indefinitely free API service since June 1, 2026, no subscription or quota limits"><meta property="og:url" content="https://aifreeplan.com/en/guides/agnes-ai-free-api-2026/"><meta property="og:site_name" content="AI Free Plan"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://aifreeplan.com/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="AIFreePlan - AI Free Tier Aggregator"><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Agnes AI Free API: Indefinitely Free Since June 2026 - AI Free Plan"><meta name="twitter:description" content="Indefinitely free API service since June 1, 2026, no subscription or quota limits"><meta name="twitter:image" content="https://aifreeplan.com/og-image.png"><title>Agnes AI Free API: Indefinitely Free Since June 2026 - AI Free Plan</title><!-- JSON-LD --><!-- Homepage: WebSite + Organization Schema --><link rel="stylesheet" href="/_astro/BaseLayout.BR2ccUcH.css"></head> <body class="min-h-screen flex flex-col"> <header class="bg-white border-b border-border sticky top-0 z-50"> <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between"> <a href="/en" class="text-xl font-bold text-primary">
-🤖 AI Free Plan
-</a> <div class="flex items-center gap-4"> <a href="/en" class="text-sm text-text hover:text-primary"> Home </a> <a href="/en/guides" class="text-sm text-text hover:text-primary"> Guides </a> <a href="/en/tools" class="text-sm text-text hover:text-primary"> Tools </a> <a href="/zh" class="text-sm text-text hover:text-primary"> 中文 </a> </div> </nav> </header> <main class="flex-1 max-w-6xl mx-auto px-4 py-8 w-full">  <div class="max-w-4xl mx-auto"> <a href="/en/guides" class="text-sm text-text-muted hover:text-primary mb-6 inline-block">&larr; Back to Guides</a> <h1 class="text-3xl font-bold mb-4">Agnes AI Free API: Indefinitely Free Since June 2026</h1> <p class="text-text-muted mb-8">Indefinitely free API service since June 1, 2026, no subscription or quota limits</p> <div class="prose prose-lg max-w-none"> <p class="text-text-muted">Guide content coming soon...</p> </div> </div>  </main> <footer class="bg-white border-t border-border mt-auto"> <div class="max-w-6xl mx-auto px-4 py-6 text-center text-sm text-text-muted"> <p>&copy; 2026 AI Free Plan. Free AI tools directory, updated daily.</p> </div> </footer> </body></html>
+<!DOCTYPE html><meta charset="utf-8"><h1 id="agnes-ai-free-api-unlimited-free-since-june-2026-text--image--video">Agnes AI Free API: Unlimited Free Since June 2026, Text + Image + Video</h1>
+<p>June 1st, Agnes AI did something bold.</p>
+<p>Text, image, and video model APIs all free. Indefinitely. No subscription. No waitlist.</p>
+<p>The world’s first fully multimodal (text + image + video) simultaneous free AI platform.</p>
+<hr>
+<h2 id="three-models-three-directions">Three Models, Three Directions</h2>
+<p><strong>Text Model: Agnes-2.0-Flash</strong></p>
+<ul>
+<li>Context: 256K (later upgraded to 1M)</li>
+<li>Max output: 65.5K tokens</li>
+<li>Strengths: Multi-turn conversation, code generation, Agent workflows, tool calling</li>
+<li>Use cases: Chat, coding, Agent planning, automation pipelines</li>
+</ul>
+<p><strong>Image Model: Agnes-Image-2.0-Flash</strong></p>
+<ul>
+<li>Supports: Text-to-image, Image-to-image</li>
+<li>Use cases: Cover images, e-commerce product photos, infographics, social media graphics</li>
+<li>Speed: Faster than most free image generation APIs</li>
+</ul>
+<p><strong>Video Model: Agnes-Video-2.0</strong></p>
+<ul>
+<li>Supports: Text-to-video, Image-to-video, Keyframe animation</li>
+<li>Feature: Audio-visual synchronized generation</li>
+<li>Note: Async task — create first, then poll for results. Queues during peak hours.</li>
+</ul>
+<hr>
+<h2 id="how-to-get-started">How to Get Started</h2>
+<ol>
+<li>Go to platform.agnes-ai.com</li>
+<li>Register with email (separate from the regular user account — this is the developer API platform)</li>
+<li>Create your API Key</li>
+<li>Copy the key and start calling</li>
+</ol>
+<p>The API Key creation is straightforward — there’s a prominent button on the platform dashboard.</p>
+<hr>
+<h2 id="integration">Integration</h2>
+<p>Text model uses OpenAI-compatible format, so it works with virtually any framework:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Base URL: https://apihub.agnes-ai.com/v1</span></span>
+<span class="line"><span>Model name: agnes-2.0-flash</span></span></code></pre>
+<p>Python example:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> openai </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> OpenAI</span></span>
+<span class="line"><span style="color:#E1E4E8">client </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> OpenAI(</span><span style="color:#FFAB70">api_key</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"YOUR_KEY"</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">base_url</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"https://apihub.agnes-ai.com/v1"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">response </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> client.chat.completions.create(</span></span>
+<span class="line"><span style="color:#FFAB70">    model</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"agnes-2.0-flash"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#FFAB70">    messages</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">[{</span><span style="color:#9ECBFF">"role"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"user"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"content"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Hello"</span><span style="color:#E1E4E8">}]</span></span>
+<span class="line"><span style="color:#E1E4E8">)</span></span></code></pre>
+<p>Image model uses a separate endpoint:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>POST https://apihub.agnes-ai.com/v1/images/generations</span></span></code></pre>
+<p>Video model uses a separate async endpoint:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>POST https://apihub.agnes-ai.com/v1/videos/generations</span></span></code></pre>
+<p>Create the task first with POST, get a task_id, then poll for results. Video generation is resource-intensive, so queuing is expected.</p>
+<hr>
+<h2 id="compatible-tools">Compatible Tools</h2>
+<p>Since the text model uses OpenAI-compatible format, almost any tool supporting custom APIs can connect:</p>
+<ul>
+<li><strong>Hermes Agent</strong> — Configure custom model provider with API Key, Base URL, and model name</li>
+<li><strong>Claude Code / Cursor / Windsurf</strong> — These coding tools support custom API endpoints</li>
+<li><strong>WorkBuddy</strong> — Package as a Skill for direct in-conversation usage</li>
+<li><strong>n8n</strong> — Call via HTTP request nodes</li>
+<li><strong>OpenClaw</strong> — Configure as default model</li>
+</ul>
+<p>Image and video models are currently accessed via API calls or wrapped as MCP tools for the main model to invoke.</p>
+<hr>
+<h2 id="real-world-testing">Real-World Testing</h2>
+<p>Text model: Strong at coding. Asked it to build a Gaode Maps-style App interface or a Three.js particle system — it produced runnable code directly. Performance on complex structured tasks exceeded expectations.</p>
+<p>Image model: Excellent prompt comprehension. Cyberpunk rainy Tokyo streets, e-commerce hero images, infographic layouts — all accurately rendered. Fast generation speed.</p>
+<p>Video model: A 15-second dragon awakening video with cinematic quality, scale details, flame physics, and smooth camera movement. Audio-visual sync is natural. But video generation requires patience — queues during peak hours.</p>
+<hr>
+<h2 id="important-notes">Important Notes</h2>
+<p>Free doesn’t mean unlimited guarantees. Several things to keep in mind:</p>
+<p><strong>1. No SLA</strong>
+Official terms explicitly state: free tier provides no SLA, no uptime guarantee. Expect 500/502/503 errors during peak hours.</p>
+<p><strong>2. Video generation queues</strong>
+Async tasks require polling. During busy periods, wait times are unpredictable. Don’t expect instant results.</p>
+<p><strong>3. “Indefinitely free” ≠ “Forever free”</strong>
+History shows many free APIs have changed their policies. Alibaba Cloud’s iFlow CLI promised “permanent free” then stopped. Agnes is genuinely free right now, but long-term sustainability depends on platform strategy and monetization.</p>
+<p><strong>4. Best for prototyping, not production</strong>
+Ideal use cases right now: building demos, running prototypes, batch-testing cover directions, adding a backup model to Agents, generating internal assets. For production workloads, consider paid plans.</p>
+<hr>
+<h2 id="why-it-matters">Why It Matters</h2>
+<p>Agnes AI is a Top 10 global AI Lab, with models ranking on multiple international leaderboards:</p>
+<ul>
+<li>Agnes-2.0-Flash ranked on Claw-Eval</li>
+<li>Agnes-Image-2.0-Flash on Artificial Analysis Image Editing Leaderboard</li>
+<li>Agnes-Video-2.0 on Artificial Analysis Text-to-Video Leaderboard</li>
+</ul>
+<p>More importantly, it’s the first platform to simultaneously offer text, image, and video APIs for free.</p>
+<p>In the Agent era, call costs multiply. A single chat might consume one Token, but an Agent workflow involves repeated planning, searching, tool calling, code writing, result checking, and failure retries. The user types one sentence; behind the scenes, dozens of model calls happen.</p>
+<p>The real value of free APIs isn’t saving a few dollars — it’s lowering the barrier to experimentation. Many people have ideas but get stuck in early validation. The model bill arrives before the product-market fit does.</p>
+<hr>
+<h2 id="summary">Summary</h2>
+<p>In one sentence: Agnes AI has offered free text, image, and video model APIs indefinitely since June 1, 2026 — the world’s first fully multimodal free platform.</p>
+<p>Register, get a key, connect via OpenAI-compatible format. Text model for Agents and coding, fast image generation, high-quality video (with queuing).</p>
+<p>Free but risky — no SLA, peak-hour errors, uncertain long-term policy. Perfect for prototyping, asset testing, and demos right now.</p>
+<p>Platform: platform.agnes-ai.com
+API docs: apihub.agnes-ai.com</p>
+<hr>
+<p><em>Data current as of July 14, 2026. Free policies may change. Check the official website for the latest information before use.</em></p>

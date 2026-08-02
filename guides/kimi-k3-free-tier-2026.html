@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kimi K3 完全免费攻略：月之暗面最强AI模型，1M上下文窗口+2.8万亿参数 | AIFreePlan</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kimi K3 完全免费攻略：月之暗面最强AI模型，1M上下文窗口+2.8万亿参数 | AIFreePlan">
+<meta property="og:description" content="Kimi K3是月之暗面2026年7月发布的旗舰AI模型，2.8万亿参数、100万token上下文窗口。本文详细介绍如何在Kimi网页端和API免费使用K3，以及各定价策略对比。">
+<meta property="og:url" content="https://aifreeplan.com/zh/guides/kimi-k3-free-tier-2026">
+<meta property="og:site_name" content="AIFreePlan">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kimi K3 完全免费攻略：月之暗面最强AI模型，1M上下文窗口+2.8万亿参数 | AIFreePlan">
+<meta name="twitter:description" content="Kimi K3是月之暗面2026年7月发布的旗舰AI模型，2.8万亿参数、100万token上下文窗口。本文详细介绍如何在Kimi网页端和API免费使用K3，以及各定价策略对比。">
+<meta name="description" content="Kimi K3是月之暗面2026年7月发布的旗舰AI模型，2.8万亿参数、100万token上下文窗口。本文详细介绍如何在Kimi网页端和API免费使用K3，以及各定价策略对比。">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<link rel="canonical" href="https://aifreeplan.com/zh/guides/kimi-k3-free-tier-2026">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/kimi-k3-free-tier-2026">
+<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/kimi-k3-free-tier-2026">
+<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/kimi-k3-free-tier-2026">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;--text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;--accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);--green:#059669;--green-light:rgba(5,150,105,.1);--shadow:0 4px 20px rgba(0,0,0,.05);--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover)}
+.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
+.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
+.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
+.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
+.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
+.article-container ul,.article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
+.article-container li{margin-bottom:8px;line-height:1.6}
+.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
+.article-container a{color:var(--accent);text-decoration:underline}
+.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-container th,.article-container td{padding:12px;border:1px solid var(--border);text-align:left}
+.article-container th{background:var(--accent-light);font-weight:600}
+.breadcrumb{font-size:14px;color:var(--text-muted);margin-bottom:24px}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb-sep{margin:0 8px}
+.faq-section{background:var(--bg-white);border-radius:var(--radius);padding:32px;margin-top:40px;box-shadow:var(--shadow)}
+.faq-section h3{margin-top:0;color:var(--text)}
+.faq-item{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border-light)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-weight:700;color:var(--text);margin-bottom:8px}
+.faq-a{color:var(--text-secondary);line-height:1.7}
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff;margin-top:60px}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6)}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col h4{font-size:14px;font-weight:700;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+@media(max-width:768px){.article-container{padding:16px 16px 48px;max-width:100%}.article-container h1{font-size:24px}.article-container h2{font-size:20px}.container{padding:0 16px}.nav{display:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Kimi K3 完全免费攻略：月之暗面最强AI模型，1M上下文窗口+2.8万亿参数","description":"Kimi K3是月之暗面2026年7月发布的旗舰AI模型，2.8万亿参数、100万token上下文窗口。本文详细介绍如何在Kimi网页端和API免费使用K3，以及各定价策略对比。","url":"https://aifreeplan.com/zh/guides/kimi-k3-free-tier-2026","datePublished":"2026-07-18","dateModified":"2026-07-18","author":{"@type":"Organization","name":"AIFreePlan"},"publisher":{"@type":"Organization","name":"AIFreePlan","url":"https://aifreeplan.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aifreeplan.com/zh/guides/kimi-k3-free-tier-2026"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://aifreeplan.com/zh"},{"@type":"ListItem","position":2,"name":"攻略","item":"https://aifreeplan.com/zh/guides"},{"@type":"ListItem","position":3,"name":"Kimi K3 完全免费攻略：月之暗面最强AI模型，1M上下文窗口+2.8万亿参数","item":"https://aifreeplan.com/zh/guides/kimi-k3-free-tier-2026"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Kimi K3 网页端真的免费吗？","acceptedAnswer":{"@type":"Answer","text":"是的，kimi.moonshot.cn 网页端对注册用户免费使用 Kimi K3。虽然可能有每日使用量限制，但对于日常对话、文档分析和代码生成已经完全足够。"}},{"@type":"Question","name":"Kimi K3 什么时候开源？","acceptedAnswer":{"@type":"Answer","text":"月之暗面计划在 2026年7月27日 发布 Kimi K3 的开源权重。"}},{"@type":"Question","name":"Kimi K3 和 K2.6 有什么区别？","acceptedAnswer":{"@type":"Answer","text":"K3 是 K2.6 的继任者，参数量从约1万亿提升到2.8万亿，上下文窗口从262K扩展到1M。"}},{"@type":"Question","name":"API 使用 K3 贵吗？","acceptedAnswer":{"@type":"Answer","text":"编码场景缓存命中率超90%，输入仅$0.30/百万token，远低于Claude Sonnet的$3.00/百万。"}}]}
+</script>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="/zh" class="logo">AI<span class="accent">FreePlan</span></a>
+    <nav class="nav">
+      <a href="/zh/all">全部工具</a>
+      <a href="/zh/guides">攻略</a>
+      <a href="/zh/privacy">隐私</a>
+      <a href="/en/guides/kimi-k3-free-tier-2026" class="btn btn-primary">English</a>
+    </nav>
+  </div>
+</header>
+<main class="article-container">
+<nav class="breadcrumb"><a href="/zh">首页</a> <span class="breadcrumb-sep">›</span> <a href="/zh/guides">攻略</a> <span class="breadcrumb-sep">›</span> <span>Kimi K3 完全免费攻略：月之暗面最强AI模型，1M上下文窗口+2.8万亿参数</span></nav>
+<h1>Kimi K3 完全免费攻略：月之暗面最强AI模型，1M上下文窗口+2.8万亿参数</h1>
+
+<p>2026年7月16日，中国AI公司<strong>月之暗面（Moonshot AI）</strong>正式发布了其最强模型 <strong>Kimi K3</strong>。这是一个2.8万亿参数的混合专家（MoE）模型，拥有100万token的超长上下文窗口，在多个基准测试中达到行业领先水平。</p>
+
+<p>好消息是：Kimi K3 可以通过 <strong>kimi.moonshot.cn</strong> 网页端<strong>免费使用</strong>，也可以通过 API 按量付费使用。下面详细介绍如何使用。</p>
+
+<h2>Kimi K3 核心参数</h2>
+
+<ul>
+<li><strong>模型规模：</strong>2.8万亿参数（MoE架构），激活参数远低于此</li>
+<li><strong>上下文窗口：</strong>1,000,000 tokens（约200万字）</li>
+<li><strong>推理能力：</strong>支持思维链推理（Reasoning），当前仅支持 "max" 推理强度</li>
+<li><strong>多模态：</strong>支持图片输入、代码生成、深度研究</li>
+<li><strong>工具调用：</strong>支持 Web Search、Python 执行等工具调用</li>
+<li><strong>开源计划：</strong>预计2026年7月27日发布开源权重</li>
+</ul>
+
+<h2>免费使用方式</h2>
+
+<h3>方式一：Kimi 网页端（完全免费）</h3>
+
+<p>最直接的使用方式是访问 <a href="https://kimi.moonshot.cn" target="_blank">kimi.moonshot.cn</a>，注册后即可免费使用 Kimi K3。网页端的特点：</p>
+
+<ul>
+<li><strong>注册方式：</strong>支持手机号注册，也可用微信/支付宝登录</li>
+<li><strong>使用限制：</strong>网页端对免费用户有每日使用量限制，但对于日常使用完全足够</li>
+<li><strong>功能完整：</strong>网页端提供完整的 K3 能力，包括深度研究、文档分析、代码生成等</li>
+<li><strong>无需翻墙：</strong>国内可直接访问</li>
+</ul>
+
+<h3>方式二：Kimi API（按量付费，非免费但有竞争力定价）</h3>
+
+<p>如果你需要通过 API 集成 Kimi K3，以下是官方定价（2026年7月数据）：</p>
+
+<table>
+<thead>
+<tr><th>模型</th><th>缓存命中输入价</th><th>缓存未命中输入价</th><th>输出价</th><th>上下文窗口</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Kimi K3</strong></td><td><strong>$0.30/百万token</strong></td><td><strong>$3.00/百万token</strong></td><td><strong>$15.00/百万token</strong></td><td>1M tokens</td></tr>
+<tr><td>Kimi K2.6</td><td>$0.16/百万token</td><td>$0.95/百万token</td><td>$4.00/百万token</td><td>262K tokens</td></tr>
+</tbody>
+</table>
+
+<p><strong>关键优势：</strong>Kimi API 的上下文缓存命中率在编码工作负载中超过90%，这意味着大部分输入token都以 $0.30/百万token 的超低价格计费。</p>
+
+<p>作为对比，Anthropic Claude Sonnet 系列的输入价为 $3/百万token、输出价为 $15/百万token。Kimi K3 在同等性能水平下，缓存命中后的输入价格仅为 Claude 的 1/10。</p>
+
+<h2>Kimi K3 的实际能力</h2>
+
+<h3>1. 超长上下文处理</h3>
+
+<p>100万token的上下文窗口意味着你可以一次性上传整本电子书、整个代码仓库或数千页的研究报告，让 K3 进行分析。这在所有大模型中都是顶尖水平。</p>
+
+<h3>2. 深度研究（Deep Research）</h3>
+
+<p>Kimi K3 可以进行多轮递归式深度研究。官方展示的案例包括：</p>
+<ul>
+<li>通过2800+次网页搜索和1100+次终端数据拉取，分析了87份季度报告和99份原始PDF，生成互动式行业研究报告</li>
+<li>通过120+轮递归自我改进，生成了42年AI ASIC产业的互动研究网站</li>
+</ul>
+
+<h3>3. 代码生成</h3>
+
+<p>Kimi K3 在代码生成方面表现出色。官方案例包括：</p>
+<ul>
+<li>使用 Three.js WebGPU 和 GPU 计算，从零构建了一个完整的3D浏览器游戏</li>
+<li>生成赛博朋克风格的网页荡绳游戏体验</li>
+</ul>
+
+<h3>4. 视觉理解</h3>
+
+<p>K3 支持图片输入，可以进行复杂的视觉分析和理解。在 Simon Willison 的 pelican 测试中，K3 的视觉理解能力获得了高度评价。</p>
+
+<h2>与主要模型的对比</h2>
+
+<table>
+<thead>
+<tr><th>对比项</th><th>Kimi K3</th><th>Claude Sonnet</th><th>GPT-5.6</th><th>Kimi K2.6</th></tr>
+</thead>
+<tbody>
+<tr><td>参数量</td><td>2.8万亿（MoE）</td><td>未知</td><td>未知</td><td>约1万亿（MoE）</td></tr>
+<tr><td>上下文窗口</td><td>1M tokens</td><td>200K tokens</td><td>200K tokens</td><td>262K tokens</td></tr>
+<tr><td>API输入价（缓存命中）</td><td>$0.30/百万</td><td>$3.00/百万</td><td>$2.50/百万</td><td>$0.16/百万</td></tr>
+<tr><td>API输出价</td><td>$15.00/百万</td><td>$15.00/百万</td><td>$10.40/百万</td><td>$4.00/百万</td></tr>
+<tr><td>免费网页端</td><td>✅ 有</td><td>✅ 有</td><td>✅ 有</td><td>✅ 有</td></tr>
+<tr><td>思维链推理</td><td>✅ 支持</td><td>✅ 支持</td><td>✅ 支持</td><td>✅ 支持</td></tr>
+<tr><td>工具调用</td><td>✅ 支持</td><td>✅ 支持</td><td>✅ 支持</td><td>✅ 支持</td></tr>
+<tr><td>开源计划</td><td>2026年7月27日</td><td>否</td><td>否</td><td>已开源</td></tr>
+</tbody>
+</table>
+
+<h2>如何使用（详细步骤）</h2>
+
+<h3>步骤 1：访问 Kimi 网页版</h3>
+<p>打开 <a href="https://kimi.moonshot.cn" target="_blank">kimi.moonshot.cn</a>，使用手机号注册或微信/支付宝登录。</p>
+
+<h3>步骤 2：开始对话</h3>
+<p>登录后直接在对话框中输入你的问题。K3 会自动被调用，你不需要手动选择模型。</p>
+
+<h3>步骤 3：使用高级功能</h3>
+<ul>
+<li><strong>深度研究：</strong>点击"深度研究"按钮，可以让 K3 进行多轮联网搜索和分析</li>
+<li><strong>文档分析：</strong>上传PDF、Word、Excel等文件，K3 可以读取并分析其中的内容</li>
+<li><strong>代码生成：</strong>直接描述你想要的功能，K3 会生成可运行的代码</li>
+</ul>
+
+<h3>步骤 4：通过 API 使用（可选）</h3>
+<p>如果需要 API 接入：</p>
+<ol>
+<li>访问 <a href="https://platform.kimi.ai" target="_blank">platform.kimi.ai</a> 注册 API 账号</li>
+<li>创建 API Key</li>
+<li>使用模型名 <code>kimi-k3</code> 发起请求</li>
+<li>支持自动上下文缓存，编码场景缓存命中率超过90%</li>
+</ol>
+
+<h2>常见问题</h2>
+
+<div class="faq-section">
+<div class="faq-item">
+<div class="faq-q">Q: Kimi K3 网页端真的免费吗？</div>
+<div class="faq-a">是的，kimi.moonshot.cn 网页端对注册用户免费使用 Kimi K3。虽然可能有每日使用量限制，但对于日常对话、文档分析和代码生成已经完全足够。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: Kimi K3 什么时候开源？</div>
+<div class="faq-a">月之暗面计划在 2026年7月27日 发布 Kimi K3 的开源权重。这意味着之后任何人都可以下载并在自己的设备上运行。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: Kimi K3 和 K2.6 有什么区别？</div>
+<div class="faq-a">K3 是 K2.6 的继任者，参数量从约1万亿提升到2.8万亿，上下文窗口从262K扩展到1M，推理能力和多模态理解都有显著提升。API定价也相应提高。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: API 使用 K3 贵吗？</div>
+<div class="faq-a">在编码场景中，由于上下文缓存命中率超过90%，输入价格仅为 $0.30/百万token，远低于 Claude Sonnet 的 $3.00/百万token。输出价格 $15.00/百万token 与 Claude Sonnet 持平。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: Kimi K3 支持中文吗？</div>
+<div class="faq-a">完全支持。Kimi K3 对中文的理解和生成能力是其强项之一，尤其在中文文档分析、中文代码注释等方面表现优异。</div>
+</div>
+</div>
+
+<h2>总结</h2>
+
+<p>Kimi K3 是 2026 年最值得关注的 AI 模型之一。2.8万亿参数、100万token上下文窗口、深度研究能力、以及极具竞争力的 API 定价，使其成为开发者和普通用户的理想选择。</p>
+
+<p>无论你是想通过网页端免费使用，还是通过 API 集成到自己的应用中，Kimi K3 都是一个值得尝试的选择。立即前往 <a href="https://kimi.moonshot.cn" target="_blank">kimi.moonshot.cn</a> 体验吧！</p>
+
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="/zh" class="logo" style="color:#059669">AI<span class="accent" style="color:#6366F1">FreePlan</span></a><p>AI驱动的免费工具聚合平台，永久免费。</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h4>产品</h4><a href="/zh/all">全部工具</a><a href="/zh/guides">攻略</a></div>
+      <div class="footer-col"><h4>法律</h4><a href="/zh/privacy">隐私政策</a><a href="/zh/terms">用户协议</a></div>
+    </div>
+  </div>
+  <div class="container footer-bottom">&copy; 2026 AIFreePlan. All rights reserved.</div>
+</footer>
+</body></html>

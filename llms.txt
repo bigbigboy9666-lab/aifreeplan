@@ -1,0 +1,55 @@
+# AIFreePlan
+
+AIFreePlan tracks free tiers, credits, limits, and commercial-use constraints for AI tools.
+
+## Site Structure
+
+- Tools Index (zh): https://aifreeplan.com/zh/tools/
+- Tools Index (en): https://aifreeplan.com/en/tools/
+- Guides (zh): https://aifreeplan.com/zh/guides/
+- Guides (en): https://aifreeplan.com/en/guides/
+- Categories (zh): https://aifreeplan.com/zh/coding/, https://aifreeplan.com/zh/llm/, https://aifreeplan.com/zh/image/, etc.
+- Compare (zh): https://aifreeplan.com/zh/compare/
+
+## Data Fields
+
+Each tool page includes:
+- Tool name (zh/en)
+- Free credits amount and unit
+- Refresh period (daily/weekly/monthly/one-time)
+- Credit card required (yes/no)
+- Watermark policy (yes/no)
+- Commercial use allowed (yes/no)
+- Resolution limits
+- Rate limits / daily caps
+- Available models
+- Official website URL
+- Last verified date
+- Rating (1-5)
+
+## Core Pages
+
+- https://aifreeplan.com/zh/tools/chatgpt/
+- https://aifreeplan.com/zh/tools/claude/
+- https://aifreeplan.com/zh/tools/gemini/
+- https://aifreeplan.com/zh/tools/cursor/
+- https://aifreeplan.com/zh/tools/windsurf/
+- https://aifreeplan.com/zh/tools/kling/
+- https://aifreeplan.com/zh/tools/midjourney/
+- https://aifreeplan.com/zh/tools/suno/
+
+## Languages
+
+- Chinese (zh): https://aifreeplan.com/zh/
+- English (en): https://aifreeplan.com/en/
+
+## Update Frequency
+
+- Tool data verified weekly
+- Sitemap updated on each build
+- Last updated: 2026-07-17
+
+## Citation Guidelines
+
+Please cite AIFreePlan as:
+"AIFreePlan - AI Free Tier Aggregation Platform. Free tier data for {tool_name}, last verified {date}. https://aifreeplan.com/{lang}/tools/{tool_id}/"
