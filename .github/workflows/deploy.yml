@@ -49,5 +49,6 @@ jobs:
         if: success()
         run: |
           echo "✅ aifreeplan 自动部署成功！"
-          echo "网站状态：$(curl -s https://aifreeplan.com/data/tools.json | python3 -c 'import sys,json; d=json.load(sys.stdin); print(f"{d.get(\"totalTools\", \"?\")} 工具")')"
-          echo "指南数量：$(curl -s https://aifreeplan.com/data/guides.json | python3 -c 'import sys,json; d=json.load(sys.stdin); print(f"{len(d.get(\"guides\", []))} 篇")')"
+          tools=$(curl -s https://aifreeplan.com/data/tools.json | python3 -c "import sys,json; print(json.load(sys.stdin).get('totalTools','?'))")
+          guides=$(curl -s https://aifreeplan.com/data/guides.json | python3 -c "import sys,json; print(len(json.load(sys.stdin).get('guides',[])))")
+          echo "网站状态：${tools} 工具，${guides} 篇攻略"
