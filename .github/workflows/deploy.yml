@@ -44,3 +44,12 @@ jobs:
           directory: dist
           branch: main
           apiToken: ${{ secrets.CF_PAGES_TOKEN }}
+
+      - name: Trigger deploy notification
+        if: success()
+        run: |
+          echo "aifreeplan.com: DEPLOY OK — 自动部署成功"
+          curl -s -X POST "https://api.github.com/repos/bigbigboy9666-lab/aifreeplan/dispatches" \
+            -H "Accept: application/vnd.github.v3+json" \
+            -H "Authorization: token ${{ secrets.DEPLOY_KEY }}" \
+            -d '{"event_type": "deploy-success", "client_payload": {"tools": "99", "guides": "43"}}' || true
