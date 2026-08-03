@@ -14,7 +14,7 @@
     "migrate": "node scripts/migrate-data.mjs",
     "scraper": "node scripts/cron-scraper.mjs",
     "validate": "node scripts/validate-content.mjs",
-    "sitemap": "python3 scripts/generate_sitemap.py"
+    "sitemap": "node scripts/generate-sitemap.mjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.0",
