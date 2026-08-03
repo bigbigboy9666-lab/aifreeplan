@@ -30,6 +30,9 @@ jobs:
       - name: Build static site
         run: pnpm build
 
+      - name: Copy headers to dist
+        run: cp _headers dist/_headers
+
       - name: Generate sitemap
         run: pnpm run sitemap
 
