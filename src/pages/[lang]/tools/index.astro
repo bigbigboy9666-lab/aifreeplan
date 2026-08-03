@@ -139,9 +139,10 @@ const searchableTools = JSON.stringify(tools.map((t: any) => ({
     </div>
   </div>
 
+  <div id="tools-data" data-tools={searchableTools} class="hidden"></div>
+
   <script client:load>
-    // Tool data for search
-    const allTools = ${searchableTools};
+    const allTools = JSON.parse(document.getElementById('tools-data').dataset.tools);
 
     const searchInput = document.getElementById('tool-search') as HTMLInputElement;
     const searchCount = document.getElementById('search-count');
