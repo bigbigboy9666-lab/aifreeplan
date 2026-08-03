@@ -1,0 +1,229 @@
+<!DOCTYPE html><meta charset="utf-8"><h1 id="groq-free-lpu-inference-api-1000-daily-requests-ultra-fast-open-source-models">Groq Free LPU Inference API: 1000 Daily Requests, Ultra-Fast Open Source Models</h1>
+<p>Groq is the industry’s fastest free AI inference engine, based on proprietary LPU hardware architecture. 1000 free requests daily, supports 17 mainstream open-source models including Llama 4 and Qwen 3, fully OpenAI-compatible API format, streaming output latency under 50ms.</p>
+<hr>
+<h2 id="groq-core-technology-advantages">Groq Core Technology Advantages</h2>
+<p>Groq’s core competitiveness lies in its proprietary LPU (Language Processing Unit) hardware architecture. Compared to traditional GPU inference solutions, LPU uses deterministic architecture and streaming compiler technology to achieve near-zero latency token output.</p>
+<p><strong>Key specs</strong>:</p>
+<ul>
+<li>Hardware: LPU self-developed chip, not GPU</li>
+<li>Response speed: Average first token latency &#x3C;50ms</li>
+<li>Concurrency: Supports multi-model parallel computation per request</li>
+<li>Models: 17 open-source models in free tier</li>
+<li>Free quota: 1000 requests/day (resets daily)</li>
+<li>Rate limits: RPM 30 (30 requests/min), TPM 30000</li>
+<li>Commercial use: Allowed in free tier</li>
+<li>API compatibility: Fully OpenAI compatible</li>
+</ul>
+<hr>
+<h2 id="free-quota-details">Free Quota Details</h2>
+<h3 id="1-request-limit">1. Request Limit</h3>
+<p>Free tier users get <strong>1000 free requests daily</strong>, resetting at 00:00 UTC.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Use Case</th><th>Per Request Cost</th><th>1000 Quota Supports</th></tr></thead><tbody><tr><td>Simple Q&#x26;A (short)</td><td>1 request</td><td>1000 conversations</td></tr><tr><td>Code generation (medium)</td><td>2-3 requests</td><td>300-500 conversations</td></tr><tr><td>Long doc summary (8K context)</td><td>3-5 requests</td><td>200-300 conversations</td></tr><tr><td>Real-time chat</td><td>1-2 requests/turn</td><td>500-1000 turns</td></tr></tbody></table>
+<h3 id="2-rate-limits">2. Rate Limits</h3>
+<ul>
+<li><strong>RPM 30</strong>: Max 30 requests per minute</li>
+<li><strong>TPM 30000</strong>: Max 30,000 tokens output per minute</li>
+</ul>
+<h3 id="3-concurrent-connections">3. Concurrent Connections</h3>
+<p>Free tier has limited concurrent connections. Implement local rate limiting in production.</p>
+<hr>
+<h2 id="supported-free-models">Supported Free Models</h2>
+<p>Groq free tier offers 17 mainstream open-source models:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Model</th><th>Parameters</th><th>Use Case</th><th>Rating</th></tr></thead><tbody><tr><td>Llama 4 Scout</td><td>~25B</td><td>General chat, coding</td><td>⭐⭐⭐⭐⭐</td></tr><tr><td>Qwen3 32B</td><td>32B</td><td>Chinese understanding, reasoning</td><td>⭐⭐⭐⭐⭐</td></tr><tr><td>Llama 4 Hunter</td><td>~70B</td><td>High-precision, long context</td><td>⭐⭐⭐⭐</td></tr><tr><td>Mixtral 8x22B</td><td>MoE 129B</td><td>High throughput</td><td>⭐⭐⭐⭐</td></tr><tr><td>Gemma 2 9B</td><td>9B</td><td>Fast response, lightweight</td><td>⭐⭐⭐</td></tr><tr><td>Phi-3 Mini 4B</td><td>3.8B</td><td>Extreme low latency</td><td>⭐⭐⭐</td></tr><tr><td>Cohere Command R+</td><td>104B</td><td>RAG, retrieval</td><td>⭐⭐⭐</td></tr></tbody></table>
+<p><strong>Recommended</strong>: Llama 4 Scout and Qwen3 32B are the strongest models in free tier.</p>
+<hr>
+<h2 id="api-usage">API Usage</h2>
+<h3 id="1-get-api-key">1. Get API Key</h3>
+<p>Visit Groq Console, register to get API Key. Free tier requires no credit card.</p>
+<h3 id="2-python-example">2. Python Example</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># Install: pip install groq</span></span>
+<span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> groq </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> Groq</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">client </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> Groq(</span><span style="color:#FFAB70">api_key</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"YOUR_API_KEY"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Use Llama 4 Scout</span></span>
+<span class="line"><span style="color:#E1E4E8">chat_completion </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> client.chat.completions.create(</span></span>
+<span class="line"><span style="color:#FFAB70">    model</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"llama4-sculpt-20260901"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#FFAB70">    messages</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">[{</span><span style="color:#9ECBFF">"role"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"user"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"content"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Explain Transformer architecture"</span><span style="color:#E1E4E8">}],</span></span>
+<span class="line"><span style="color:#FFAB70">    temperature</span><span style="color:#F97583">=</span><span style="color:#79B8FF">0.7</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#FFAB70">    stream</span><span style="color:#F97583">=</span><span style="color:#79B8FF">True</span><span style="color:#E1E4E8">,  </span><span style="color:#6A737D"># Streaming for fastest experience</span></span>
+<span class="line"><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">for</span><span style="color:#E1E4E8"> chunk </span><span style="color:#F97583">in</span><span style="color:#E1E4E8"> chat_completion:</span></span>
+<span class="line"><span style="color:#79B8FF">    print</span><span style="color:#E1E4E8">(chunk.choices[</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">].delta.content </span><span style="color:#F97583">or</span><span style="color:#9ECBFF"> ""</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">end</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">''</span><span style="color:#E1E4E8">)</span></span></code></pre>
+<h3 id="3-openai-compatible">3. OpenAI Compatible</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> openai </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> OpenAI</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">client </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> OpenAI(</span></span>
+<span class="line"><span style="color:#FFAB70">    base_url</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"https://api.groq.com/openai/v1"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#FFAB70">    api_key</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"YOUR_API_KEY"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">response </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> client.chat.completions.create(</span></span>
+<span class="line"><span style="color:#FFAB70">    model</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"llama4-sculpt-20260901"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#FFAB70">    messages</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">[{</span><span style="color:#9ECBFF">"role"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"user"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"content"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Hello world!"</span><span style="color:#E1E4E8">}],</span></span>
+<span class="line"><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(response.choices[</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">].message.content)</span></span></code></pre>
+<hr>
+<h2 id="use-cases">Use Cases</h2>
+<h3 id="1-real-time-customer-service">1. Real-time Customer Service</h3>
+<p>Build customer service bots with near real-time response. First token latency typically under 100ms.</p>
+<h3 id="2-coding-assistant">2. Coding Assistant</h3>
+<p>Combine Qwen3 32B or Llama 4 Scout for powerful coding assistance. Code completion, debugging, translation, unit test generation.</p>
+<h3 id="3-speech-to-text-processing">3. Speech-to-Text Processing</h3>
+<p>Combine Whisper with Groq LLM for complete speech understanding pipeline.</p>
+<h3 id="4-educational-tutoring">4. Educational Tutoring</h3>
+<p>Interactive education apps benefit from Groq’s fast inference. Students get near-instant responses.</p>
+<hr>
+<h2 id="free-vs-paid-comparison">Free vs Paid Comparison</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Feature</th><th>Free</th><th>Paid (Pay-as-you-go)</th></tr></thead><tbody><tr><td>Daily request quota</td><td>1000</td><td>Unlimited (pay per use)</td></tr><tr><td>Price</td><td>Free</td><td>Llama 3.1 70B: $1/M input, $5/M output</td></tr><tr><td>Model selection</td><td>17 open-source</td><td>All models available</td></tr><tr><td>Commercial use</td><td>✓ Allowed</td><td>✓ Allowed</td></tr><tr><td>RPM limit</td><td>30</td><td>Higher (by plan)</td></tr><tr><td>TPM limit</td><td>30000</td><td>Higher</td></tr></tbody></table>
+<hr>
+<h2 id="usage-tips">Usage Tips</h2>
+<ol>
+<li><strong>Model selection</strong> — Choose appropriate model for task. Use Gemma 2 or Phi-3 for quick tasks, Llama 4 Hunter or Qwen3 32B for complex tasks</li>
+<li><strong>Streaming</strong> — Always set stream=True to leverage LPU speed advantage</li>
+<li><strong>Context window</strong> — Different models support different max context. Llama 4 Hunter supports up to 256K tokens</li>
+<li><strong>Network</strong> — Groq servers are in US. Chinese users need VPN</li>
+<li><strong>Error handling</strong> — Implement retry logic for occasional request failures</li>
+<li><strong>Quota monitoring</strong> — Check remaining daily requests in Groq console</li>
+</ol>
+<hr>
+<h2 id="faq">FAQ</h2>
+<p><strong>Q: Is Groq free tier really free?</strong>
+A: Yes, completely free. No payment required. Register and start using immediately.</p>
+<p><strong>Q: Is 1000 requests/day enough?</strong>
+A: For individual developers and light usage, yes. Assuming 2 requests per conversation, that’s 500 conversations daily.</p>
+<p><strong>Q: Does it support streaming?</strong>
+A: Yes, and streaming is key to leveraging LPU speed advantage.</p>
+<p><strong>Q: Can I use it for commercial purposes?</strong>
+A: Yes, free tier allows commercial use.</p>
+<hr>
+<h2 id="summary">Summary</h2>
+<p>Groq is the industry’s fastest free AI inference engine with proprietary LPU hardware. 1000 free requests daily, 17 open-source models, fully OpenAI-compatible API, streaming latency under 50ms. Best choice for real-time对话 applications, speech-to-text, and streaming text generation.</p>
+<p>Project: console.groq.com</p>
+<hr>
+<p><em>Data current as of July 14, 2026. Free policies may change. Check console.groq.com for latest info.</em></p>

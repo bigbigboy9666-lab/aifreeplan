@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bonsai 27B：270亿参数AI模型在手机本地免费运行完全攻略 - 基于Qwen3.6，Apache 2.0开源 | AIFreePlan</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bonsai 27B：270亿参数AI模型在手机本地免费运行完全攻略 - 基于Qwen3.6，Apache 2.0开源 | AIFreePlan">
+<meta property="og:description" content="Bonsai 27B是PrismML推出的革命性AI模型，将270亿参数的旗舰级AI能力压缩到仅需3.9GB内存即可在手机本地运行。基于Qwen3.6 27B构建，采用创新的1位量化技术，支持Apache 2.0开源协议，完全免费下载和使用，无需任何API密钥或付费订阅。">
+<meta property="og:url" content="https://aifreeplan.com/zh/guides/bonsai-27b-free-on-device-2026">
+<meta property="og:site_name" content="AIFreePlan">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bonsai 27B：270亿参数AI模型在手机本地免费运行完全攻略 - 基于Qwen3.6，Apache 2.0开源 | AIFreePlan">
+<meta name="twitter:description" content="Bonsai 27B是PrismML推出的革命性AI模型，将270亿参数的旗舰级AI能力压缩到仅需3.9GB内存即可在手机本地运行。基于Qwen3.6 27B构建，采用创新的1位量化技术，支持Apache 2.0开源协议，完全免费下载和使用，无需任何API密钥或付费订阅。">
+<meta name="description" content="Bonsai 27B是PrismML推出的革命性AI模型，将270亿参数的旗舰级AI能力压缩到仅需3.9GB内存即可在手机本地运行。基于Qwen3.6 27B构建，采用创新的1位量化技术，支持Apache 2.0开源协议，完全免费下载和使用，无需任何API密钥或付费订阅。">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<link rel="canonical" href="https://aifreeplan.com/zh/guides/bonsai-27b-free-on-device-2026">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/bonsai-27b-free-on-device-2026">
+<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/bonsai-27b-free-on-device-2026">
+<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/bonsai-27b-free-on-device-2026">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;--text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;--accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);--green:#059669;--green-light:rgba(5,150,105,.1);--shadow:0 4px 20px rgba(0,0,0,.05);--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover)}
+.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
+.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
+.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
+.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
+.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
+.article-container ul,.article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
+.article-container li{margin-bottom:8px;line-height:1.6}
+.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
+.article-container a{color:var(--accent);text-decoration:underline}
+.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-container th,.article-container td{padding:12px;border:1px solid var(--border);text-align:left}
+.article-container th{background:var(--accent-light);font-weight:600}
+.breadcrumb{font-size:14px;color:var(--text-muted);margin-bottom:24px}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb-sep{margin:0 8px}
+.faq-section{background:var(--bg-white);border-radius:var(--radius);padding:32px;margin-top:40px;box-shadow:var(--shadow)}
+.faq-section h3{margin-top:0;color:var(--text)}
+.faq-item{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border-light)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-weight:700;color:var(--text);margin-bottom:8px}
+.faq-a{color:var(--text-secondary);line-height:1.7}
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff;margin-top:60px}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6)}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col h4{font-size:14px;font-weight:700;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+@media(max-width:768px){.article-container{padding:16px 16px 48px;max-width:100%}.article-container h1{font-size:24px}.article-container h2{font-size:20px}.container{padding:0 16px}.nav{display:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Bonsai 27B：270亿参数AI模型在手机本地免费运行完全攻略 - 基于Qwen3.6，Apache 2.0开源","description":"Bonsai 27B是PrismML推出的革命性AI模型，将270亿参数的旗舰级AI能力压缩到仅需3.9GB内存即可在手机本地运行。基于Qwen3.6 27B构建，采用创新的1位量化技术，支持Apache 2.0开源协议，完全免费下载和使用，无需任何API密钥或付费订阅。","url":"https://aifreeplan.com/zh/guides/bonsai-27b-free-on-device-2026","datePublished":"2026-07-15","dateModified":"2026-07-15","author":{"@type":"Organization","name":"AIFreePlan"},"publisher":{"@type":"Organization","name":"AIFreePlan","url":"https://aifreeplan.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aifreeplan.com/zh/guides/bonsai-27b-free-on-device-2026"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://aifreeplan.com/zh"},{"@type":"ListItem","position":2,"name":"攻略","item":"https://aifreeplan.com/zh/guides"},{"@type":"ListItem","position":3,"name":"Bonsai 27B：270亿参数AI模型在手机本地免费运行完全攻略 - 基于Qwen3.6，Apache 2.0开源","item":"https://aifreeplan.com/zh/guides/bonsai-27b-free-on-device-2026"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[[{"question": "Bonsai 27B真的可以在手机上运行吗？", "answer": "是的。体积优先版（Q2_0量化）仅需3.9GB，可以运行在iPhone 15 Pro及更新机型上。iPhone 17 Pro的12GB内存中约有6GB可供模型使用，完全足够。"}, {"question": "Bonsai 27B是免费的吗？可以商用吗？", "answer": "完全免费。Bonsai 27B采用Apache 2.0开源协议，可以自由下载、修改和商用，无需支付任何费用或申请授权。"}, {"question": "和云端API相比，本地运行有什么劣势？", "answer": "主要劣势是推理速度。在CPU或手机上，每秒只能生成几个token。使用GPU（如RTX 4090或Apple Silicon的Metal）可以显著提升速度。此外，本地模型无法随时更新到最新版本。"}, {"question": "支持中文吗？", "answer": "支持。Bonsai 27B基于Qwen3.6 27B构建，原生支持中英文双语。在15项基准测试中，中文理解和生成能力表现优异。"}]]}
+</script>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="/zh" class="logo">AI<span class="accent">FreePlan</span></a>
+    <nav class="nav">
+      <a href="/zh/all">全部工具</a>
+      <a href="/zh/guides">攻略</a>
+      <a href="/zh/privacy">隐私</a>
+      <a href="/en/guides/bonsai-27b-free-on-device-2026" class="btn btn-primary">English</a>
+    </nav>
+  </div>
+</header>
+<main class="article-container">
+<nav class="breadcrumb"><a href="/zh">首页</a> <span class="breadcrumb-sep">›</span> <a href="/zh/guides">攻略</a> <span class="breadcrumb-sep">›</span> <span>Bonsai 27B：270亿参数AI模型在手机本地免费运行完全攻略 - 基于Qwen3.6，Apache 2.0开源</span></nav>
+<h1>Bonsai 27B：270亿参数AI模型在手机本地免费运行完全攻略</h1>
+
+<p>2026年7月14日，PrismML在Hacker News上发布了<strong>Bonsai 27B</strong>，仅8小时就获得了<strong>439个点赞</strong>和超过160条评论。这个模型一举打破了人们对大语言模型运行条件的认知——一个270亿参数的旗舰级AI模型，现在可以在一部iPhone 17 Pro上本地运行。</p>
+
+<h2>什么是Bonsai 27B？</h2>
+
+<p>Bonsai 27B是PrismML基于<strong>Qwen3.6 27B</strong>构建的多模态旗舰模型，采用了公司专有的<strong>1位量化（1-bit quantization）</strong>技术。与传统量化方法不同，Bonsai 27B对整个语言网络、嵌入层、注意力机制、MLP层和语言模型头进行端到端的低比特表示，没有任何高精度逃逸路径。</p>
+
+<p>核心规格：</p>
+<ul>
+<li><strong>基础模型</strong>：Qwen3.6 27B</li>
+<li><strong>上下文长度</strong>：262K token</li>
+<li><strong>推理模式</strong>：支持思考模式（thinking mode）、工具调用、智能体工作流</li>
+<li><strong>多模态</strong>：支持视觉理解（mmproj模块）</li>
+<li><strong>推测解码</strong>：支持compounding speculative decoding，实现无损的draft-and-verify加速</li>
+<li><strong>许可证</strong>：Apache 2.0（可商用）</li>
+<li><strong>开源协议</strong>：完全开源，可在HuggingFace免费下载</li>
+</ul>
+
+<h2>两个版本：质量优先 vs 体积优先</h2>
+
+<p>Bonsai 27B提供两个量化变体，满足不同场景需求：</p>
+
+<h3>质量优先版：5.9GB（FP16组缩放三元权重）</h3>
+<ul>
+<li><strong>有效比特数</strong>：1.71 bit/weight（三元 {-1, 0, +1} 权重 + FP16组缩放）</li>
+<li><strong>文件大小</strong>：约5.9GB</li>
+<li><strong>运行设备</strong>：日常笔记本电脑（8GB+内存）</li>
+<li><strong>优势</strong>：保留完整的推理、工具调用和智能体能力</li>
+<li><strong>适合场景</strong>：需要高质量输出的桌面端本地部署</li>
+</ul>
+
+<h3>体积优先版：3.9GB（二进制权重）</h3>
+<ul>
+<li><strong>有效比特数</strong>：1.125 bit/weight（二进制 {-1, +1} 权重 + 组缩放）</li>
+<li><strong>文件大小</strong>：约3.9GB</li>
+<li><strong>运行设备</strong>：iPhone 17 Pro（12GB内存设备可用约6GB给模型）</li>
+<li><strong>优势</strong>：史上首个能在手机上运行的27B级模型</li>
+<li><strong>适合场景</strong>：移动端离线AI助手、隐私敏感任务</li>
+</ul>
+
+<h2>为什么这是一个重要突破？</h2>
+
+<p>传统上，一个27B模型在16位精度下占用约<strong>54GB</strong>存储空间，即使是经过良好优化的4位量化版本也需要约<strong>18GB</strong>——这对于手机来说太大了。Bonsai 27B通过1位量化将这个需求降低到<strong>3.9GB</strong>，仅为原来的<strong>7%</strong>。</p>
+
+<p>更关键的是性能保持：</p>
+<ul>
+<li>在<strong>15项基准测试</strong>套件中（涵盖知识、推理、数学、编程、指令遵循、工具调用和视觉），Bonsai 27B在思考模式下的表现显著优于同等参数规模的其他量化模型</li>
+<li>相比最激进的常规低比特构建方案，Bonsai 27B以<strong>2.5倍更小的内存占用</strong>实现了更高的分数</li>
+<li>其<strong>每GB智能密度</strong>在同参数规模模型中排名第一</li>
+</ul>
+
+<h2>与云端API的对比</h2>
+
+<p>对于需要持续运行的智能体工作流，本地部署带来了结构性优势：</p>
+
+<table>
+<thead>
+<tr><th>维度</th><th>云端API</th><th>Bonsai 27B本地部署</th></tr>
+</thead>
+<tbody>
+<tr><td>单次请求成本</td><td>按token计费</td><td>$0（本地运行）</td></tr>
+<tr><td>百步级智能体循环</td><td>每步都有远程请求延迟和累积token费用</td><td>边际成本为零</td></tr>
+<tr><td>隐私</td><td>数据发送到第三方服务器</td><td>数据完全在本地设备处理</td></tr>
+<tr><td>离线可用性</td><td>需要网络连接</td><td>完全离线可用</td></tr>
+<tr><td>延迟</td><td>网络延迟+排队时间</td><td>设备内延迟（GPU加速下极低）</td></tr>
+<tr><td>27B级能力</td><td>需付费订阅</td><td>免费开源</td></tr>
+</tbody>
+</table>
+
+<h2>系统要求与硬件兼容性</h2>
+
+<h3>手机端</h3>
+<ul>
+<li><strong>iOS</strong>：iPhone 15 Pro及更新机型（建议A17 Pro芯片或更高）</li>
+<li><strong>内存需求</strong>：3.9GB模型 + 系统开销，12GB内存设备可用约6GB给模型</li>
+<li><strong>运行方式</strong>：通过MLX框架或llama.cpp的iOS端口运行</li>
+</ul>
+
+<h3>笔记本/台式机</h3>
+<ul>
+<li><strong>CPU</strong>：任意现代CPU（ARM或x86均可）</li>
+<li><strong>内存</strong>：8GB+（质量版5.9GB）或4GB+（体积版3.9GB）</li>
+<li><strong>GPU加速</strong>：支持CUDA（NVIDIA GPU）和Metal（Apple Silicon）加速推理</li>
+<li><strong>推荐配置</strong>：RTX 4090 / M3 Max及以上可获得最佳速度</li>
+</ul>
+
+<h2>如何免费下载和使用</h2>
+
+<h3>第一步：获取模型文件</h3>
+<p>模型托管在HuggingFace上，Apache 2.0许可证，完全免费：</p>
+<ul>
+<li><strong>标准量化版（GGUF）</strong>：<code>prism-ml/Bonsai-27B-gguf</code> — 截至发布日已有约500次下载，101个点赞</li>
+<li><strong>三元量化版（GGUF）</strong>：<code>prism-ml/Ternary-Bonsai-27B-gguf</code> — 最新量化方案，163个点赞</li>
+<li>可用格式：F16（全精度参考）、Q1_0（1位量化）、Q2_0（2位量化）、Q4_1（4位量化）、bf16等</li>
+<li>多模态模块：mmproj-BF16.gguf / mmproj-Q8_0.gguf（用于视觉理解）</li>
+</ul>
+
+<h3>第二步：选择推理引擎</h3>
+<ul>
+<li><strong>llama.cpp</strong>：跨平台通用方案，支持CPU/GPU混合推理，命令行工具简单直观</li>
+<li><strong>MLX</strong>：Apple Silicon专属优化，iPhone和Mac上性能最佳</li>
+<li><strong>Ollama</strong>：开箱即用的本地LLM运行平台，一行命令即可运行</li>
+</ul>
+
+<h3>第三步：启动推理</h3>
+<p>使用llama.cpp的典型命令：</p>
+<pre><code># 运行标准量化版（5.9GB质量优先）
+llama-cli -m Bonsai-27B-Q1_0.gguf -p "你好，请介绍一下你自己" -n 512 --ctx-size 8192
+
+# 运行三元量化版（更低比特）
+llama-cli -m Ternary-Bonsai-27B-Q2_0.gguf -p "你好" -n 512
+
+# 启用GPU加速（CUDA）
+llama-cli -m Bonsai-27B-Q1_0.gguf -ngl 99 -p "你好" -n 512
+
+# 启用多模态（视觉理解）
+llava-cli -m Bonsai-27B-Q1_0.gguf -mmproj Bonsai-27B-mmproj-Q8_0.gguf -p "这张图片里有什么？" -image photo.jpg</code></pre>
+
+<p>使用Ollama的更简单方式：</p>
+<pre><code># 创建Modelfile
+FROM ./Bonsai-27B-Q1_0.gguf
+TEMPLATE """{{ if .System }}&lt;|im_start|&gt;system&lt;|im_sep|&gt;{{ .System }}&lt;|im_end|&gt;{{ end }}&lt;|im_start|&gt;user&lt;|im_sep|&gt;{{ .Prompt }}&lt;|im_end|&gt;&lt;|im_start|&gt;assistant&lt;|im_sep|&gt;"""
+PARAMETER num_ctx 8192
+
+# 构建并运行
+ollama create bonsai-27b -f Modelfile
+ollama run bonsai-27b "你好"</code></pre>
+
+<h2>实际应用场景</h2>
+
+<h3>1. 本地AI编程助手</h3>
+<p>27B参数的推理能力足以处理复杂的代码生成和调试任务。配合工具调用功能，可以作为本地IDE的智能助手，代码数据完全不离开你的电脑。</p>
+
+<h3>2. 智能体工作流</h3>
+<p>Bonsai 27B原生支持多步推理和工具调用。在本地设备上，你可以运行不需要联网的智能体工作流——比如自动化文档处理、数据分析、批量文件操作等，每个步骤的边际成本为零。</p>
+
+<h3>3. 隐私敏感场景</h3>
+<p>医疗记录分析、法律文档审阅、商业机密处理等场景下，本地部署确保数据永远不会离开你的设备。3.9GB的版本甚至可以在离网的手机上运行。</p>
+
+<h3>4. 混合部署架构</h3>
+<p>可以将非前沿任务和隐私敏感任务路由到本地Bonsai 27B，而将最复杂的推理任务交给云端旗舰模型。这种混合架构既节省成本又保证质量。</p>
+
+<h2>与其他本地大模型的对比</h2>
+
+<table>
+<thead>
+<tr><th>模型</th><th>参数量</th><th>文件大小</th><th>运行设备</th><th>许可证</th><th>价格</th></tr>
+</thead>
+<tbody>
+<tr><td>Bonsai 27B (Q1_0)</td><td>27B</td><td>5.9GB</td><td>笔记本/手机</td><td>Apache 2.0</td><td>免费</td></tr>
+<tr><td>Bonsai 27B (Q2_0)</td><td>27B</td><td>3.9GB</td><td>手机</td><td>Apache 2.0</td><td>免费</td></tr>
+<tr><td>Llama 3.1 70B</td><td>70B</td><td>~36GB (Q4)</td><td>高端PC</td><td>Llama 3.1</td><td>免费(受限)</td></tr>
+<tr><td>Mistral Large</td><td>~123B</td><td>N/A</td><td>云端API</td><td>proprietary</td><td>付费</td></tr>
+<tr><td>Qwen3.6 27B (原版)</td><td>27B</td><td>~54GB (FP16)</td><td>服务器</td><td>Apache 2.0</td><td>免费(云端API有限额)</td></tr>
+</tbody>
+</table>
+
+<p>Bonsai 27B的独特之处在于：它首次将27B级别的能力带到了消费级设备上，同时保持了Apache 2.0的宽松商用许可。</p>
+
+<h2>注意事项与局限性</h2>
+<ul>
+<li><strong>推理速度</strong>：在手机或纯CPU上，推理速度可能较慢（每秒几个token）。建议使用GPU加速（CUDA/Metal）以获得流畅体验</li>
+<li><strong>内存占用</strong>：虽然模型文件只有3.9-5.9GB，但运行时还需要额外的内存用于KV缓存。建议设备至少有8GB总内存</li>
+<li><strong>多模态支持</strong>：视觉理解需要额外加载mmproj模块，会额外占用约1-2GB内存</li>
+<li><strong>社区成熟度</strong>：作为7月中旬刚发布的模型，生态系统工具链还在发展中</li>
+</ul>
+
+<h2>总结</h2>
+
+<p>Bonsai 27B代表了<strong>边缘AI</strong>的一次重大飞跃。它将270亿参数的旗舰级AI能力压缩到不到6GB（质量版）甚至不到4GB（体积版），可以在日常笔记本和手机上本地运行。基于Qwen3.6 27B构建，采用Apache 2.0开源协议，完全免费下载使用。</p>
+
+<p>对于想要摆脱云端API依赖、保护隐私、或者仅仅想在自己的设备上体验旗舰级AI能力的用户来说，Bonsai 27B是目前最好的选择之一。无论是编程助手、智能体工作流还是隐私敏感任务，它都能胜任。</p>
+
+<p><strong>立即下载地址：</strong></p>
+<ul>
+<li>标准量化版：HuggingFace搜索 <code>prism-ml/Bonsai-27B-gguf</code></li>
+<li>三元量化版：HuggingFace搜索 <code>prism-ml/Ternary-Bonsai-27B-gguf</code></li>
+<li>官方资讯：PrismML官网 <code>prismml.com/news/bonsai-27b</code></li>
+</ul>
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="/zh" class="logo" style="color:#059669">AI<span class="accent" style="color:#6366F1">FreePlan</span></a><p>AI驱动的免费工具聚合平台，永久免费。</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h4>产品</h4><a href="/zh/all">全部工具</a><a href="/zh/guides">攻略</a></div>
+      <div class="footer-col"><h4>法律</h4><a href="/zh/privacy">隐私政策</a><a href="/zh/terms">用户协议</a></div>
+    </div>
+  </div>
+  <div class="container footer-bottom">&copy; 2026 AIFreePlan. All rights reserved.</div>
+</footer>
+</body></html>

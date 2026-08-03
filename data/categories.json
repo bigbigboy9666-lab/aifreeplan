@@ -1,88 +1,86 @@
 {
   "version": "2.0",
-  "generatedAt": "2026-06-19",
-  "totalCategories": 9,
+  "generatedAt": "2026-07-06",
   "categories": [
     {
-      "id": "llm",
-      "count": 20,
-      "nameZh": "AI大模型",
-      "nameEn": "AI Large Models",
-      "icon": "🤖",
-      "description": "Large language models and chatbots",
-      "descriptionZh": "AI大语言模型"
-    },
-    {
-      "id": "image",
-      "count": 16,
-      "nameZh": "图片生成",
-      "nameEn": "Image Generation",
-      "icon": "🖼️",
-      "description": "AI-powered image generation tools",
-      "descriptionZh": "AI图片生成工具"
-    },
-    {
-      "id": "coding",
-      "count": 14,
-      "nameZh": "编程助手",
-      "nameEn": "Coding Assistants",
-      "icon": "💻",
-      "description": "AI coding assistants and developer tools",
-      "descriptionZh": "AI编程助手"
-    },
-    {
-      "id": "video",
+      "zh": "视频生成",
+      "en": "Video Generation",
       "count": 10,
-      "nameZh": "视频生成",
-      "nameEn": "Video Generation",
-      "icon": "🎬",
-      "description": "AI-powered video generation tools",
-      "descriptionZh": "AI视频生成工具"
+      "emoji": "🎬",
+      "color": "#EF4444",
+      "id": "video",
+      "descriptionZh": "AI视频生成工具免费额度汇总，包括文字转视频、图片转视频、视频编辑等",
+      "descriptionEn": "Free tier comparison for AI video generation tools including text-to-video, image-to-video, and video editing"
     },
     {
+      "zh": "AI大模型",
+      "en": "AI LLM",
+      "count": 20,
+      "emoji": "🤖",
+      "color": "#10B981",
+      "id": "llm",
+      "descriptionZh": "AI大语言模型免费额度汇总，包括对话、写作、编程等各种用途的LLM",
+      "descriptionEn": "Free tier comparison for AI large language models including chat, writing, coding and more"
+    },
+    {
+      "zh": "编程助手",
+      "en": "Coding Assistant",
+      "count": 15,
+      "emoji": "💻",
+      "color": "#3B82F6",
+      "id": "coding",
+      "descriptionZh": "AI编程助手免费额度汇总，包括代码补全、代码审查、自动测试等",
+      "descriptionEn": "Free tier comparison for AI coding assistants including code completion, review, and testing"
+    },
+    {
+      "zh": "AI助手",
+      "en": "AI Assistant",
+      "count": 9,
+      "emoji": "🤝",
+      "color": "#8B5CF6",
       "id": "ai-assistant",
-      "count": 5,
-      "nameZh": "AI助手",
-      "nameEn": "AI Assistants",
-      "icon": "🤝",
-      "description": "General-purpose AI assistants",
-      "descriptionZh": "AI智能助手"
+      "descriptionZh": "AI助手工具免费额度汇总，包括语音助手、日程管理、知识整理等",
+      "descriptionEn": "Free tier comparison for AI assistant tools including voice assistants, scheduling, and knowledge management"
     },
     {
-      "id": "productivity",
-      "count": 3,
-      "nameZh": "办公效率",
-      "nameEn": "Productivity",
-      "icon": "📊",
-      "description": "AI-powered productivity and office tools",
-      "descriptionZh": "AI办公效率工具"
+      "zh": "图片生成",
+      "en": "Image Generation",
+      "count": 16,
+      "emoji": "🖼️",
+      "color": "#F59E0B",
+      "id": "image",
+      "descriptionZh": "AI图片生成工具免费额度汇总，包括文生图、图生图、图片编辑等",
+      "descriptionEn": "Free tier comparison for AI image generation tools including text-to-image, image-to-image, and editing"
     },
     {
-      "id": "chat",
-      "count": 2,
-      "nameZh": "AI对话",
-      "nameEn": "AI Chat",
-      "icon": "💬",
-      "description": "AI chat and conversation platforms",
-      "descriptionZh": "AI对话平台"
-    },
-    {
-      "id": "agent",
-      "count": 2,
-      "nameZh": "智能体平台",
-      "nameEn": "Agent Platform",
-      "icon": "🧩",
-      "description": "AI agent development platforms",
-      "descriptionZh": "AI智能体开发平台"
-    },
-    {
-      "id": "audio",
+      "zh": "AI音乐",
+      "en": "AI Music",
       "count": 1,
-      "nameZh": "AI音乐",
-      "nameEn": "AI Music",
-      "icon": "🎵",
-      "description": "AI music and audio generation tools",
-      "descriptionZh": "AI音乐生成工具"
+      "emoji": "🎵",
+      "color": "#14B8A6",
+      "id": "audio",
+      "descriptionZh": "AI音乐和音频工具免费额度汇总，包括音乐生成、语音合成、音效制作等",
+      "descriptionEn": "Free tier comparison for AI music and audio tools including music generation, TTS, and sound effects"
+    },
+    {
+      "zh": "API平台",
+      "en": "API Platform",
+      "count": 17,
+      "emoji": "🔌",
+      "color": "#6366F1",
+      "id": "api-platform",
+      "descriptionZh": "AI API平台免费额度汇总，包括模型API调用、推理服务等",
+      "descriptionEn": "Free tier comparison for AI API platforms including model API calls and inference services"
+    },
+    {
+      "zh": "办公效率",
+      "en": "Productivity",
+      "count": 3,
+      "emoji": "📊",
+      "color": "#EC4899",
+      "id": "productivity",
+      "descriptionZh": "AI办公效率工具免费额度汇总，包括文档处理、会议记录、翻译等",
+      "descriptionEn": "Free tier comparison for AI productivity tools including document processing, meeting notes, and translation"
     }
   ]
 }

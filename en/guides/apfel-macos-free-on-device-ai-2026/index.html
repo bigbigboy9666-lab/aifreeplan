@@ -1,6 +1,103 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Apfel leverages macOS Tahoes built-in 3B parameter model to provide completely free, offline, privacy-preserving local AI. One brew install, zero config, supports CLI/OpenAI-compatible server/MCP protocol."><meta name="robots" content="index, follow"><link rel="canonical" href="https://aifreeplan.com/en/guides/apfel-macos-free-on-device-ai-2026/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><!-- hreflang tags --><link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/apfel-macos-free-on-device-ai-2026/"><link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/apfel-macos-free-on-device-ai-2026/"><link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/apfel-macos-free-on-device-ai-2026/"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:title" content="Apfel: Complete Guide to macOS Tahoe Built-in Free AI - Zero Cost On-Device - AI Free Plan"><meta property="og:description" content="Apfel leverages macOS Tahoes built-in 3B parameter model to provide completely free, offline, privacy-preserving local AI. One brew install, zero config, supports CLI/OpenAI-compatible server/MCP protocol."><meta property="og:url" content="https://aifreeplan.com/en/guides/apfel-macos-free-on-device-ai-2026/"><meta property="og:site_name" content="AI Free Plan"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://aifreeplan.com/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="AIFreePlan - AI Free Tier Aggregator"><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Apfel: Complete Guide to macOS Tahoe Built-in Free AI - Zero Cost On-Device - AI Free Plan"><meta name="twitter:description" content="Apfel leverages macOS Tahoes built-in 3B parameter model to provide completely free, offline, privacy-preserving local AI. One brew install, zero config, supports CLI/OpenAI-compatible server/MCP protocol."><meta name="twitter:image" content="https://aifreeplan.com/og-image.png"><title>Apfel: Complete Guide to macOS Tahoe Built-in Free AI - Zero Cost On-Device - AI Free Plan</title><!-- JSON-LD --><!-- Homepage: WebSite + Organization Schema --><link rel="stylesheet" href="/_astro/BaseLayout.BR2ccUcH.css"></head> <body class="min-h-screen flex flex-col"> <header class="bg-white border-b border-border sticky top-0 z-50"> <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between"> <a href="/en" class="text-xl font-bold text-primary">
-🤖 AI Free Plan
-</a> <div class="flex items-center gap-4"> <a href="/en" class="text-sm text-text hover:text-primary"> Home </a> <a href="/en/guides" class="text-sm text-text hover:text-primary"> Guides </a> <a href="/en/tools" class="text-sm text-text hover:text-primary"> Tools </a> <a href="/zh" class="text-sm text-text hover:text-primary"> 中文 </a> </div> </nav> </header> <main class="flex-1 max-w-6xl mx-auto px-4 py-8 w-full">  <div class="max-w-4xl mx-auto"> <a href="/en/guides" class="text-sm text-text-muted hover:text-primary mb-6 inline-block">&larr; Back to Guides</a> <h1 class="text-3xl font-bold mb-4">Apfel: Complete Guide to macOS Tahoe Built-in Free AI - Zero Cost On-Device</h1> <p class="text-text-muted mb-8">Apfel leverages macOS Tahoes built-in 3B parameter model to provide completely free, offline, privacy-preserving local AI. One brew install, zero config, supports CLI/OpenAI-compatible server/MCP protocol.</p> <div class="prose prose-lg max-w-none"> <div>>
-<nav class="breadcrumb"><a href="/en">Home</a> <span class="breadcrumb-sep">›</span> <a href="/en/guides">Guides</a> <span class="breadcrumb-sep">›</span> <span>Apfel - macOS Tahoe内置免费AI工具，无需API Key，零成本本地运行3B参数模型 Free Usage Guide</span></nav>
-<h1>Apfel - macOS Tahoe内置免费AI工具，无需API Key，零成本本地运行3B参数模型 Free Usage Guide</h1><p>Apfel - macOS Tahoe内置免费AI工具，无需API Key，零成本本地运行3B参数模型 free usage tutorial with credits, limits, and tips.</p>
-</div> </div> </div>  </main> <footer class="bg-white border-t border-border mt-auto"> <div class="max-w-6xl mx-auto px-4 py-6 text-center text-sm text-text-muted"> <p>&copy; 2026 AI Free Plan. Free AI tools directory, updated daily.</p> </div> </footer> </body></html>
+<!DOCTYPE html><meta charset="utf-8"><h1 id="apfel-complete-guide-to-macos-tahoe-built-in-free-ai---zero-cost-on-device">Apfel: Complete Guide to macOS Tahoe Built-in Free AI - Zero Cost On-Device</h1>
+<p>Your Mac already has a free AI model inside it. You just didn’t know how to use it.</p>
+<p>macOS Tahoe (macOS 26) ships with a 3B parameter on-device LLM. The catch? Apple locked it behind Swift APIs — no terminal access, no HTTP endpoint.</p>
+<p>Apfel solves this. A CLI tool that lets you call your Mac’s built-in AI directly, no API Key, no internet, fully offline.</p>
+<hr>
+<h2 id="how-it-works">How It Works</h2>
+<p>Apple’s macOS Tahoe includes an on-device LLM designed for Apple Intelligence. But it’s only accessible through Swift’s Foundation framework — regular developers can’t call it from the terminal or any HTTP interface.</p>
+<p>Apfel wraps Apple’s underlying API and provides two things: a CLI interface and an OpenAI-compatible HTTP server. Suddenly you can use familiar commands and tools to call your Mac’s local AI.</p>
+<hr>
+<h2 id="installation">Installation</h2>
+<p><strong>Requirements:</strong></p>
+<ul>
+<li>macOS Tahoe (macOS 26) or later</li>
+<li>Apple Silicon chip (M1 or newer)</li>
+<li>Apple Intelligence enabled</li>
+</ul>
+<p>Installation is one command:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">brew</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> apfel</span></span></code></pre>
+<p>Update:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">brew</span><span style="color:#9ECBFF"> upgrade</span><span style="color:#9ECBFF"> apfel</span></span></code></pre>
+<p>Or compile from source (no Xcode needed, just Command Line Tools):</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> clone</span><span style="color:#9ECBFF"> https://github.com/Arthur-Ficial/apfel.git</span><span style="color:#E1E4E8"> &#x26;&#x26; </span><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> apfel</span><span style="color:#E1E4E8"> &#x26;&#x26; </span><span style="color:#B392F0">make</span><span style="color:#9ECBFF"> install</span></span></code></pre>
+<p>6.1k GitHub stars, actively maintained, last update early July 2026.</p>
+<hr>
+<h2 id="basic-usage">Basic Usage</h2>
+<p><strong>Ask a question directly:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">apfel</span><span style="color:#9ECBFF"> "What is the capital of Austria?"</span></span></code></pre>
+<p><strong>Stream output:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">apfel</span><span style="color:#79B8FF"> --stream</span><span style="color:#9ECBFF"> "Write a haiku about code"</span></span></code></pre>
+<p><strong>Attach file content:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">apfel</span><span style="color:#79B8FF"> -f</span><span style="color:#9ECBFF"> README.md</span><span style="color:#9ECBFF"> "Summarize this project"</span></span></code></pre>
+<p><strong>Pipe input:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#79B8FF">echo</span><span style="color:#9ECBFF"> "Summarize: $(</span><span style="color:#B392F0">cat</span><span style="color:#9ECBFF"> README.md)"</span><span style="color:#F97583"> |</span><span style="color:#B392F0"> apfel</span></span></code></pre>
+<p><strong>Permissive mode</strong> (reduces guardrail false positives for creative prompts):</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">apfel</span><span style="color:#79B8FF"> --permissive</span><span style="color:#9ECBFF"> "Write a dramatic opening for a thriller novel"</span></span></code></pre>
+<p><strong>Interactive chat:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">apfel</span><span style="color:#79B8FF"> --chat</span></span></code></pre>
+<hr>
+<h2 id="use-as-an-openai-compatible-server">Use as an OpenAI-Compatible Server</h2>
+<p>Apfel can run a local HTTP server on port 11434, fully OpenAI API-compatible:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6A737D"># Run in foreground</span></span>
+<span class="line"><span style="color:#B392F0">apfel</span><span style="color:#79B8FF"> --serve</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Run in background (like Ollama)</span></span>
+<span class="line"><span style="color:#B392F0">brew</span><span style="color:#9ECBFF"> services</span><span style="color:#9ECBFF"> start</span><span style="color:#9ECBFF"> apfel</span></span>
+<span class="line"><span style="color:#B392F0">brew</span><span style="color:#9ECBFF"> services</span><span style="color:#9ECBFF"> stop</span><span style="color:#9ECBFF"> apfel</span></span></code></pre>
+<p>Then any tool that supports OpenAI API can use it directly:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> openai </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> OpenAI</span></span>
+<span class="line"><span style="color:#E1E4E8">client </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> OpenAI(</span><span style="color:#FFAB70">base_url</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"http://localhost:11434/v1"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">response </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> client.chat.completions.create(</span></span>
+<span class="line"><span style="color:#FFAB70">    model</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"apple-foundationmodel"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#FFAB70">    messages</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">[{</span><span style="color:#9ECBFF">"role"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"user"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"content"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Hello"</span><span style="color:#E1E4E8">}]</span></span>
+<span class="line"><span style="color:#E1E4E8">)</span></span></code></pre>
+<p>Or with curl:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">curl</span><span style="color:#9ECBFF"> http://localhost:11434/v1/chat/completions</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#79B8FF">  -H</span><span style="color:#9ECBFF"> "Content-Type: application/json"</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#79B8FF">  -d</span><span style="color:#9ECBFF"> '{"model":"apple-foundationmodel","messages":[{"role":"user","content":"Hello"}]}'</span></span></code></pre>
+<hr>
+<h2 id="mcp-tool-support">MCP Tool Support</h2>
+<p>Apfel supports Model Context Protocol — attach custom tools:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">apfel</span><span style="color:#79B8FF"> --mcp</span><span style="color:#9ECBFF"> ./mcp/calculator/server.py</span><span style="color:#9ECBFF"> "What is 15 times 27?"</span></span></code></pre>
+<p>Now the AI can call calculators, file systems, network requests, and more.</p>
+<hr>
+<h2 id="built-in-demo-scripts">Built-in Demo Scripts</h2>
+<p>Apfel ships with practical shell script wrappers:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6A737D"># List all demos</span></span>
+<span class="line"><span style="color:#B392F0">apfel</span><span style="color:#9ECBFF"> demos</span><span style="color:#9ECBFF"> ./apfel-demos</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># Then use them:</span></span>
+<span class="line"><span style="color:#B392F0">./apfel-demos/cmd</span><span style="color:#9ECBFF"> "find all .log files modified today"</span></span>
+<span class="line"><span style="color:#6A737D"># Output: $ find . -name "*.log" -mtime -1</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">./apfel-demos/explain</span><span style="color:#9ECBFF"> "What does this code do?"</span></span>
+<span class="line"><span style="color:#B392F0">./apfel-demos/oneliner</span><span style="color:#9ECBFF"> "One-liner Python to read CSV"</span></span>
+<span class="line"><span style="color:#B392F0">./apfel-demos/port</span><span style="color:#9ECBFF"> "Who's using this port?"</span></span></code></pre>
+<hr>
+<h2 id="difference-from-ollama">Difference from Ollama</h2>
+<p>Ollama requires downloading model files, consuming disk space, and dealing with compatibility issues. Apfel is completely different — it uses the model already on your Mac. Zero downloads, zero configuration.</p>
+<p>Ollama is for when you need specific models. Apfel is for “I just want to ask a quick question without installing anything.”</p>
+<p>They can coexist. Use Ollama for heavy lifting, Apfel for quick queries.</p>
+<hr>
+<h2 id="limitations">Limitations</h2>
+<p><strong>3B parameter model</strong>: 3 billion parameters is limited. Simple Q&#x26;A, code completion, text summarization — fine. Complex reasoning, long-form generation, specialized domain knowledge — not so much.</p>
+<p><strong>macOS Tahoe+ only</strong>: Requires macOS 26 or later, Apple Silicon. Intel Macs are out. Older macOS versions are out.</p>
+<p><strong>Apple Intelligence must be enabled</strong>: If your Mac hasn’t enabled Apple Intelligence, the local model may not be available.</p>
+<p><strong>No model customization</strong>: Unlike Ollama, you can’t swap models. It’s the 3B model Apple ships with macOS Tahoe.</p>
+<hr>
+<h2 id="who-should-use-this">Who Should Use This</h2>
+<ul>
+<li><strong>Mac users wanting quick AI access</strong>: No registration, no downloads, no configuration</li>
+<li><strong>Privacy-conscious users</strong>: Fully local, data never leaves your Mac</li>
+<li><strong>Developers integrating AI into toolchains</strong>: OpenAI-compatible interface, one command to connect</li>
+<li><strong>Budget-conscious AI enthusiasts</strong>: Zero cost, zero API Key, zero internet</li>
+</ul>
+<hr>
+<h2 id="summary">Summary</h2>
+<p>In one sentence: Apfel lets you call your Mac’s built-in 3B local AI model with no API Key, no internet, and a single <code>brew install</code>.</p>
+<p>It’s not all-powerful — a 3B parameter model has limits, and it only works on macOS Tahoe+ with Apple Silicon. But as a quick-query, local-testing, privacy-first AI tool, it’s clever.</p>
+<p>If your Mac supports macOS Tahoe, install it. It’s free, no Key, no network needed.</p>
+<p>Project: github.com/Arthur-Ficial/apfel
+Website: apfel.franzai.com</p>
+<hr>
+<p><em>Data current as of July 14, 2026. Apfel is an open-source project, actively maintained.</em></p>

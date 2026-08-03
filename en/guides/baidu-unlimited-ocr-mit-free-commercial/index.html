@@ -1,0 +1,92 @@
+<!DOCTYPE html><meta charset="utf-8"><h1 id="baidus-unlimited-ocr-mit-licensed-free-for-commercial-use-scans-dozens-of-pages-at-once">Baidu’s Unlimited OCR: MIT Licensed, Free for Commercial Use, Scans Dozens of Pages at Once</h1>
+<p>Baidu dropped a bomb on June 22.</p>
+<p>Unlimited OCR. Open source. MIT license. Free for commercial use. 10k GitHub stars in 5 days, now at 14.3k.</p>
+<p>What makes this different? Traditional OCR scans page by page, clearing memory after each page. Unlimited OCR eats dozens of pages in a single forward pass. No page-by-page processing, no external scheduling.</p>
+<p>Like a person copying a book — you don’t tear out each page and start over. You keep going. Unlimited OCR teaches AI to do the same.</p>
+<hr>
+<h2 id="core-technology-r-swa">Core Technology: R-SWA</h2>
+<p>The bottleneck is the KV Cache.</p>
+<p>Standard Transformer KV Cache grows linearly with output length. Ask it to generate 100k tokens and the cache needs to store 100k key-value pairs. GPU memory explodes, speed drops.</p>
+<p>Baidu’s solution is Reference Sliding Window Attention (R-SWA).</p>
+<p>Here’s the idea: when generating each token, the model sees all the raw image information and prompts (called “reference tokens,” which stay fixed). But for already-generated text, it only keeps attention on the most recent 128 tokens. Older generated text fades out, like human working memory.</p>
+<p>This makes KV Cache constant-sized — no matter how long the output, the cache upper bound stays fixed. Memory doesn’t blow up, speed stays consistent.</p>
+<p>Paper: arxiv.org/abs/2606.23050</p>
+<hr>
+<h2 id="model-specs">Model Specs</h2>
+<ul>
+<li>Total parameters: 3B</li>
+<li>Active parameters at inference: ~570M (MoE architecture, only activates some experts)</li>
+<li>Encoder: DeepEncoder with 16x visual token compression ratio</li>
+<li>Decoder: Standard multi-head attention replaced entirely with R-SWA</li>
+<li>Context window: 32K standard context</li>
+</ul>
+<p>570M active parameters is lightweight. DeepSeek OCR is similar at 500M. But despite the small footprint, it handles dozens of pages in one pass.</p>
+<hr>
+<h2 id="benchmark-results">Benchmark Results</h2>
+<p>OmniDocBench v1.6: <strong>93.92%</strong>.</p>
+<p>This beats the DeepSeek OCR baseline by 6.22 percentage points. DeepSeek OCR is already top-tier in end-to-end OCR, and Unlimited OCR pushed it further.</p>
+<p>OmniDocBench measures comprehensive document parsing: text recognition accuracy, layout preservation, table structure, formulas, multilingual mixing. 93.92% is state-of-the-art on this benchmark.</p>
+<hr>
+<h2 id="deployment-options">Deployment Options</h2>
+<p>Baidu provides five ways to use it, pick based on your hardware:</p>
+<p><strong>1. Transformers (simplest)</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> transformers </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> AutoModelForCausalLM, AutoProcessor</span></span>
+<span class="line"><span style="color:#E1E4E8">model </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> AutoModelForCausalLM.from_pretrained(</span><span style="color:#9ECBFF">"baidu/Unlimited-OCR"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">processor </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> AutoProcessor.from_pretrained(</span><span style="color:#9ECBFF">"baidu/Unlimited-OCR"</span><span style="color:#E1E4E8">)</span></span></code></pre>
+<p>Needs ~10-20GB VRAM. Runs on CPU but painfully slow.</p>
+<p><strong>2. vLLM (recommended, fastest)</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">docker</span><span style="color:#9ECBFF"> pull</span><span style="color:#9ECBFF"> vllm/vllm-openai:unlimited-ocr</span></span>
+<span class="line"><span style="color:#B392F0">docker</span><span style="color:#9ECBFF"> run</span><span style="color:#79B8FF"> --gpus</span><span style="color:#9ECBFF"> all</span><span style="color:#79B8FF"> -p</span><span style="color:#9ECBFF"> 8000:8000</span><span style="color:#9ECBFF"> vllm/vllm-openai:unlimited-ocr</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#79B8FF">  --model</span><span style="color:#9ECBFF"> baidu/Unlimited-OCR</span><span style="color:#79B8FF"> --served-model-name</span><span style="color:#9ECBFF"> Unlimited-OCR</span></span></code></pre>
+<p>vLLM support added June 28 via community contribution.</p>
+<p><strong>3. SGLang (good for batch processing)</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">python</span><span style="color:#9ECBFF"> infer.py</span><span style="color:#79B8FF"> --model_dir</span><span style="color:#9ECBFF"> baidu/Unlimited-OCR</span><span style="color:#79B8FF"> --batch</span></span></code></pre>
+<p>Auto-starts server, ideal for processing a folder of images or PDFs.</p>
+<p><strong>4. HuggingFace Spaces Demo (no setup needed)</strong>
+hf.space/baidu/Unlimited-OCR — just upload a document and see results.</p>
+<p><strong>5. Baidu Cloud Platform</strong>
+Baidu’s own cloud platform also hosts this model: cloud.baidu.com/doc/OCR. Good if you don’t want to manage servers.</p>
+<hr>
+<h2 id="comparison-with-paid-ocr-apis">Comparison with Paid OCR APIs</h2>
+<p>This is the real story.</p>
+<p>Mainstream OCR services — Tencent OCR, Baidu OCR, Alibaba Cloud OCR, TianTu OCR — charge per page. A few dozen pages costs a few yuan. Hundreds of pages runs you 10-20 yuan. Over time, that adds up.</p>
+<p>Unlimited OCR is completely free, MIT licensed, unlimited use. The only cost is your own GPU.</p>
+<p>The tradeoff: you deploy it yourself. You need a GPU with at least 10GB VRAM.</p>
+<p>Who should use it:</p>
+<ul>
+<li><strong>Individual developers / students</strong>: A used GPU is cheaper than monthly API bills</li>
+<li><strong>Small businesses</strong>: One-time GPU purchase beats recurring API fees</li>
+<li><strong>High-volume document processing</strong>: Contracts, papers, scanned books — page-by-page is too slow</li>
+<li><strong>Privacy-sensitive scenarios</strong>: Local deployment, data never leaves your machine</li>
+</ul>
+<p>Who shouldn’t bother:</p>
+<ul>
+<li><strong>No GPU available</strong>: Cloud deployment costs might exceed direct API calls</li>
+<li><strong>Occasional use</strong>: Registering for a paid API is simpler</li>
+<li><strong>Mobile / mini-programs</strong>: Model is too large to run on phones</li>
+</ul>
+<hr>
+<h2 id="technical-significance">Technical Significance</h2>
+<p>Unlimited OCR solves more than just OCR.</p>
+<p>The R-SWA “constant KV Cache” design can transfer to other long-sequence generation tasks — speech recognition (ASR), machine translation, long document summarization. These all share a pattern: fixed reference input, very long output.</p>
+<p>The paper mentions this explicitly. R-SWA’s core idea — keep reference inputs complete, limit output history to a local window — applies broadly.</p>
+<hr>
+<h2 id="ecosystem-support">Ecosystem Support</h2>
+<p>Baidu’s open-source package is well-supported:</p>
+<ul>
+<li>GitHub: github.com/baidu/Unlimited-OCR</li>
+<li>HuggingFace: huggingface.co/baidu/Unlimited-OCR</li>
+<li>ModelScope: modelscope.cn/models/PaddlePaddle/Unlimited-OCR</li>
+<li>Baidu Cloud Platform: cloud.baidu.com/doc/OCR</li>
+<li>HuggingFace Spaces Demo: hf.space/baidu/Unlimited-OCR</li>
+<li>vLLM Recipe: recipes.vllm.ai/baidu/Unlimited-OCR</li>
+</ul>
+<p>June 23: paper on arXiv. June 24: HF Spaces demo. June 28: vLLM support. July 3: Baidu Cloud integration. Fast iteration.</p>
+<hr>
+<h2 id="summary">Summary</h2>
+<p>In one sentence: Baidu open-sourced an MIT-licensed OCR model that scans dozens of pages at once, scores 93.92% on OmniDocBench, beats DeepSeek OCR by 6.22%, and hit 10k stars in 5 days.</p>
+<p>If you process lots of scanned documents or are tired of per-page OCR fees, this is worth trying.</p>
+<p>Lightweight model — 570M active parameters — runs on a 10GB GPU. Multiple deployment options: Transformers for simplicity, vLLM for speed, or Baidu Cloud if you don’t want to manage infrastructure.</p>
+<p>MIT license means free commercial use. This is genuinely disruptive for the paid OCR market.</p>
+<hr>
+<p><em>Data current as of July 14, 2026. Model and deployment options may change with updates. Check official documentation for the latest information.</em></p>

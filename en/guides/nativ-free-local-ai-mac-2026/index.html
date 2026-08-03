@@ -1,0 +1,194 @@
+<!DOCTYPE html><meta charset="utf-8"><h1 id="nativ-free-local-ai-desktop-app-run-open-models-on-apple-silicon---zero-subscription-zero-cloud-zero-accounts">Nativ Free Local AI Desktop App: Run Open Models on Apple Silicon - Zero Subscription, Zero Cloud, Zero Accounts</h1>
+<p>Nativ is a 100% open-source, MIT-licensed macOS-native AI app designed for Apple Silicon. Powered by the MLX framework, it runs frontier open models locally, supporting chat, code completion, voice transcription, and more. Completely free — no account registration, no subscription, no cloud connection needed.</p>
+<hr>
+<h2 id="what-is-nativ">What is Nativ</h2>
+<p>Nativ is a macOS native app built with SwiftUI, using MLX-VLM (Meta’s MLX inference framework) as the inference engine. It’s not just a chat interface — it’s a complete local AI workspace.</p>
+<p>Core features:</p>
+<ul>
+<li><strong>Local chat &#x26; vision</strong> — Streaming responses, image attachments, reasoning output</li>
+<li><strong>Model library management</strong> — Discover installed MLX models, one-click download, switch models</li>
+<li><strong>Performance analytics</strong> — Track requests, token usage, TTFT, decode speed</li>
+<li><strong>Local API server</strong> — OpenAI-compatible /v1/chat/completions endpoint</li>
+<li><strong>Coding agent integration</strong> — Codex, Claude Code, Pi, Hermes, OpenCode</li>
+<li><strong>Menu bar controls</strong> — Start/stop server, switch models, view stats</li>
+</ul>
+<hr>
+<h2 id="system-requirements">System Requirements</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Item</th><th>Requirement</th></tr></thead><tbody><tr><td>Hardware</td><td>Apple Silicon Mac (M1 or later)</td></tr><tr><td>OS</td><td>macOS 26+ (Sequoia)</td></tr><tr><td>Unified Memory</td><td>Depends on model size (see below)</td></tr><tr><td>License</td><td>MIT (completely free)</td></tr><tr><td>Network</td><td>Only needed for initial model download, fully offline at runtime</td></tr></tbody></table>
+<hr>
+<h2 id="supported-models">Supported Models</h2>
+<p>Nativ comes pre-integrated with curated open models from Google, Cohere, and Liquid AI:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Model</th><th>Source</th><th>Context Window</th><th>Model Size</th><th>Capabilities</th></tr></thead><tbody><tr><td>Gemma 4 E2B Instruct</td><td>Google</td><td>128K</td><td>10.28 GB</td><td>Vision + Audio</td></tr><tr><td>North Mini Code</td><td>Cohere</td><td>500K</td><td>19.38 GB</td><td>Code + Tool Use</td></tr><tr><td>LFM2.5-VL 1.6B</td><td>Liquid AI</td><td>128K</td><td>3.20 GB</td><td>Vision + Language</td></tr></tbody></table>
+<p>Memory requirements:</p>
+<ul>
+<li>3.2 GB model: Requires at least 8GB unified memory</li>
+<li>10.28 GB model: Requires at least 16GB unified memory</li>
+<li>19.38 GB model: Requires at least 24GB unified memory (M2/M3 Max or M4 Pro/Max)</li>
+</ul>
+<hr>
+<h2 id="why-nativ-matters">Why Nativ Matters</h2>
+<h3 id="1-true-local-processing--zero-data-leakage">1. True Local Processing — Zero Data Leakage</h3>
+<p>All inference runs on your Mac. Your prompts, conversation history, and image attachments never leave your device.</p>
+<h3 id="2-completely-free-mit-license">2. Completely Free, MIT License</h3>
+<p>Free download and use with no usage limits. Anyone can review the source code, fork and modify. No “enterprise edition” traps.</p>
+<h3 id="3-local-api-server">3. Local API Server</h3>
+<p>Starts a local API server at <a href="http://127.0.0.1:8080">http://127.0.0.1:8080</a> by default, supporting both OpenAI and Anthropic compatible formats.</p>
+<h3 id="4-coding-agent-integration">4. Coding Agent Integration</h3>
+<p>Built-in support for Codex, Claude Code, Pi, Hermes, and OpenCode.</p>
+<hr>
+<h2 id="installation">Installation</h2>
+<p><strong>Method 1: Direct Download (Recommended)</strong></p>
+<ol>
+<li>Visit Nativ GitHub Releases page</li>
+<li>Download the latest Nativ-*.dmg file (~342 MB)</li>
+<li>Drag Nativ to Applications folder</li>
+<li>On first launch, select an installed model or continue on-demand</li>
+</ol>
+<p><strong>Method 2: Build from Source</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">brew</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> xcodegen</span></span>
+<span class="line"><span style="color:#B392F0">make</span><span style="color:#9ECBFF"> xcode-generate</span></span>
+<span class="line"><span style="color:#B392F0">make</span><span style="color:#9ECBFF"> xcode-build</span></span>
+<span class="line"><span style="color:#B392F0">open</span><span style="color:#9ECBFF"> build/XcodeDerivedData/Build/Products/Debug/Nativ.app</span></span></code></pre>
+<hr>
+<h2 id="comparison-with-cloud-ai-services">Comparison with Cloud AI Services</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Feature</th><th>Nativ (Local)</th><th>ChatGPT</th><th>Claude</th><th>Gemini</th></tr></thead><tbody><tr><td>Cost</td><td>✅ Completely free</td><td>$20/mo</td><td>Pay-per-use</td><td>Partial free</td></tr><tr><td>Privacy</td><td>✅ Data stays on device</td><td>❌ Data uploaded</td><td>❌ Data uploaded</td><td>❌ Data uploaded</td></tr><tr><td>Offline</td><td>✅ Fully offline</td><td>❌ Requires internet</td><td>❌ Requires internet</td><td>❌ Requires internet</td></tr><tr><td>Custom models</td><td>✅ Switch any MLX model</td><td>❌ Fixed model</td><td>❌ Fixed model</td><td>❌ Fixed model</td></tr><tr><td>API compatibility</td><td>✅ OpenAI + Anthropic</td><td>—</td><td>✅ Anthropic</td><td>✅ OpenAI compatible</td></tr><tr><td>Coding agent integration</td><td>✅ Built-in</td><td>❌</td><td>❌</td><td>❌</td></tr></tbody></table>
+<hr>
+<h2 id="use-cases">Use Cases</h2>
+<ol>
+<li><strong>Privacy-sensitive conversations</strong> — Medical, legal, finance professionals can use local models to ensure sensitive information never leaves the device</li>
+<li><strong>Coding assistance</strong> — Configure coding agents to use local models for Copilot-like experience without paying</li>
+<li><strong>Offline work</strong> — Use without internet connection</li>
+<li><strong>Model research</strong> — Performance analytics panel for monitoring different models</li>
+</ol>
+<hr>
+<h2 id="faq">FAQ</h2>
+<p><strong>Q: Is Nativ really completely free?</strong>
+A: Yes, MIT license. Free download and use with no usage limits.</p>
+<p><strong>Q: Does it require internet?</strong>
+A: Only for initial model download. Fully offline at runtime.</p>
+<p><strong>Q: Does it support Intel Mac?</strong>
+A: No, Apple Silicon only (M1/M2/M3/M4).</p>
+<p><strong>Q: Can I switch between different models?</strong>
+A: Yes, download more MLX format models from Hugging Face.</p>
+<hr>
+<h2 id="summary">Summary</h2>
+<p>Nativ is the most complete local AI solution for Apple Silicon. Completely free and open-source, no accounts or subscriptions needed, supports multiple models and coding agent integration. The best choice for users who value privacy and don’t want to rely on cloud services.</p>
+<p>Project: github.com/tylerneely/nativ</p>
+<hr>
+<p><em>Data current as of July 21, 2026. Free policies may change.</em></p>

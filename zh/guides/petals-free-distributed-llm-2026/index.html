@@ -1,0 +1,123 @@
+<!DOCTYPE html><meta charset="utf-8"><h1 id="petals免费攻略bittorrent-style分布式网络免费运行llama-31-405b超大模型">Petals免费攻略：BitTorrent-style分布式网络，免费运行Llama 3.1 405B超大模型</h1>
+<p>Petals是由BigScience实验室出品的分布式LLM推理网络，用户共享GPU算力，任何人都可以免费使用Llama 3.1 405B、Mixtral 8x22B等超大模型。</p>
+<hr>
+<h2 id="petals到底是什么">Petals到底是什么</h2>
+<p>Petals的核心思想是用分布式计算的方式运行超大模型。传统上，要运行一个405B参数的模型（如Llama 3.1 405B），你需要至少8块A100 80GB显卡，成本超过10万美元。</p>
+<p>Petals的做法是：</p>
+<ul>
+<li><strong>模型分片</strong> — 将一个大模型切成多个层（layers），每个节点只负责其中几层</li>
+<li><strong>分布式推理</strong> — 请求从第一个节点开始，逐层传递，每层由不同的志愿者GPU处理</li>
+<li><strong>类似BitTorrent</strong> — 就像BT下载时多人共享文件块一样，Petals中多人共享模型层</li>
+<li><strong>速度</strong> — 单批次推理可达Llama 2 70B约6 tokens/sec，Falcon 180B约4 tokens/sec</li>
+</ul>
+<p>这意味着你用一台普通的消费级GPU（甚至免费的Google Colab），就能参与到全球分布式推理网络中，同时免费使用比GPT-4还要大的模型。</p>
+<hr>
+<h2 id="支持的模型和免费额度">支持的模型和免费额度</h2>
+<p>Petals目前支持的模型包括：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>模型</th><th>参数量</th><th>最大速度</th><th>免费使用</th></tr></thead><tbody><tr><td>Llama 3.1 405B</td><td>4050亿</td><td>~4 tok/sec</td><td>完全免费</td></tr><tr><td>Llama 2 70B</td><td>700亿</td><td>~6 tok/sec</td><td>完全免费</td></tr><tr><td>Mixtral 8x22B</td><td>1410亿（MoE）</td><td>~8 tok/sec</td><td>完全免费</td></tr><tr><td>Falcon 180B</td><td>1800亿</td><td>~4 tok/sec</td><td>完全免费</td></tr><tr><td>BLOOM 176B</td><td>1760亿</td><td>~3 tok/sec</td><td>完全免费</td></tr></tbody></table>
+<p>所有这些模型都可以完全免费使用，不需要注册、不需要API Key、不需要付费。唯一的条件是：你也可以贡献自己的GPU算力来加速网络（当然不贡献也能用）。</p>
+<p>对比一下：Llama 3.1 405B在API上调用，每100万token收费$60（Anyscale定价），而Petals完全免费。</p>
+<hr>
+<h2 id="怎么用两种使用方式">怎么用：两种使用方式</h2>
+<h3 id="方式一google-colab零配置完全免费">方式一：Google Colab（零配置，完全免费）</h3>
+<ol>
+<li><strong>打开Colab</strong> — 访问 colab.research.google.com，新建Notebook</li>
+<li><strong>设置GPU</strong> — 菜单栏 → 运行时 → 更改运行时类型 → 选择T4 GPU</li>
+<li><strong>运行安装</strong> — 粘贴以下代码并运行：</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#FDAEB7;font-style:italic">!</span><span style="color:#E1E4E8">pip install petals</span><span style="color:#F97583">-</span><span style="color:#E1E4E8">tokenizers transformers torch</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> petals</span></span>
+<span class="line"><span style="color:#E1E4E8">client </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> petals.InferenceClient(</span><span style="color:#9ECBFF">"bigscience/meta-llama-Llama-3.1-405B-Instruct"</span><span style="color:#E1E4E8">)</span></span></code></pre>
+<ol start="4">
+<li><strong>开始对话</strong> — 使用client.generate()方法发送prompt，等待回复</li>
+</ol>
+<p>Colab免费版每天提供约12小时的T4 GPU时间，足够日常使用。</p>
+<h3 id="方式二本地部署如果你有gpu">方式二：本地部署（如果你有GPU）</h3>
+<ol>
+<li><strong>安装</strong> — pip install petals-inference</li>
+<li><strong>启动</strong> — python -m petals.main —model meta-llama/Llama-3.1-405B-Instruct</li>
+<li><strong>使用</strong> — 通过HTTP API或Python SDK连接</li>
+</ol>
+<hr>
+<h2 id="技术原理">技术原理</h2>
+<p>Petals使用了一种创新的分布式推理技术：</p>
+<ol>
+<li><strong>模型分片</strong>：将大模型按层分割，每层分配给不同的节点</li>
+<li><strong>主动路由</strong>：客户端智能选择延迟最低的节点路径</li>
+<li><strong>缓存优化</strong>：中间结果在节点间缓存，减少重复计算</li>
+<li><strong>容错机制</strong>：节点掉线时自动重新路由，保证可用性</li>
+</ol>
+<p>这种架构使得Petals能够在保持较高推理速度的同时，支持远超单卡显存的大模型。</p>
+<hr>
+<h2 id="优缺点分析">优缺点分析</h2>
+<p><strong>优点</strong>：</p>
+<ul>
+<li>✅ 完全免费，无需注册</li>
+<li>✅ 可运行超大模型（405B参数）</li>
+<li>✅ 社区驱动，持续更新</li>
+<li>✅ GitHub 10300+星，活跃维护</li>
+</ul>
+<p><strong>缺点</strong>：</p>
+<ul>
+<li>❌ 速度受网络状况影响</li>
+<li>❌ 需要稳定的网络连接</li>
+<li>❌ 部分模型可能需要等待队列</li>
+<li>❌ 不支持所有OpenAI API功能</li>
+</ul>
+<hr>
+<h2 id="常见问题">常见问题</h2>
+<p><strong>Q: Petals真的完全免费吗？</strong>
+A: 是的，完全免费。无需注册、无需API Key、无需付费。唯一要求是参与分布式网络的用户可以贡献自己的GPU。</p>
+<p><strong>Q: 速度有多快？</strong>
+A: 取决于网络状况和可用节点。Llama 2 70B约6 tokens/sec，Llama 3.1 405B约4 tokens/sec，足够聊天和交互式应用。</p>
+<p><strong>Q: 需要自己的GPU吗？</strong>
+A: 不需要。你可以使用Google Colab免费版，或者本地如果有GPU也可以贡献算力加速网络。</p>
+<p><strong>Q: 支持哪些模型？</strong>
+A: 支持Llama 3.1 405B、Llama 2 70B、Mixtral 8x22B、Falcon 180B、BLOOM 176B等多个大模型。</p>
+<hr>
+<h2 id="总结">总结</h2>
+<p>Petals是BigScience实验室出品的分布式LLM推理网络，采用BitTorrent-style架构，让用户共享GPU算力。任何人都可以免费使用Llama 3.1 405B等超大模型，无需注册和付费。通过Google Colab或本地部署都可以使用。</p>
+<p>项目地址：github.com/bigscience-workshop/petals</p>
+<hr>
+<p><em>数据截至2026年7月23日。免费政策可能调整。</em></p>
