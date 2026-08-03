@@ -45,11 +45,9 @@ jobs:
           branch: main
           apiToken: ${{ secrets.CF_PAGES_TOKEN }}
 
-      - name: Trigger deploy notification
+      - name: Notify success
         if: success()
         run: |
-          echo "aifreeplan.com: DEPLOY OK — 自动部署成功"
-          curl -s -X POST "https://api.github.com/repos/bigbigboy9666-lab/aifreeplan/dispatches" \
-            -H "Accept: application/vnd.github.v3+json" \
-            -H "Authorization: token ${{ secrets.DEPLOY_KEY }}" \
-            -d '{"event_type": "deploy-success", "client_payload": {"tools": "99", "guides": "43"}}' || true
+          echo "✅ aifreeplan 自动部署成功！"
+          echo "网站状态：$(curl -s https://aifreeplan.com/data/tools.json | python3 -c 'import sys,json; d=json.load(sys.stdin); print(f"{d.get(\"totalTools\", \"?\")} 工具")')"
+          echo "指南数量：$(curl -s https://aifreeplan.com/data/guides.json | python3 -c 'import sys,json; d=json.load(sys.stdin); print(f"{len(d.get(\"guides\", []))} 篇")')"
