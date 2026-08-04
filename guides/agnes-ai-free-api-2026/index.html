@@ -1,0 +1,98 @@
+<!DOCTYPE html><meta charset="utf-8"><h1 id="agnes-ai免费api2026年6月起无限期免费支持文本图片视频">Agnes AI免费API：2026年6月起无限期免费，支持文本/图片/视频</h1>
+<p>6月1号，Agnes AI干了件狠事。</p>
+<p>文本、图片、视频三个模型的API全部免费开放，无限期，不要订阅，不要等名单。</p>
+<p>全球第一家全模态（文本+图片+视频）同时免费的AI平台。</p>
+<hr>
+<h2 id="三个模型三个方向">三个模型，三个方向</h2>
+<p><strong>文本模型：Agnes-2.0-Flash</strong></p>
+<ul>
+<li>上下文：256K（后来升级到1M）</li>
+<li>最大输出：65.5K</li>
+<li>擅长：多轮对话、代码生成、Agent工作流、工具调用</li>
+<li>用途：聊天、写代码、做Agent规划、跑自动化流程</li>
+</ul>
+<p><strong>图片模型：Agnes-Image-2.0-Flash</strong></p>
+<ul>
+<li>支持：文生图、图生图</li>
+<li>用途：封面图、电商主图、信息图、社交媒体配图</li>
+<li>速度：比大多数免费生图API都快</li>
+</ul>
+<p><strong>视频模型：Agnes-Video-2.0</strong></p>
+<ul>
+<li>支持：文生视频、图生视频、关键帧动画</li>
+<li>特点：音画同步生成</li>
+<li>注意：异步任务，先创建任务再轮询结果，高峰期要排队</li>
+</ul>
+<hr>
+<h2 id="怎么注册">怎么注册</h2>
+<ol>
+<li>打开 platform.agnes-ai.com</li>
+<li>用邮箱注册账号（跟普通用户端是分开的，API平台专门给开发者用）</li>
+<li>登录后创建API Key</li>
+<li>复制Key，开始调用</li>
+</ol>
+<p>API Key创建很简单，平台界面上有一个明显的按钮。</p>
+<hr>
+<h2 id="接入方式">接入方式</h2>
+<p>文本模型走OpenAI兼容接口，几乎所有主流框架都能直接接：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Base URL: https://apihub.agnes-ai.com/v1</span></span>
+<span class="line"><span>模型名: agnes-2.0-flash</span></span></code></pre>
+<p>Python示例：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> openai </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> OpenAI</span></span>
+<span class="line"><span style="color:#E1E4E8">client </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> OpenAI(</span><span style="color:#FFAB70">api_key</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"YOUR_KEY"</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">base_url</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"https://apihub.agnes-ai.com/v1"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">response </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> client.chat.completions.create(</span></span>
+<span class="line"><span style="color:#FFAB70">    model</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"agnes-2.0-flash"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#FFAB70">    messages</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">[{</span><span style="color:#9ECBFF">"role"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"user"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"content"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"你好"</span><span style="color:#E1E4E8">}]</span></span>
+<span class="line"><span style="color:#E1E4E8">)</span></span></code></pre>
+<p>图片模型走单独的接口：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>POST https://apihub.agnes-ai.com/v1/images/generations</span></span></code></pre>
+<p>视频模型也是单独的异步接口：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>POST https://apihub.agnes-ai.com/v1/videos/generations</span></span></code></pre>
+<p>先POST创建任务，拿到task_id，然后轮询结果。视频生成比较吃资源，排队是正常的。</p>
+<hr>
+<h2 id="能接入哪些工具">能接入哪些工具</h2>
+<p>文本模型因为是OpenAI兼容格式，几乎所有支持自定义API的工具都能接：</p>
+<ul>
+<li><strong>Hermes Agent</strong> — 配置自定义模型提供商，填API Key、Base URL和模型名</li>
+<li><strong>Claude Code / Cursor / Windsurf</strong> — 这些编程工具都支持自定义API</li>
+<li><strong>WorkBuddy</strong> — 可以打包成Skill，在对话里直接调用</li>
+<li><strong>n8n</strong> — 通过HTTP请求节点调用</li>
+<li><strong>OpenClaw</strong> — 配置为默认模型</li>
+</ul>
+<p>图片模型和视频模型目前主要走API调用，或者封装成MCP工具给主模型调用。</p>
+<hr>
+<h2 id="实测效果">实测效果</h2>
+<p>文本模型：写代码能力不错。让它做一个高德地图风格的App界面，或者Three.js粒子系统，都能直接出可运行的代码。复杂结构化任务的表现超出预期。</p>
+<p>图片模型：理解Prompt的能力很强。赛博朋克雨夜东京、电商主图、信息图文案排版，都能准确还原需求。速度也快。</p>
+<p>视频模型：15秒的龙族苏醒视频，电影级质感，鳞片细节、火焰物理、运镜节奏都有。音画同步效果也很自然。但视频生成要等，高峰期排队时间长。</p>
+<hr>
+<h2 id="注意事项">注意事项</h2>
+<p>免费不代表没限制。几个需要注意的点：</p>
+<p><strong>1. 没有SLA保障</strong>
+官方服务条款明确写了：免费计划不提供SLA，不保证服务可用性。高峰期可能遇到500、502、503错误。</p>
+<p><strong>2. 视频生成要排队</strong>
+异步任务，创建后需要轮询。高峰期排队时间不确定，别指望即时出结果。</p>
+<p><strong>3. “无限期免费”不等于”永久免费”</strong>
+历史上不少免费API后来都改了策略。阿里云之前的iFlow CLI也是”永久免费”后来停了。Agnes现在确实是免费的，但长期能不能撑住，要看平台策略和商业化节奏。</p>
+<p><strong>4. 适合做原型，不适合做生产</strong>
+现阶段最适合的用法：做Demo、跑原型、批量试封面方向、给Agent接备用模型、生成内部素材。正式上线还是建议用付费方案。</p>
+<hr>
+<h2 id="为什么值得关注">为什么值得关注</h2>
+<p>Agnes AI是全球Top 10的AI Lab，旗下模型多次上榜国际权威评测：</p>
+<ul>
+<li>Agnes-2.0-Flash 进入 Claw-Eval 榜单</li>
+<li>Agnes-Image-2.0-Flash 进入 Artificial Analysis 图像编辑排行榜</li>
+<li>Agnes-Video-2.0 进入 Artificial Analysis 文生视频排行榜</li>
+</ul>
+<p>更重要的是，它是全球第一家把文本、图片、视频三类API同时免费开放的。</p>
+<p>在Agent时代，调用成本会被放大。一个普通聊天可能只消耗一次Token，但一个Agent工作流可能要反复规划、搜索、调用工具、写代码、检查结果、失败重试。看起来用户只发了一句话，背后可能已经跑了十几轮模型调用。</p>
+<p>免费API的意义不在于省那几块钱，而在于降低了试错门槛。很多人不是没有需求，而是卡在早期验证阶段——还没跑通PMF，调用成本先来了。</p>
+<hr>
+<h2 id="总结">总结</h2>
+<p>一句话：Agnes AI从2026年6月1日起无限期免费开放文本、图片、视频三个模型的API，全球首个全模态免费平台。</p>
+<p>注册送Key，接入简单，OpenAI兼容格式。文本模型适合做Agent和代码，图片模型速度快效果好，视频模型质量高但要排队。</p>
+<p>免费但有风险——没有SLA，高峰期会报错，长期政策不确定。现阶段拿来跑原型、试素材、做Demo非常合适。</p>
+<p>平台地址：platform.agnes-ai.com
+API文档：apihub.agnes-ai.com</p>
+<hr>
+<p><em>数据截至2026年7月14日。免费策略可能随时调整，使用前建议到官网确认最新信息。</em></p>

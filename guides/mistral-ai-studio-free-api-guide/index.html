@@ -1,0 +1,60 @@
+<!DOCTYPE html><meta charset="utf-8"><h1 id="mistral-ai-studio-免费-api-额度与-ocr4-多语言文档识别完全攻略">Mistral AI Studio 免费 API 额度与 OCR4 多语言文档识别完全攻略</h1>
+<p>Mistral AI推出了免费API计划，支持Vibe、OCR和多语言文档识别。</p>
+<hr>
+<h2 id="mistral免费层">Mistral免费层</h2>
+<p><strong>Experiment Free Tier</strong>：</p>
+<ul>
+<li>限流免费访问Mistral模型</li>
+<li>支持Vibe、OCR等功能</li>
+<li>速率限制低于付费层</li>
+</ul>
+<p><strong>支持模型</strong>：</p>
+<ul>
+<li>Mistral Large</li>
+<li>Codestral（代码模型）</li>
+<li>Mistral Nemo</li>
+<li>以及最新的多语言OCR模型</li>
+</ul>
+<hr>
+<h2 id="ocr4-多语言文档识别">OCR4 多语言文档识别</h2>
+<p>Mistral最新推出的OCR4模型支持多语言文档识别：</p>
+<ul>
+<li>支持100+语言</li>
+<li>高精度文档解析</li>
+<li>支持扫描件、图片、PDF</li>
+<li>表格、公式、手写体识别</li>
+</ul>
+<p><strong>免费额度</strong>：</p>
+<ul>
+<li>Experiment tier提供有限免费调用</li>
+<li>具体额度需注册后查看</li>
+</ul>
+<hr>
+<h2 id="怎么获取api-key">怎么获取API Key</h2>
+<ol>
+<li>注册Mistral账号：console.mistral.ai</li>
+<li>创建API Key</li>
+<li>选择Experiment免费层</li>
+<li>开始调用</li>
+</ol>
+<p>Python示例：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> mistralai </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> Mistral</span></span>
+<span class="line"><span style="color:#E1E4E8">client </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> Mistral(</span><span style="color:#FFAB70">api_key</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"YOUR_KEY"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">response </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> client.chat.complete(</span></span>
+<span class="line"><span style="color:#FFAB70">    model</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"mistral-large-latest"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#FFAB70">    messages</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">[{</span><span style="color:#9ECBFF">"role"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"user"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"content"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"你好"</span><span style="color:#E1E4E8">}]</span></span>
+<span class="line"><span style="color:#E1E4E8">)</span></span></code></pre>
+<hr>
+<h2 id="适合谁用">适合谁用</h2>
+<ul>
+<li><strong>需要多语言OCR的开发者</strong> — Mistral OCR4支持100+语言</li>
+<li><strong>欧洲用户</strong> — Mistral是欧洲AI公司，数据合规</li>
+<li><strong>预算有限的</strong> — Experiment tier免费可用</li>
+<li><strong>代码生成</strong> — Codestral模型专为编程设计</li>
+</ul>
+<hr>
+<h2 id="总结">总结</h2>
+<p>Mistral AI提供免费API层，支持Vibe、OCR和多语言文档识别。OCR4模型支持100+语言，适合需要多语言文档处理的开发者。</p>
+<p>项目地址：mistral.ai</p>
+<hr>
+<p><em>数据截至2026年7月14日。免费政策可能调整。</em></p>

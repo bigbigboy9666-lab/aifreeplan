@@ -1,0 +1,103 @@
+<!DOCTYPE html><meta charset="utf-8"><h1 id="apfelmacos-tahoe内置免费ai完全攻略---无需api-key零成本本地运行">Apfel：macOS Tahoe内置免费AI完全攻略 - 无需API Key，零成本本地运行</h1>
+<p>你的Mac里已经藏着一个免费的AI模型，只是你不知道而已。</p>
+<p>macOS Tahoe（macOS 26）内置了一个3B参数的本地大语言模型。问题是，苹果把它锁在了Swift API里，终端没法用，也没有HTTP接口。</p>
+<p>Apfel就是来解决这个问题的。一个命令行工具，让你能直接调用Mac自带的AI模型，不需要API Key，不需要联网，完全离线。</p>
+<hr>
+<h2 id="原理">原理</h2>
+<p>苹果的macOS Tahoe内置了一个on-device LLM，专为Apple Intelligence设计。但这个模型只能通过Swift的Foundation框架访问，普通开发者没法从终端或者命令行调用。</p>
+<p>Apfel做的事情很简单：它封装了苹果的底层API，提供了一个CLI界面和一个OpenAI兼容的HTTP服务器。这样你就可以用熟悉的命令和工具来调用Mac本地的AI。</p>
+<hr>
+<h2 id="安装">安装</h2>
+<p><strong>前提条件</strong>：</p>
+<ul>
+<li>macOS Tahoe（macOS 26）或更高版本</li>
+<li>Apple Silicon芯片（M1及以上）</li>
+<li>Apple Intelligence功能已启用</li>
+</ul>
+<p>安装非常简单，一行命令：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">brew</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> apfel</span></span></code></pre>
+<p>更新：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">brew</span><span style="color:#9ECBFF"> upgrade</span><span style="color:#9ECBFF"> apfel</span></span></code></pre>
+<p>也可以从源码编译（不需要Xcode，只要有Command Line Tools）：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> clone</span><span style="color:#9ECBFF"> https://github.com/Arthur-Ficial/apfel.git</span><span style="color:#E1E4E8"> &#x26;&#x26; </span><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> apfel</span><span style="color:#E1E4E8"> &#x26;&#x26; </span><span style="color:#B392F0">make</span><span style="color:#9ECBFF"> install</span></span></code></pre>
+<p>GitHub上有6.1k星，项目活跃，最近更新在7月初。</p>
+<hr>
+<h2 id="基本用法">基本用法</h2>
+<p><strong>命令行直接提问</strong>：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">apfel</span><span style="color:#9ECBFF"> "What is the capital of Austria?"</span></span></code></pre>
+<p><strong>流式输出</strong>：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">apfel</span><span style="color:#79B8FF"> --stream</span><span style="color:#9ECBFF"> "Write a haiku about code"</span></span></code></pre>
+<p><strong>附带文件内容</strong>：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">apfel</span><span style="color:#79B8FF"> -f</span><span style="color:#9ECBFF"> README.md</span><span style="color:#9ECBFF"> "Summarize this project"</span></span></code></pre>
+<p><strong>管道输入</strong>：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#79B8FF">echo</span><span style="color:#9ECBFF"> "Summarize: $(</span><span style="color:#B392F0">cat</span><span style="color:#9ECBFF"> README.md)"</span><span style="color:#F97583"> |</span><span style="color:#B392F0"> apfel</span></span></code></pre>
+<p><strong>宽松模式</strong>（减少创意长提示的guardrail误判）：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">apfel</span><span style="color:#79B8FF"> --permissive</span><span style="color:#9ECBFF"> "Write a dramatic opening for a thriller novel"</span></span></code></pre>
+<p><strong>交互式聊天</strong>：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">apfel</span><span style="color:#79B8FF"> --chat</span></span></code></pre>
+<hr>
+<h2 id="当作openai兼容服务器用">当作OpenAI兼容服务器用</h2>
+<p>Apfel可以启动一个本地HTTP服务器，端口11434，完全兼容OpenAI API格式：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6A737D"># 前台运行</span></span>
+<span class="line"><span style="color:#B392F0">apfel</span><span style="color:#79B8FF"> --serve</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 后台运行（像Ollama一样）</span></span>
+<span class="line"><span style="color:#B392F0">brew</span><span style="color:#9ECBFF"> services</span><span style="color:#9ECBFF"> start</span><span style="color:#9ECBFF"> apfel</span></span>
+<span class="line"><span style="color:#B392F0">brew</span><span style="color:#9ECBFF"> services</span><span style="color:#9ECBFF"> stop</span><span style="color:#9ECBFF"> apfel</span></span></code></pre>
+<p>然后任何支持OpenAI API的工具都能直接用它：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> openai </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> OpenAI</span></span>
+<span class="line"><span style="color:#E1E4E8">client </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> OpenAI(</span><span style="color:#FFAB70">base_url</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"http://localhost:11434/v1"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">response </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> client.chat.completions.create(</span></span>
+<span class="line"><span style="color:#FFAB70">    model</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"apple-foundationmodel"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#FFAB70">    messages</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">[{</span><span style="color:#9ECBFF">"role"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"user"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"content"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Hello"</span><span style="color:#E1E4E8">}]</span></span>
+<span class="line"><span style="color:#E1E4E8">)</span></span></code></pre>
+<p>或者用curl：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">curl</span><span style="color:#9ECBFF"> http://localhost:11434/v1/chat/completions</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#79B8FF">  -H</span><span style="color:#9ECBFF"> "Content-Type: application/json"</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#79B8FF">  -d</span><span style="color:#9ECBFF"> '{"model":"apple-foundationmodel","messages":[{"role":"user","content":"Hello"}]}'</span></span></code></pre>
+<hr>
+<h2 id="mcp工具支持">MCP工具支持</h2>
+<p>Apfel还支持Model Context Protocol，可以挂载自定义工具：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">apfel</span><span style="color:#79B8FF"> --mcp</span><span style="color:#9ECBFF"> ./mcp/calculator/server.py</span><span style="color:#9ECBFF"> "What is 15 times 27?"</span></span></code></pre>
+<p>这样AI不仅能回答问题，还能调用计算器、文件系统、网络请求等外部工具。</p>
+<hr>
+<h2 id="内置演示脚本">内置演示脚本</h2>
+<p>Apfel自带一系列实用的shell脚本包装器：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6A737D"># 列出所有演示</span></span>
+<span class="line"><span style="color:#B392F0">apfel</span><span style="color:#9ECBFF"> demos</span><span style="color:#9ECBFF"> ./apfel-demos</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 然后可以这样用：</span></span>
+<span class="line"><span style="color:#B392F0">./apfel-demos/cmd</span><span style="color:#9ECBFF"> "find all .log files modified today"</span></span>
+<span class="line"><span style="color:#6A737D"># 输出: $ find . -name "*.log" -mtime -1</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">./apfel-demos/explain</span><span style="color:#9ECBFF"> "这段代码在做什么"</span></span>
+<span class="line"><span style="color:#B392F0">./apfel-demos/oneliner</span><span style="color:#9ECBFF"> "用一行Python读取CSV"</span></span>
+<span class="line"><span style="color:#B392F0">./apfel-demos/port</span><span style="color:#9ECBFF"> "这个端口被谁占用了"</span></span></code></pre>
+<hr>
+<h2 id="和ollama的区别">和Ollama的区别</h2>
+<p>Ollama需要你下载模型文件，占用磁盘空间，还可能遇到模型兼容性问题。Apfel完全不同——它用的是Mac里已经存在的模型，零下载，零配置。</p>
+<p>Ollama适合需要特定模型的场景。Apfel适合”我就想快速问个问题，不想装任何东西”的场景。</p>
+<p>两者可以共存。用Ollama跑大模型，用Apfel做快速查询。</p>
+<hr>
+<h2 id="局限性">局限性</h2>
+<p><strong>3B参数模型</strong>：30亿参数的模型能力有限。简单问答、代码补全、文本摘要没问题。但复杂的推理、长文本生成、专业领域知识就不行了。</p>
+<p><strong>仅限macOS Tahoe+</strong>：需要macOS 26或更高版本，Apple Silicon芯片。Intel Mac不行，旧版macOS也不行。</p>
+<p><strong>Apple Intelligence需要启用</strong>：如果你的Mac没有开启Apple Intelligence功能，这个本地模型可能不可用。</p>
+<p><strong>没有微调选项</strong>：你不能像Ollama那样选择不同的模型。它就是Mac自带的3B模型。</p>
+<hr>
+<h2 id="适合谁用">适合谁用</h2>
+<ul>
+<li><strong>Mac用户想快速测试AI能力</strong>：不用注册、不用下载、不用配置</li>
+<li><strong>隐私敏感用户</strong>：完全本地运行，数据不离开你的Mac</li>
+<li><strong>开发者想快速集成AI到工具链</strong>：OpenAI兼容接口，一行命令就能接入</li>
+<li><strong>不想花钱的AI爱好者</strong>：零成本，零API Key</li>
+</ul>
+<hr>
+<h2 id="总结">总结</h2>
+<p>一句话：Apfel让你能直接调用Mac内置的3B本地AI模型，无需API Key，无需联网，brew install一行搞定。</p>
+<p>它不是万能的——3B参数模型能力有限，只支持macOS Tahoe+。但作为快速查询、本地测试、隐私优先的AI方案，它确实是个巧妙的工具。</p>
+<p>如果你的Mac支持macOS Tahoe，装一个试试。反正不要钱，不要Key，不要联网。</p>
+<p>项目地址：github.com/Arthur-Ficial/apfel
+官网：apfel.franzai.com</p>
+<hr>
+<p><em>数据截至2026年7月14日。Apfel是开源项目，持续更新中。</em></p>

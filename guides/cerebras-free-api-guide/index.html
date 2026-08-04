@@ -1,0 +1,84 @@
+<!DOCTYPE html><meta charset="utf-8"><h1 id="cerebras免费api攻略100万token天gpt-ossglm-47随便用">Cerebras免费API攻略：100万token/天，GPT OSS/GLM 4.7随便用</h1>
+<p>Cerebras的免费API是目前所有AI API里最慷慨的之一。</p>
+<p>每天100万Token免费，不需要信用卡，不需要注册付费计划。直接用就行。</p>
+<hr>
+<h2 id="免费层详情">免费层详情</h2>
+<p><strong>每天100万Token</strong> — 这是按天重置的，不是每月总额。也就是说你今天没用完，明天又恢复到100万。</p>
+<p><strong>支持的模型</strong>：</p>
+<ul>
+<li>Llama 4 Scout — 最新开源模型</li>
+<li>GLM-4.7 — 智谱旗舰</li>
+<li>GPT OSS — OpenAI开源模型</li>
+<li>以及其他主流开源模型</li>
+</ul>
+<p><strong>无需信用卡</strong> — 注册就送，不绑支付方式。</p>
+<p><strong>速度</strong>：Cerebras的WSE（Wafer-Scale Engine）芯片让推理速度远超普通GPU。实测2600+ tokens/秒，比Nvidia快得多。</p>
+<hr>
+<h2 id="怎么开始">怎么开始</h2>
+<ol>
+<li>打开 cloud.cerebras.ai</li>
+<li>注册账号（不需要信用卡）</li>
+<li>创建API Key</li>
+<li>开始调用</li>
+</ol>
+<p>Python示例：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> openai </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> OpenAI</span></span>
+<span class="line"><span style="color:#E1E4E8">client </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> OpenAI(</span><span style="color:#FFAB70">api_key</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"YOUR_KEY"</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">base_url</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"https://api.cerebras.ai/v1"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">response </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> client.chat.completions.create(</span></span>
+<span class="line"><span style="color:#FFAB70">    model</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"llama-4-scout"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#FFAB70">    messages</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">[{</span><span style="color:#9ECBFF">"role"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"user"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"content"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"你好"</span><span style="color:#E1E4E8">}]</span></span>
+<span class="line"><span style="color:#E1E4E8">)</span></span></code></pre>
+<hr>
+<h2 id="免费层-vs-付费层">免费层 vs 付费层</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>功能</th><th>免费</th><th>Developer ($10/月起)</th></tr></thead><tbody><tr><td>每日Token</td><td>100万</td><td>2400万</td></tr><tr><td>速度限制</td><td>标准</td><td>10倍更高</td></tr><tr><td>优先级</td><td>标准</td><td>更高</td></tr><tr><td>模型</td><td>主流开源</td><td>全部模型</td></tr></tbody></table>
+<p>100万Token对日常开发够用。如果你写代码、做测试、跑自动化，这个量足够了。重度使用才需要考虑付费。</p>
+<hr>
+<h2 id="实际体验">实际体验</h2>
+<p>速度是真快。同样的模型，在Cerebras上跑比在普通GPU上快好几倍。对于需要低延迟的场景（比如实时对话、流式输出），这个优势很明显。</p>
+<p>模型选择也不错，Llama 4、GLM-4.7、GPT OSS都有。不需要翻墙，国内直连。</p>
+<hr>
+<h2 id="适合谁用">适合谁用</h2>
+<ul>
+<li><strong>需要高速推理的开发者</strong> — Cerebras的LPU芯片速度碾压普通GPU</li>
+<li><strong>想免费试用主流模型的</strong> — 100万Token/天足够验证想法</li>
+<li><strong>实时对话应用</strong> — 低延迟是核心优势</li>
+<li><strong>预算有限的团队</strong> — 免费层够用，不够再升级</li>
+</ul>
+<hr>
+<h2 id="总结">总结</h2>
+<p>Cerebras的免费API是目前的天花板：每天100万Token，不需要信用卡，速度极快，主流模型全覆盖。</p>
+<p>如果你需要高速、免费的AI推理服务，这个是最优选之一。</p>
+<p>项目地址：cerebras.ai
+API文档：cloud.cerebras.ai</p>
+<hr>
+<p><em>数据截至2026年7月14日。免费政策可能随时调整。</em></p>

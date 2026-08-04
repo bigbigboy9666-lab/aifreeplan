@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AirLLM Complete Guide: Run 70B Models on 4GB GPU | AIFreePlan</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="AirLLM Complete Guide: Run 70B Models on 4GB GPU | AIFreePlan">
+<meta property="og:description" content="AirLLM is the most popular open-source AI inference framework with 27,000+ GitHub stars. Run 70B parameter models on a single 4GB consumer GPU without quantization, distillation, or pruning. Supports Kimi K3 (2.8T), DeepSeek-V3 (671B), Llama 3.1 405B. Completely free, zero subscription.">
+<meta property="og:url" content="https://aifreeplan.com/en/guides/airllm-free-local-llm-guide-2026">
+<meta property="og:site_name" content="AIFreePlan">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AirLLM Complete Guide: Run 70B Models on 4GB GPU | AIFreePlan">
+<meta name="twitter:description" content="AirLLM is the most popular open-source AI inference framework with 27,000+ GitHub stars. Run 70B parameter models on a single 4GB consumer GPU without quantization, distillation, or pruning. Completely free, zero subscription.">
+<meta name="description" content="AirLLM is the most popular open-source AI inference framework with 27,000+ GitHub stars. Run 70B parameter models on a single 4GB consumer GPU without quantization, distillation, or pruning. Supports Kimi K3 (2.8T), DeepSeek-V3 (671B), Llama 3.1 405B. Completely free, zero subscription.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<link rel="canonical" href="https://aifreeplan.com/en/guides/airllm-free-local-llm-guide-2026">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/airllm-free-local-llm-guide-2026">
+<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/airllm-free-local-llm-guide-2026">
+<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/airllm-free-local-llm-guide-2026">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;--text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;--accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);--green:#059669;--green-light:rgba(5,150,105,.1);--shadow:0 4px 20px rgba(0,0,0,.05);--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover)}
+.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
+.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
+.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
+.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
+.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
+.article-container ul,.article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
+.article-container li{margin-bottom:8px;line-height:1.6}
+.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
+.article-container a{color:var(--accent);text-decoration:underline}
+.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-container th,.article-container td{padding:12px;border:1px solid var(--border);text-align:left}
+.article-container th{background:var(--accent-light);font-weight:600}
+.breadcrumb{font-size:14px;color:var(--text-muted);margin-bottom:24px}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb-sep{margin:0 8px}
+.faq-section{background:var(--bg-white);border-radius:var(--radius);padding:32px;margin-top:40px;box-shadow:var(--shadow)}
+.faq-section h3{margin-top:0;color:var(--text)}
+.faq-item{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border-light)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-weight:700;color:var(--text);margin-bottom:8px}
+.faq-a{color:var(--text-secondary);line-height:1.7}
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff;margin-top:60px}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6)}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col h4{font-size:14px;font-weight:700;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+@media(max-width:768px){.article-container{padding:16px 16px 48px;max-width:100%}.article-container h1{font-size:24px}.article-container h2{font-size:20px}.container{padding:0 16px}.nav{display:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"AirLLM Complete Guide: Run 70B Models on 4GB GPU","description":"AirLLM is the most popular open-source AI inference framework with 27,000+ GitHub stars. Run 70B parameter models on a single 4GB consumer GPU without quantization, distillation, or pruning. Supports Kimi K3 (2.8T), DeepSeek-V3 (671B), Llama 3.1 405B. Completely free, zero subscription.","url":"https://aifreeplan.com/en/guides/airllm-free-local-llm-guide-2026","datePublished":"2026-08-04","dateModified":"2026-08-04","author":{"@type":"Organization","name":"AIFreePlan"},"publisher":{"@type":"Organization","name":"AIFreePlan","url":"https://aifreeplan.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aifreeplan.com/en/guides/airllm-free-local-llm-guide-2026"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aifreeplan.com/en"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://aifreeplan.com/en/guides"},{"@type":"ListItem","position":3,"name":"AirLLM Complete Guide: Run 70B Models on 4GB GPU","item":"https://aifreeplan.com/en/guides/airllm-free-local-llm-guide-2026"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is AirLLM completely free?","acceptedAnswer":{"@type":"Answer","text":"Yes, AirLLM is completely free. It is an open-source project under the Apache 2.0 license, requiring no subscription, API key, or paid account. You can run large language models locally an unlimited number of times at zero cost."}},{"@type":"Question","name":"What hardware do I need for AirLLM?","acceptedAnswer":{"@type":"Answer","text":"AirLLM's core advantage is its low VRAM requirements. 70B models need only 4GB VRAM, 405B models need 8GB, and Kimi K3 (2.8T) requires just 3.72GB VRAM. It supports NVIDIA GPUs (CUDA), Apple Silicon Macs (MLX framework), and pure CPU inference."}},{"@type":"Question","name":"How does AirLLM compare to other solutions?","acceptedAnswer":{"@type":"Answer","text":"AirLLM runs large models without quantization, distillation, or pruning, meaning inference quality is nearly identical to the original model. Other solutions typically require quantization (e.g., 4-bit/8-bit) to reduce VRAM usage, but this comes at the cost of accuracy."}},{"@type":"Question","name":"What models does AirLLM support?","acceptedAnswer":{"@type":"Answer","text":"AirLLM supports almost all mainstream open-source models, including Llama 3.1/4, DeepSeek-V2/V3, Qwen3, Gemini, Kimi K3, ChatGLM, Baichuan, Mistral, InternLM, and more. The latest version v3.1.0 adds support for Kimi K3 (2.8T)."}},{"@type":"Question","name":"How fast is AirLLM?","acceptedAnswer":{"@type":"Answer","text":"With 4bit or 8bit compression mode, inference speed can be improved by up to 3x with almost imperceptible accuracy loss. Without compression, speed depends on GPU performance, but it's faster than cloud API calls (no network latency)."}}]}
+</script>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="/en" class="logo">AI<span class="accent">FreePlan</span></a>
+    <nav class="nav">
+      <a href="/en/all">All Tools</a>
+      <a href="/en/guides">Guides</a>
+      <a href="/en/privacy">Privacy</a>
+      <a href="/zh/guides/airllm-free-local-llm-guide-2026" class="btn btn-primary">中文</a>
+    </nav>
+  </div>
+</header>
+<main class="article-container">
+<nav class="breadcrumb"><a href="/en">Home</a> <span class="breadcrumb-sep">›</span> <a href="/en/guides">Guides</a> <span class="breadcrumb-sep">›</span> <span>AirLLM Complete Guide: Run 70B Models on 4GB GPU</span></nav>
+<h1>AirLLM Complete Guide: Run 70B Models on a 4GB GPU</h1>
+
+<p>In August 2026, <strong>AirLLM</strong> has become the most popular open-source large language model inference framework worldwide, with over <strong>27,205 GitHub stars</strong> and more than <strong>500,000 total downloads</strong>. Its core promise is simple yet extraordinary: <strong>run 70B parameter models on a single 4GB consumer GPU without quantization, distillation, or pruning</strong>.</p>
+
+<p>The latest version <strong>v3.1.0</strong> (released July 29, 2026) now supports <strong>Kimi K3 (2.8T)</strong> — the largest open-source model ever released — requiring only <strong>3.72GB VRAM</strong> on a single RTX 6000 Ada. It also supports DeepSeek-V3 (671B), Llama 3.1 405B, and other massive models.</p>
+
+<p>This comprehensive guide will walk you through everything you need to know about AirLLM, including installation, supported models, performance benchmarks, configuration options, and practical usage tips.</p>
+
+<h2>What is AirLLM?</h2>
+
+<p>AirLLM is an open-source inference optimization framework developed by researcher <strong>Gavin Li</strong>. Its core innovation is <strong>Layer-wise Streaming Inference</strong>: instead of loading the entire model into GPU memory at once, AirLLM streams layers from disk to GPU on-the-fly, reducing VRAM requirements from terabytes to just gigabytes.</p>
+
+<p>Compared to traditional approaches, AirLLM offers several key advantages:</p>
+
+<ul>
+<li><strong>No quantization needed:</strong> Most solutions require 4-bit or 8-bit quantization to reduce VRAM, which sacrifices model accuracy. AirLLM runs <strong>original precision models</strong>, maintaining full inference quality.</li>
+<li><strong>No distillation needed:</strong> No need to replace large models with smaller ones, avoiding performance loss from distillation.</li>
+<li><strong>No pruning needed:</strong> No model parameters are removed, maintaining complete model integrity.</li>
+<li><strong>Completely free:</strong> Open-source project under Apache 2.0 license, zero subscription fees, zero API call costs.</li>
+<li><strong>Multi-platform support:</strong> Supports NVIDIA GPUs (CUDA), Apple Silicon Macs (MLX framework), and pure CPU inference.</li>
+</ul>
+
+<h2>System Requirements & Hardware Compatibility</h2>
+
+<h3>GPU Inference (Recommended)</h3>
+
+<p>Using an NVIDIA GPU is the best option for AirLLM. Here are the VRAM requirements for different model sizes:</p>
+
+<table>
+<tr><th>Model</th><th>Parameters</th><th>Minimum VRAM</th><th>Recommended VRAM</th><th>First Load Time</th></tr>
+<tr><td>Qwen3-32B</td><td>32B</td><td>4GB</td><td>8GB</td><td>~30 seconds</td></tr>
+<tr><td>Llama 3.1 70B</td><td>70B</td><td>4GB</td><td>8GB</td><td>~60 seconds</td></tr>
+<tr><td>DeepSeek-V3</td><td>671B</td><td>12GB</td><td>24GB</td><td>~5 minutes</td></tr>
+<tr><td>Llama 3.1 405B</td><td>405B</td><td>8GB</td><td>16GB</td><td>~10 minutes</td></tr>
+<tr><td>Kimi K3</td><td>2.8T</td><td>3.72GB</td><td>8GB</td><td>~15 minutes</td></tr>
+</table>
+
+<p><strong>Note:</strong> On first run, AirLLM will split the model into layer shards and save them to the Hugging Face cache directory. Ensure you have at least 2x the model file size in free disk space (e.g., a 70B model requires approximately 140GB of storage space).</p>
+
+<h3>Apple Silicon Mac</h3>
+
+<p>For Macs with M1/M2/M3 chips, AirLLM supports inference through the <strong>MLX framework</strong>. Mac's <strong>unified memory architecture</strong> allows the GPU and CPU to share memory, meaning you can run 70B models on a MacBook Pro with just 16GB of memory.</p>
+
+<p>Mac users need to additionally install MLX:</p>
+
+<pre><code>pip install mlx mlx-lm</code></pre>
+
+<h3>CPU Inference</h3>
+
+<p>AirLLM also supports pure CPU inference, though it's slower. Suitable for users without a GPU or insufficient VRAM.</p>
+
+<h2>Supported Models</h2>
+
+<p>AirLLM supports automatic model type detection through <code>AutoModel</code>, without needing to manually specify the model class. Here's the complete supported list:</p>
+
+<h3>Large Language Models (LLM)</h3>
+
+<ul>
+<li><strong>Llama Series:</strong> Llama 2, Llama 3, Llama 3.1, Llama 3.2 (including 8B, 70B, 405B versions)</li>
+<li><strong>DeepSeek Series:</strong> DeepSeek-V2, DeepSeek-V3 (671B MoE architecture)</li>
+<li><strong>Qwen Series:</strong> Qwen2, Qwen2.5, Qwen3 (including 32B, 235B versions)</li>
+<li><strong>Kimi Series:</strong> Kimi K2.5, Kimi K3 (2.8T MoE architecture, new in v3.1.0)</li>
+<li><strong>Gemma Series:</strong> Gemma 2, Gemma 3</li>
+<li><strong>Phi Series:</strong> Phi-3, Phi-4</li>
+<li><strong>Mistral Series:</strong> Mistral 7B, Mistral Large, Mixtral 8x7B</li>
+<li><strong>Chinese Models:</strong> ChatGLM, QWen, Baichuan, InternLM</li>
+</ul>
+
+<h3>Multimodal Models</h3>
+
+<ul>
+<li><strong>Image Generation:</strong> Supports MiniMax H3, Stable Diffusion via ComfyUI integration</li>
+<li><strong>Vision-Language:</strong> Some versions support LLaVA and other multimodal models</li>
+</ul>
+
+<h2>Quick Start: Three-Step Installation & Usage</h2>
+
+<h3>Step 1: Install AirLLM</h3>
+
+<pre><code>pip install airllm</code></pre>
+
+<p>If you want to use the Kimi K3 model, you'll need additional dependencies:</p>
+
+<pre><code>pip install compressed-tensors flash-attn
+pip install torch==2.5.1  # Requires CUDA 12 version
+pip install transformers==4.56.2  # Kimi K3 requires this version</code></pre>
+
+<h3>Step 2: Write Inference Code</h3>
+
+<pre><code>from airllm import AutoModel
+
+# Load model (automatically downloads from Hugging Face)
+model = AutoModel.from_pretrained("Qwen/Qwen3-32B")
+
+# Or load larger models
+# model = AutoModel.from_pretrained("deepseek-ai/DeepSeek-V3")  # 671B, ~12GB VRAM
+# model = AutoModel.from_pretrained("Qwen/Qwen3-235B-A22B")   # 235B, ~3GB VRAM
+# model = AutoModel.from_pretrained("moonshotai/Kimi-K3-Instruct")  # 2.8T, 3.72GB VRAM
+
+input_text = ["What is the capital of France?"]
+
+input_tokens = model.tokenizer(input_text,
+    return_tensors="pt",
+    return_attention_mask=False,
+    truncation=True,
+    max_length=1024,
+    padding=False)
+
+generation_output = model.generate(
+    input_tokens['input_ids'].cuda(),
+    max_new_tokens=200,
+    use_cache=True,
+    return_dict_in_generate=True)
+
+output = model.tokenizer.decode(generation_output.sequences[0])
+print(output)</code></pre>
+
+<h3>Step 3: Start Inference</h3>
+
+<p>After running the code, AirLLM will automatically:</p>
+<ol>
+<li>Download the model from Hugging Face to local cache (<code>~/.cache/huggingface/hub/</code>)</li>
+<li>Split the model into layer shards and cache them locally</li>
+<li>Stream each layer to GPU for inference</li>
+</ol>
+
+<p>The first run requires waiting for downloads and caching, which may take 10-30 minutes. Subsequent runs will use the cache directly, significantly improving speed.</p>
+
+<h2>Performance Optimization: Compression Mode for 3x Speed</h2>
+
+<p>AirLLM provides model compression functionality using <strong>block-wise quantization</strong> technology, which can improve inference speed by up to <strong>3x</strong> with almost imperceptible accuracy loss.</p>
+
+<h3>Enabling Compression Mode</h3>
+
+<pre><code>from airllm import AutoModel
+
+# Enable 8bit compression (recommended, minimal accuracy loss)
+model = AutoModel.from_pretrained("garage-bAInd/Platypus2-70B-instruct",
+                   compression='8bit')
+
+# Or enable 4bit compression (faster, slightly lower accuracy)
+model = AutoModel.from_pretrained("garage-bAInd/Platypus2-70B-instruct",
+                   compression='4bit')</code></pre>
+
+<h3>Compression vs. Quantization</h3>
+
+<p>Traditional quantization requires quantizing both weights and activations, which is difficult to maintain accuracy. AirLLM's compression only quantizes <strong>weights</strong>, because the inference bottleneck is primarily disk read speed, not computation speed. This approach is easier to guarantee accuracy, with practical tests showing almost imperceptible accuracy loss.</p>
+
+<h2>Advanced Configuration Options</h2>
+
+<p>AirLLM provides rich configuration options:</p>
+
+<table>
+<tr><th>Parameter</th><th>Options</th><th>Description</th></tr>
+<tr><td><code>compression</code></td><td><code>'4bit'</code>, <code>'8bit'</code>, <code>None</code></td><td>Compression mode, None for original precision, 4bit/8bit for compression acceleration</td></tr>
+<tr><td><code>profiling_mode</code></td><td><code>True</code>, <code>False</code></td><td>Whether to output detailed timing analysis</td></tr>
+<tr><td><code>layer_shards_saving_path</code></td><td>Path string</td><td>Specify the save path for layer shards (default in Hugging Face cache directory)</td></tr>
+<tr><td><code>hf_token</code></td><td>String</td><td>Hugging Face Token for accessing gated models (like Llama)</td></tr>
+<tr><td><code>prefetching</code></td><td><code>True</code>, <code>False</code></td><td>Prefetch mode to overlap loading and computation, improving speed by 10% (enabled by default)</td></tr>
+<tr><td><code>delete_original</code></td><td><code>True</code>, <code>False</code></td><td>Whether to delete the original model to save half the disk space</td></tr>
+</table>
+
+<h2>Comparison with Cloud APIs</h2>
+
+<p>AirLLM offers several advantages over cloud APIs (like OpenAI, Anthropic, Google):</p>
+
+<table>
+<tr><th>Feature</th><th>AirLLM (Local)</th><th>Cloud API</th></tr>
+<tr><td>Cost</td><td><strong>Free</strong> (only electricity)</td><td>Pay per Token, 70B models ~$0.001/千 Token</td></tr>
+<tr><td>Privacy</td><td><strong>Fully local</strong>, data never leaves device</td><td>Data sent to third-party servers</td></tr>
+<tr><td>Latency</td><td>No network latency, but limited by GPU speed</td><td>Network latency ~200-500ms</td></tr>
+<tr><td>Control</td><td><strong>Full control</strong>, can modify model</td><td>Can only use API-provided models</td></tr>
+<tr><td>Model Size</td><td>Supports 70B-2.8T giant models</td><td>Usually only supports 7B-70B models</td></tr>
+<tr><td>Offline Use</td><td><strong>Supported</strong></td><td>Requires internet connection</td></tr>
+<tr><td>Installation</td><td>Requires local environment and GPU</td><td>Just need API Key</td></tr>
+</table>
+
+<h2>Practical Application Cases</h2>
+
+<h3>1. Local AI Coding Assistant</h3>
+<p>Integrate AirLLM with <strong>Codex CLI</strong>, <strong>Claude Code</strong>, <strong>OpenCode</strong> and other coding agents. Configure these tools to use AirLLM's local API endpoint for free 70B-level coding assistance without paying API fees.</p>
+
+<h3>2. Document Analysis & Summarization</h3>
+<p>Use AirLLM to analyze and summarize long documents. The 70B model's long context capability (supporting 128K+ Token) can easily handle documents of hundreds of thousands of words.</p>
+
+<h3>3. Multilingual Translation</h3>
+<p>AirLLM supports multilingual models (like Qwen, DeepSeek) for offline high-quality Chinese-English translation without relying on online translation APIs.</p>
+
+<h3>4. Data Science Analysis</h3>
+<p>Integrate AirLLM into Jupyter Notebooks as a local AI assistant for data analysis, code generation, and result interpretation.</p>
+
+<h2>Troubleshooting</h2>
+
+<h3>Issue 1: Insufficient VRAM</h3>
+<p>If your GPU VRAM is insufficient, try the following solutions:</p>
+<ul>
+<li>Use <code>compression='8bit'</code> or <code>'4bit'</code> to enable compression mode</li>
+<li>Reduce the <code>max_length</code> parameter to decrease context length</li>
+<li>Use smaller models (e.g., Qwen3-32B instead of Qwen3-235B)</li>
+</ul>
+
+<h3>Issue 2: Slow First Load</h3>
+<p>The first run requires downloading the model and splitting layer shards, which may take 10-30 minutes. Subsequent runs will use the cache directly, significantly improving speed.</p>
+
+<h3>Issue 3: Kimi K3 Model Loading Failure</h3>
+<p>Kimi K3 requires specific dependencies:</p>
+<pre><code>pip install compressed-tensors flash-attn
+pip install torch==2.5.1
+pip install transformers==4.56.2</code></pre>
+
+<h3>Issue 4: Insufficient Disk Space</h3>
+<p>Model cache occupies significant disk space. If space is insufficient, set <code>delete_original=True</code>. AirLLM will automatically delete the original model files and only keep the split layer shards, saving approximately 50% space.</p>
+
+<h2>FAQ</h2>
+<div class="faq-section">
+<h3>Frequently Asked Questions</h3>
+<div class="faq-item">
+<div class="faq-q">Q: Is AirLLM completely free?</div>
+<div class="faq-a">Yes, AirLLM is completely free. It is an open-source project under the Apache 2.0 license, requiring no subscription, API key, or paid account. You can run large language models locally an unlimited number of times at zero cost.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">Q: What GPU do I need for AirLLM?</div>
+<div class="faq-a">With 4GB VRAM, you can run 70B models (like Llama 3.1 70B, Qwen3-32B). With 8bit compression enabled, you can attempt larger models. DeepSeek-V3 (671B) requires at least 12GB VRAM.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">Q: How does AirLLM differ from Ollama?</div>
+<div class="faq-a">Ollama primarily optimizes for smaller models (7B-70B) using GGUF format. AirLLM focuses on ultra-large models (70B-2.8T) and supports original precision models without quantization. The two can be used complementarily.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">Q: Can I use AirLLM on Mac?</div>
+<div class="faq-a">Yes. AirLLM supports Apple Silicon Macs using the MLX framework for inference. Mac's unified memory architecture allows using all memory as VRAM, so a 16GB MacBook Pro can run 70B models.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">Q: How fast is AirLLM?</div>
+<div class="faq-a">With 4bit or 8bit compression mode, inference speed can be improved by up to 3x. Without compression, speed depends on GPU performance, but it's faster than cloud API calls (no network latency). For 70B models on RTX 4090, expect approximately 10-20 tokens/second.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">Q: How do I integrate with existing projects?</div>
+<div class="faq-a">AirLLM provides an OpenAI-compatible API endpoint. You can set <code>base_url</code> to <code>http://localhost:8080/v1</code> and use any library supporting the OpenAI API (like LangChain, LlamaIndex) for integration.</div>
+</div>
+</div>
+
+<h2>Summary</h2>
+
+<p>AirLLM is one of the most noteworthy open-source AI inference frameworks in 2026. It enables you to run the industry's largest open-source models on consumer-grade hardware at <strong>zero cost</strong>, including Kimi K3 (2.8T), DeepSeek-V3 (671B), and Llama 3.1 405B.</p>
+
+<p>Whether you're a researcher, developer, or AI enthusiast, AirLLM helps you:</p>
+<ul>
+<li>Reduce AI usage costs (completely free)</li>
+<li>Protect data privacy (local inference)</li>
+<li>Achieve cutting-edge model capabilities (no quantization loss)</li>
+<li>Maintain flexibility (open-source and modifiable)</li>
+</ul>
+
+<p>Start experiencing it today: Install AirLLM, choose your model of interest, and enjoy free, powerful, private local AI inference.</p>
+
+<div style="margin-top:40px;padding:24px;background:var(--accent-light);border-radius:var(--radius);text-align:center">
+<p style="font-size:16px;color:var(--text);margin-bottom:16px"><strong>🚀 Get Started with AirLLM Today</strong></p>
+<p style="color:var(--text-secondary);margin-bottom:16px">Completely Free | No Subscription | Privacy Protected | Supports 2.8T Models</p>
+<a href="https://github.com/lyogavin/airllm" class="btn btn-primary" target="_blank">Visit GitHub Repository</a>
+</div>
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="/en" class="logo" style="color:#059669">AI<span class="accent" style="color:#6366F1">FreePlan</span></a><p>AI-powered free tools aggregator. Free forever.</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h4>Product</h4><a href="/en/all">All Tools</a><a href="/en/guides">Guides</a></div>
+      <div class="footer-col"><h4>Legal</h4><a href="/en/privacy">Privacy</a><a href="/en/terms">Terms</a></div>
+    </div>
+  </div>
+  <div class="container footer-bottom">&copy; 2026 AIFreePlan. All rights reserved.</div>
+</footer>
+</body></html>

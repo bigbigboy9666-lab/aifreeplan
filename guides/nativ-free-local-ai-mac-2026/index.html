@@ -1,0 +1,194 @@
+<!DOCTYPE html><meta charset="utf-8"><h1 id="nativ-免费本地-ai-桌面应用apple-silicon-上运行开源模型零订阅零云端零账户">Nativ 免费本地 AI 桌面应用：Apple Silicon 上运行开源模型，零订阅零云端零账户</h1>
+<p>Nativ 是一款 100% 开源、MIT 许可的 macOS 原生 AI 应用，专为 Apple Silicon 设计。基于 MLX 框架，可在本地运行前沿开源模型，支持聊天、代码补全、语音转录等多种模态。完全免费，无需注册账户、无需订阅、无需云端连接。</p>
+<hr>
+<h2 id="什么是-nativ">什么是 Nativ</h2>
+<p>Nativ 是一个基于 SwiftUI 开发的 macOS 原生应用，底层使用 MLX-VLM（Meta 的 MLX 推理框架）作为推理引擎。它不仅仅是一个聊天界面，而是一个完整的本地 AI 工作区。</p>
+<p>核心功能：</p>
+<ul>
+<li><strong>本地聊天与视觉</strong> — 流式对话响应、图片附件、推理输出</li>
+<li><strong>模型库管理</strong> — 发现已安装的 MLX 模型、一键下载、切换模型</li>
+<li><strong>性能分析面板</strong> — 追踪请求量、Token 用量、首字延迟</li>
+<li><strong>本地 API 服务器</strong> — OpenAI 兼容的 /v1/chat/completions 端点</li>
+<li><strong>编码工具集成</strong> — Codex、Claude Code、Pi、Hermes、OpenCode</li>
+<li><strong>菜单栏控制</strong> — 启动/停止服务器、切换模型、查看统计</li>
+</ul>
+<hr>
+<h2 id="系统要求">系统要求</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>项目</th><th>要求</th></tr></thead><tbody><tr><td>硬件</td><td>Apple Silicon Mac（M1 及以上）</td></tr><tr><td>操作系统</td><td>macOS 26+ (Sequoia)</td></tr><tr><td>统一内存</td><td>取决于选择的模型大小</td></tr><tr><td>许可证</td><td>MIT（完全免费）</td></tr><tr><td>网络需求</td><td>仅首次下载模型时需要，运行时完全离线</td></tr></tbody></table>
+<hr>
+<h2 id="支持的模型">支持的模型</h2>
+<p>Nativ 预集成了来自 Google、Cohere 和 Liquid AI 的精选开源模型：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>模型</th><th>来源</th><th>上下文窗口</th><th>模型大小</th><th>能力</th></tr></thead><tbody><tr><td>Gemma 4 E2B Instruct</td><td>Google</td><td>128K</td><td>10.28 GB</td><td>视觉 + 音频</td></tr><tr><td>North Mini Code</td><td>Cohere</td><td>500K</td><td>19.38 GB</td><td>代码 + 工具调用</td></tr><tr><td>LFM2.5-VL 1.6B</td><td>Liquid AI</td><td>128K</td><td>3.20 GB</td><td>视觉 + 语言</td></tr></tbody></table>
+<p>内存需求参考：</p>
+<ul>
+<li>3.2 GB 模型：需要至少 8GB 统一内存</li>
+<li>10.28 GB 模型：需要至少 16GB 统一内存</li>
+<li>19.38 GB 模型：需要至少 24GB 统一内存（M2/M3 Max 或 M4 Pro/Max）</li>
+</ul>
+<hr>
+<h2 id="为什么-nativ-值得关注">为什么 Nativ 值得关注</h2>
+<h3 id="1-真正的本地运行不泄露任何数据">1. 真正的本地运行，不泄露任何数据</h3>
+<p>所有推理都在你的 Mac 上完成。你的提示词、对话历史、图片附件永远不会离开你的设备。</p>
+<h3 id="2-完全免费mit-许可">2. 完全免费，MIT 许可</h3>
+<p>免费下载和使用，无次数限制。任何人都可以审查源代码，可以 Fork 和修改代码。没有”企业版”陷阱。</p>
+<h3 id="3-可作为本地-api-服务器使用">3. 可作为本地 API 服务器使用</h3>
+<p>默认在 <a href="http://127.0.0.1:8080">http://127.0.0.1:8080</a> 启动本地 API 服务器，支持 OpenAI 和 Anthropic 兼容格式。</p>
+<h3 id="4-编码代理集成">4. 编码代理集成</h3>
+<p>内置对 Codex、Claude Code、Pi、Hermes 和 OpenCode 的支持。</p>
+<hr>
+<h2 id="安装指南">安装指南</h2>
+<p><strong>方法一：直接下载（推荐）</strong></p>
+<ol>
+<li>访问 Nativ GitHub Releases 页面</li>
+<li>下载最新版的 Nativ-*.dmg 文件（约 342 MB）</li>
+<li>将 Nativ 拖入 Applications 文件夹</li>
+<li>首次启动时选择已安装的模型或继续按需加载</li>
+</ol>
+<p><strong>方法二：从源码编译</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">brew</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> xcodegen</span></span>
+<span class="line"><span style="color:#B392F0">make</span><span style="color:#9ECBFF"> xcode-generate</span></span>
+<span class="line"><span style="color:#B392F0">make</span><span style="color:#9ECBFF"> xcode-build</span></span>
+<span class="line"><span style="color:#B392F0">open</span><span style="color:#9ECBFF"> build/XcodeDerivedData/Build/Products/Debug/Nativ.app</span></span></code></pre>
+<hr>
+<h2 id="与云端-ai-服务的对比">与云端 AI 服务的对比</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>特性</th><th>Nativ（本地）</th><th>ChatGPT</th><th>Claude</th><th>Gemini</th></tr></thead><tbody><tr><td>费用</td><td>✅ 完全免费</td><td>$20/月</td><td>按量计费</td><td>部分免费</td></tr><tr><td>隐私</td><td>✅ 数据不离设备</td><td>❌ 数据上传云端</td><td>❌ 数据上传云端</td><td>❌ 数据上传云端</td></tr><tr><td>离线可用</td><td>✅ 完全离线</td><td>❌ 需要网络</td><td>❌ 需要网络</td><td>❌ 需要网络</td></tr><tr><td>自定义模型</td><td>✅ 可切换任意 MLX 模型</td><td>❌ 固定模型</td><td>❌ 固定模型</td><td>❌ 固定模型</td></tr><tr><td>API 兼容性</td><td>✅ OpenAI + Anthropic</td><td>—</td><td>✅ Anthropic</td><td>✅ OpenAI 兼容</td></tr><tr><td>编码代理集成</td><td>✅ 内置支持</td><td>❌</td><td>❌</td><td>❌</td></tr></tbody></table>
+<hr>
+<h2 id="实际使用场景">实际使用场景</h2>
+<ol>
+<li><strong>隐私敏感型对话</strong> — 医疗、法律、金融行业专业人士可使用本地模型确保敏感信息不泄露</li>
+<li><strong>编程辅助</strong> — 配置编码代理使用本地模型，获得类似 Copilot 的体验无需付费</li>
+<li><strong>离线环境工作</strong> — 无网络连接时仍可使用</li>
+<li><strong>模型研究和实验</strong> — 性能分析面板可实时监控不同模型表现</li>
+</ol>
+<hr>
+<h2 id="常见问题">常见问题</h2>
+<p><strong>Q: Nativ 真的完全免费吗？</strong>
+A: 是的，MIT 许可，免费下载和使用，无次数限制。</p>
+<p><strong>Q: 需要联网吗？</strong>
+A: 仅首次下载模型时需要网络，运行时完全离线。</p>
+<p><strong>Q: 支持 Intel Mac 吗？</strong>
+A: 不支持，仅限 Apple Silicon（M1/M2/M3/M4）。</p>
+<p><strong>Q: 可以切换不同模型吗？</strong>
+A: 可以，通过 Hugging Face 手动下载更多 MLX 格式模型。</p>
+<hr>
+<h2 id="总结">总结</h2>
+<p>Nativ 是 Apple Silicon 上最完整的本地 AI 解决方案。完全免费开源，无需账户和订阅，支持多种模型和编码代理集成。对于重视隐私和不想依赖云服务的用户来说，这是目前最佳选择。</p>
+<p>项目地址：github.com/tylerneely/nativ</p>
+<hr>
+<p><em>数据截至2026年7月21日。免费政策可能调整。</em></p>
