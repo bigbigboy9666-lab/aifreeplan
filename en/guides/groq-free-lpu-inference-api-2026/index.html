@@ -6,7 +6,7 @@
 <p><strong>Key specs</strong>:</p>
 <ul>
 <li>Hardware: LPU self-developed chip, not GPU</li>
-<li>Response speed: Average first token latency &#x3C;50ms</li>
+<li>Response speed: Average first token latency &lt;50ms</li>
 <li>Concurrency: Supports multi-model parallel computation per request</li>
 <li>Models: 17 open-source models in free tier</li>
 <li>Free quota: 1000 requests/day (resets daily)</li>
@@ -18,37 +18,37 @@
 <h2 id="free-quota-details">Free Quota Details</h2>
 <h3 id="1-request-limit">1. Request Limit</h3>
 <p>Free tier users get <strong>1000 free requests daily</strong>, resetting at 00:00 UTC.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>Use Case</th><th>Per Request Cost</th><th>1000 Quota Supports</th></tr></thead><tbody><tr><td>Simple Q&#x26;A (short)</td><td>1 request</td><td>1000 conversations</td></tr><tr><td>Code generation (medium)</td><td>2-3 requests</td><td>300-500 conversations</td></tr><tr><td>Long doc summary (8K context)</td><td>3-5 requests</td><td>200-300 conversations</td></tr><tr><td>Real-time chat</td><td>1-2 requests/turn</td><td>500-1000 turns</td></tr></tbody></table>
+<table>
+<thead>
+<tr>
+<th>Use Case</th>
+<th>Per Request Cost</th>
+<th>1000 Quota Supports</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Simple Q&amp;A (short)</td>
+<td>1 request</td>
+<td>1000 conversations</td>
+</tr>
+<tr>
+<td>Code generation (medium)</td>
+<td>2-3 requests</td>
+<td>300-500 conversations</td>
+</tr>
+<tr>
+<td>Long doc summary (8K context)</td>
+<td>3-5 requests</td>
+<td>200-300 conversations</td>
+</tr>
+<tr>
+<td>Real-time chat</td>
+<td>1-2 requests/turn</td>
+<td>500-1000 turns</td>
+</tr>
+</tbody>
+</table>
 <h3 id="2-rate-limits">2. Rate Limits</h3>
 <ul>
 <li><strong>RPM 30</strong>: Max 30 requests per minute</li>
@@ -59,60 +59,60 @@
 <hr>
 <h2 id="supported-free-models">Supported Free Models</h2>
 <p>Groq free tier offers 17 mainstream open-source models:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>Model</th><th>Parameters</th><th>Use Case</th><th>Rating</th></tr></thead><tbody><tr><td>Llama 4 Scout</td><td>~25B</td><td>General chat, coding</td><td>⭐⭐⭐⭐⭐</td></tr><tr><td>Qwen3 32B</td><td>32B</td><td>Chinese understanding, reasoning</td><td>⭐⭐⭐⭐⭐</td></tr><tr><td>Llama 4 Hunter</td><td>~70B</td><td>High-precision, long context</td><td>⭐⭐⭐⭐</td></tr><tr><td>Mixtral 8x22B</td><td>MoE 129B</td><td>High throughput</td><td>⭐⭐⭐⭐</td></tr><tr><td>Gemma 2 9B</td><td>9B</td><td>Fast response, lightweight</td><td>⭐⭐⭐</td></tr><tr><td>Phi-3 Mini 4B</td><td>3.8B</td><td>Extreme low latency</td><td>⭐⭐⭐</td></tr><tr><td>Cohere Command R+</td><td>104B</td><td>RAG, retrieval</td><td>⭐⭐⭐</td></tr></tbody></table>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Parameters</th>
+<th>Use Case</th>
+<th>Rating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Llama 4 Scout</td>
+<td>~25B</td>
+<td>General chat, coding</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>Qwen3 32B</td>
+<td>32B</td>
+<td>Chinese understanding, reasoning</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>Llama 4 Hunter</td>
+<td>~70B</td>
+<td>High-precision, long context</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>Mixtral 8x22B</td>
+<td>MoE 129B</td>
+<td>High throughput</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr>
+<td>Gemma 2 9B</td>
+<td>9B</td>
+<td>Fast response, lightweight</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>Phi-3 Mini 4B</td>
+<td>3.8B</td>
+<td>Extreme low latency</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>Cohere Command R+</td>
+<td>104B</td>
+<td>RAG, retrieval</td>
+<td>⭐⭐⭐</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Recommended</strong>: Llama 4 Scout and Qwen3 32B are the strongest models in free tier.</p>
 <hr>
 <h2 id="api-usage">API Usage</h2>
@@ -160,47 +160,47 @@
 <p>Interactive education apps benefit from Groq’s fast inference. Students get near-instant responses.</p>
 <hr>
 <h2 id="free-vs-paid-comparison">Free vs Paid Comparison</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>Feature</th><th>Free</th><th>Paid (Pay-as-you-go)</th></tr></thead><tbody><tr><td>Daily request quota</td><td>1000</td><td>Unlimited (pay per use)</td></tr><tr><td>Price</td><td>Free</td><td>Llama 3.1 70B: $1/M input, $5/M output</td></tr><tr><td>Model selection</td><td>17 open-source</td><td>All models available</td></tr><tr><td>Commercial use</td><td>✓ Allowed</td><td>✓ Allowed</td></tr><tr><td>RPM limit</td><td>30</td><td>Higher (by plan)</td></tr><tr><td>TPM limit</td><td>30000</td><td>Higher</td></tr></tbody></table>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Free</th>
+<th>Paid (Pay-as-you-go)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Daily request quota</td>
+<td>1000</td>
+<td>Unlimited (pay per use)</td>
+</tr>
+<tr>
+<td>Price</td>
+<td>Free</td>
+<td>Llama 3.1 70B: $1/M input, $5/M output</td>
+</tr>
+<tr>
+<td>Model selection</td>
+<td>17 open-source</td>
+<td>All models available</td>
+</tr>
+<tr>
+<td>Commercial use</td>
+<td>✓ Allowed</td>
+<td>✓ Allowed</td>
+</tr>
+<tr>
+<td>RPM limit</td>
+<td>30</td>
+<td>Higher (by plan)</td>
+</tr>
+<tr>
+<td>TPM limit</td>
+<td>30000</td>
+<td>Higher</td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h2 id="usage-tips">Usage Tips</h2>
 <ol>

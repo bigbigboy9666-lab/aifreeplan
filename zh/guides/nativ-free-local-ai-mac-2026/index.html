@@ -14,73 +14,73 @@
 </ul>
 <hr>
 <h2 id="系统要求">系统要求</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>项目</th><th>要求</th></tr></thead><tbody><tr><td>硬件</td><td>Apple Silicon Mac（M1 及以上）</td></tr><tr><td>操作系统</td><td>macOS 26+ (Sequoia)</td></tr><tr><td>统一内存</td><td>取决于选择的模型大小</td></tr><tr><td>许可证</td><td>MIT（完全免费）</td></tr><tr><td>网络需求</td><td>仅首次下载模型时需要，运行时完全离线</td></tr></tbody></table>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>要求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>硬件</td>
+<td>Apple Silicon Mac（M1 及以上）</td>
+</tr>
+<tr>
+<td>操作系统</td>
+<td>macOS 26+ (Sequoia)</td>
+</tr>
+<tr>
+<td>统一内存</td>
+<td>取决于选择的模型大小</td>
+</tr>
+<tr>
+<td>许可证</td>
+<td>MIT（完全免费）</td>
+</tr>
+<tr>
+<td>网络需求</td>
+<td>仅首次下载模型时需要，运行时完全离线</td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h2 id="支持的模型">支持的模型</h2>
 <p>Nativ 预集成了来自 Google、Cohere 和 Liquid AI 的精选开源模型：</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>模型</th><th>来源</th><th>上下文窗口</th><th>模型大小</th><th>能力</th></tr></thead><tbody><tr><td>Gemma 4 E2B Instruct</td><td>Google</td><td>128K</td><td>10.28 GB</td><td>视觉 + 音频</td></tr><tr><td>North Mini Code</td><td>Cohere</td><td>500K</td><td>19.38 GB</td><td>代码 + 工具调用</td></tr><tr><td>LFM2.5-VL 1.6B</td><td>Liquid AI</td><td>128K</td><td>3.20 GB</td><td>视觉 + 语言</td></tr></tbody></table>
+<table>
+<thead>
+<tr>
+<th>模型</th>
+<th>来源</th>
+<th>上下文窗口</th>
+<th>模型大小</th>
+<th>能力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gemma 4 E2B Instruct</td>
+<td>Google</td>
+<td>128K</td>
+<td>10.28 GB</td>
+<td>视觉 + 音频</td>
+</tr>
+<tr>
+<td>North Mini Code</td>
+<td>Cohere</td>
+<td>500K</td>
+<td>19.38 GB</td>
+<td>代码 + 工具调用</td>
+</tr>
+<tr>
+<td>LFM2.5-VL 1.6B</td>
+<td>Liquid AI</td>
+<td>128K</td>
+<td>3.20 GB</td>
+<td>视觉 + 语言</td>
+</tr>
+</tbody>
+</table>
 <p>内存需求参考：</p>
 <ul>
 <li>3.2 GB 模型：需要至少 8GB 统一内存</li>
@@ -92,7 +92,7 @@
 <h3 id="1-真正的本地运行不泄露任何数据">1. 真正的本地运行，不泄露任何数据</h3>
 <p>所有推理都在你的 Mac 上完成。你的提示词、对话历史、图片附件永远不会离开你的设备。</p>
 <h3 id="2-完全免费mit-许可">2. 完全免费，MIT 许可</h3>
-<p>免费下载和使用，无次数限制。任何人都可以审查源代码，可以 Fork 和修改代码。没有”企业版”陷阱。</p>
+<p>免费下载和使用，无次数限制。任何人都可以审查源代码，可以 Fork 和修改代码。没有“企业版”陷阱。</p>
 <h3 id="3-可作为本地-api-服务器使用">3. 可作为本地 API 服务器使用</h3>
 <p>默认在 <a href="http://127.0.0.1:8080">http://127.0.0.1:8080</a> 启动本地 API 服务器，支持 OpenAI 和 Anthropic 兼容格式。</p>
 <h3 id="4-编码代理集成">4. 编码代理集成</h3>
@@ -113,61 +113,61 @@
 <span class="line"><span style="color:#B392F0">open</span><span style="color:#9ECBFF"> build/XcodeDerivedData/Build/Products/Debug/Nativ.app</span></span></code></pre>
 <hr>
 <h2 id="与云端-ai-服务的对比">与云端 AI 服务的对比</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>特性</th><th>Nativ（本地）</th><th>ChatGPT</th><th>Claude</th><th>Gemini</th></tr></thead><tbody><tr><td>费用</td><td>✅ 完全免费</td><td>$20/月</td><td>按量计费</td><td>部分免费</td></tr><tr><td>隐私</td><td>✅ 数据不离设备</td><td>❌ 数据上传云端</td><td>❌ 数据上传云端</td><td>❌ 数据上传云端</td></tr><tr><td>离线可用</td><td>✅ 完全离线</td><td>❌ 需要网络</td><td>❌ 需要网络</td><td>❌ 需要网络</td></tr><tr><td>自定义模型</td><td>✅ 可切换任意 MLX 模型</td><td>❌ 固定模型</td><td>❌ 固定模型</td><td>❌ 固定模型</td></tr><tr><td>API 兼容性</td><td>✅ OpenAI + Anthropic</td><td>—</td><td>✅ Anthropic</td><td>✅ OpenAI 兼容</td></tr><tr><td>编码代理集成</td><td>✅ 内置支持</td><td>❌</td><td>❌</td><td>❌</td></tr></tbody></table>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>Nativ（本地）</th>
+<th>ChatGPT</th>
+<th>Claude</th>
+<th>Gemini</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>费用</td>
+<td>✅ 完全免费</td>
+<td>$20/月</td>
+<td>按量计费</td>
+<td>部分免费</td>
+</tr>
+<tr>
+<td>隐私</td>
+<td>✅ 数据不离设备</td>
+<td>❌ 数据上传云端</td>
+<td>❌ 数据上传云端</td>
+<td>❌ 数据上传云端</td>
+</tr>
+<tr>
+<td>离线可用</td>
+<td>✅ 完全离线</td>
+<td>❌ 需要网络</td>
+<td>❌ 需要网络</td>
+<td>❌ 需要网络</td>
+</tr>
+<tr>
+<td>自定义模型</td>
+<td>✅ 可切换任意 MLX 模型</td>
+<td>❌ 固定模型</td>
+<td>❌ 固定模型</td>
+<td>❌ 固定模型</td>
+</tr>
+<tr>
+<td>API 兼容性</td>
+<td>✅ OpenAI + Anthropic</td>
+<td>—</td>
+<td>✅ Anthropic</td>
+<td>✅ OpenAI 兼容</td>
+</tr>
+<tr>
+<td>编码代理集成</td>
+<td>✅ 内置支持</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h2 id="实际使用场景">实际使用场景</h2>
 <ol>

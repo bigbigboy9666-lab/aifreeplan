@@ -14,48 +14,48 @@
 <hr>
 <h2 id="supported-models-and-free-quota">Supported Models and Free Quota</h2>
 <p>Petals currently supports:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>Model</th><th>Parameters</th><th>Max Speed</th><th>Free</th></tr></thead><tbody><tr><td>Llama 3.1 405B</td><td>405B</td><td>~4 tok/sec</td><td>Completely free</td></tr><tr><td>Llama 2 70B</td><td>70B</td><td>~6 tok/sec</td><td>Completely free</td></tr><tr><td>Mixtral 8x22B</td><td>141B (MoE)</td><td>~8 tok/sec</td><td>Completely free</td></tr><tr><td>Falcon 180B</td><td>180B</td><td>~4 tok/sec</td><td>Completely free</td></tr><tr><td>BLOOM 176B</td><td>176B</td><td>~3 tok/sec</td><td>Completely free</td></tr></tbody></table>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Parameters</th>
+<th>Max Speed</th>
+<th>Free</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Llama 3.1 405B</td>
+<td>405B</td>
+<td>~4 tok/sec</td>
+<td>Completely free</td>
+</tr>
+<tr>
+<td>Llama 2 70B</td>
+<td>70B</td>
+<td>~6 tok/sec</td>
+<td>Completely free</td>
+</tr>
+<tr>
+<td>Mixtral 8x22B</td>
+<td>141B (MoE)</td>
+<td>~8 tok/sec</td>
+<td>Completely free</td>
+</tr>
+<tr>
+<td>Falcon 180B</td>
+<td>180B</td>
+<td>~4 tok/sec</td>
+<td>Completely free</td>
+</tr>
+<tr>
+<td>BLOOM 176B</td>
+<td>176B</td>
+<td>~3 tok/sec</td>
+<td>Completely free</td>
+</tr>
+</tbody>
+</table>
 <p>All models are completely free — no registration, no API Key, no payment required. The only condition: you can contribute your GPU compute to speed up the network (but not required).</p>
 <p>Compare: Llama 3.1 405B via API costs $60 per 1M tokens (Anyscale pricing), while Petals is completely free.</p>
 <hr>
@@ -76,7 +76,7 @@
 <h3 id="method-2-local-deployment-if-you-have-gpu">Method 2: Local Deployment (If You Have GPU)</h3>
 <ol>
 <li><strong>Install</strong> — pip install petals-inference</li>
-<li><strong>Start</strong> — python -m petals.main —model meta-llama/Llama-3.1-405B-Instruct</li>
+<li><strong>Start</strong> — python -m petals.main –model meta-llama/Llama-3.1-405B-Instruct</li>
 <li><strong>Use</strong> — Connect via HTTP API or Python SDK</li>
 </ol>
 <hr>

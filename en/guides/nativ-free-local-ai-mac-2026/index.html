@@ -5,7 +5,7 @@
 <p>Nativ is a macOS native app built with SwiftUI, using MLX-VLM (Meta’s MLX inference framework) as the inference engine. It’s not just a chat interface — it’s a complete local AI workspace.</p>
 <p>Core features:</p>
 <ul>
-<li><strong>Local chat &#x26; vision</strong> — Streaming responses, image attachments, reasoning output</li>
+<li><strong>Local chat &amp; vision</strong> — Streaming responses, image attachments, reasoning output</li>
 <li><strong>Model library management</strong> — Discover installed MLX models, one-click download, switch models</li>
 <li><strong>Performance analytics</strong> — Track requests, token usage, TTFT, decode speed</li>
 <li><strong>Local API server</strong> — OpenAI-compatible /v1/chat/completions endpoint</li>
@@ -14,73 +14,73 @@
 </ul>
 <hr>
 <h2 id="system-requirements">System Requirements</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>Item</th><th>Requirement</th></tr></thead><tbody><tr><td>Hardware</td><td>Apple Silicon Mac (M1 or later)</td></tr><tr><td>OS</td><td>macOS 26+ (Sequoia)</td></tr><tr><td>Unified Memory</td><td>Depends on model size (see below)</td></tr><tr><td>License</td><td>MIT (completely free)</td></tr><tr><td>Network</td><td>Only needed for initial model download, fully offline at runtime</td></tr></tbody></table>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hardware</td>
+<td>Apple Silicon Mac (M1 or later)</td>
+</tr>
+<tr>
+<td>OS</td>
+<td>macOS 26+ (Sequoia)</td>
+</tr>
+<tr>
+<td>Unified Memory</td>
+<td>Depends on model size (see below)</td>
+</tr>
+<tr>
+<td>License</td>
+<td>MIT (completely free)</td>
+</tr>
+<tr>
+<td>Network</td>
+<td>Only needed for initial model download, fully offline at runtime</td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h2 id="supported-models">Supported Models</h2>
 <p>Nativ comes pre-integrated with curated open models from Google, Cohere, and Liquid AI:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>Model</th><th>Source</th><th>Context Window</th><th>Model Size</th><th>Capabilities</th></tr></thead><tbody><tr><td>Gemma 4 E2B Instruct</td><td>Google</td><td>128K</td><td>10.28 GB</td><td>Vision + Audio</td></tr><tr><td>North Mini Code</td><td>Cohere</td><td>500K</td><td>19.38 GB</td><td>Code + Tool Use</td></tr><tr><td>LFM2.5-VL 1.6B</td><td>Liquid AI</td><td>128K</td><td>3.20 GB</td><td>Vision + Language</td></tr></tbody></table>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Source</th>
+<th>Context Window</th>
+<th>Model Size</th>
+<th>Capabilities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gemma 4 E2B Instruct</td>
+<td>Google</td>
+<td>128K</td>
+<td>10.28 GB</td>
+<td>Vision + Audio</td>
+</tr>
+<tr>
+<td>North Mini Code</td>
+<td>Cohere</td>
+<td>500K</td>
+<td>19.38 GB</td>
+<td>Code + Tool Use</td>
+</tr>
+<tr>
+<td>LFM2.5-VL 1.6B</td>
+<td>Liquid AI</td>
+<td>128K</td>
+<td>3.20 GB</td>
+<td>Vision + Language</td>
+</tr>
+</tbody>
+</table>
 <p>Memory requirements:</p>
 <ul>
 <li>3.2 GB model: Requires at least 8GB unified memory</li>
@@ -113,61 +113,61 @@
 <span class="line"><span style="color:#B392F0">open</span><span style="color:#9ECBFF"> build/XcodeDerivedData/Build/Products/Debug/Nativ.app</span></span></code></pre>
 <hr>
 <h2 id="comparison-with-cloud-ai-services">Comparison with Cloud AI Services</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>Feature</th><th>Nativ (Local)</th><th>ChatGPT</th><th>Claude</th><th>Gemini</th></tr></thead><tbody><tr><td>Cost</td><td>✅ Completely free</td><td>$20/mo</td><td>Pay-per-use</td><td>Partial free</td></tr><tr><td>Privacy</td><td>✅ Data stays on device</td><td>❌ Data uploaded</td><td>❌ Data uploaded</td><td>❌ Data uploaded</td></tr><tr><td>Offline</td><td>✅ Fully offline</td><td>❌ Requires internet</td><td>❌ Requires internet</td><td>❌ Requires internet</td></tr><tr><td>Custom models</td><td>✅ Switch any MLX model</td><td>❌ Fixed model</td><td>❌ Fixed model</td><td>❌ Fixed model</td></tr><tr><td>API compatibility</td><td>✅ OpenAI + Anthropic</td><td>—</td><td>✅ Anthropic</td><td>✅ OpenAI compatible</td></tr><tr><td>Coding agent integration</td><td>✅ Built-in</td><td>❌</td><td>❌</td><td>❌</td></tr></tbody></table>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Nativ (Local)</th>
+<th>ChatGPT</th>
+<th>Claude</th>
+<th>Gemini</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cost</td>
+<td>✅ Completely free</td>
+<td>$20/mo</td>
+<td>Pay-per-use</td>
+<td>Partial free</td>
+</tr>
+<tr>
+<td>Privacy</td>
+<td>✅ Data stays on device</td>
+<td>❌ Data uploaded</td>
+<td>❌ Data uploaded</td>
+<td>❌ Data uploaded</td>
+</tr>
+<tr>
+<td>Offline</td>
+<td>✅ Fully offline</td>
+<td>❌ Requires internet</td>
+<td>❌ Requires internet</td>
+<td>❌ Requires internet</td>
+</tr>
+<tr>
+<td>Custom models</td>
+<td>✅ Switch any MLX model</td>
+<td>❌ Fixed model</td>
+<td>❌ Fixed model</td>
+<td>❌ Fixed model</td>
+</tr>
+<tr>
+<td>API compatibility</td>
+<td>✅ OpenAI + Anthropic</td>
+<td>—</td>
+<td>✅ Anthropic</td>
+<td>✅ OpenAI compatible</td>
+</tr>
+<tr>
+<td>Coding agent integration</td>
+<td>✅ Built-in</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h2 id="use-cases">Use Cases</h2>
 <ol>

@@ -57,93 +57,93 @@
 </ul>
 <hr>
 <h2 id="定价对比">定价对比</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>模型</th><th>输入价格</th><th>输出价格</th><th>相对成本</th></tr></thead><tbody><tr><td>Claude Opus 5</td><td>$5/百万token</td><td>$25/百万token</td><td>基准</td></tr><tr><td>Claude Fable 5</td><td>$10/百万token</td><td>$50/百万token</td><td>2x</td></tr><tr><td>Claude 3.5 Sonnet</td><td>$3/百万token</td><td>$15/百万token</td><td>0.6x</td></tr><tr><td>Claude 3 Haiku</td><td>$0.25/百万token</td><td>$1.25/百万token</td><td>0.05x</td></tr></tbody></table>
+<table>
+<thead>
+<tr>
+<th>模型</th>
+<th>输入价格</th>
+<th>输出价格</th>
+<th>相对成本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Claude Opus 5</td>
+<td>$5/百万token</td>
+<td>$25/百万token</td>
+<td>基准</td>
+</tr>
+<tr>
+<td>Claude Fable 5</td>
+<td>$10/百万token</td>
+<td>$50/百万token</td>
+<td>2x</td>
+</tr>
+<tr>
+<td>Claude 3.5 Sonnet</td>
+<td>$3/百万token</td>
+<td>$15/百万token</td>
+<td>0.6x</td>
+</tr>
+<tr>
+<td>Claude 3 Haiku</td>
+<td>$0.25/百万token</td>
+<td>$1.25/百万token</td>
+<td>0.05x</td>
+</tr>
+</tbody>
+</table>
 <p>Claude Opus 5的定价仅为Fable 5的一半，但性能在某些任务上更优，性价比极高。</p>
 <hr>
 <h2 id="性能对比">性能对比</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>模型</th><th>编程能力</th><th>知识推理</th><th>速度</th><th>价格</th></tr></thead><tbody><tr><td>Claude Opus 5</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>中等</td><td>$5/$25</td></tr><tr><td>Claude Fable 5</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>较慢</td><td>$10/$50</td></tr><tr><td>GPT-4o</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>快</td><td>$2.5/$10</td></tr><tr><td>Gemini 2.5 Pro</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>快</td><td>$1.25/$7.5</td></tr><tr><td>Llama 3.1 405B</td><td>⭐⭐⭐</td><td>⭐⭐⭐</td><td>慢</td><td>免费(自建)</td></tr></tbody></table>
+<table>
+<thead>
+<tr>
+<th>模型</th>
+<th>编程能力</th>
+<th>知识推理</th>
+<th>速度</th>
+<th>价格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Claude Opus 5</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>中等</td>
+<td>$5/$25</td>
+</tr>
+<tr>
+<td>Claude Fable 5</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>较慢</td>
+<td>$10/$50</td>
+</tr>
+<tr>
+<td>GPT-4o</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>快</td>
+<td>$2.5/$10</td>
+</tr>
+<tr>
+<td>Gemini 2.5 Pro</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>快</td>
+<td>$1.25/$7.5</td>
+</tr>
+<tr>
+<td>Llama 3.1 405B</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>慢</td>
+<td>免费(自建)</td>
+</tr>
+</tbody>
+</table>
 <p>Claude Opus 5在编程和知识工作评估中达到SOTA，是Anthropic迄今为止最强的模型。</p>
 <hr>
 <h2 id="使用建议">使用建议</h2>
@@ -165,7 +165,7 @@
 <li><strong>合并请求</strong> — 将多个问题合并到一个请求中，减少token消耗</li>
 <li><strong>使用流式输出</strong> — 改善用户体验，减少等待时间</li>
 <li><strong>控制输出长度</strong> — 设置合理的max_tokens避免浪费</li>
-<li><strong>选择合适的模式</strong> — 简单任务用”fast”模式，复杂任务用”thinking”模式</li>
+<li><strong>选择合适的模式</strong> — 简单任务用“fast”模式，复杂任务用“thinking”模式</li>
 </ol>
 <hr>
 <h2 id="常见问题">常见问题</h2>

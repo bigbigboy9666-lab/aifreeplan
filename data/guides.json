@@ -1,23 +1,6 @@
 {
   "guides": [
     {
-      "slug": "cursor-ai-free-tier-guide-2026",
-      "title_zh": "Cursor AI 免费版完全攻略：2026年最火AI代码编辑器，200条/月免费额度",
-      "title_en": "Cursor AI Free Tier Guide 2026: The Hottest AI Code Editor with 200 Free Messages/Month",
-      "description_zh": "Cursor AI是2026年最流行的AI编程工具，提供完全免费的使用方案。本文详细介绍Cursor免费版的功能、额度限制、注册方法，以及与Pro付费版的全面对比。",
-      "description_en": "Cursor AI is the most popular AI coding tool in 2026, offering a completely free plan. This guide details Cursor's free tier features, limits, signup process, and a comprehensive comparison with the Pro plan.",
-      "category": "coding",
-      "date_published": "2026-08-03",
-      "tags": [
-        "cursor",
-        "ai-coding",
-        "free-tier",
-        "vscode"
-      ],
-      "image": "cursor-free-tier.jpg",
-      "pinned": true
-    },
-    {
       "slug": "petals-free-distributed-llm-2026",
       "title_zh": "Petals免费攻略：BitTorrent-style分布式网络，免费运行Llama 3.1 405B超大模型",
       "title_en": "Petals Free Guide: BitTorrent-Style Distributed Network for Free Llama 3.1 405B Inference",
@@ -587,5 +570,6 @@
       "excerpt_en": "RingBot is an AI Voice Agent platform with a free trial and flexible pay-as-you-go pricing. Pro plan includes 700 minutes/month, Enterprise includes 4000 minutes. Integrates with 50+ platforms with sub-100ms latency, suitable for dental clinics, restaurants, insurance agencies and more."
     }
   ],
-  "updatedAt": "2026-08-03"
+  "updatedAt": "2026-08-03",
+  "generatedAt": "2026-08-03"
 }
