@@ -619,6 +619,38 @@
       ],
       "url_zh": "/zh/guides/qwen-cua-computer-use-agent-2026",
       "url_en": "/en/guides/qwen-cua-computer-use-agent-2026"
+    },
+    {
+      "title": "CodeBuddy NPC 完全攻略：@召唤 AI 同事替我上班",
+      "slug": "codebuddy-npc-free-ai-coding-guide-2026",
+      "author": "猫哥",
+      "publishedAt": "2026-08-06",
+      "updatedAt": "2026-08-06",
+      "category": "AI编程工具",
+      "tags": [
+        "腾讯云",
+        "CodeBuddy",
+        "AI编程",
+        "免费工具",
+        "DeepSeek",
+        "CNB",
+        "替我上班"
+      ],
+      "views": 0,
+      "summary": "腾讯云CNB平台推出的CodeBuddy NPC，接入DeepSeek-V4-Flash引擎，在仓库评论里@它就能自动干活。三步召唤：打开仓库→@CodeBuddy NPC→开启替我上班，AI自动完成需求理解→任务拆解→编码执行→质量验证。限时免费到2026年底。",
+      "content": "CodeBuddy NPC 完全攻略：@召唤 AI 同事替我上班",
+      "coverImage": null,
+      "seoTitle": "CodeBuddy NPC免费攻略｜@召唤AI同事替我上班",
+      "seoDescription": "腾讯云CNB平台CodeBuddy NPC接入DeepSeek-V4-Flash，@召唤自动完成开发任务。限时免费到2026年底，详细使用教程和场景案例。",
+      "keywords": [
+        "CodeBuddy",
+        "CNB",
+        "替我上班",
+        "DeepSeek-V4-Flash",
+        "AI编程助手",
+        "免费工具",
+        "腾讯云"
+      ]
     }
   ],
   "updatedAt": "2026-08-06",
