@@ -568,8 +568,27 @@
       ],
       "excerpt_zh": "RingBot是AI语音智能体平台，提供免费试用和灵活计费方案。Pay-As-You-Go按分钟计费，Pro版700分钟/月，Enterprise版4000分钟/月。支持50+平台集成，亚100毫秒延迟，适合牙科诊所、餐厅、保险公司等多种行业。",
       "excerpt_en": "RingBot is an AI Voice Agent platform with a free trial and flexible pay-as-you-go pricing. Pro plan includes 700 minutes/month, Enterprise includes 4000 minutes. Integrates with 50+ platforms with sub-100ms latency, suitable for dental clinics, restaurants, insurance agencies and more."
+    },
+    {
+      "slug": "qwen-cua-computer-use-agent-2026",
+      "title_zh": "阿里Qwen-CUA电脑控制Agent：397B参数免费开源，直接操控浏览器桌面软件",
+      "title_en": "Alibaba Qwen-CUA: Free Open-Source Computer Use Agent with 397B Parameters",
+      "description_zh": "阿里Qwen团队推出原生Computer Use Agent「Qwen-CUA」，基于397B-A17B混合专家架构，直接通过屏幕截图感知界面状态，无需依赖DOM树，在OSWorld-Verified基准上达到86.2分。免费开源，可本地部署。",
+      "description_en": "Alibaba Qwen team releases Qwen-CUA, a native Computer Use Agent based on 397B-A17B MoE architecture. Directly perceives UI state through screenshots without DOM tree dependency, achieving 86.2 on OSWorld-Verified benchmark. Free and open-source.",
+      "date_published": "2026-08-06",
+      "category": "AI智能体",
+      "tags": [
+        "Computer Use",
+        "Agent",
+        "开源",
+        "免费",
+        "阿里",
+        "Qwen"
+      ],
+      "url_zh": "/zh/guides/qwen-cua-computer-use-agent-2026",
+      "url_en": "/en/guides/qwen-cua-computer-use-agent-2026"
     }
   ],
-  "updatedAt": "2026-08-03",
-  "generatedAt": "2026-08-03"
+  "updatedAt": "2026-08-06",
+  "generatedAt": "2026-08-06"
 }

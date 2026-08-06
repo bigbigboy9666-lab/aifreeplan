@@ -24496,6 +24496,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/en/guides/qwen-cua-computer-use-agent-2026/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/en/guides/qwen3-6-free-unlimited-2026/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -49792,6 +49797,11 @@
   </url>
   <url>
     <loc>https://aifreeplan.com/zh/guides/qoderwork-free-pro-2026/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/guides/qwen-cua-computer-use-agent-2026/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
