@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>阿里Qwen-CUA电脑控制Agent：397B参数免费开源，直接操控浏览器桌面软件 | AIFreePlan</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="阿里Qwen-CUA电脑控制Agent：397B参数免费开源，直接操控浏览器桌面软件 | AIFreePlan">
+<meta property="og:description" content="阿里Qwen团队推出原生Computer Use Agent「Qwen-CUA」，基于397B-A17B混合专家架构，直接通过屏幕截图感知界面状态，无需依赖DOM树，在OSWorld-Verified基准上达到86.2分。免费开源，可本地部署。">
+<meta property="og:url" content="https://aifreeplan.com/zh/guides/qwen-cua-computer-use-agent-2026">
+<meta property="og:site_name" content="AIFreePlan">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="阿里Qwen-CUA电脑控制Agent：397B参数免费开源，直接操控浏览器桌面软件 | AIFreePlan">
+<meta name="twitter:description" content="阿里Qwen团队推出原生Computer Use Agent「Qwen-CUA」，基于397B-A17B混合专家架构，直接通过屏幕截图感知界面状态，无需依赖DOM树，在OSWorld-Verified基准上达到86.2分。免费开源，可本地部署。">
+<meta name="description" content="阿里Qwen团队推出原生Computer Use Agent「Qwen-CUA」，基于397B-A17B混合专家架构，直接通过屏幕截图感知界面状态，无需依赖DOM树，在OSWorld-Verified基准上达到86.2分。免费开源，可本地部署。">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<link rel="canonical" href="https://aifreeplan.com/zh/guides/qwen-cua-computer-use-agent-2026">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/qwen-cua-computer-use-agent-2026">
+<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/qwen-cua-computer-use-agent-2026">
+<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/qwen-cua-computer-use-agent-2026">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;--text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;--accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);--green:#059669;--green-light:rgba(5,150,105,.1);--shadow:0 4px 20px rgba(0,0,0,.05);--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover)}
+.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
+.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
+.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
+.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
+.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
+.article-container ul,.article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
+.article-container li{margin-bottom:8px;line-height:1.6}
+.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
+.article-container a{color:var(--accent);text-decoration:underline}
+.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-container th,.article-container td{padding:12px;border:1px solid var(--border);text-align:left}
+.article-container th{background:var(--accent-light);font-weight:600}
+.breadcrumb{font-size:14px;color:var(--text-muted);margin-bottom:24px}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb-sep{margin:0 8px}
+.faq-section{background:var(--bg-white);border-radius:var(--radius);padding:32px;margin-top:40px;box-shadow:var(--shadow)}
+.faq-section h3{margin-top:0;color:var(--text)}
+.faq-item{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border-light)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-weight:700;color:var(--text);margin-bottom:8px}
+.faq-a{color:var(--text-secondary);line-height:1.7}
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff;margin-top:60px}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6)}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col h4{font-size:14px;font-weight:700;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+@media(max-width:768px){.article-container{padding:16px 16px 48px;max-width:100%}.article-container h1{font-size:24px}.article-container h2{font-size:20px}.container{padding:0 16px}.nav{display:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"阿里Qwen-CUA电脑控制Agent：397B参数免费开源，直接操控浏览器桌面软件","description":"阿里Qwen团队推出原生Computer Use Agent「Qwen-CUA」，基于397B-A17B混合专家架构，直接通过屏幕截图感知界面状态，无需依赖DOM树，在OSWorld-Verified基准上达到86.2分。免费开源，可本地部署。","url":"https://aifreeplan.com/zh/guides/qwen-cua-computer-use-agent-2026","datePublished":"2026-08-06","dateModified":"2026-08-06","author":{"@type":"Organization","name":"AIFreePlan"},"publisher":{"@type":"Organization","name":"AIFreePlan","url":"https://aifreeplan.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aifreeplan.com/zh/guides/qwen-cua-computer-use-agent-2026"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://aifreeplan.com/zh"},{"@type":"ListItem","position":2,"name":"攻略","item":"https://aifreeplan.com/zh/guides"},{"@type":"ListItem","position":3,"name":"阿里Qwen-CUA电脑控制Agent：397B参数免费开源，直接操控浏览器桌面软件","item":"https://aifreeplan.com/zh/guides/qwen-cua-computer-use-agent-2026"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[[{"@type":"Question","name":"Qwen-CUA是免费的吗？","acceptedAnswer":{"@type":"Answer","text":"是的，Qwen-CUA完全免费开源，用户可以下载模型权重进行本地部署，或通过云端API按调用量付费使用。"}}]]}
+</script>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="/zh" class="logo">AI<span class="accent">FreePlan</span></a>
+    <nav class="nav">
+      <a href="/zh/all">全部工具</a>
+      <a href="/zh/guides">攻略</a>
+      <a href="/zh/privacy">隐私</a>
+      <a href="/en/guides/qwen-cua-computer-use-agent-2026" class="btn btn-primary">English</a>
+    </nav>
+  </div>
+</header>
+<main class="article-container">
+<nav class="breadcrumb"><a href="/zh">首页</a> <span class="breadcrumb-sep">›</span> <a href="/zh/guides">攻略</a> <span class="breadcrumb-sep">›</span> <span>阿里Qwen-CUA电脑控制Agent：397B参数免费开源，直接操控浏览器桌面软件</span></nav>
+
+<h1>阿里Qwen-CUA电脑控制Agent：397B参数免费开源，直接操控浏览器桌面软件</h1>
+<p>2026年8月5日，阿里Qwen团队联合XLang Lab正式发布原生Computer Use Agent——<strong>Qwen-CUA</strong>。这是国内首个支持直接通过屏幕截图感知界面状态、输出键盘鼠标事件操控浏览器、桌面及专业软件的AI Agent模型。</p>
+
+<h2>核心技术亮点</h2>
+<p>Qwen-CUA基于<strong>397B-A17B混合专家架构</strong>（MoE）构建，这个架构意味着模型拥有3970亿总参数，但每次推理只激活170亿参数，在性能与效率之间取得了优秀平衡。</p>
+
+<p>与传统的Computer Use方案不同，Qwen-CUA<strong>无需依赖DOM树或无障碍元数据</strong>，而是直接通过屏幕截图感知界面状态，然后输出键盘鼠标事件。这种方案的优势在于：</p>
+<ul>
+<li>适用性更广：无论网页、桌面应用还是专业软件，只要有屏幕显示就能操控</li>
+<li>绕过反自动化检测：不触碰DOM，更难被网站识别为机器人</li>
+<li>真实用户视角：模拟人类通过视觉感知操作，更符合自然交互</li>
+</ul>
+
+<h2>性能表现</h2>
+<p>在权威基准测试OSWorld-Verified上，Qwen-CUA取得了<strong>86.2分</strong>的优异成绩。万亿参数Max版本更是达到了<strong>87.6分</strong>，这一成绩意味着模型能够高效完成复杂的跨应用任务。</p>
+
+<p>OSWorld是一个专注于评估AI Agent在真实操作系统环境中执行任务能力的基准测试，涵盖文件管理、软件开发、数据可视化、网页操作等多种场景。86.2分的得分表明Qwen-CUA已经具备在实际工作流中大规模应用的潜力。</p>
+
+<h2>免费开源与使用方式</h2>
+<p>好消息是，Qwen-CUA完全<strong>免费开源</strong>，用户可以：</p>
+<ul>
+<li>在ModelScope或Hugging Face下载模型权重进行本地部署</li>
+<li>使用阿里云PAI平台进行云端推理</li>
+<li>通过Qwen-Agent框架快速集成到自己的自动化流程中</li>
+</ul>
+
+<p>对于普通用户，建议通过云端API方式使用，无需配置本地GPU。对于开发者和企业用户，可以下载模型权重部署到自有服务器，完全掌控数据隐私。</p>
+
+<h2>应用场景</h2>
+<p>Qwen-CUA的主要应用场景包括：</p>
+<ol>
+<li><strong>网页自动化</strong>：自动填写表单、抓取数据、批量操作网页应用</li>
+<li><strong>桌面办公</strong>：操控Word、Excel、PPT等办公软件，实现文档批量处理</li>
+<li><strong>专业软件操作</strong>：控制CAD、PS、PR等专业软件完成设计任务</li>
+<li><strong>跨平台工作流</strong>：在不同应用间无缝切换，完成复杂的多步骤任务</li>
+</ol>
+
+<h2>与同类产品对比</h2>
+<table>
+<tr><th>特性</th><th>Qwen-CUA</th><th>OpenAI Agent</th><th>Google Gemini Agent</th></tr>
+<tr><td>架构参数</td><td>397B-A17B (MoE)</td><td>闭源</td><td>闭源</td></tr>
+<tr><td>感知方式</td><td>截图</td><td>截图/DOM</td><td>截图/DOM</td></tr>
+<tr><td>开源</td><td>✓ 免费</td><td>✗ 付费API</td><td>✗ 付费API</td></tr>
+<tr><td>OSWorld分数</td><td>86.2</td><td>暂未公开</td><td>暂未公开</td></tr>
+<tr><td>中文支持</td><td>原生支持</td><td>良好</td><td>良好</td></tr>
+</table>
+
+<h2>如何使用Qwen-CUA</h2>
+<p>推荐三种使用方式：</p>
+<p><strong>方式一：云端API（适合普通用户）</strong><br>
+通过阿里云PAI平台或直接调用Qwen官方API，无需配置GPU，按调用量计费。</p>
+<p><strong>方式二：本地部署（适合技术用户）</strong><br>
+下载模型权重到本地，使用vLLM或SGLang进行推理。需要至少80GB显存的A100/H100 GPU，或部署多张消费级GPU。</p>
+<p><strong>方式三：Qwen-Agent框架集成</strong><br>
+使用Qwen-Agent官方框架，可以快速搭建自动化Agent，支持工具调用、多轮对话、任务规划等功能。</p>
+
+<h2>总结</h2>
+<p>Qwen-CUA的发布标志着国内AI Agent能力迈上新台阶。397B参数的庞大规模、86.2的OSWorld分数、完全免费开源的授权，使其成为当前最强的Computer Use Agent之一。无论是开发者、企业还是个人用户，都可以基于此构建强大的自动化解决方案。</p>
+<p>对于普通用户，建议先从云端API试用开始；对于有技术能力的用户，本地部署可以获得更灵活、更私密的体验。随着模型的持续迭代，Qwen-CUA有望成为AI Agent领域的标杆产品。</p>
+
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="/zh" class="logo" style="color:#059669">AI<span class="accent" style="color:#6366F1">FreePlan</span></a><p>AI驱动的免费工具聚合平台，永久免费。</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h4>产品</h4><a href="/zh/all">全部工具</a><a href="/zh/guides">攻略</a></div>
+      <div class="footer-col"><h4>法律</h4><a href="/zh/privacy">隐私政策</a><a href="/zh/terms">用户协议</a></div>
+    </div>
+  </div>
+  <div class="container footer-bottom">&copy; 2026 AIFreePlan. All rights reserved.</div>
+</footer>
+</body></html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alibaba Qwen-CUA: Free Open-Source Computer Use Agent with 397B Parameters | AIFreePlan</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="Alibaba Qwen-CUA: Free Open-Source Computer Use Agent with 397B Parameters | AIFreePlan">
+<meta property="og:description" content="Alibaba Qwen team releases Qwen-CUA, a native Computer Use Agent based on 397B-A17B MoE architecture. Directly perceives UI state through screenshots without DOM tree dependency, achieving 86.2 on OSWorld-Verified benchmark. Free and open-source.">
+<meta property="og:url" content="https://aifreeplan.com/en/guides/qwen-cua-computer-use-agent-2026">
+<meta property="og:site_name" content="AIFreePlan">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Alibaba Qwen-CUA: Free Open-Source Computer Use Agent with 397B Parameters | AIFreePlan">
+<meta name="twitter:description" content="Alibaba Qwen team releases Qwen-CUA, a native Computer Use Agent based on 397B-A17B MoE architecture. Directly perceives UI state through screenshots without DOM tree dependency, achieving 86.2 on OSWorld-Verified benchmark. Free and open-source.">
+<meta name="description" content="Alibaba Qwen team releases Qwen-CUA, a native Computer Use Agent based on 397B-A17B MoE architecture. Directly perceives UI state through screenshots without DOM tree dependency, achieving 86.2 on OSWorld-Verified benchmark. Free and open-source.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<link rel="canonical" href="https://aifreeplan.com/en/guides/qwen-cua-computer-use-agent-2026">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/qwen-cua-computer-use-agent-2026">
+<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/qwen-cua-computer-use-agent-2026">
+<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/qwen-cua-computer-use-agent-2026">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;--text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;--accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);--green:#059669;--green-light:rgba(5,150,105,.1);--shadow:0 4px 20px rgba(0,0,0,.05);--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover)}
+.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
+.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
+.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
+.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
+.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
+.article-container ul,.article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
+.article-container li{margin-bottom:8px;line-height:1.6}
+.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
+.article-container a{color:var(--accent);text-decoration:underline}
+.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-container th,.article-container td{padding:12px;border:1px solid var(--border);text-align:left}
+.article-container th{background:var(--accent-light);font-weight:600}
+.breadcrumb{font-size:14px;color:var(--text-muted);margin-bottom:24px}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb-sep{margin:0 8px}
+.faq-section{background:var(--bg-white);border-radius:var(--radius);padding:32px;margin-top:40px;box-shadow:var(--shadow)}
+.faq-section h3{margin-top:0;color:var(--text)}
+.faq-item{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border-light)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-weight:700;color:var(--text);margin-bottom:8px}
+.faq-a{color:var(--text-secondary);line-height:1.7}
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff;margin-top:60px}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6)}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col h4{font-size:14px;font-weight:700;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+@media(max-width:768px){.article-container{padding:16px 16px 48px;max-width:100%}.article-container h1{font-size:24px}.article-container h2{font-size:20px}.container{padding:0 16px}.nav{display:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Alibaba Qwen-CUA: Free Open-Source Computer Use Agent with 397B Parameters","description":"Alibaba Qwen team releases Qwen-CUA, a native Computer Use Agent based on 397B-A17B MoE architecture. Directly perceives UI state through screenshots without DOM tree dependency, achieving 86.2 on OSWorld-Verified benchmark. Free and open-source.","url":"https://aifreeplan.com/en/guides/qwen-cua-computer-use-agent-2026","datePublished":"2026-08-06","dateModified":"2026-08-06","author":{"@type":"Organization","name":"AIFreePlan"},"publisher":{"@type":"Organization","name":"AIFreePlan","url":"https://aifreeplan.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aifreeplan.com/en/guides/qwen-cua-computer-use-agent-2026"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aifreeplan.com/en"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://aifreeplan.com/en/guides"},{"@type":"ListItem","position":3,"name":"Alibaba Qwen-CUA: Free Open-Source Computer Use Agent with 397B Parameters","item":"https://aifreeplan.com/en/guides/qwen-cua-computer-use-agent-2026"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[[{"@type":"Question","name":"Is Qwen-CUA free?","acceptedAnswer":{"@type":"Answer","text":"Yes, Qwen-CUA is completely free and open-source. Users can download model weights for local deployment or use the cloud API on a pay-per-call basis."}}]]}
+</script>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="/en" class="logo">AI<span class="accent">FreePlan</span></a>
+    <nav class="nav">
+      <a href="/en/all">All Tools</a>
+      <a href="/en/guides">Guides</a>
+      <a href="/en/privacy">Privacy</a>
+      <a href="/zh/guides/qwen-cua-computer-use-agent-2026" class="btn btn-primary">中文</a>
+    </nav>
+  </div>
+</header>
+<main class="article-container">
+<nav class="breadcrumb"><a href="/en">Home</a> <span class="breadcrumb-sep">›</span> <a href="/en/guides">Guides</a> <span class="breadcrumb-sep">›</span> <span>Alibaba Qwen-CUA: Free Open-Source Computer Use Agent with 397B Parameters</span></nav>
+
+<h1>Alibaba Qwen-CUA: Free Open-Source Computer Use Agent with 397B Parameters</h1>
+<p>On August 5, 2026, Alibaba's Qwen team, in collaboration with XLang Lab, officially released <strong>Qwen-CUA</strong>, a native Computer Use Agent. This is China's first AI Agent model capable of perceiving UI states through screenshots and outputting keyboard/mouse events to control browsers, desktops, and professional software.</p>
+
+<h2>Core Technical Highlights</h2>
+<p>Qwen-CUA is built on a <strong>397B-A17B Mixture-of-Experts (MoE) architecture</strong>. This means the model has 397 billion total parameters but only activates 17 billion parameters per inference, achieving an excellent balance between performance and efficiency.</p>
+
+<p>Unlike traditional Computer Use approaches, Qwen-CUA <strong>does not rely on DOM trees or accessibility metadata</strong>. Instead, it perceives UI states directly through screenshots and outputs keyboard/mouse events. This approach offers several advantages:</p>
+<ul>
+<li><strong>Broader applicability</strong>: Works with any application that has a screen display—web pages, desktop apps, or professional software</li>
+<li><strong>Bypasses anti-bot detection</strong>: Doesn't interact with DOM, making it harder to identify as a bot</li>
+<li><strong>Natural interaction</strong>: Simulates human visual perception, more intuitive for users</li>
+</ul>
+
+<h2>Performance Results</h2>
+<p>On the authoritative OSWorld-Verified benchmark, Qwen-CUA achieved an impressive <strong>86.2 points</strong>. The trillion-parameter Max version reached <strong>87.6 points</strong>, indicating the model can efficiently handle complex cross-application tasks.</p>
+
+<p>OSWorld is a benchmark specifically designed to evaluate AI Agents' ability to execute tasks in real operating system environments, covering file management, software development, data visualization, web operations, and more. A score of 86.2 suggests Qwen-CUA has strong potential for large-scale practical application.</p>
+
+<h2>Free Open-Source & Usage</h2>
+<p>The best news is that Qwen-CUA is completely <strong>free and open-source</strong>. Users can:</p>
+<ul>
+<li>Download model weights from ModelScope or Hugging Face for local deployment</li>
+<li>Use Alibaba Cloud PAI platform for cloud inference</li>
+<li>Integrate into automation workflows via the Qwen-Agent framework</li>
+</ul>
+
+<p>For regular users, we recommend using the cloud API approach—no local GPU configuration needed. For developers and enterprise users, downloading model weights for self-hosted deployment provides full data privacy control.</p>
+
+<h2>Application Scenarios</h2>
+<p>Qwen-CUA's main application scenarios include:</p>
+<ol>
+<li><strong>Web automation</strong>: Auto-fill forms, scrape data, batch operations on web applications</li>
+<li><strong>Desktop office work</strong>: Control Word, Excel, PPT for batch document processing</li>
+<li><strong>Professional software</strong>: Operate CAD, Photoshop, Premiere for design tasks</li>
+<li><strong>Cross-platform workflows</strong>: Seamless switching between applications for complex multi-step tasks</li>
+</ol>
+
+<h2>Comparison with Competitors</h2>
+<table>
+<tr><th>Feature</th><th>Qwen-CUA</th><th>OpenAI Agent</th><th>Google Gemini Agent</th></tr>
+<tr><td>Architecture</td><td>397B-A17B (MoE)</td><td>Proprietary</td><td>Proprietary</td></tr>
+<tr><td>Perception</td><td>Screenshot</td><td>Screenshot/DOM</td><td>Screenshot/DOM</td></tr>
+<tr><td>Open Source</td><td>✓ Free</td><td>✗ Paid API</td><td>✗ Paid API</td></tr>
+<tr><td>OSWorld Score</td><td>86.2</td><td>Not disclosed</td><td>Not disclosed</td></tr>
+<tr><td>Chinese Support</td><td>Native</td><td>Good</td><td>Good</td></tr>
+</table>
+
+<h2>How to Use Qwen-CUA</h2>
+<p>Three recommended approaches:</p>
+<p><strong>Method 1: Cloud API (for regular users)</strong><br>
+Use Alibaba Cloud PAI platform or call the official Qwen API directly. No GPU configuration needed, pay per call volume.</p>
+<p><strong>Method 2: Local Deployment (for technical users)</strong><br>
+Download model weights locally and use vLLM or SGLang for inference. Requires at least 80GB VRAM A100/H100 GPU, or multiple consumer GPUs.</p>
+<p><strong>Method 3: Qwen-Agent Framework Integration</strong><br>
+Use the official Qwen-Agent framework to quickly build automation agents, supporting tool calling, multi-turn dialogue, and task planning.</p>
+
+<h2>Conclusion</h2>
+<p>The release of Qwen-CUA marks a new milestone in China's AI Agent capabilities. With 397 billion parameters, an 86.2 OSWorld score, and completely free open-source licensing, it stands as one of the strongest Computer Use Agents available today. Whether for developers, enterprises, or individual users, Qwen-CUA can be leveraged to build powerful automation solutions.</p>
+<p>For regular users, we recommend starting with the cloud API. For technically inclined users, local deployment offers more flexibility and privacy. As the model continues to iterate, Qwen-CUA is poised to become a benchmark product in the AI Agent space.</p>
+
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="/en" class="logo" style="color:#059669">AI<span class="accent" style="color:#6366F1">FreePlan</span></a><p>AI-powered free tools aggregator. Free forever.</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h4>Product</h4><a href="/en/all">All Tools</a><a href="/en/guides">Guides</a></div>
+      <div class="footer-col"><h4>Legal</h4><a href="/en/privacy">Privacy</a><a href="/en/terms">Terms</a></div>
+    </div>
+  </div>
+  <div class="container footer-bottom">&copy; 2026 AIFreePlan. All rights reserved.</div>
+</footer>
+</body></html>
