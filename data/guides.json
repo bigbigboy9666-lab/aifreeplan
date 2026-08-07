@@ -651,8 +651,28 @@
         "免费工具",
         "腾讯云"
       ]
+    },
+    {
+      "slug": "deepseek-free-tier-guide-2026",
+      "title_zh": "DeepSeek免费攻略：V4版本无限使用，API仅$0.14/百万token，编程数学碾压级性价比",
+      "title_en": "DeepSeek Free Guide 2026: Unlimited V4 Access, API at $0.14/Million Tokens",
+      "description_zh": "DeepSeek是国产AI大模型中性价比之王。V4版本完全免费使用，API价格仅为GPT-4o的十分之一。编程、数学推理能力顶尖，支持200K超长上下文，国内可直接访问无需翻墙。",
+      "description_en": "DeepSeek is the cost-effective king of Chinese AI models. V4 is completely free with unlimited usage. API pricing is just $0.14 per million tokens - 1/18th of GPT-4o. Top-tier coding and math reasoning capabilities.",
+      "category": "llm",
+      "date_published": "2026-08-07",
+      "tags": [
+        "deepseek",
+        "free",
+        "llm",
+        "api",
+        "coding",
+        "chinese-ai",
+        "v4",
+        "r1"
+      ],
+      "image": "/og-image.png"
     }
   ],
-  "updatedAt": "2026-08-06",
-  "generatedAt": "2026-08-06"
+  "updatedAt": "2026-08-07",
+  "generatedAt": "2026-08-07"
 }
