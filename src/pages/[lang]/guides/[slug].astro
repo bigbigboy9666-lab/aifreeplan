@@ -68,13 +68,39 @@ const articleSchema = {
     "@id": canonicalUrl
   }
 };
+
+// FAQPage schema — extract Q&A pairs from the guide body content (.faq-q / .faq-a)
+let faqSchema: Record<string, any> | null = null;
+if (bodyContent) {
+  const faqRegex = /<div class="faq-q">(.*?)<\/div>\s*<div class="faq-a">(.*?)<\/div>/g;
+  const questions: Record<string, any>[] = [];
+  let faqMatch: RegExpExecArray | null;
+  while ((faqMatch = faqRegex.exec(bodyContent)) !== null) {
+    const clean = (s: string) =>
+      s.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;|&#x27;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').trim();
+    questions.push({
+      "@type": "Question",
+      name: clean(faqMatch[1]),
+      acceptedAnswer: { "@type": "Answer", text: clean(faqMatch[2]) },
+    });
+  }
+  if (questions.length >= 2) {
+    faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: questions,
+    };
+  }
+}
+
+const jsonLd = faqSchema ? [articleSchema, faqSchema] : articleSchema;
 ---
 
 <BaseLayout
   title={title}
   description={description}
   canonicalUrl={canonicalUrl}
-  jsonLd={articleSchema}
+  jsonLd={jsonLd}
   lang={lang}
 >
   <div class="max-w-4xl mx-auto">
