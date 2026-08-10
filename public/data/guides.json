@@ -1,6 +1,26 @@
 {
   "guides": [
     {
+      "slug": "cline-free-deepseek-v4-flash-2026",
+      "title_zh": "Cline免费攻略：DeepSeek V4 Flash免费用，800万开发者都在用的AI编程助手",
+      "title_en": "Cline Free Guide: Use DeepSeek V4 Flash for Free — The AI Coding Agent Trusted by 8M Developers",
+      "description_zh": "Cline是开源免费的AI编程助手，注册账号就能在官方限时免费模型活动里白嫖DeepSeek V4 Flash，不用自己搞API Key。本文讲清楚免费机制、额度、使用步骤和避坑指南。",
+      "description_en": "Cline is a free open-source AI coding agent. Sign up for an account and grab DeepSeek V4 Flash from Cline's rotating free model promotion — no API key needed, no credit card required. Full guide with limits, steps, and pitfalls.",
+      "category": "coding",
+      "date_published": "2026-08-10",
+      "tags": [
+        "cline",
+        "deepseek",
+        "deepseek-v4-flash",
+        "free-models",
+        "ai-coding",
+        "vscode",
+        "coding-agent"
+      ],
+      "excerpt_zh": "Cline是开源免费的AI编程Agent，全球800万+开发者使用。官方限时免费模型活动里能白嫖DeepSeek V4 Flash——注册Cline账号、选FREE标签模型即可，不用API Key不用信用卡。",
+      "excerpt_en": "Cline is a free open-source AI coding agent trusted by 8M+ developers. Its rotating free-models promotion includes DeepSeek V4 Flash — just create a Cline account and pick the FREE-tagged model. No API key, no credit card."
+    },
+    {
       "slug": "petals-free-distributed-llm-2026",
       "title_zh": "Petals免费攻略：BitTorrent-style分布式网络，免费运行Llama 3.1 405B超大模型",
       "title_en": "Petals Free Guide: BitTorrent-Style Distributed Network for Free Llama 3.1 405B Inference",
