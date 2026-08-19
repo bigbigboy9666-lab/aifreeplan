@@ -1,6 +1,26 @@
 {
   "guides": [
     {
+      "slug": "cline-free-deepseek-v4-flash-2026",
+      "title_zh": "Cline免费攻略：DeepSeek V4 Flash免费用，800万开发者都在用的AI编程助手",
+      "title_en": "Cline Free Guide: Use DeepSeek V4 Flash for Free — The AI Coding Agent Trusted by 8M Developers",
+      "description_zh": "Cline是开源免费的AI编程助手，注册账号就能在官方限时免费模型活动里白嫖DeepSeek V4 Flash，不用自己搞API Key。本文讲清楚免费机制、额度、使用步骤和避坑指南。",
+      "description_en": "Cline is a free open-source AI coding agent. Sign up for an account and grab DeepSeek V4 Flash from Cline's rotating free model promotion — no API key needed, no credit card required. Full guide with limits, steps, and pitfalls.",
+      "category": "coding",
+      "date_published": "2026-08-10",
+      "tags": [
+        "cline",
+        "deepseek",
+        "deepseek-v4-flash",
+        "free-models",
+        "ai-coding",
+        "vscode",
+        "coding-agent"
+      ],
+      "excerpt_zh": "Cline是开源免费的AI编程Agent，全球800万+开发者使用。官方限时免费模型活动里能白嫖DeepSeek V4 Flash——注册Cline账号、选FREE标签模型即可，不用API Key不用信用卡。",
+      "excerpt_en": "Cline is a free open-source AI coding agent trusted by 8M+ developers. Its rotating free-models promotion includes DeepSeek V4 Flash — just create a Cline account and pick the FREE-tagged model. No API key, no credit card."
+    },
+    {
       "slug": "petals-free-distributed-llm-2026",
       "title_zh": "Petals免费攻略：BitTorrent-style分布式网络，免费运行Llama 3.1 405B超大模型",
       "title_en": "Petals Free Guide: BitTorrent-Style Distributed Network for Free Llama 3.1 405B Inference",
@@ -570,38 +590,6 @@
       "excerpt_en": "RingBot is an AI Voice Agent platform with a free trial and flexible pay-as-you-go pricing. Pro plan includes 700 minutes/month, Enterprise includes 4000 minutes. Integrates with 50+ platforms with sub-100ms latency, suitable for dental clinics, restaurants, insurance agencies and more."
     },
     {
-      "title": "京东 JoyCode 全面攻略：限时免费领10000积分，GLM-5全家桶白嫖",
-      "slug": "jd-joycode-free-ai-coding-guide-2026",
-      "author": "猫哥",
-      "publishedAt": "2026-08-06",
-      "updatedAt": "2026-08-06",
-      "category": "AI编程工具",
-      "tags": [
-        "京东",
-        "JoyCode",
-        "AI编程",
-        "免费工具",
-        "GLM-5",
-        "DeepSeek",
-        "Kimi"
-      ],
-      "views": 0,
-      "summary": "京东8月推出的AI编程工具JoyCode，团队版限时免费送10000积分，但积分不经用。实测几轮对话+一个小工具就消耗4000+。真正值得用的是JoyAI自家模型，不扣积分。详细攻略含真实消耗数据和使用建议。",
-      "content": "京东 JoyCode 全面攻略：限时免费领10000积分，GLM-5全家桶白嫖",
-      "coverImage": null,
-      "seoTitle": "京东 JoyCode 免费攻略｜每月10000积分白嫖GLM-5全家桶",
-      "seoDescription": "京东2026年新出AI编程工具JoyCode限时免费，每月送10000积分，支持GLM-5、DeepSeek、Kimi等模型。对比Cursor、Windsurf，详细使用攻略和免费额度详解。",
-      "keywords": [
-        "JoyCode",
-        "京东AI编程",
-        "GLM-5免费",
-        "DeepSeek免费",
-        "Kimi免费",
-        "AI编程工具对比",
-        "Cursor免费替代"
-      ]
-    },
-    {
       "slug": "qwen-cua-computer-use-agent-2026",
       "title_zh": "阿里Qwen-CUA电脑控制Agent：397B参数免费开源，直接操控浏览器桌面软件",
       "title_en": "Alibaba Qwen-CUA: Free Open-Source Computer Use Agent with 397B Parameters",
@@ -619,60 +607,8 @@
       ],
       "url_zh": "/zh/guides/qwen-cua-computer-use-agent-2026",
       "url_en": "/en/guides/qwen-cua-computer-use-agent-2026"
-    },
-    {
-      "title": "CodeBuddy NPC 完全攻略：@召唤 AI 同事替我上班",
-      "slug": "codebuddy-npc-free-ai-coding-guide-2026",
-      "author": "猫哥",
-      "publishedAt": "2026-08-06",
-      "updatedAt": "2026-08-06",
-      "category": "AI编程工具",
-      "tags": [
-        "腾讯云",
-        "CodeBuddy",
-        "AI编程",
-        "免费工具",
-        "DeepSeek",
-        "CNB",
-        "替我上班"
-      ],
-      "views": 0,
-      "summary": "腾讯云CNB平台推出的CodeBuddy NPC，接入DeepSeek-V4-Flash引擎，在仓库评论里@它就能自动干活。三步召唤：打开仓库→@CodeBuddy NPC→开启替我上班，AI自动完成需求理解→任务拆解→编码执行→质量验证。限时免费到2026年底。",
-      "content": "CodeBuddy NPC 完全攻略：@召唤 AI 同事替我上班",
-      "coverImage": null,
-      "seoTitle": "CodeBuddy NPC免费攻略｜@召唤AI同事替我上班",
-      "seoDescription": "腾讯云CNB平台CodeBuddy NPC接入DeepSeek-V4-Flash，@召唤自动完成开发任务。限时免费到2026年底，详细使用教程和场景案例。",
-      "keywords": [
-        "CodeBuddy",
-        "CNB",
-        "替我上班",
-        "DeepSeek-V4-Flash",
-        "AI编程助手",
-        "免费工具",
-        "腾讯云"
-      ]
-    },
-    {
-      "slug": "deepseek-free-tier-guide-2026",
-      "title_zh": "DeepSeek免费攻略：V4版本无限使用，API仅$0.14/百万token，编程数学碾压级性价比",
-      "title_en": "DeepSeek Free Guide 2026: Unlimited V4 Access, API at $0.14/Million Tokens",
-      "description_zh": "DeepSeek是国产AI大模型中性价比之王。V4版本完全免费使用，API价格仅为GPT-4o的十分之一。编程、数学推理能力顶尖，支持200K超长上下文，国内可直接访问无需翻墙。",
-      "description_en": "DeepSeek is the cost-effective king of Chinese AI models. V4 is completely free with unlimited usage. API pricing is just $0.14 per million tokens - 1/18th of GPT-4o. Top-tier coding and math reasoning capabilities.",
-      "category": "llm",
-      "date_published": "2026-08-07",
-      "tags": [
-        "deepseek",
-        "free",
-        "llm",
-        "api",
-        "coding",
-        "chinese-ai",
-        "v4",
-        "r1"
-      ],
-      "image": "/og-image.png"
     }
   ],
-  "updatedAt": "2026-08-07",
-  "generatedAt": "2026-08-07"
+  "updatedAt": "2026-08-06",
+  "generatedAt": "2026-08-06"
 }
