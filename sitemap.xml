@@ -24351,6 +24351,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://aifreeplan.com/en/guides/cline-free-deepseek-v4-flash-2026/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://aifreeplan.com/en/guides/coze-free-unlimited-agent-2026/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -49657,6 +49662,11 @@
   </url>
   <url>
     <loc>https://aifreeplan.com/zh/guides/claude-opus-5-free-tier-guide-2026/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/guides/cline-free-deepseek-v4-flash-2026/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
