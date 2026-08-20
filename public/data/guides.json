@@ -607,8 +607,27 @@
       ],
       "url_zh": "/zh/guides/qwen-cua-computer-use-agent-2026",
       "url_en": "/en/guides/qwen-cua-computer-use-agent-2026"
+    },
+    {
+      "slug": "manus-ai-free-unlimited-agent-2026",
+      "title_zh": "Manus AI免费攻略：每日300积分无限刷新，真正自主AI Agent白嫖指南",
+      "title_en": "Manus AI Free Guide: 300 Daily Refresh Credits for Truly Autonomous AI Agent — No Credit Card Required",
+      "description_zh": "Manus AI是全球领先的自主AI Agent，能独立完成浏览网页、写代码、做研究、建应用等复杂多步骤任务。免费版每日300积分自动刷新，无需信用卡，无需付费即可体验真正的AI自主执行能力。本文讲清楚免费机制、额度、使用步骤和避坑指南。",
+      "description_en": "Manus AI is a leading autonomous AI agent that independently browses the web, writes code, conducts research, and builds applications. Free plan gives 300 credits daily refresh — no credit card required. Full guide with limits, steps, and pitfalls.",
+      "category": "ai-assistant",
+      "date_published": "2026-08-20",
+      "tags": [
+        "manus",
+        "ai-agent",
+        "autonomous",
+        "free-tier",
+        "300-credits-daily",
+        "no-credit-card"
+      ],
+      "excerpt_zh": "Manus AI是全球领先的自主AI Agent，免费版每日300积分自动刷新，无需信用卡。本文讲清楚免费机制、额度、使用技巧，以及免费版和付费版的完整对比。",
+      "excerpt_en": "Manus AI is a leading autonomous AI agent. Free plan gives 300 daily refresh credits, no credit card needed. Full guide with limits, tips, and free vs paid comparison."
     }
   ],
-  "updatedAt": "2026-08-06",
-  "generatedAt": "2026-08-06"
+  "updatedAt": "2026-08-20T10:06:27.006557",
+  "generatedAt": "2026-08-20"
 }
