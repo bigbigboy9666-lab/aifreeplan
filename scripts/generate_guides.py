@@ -823,4 +823,187 @@ client = petals.InferenceClient("bigscience/meta-llama-Llama-3.1-405B-Instruct")
     date_str='2026-07-23',
 )
 
-print("\n✓ 4篇攻略生成完成")
+# ============================================================
+# 攻略5: 商汤Token Plan免费攻略
+# ============================================================
+make_guide(
+    slug='sensenova-token-plan-free-guide',
+    title_zh='商汤Token Plan免费攻略：1500次/5h + API密钥永久不过期',
+    title_en='SenseNova Token Plan Free Guide: 1500 Calls Per 5 Hours With Perpetual API Keys',
+    desc_zh='商汤日日新Token Plan是目前国内最强的免费API之一。每5小时1500次免费调用，支持Flash-Lite原生多模态模型，兼容OpenAI SDK，无需绑卡。滚动窗口机制、密钥永久不过期、商用限制等关键陷阱全揭秘。',
+    desc_en='SenseNova Token Plan is one of China\'s most generous free APIs. Get 1500 calls per 5-hour rolling window for free, supporting Flash-Lite native multimodal models with OpenAI SDK compatibility and no credit card required. Detailed guide on rolling windows, perpetual keys, and commercial restrictions.',
+    h1_zh='商汤Token Plan免费攻略：1500次/5h，公测薅羊毛全指南',
+    h1_en='SenseNova Token Plan Free Guide: 1500 Calls Per 5 Hours',
+    intro_zh='说实话，2026年想找一个免费又好用的AI API，商汤Token Plan是目前最猛的选择之一。每5小时1500次免费调用，支持原生多模态模型Flash-Lite，兼容OpenAI SDK，不需要绑信用卡。但免费是有条件的——商用受限、额度政策随时可能变。这篇文章把该知道的全说清楚。',
+    intro_en='If you\'re looking for a free and powerful AI API in 2026, SenseNova Token Plan is one of the best options. 1500 free calls every 5 hours, native multimodal Flash-Lite support, OpenAI SDK compatible, no credit card required. But there are catches — commercial use restricted, quota policy can change anytime. This guide covers everything you need to know.',
+    sections_zh=[
+        ('一、Token Plan是什么', '''
+<p>Token Plan是商汤科技在2026年5月8日推出的免费API公测项目，正式名称就叫"Token Plan"。它属于sensenova.cn平台，跟商汤的企业训练平台SenseCore是完全分开的两套东西，别搞混了。</p>
+<p>简单说：注册一个账号，生成API Key，就能免费调用商汤的大模型。免费期没有截止日期，官方只说了"公测期完全免费开放"，没承诺永久免费。官网原文："公测期完全免费开放，付费档位Lite/Pro即将上线"。</p>
+'''),
+        ('二、免费额度有多大方', '''
+<p>先说数字：每5小时1500次调用，按滚动窗口刷新。</p>
+<p>这意味着什么？你一天24小时不睡觉，每个5小时窗口1500次，理论上一天最多1500×4=6000次调用。实际使用肯定达不到这个数，因为你要等窗口刷新，而且不同模型之间额度是独立的。</p>
+<p>可用模型有三个：</p>
+<ul>
+<li><strong>SenseNova-6.7-Flash-Lite：</strong>原生多模态，图片直接理解，不经过文字转述，Token消耗比普通模型低60%</li>
+<li><strong>SenseNova-U1-Fast：</strong>快速响应版本</li>
+<li><strong>DeepSeek-V4-Flash：</strong>DeepSeek的免费版本，编程和数学能力强</li>
+</ul>
+<p>对比一下其他平台：Kimi每分钟3次（相当于每小时180次），DeepSeek有限试用额度，Cerebras也有限制。商汤Token Plan的1500次/5小时在同类里算很大方的，尤其是考虑到是原生多模态模型。</p>
+'''),
+        ('三、滚动窗口机制——最容易踩坑的地方', '''
+<p>很多平台是按天给总量，比如"每天100次"。Token Plan不一样，它是滚动窗口。</p>
+<p>什么意思？每过5小时，额度就重置一次。不是固定时间点重置，是每5小时滚动一次。</p>
+<p>举个例子：你早上10点用了1500次，额度清零。然后你的窗口从10点开始算，到下午3点刷新，你又有了1500次。不管你在10点到3点之间用了多少次，窗口一到1500次就重置。</p>
+<p>这个机制的好处是不用担心"今天用完了明天才能用"，坏处是如果你同时用多个模型，每个模型都有独立的1500次限额。假设你用Flash-Lite、U1-Fast、DeepSeek-V4-Flash三个模型各调500次，三个窗口同时触发，总共才消耗1500次额度。</p>
+'''),
+        ('四、API密钥不会过期——但免费额度会', '''
+<p>这是最关键的一点，也是最大的陷阱。</p>
+<p>你生成的sk-开头API Key是永久属于你的，不会因为公测结束就作废。但是，免费调用额度是政策福利，不是绑定在你密钥上的永久权益。</p>
+<p>什么时候变？什么时候缩？什么时候停？官方没有承诺，也没有提前通知机制。政策改动直接线上更新页面，不会发邮件也不会发公告。官网原文只写了"公测期完全免费开放"，没说什么时候结束。</p>
+<p>网传"公测结束后会保留少量免费基础额度"——这只是第三方猜测，商汤没有官宣过这条。不要把这个当保障。</p>
+<p>稳妥做法：个人项目可以先用免费额度开发原型，打算长期线上运行的项目，提前准备付费备选方案。</p>
+'''),
+        ('五、商用限制——别踩这条线', '''
+<p>免费额度明确禁止大规模生产商用，仅限个人学习、Demo原型调试。</p>
+<p>什么意思？你自己做个小工具、写个Demo、学个习，随便用。但如果你用免费额度跑了一个线上产品，每天有大量用户调用，那就踩线了。</p>
+<p>一旦公测结束，免费额度取消之后，再调用就会报错，必须切换付费套餐。所以别在免费额度上赌长期生产环境。官方还没官宣付费档位的具体价格，到时候可能是Lite档起步，价格待定。</p>
+'''),
+        ('六、怎么注册和获取API Key', '''
+<ol>
+<li><strong>访问sensenova.cn</strong>，注册账号（支持手机号，不需要实名认证）</li>
+<li><strong>进入开发者控制台</strong>，生成API Key（sk-开头）</li>
+<li><strong>用OpenAI兼容格式</strong>配置你的应用，比如：</li>
+</ol>
+<pre style="background:#f6f8fa;padding:12px;border-radius:8px;margin:12px 0;overflow-x:auto"><code>import openai
+client = openai.Client(
+    base_url="https://sensenova.cn/v1",
+    api_key="sk-你的密钥"
+)</code></pre>
+<p>整个过程不需要绑信用卡，手机就能注册。但注意：官网有WAF防护，直接用curl请求会被返回403，要用浏览器访问。</p>
+'''),
+        ('七、实际能做什么', '''
+<p>Flash-Lite模型支持原生多模态，图片直接输入，不经过文字中转。这意味着你可以：</p>
+<ul>
+<li>上传财报PDF，让模型分析图表</li>
+<li>直接输入截图，让模型理解内容</li>
+<li>做图片相关的问答任务</li>
+</ul>
+<p>官方有个案例：100页财报，模型47秒处理完。这个速度对于办公场景很有用。</p>
+<p>另外，GitHub上有SenseNova-Skills开源项目，可以扩展更多功能。适合办公场景的图表分析、文档处理。</p>
+'''),
+        ('八、和其他免费API对比', '''
+<table>
+<thead>
+<tr><th>平台</th><th>免费额度</th><th>刷新周期</th><th>需绑卡</th><th>商用</th><th>多模态</th></tr>
+</thead>
+<tbody>
+<tr><td>商汤Token Plan</td><td>每5h 1500次</td><td>滚动窗口</td><td>否</td><td>限制</td><td>✅ 原生</td></tr>
+<tr><td>DeepSeek</td><td>限量试用</td><td>按account</td><td>否</td><td>限制</td><td>❌ 文本</td></tr>
+<tr><td>Kimi</td><td>3次/分钟</td><td>分钟级</td><td>否</td><td>限制</td><td>✅ 支持</td></tr>
+<tr><td>Cerebras</td><td>较快但有限</td><td>按account</td><td>否</td><td>限制</td><td>❌ 文本</td></tr>
+</tbody>
+</table>
+<p>商汤Token Plan的额度在同类里算很大方的，尤其是考虑到是原生多模态模型。但免费政策不稳定，这是最大的风险。</p>
+'''),
+    ],
+    sections_en=[
+        ('What Is Token Plan', '''
+<p>Token Plan is SenseTime's free API beta program launched on May 8, 2026. It belongs to the sensenova.cn platform, which is separate from SenseTime's enterprise training platform SenseCore.</p>
+<p>In short: sign up, generate an API key, and start calling SenseTime's large models for free. There's no end date announced — the official wording is "completely free during the beta period, paid Lite/Pro tiers coming soon".</p>
+'''),
+        ('How Generous Is The Free Tier', '''
+<p>The numbers: 1500 calls per 5-hour rolling window.</p>
+<p>Theoretically, if you use it 24/7, that's 1500×4=6000 calls per day. In practice you'll hit lower numbers because you need to wait for window resets, and each model has its own independent quota.</p>
+<p>Three models are available:</p>
+<ul>
+<li><strong>SenseNova-6.7-Flash-Lite:</strong> Native multimodal, processes images directly without text conversion, 60% fewer tokens than standard models</li>
+<li><strong>SenseNova-U1-Fast:</strong> Fast response version</li>
+<li><strong>DeepSeek-V4-Flash:</strong> Free DeepSeek version, strong in coding and math</li>
+</ul>
+<p>Compared to other platforms: Kimi allows 3 calls/minute (180/hour), DeepSeek has limited trial credits, Cerebras also has restrictions. SenseTime's 1500 calls/5 hours is generous for the category, especially with native multimodal support.</p>
+'''),
+        ('The Rolling Window Mechanism', '''
+<p>Most platforms give you a daily quota like "100 calls per day". Token Plan is different — it uses a rolling window.</p>
+<p>Every 5 hours, your quota resets. Not at fixed times like midnight, but continuously rolling.</p>
+<p>Example: You use 1500 calls at 10 AM. Your window starts at 10 AM and resets at 3 PM, when you get another 1500 calls. It doesn't matter how many calls you make between 10 AM and 3 PM — the window resets regardless.</p>
+<p>The benefit: you don't have to wait until tomorrow to use more. The catch: if you use multiple models simultaneously, each model has its own independent 1500-call limit.</p>
+'''),
+        ('Your API Key Never Expires — But The Free Quota Might', '''
+<p>This is the most important point and the biggest trap.</p>
+<p>Your sk- prefixed API key belongs to you permanently. It won't be revoked when the beta ends. But the free calling quota is a policy benefit, not a permanent entitlement tied to your key.</p>
+<p>When will it change? When will it shrink? When will it stop? There's no commitment from the official. No advance notification mechanism. Policy changes are reflected directly on the website — no email, no announcement.</p>
+<p>Rumors about "retaining a small free tier after beta" are just third-party speculation. SenseTime has not officially confirmed this. Don't treat it as a guarantee.</p>
+<p>Smart approach: Use free quota for personal projects and prototypes. For long-running production projects, prepare a paid alternative in advance.</p>
+'''),
+        ('Commercial Use Restrictions', '''
+<p>The free quota explicitly prohibits large-scale commercial production use. It's limited to personal learning and Demo prototyping.</p>
+<p>What does this mean? Build a small tool, write a Demo, learn — go ahead. But if you run an online product using free quota with lots of daily users, you're crossing the line.</p>
+<p>Once the beta ends and free quota is removed, calls will fail with errors. You'll need to switch to a paid plan. The official paid tier pricing hasn't been announced yet.</p>
+'''),
+        ('How To Register And Get An API Key', '''
+<ol>
+<li><strong>Visit sensenova.cn</strong>, register with a phone number (no real-name verification needed)</li>
+<li><strong>Go to the developer console</strong>, generate your API key (starts with sk-)</li>
+<li><strong>Configure using OpenAI-compatible format:</strong></li>
+</ol>
+<pre style="background:#f6f8fa;padding:12px;border-radius:8px;margin:12px 0;overflow-x:auto"><code>import openai
+client = openai.Client(
+    base_url="https://sensenova.cn/v1",
+    api_key="your-sk-key-here"
+)</code></pre>
+<p>No credit card required. Phone registration is enough. Note: the official site has WAF protection — direct curl requests get 403. Use a browser or Playwright.</p>
+'''),
+        ('What Can You Actually Do', '''
+<p>Flash-Lite supports native multimodal input — images go straight in, no text conversion step. This means:</p>
+<ul>
+<li>Upload financial reports as PDFs, let the model analyze charts</li>
+<li>Input screenshots directly, let the model understand content</li>
+<li>Do image-based Q&A tasks</li>
+</ul>
+<p>Official case study: 100-page financial report processed in 47 seconds. Useful for office scenarios.</p>
+<p>There's also an open-source SenseNova-Skills project on GitHub for extended functionality.</p>
+'''),
+        ('Comparison With Other Free APIs', '''
+<table>
+<thead>
+<tr><th>Platform</th><th>Free Quota</th><th>Refresh Cycle</th><th>Credit Card</th><th>Commercial</th><th>Multimodal</th></tr>
+</thead>
+<tbody>
+<tr><td>SenseNova Token Plan</td><td>1500/5hrs</td><td>Rolling</td><td>No</td><td>Restricted</td><td>✅ Native</td></tr>
+<tr><td>DeepSeek</td><td>Limited trial</td><td>Per account</td><td>No</td><td>Restricted</td><td>❌ Text only</td></tr>
+<tr><td>Kimi</td><td>3/min</td><td>Per minute</td><td>No</td><td>Restricted</td><td>✅ Supported</td></tr>
+<tr><td>Cerebras</td><td>Fair but limited</td><td>Per account</td><td>No</td><td>Restricted</td><td>❌ Text only</td></tr>
+</tbody>
+</table>
+<p>SenseTime's quota is generous compared to peers, especially with native multimodal support. But the unstable free policy is the biggest risk.</p>
+'''),
+    ],
+    faqs_zh=[
+        ('商汤Token Plan真的永久免费吗？', '不是。官方说的是"公测期完全免费开放"，没有承诺永久免费。免费额度政策随时可能调整、缩减或下线。'),
+        ('API密钥会过期吗？', '不会。你生成的sk-开头密钥永久属于你的账号。但免费额度是政策福利，不是密钥自带的永久权益，政策一变额度就没了。'),
+        ('滚动窗口是什么意思？', '每5小时额度重置一次，不是固定时间点（如每天零点）。从你用第一次开始计时，5小时后自动刷新。'),
+        ('可以用免费额度跑线上产品吗？', '不可以。免费额度仅限个人学习、Demo原型调试。大规模商用需要申请付费套餐。'),
+        ('公测结束后还会有免费额度吗？', '官方没有官宣。网传"保留少量免费基础额度"只是第三方猜测，不要当保障。稳妥做法是提前准备付费备选方案。'),
+        ('需要绑信用卡吗？', '不需要。注册只需手机号，生成API Key也不需要绑卡。'),
+        ('Flash-Lite模型和普通模型有什么区别？', 'Flash-Lite是原生多模态模型，图片直接理解，不经过文字转述中间步骤。Token消耗比普通模型低60%，适合图表分析、文档处理等办公场景。'),
+        ('为什么curl访问官网会返回403？', '官网有WAF防护，直接curl会被拦截。用浏览器访问或使用Playwright等工具才能正常抓取内容。'),
+    ],
+    faqs_en=[
+        ('Is SenseNova Token Plan really free forever?', 'No. The official wording is "completely free during the beta period" with no permanent guarantee. The free quota policy can change, shrink, or be removed at any time.'),
+        ('Will my API key expire?', 'No. Your sk- prefixed key belongs to your account permanently. But the free quota is a policy benefit, not a permanent entitlement. If policy changes, the quota goes away.'),
+        ('What does "rolling window" mean?', 'Your quota resets every 5 hours, not at fixed times like midnight. It counts from your first use — 5 hours later it automatically refreshes.'),
+        ('Can I use free quota for production apps?', 'No. Free quota is limited to personal learning and Demo prototyping. Large-scale commercial use requires a paid plan.'),
+        ('Will there still be free quota after beta ends?', 'Not officially confirmed. Rumors about "retaining a small free tier" are third-party speculation only. Prepare a paid alternative in advance.'),
+        ('Do I need a credit card?', 'No. Registration only requires a phone number. No credit card needed to generate an API key.'),
+        ('What\'s the difference between Flash-Lite and standard models?', 'Flash-Lite is a native multimodal model that processes images directly without text conversion. It uses 60% fewer tokens than standard models, ideal for chart analysis and document processing.'),
+        ('Why does curl return 403 on the official site?', 'The official site has WAF protection. Direct curl requests are blocked. Use a browser or Playwright to access content.'),
+    ],
+    images_zh=[],
+    images_en=[],
+    category='llm',
+    date_str='2026-08-21',
+)
+
+print("\\n✓ 5篇攻略生成完成")
