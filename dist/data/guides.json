@@ -626,8 +626,27 @@
       ],
       "excerpt_zh": "Manus AI是全球领先的自主AI Agent，免费版每日300积分自动刷新，无需信用卡。本文讲清楚免费机制、额度、使用技巧，以及免费版和付费版的完整对比。",
       "excerpt_en": "Manus AI is a leading autonomous AI agent. Free plan gives 300 daily refresh credits, no credit card needed. Full guide with limits, tips, and free vs paid comparison."
+    },
+    {
+      "slug": "sensenova-token-plan-free-guide",
+      "title_zh": "商汤Token Plan免费攻略：1500次/5h + API密钥永久不过期",
+      "title_en": "SenseNova Token Plan Free Guide: 1500 Calls Per 5 Hours With Perpetual API Keys",
+      "description_zh": "商汤日日新Token Plan是目前国内最强的免费API之一。每5小时1500次免费调用，支持Flash-Lite原生多模态模型，兼容OpenAI SDK，无需绑卡。滚动窗口机制、密钥永久不过期、商用限制等关键陷阱全揭秘。",
+      "description_en": "SenseNova Token Plan is one of China's most generous free APIs. Get 1500 calls per 5-hour rolling window for free, supporting Flash-Lite native multimodal models with OpenAI SDK compatibility and no credit card required. Detailed guide on rolling windows, perpetual keys, and commercial restrictions.",
+      "category": "llm",
+      "date_published": "2026-08-21",
+      "tags": [
+        "sensenova",
+        "token-plan",
+        "free-api",
+        "flash-lite",
+        "openai-compatible",
+        "商汤"
+      ],
+      "excerpt_zh": "商汤日日新Token Plan每5小时1500次免费调用，支持原生多模态模型，兼容OpenAI SDK，无需绑卡。但免费额度政策随时可能调整，滚动窗口机制容易踩坑。本文详解所有关键细节和避坑指南。",
+      "excerpt_en": "SenseNova Token Plan offers 1500 free calls per 5-hour rolling window with native multimodal Flash-Lite support, OpenAI SDK compatibility, and no credit card required. But the free quota policy can change anytime. Full guide covers all key details and pitfalls."
     }
   ],
-  "updatedAt": "2026-08-20T10:06:27.006557",
-  "generatedAt": "2026-08-20"
+  "updatedAt": "2026-08-21T09:24:06.356121",
+  "generatedAt": "2026-08-21T09:24:06.356146"
 }
