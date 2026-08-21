@@ -645,6 +645,16 @@
       ],
       "excerpt_zh": "商汤日日新Token Plan每5小时1500次免费调用，支持原生多模态模型，兼容OpenAI SDK，无需绑卡。但免费额度政策随时可能调整，滚动窗口机制容易踩坑。本文详解所有关键细节和避坑指南。",
       "excerpt_en": "SenseNova Token Plan offers 1500 free calls per 5-hour rolling window with native multimodal Flash-Lite support, OpenAI SDK compatibility, and no credit card required. But the free quota policy can change anytime. Full guide covers all key details and pitfalls."
+    },
+    {
+      "slug": "gemini-code-assist-free-guide-2026",
+      "title_zh": "Gemini Code Assist 完全免费：Google AI 编程助手，90倍于竞品的免费额度",
+      "title_en": "Gemini Code Assist Free: Google's AI Coding Assistant with 90x Higher Limits",
+      "excerpt_zh": "Google 推出免费版的 Gemini Code Assist，支持 VS Code、JetBrains 等主流编辑器，每月 90 万次代码补全请求。",
+      "excerpt_en": "Google launched the free Gemini Code Assist for individuals, supporting VS Code, JetBrains and other mainstream editors. 900K code completion requests per month.",
+      "date": "2026-08-21",
+      "category": "coding",
+      "pinned": true
     }
   ],
   "updatedAt": "2026-08-21T09:24:06.356121",
