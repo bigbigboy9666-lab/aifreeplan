@@ -5122,28 +5122,27 @@
       "categoryEn": "LLM",
       "websiteUrl": "https://sensenova.cn",
       "company": "商汤科技",
-      "description": "商汤科技大模型平台，Token Plan公测期间完全免费。每5小时1500次调用，支持原生多模态模型Flash-Lite（取消视觉转文本中间步骤）、U1-Fast和DeepSeek-V4-Flash。兼容OpenAI SDK，无需绑卡。",
-      "descriptionEn": "SenseTime's LLM platform. Token Plan beta is completely free: 1500 calls per 5 hours. Supports native multimodal Flash-Lite (no vision-to-text conversion), U1-Fast, and DeepSeek-V4-Flash. OpenAI SDK compatible, no credit card needed.。",
-      "rating": 3,
+      "description": "商汤日日新Token Plan：公测期间每5小时1500次免费调用，支持原生多模态Flash-Lite、U1-Fast和DeepSeek-V4-Flash。兼容OpenAI SDK，无需绑卡。滚动窗口刷新机制，免费额度政策随时可能调整。",
+      "descriptionEn": "SenseNova Token Plan: 1500 free calls per 5-hour rolling window during beta. Supports native multimodal Flash-Lite, U1-Fast, and DeepSeek-V4-Flash. OpenAI SDK compatible, no credit card needed. Free quota policy may change without notice.",
+      "rating": 4,
       "freeTier": {
-        "refreshPeriod": "monthly",
-        "credits": 5,
-        "creditUnit": "calls per 5 hours (free beta)",
-        "commercialUse": true,
+        "refreshPeriod": "rolling-5-hours",
+        "credits": 1500,
+        "creditUnit": "calls per 5-hour rolling window (free beta)",
+        "commercialUse": false,
         "models": "SenseNova-6.7-Flash-Lite、SenseNova-U1-Fast、DeepSeek-V4-Flash",
-        "dailyLimit": "每5小时1500次",
+        "dailyLimit": "每5小时1500次（滚动窗口，各模型独立计算）",
         "requiresCreditCard": false,
         "resolution": "N/A"
       },
-      "paidFrom": "暂无（公测期间免费，未来将推出Lite/Pro）",
+      "paidFrom": "公测结束后将推出Lite/Pro付费档位，具体时间未官宣",
       "paidFromEn": "None yet (free beta, Lite/Pro coming soon)",
       "pros": [
-        "公测完全免费",
-        "每5小时1500次额度大方",
+        "公测完全免费，每5小时1500次额度大方",
         "原生多模态，不经文字中转",
-        "100页财报47秒处理",
-        "兼容OpenAI SDK",
-        "无需绑卡"
+        "兼容OpenAI SDK，对接门槛低",
+        "无需绑卡，注册即得API Key",
+        "Flash-Lite模型Token消耗降60%"
       ],
       "prosEn": [
         "Completely free during beta",
@@ -5154,9 +5153,11 @@
         "No credit card needed"
       ],
       "cons": [
-        "公测阶段，未来可能收费",
-        "模型知名度不如GPT/Claude",
-        "生态和社区较小"
+        "公测限时福利，无永久保证，随时可能调整或下线",
+        "禁止大规模生产商用，仅限个人学习/Demo",
+        "滚动窗口机制容易超额度，不是按天给总量",
+        "商汤未官宣公测结束后的保留额度政策",
+        "模型知名度不如GPT/Claude，社区较小"
       ],
       "consEn": [
         "Beta phase, may charge in the future",
@@ -5180,30 +5181,33 @@
         "Office apps ecosystem"
       ],
       "tips": [
-        "办公场景推荐，图表分析很强",
-        "配置时用OpenAI兼容格式",
-        "公测期间尽量多用，以后可能收费",
-        "GitHub上有SenseNova-Skills开源项目"
+        "滚动窗口每5小时重置一次，不是按天/按月",
+        "API密钥本身不过期，但免费额度政策随时可能变",
+        "商用需申请付费套餐，别在免费额度上跑生产服务",
+        "公测期间可以薅，但重要项目提前准备付费备选方案",
+        "官网sensenova.cn有WAF防护，直接curl会被403"
       ],
       "tipsEn": [
-        "Best for office scenarios, strong chart analysis",
-        "Use OpenAI compatible format for config",
-        "Use it a lot during beta, may charge later",
-        "SenseNova-Skills open source on GitHub"
+        "Rolling 5-hour window reset, not daily/monthly",
+        "API key never expires, but free quota policy can change anytime",
+        "Commercial use requires paid plan, do not run production on free tier",
+        "Take advantage during beta, but prepare paid alternatives for important projects",
+        "Official site has WAF protection, direct curl gets 403"
       ],
-      "lastVerifiedDate": "2026-06-14",
+      "lastVerifiedDate": "2026-08-21",
       "seoMeta": {
         "title": "SenseNova - Free Tier Guide | AI Free Plan。",
-        "titleZh": "商汤日日新 - 免费额度指南 | AI Free Plan。",
+        "titleZh": "商汤Token Plan免费攻略：1500次/5h + API密钥永久不过期 | AI Free Plan",
         "description": "SenseTime's LLM platform. Token Plan beta is completely free: 1500 calls per 5 hours. Supports native multimodal Flash-Lite (no vision-to-text conversion), U1-F。",
-        "descriptionZh": "商汤科技大模型平台，Token Plan公测期间完全免费。每5小时1500次调用，支持原生多模态模型Flash-Lite（取消视觉转文本中间步骤）、U1-Fast和DeepSeek-V4-Flash。兼容OpenAI SDK，无需绑卡。",
+        "descriptionZh": "商汤日日新Token Plan免费额度详解：每5小时1500次调用，支持Flash-Lite/U1-Fast/DeepSeek-V4-Flash。滚动窗口机制、密钥不过期、商用限制等关键信息全梳理。",
         "keywords": [
-          "SenseNova",
-          "商汤日日新",
-          "free credits",
-          "free tier",
-          "AI Large Models",
-          "商汤科技"
+          "商汤Token Plan",
+          "sensenova免费API",
+          "日日新免费额度",
+          "商汤Flash-Lite",
+          "AI免费API",
+          "Token Plan攻略",
+          "商汤大模型免费"
         ]
       },
       "freeStatus": "公测中",
