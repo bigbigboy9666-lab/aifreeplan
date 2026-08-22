@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proliferate AI IDE Free: YC-Backed Multi-Agent Parallel Coding Platform | AIFreePlan</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="Proliferate AI IDE Free: YC-Backed Multi-Agent Parallel Coding Platform | AIFreePlan">
+<meta property="og:description" content="Proliferate is a YC S25 backed open-source AI IDE that runs Claude Code, Codex, Cursor, Grok, and OpenCode agents in parallel. Each task gets isolated git worktrees, fully free and self-hostable.">
+<meta property="og:url" content="https://aifreeplan.com/en/guides/proliferate-ai-ide-free-2026">
+<meta property="og:site_name" content="AIFreePlan">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Proliferate AI IDE Free: YC-Backed Multi-Agent Parallel Coding Platform | AIFreePlan">
+<meta name="twitter:description" content="Proliferate is a YC S25 backed open-source AI IDE that runs Claude Code, Codex, Cursor, Grok, and OpenCode agents in parallel. Each task gets isolated git worktrees, fully free and self-hostable.">
+<meta name="description" content="Proliferate is a YC S25 backed open-source AI IDE that runs Claude Code, Codex, Cursor, Grok, and OpenCode agents in parallel. Each task gets isolated git worktrees, fully free and self-hostable.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<link rel="canonical" href="https://aifreeplan.com/en/guides/proliferate-ai-ide-free-2026">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/proliferate-ai-ide-free-2026">
+<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/proliferate-ai-ide-free-2026">
+<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/proliferate-ai-ide-free-2026">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;--text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;--accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);--green:#059669;--green-light:rgba(5,150,105,.1);--shadow:0 4px 20px rgba(0,0,0,.05);--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover)}
+.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
+.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
+.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
+.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
+.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
+.article-container ul,.article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
+.article-container li{margin-bottom:8px;line-height:1.6}
+.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
+.article-container a{color:var(--accent);text-decoration:underline}
+.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-container th,.article-container td{padding:12px;border:1px solid var(--border);text-align:left}
+.article-container th{background:var(--accent-light);font-weight:600}
+.breadcrumb{font-size:14px;color:var(--text-muted);margin-bottom:24px}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb-sep{margin:0 8px}
+.faq-section{background:var(--bg-white);border-radius:var(--radius);padding:32px;margin-top:40px;box-shadow:var(--shadow)}
+.faq-section h3{margin-top:0;color:var(--text)}
+.faq-item{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border-light)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-weight:700;color:var(--text);margin-bottom:8px}
+.faq-a{color:var(--text-secondary);line-height:1.7}
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff;margin-top:60px}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6)}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col h4{font-size:14px;font-weight:700;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+@media(max-width:768px){.article-container{padding:16px 16px 48px;max-width:100%}.article-container h1{font-size:24px}.article-container h2{font-size:20px}.container{padding:0 16px}.nav{display:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Proliferate AI IDE Free: YC-Backed Multi-Agent Parallel Coding Platform","description":"Proliferate is a YC S25 backed open-source AI IDE that runs Claude Code, Codex, Cursor, Grok, and OpenCode agents in parallel. Each task gets isolated git worktrees, fully free and self-hostable.","url":"https://aifreeplan.com/en/guides/proliferate-ai-ide-free-2026","datePublished":"2026-08-22","dateModified":"2026-08-22","author":{"@type":"Organization","name":"AIFreePlan"},"publisher":{"@type":"Organization","name":"AIFreePlan","url":"https://aifreeplan.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aifreeplan.com/en/guides/proliferate-ai-ide-free-2026"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aifreeplan.com/en"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://aifreeplan.com/en/guides"},{"@type":"ListItem","position":3,"name":"Proliferate AI IDE Free: YC-Backed Multi-Agent Parallel Coding Platform","item":"https://aifreeplan.com/en/guides/proliferate-ai-ide-free-2026"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is Proliferate really completely free?","acceptedAnswer":{"@type":"Answer","text":"Yes, Proliferate itself is completely free. It's open-source under AGPL-3.0 license, with no subscription fees for either the desktop app or self-hosted versions. You only pay for the API costs of the AI agents you use."}},{"@type":"Question","name":"Does Proliferate support Windows and Linux?","acceptedAnswer":{"@type":"Answer","text":"Currently Proliferate primarily supports macOS. For Windows and Linux, we recommend using the self-hosted deployment option via Docker or Kubernetes, accessible through a browser."}},{"@type":"Question","name":"What API Keys do I need to configure?","acceptedAnswer":{"@type":"Answer","text":"Depending on which agents you want to use: Claude Code needs Anthropic API Key, Codex needs OpenAI API Key, Cursor needs Cursor subscription, Grok needs xAI API Key. You can configure each in Proliferate settings."}},{"@type":"Question","name":"Is Proliferate suitable for individual developers or teams?","acceptedAnswer":{"@type":"Answer","text":"Proliferate suits developers of all sizes. Individual developers can use parallel agent features to accelerate development, while teams can leverage workflow automation and subagent delegation to improve collaboration. Self-hosted versions are particularly suitable for enterprise teams."}}]}
+</script>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="/en" class="logo">AI<span class="accent">FreePlan</span></a>
+    <nav class="nav">
+      <a href="/en/all">All Tools</a>
+      <a href="/en/guides">Guides</a>
+      <a href="/en/privacy">Privacy</a>
+      <a href="/zh/guides/proliferate-ai-ide-free-2026" class="btn btn-primary">中文</a>
+    </nav>
+  </div>
+</header>
+<main class="article-container">
+<nav class="breadcrumb"><a href="/en">Home</a> <span class="breadcrumb-sep">›</span> <a href="/en/guides">Guides</a> <span class="breadcrumb-sep">›</span> <span>Proliferate AI IDE Free: YC-Backed Multi-Agent Parallel Coding Platform</span></nav>
+<h1>Proliferate AI IDE Free: YC-Backed Multi-Agent Parallel Coding Platform</h1>
+
+<p>Proliferate is a newly released open-source AI IDE backed by Y Combinator S25. Its core philosophy: <strong>run multiple programming agents in parallel within a single workspace</strong>, each with isolated Git worktrees, branches, terminals, and conversation states. Currently supports Claude Code, Codex, OpenCode, Cursor, and Grok — five of the most popular coding agents.</p>
+
+<h2>What is Proliferate?</h2>
+
+<p>Proliferate (https://github.com/proliferate-ai/proliferate) is an open-source AI programming IDE designed to let developers run multiple AI agents simultaneously to collaborate on complex software engineering tasks. Its core features include:</p>
+
+<ul>
+<li><strong>Native Harness Support:</strong> Claude Code, Codex, OpenCode, Cursor, and Grok — each running through native interfaces</li>
+<li><strong>Worktree Workspaces:</strong> Each task gets an isolated Git worktree and branch, completely sandboxed</li>
+<li><strong>Parallel Agents:</strong> Run multiple agents side by side in the same workspace</li>
+<li><strong>Subagent System:</strong> Parent agents can delegate subtasks to child agents and automatically merge results</li>
+<li><strong>Workflow Automation:</strong> Support for reusable workflows including scheduled tasks and event-driven execution chains</li>
+</ul>
+
+<h2>Supported Agents</h2>
+
+<table>
+<tr><th>Agent</th><th>Provider</th><th>Supported in Proliferate</th></tr>
+<tr><td><strong>Claude Code</strong></td><td>Anthropic</td><td>✅ Supported</td></tr>
+<tr><td><strong>Codex</strong></td><td>OpenAI</td><td>✅ Supported</td></tr>
+<tr><td><strong>OpenCode</strong></td><td>Open Source Community</td><td>✅ Supported</td></tr>
+<tr><td><strong>Cursor</strong></td><td>Cursor Inc.</td><td>✅ Supported</td></tr>
+<tr><td><strong>Grok</strong></td><td>xAI</td><td>✅ Supported</td></tr>
+</table>
+
+<h2>Core Features Explained</h2>
+
+<h3>1. Worktree Isolated Workspaces</h3>
+<p>Proliferate creates independent Git worktrees for each task. This means:</p>
+<ul>
+<li>Each agent works on its own branch without interfering with others</li>
+<li>You can test multiple implementation approaches simultaneously</li>
+<li>Code changes are fully isolated for easy comparison and merging</li>
+<li>Each worktree has its own terminal session and conversation history</li>
+</ul>
+
+<p>For example, you can have Claude Code optimize algorithm performance, Codex refactor the code architecture, and Grok generate test cases — all working on their own branches simultaneously without conflicts.</p>
+
+<h3>2. Parallel Agent System</h3>
+<p>Proliferate's parallel agent feature lets you run multiple agents in the same project. Each agent has its own:</p>
+<ul>
+<li>Independent Git worktree and branch</li>
+<li>Independent terminal session</li>
+<li>Independent conversation history</li>
+<li>Independent task status and review results</li>
+</ul>
+
+<p>This design is particularly suitable for:</p>
+<ul>
+<li>Evaluating multiple technical approaches simultaneously</li>
+<li>Parallel code refactoring and feature development</li>
+<li>Multiple agents collaborating on complex tasks</li>
+</ul>
+
+<h3>3. Subagent Delegation</h3>
+<p>Parent agents can delegate specific subtasks to child agents. For example:</p>
+<ul>
+<li>Parent agent handles architecture design</li>
+<li>Child Agent A implements database layer</li>
+<li>Child Agent B implements API layer</li>
+<li>Child Agent C writes tests</li>
+</ul>
+
+<p>After all subtasks complete, the parent agent can consolidate results and perform code review.</p>
+
+<h3>4. Workflow Automation</h3>
+<p>Proliferate supports creating workflows including:</p>
+<ul>
+<li><strong>Scheduled Tasks:</strong> Nightly automated code reviews, dependency updates</li>
+<li><strong>Event-Driven:</strong> Trigger tests automatically on PR submission</li>
+<li><strong>Approval Gates:</strong> Human approval checkpoints for critical changes</li>
+<li><strong>Document Passing:</strong> Automatic document and context passing between steps</li>
+</ul>
+
+<h3>5. MCP Integration</h3>
+<p>Proliferate supports MCP (Model Context Protocol) tools including:</p>
+<ul>
+<li>MCP server configuration</li>
+<li>Skill configuration sharing</li>
+<li>Computer Use tool integration</li>
+<li>Browser Use tool integration</li>
+<li>Custom tool configuration</li>
+</ul>
+
+<p>Configure once, share across all agents.</p>
+
+<h2>Installation and Usage</h2>
+
+<h3>Method 1: Desktop App (Recommended)</h3>
+<p>Proliferate offers a macOS desktop application. Download from:</p>
+<p><a href="https://proliferate.com">https://proliferate.com</a></p>
+
+<p>Installation steps:</p>
+<ol>
+<li>Visit the official website to download the macOS installer</li>
+<li>Install and launch the application</li>
+<li>Configure API Keys for each agent (Claude Code needs Anthropic API Key, Codex needs OpenAI API Key, etc.)</li>
+<li>Create a new project and select workspace directory</li>
+<li>Start using the parallel agent feature</li>
+</ol>
+
+<h3>Method 2: Self-Hosted Deployment</h3>
+<p>Proliferate supports self-hosted deployment with multiple options:</p>
+
+<h4>Docker Compose Deployment</h4>
+<pre><code># Clone the repository
+git clone https://github.com/proliferate-ai/proliferate.git
+cd proliferate
+
+# Start with Docker Compose
+docker-compose up -d
+
+# Access the console
+# Default address: http://localhost:3000
+</code></pre>
+
+<h4>AWS One-Click Deployment</h4>
+<p>Proliferate provides CloudFormation templates for one-click deployment on AWS:</p>
+<pre><code># Use AWS CloudFormation template
+# See docs: https://proliferate.com/docs/deployment
+</code></pre>
+
+<h4>Supported Deployment Platforms</h4>
+<ul>
+<li><strong>Docker Compose:</strong> Local or self-hosted server deployment</li>
+<li><strong>AWS:</strong> One-click deployment to EC2 via CloudFormation</li>
+<li><strong>GCP:</strong> Google Cloud Platform deployment</li>
+<li><strong>Azure:</strong> Microsoft Azure deployment</li>
+<li><strong>Kubernetes:</strong> K8s cluster deployment</li>
+<li><strong>Air-gapped:</strong> Offline environment deployment</li>
+</ul>
+
+<h2>Use Case Examples</h2>
+
+<h3>Scenario 1: Parallel Technical Approach Evaluation</h3>
+<p>When evaluating multiple technical approaches:</p>
+<ol>
+<li>Create main task: Define requirements and technical specifications</li>
+<li>Launch Claude Code subtask: Implement Approach A</li>
+<li>Launch Codex subtask: Implement Approach B</li>
+<li>Launch Cursor subtask: Implement Approach C</li>
+<li>Compare performance, code quality, and maintainability across approaches</li>
+</ol>
+
+<h3>Scenario 2: Automated Code Review Workflow</h3>
+<p>Set up scheduled workflows:</p>
+<ol>
+<li>Trigger condition: Daily midnight or on PR submission</li>
+<li>Subtask 1: Claude Code performs code review</li>
+<li>Subtask 2: Codex checks for security issues</li>
+<li>Subtask 3: Grok verifies test coverage</li>
+<li>Approval gate: Human review of review results</li>
+<li>Output: Generate review report and notify team</li>
+</ol>
+
+<h3>Scenario 3: Large-Scale Refactoring Project</h3>
+<p>For large codebase refactoring:</p>
+<ol>
+<li>Parent Agent: Create refactoring plan and architecture design</li>
+<li>Child Agent A: Refactor core modules</li>
+<li>Child Agent B: Refactor API interfaces</li>
+<li>Child Agent C: Update test cases</li>
+<li>Child Agent D: Update documentation</li>
+<li>Automatically merge branches and run integration tests</li>
+</ol>
+
+<h2>Comparison with Similar Tools</h2>
+
+<table>
+<tr><th>Feature</th><th>Proliferate</th><th>Claude Code</th><th>Codex CLI</th><th>Cursor</th></tr>
+<tr><td>Multi-Agent Parallel</td><td>✅ Supported</td><td>❌ Single Agent</td><td>❌ Single Agent</td><td>❌ Single Agent</td></tr>
+<tr><td>Worktree Isolation</td><td>✅ Supported</td><td>❌ None</td><td>❌ None</td><td>❌ None</td></tr>
+<tr><td>Self-Hosted</td><td>✅ Supported</td><td>❌ Cloud Only</td><td>✅ Local</td><td>✅ Local</td></tr>
+<tr><td>Subagent Delegation</td><td>✅ Supported</td><td>❌ None</td><td>❌ None</td><td>❌ None</td></tr>
+<tr><td>Workflow Automation</td><td>✅ Supported</td><td>❌ None</td><td>❌ None</td><td>✅ Limited</td></tr>
+<tr><td>Open Source</td><td>✅ AGPL-3.0</td><td>❌ Proprietary</td><td>✅ Open Source</td><td>❌ Proprietary</td></tr>
+<tr><td>MCP Integration</td><td>✅ Supported</td><td>❌ Not Supported</td><td>❌ Not Supported</td><td>✅ Partial</td></tr>
+</table>
+
+<h2>Pricing Information</h2>
+
+<p>Proliferate is <strong>completely free</strong> as an open-source project:</p>
+
+<ul>
+<li><strong>Desktop App:</strong> Completely free, no subscription fees</li>
+<li><strong>Self-Hosted:</strong> Completely free, no additional charges</li>
+<li><strong>API Costs:</strong> Only pay for the API fees of the AI agents used (Claude Code, Codex, etc.)</li>
+</ul>
+
+<p>Reference API costs for each agent:</p>
+<ul>
+<li><strong>Claude Code:</strong> Anthropic API standard pricing</li>
+<li><strong>Codex:</strong> OpenAI API standard pricing</li>
+<li><strong>Cursor:</strong> Cursor subscription fee (if applicable)</li>
+<li><strong>Grok:</strong> xAI API pricing</li>
+<li><strong>OpenCode:</strong> Pricing based on configured model</li>
+</ul>
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-section">
+<div class="faq-item">
+<div class="faq-q">Q: Is Proliferate really completely free?</div>
+<div class="faq-a">Yes, Proliferate itself is completely free. It's open-source under AGPL-3.0 license, with no subscription fees for either the desktop app or self-hosted versions. You only pay for the API costs of the AI agents you use.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: Does Proliferate support Windows and Linux?</div>
+<div class="faq-a">Currently Proliferate primarily supports macOS. For Windows and Linux, we recommend using the self-hosted deployment option via Docker or Kubernetes, accessible through a browser.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: What API Keys do I need to configure?</div>
+<div class="faq-a">Depending on which agents you want to use: Claude Code needs Anthropic API Key, Codex needs OpenAI API Key, Cursor needs Cursor subscription, Grok needs xAI API Key. You can configure each in Proliferate settings.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: How do I upgrade Proliferate?</div>
+<div class="faq-a">Desktop app versions can be downloaded from the official website. Self-hosted versions can be updated via git pull followed by redeployment.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: Is Proliferate suitable for individual developers or teams?</div>
+<div class="faq-a">Proliferate suits developers of all sizes. Individual developers can use parallel agent features to accelerate development, while teams can leverage workflow automation and subagent delegation to improve collaboration. Self-hosted versions are particularly suitable for enterprise teams.</div>
+</div>
+</div>
+
+<h2>Conclusion</h2>
+
+<p>Proliferate is an innovative open-source AI IDE backed by YC S25, solving the pain points of multi-agent parallel programming. Its core advantages are:</p>
+
+<ul>
+<li>Run multiple programming agents simultaneously, each with independent worktree</li>
+<li>Support Claude Code, Codex, Cursor, Grok, and OpenCode — five major coding agents</li>
+<li>Completely free and open-source, supports self-hosted deployment</li>
+<li>Provides subagent delegation and workflow automation features</li>
+</ul>
+
+<p>Whether you're an individual developer or a team leader, Proliferate can help you leverage AI coding tools more efficiently. Head over to <a href="https://proliferate.com">https://proliferate.com</a> to download and try it today!</p>
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="/en" class="logo" style="color:#059669">AI<span class="accent" style="color:#6366F1">FreePlan</span></a><p>AI-powered free tools aggregator. Free forever.</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h4>Product</h4><a href="/en/all">All Tools</a><a href="/en/guides">Guides</a></div>
+      <div class="footer-col"><h4>Legal</h4><a href="/en/privacy">Privacy</a><a href="/en/terms">Terms</a></div>
+    </div>
+  </div>
+  <div class="container footer-bottom">&copy; 2026 AIFreePlan. All rights reserved.</div>
+</footer>
+</body></html>
