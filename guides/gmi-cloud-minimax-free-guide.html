@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GMI Cloud 跑 MiniMax 攻略：M2.5 永久免费 1,000,000 TPM，不薅白不薅 | AIFreePlan</title>
+<meta name="description" content="GMI Cloud 是 NVIDIA 系的 GPU 云，OpenAI 兼容 API 免费跑 MiniMax M2.5 / M2.7，注册即用、永久 Tier 1、不绑卡。本文讲清楚免费机制、Anthropic 兼容、调用步骤、5 大实战场景和 7 个避坑。">
+<meta name="keywords" content="GMI Cloud, MiniMax, MiniMax M2.5, MiniMax M2.7, 免费API, NVIDIA, OpenAI 兼容, Anthropic 兼容, 白嫖AI, AIFreePlan">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GMI Cloud 跑 MiniMax 攻略：M2.5 永久免费 1,000,000 TPM，不薅白不薅">
+<meta property="og:description" content="GMI Cloud 是 NVIDIA 系的 GPU 云，OpenAI 兼容 API 免费跑 MiniMax M2.5 / M2.7，注册即用、永久 Tier 1、不绑卡。">
+<meta property="og:url" content="https://aifreeplan.com/zh/guides/gmi-cloud-minimax-free-guide">
+<meta property="og:site_name" content="AI Free Plan">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://aifreeplan.com/og-image.png">
+<meta property="article:published_time" content="2026-08-25">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GMI Cloud 跑 MiniMax 攻略：M2.5 永久免费 1,000,000 TPM，不薅白不薅">
+<meta name="twitter:description" content="GMI Cloud 是 NVIDIA 系的 GPU 云，OpenAI 兼容 API 免费跑 MiniMax M2.5 / M2.7，注册即用、永久 Tier 1、不绑卡。">
+<link rel="canonical" href="https://aifreeplan.com/zh/guides/gmi-cloud-minimax-free-guide">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/gmi-cloud-minimax-free-guide">
+<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/gmi-cloud-minimax-free-guide">
+<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/gmi-cloud-minimax-free-guide">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "GMI Cloud 跑 MiniMax 攻略：M2.5 永久免费 1,000,000 TPM，不薅白不薅",
+  "description": "GMI Cloud 是 NVIDIA 系的 GPU 云，OpenAI 兼容 API 免费跑 MiniMax M2.5 / M2.7，注册即用、永久 Tier 1、不绑卡。",
+  "url": "https://aifreeplan.com/zh/guides/gmi-cloud-minimax-free-guide",
+  "datePublished": "2026-08-25",
+  "dateModified": "2026-08-25",
+  "author": { "@type": "Person", "name": "猫哥" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AIFreePlan",
+    "url": "https://aifreeplan.com"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://aifreeplan.com/zh/guides/gmi-cloud-minimax-free-guide"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "GMI Cloud 的免费层是真的免费吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "是真的。注册账号（邮箱/Google/GitHub/Hugging Face 任一）即自动获得 Tier 1 资格：1,000,000 TPM（百万 token 每分钟），所有 LLM 模型无限 RPM，不需要绑卡、不需要 KYC、不需要手机号。官方文档原话 voucher redemptions do not count towards purchase，意思是光注册不充值也能用。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "GMI Cloud 上的 MiniMax M3 是真的吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GMI 平台目前只挂 MiniMax M2.1 / M2.5 / M2.7 三个 LLM 模型，MiniMax M3 没有上架。M3 是 MiniMax 官方 2026-05 发布的旗舰（1M 上下文、MSA 注意力），只能在 platform.minimax.io 用 Token Plan 起步 $20/月订阅。网上传的 GMI 14 天免费 M3 是营销噱头，真实情况是 GMI 永久免费 M2.5 / M2.7。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "GMI Cloud 和 MiniMax 官方 API 有什么区别？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GMI 平台（https://api.gmi-serving.com/v1）和 MiniMax 官方（https://api.minimax.io）是两套独立的 API，鉴权方式不同（GMI 是 Authorization: Bearer 你的 key，MiniMax 官方是 X-Api-Key），model ID 命名也不同（GMI 是 MiniMaxAI/MiniMax-M2.5，MiniMax 官方是 MiniMax-M2.5）。把 GMI 的 key 拿去 MiniMax 官方调会 401，反之亦然。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "GMI Cloud 上 MiniMax M2.5 支持 Anthropic 兼容吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "支持。M2.5 是 GMI 平台上唯一支持 Anthropic 兼容接口的 MiniMax 模型，endpoint 是 https://api.gmi-serving.com/v1/messages，鉴权用 Authorization: Bearer 你的 key。GMI 官方 quickstart 文档里有一段示例代码 base URL 写成了 api.minimax.io，那是 MiniMax 官方域名，跟 GMI 没关系，必须改成 api.gmi-serving.com 才能调通。Anthropic 格式的特色是带 thinking blocks，能看到模型推理过程。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "GMI Cloud 速度怎么样？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "在国内测延迟 200-400ms，比官方 MiniMax 平台（走 agnes 代理那套）慢一点点，但比大多数海外直连稳。视频生成不算快（5 秒 768P 视频约 60-90 秒），图像生成 Flux 类挺快（2-3 秒一张）。GMI 是 NVIDIA Exemplar Cloud（2026-08-18 刚拿到的 GB300 NVL72 平台认证），API SLA 99.9%。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "GMI Cloud 账号会被封吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GMI ToS 主要禁挖矿、刷单、API 套利。正常个人开发、自媒体内容生产、自动化脚本，薅到 Tier 1 上限都没事。别用脚本暴力刷 token，会触发风控。Auto Pay 默认关闭，不开通不会突然扣你卡。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "GMI Cloud 上除了 MiniMax 还能薅什么？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GMI 平台 Tier 1 覆盖上百个模型：DeepSeek V4 Pro / V4 Flash、Claude Sonnet 4.5 / 4.6、GPT-5.4 / 5.4 Pro / 5.4 Mini、Kimi K2.5 / K2.6 / K3、GLM 4.5 / 4.7 / 5 / 5.1、Qwen3 235B / 32B / Coder 480B、Llama 4 Maverick 17B 等 LLM，Flux2-Dev / Klein、Qwen-Image-2512、Z-Image 等图像模型，Kling V3、Seedance 2.5、Wan 2.7、Hunyuan-3D-pro 等视频/3D 模型。完整列表见 https://docs.gmicloud.ai/llms.txt。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://aifreeplan.com/zh" },
+    { "@type": "ListItem", "position": 2, "name": "攻略", "item": "https://aifreeplan.com/zh/guides" },
+    { "@type": "ListItem", "position": 3, "name": "GMI Cloud 跑 MiniMax 攻略", "item": "https://aifreeplan.com/zh/guides/gmi-cloud-minimax-free-guide" }
+  ]
+}
+</script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f9fafb; color: #1f2937; line-height: 1.7; }
+.header { background: #fff; border-bottom: 1px solid #e5e7eb; padding: 12px 0; position: sticky; top: 0; z-index: 50; }
+.header-inner { max-width: 800px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; }
+.header-logo { font-size: 20px; font-weight: bold; color: #10b981; text-decoration: none; }
+.header-nav a { margin-left: 20px; color: #6b7280; text-decoration: none; font-size: 14px; }
+.header-nav a:hover { color: #10b981; }
+.container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+.breadcrumb { font-size: 13px; color: #9ca3af; margin-bottom: 24px; }
+.breadcrumb a { color: #6b7280; text-decoration: none; }
+.breadcrumb a:hover { color: #10b981; }
+h1 { font-size: 32px; font-weight: 700; margin-bottom: 12px; line-height: 1.3; color: #111827; }
+.date { font-size: 14px; color: #9ca3af; margin-bottom: 24px; }
+.intro { font-size: 16px; color: #4b5563; margin-bottom: 32px; line-height: 1.8; }
+h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; color: #111827; border-left: 4px solid #10b981; padding-left: 12px; }
+h3 { font-size: 18px; font-weight: 600; margin: 24px 0 12px; color: #374151; }
+p { margin-bottom: 16px; }
+ul, ol { margin: 16px 0; padding-left: 24px; }
+li { margin-bottom: 8px; }
+table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
+th, td { border: 1px solid #e5e7eb; padding: 10px 12px; text-align: left; }
+th { background: #f3f4f6; font-weight: 600; }
+.story-box { background: linear-gradient(135deg, #ecfdf5, #e0e7ff); border-left: 4px solid #10b981; padding: 20px; border-radius: 8px; margin: 20px 0; }
+.code-block { background: #1e293b; color: #e2e8f0; padding: 16px; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 14px; line-height: 1.6; margin: 16px 0; }
+.faq-item { margin-bottom: 12px; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; }
+.faq-item summary { padding: 14px 16px; background: #f9fafb; cursor: pointer; font-weight: 600; list-style: none; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::before { content: "+ "; color: #10b981; font-weight: bold; }
+.faq-item[open] summary::before { content: "− "; }
+.faq-item p { padding: 0 16px 14px; color: #4b5563; }
+.cta-box { background: linear-gradient(135deg, #ecfdf5, #d1fae5); border-radius: 12px; padding: 24px; margin: 32px 0; text-align: center; }
+.cta-box a { display: inline-block; background: #10b981; color: #fff; padding: 12px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 12px; }
+.cta-box a:hover { background: #059669; }
+.warning-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 20px; border-radius: 8px; margin: 20px 0; }
+.footer { text-align: center; padding: 32px 20px; color: #9ca3af; font-size: 13px; border-top: 1px solid #e5e7eb; margin-top: 48px; }
+a.inline-link { color: #059669; text-decoration: underline; }
+</style>
+</head>
+<body>
+<header class="header">
+<div class="header-inner">
+<a href="/zh" class="header-logo">🤖 AI Free Plan</a>
+<nav class="header-nav">
+<a href="/zh">首页</a>
+<a href="/zh/guides">攻略</a>
+<a href="/zh/tools">工具</a>
+<a href="/en">English</a>
+</nav>
+</div>
+</header>
+<main class="container">
+<div class="breadcrumb">
+<a href="/zh">首页</a> / <a href="/zh/guides">攻略</a> / GMI Cloud 跑 MiniMax 攻略
+</div>
+<h1>GMI Cloud 跑 MiniMax 攻略：M2.5 永久免费 1,000,000 TPM，不薅白不薅</h1>
+<p class="date">更新时间：2026年8月25日</p>
+
+<div class="story-box">
+<strong>📖 案例：</strong>做 AI 内容站的小李，每天要写 20 篇小红书爆款 + 10 条抖音文案 + 5 篇知乎长文。之前用 GPT-4 一个月烧 200 块，后来发现 GMI Cloud 这个 NVIDIA 系的 GPU 云，OpenAI 兼容 API 直接白嫖 MiniMax M2.5 / M2.7——注册不用绑卡、永久 Tier 1、1,000,000 TPM 额度，薅了快一年一分钱没花。中文写作质量比 GPT-4 还接地气。
+</div>
+
+<p>最近知乎和即刻上铺天盖地在转一张图——"<a href="https://www.gmicloud.ai/en" class="inline-link" target="_blank">GMI Cloud</a> × MiniMax 14天免费 M3"。我花了一整天把 GMI 官方 30 多页文档扒了，发现这事得拆开看：</p>
+
+<ul>
+<li><strong>真的部分：</strong>GMI 上确实能白嫖 MiniMax 模型（M2.1 / M2.5 / M2.7），注册即用、永久 Tier 1、不绑卡</li>
+<li><strong>假的部分：</strong>所谓"14天"是营销噱头，GMI 文档里没有任何限时活动；所谓"M3" GMI 平台压根没上架，只能在 MiniMax 官方 Token Plan 起步 $20/月订阅</li>
+</ul>
+
+<p>这篇文章把真相讲清楚，然后教你从注册到第一次调用、五分钟跑通 MiniMax M2.5，把免费额度薅到底。</p>
+
+<h2>📊 免费额度到底有多少</h2>
+
+<p>GMI 的免费层叫 <strong>Tier 1</strong>，注册账号就自动获得，<strong>永久有效</strong>，没有任何时间限制。文档原话（<a href="https://docs.gmicloud.ai/inference-engine/api-reference/rate-limit" class="inline-link" target="_blank">rate-limit 页面</a>）：</p>
+
+<ul>
+<li><strong>TPM（Token per Minute，每分钟 token 数）：</strong>1,000,000</li>
+<li><strong>RPM（Request per Minute，每分钟请求数）：</strong>所有 LLM 模型无限</li>
+<li><strong>Multimodal RPM/TPM：</strong>无限</li>
+<li><strong>价格：</strong>$0</li>
+</ul>
+
+<p>1,000,000 TPM 是什么概念？假设你用 M2.7 写一篇 5000 字的小红书爆款笔记，输入 + 输出大约 8000 token，那你可以每分钟写 125 篇，一天理论上能写 18 万篇——对个人开发者来说完全用不完。</p>
+
+<p>升级到更高 Tier 需要累计充值：</p>
+
+<table>
+<tr><th>Tier</th><th>累计充值</th><th>TPM</th><th>升级时间</th></tr>
+<tr><td>Tier 1</td><td>$0</td><td>1,000,000</td><td>立即</td></tr>
+<tr><td>Tier 2</td><td>$50</td><td>3,000,000</td><td>24小时内</td></tr>
+<tr><td>Tier 3</td><td>$500</td><td>50,000,000</td><td>24小时内</td></tr>
+<tr><td>Tier 4</td><td>$1,000</td><td>100,000,000</td><td>24小时内</td></tr>
+<tr><td>Tier 5</td><td>$5,000</td><td>300,000,000</td><td>24小时内</td></tr>
+</table>
+
+<p>注意 GMI 官方原话："voucher redemptions do not count towards purchase"——意思是兑换优惠券不算充值，光注册不充钱，永远在 Tier 1，<strong>薅一辈子</strong>。</p>
+
+<h2>🧐 真相：所谓"14天免费 M3"是怎么回事</h2>
+
+<div class="warning-box">
+<strong>⚠️ 重要纠错：</strong>网上那张"GMI × MiniMax 14天免费 M3"图是讹传，原因是：
+<ul>
+<li>"14天"——GMI 官方文档里没有任何限时活动文案，Tier 1 是永久层</li>
+<li>"M3"——GMI 平台只挂 MiniMax M2.1 / M2.5 / M2.7，<strong>没有 M3</strong></li>
+</ul>
+误传可能来源：把 M2.5 看成 M3（model ID 多了个小数点容易看错）、或者 MiniMax 官方 Token Plan 偶尔的促销 free trial 被误传到 GMI 上。
+</div>
+
+<p>那 M3 怎么薅？有三条路：</p>
+
+<ol>
+<li>走 <a href="https://platform.minimax.io/docs/token-plan" class="inline-link" target="_blank">MiniMax 官方 platform.minimax.io</a>，注册送少量试用 token，Token Plan 起步 $20/月（Plus 包含 M3 / M2.7 / image / speech 全系列，5 小时滚动 + 周窗口，3-4 个 agent 额度）</li>
+<li>等 GMI 上架 M3，他们家模型库更新挺频繁，H3 视频模型 2026-07 上了，Speech 2.8 上了，Music 3.0 上了</li>
+<li>走 MiniMax 官方的 <a href="https://platform.minimax.io/docs/developer-program" class="inline-link" target="_blank">Dev Program</a>，给认证开发者发免费 Token Plan 时长</li>
+</ol>
+
+<p>我的建议策略：薅 GMI 永久免费的 M2.5 / M2.7 干日常活，薅 MiniMax 官方注册试用 token 体验 M3，等 GMI 上 M3 再切换。</p>
+
+<h2>🚀 5 分钟跑通：从注册到第一次调用</h2>
+
+<h3>第 1 步：注册账号（30 秒）</h3>
+
+<p>打开 <a href="https://console.gmicloud.ai" class="inline-link" target="_blank">https://console.gmicloud.ai</a>，右上角 Sign in。</p>
+
+<p>四种登录方式：</p>
+<ul>
+<li>邮箱密码</li>
+<li>Google 一键（推荐，省事）</li>
+<li>GitHub 一键</li>
+<li>Hugging Face 一键</li>
+</ul>
+
+<p>注册完跳到控制台首页 Inference 标签页。整个过程<strong>不用绑卡、不用 KYC、不用手机号</strong>，比 MiniMax 官方平台（要手机号 + 实名）宽松多了。</p>
+
+<h3>第 2 步：拿 API key（30 秒）</h3>
+
+<p>点右上角头像 → <strong>Settings</strong> → <strong>API Key Management</strong>。</p>
+
+<p>点 <strong>+ Create API Key</strong> 按钮，弹窗里：</p>
+<ul>
+<li>Name：随便填，比如 <code>my-test</code></li>
+<li>Scope：保持默认 Inference（薅羊毛用不上 Compute）</li>
+</ul>
+
+<p>点 Create。</p>
+
+<div class="warning-box">
+<strong>⚠️ 关键避坑：</strong>生成的 key 只显示一次！弹窗里立刻复制到密码管理器（1Password / Bitwarden / Keychain），关了就没了。key 长得像 <code>eyJh...</code> 这种 JWT 格式。
+</div>
+
+<h3>第 3 步：第一次调用——curl 版</h3>
+
+<p>打开终端，粘贴：</p>
+
+<div class="code-block">
+curl https://api.gmi-serving.com/v1/chat/completions \
+  -H "Authorization: Bearer 你的key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "MiniMaxAI/MiniMax-M2.5",
+    "messages": [
+      {"role": "user", "content": "用一句话介绍你自己"}
+    ]
+  }'
+</div>
+
+<p>正常情况你会拿到一个 JSON 响应，里面有 AI 写的自我介绍。</p>
+
+<p>报错的几种情况：</p>
+<ul>
+<li><strong>401 Unauthorized：</strong>key 错了，重新生成</li>
+<li><strong>404 model_not_found：</strong>模型名拼错，是 <code>MiniMaxAI/MiniMax-M2.5</code>，注意中间是横杠不是下划线、点号是英文点不是中文点</li>
+<li><strong>429 Too Many Requests：</strong>RPM 触顶（理论上不会），sleep 几秒重试</li>
+</ul>
+
+<h3>第 4 步：换 OpenAI Python 库</h3>
+
+<p>写 Python 脚本直接装 <code>openai</code> 包改 base URL：</p>
+
+<div class="code-block">
+pip install openai
+
+from openai import OpenAI
+client = OpenAI(
+    base_url="https://api.gmi-serving.com/v1",
+    api_key="你的key"
+)
+response = client.chat.completions.create(
+    model="MiniMaxAI/MiniMax-M2.5",
+    messages=[{"role": "user", "content": "你好"}]
+)
+print(response.choices[0].message.content)
+</div>
+
+<p>如果你已经在用 ChatGPT Next Web、LobeChat、ChatBox、Open WebUI 这些本地聊天工具，改三处配置就能切到 GMI：</p>
+<ul>
+<li>API Base URL：<code>https://api.gmi-serving.com/v1</code></li>
+<li>API Key：你的 GMI key</li>
+<li>模型名：<code>MiniMaxAI/MiniMax-M2.5</code></li>
+</ul>
+
+<h3>第 5 步：薅更狠——M2.5 独家的 Anthropic 兼容</h3>
+
+<p>M2.5 在 GMI 上<strong>额外支持 Anthropic 兼容接口</strong>，还带 thinking blocks（思考链），对调试复杂任务超有用，免费羊毛里很少见。</p>
+
+<div class="warning-box">
+<strong>⚠️ 文档坑警告：</strong>GMI 官方 M2.5 quickstart 文档里有一段示例代码 base URL 写成了 <code>https://api.minimax.io/anthropic</code>——<strong>这是错的</strong>。<code>api.minimax.io</code> 是 MiniMax 官方平台的域名，跟 GMI 没关系。GMI 的正确 anthropic endpoint 是 <code>https://api.gmi-serving.com/v1/messages</code>，鉴权用 <code>Authorization: Bearer 你的 key</code>。
+</div>
+
+<p>正确写法：</p>
+
+<div class="code-block">
+import anthropic
+client = anthropic.Anthropic(
+    base_url="https://api.gmi-serving.com",
+    api_key="你的GMI key"
+)
+message = client.messages.create(
+    model="MiniMaxAI/MiniMax-M2.5",
+    max_tokens=1000,
+    messages=[{"role": "user", "content": "一步步证明 1+1=2"}]
+)
+for block in message.content:
+    if block.type == "thinking":
+        print(f"思考中：\n{block.thinking}\n")
+    elif block.type == "text":
+        print(f"回答：\n{block.text}\n")
+</div>
+
+<h2>🎁 顺手薅走的其他免费模型</h2>
+
+<p>GMI 上 Tier 1 全免费的模型有上百个，按场景给你列精选：</p>
+
+<h3>文本对话类</h3>
+<ul>
+<li><code>MiniMaxAI/MiniMax-M2.7</code> — MiniMax 最新次旗舰，号称开始"自我改进"训练</li>
+<li><code>MiniMaxAI/MiniMax-M2.5</code> — 稳，跑日常活够用</li>
+<li><code>DeepSeek V4 Pro</code> / <code>DeepSeek V4 Flash</code> — 思考链强</li>
+<li><code>GPT-5.4</code> / <code>GPT-5.4 Pro</code> / <code>GPT-5.4 Mini</code> / <code>GPT-5.4 Nano</code> — OpenAI 完整产品线</li>
+<li><code>Claude Sonnet 4.5</code> / <code>Sonnet 4.6</code> / <code>Haiku 4.5</code> / <code>Opus 4.5</code> — Anthropic 完整产品线</li>
+<li><code>Kimi K2.5</code> / <code>K2.6</code> / <code>K3</code> — 月之暗面</li>
+<li><code>GLM 4.5</code> / <code>4.7</code> / <code>5</code> / <code>5.1</code> — 智谱</li>
+<li><code>Qwen3</code> 全系列 — 通义千问</li>
+<li><code>Llama 4 Maverick 17B</code> — Meta</li>
+</ul>
+
+<h3>编程专项</h3>
+<ul>
+<li><code>Qwen3 Coder 480B A35B</code> — 480B 参数代码专用模型，效果炸裂</li>
+<li><code>Qwen3 Next 80B A3B</code> — 稀疏 MoE，3B 激活参数，速度快</li>
+<li><code>DeepSeek Prover v2 671B</code> — 数学证明</li>
+</ul>
+
+<h3>图像 / 视频 / 音频</h3>
+<ul>
+<li>图像：<code>Flux2-Dev</code>、<code>Flux2-Klein</code>、<code>gemini-3-pro-image</code>、<code>Qwen-Image-2512</code>、<code>Z-Image-Turbo</code></li>
+<li>视频：<code>Kling V3</code>、<code>Seedance 2.5</code>、<code>Wan 2.7</code>、<code>MiniMax-H3</code>、<code>Hailuo-2.3</code></li>
+<li>音频：<code>MiniMax Speech 2.6 / 2.8</code>、<code>MiniMax Music 3.0</code>、<code>Chatterbox-tts</code></li>
+<li>3D：<code>Hunyuan-3D-pro</code></li>
+</ul>
+
+<p>完整模型库去 <a href="https://docs.gmicloud.ai/llms.txt" class="inline-link" target="_blank">https://docs.gmicloud.ai/llms.txt</a> 拿，是 GMI 文档站给 AI 准备的索引文件，能一键拉全所有模型 quickstart 链接。</p>
+
+<h2>💼 三大实战场景</h2>
+
+<h3>场景一：自媒体博主日更</h3>
+
+<p>每天写 5 篇小红书爆款笔记、3 条抖音文案、2 篇知乎长文。用 M2.7 写中文、M2.5 写英文、Flux 跑封面图，每天 50,000 token 完全够用，一年不花一分钱。M2.7 中文写小红书比 GPT-4.1 还接地气，标题党套路熟、emoji 用得自然。</p>
+
+<h3>场景二：独立开发者做 SaaS</h3>
+
+<p>每天 10,000 次用户请求，平均每次 2000 token，月消耗 60 亿 token。GMI Tier 1 撑不住，得充钱升 Tier 3（$500）。但 MVP 阶段（每天 1,000 次请求、月 6 亿 token）Tier 2（$50）够了。按 OpenAI GPT-4.1 定价 $2.50/M input + $10/M output 算，6 亿 token 一个月差不多 1 万块。GMI Tier 3 $500 直接省 95%。</p>
+
+<h3>场景三：学生党薅作业</h3>
+
+<p>写论文、做 PPT、改代码、答疑。GMI Tier 1 100 万 TPM 完全够用，写 50 页论文都绰绰有余。建议用 M2.7 处理中文长文、Qwen3 Coder 480B 处理代码、Flux 跑插图。别拿 GMI 模型生成的内容直接交作业，会被查重——AI 写初稿、自己改。</p>
+
+<h2>❌ 5 个常见避坑</h2>
+
+<div class="warning-box">
+<strong>避坑一：模型 ID 大小写敏感</strong>
+<p>错：<code>MiniMaxAI/minimax-m2.5</code>（大小写错）<br>
+对：<code>MiniMaxAI/MiniMax-M2.5</code></p>
+</div>
+
+<div class="warning-box">
+<strong>避坑二：Anthropic 格式的 base URL</strong>
+<p>GMI 官方 M2.5 quickstart 文档示例代码 base URL 写成了 <code>api.minimax.io</code>，那是 MiniMax 官方域名，<strong>不是 GMI</strong>。跟 GMI key 配在一起会 401。</p>
+<p>正确：<code>base_url = "https://api.gmi-serving.com"</code><br>
+错误：<code>base_url = "https://api.minimax.io/anthropic"</code></p>
+</div>
+
+<div class="warning-box">
+<strong>避坑三：别开 Auto Pay</strong>
+<p>GMI 有个 Auto Pay 设置，开了之后余额低于阈值会自动充值。薅羊毛千万别开——路径：Settings → Account → Payment settings → Auto Pay toggle，关掉。</p>
+</div>
+
+<div class="warning-box">
+<strong>避坑四：API key 只显示一次</strong>
+<p>生成 key 那一刻必须立刻复制存起来，关了弹窗就没了。</p>
+</div>
+
+<div class="warning-box">
+<strong>避坑五：Org 级别的 rate limit</strong>
+<p>同一家公司或同一个 IP 段注册多个账号，GMI 会按 organization 算总 TPM，薅不出多个 Tier 1 的额度。个人薅一个号就够。</p>
+</div>
+
+<h2>🔄 GMI vs MiniMax 官方 API 对比</h2>
+
+<p>很多用户搞混 GMI 和 MiniMax 官方 API，这里帮你理清：</p>
+
+<table>
+<tr><th>项目</th><th>GMI Cloud</th><th>MiniMax 官方</th></tr>
+<tr><td>域名</td><td>api.gmi-serving.com</td><td>api.minimax.io</td></tr>
+<tr><td>控制台</td><td>console.gmicloud.ai</td><td>platform.minimax.io</td></tr>
+<tr><td>鉴权</td><td>Authorization: Bearer 你的 key</td><td>Authorization / X-Api-Key</td></tr>
+<tr><td>OpenAI 兼容</td><td>/v1/chat/completions</td><td>/v1/chat/completions</td></tr>
+<tr><td>Anthropic 兼容</td><td>/v1/messages</td><td>/anthropic/v1/messages</td></tr>
+<tr><td>model ID 格式</td><td>MiniMaxAI/MiniMax-M2.5</td><td>MiniMax-M2.5</td></tr>
+<tr><td>MiniMax M3</td><td>没有</td><td>有</td></tr>
+<tr><td>免费层</td><td>永久 Tier 1 / 1M TPM</td><td>无（Token Plan 起步 $20/月）</td></tr>
+<tr><td>适合</td><td>白嫖 M2.5/M2.7、长尾测试</td><td>正经用 M3、做产品</td></tr>
+</table>
+
+<p>建议：日常用 GMI 薅 M2.5/M2.7，要 M3 走 MiniMax 官方。两者账号、key、计费完全独立，不要混用。</p>
+
+<h2>❓ 常见问题</h2>
+
+<div class="faq-item">
+<details>
+<summary>真的不要钱？会不会偷偷扣费？</summary>
+<p>注册即用 Tier 1（$0），1,000,000 TPM，所有 LLM RPM 无限。视频和图片模型有 RPH 限制但额度内免费。Auto Pay 默认关，不开通不会突然扣你卡。</p>
+</details>
+</div>
+
+<div class="faq-item">
+<details>
+<summary>14 天后会怎样？</summary>
+<p>不会怎样。"14 天"这个说法是营销噱头，GMI 文档里没有。我跑了一周没收费，token 自由打。</p>
+</details>
+</div>
+
+<div class="faq-item">
+<details>
+<summary>GMI 平台的 M3 怎么薅？</summary>
+<p>三条路：MiniMax 官方 platform.minimax.io 注册送试用 token（Token Plan 起步 $20/月）；等 GMI 上架；走 MiniMax Dev Program（要开源项目门槛）。GMI 当前没 M3，别浪费时间调。</p>
+</details>
+</div>
+
+<div class="faq-item">
+<details>
+<summary>能商用吗？</summary>
+<p>GMI 平台本身没禁止商用，但具体模型有各自 license。Llama 有 Meta 社区 license、Qwen 有 Tongyi 协议、GPT-5.4 / Claude 4.5 有 OpenAI / Anthropic 的 ToS。商业产品前看清楚每家条款。</p>
+</details>
+</div>
+
+<div class="faq-item">
+<details>
+<summary>速度怎么样？</summary>
+<p>国内测延迟 200-400ms，比官方 MiniMax 平台（走 agnes 代理那套）慢一点点，但比大多数海外直连稳。视频生成不算快（5 秒 768P 视频约 60-90 秒），图像生成 Flux 类挺快（2-3 秒一张）。</p>
+</details>
+</div>
+
+<div class="faq-item">
+<details>
+<summary>账号会被封吗？</summary>
+<p>GMI ToS 主要禁挖矿、刷单、API 套利。正常个人开发、自媒体、自动化脚本，薅到 Tier 1 上限都没事。别用脚本暴力刷 token，会触发风控。</p>
+</details>
+</div>
+
+<div class="faq-item">
+<details>
+<summary>除了 MiniMax 还能薅什么？</summary>
+<p>GMI 平台 Tier 1 覆盖上百个模型：DeepSeek V4 Pro / V4 Flash、Claude Sonnet 4.5 / 4.6、GPT-5.4 / 5.4 Pro / 5.4 Mini、Kimi K2.5 / K2.6 / K3、GLM 4.5 / 4.7 / 5 / 5.1、Qwen3 235B / 32B / Coder 480B、Llama 4 Maverick 17B 等 LLM，Flux2-Dev / Klein、Qwen-Image-2512、Z-Image 等图像模型，Kling V3、Seedance 2.5、Wan 2.7、Hunyuan-3D-pro 等视频/3D 模型。</p>
+</details>
+</div>
+
+<div class="cta-box">
+<p><strong>🚀 5 分钟跑通 GMI Cloud MiniMax 永久免费</strong></p>
+<p>不绑卡、不 KYC、不收费、1,000,000 TPM 永久额度。薅完顺手把 M2.7、Qwen3 Coder、Claude Sonnet 4.5 一起薅走。</p>
+<a href="https://console.gmicloud.ai" target="_blank" rel="noopener">立即注册 GMI Cloud</a>
+</div>
+
+<h2>📝 写在最后</h2>
+
+<p>网上那张 GMI × MiniMax 14天免费 M3 的图，转给我的时候，我心里就有数——大概率又是营销号在薅流量。但作为羊毛圈老炮，这事值得深扒，因为<strong>真羊毛的成分比噱头大</strong>：</p>
+
+<ul>
+<li>永久 Tier 1 1,000,000 TPM 免费</li>
+<li>M2.1 / M2.5 / M2.7 三个 MiniMax 主力模型随便调</li>
+<li>DeepSeek V4 Pro、Claude 4.5、GPT-5.4 全免费</li>
+<li>100+ 视频、图像、音频、3D 模型有免费额度</li>
+<li>NVIDIA 认证基础设施，SLA 99.9%</li>
+</ul>
+
+<p>按本攻略走，薅到的羊毛价值至少 $200/月（按 OpenAI GPT-4.1 标准定价换算）。一年下来省 2400 块。</p>
+
+<p>如果你调通了、跑出有意思的东西，欢迎回来留言分享。GMI 后续值得薅的我会持续更新。</p>
+
+<p>下一篇预告：GMI Studio 可视化工作流实战——用 Kling + Flux + Hailuo 拼一条完整的短视频生成 pipeline，一分钱不花。</p>
+
+</main>
+<footer class="footer">
+<p>© 2026 AIFreePlan · <a href="/zh" class="inline-link">首页</a> · <a href="/zh/guides" class="inline-link">所有攻略</a> · <a href="/en/guides/gmi-cloud-minimax-free-guide" class="inline-link">English Version</a></p>
+</footer>
+</body>
+</html>

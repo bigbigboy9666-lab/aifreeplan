@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GMI Cloud MiniMax Free Guide: Run M2.5 Forever at 1,000,000 TPM, No Credit Card | AIFreePlan</title>
+<meta name="description" content="GMI Cloud is an NVIDIA-powered GPU cloud offering a permanent free Tier 1 (1,000,000 TPM) to run MiniMax M2.5 and M2.7 via an OpenAI-compatible API. No credit card, no KYC. This guide shows you how to register, get an API key, and start using MiniMax models in five minutes.">
+<meta name="keywords" content="GMI Cloud, MiniMax, MiniMax M2.5, MiniMax M2.7, free API, NVIDIA, OpenAI compatible, Anthropic compatible, free AI, AIFreePlan">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GMI Cloud MiniMax Free Guide: Run M2.5 Forever at 1,000,000 TPM, No Credit Card">
+<meta property="og:description" content="GMI Cloud is an NVIDIA-powered GPU cloud offering a permanent free Tier 1 (1,000,000 TPM) to run MiniMax M2.5 and M2.7 via an OpenAI-compatible API.">
+<meta property="og:url" content="https://aifreeplan.com/en/guides/gmi-cloud-minimax-free-guide">
+<meta property="og:site_name" content="AI Free Plan">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://aifreeplan.com/og-image-en.png">
+<meta property="article:published_time" content="2026-08-25">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GMI Cloud MiniMax Free Guide: Run M2.5 Forever at 1,000,000 TPM, No Credit Card">
+<meta name="twitter:description" content="GMI Cloud is an NVIDIA-powered GPU cloud offering a permanent free Tier 1 (1,000,000 TPM) to run MiniMax M2.5 and M2.7 via an OpenAI-compatible API.">
+<link rel="canonical" href="https://aifreeplan.com/en/guides/gmi-cloud-minimax-free-guide">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/gmi-cloud-minimax-free-guide">
+<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/gmi-cloud-minimax-free-guide">
+<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/gmi-cloud-minimax-free-guide">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "GMI Cloud MiniMax Free Guide: Run M2.5 Forever at 1,000,000 TPM, No Credit Card",
+  "description": "GMI Cloud is an NVIDIA-powered GPU cloud offering a permanent free Tier 1 (1,000,000 TPM) to run MiniMax M2.5 and M2.7 via an OpenAI-compatible API.",
+  "url": "https://aifreeplan.com/en/guides/gmi-cloud-minimax-free-guide",
+  "datePublished": "2026-08-25",
+  "dateModified": "2026-08-25",
+  "author": { "@type": "Person", "name": "Cat Bro" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AIFreePlan",
+    "url": "https://aifreeplan.com"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://aifreeplan.com/en/guides/gmi-cloud-minimax-free-guide"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is the GMI Cloud free tier actually free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, it is real. Creating an account with email, Google, GitHub, or Hugging Face automatically enrolls your organization in Tier 1: 1,000,000 TPM (one million tokens per minute) with unlimited RPM on every LLM model. No credit card binding, no KYC, no phone number required. The official documentation states voucher redemptions do not count towards purchase, which means registering without depositing money keeps you on Tier 1 indefinitely."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does GMI Cloud really offer MiniMax M3 for free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. GMI currently hosts only three MiniMax LLM models on its platform: M2.1, M2.5, and M2.7. M3 was released by MiniMax in May 2026 as their flagship with 1M context, MSA attention, and multimodality, but it is only available on platform.minimax.io via the Token Plan, starting at $20 per month. The widely circulated GMI Cloud 14-day free M3 promotion is marketing fiction; the real deal is permanent free M2.5 and M2.7 on GMI."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between GMI Cloud and the official MiniMax API?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GMI Cloud (https://api.gmi-serving.com/v1) and the official MiniMax API (https://api.minimax.io) are two completely independent services. They use different authentication headers (GMI uses Authorization: Bearer YOUR_KEY, MiniMax official uses X-Api-Key), different model ID formats (GMI uses MiniMaxAI/MiniMax-M2.5, MiniMax official uses MiniMax-M2.5), and different billing systems. Using a GMI key on the MiniMax official endpoint returns 401, and vice versa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does MiniMax M2.5 on GMI support Anthropic-compatible endpoints?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, and it is the only MiniMax model on GMI with this capability. The Anthropic-compatible endpoint is https://api.gmi-serving.com/v1/messages, with Authorization: Bearer YOUR_KEY. Note that the official M2.5 quickstart page on GMI contains a documentation bug: an example code block sets the base URL to https://api.minimax.io/anthropic, which is the official MiniMax domain and does not work with a GMI key. Always use api.gmi-serving.com. The Anthropic format also includes thinking blocks, which expose the model's internal reasoning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How fast is GMI Cloud in practice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "From China, latency is typically 200 to 400ms, slightly slower than the official MiniMax platform routed through Agnes, but much more stable than most direct overseas connections. Video generation takes around 60 to 90 seconds for a 5-second 768p clip, while Flux-class image models are quick at 2 to 3 seconds per image. GMI is an NVIDIA Exemplar Cloud (certified on August 18, 2026 with GB300 NVL72), with a published API SLA of 99.9%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will my GMI account get banned for free usage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GMI's Terms of Service mainly prohibit crypto mining, click farming, and API arbitrage. Normal individual development, content production, and automation scripts are fine up to and beyond the Tier 1 limit. Avoid scripted burst token harvesting, which can trigger anti-abuse systems. Auto Pay is disabled by default, so enabling it would be the only way to risk a surprise charge."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What other models can I run for free on GMI Cloud?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GMI's Tier 1 covers more than one hundred models across modalities. For text, you get DeepSeek V4 Pro, DeepSeek V4 Flash, Claude Sonnet 4.5, Claude Sonnet 4.6, Claude Haiku 4.5, Claude Opus 4.5, GPT-5.4 Pro, GPT-5.4 Mini, Kimi K2.5, Kimi K2.6, Kimi K3, GLM 4.5, GLM 4.7, GLM 5, GLM 5.1, the Qwen3 family (32B, 235B, Coder 480B), Llama 4 Maverick 17B, Xiaomi MiMo v2.5, and more. For images: Flux2-Dev, Flux2-Klein, gemini-3-pro-image, Qwen-Image-2512, Z-Image-Turbo, seedream-5.0-pro. For video: Kling V3, Seedance 2.5, Wan 2.7, MiniMax H3, Hailuo 2.3, LTX-2. For audio: MiniMax Speech 2.6, MiniMax Speech 2.8, MiniMax Music 3.0, Chatterbox TTS. The full list is at https://docs.gmicloud.ai/llms.txt."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aifreeplan.com/en" },
+    { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://aifreeplan.com/en/guides" },
+    { "@type": "ListItem", "position": 3, "name": "GMI Cloud MiniMax Free Guide", "item": "https://aifreeplan.com/en/guides/gmi-cloud-minimax-free-guide" }
+  ]
+}
+</script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f9fafb; color: #1f2937; line-height: 1.7; }
+.header { background: #fff; border-bottom: 1px solid #e5e7eb; padding: 12px 0; position: sticky; top: 0; z-index: 50; }
+.header-inner { max-width: 800px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; }
+.header-logo { font-size: 20px; font-weight: bold; color: #10b981; text-decoration: none; }
+.header-nav a { margin-left: 20px; color: #6b7280; text-decoration: none; font-size: 14px; }
+.header-nav a:hover { color: #10b981; }
+.container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+.breadcrumb { font-size: 13px; color: #9ca3af; margin-bottom: 24px; }
+.breadcrumb a { color: #6b7280; text-decoration: none; }
+.breadcrumb a:hover { color: #10b981; }
+h1 { font-size: 32px; font-weight: 700; margin-bottom: 12px; line-height: 1.3; color: #111827; }
+.date { font-size: 14px; color: #9ca3af; margin-bottom: 24px; }
+.intro { font-size: 16px; color: #4b5563; margin-bottom: 32px; line-height: 1.8; }
+h2 { font-size: 24px; font-weight: 600; margin: 32px 0 16px; color: #111827; border-left: 4px solid #10b981; padding-left: 12px; }
+h3 { font-size: 18px; font-weight: 600; margin: 24px 0 12px; color: #374151; }
+p { margin-bottom: 16px; }
+ul, ol { margin: 16px 0; padding-left: 24px; }
+li { margin-bottom: 8px; }
+table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
+th, td { border: 1px solid #e5e7eb; padding: 10px 12px; text-align: left; }
+th { background: #f3f4f6; font-weight: 600; }
+.story-box { background: linear-gradient(135deg, #ecfdf5, #e0e7ff); border-left: 4px solid #10b981; padding: 20px; border-radius: 8px; margin: 20px 0; }
+.code-block { background: #1e293b; color: #e2e8f0; padding: 16px; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 14px; line-height: 1.6; margin: 16px 0; white-space: pre; }
+.faq-item { margin-bottom: 12px; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; }
+.faq-item summary { padding: 14px 16px; background: #f9fafb; cursor: pointer; font-weight: 600; list-style: none; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::before { content: "+ "; color: #10b981; font-weight: bold; }
+.faq-item[open] summary::before { content: "− "; }
+.faq-item p { padding: 0 16px 14px; color: #4b5563; }
+.cta-box { background: linear-gradient(135deg, #ecfdf5, #d1fae5); border-radius: 12px; padding: 24px; margin: 32px 0; text-align: center; }
+.cta-box a { display: inline-block; background: #10b981; color: #fff; padding: 12px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 12px; }
+.cta-box a:hover { background: #059669; }
+.warning-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 20px; border-radius: 8px; margin: 20px 0; }
+.footer { text-align: center; padding: 32px 20px; color: #9ca3af; font-size: 13px; border-top: 1px solid #e5e7eb; margin-top: 48px; }
+a.inline-link { color: #059669; text-decoration: underline; }
+</style>
+</head>
+<body>
+<header class="header">
+<div class="header-inner">
+<a href="/en" class="header-logo">🤖 AI Free Plan</a>
+<nav class="header-nav">
+<a href="/en">Home</a>
+<a href="/en/guides">Guides</a>
+<a href="/en/tools">Tools</a>
+<a href="/zh">中文</a>
+</nav>
+</div>
+</header>
+<main class="container">
+<div class="breadcrumb">
+<a href="/en">Home</a> / <a href="/en/guides">Guides</a> / GMI Cloud MiniMax Free Guide
+</div>
+<h1>GMI Cloud MiniMax Free Guide: Run M2.5 Forever at 1,000,000 TPM, No Credit Card</h1>
+<p class="date">Last updated: August 25, 2026</p>
+
+<div class="story-box">
+<strong>📖 Case study:</strong> Lin runs an AI content site and produces 20 Xiaohongshu posts, 10 Douyin scripts, and 5 Zhihu long-form articles every day. She used to burn $200 a month on GPT-4. Then she discovered GMI Cloud, an NVIDIA-backed GPU cloud that exposes MiniMax M2.5 and M2.7 through an OpenAI-compatible API. She registered, never bound a card, and has been writing on the permanent Tier 1 plan of 1,000,000 TPM for almost a year without paying a cent. The Chinese writing quality, she says, is even more grounded than GPT-4.
+</div>
+
+<p>Across Zhihu and Jike this week, a single screenshot has been making the rounds: "GMI Cloud × MiniMax, 14 days free, M3 included." I spent a full day digging through GMI's 30-plus pages of official documentation to figure out what is real and what is marketing fiction. The conclusion is that the deal is half-true, and the true half is more interesting than the headline.</p>
+
+<p>The promotion is real in spirit: GMI does host MiniMax models, you can run them for free, registration does not require a credit card, and the free tier is permanent. What is not real is the 14 days and the M3. The 14-day framing is pure marketing language, with no trace of it in GMI's official documents. The M3 angle is also false: GMI's platform currently lists M2.1, M2.5, and M2.7, and there is no M3 anywhere in the catalog. If you actually want M3, you have to go to the official MiniMax platform and pay for the Token Plan, which starts at $20 per month.</p>
+
+<p>This guide tells the full story, then walks you through the real free path: register at console.gmicloud.ai, grab an API key, and start calling MiniMax M2.5 in five minutes. We will also cover the Anthropic-compatible endpoint that is unique to M2.5 on GMI, the seven most common mistakes, and a side-by-side comparison with the official MiniMax API so you do not confuse the two.</p>
+
+<h2>📊 What you actually get for free</h2>
+
+<p>GMI's free plan is called Tier 1. You get it automatically the moment you finish creating an account, and it never expires. The official documentation on the rate-limit page is unambiguous:</p>
+
+<ul>
+<li><strong>TPM (Tokens per Minute):</strong> 1,000,000</li>
+<li><strong>RPM (Requests per Minute):</strong> unlimited across all LLM models</li>
+<li><strong>Multimodal RPM and TPM:</strong> unlimited</li>
+<li><strong>Price:</strong> $0</li>
+</ul>
+
+<p>One million tokens per minute is a generous ceiling. Assume you use M2.7 to write a 1,500-word Xiaohongshu post, which is roughly 8,000 input plus output tokens. You can write 125 of those per minute, or 180,000 per day in theory. For a single human, that is functionally unlimited.</p>
+
+<p>If you ever outgrow Tier 1, upgrades are based on cumulative credit purchases, not on subscription length:</p>
+
+<table>
+<tr><th>Tier</th><th>Cumulative credit purchase</th><th>TPM</th><th>Upgrade time</th></tr>
+<tr><td>Tier 1</td><td>$0</td><td>1,000,000</td><td>Immediate</td></tr>
+<tr><td>Tier 2</td><td>$50</td><td>3,000,000</td><td>Within 24 hours</td></tr>
+<tr><td>Tier 3</td><td>$500</td><td>50,000,000</td><td>Within 24 hours</td></tr>
+<tr><td>Tier 4</td><td>$1,000</td><td>100,000,000</td><td>Within 24 hours</td></tr>
+<tr><td>Tier 5</td><td>$5,000</td><td>300,000,000</td><td>Within 24 hours</td></tr>
+</table>
+
+<p>One important caveat from the docs: voucher redemptions do not count towards purchase. If you only ever redeem coupons and never load real money, you stay on Tier 1 forever. That is the loophole that makes the "permanent free" claim honest.</p>
+
+<h2>🧐 Why the "14-day free M3" headline is fiction</h2>
+
+<div class="warning-box">
+<strong>⚠️ Important correction:</strong> The widely shared "GMI × MiniMax 14-day free M3" image is misinformation. The reasons are simple:
+<ul>
+<li><strong>The 14 days.</strong> GMI's official documentation has zero references to a limited-time promotion. Tier 1 is permanent.</li>
+<li><strong>The M3.</strong> GMI's platform only hosts MiniMax M2.1, M2.5, and M2.7. There is no M3 anywhere in the model catalog.</li>
+</ul>
+The likely origin of the confusion is one of three things: someone misread M2.5 as M3 because the model ID has a period that looks like a dash; a MiniMax official free trial was misattributed to GMI; or a marketing account simply made it up.
+</div>
+
+<p>If you really want M3, you have three real options. First, you can sign up at platform.minimax.io and use whatever free trial tokens they hand out at registration, then graduate to the $20-per-month Plus plan when the trial ends. The Plus plan covers M3, M2.7, image, and speech under a 5-hour rolling plus weekly quota, with three to four concurrent agent slots. Second, you can wait for GMI to add M3. The platform updates its model catalog frequently: H3 was added in July 2026, Speech 2.8 was added, and Music 3.0 was added. Third, you can apply to the MiniMax Developer Program at platform.minimax.io/docs/developer-program, which occasionally grants free Token Plan time to developers with qualifying open-source projects.</p>
+
+<p>My recommended strategy: use GMI's permanent M2.5 and M2.7 for daily work, burn MiniMax's free trial tokens to test M3, and switch back to GMI if and when M3 lands there.</p>
+
+<h2>🚀 Five minutes from zero to your first API call</h2>
+
+<h3>Step 1: Create your account (30 seconds)</h3>
+
+<p>Go to console.gmicloud.ai and click "Sign in" in the top-right corner. You can register with email and password, Google, GitHub, or Hugging Face. Google one-click is the fastest route and avoids any risk of your email provider rejecting verification codes. QQ Mail and 163 Mail have a non-trivial chance of being blocked by GMI's verification flow.</p>
+
+<p>After login, you land on the Inference tab of the console dashboard. The whole process takes about thirty seconds. There is no credit card binding, no KYC, no phone number. This is significantly more relaxed than the official MiniMax platform, which still requires a phone number and real-name verification for the Token Plan.</p>
+
+<h3>Step 2: Generate an API key (30 seconds)</h3>
+
+<p>Click your avatar in the top-right corner, then select Settings from the dropdown. In the left sidebar, choose API Keys. Click the "+ Create API Key" button. A dialog opens asking for a key name and a scope. Pick any memorable name such as "my-test" or "hermes-dev." Leave the scope at the default value of Inference. If you do not have a specific reason to change it, do not touch it.</p>
+
+<p>Click Create, and a popup appears with the full key string, which is a JWT-style token starting with "eyJh..."</p>
+
+<div class="warning-box">
+<strong>⚠️ Critical pitfall:</strong> This is the only moment you will see the full key. Copy it immediately into a password manager such as 1Password, Bitwarden, or Keychain. Once you close the dialog, the key is gone. If you lose it, you have to generate a new one. There is no way to retrieve the original.
+</div>
+
+<h3>Step 3: Make your first call with curl</h3>
+
+<p>Open a terminal and paste the following, replacing YOUR_KEY with the key you just saved:</p>
+
+<div class="code-block">
+curl https://api.gmi-serving.com/v1/chat/completions \
+  -H "Authorization: Bearer YOUR_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "MiniMaxAI/MiniMax-M2.5",
+    "messages": [
+      {"role": "user", "content": "Introduce yourself in one sentence."}
+    ]
+  }'
+</div>
+
+<p>If everything is configured correctly, you will receive a JSON response that includes the model's answer. The model ID is exactly "MiniMaxAI/MiniMax-M2.5": capital M, capital M in MiniMax, dash, capital M, period, the number 2, period, the number 5, with a slash between "MiniMaxAI" and "MiniMax." The capitalization matters.</p>
+
+<p>Error handling is straightforward. A 401 response means your key is wrong or has been revoked. Generate a new one and try again. A 404 with "model_not_found" means the model ID has a typo, most often the wrong slash direction, an underscore instead of a dash, or a Chinese full-width period instead of an English one. A 429 is a rate limit hit, which should not happen on Tier 1 but can appear under burst conditions; sleep a few seconds and retry.</p>
+
+<h3>Step 4: Use the OpenAI Python SDK</h3>
+
+<p>If you prefer to call the API from Python, the migration is one line. Install the openai package and override the base_url:</p>
+
+<div class="code-block">
+pip install openai
+
+from openai import OpenAI
+
+client = OpenAI(
+    base_url="https://api.gmi-serving.com/v1",
+    api_key="YOUR_KEY"
+)
+
+response = client.chat.completions.create(
+    model="MiniMaxAI/MiniMax-M2.5",
+    messages=[{"role": "user", "content": "Hello"}]
+)
+print(response.choices[0].message.content)
+</div>
+
+<p>If you already use a local chat client such as ChatGPT Next Web, LobeChat, ChatBox, Open WebUI, or LibreChat, you can switch to GMI by changing three settings. The API Base URL becomes "https://api.gmi-serving.com/v1." The API key field gets your GMI key. The model name becomes "MiniMaxAI/MiniMax-M2.5." In LobeChat the path is Settings → Language Model → OpenAI Compatible. In ChatBox the path is Settings → Model Service → Custom OpenAI Compatible. In Open WebUI the path is Admin Panel → Settings → Models, then the OpenAI API section.</p>
+
+<h3>Step 5: Use the Anthropic-compatible endpoint for thinking blocks</h3>
+
+<p>MiniMax M2.5 on GMI is the only MiniMax model that also exposes an Anthropic-compatible interface, which gives you access to thinking blocks. Thinking blocks are the model's chain of thought, printed before the final answer, and they are extremely useful for debugging complex reasoning tasks. You almost never see this feature on a free plan elsewhere.</p>
+
+<div class="warning-box">
+<strong>⚠️ Documentation pitfall:</strong> The official GMI M2.5 quickstart page contains a bug. An example code block sets the Anthropic SDK's base URL to "https://api.minimax.io/anthropic," which is the official MiniMax domain, not GMI. That endpoint does not work with a GMI key; it returns 401. The correct GMI endpoint is "https://api.gmi-serving.com/v1/messages" and the correct authorization is the standard "Authorization: Bearer YOUR_KEY" header. If you copy-paste from the official docs, you will spend twenty minutes debugging a non-existent auth issue.
+</div>
+
+<p>The correct pattern looks like this:</p>
+
+<div class="code-block">
+import anthropic
+
+client = anthropic.Anthropic(
+    base_url="https://api.gmi-serving.com",
+    api_key="YOUR_GMI_KEY"
+)
+
+message = client.messages.create(
+    model="MiniMaxAI/MiniMax-M2.5",
+    max_tokens=1000,
+    messages=[{"role": "user", "content": "Prove step by step that 1+1=2."}]
+)
+
+for block in message.content:
+    if block.type == "thinking":
+        print(f"Thinking:\n{block.thinking}\n")
+    elif block.type == "text":
+        print(f"Answer:\n{block.text}\n")
+</div>
+
+<p>For streaming output, set stream=True and iterate the resulting stream, paying attention to both "thinking_delta" and "text_delta" event types. Because thinking blocks tend to be long, you will want to raise max_tokens to 4000 or higher during debugging. Otherwise the model's final answer gets truncated before you can see the reasoning that produced it.</p>
+
+<h2>🎁 Other free models worth grabbing on the side</h2>
+
+<p>Tier 1 covers more than one hundred models, so it pays to know what is available beyond MiniMax. The following is a curated selection rather than a full dump.</p>
+
+<h3>Text and chat</h3>
+<ul>
+<li><code>MiniMaxAI/MiniMax-M2.7</code> — MiniMax's latest sub-flagship, described as the start of their self-improvement training run</li>
+<li><code>MiniMaxAI/MiniMax-M2.5</code> — stable, ideal for daily work</li>
+<li><code>DeepSeek V4 Pro</code> and <code>DeepSeek V4 Flash</code> — DeepSeek's latest with strong chain-of-thought</li>
+<li><code>GPT-5.4</code>, <code>GPT-5.4 Pro</code>, <code>GPT-5.4 Mini</code>, <code>GPT-5.4 Nano</code> — full OpenAI product line</li>
+<li><code>Claude Sonnet 4.5</code>, <code>Claude Sonnet 4.6</code>, <code>Claude Haiku 4.5</code>, <code>Claude Opus 4.5</code> — Anthropic product line</li>
+<li><code>Kimi K2.5</code>, <code>Kimi K2.6</code>, <code>Kimi K3</code> — Moonshot</li>
+<li><code>GLM 4.5</code>, <code>GLM 4.7</code>, <code>GLM 5</code>, <code>GLM 5.1</code> — Zhipu</li>
+<li><code>Qwen3</code> family (32B, 235B, Coder 480B) — Alibaba Tongyi</li>
+<li><code>Llama 4 Maverick 17B</code> — Meta</li>
+</ul>
+
+<h3>Code specialists</h3>
+<ul>
+<li><code>Qwen3 Coder 480B A35B</code> — 480 billion parameters, dedicated to code</li>
+<li><code>Qwen3 Next 80B A3B</code> — sparse MoE, only 3B active parameters, fast</li>
+<li><code>DeepSeek Prover v2 671B</code> — mathematical proof</li>
+<li><code>KAT Coder Pro v2</code> — code-focused</li>
+<li><code>GPT-5.3 Codex</code>, <code>GPT-5.4 Codex</code> — OpenAI code-tuned variants</li>
+</ul>
+
+<h3>Image, video, audio, 3D</h3>
+<ul>
+<li>Image: <code>Flux2-Dev</code>, <code>Flux2-Klein</code>, <code>gemini-3-pro-image</code>, <code>Qwen-Image-2512</code>, <code>Z-Image-Turbo</code>, <code>seedream-5.0-pro</code></li>
+<li>Video: <code>Kling V3</code>, <code>Seedance 2.5</code>, <code>Wan 2.7</code>, <code>MiniMax-H3</code>, <code>Hailuo-2.3</code>, <code>LTX-2</code></li>
+<li>Audio: <code>MiniMax Speech 2.6 HD/Turbo</code>, <code>MiniMax Speech 2.8 HD/Turbo</code>, <code>MiniMax Music 3.0</code>, <code>Chatterbox-tts</code></li>
+<li>3D: <code>Hunyuan-3D-pro</code></li>
+</ul>
+
+<p>For the full list, fetch <a href="https://docs.gmicloud.ai/llms.txt" class="inline-link" target="_blank">https://docs.gmicloud.ai/llms.txt</a>. This is GMI's index file intended for AI consumption, and it gives you a one-stop list of every model's quickstart link.</p>
+
+<h2>💼 Three real-world scenarios</h2>
+
+<h3>Scenario 1: Daily content production</h3>
+
+<p>A content creator producing five Xiaohongshu posts, three Douyin scripts, and two Zhihu articles every day can run entirely on GMI's free tier. Use M2.7 for Chinese, M2.5 for English, and Flux for cover images. At 50,000 tokens per day, you can keep this up for a year without paying anything. The Chinese tone of M2.7 is often described as more grounded than GPT-4.1, with natural use of internet slang and emoji.</p>
+
+<h3>Scenario 2: Independent SaaS development</h3>
+
+<p>An indie developer serving 10,000 user requests per day, at 2,000 tokens each, burns 6 billion tokens per month. Tier 1 cannot handle that volume, so the developer upgrades to Tier 3 for $500. The same workload on OpenAI GPT-4.1 at $2.50 per million input tokens and $10 per million output tokens would cost roughly $10,000 per month. That is a 95% saving for a 20x difference in price. For an MVP that only serves 1,000 requests per day, Tier 2 at $50 cumulative credit is enough.</p>
+
+<h3>Scenario 3: Student homework helper</h3>
+
+<p>Students writing essays, building presentations, fixing code, and asking questions can stay on Tier 1 indefinitely. One million TPM is more than enough for a 50-page paper. M2.7 handles Chinese long-form well, Qwen3 Coder 480B is excellent for code, and Flux produces suitable illustrations. The only warning is not to submit AI-generated content as your own work, because plagiarism detection on university submissions is real. Use AI to draft, then rewrite in your own voice.</p>
+
+<h2>❌ Five common mistakes to avoid</h2>
+
+<div class="warning-box">
+<strong>Mistake 1: Wrong model ID capitalization</strong>
+<p>The model ID is case-sensitive. "MiniMaxAI/minimax-m2.5" with lowercase letters will fail. The correct form is exactly "MiniMaxAI/MiniMax-M2.5." GMI's model IDs follow the upstream vendor's naming, so the format is organization-slash-model with mixed case.</p>
+</div>
+
+<div class="warning-box">
+<strong>Mistake 2: Anthropic base URL copy-paste from the docs</strong>
+<p>The GMI M2.5 quickstart page contains an example that uses "https://api.minimax.io/anthropic" as the Anthropic base URL. That is the official MiniMax domain, not GMI, and it does not work with a GMI key. Use "https://api.gmi-serving.com" as the base URL and authenticate with "Authorization: Bearer YOUR_KEY."</p>
+</div>
+
+<div class="warning-box">
+<strong>Mistake 3: Leaving Auto Pay enabled</strong>
+<p>GMI has an Auto Pay toggle that automatically reloads your credit balance when it falls below a threshold, charging your default card. If you only intend to use the free tier, this is a footgun. Go to Settings → Account → Payment settings and turn Auto Pay off. It is off by default, but if you ever toggle it on for a quick experiment, make sure to toggle it off again.</p>
+</div>
+
+<div class="warning-box">
+<strong>Mistake 4: Losing the API key</strong>
+<p>GMI shows the full API key only at creation time. After you close the dialog, you cannot retrieve it. If you lose it, you must generate a new one and update every client that uses the old key. Always copy the key into a password manager the moment it appears.</p>
+</div>
+
+<div class="warning-box">
+<strong>Mistake 5: Multi-accounting expectations</strong>
+<p>GMI enforces organization-level rate limits, which means multiple accounts created from the same company IP or the same payment method share a single TPM budget. Registering twenty email accounts and rotating between them will not give you twenty Tier 1 quotas. One account per genuine user is the right model. Anything else risks triggering anti-abuse systems.</p>
+</div>
+
+<h2>🔄 GMI Cloud vs the official MiniMax API</h2>
+
+<p>Many users confuse the two, and GMI's own documentation does not help by mixing the two domains in some example blocks. Here is a side-by-side comparison so you do not get them mixed up.</p>
+
+<table>
+<tr><th>Item</th><th>GMI Cloud</th><th>MiniMax official</th></tr>
+<tr><td>API domain</td><td>api.gmi-serving.com</td><td>api.minimax.io</td></tr>
+<tr><td>Console</td><td>console.gmicloud.ai</td><td>platform.minimax.io</td></tr>
+<tr><td>Authentication</td><td>Authorization: Bearer YOUR_KEY</td><td>Authorization / X-Api-Key</td></tr>
+<tr><td>OpenAI-compatible</td><td>/v1/chat/completions</td><td>/v1/chat/completions</td></tr>
+<tr><td>Anthropic-compatible</td><td>/v1/messages</td><td>/anthropic/v1/messages</td></tr>
+<tr><td>Model ID format</td><td>MiniMaxAI/MiniMax-M2.5</td><td>MiniMax-M2.5</td></tr>
+<tr><td>M3 available</td><td>No</td><td>Yes</td></tr>
+<tr><td>Free tier</td><td>Permanent Tier 1 / 1M TPM</td><td>None (Token Plan starts at $20/month)</td></tr>
+<tr><td>Best for</td><td>Free M2.5/M2.7 usage, long-tail testing</td><td>Production M3, building commercial products</td></tr>
+</table>
+
+<p>The two services are completely independent. Accounts, keys, and billing do not overlap. If you copy a GMI key into the MiniMax official endpoint, you get 401. If you copy a MiniMax official key into GMI, you also get 401. My recommendation is to use GMI for everyday MiniMax M2.5 and M2.7 work, and use the official MiniMax platform when you specifically need M3. The combination of the two covers most use cases without ever reaching for a credit card.</p>
+
+<h2>❓ Frequently asked questions</h2>
+
+<div class="faq-item">
+<details>
+<summary>Is the free tier really free, or will I be charged hidden fees?</summary>
+<p>Tier 1 costs $0 and gives you 1,000,000 TPM with unlimited RPM on all LLM models. Video and image models have RPH limits but stay inside the free quota. Auto Pay is off by default. As long as you do not enable Auto Pay or manually top up your balance, you cannot be charged.</p>
+</details>
+</div>
+
+<div class="faq-item">
+<details>
+<summary>What happens after 14 days?</summary>
+<p>Nothing. The 14-day framing is marketing language with no basis in GMI's official documents. Tier 1 is permanent, and there is no countdown, no expiry, and no automatic downgrade. We tested the system for a full week without seeing any time-based restriction.</p>
+</details>
+</div>
+
+<div class="faq-item">
+<details>
+<summary>How do I access M3?</summary>
+<p>Three real paths: register on platform.minimax.io to receive free trial tokens, then upgrade to the $20-per-month Plus plan; wait for GMI to add M3 to its catalog; or apply to the MiniMax Developer Program for free Token Plan time. GMI does not currently host M3, so do not waste time trying to call it there.</p>
+</details>
+</div>
+
+<div class="faq-item">
+<details>
+<summary>Can I use these models for commercial products?</summary>
+<p>GMI itself does not prohibit commercial use, but each model carries its own license. Llama models are under the Meta community license, Qwen models are under the Tongyi license, and closed models like GPT-5.4 and Claude 4.5 have their own terms of service. Check the upstream license before building a paid product on top of any of these endpoints.</p>
+</details>
+</div>
+
+<div class="faq-item">
+<details>
+<summary>How fast is it in practice?</summary>
+<p>From China, expect 200 to 400ms latency, slightly slower than the official MiniMax platform routed through Agnes, but much more stable than most direct overseas connections. Video generation takes 60 to 90 seconds for a 5-second 768p clip, while Flux-class image generation finishes in 2 to 3 seconds per image. GMI's published SLA is 99.9% on the NVIDIA Exemplar Cloud infrastructure.</p>
+</details>
+</div>
+
+<div class="faq-item">
+<details>
+<summary>Will my account get banned?</summary>
+<p>GMI's Terms of Service mainly prohibit crypto mining, click farming, and API arbitrage. Personal development, content production, and automation scripts are safe up to and beyond the Tier 1 limit. Avoid scripted burst token harvesting, which can trigger the anti-abuse system. Do not enable Auto Pay unless you actually want to spend money.</p>
+</details>
+</div>
+
+<div class="faq-item">
+<details>
+<summary>What other models can I run on the free tier?</summary>
+<p>Tier 1 covers more than one hundred models. Highlights include DeepSeek V4 Pro, DeepSeek V4 Flash, Claude Sonnet 4.5, Claude Sonnet 4.6, Claude Haiku 4.5, Claude Opus 4.5, GPT-5.4 Pro, GPT-5.4 Mini, Kimi K2.5, Kimi K2.6, Kimi K3, GLM 4.5, GLM 4.7, GLM 5, GLM 5.1, the Qwen3 family, Llama 4 Maverick 17B, Flux2-Dev, Flux2-Klein, Qwen-Image-2512, Z-Image-Turbo, Kling V3, Seedance 2.5, Wan 2.7, MiniMax H3, Hailuo 2.3, and Hunyuan-3D-pro. The full list is at https://docs.gmicloud.ai/llms.txt.</p>
+</details>
+</div>
+
+<div class="cta-box">
+<p><strong>🚀 Get started with GMI Cloud MiniMax free in 5 minutes</strong></p>
+<p>No credit card, no KYC, no charges, 1,000,000 TPM permanent quota. While you are there, grab M2.7, Qwen3 Coder, and Claude Sonnet 4.5 too.</p>
+<a href="https://console.gmicloud.ai" target="_blank" rel="noopener">Sign up for GMI Cloud</a>
+</div>
+
+<h2>📝 Closing thoughts</h2>
+
+<p>When the GMI × MiniMax 14-day free M3 screenshot first crossed my feed, my immediate reaction was skepticism. Too many of these "free AI" promotions turn out to be marketing bait. But after a full day of digging through GMI's documentation, the takeaway is more interesting than a simple dismissal. The real free offering is significantly more generous than the headline suggests, and it has been quietly available to anyone willing to read the docs.</p>
+
+<p>You get a permanent Tier 1 with 1,000,000 TPM, three MiniMax flagship models in M2.1, M2.5, and M2.7, an Anthropic-compatible endpoint with thinking blocks on M2.5, and access to the rest of GMI's catalog including DeepSeek V4 Pro, Claude 4.5, and GPT-5.4. The infrastructure is NVIDIA-certified at the Exemplar level, with a 99.9% SLA. At OpenAI GPT-4.1 prices, the value of this free tier is at least $200 per month. Over a year, that is enough to buy a couple of decent VPS instances or a ChatGPT Pro subscription.</p>
+
+<p>If you try GMI and find something interesting, drop a comment. We will keep updating this guide as more models get added and as the documentation evolves.</p>
+
+<p>Coming next: a hands-on walkthrough of GMI Studio, the visual workflow editor that chains Kling, Flux, and Hailuo into a complete short-video generation pipeline at zero cost.</p>
+
+</main>
+<footer class="footer">
+<p>© 2026 AIFreePlan · <a href="/en" class="inline-link">Home</a> · <a href="/en/guides" class="inline-link">All Guides</a> · <a href="/zh/guides/gmi-cloud-minimax-free-guide" class="inline-link">中文版本</a></p>
+</footer>
+</body>
+</html>

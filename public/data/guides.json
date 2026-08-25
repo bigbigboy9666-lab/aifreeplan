@@ -1,6 +1,28 @@
 {
   "guides": [
     {
+      "slug": "gmi-cloud-minimax-free-guide",
+      "title_zh": "GMI Cloud 跑 MiniMax 攻略：M2.5 永久免费 1,000,000 TPM，不薅白不薅",
+      "title_en": "GMI Cloud MiniMax Free Guide: Run M2.5 Forever at 1,000,000 TPM, No Credit Card",
+      "description_zh": "GMI Cloud 是 NVIDIA 系的 GPU 云，OpenAI 兼容 API 免费跑 MiniMax M2.5 / M2.7，注册即用、永久 Tier 1、不绑卡。本文讲清楚免费机制、Anthropic 兼容、调用步骤、5 大实战场景和 7 个避坑。",
+      "description_en": "GMI Cloud is an NVIDIA-powered GPU cloud offering a permanent free Tier 1 (1,000,000 TPM) to run MiniMax M2.5 and M2.7 via an OpenAI-compatible API. No credit card, no KYC. This guide shows you how to register, get an API key, and start using MiniMax models in five minutes.",
+      "category": "llm",
+      "date_published": "2026-08-25",
+      "tags": [
+        "gmi-cloud",
+        "minimax",
+        "minimax-m2-5",
+        "minimax-m2-7",
+        "free-api",
+        "nvidia",
+        "openai-compatible",
+        "anthropic-compatible",
+        "tier-1"
+      ],
+      "excerpt_zh": "GMI Cloud 是 NVIDIA 系的 GPU 云，OpenAI 兼容 API 免费跑 MiniMax M2.5 / M2.7，注册即用、永久 Tier 1、不绑卡。M2.5 独家支持 Anthropic 兼容格式带 thinking blocks。",
+      "excerpt_en": "GMI Cloud is an NVIDIA-powered GPU cloud offering a permanent free Tier 1 (1,000,000 TPM) to run MiniMax M2.5 and M2.7 via an OpenAI-compatible API. M2.5 also supports Anthropic-compatible format with thinking blocks."
+    },
+    {
       "slug": "cline-free-deepseek-v4-flash-2026",
       "title_zh": "Cline免费攻略：DeepSeek V4 Flash免费用，800万开发者都在用的AI编程助手",
       "title_en": "Cline Free Guide: Use DeepSeek V4 Flash for Free — The AI Coding Agent Trusted by 8M Developers",
