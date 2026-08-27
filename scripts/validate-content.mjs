@@ -88,11 +88,63 @@ console.log('🔧 审计 tools.json...');
 const toolsData = readJson(path.join(repoRoot, 'public/data/tools.json'));
 const tools = toolsData.tools || [];
 
+// 合法 refreshPeriod 白名单
+const VALID_REFRESH = new Set([
+  'daily', 'weekly', 'monthly', 'one-time',
+  'unlimited', 'none',
+  'per-minute', 'per-second', 'rolling-5-hours',
+]);
+
 for (const t of tools) {
-  const fc = t.free_credits || {};
-  for (const [key, val] of Object.entries(fc)) {
-    if (val !== null && val !== undefined && typeof val !== 'string') {
-      issues.p2.push(`[字段类型] ${t.slug || t.id}.free_credits.${key}: ${typeof val} -> 应为 string`);
+  const tid = t.id || t.slug;
+  const ft = t.freeTier || t.free_credits || {};
+
+  // P1: credits=999999 魔法值（占位符，必须用 unit='unlimited' 表达）
+  if (ft.credits === 999999) {
+    issues.p1.push(`[credits=999999 占位符] ${tid}: 改为 credits=0 + creditUnit="unlimited" + refreshPeriod="unlimited"`);
+  }
+
+  // P1: credits=null 但 unit 不像数字串（说明"无限/自托管"用了错误字段）
+  if (ft.credits === null || ft.credits === undefined) {
+    if (ft.creditUnit && !/^\d+/.test(String(ft.creditUnit))) {
+      issues.p1.push(`[credits 缺失 + unit 非数字] ${tid}: c=${ft.credits} u=${JSON.stringify(ft.creditUnit)}`);
+    } else if (!ft.creditUnit) {
+      issues.p1.push(`[credits 和 unit 同时缺失] ${tid}: freeTier 完全没填`);
+    }
+  }
+
+  // P1: watermark / commercialUse 是 null（首页卡片会显示 {status.bg} 乱码）
+  if (ft.watermark === null || ft.watermark === undefined) {
+    issues.p1.push(`[watermark 缺失] ${tid}: 必须填 true/false`);
+  }
+  if (ft.commercialUse === null || ft.commercialUse === undefined) {
+    issues.p1.push(`[commercialUse 缺失] ${tid}: 必须填 true/false`);
+  }
+
+  // P1: refreshPeriod 不在白名单
+  if (ft.refreshPeriod && !VALID_REFRESH.has(ft.refreshPeriod)) {
+    issues.p1.push(`[refreshPeriod 非法] ${tid}: "${ft.refreshPeriod}" 不在白名单 ${[...VALID_REFRESH].join(',')}`);
+  }
+
+  // P2: creditUnit 长度 > 50（叙述性文字塞错字段）
+  if (ft.creditUnit && String(ft.creditUnit).length > 50) {
+    issues.p2.push(`[creditUnit 过长 ${String(ft.creditUnit).length}字] ${tid}: ${String(ft.creditUnit).slice(0, 60)}...`);
+  }
+
+  // P2: credits=0 且 unit=null 且 refreshPeriod='one-time'（疑似没填完）
+  if ((ft.credits === 0 || ft.credits === null) && !ft.creditUnit && ft.refreshPeriod === 'one-time') {
+    issues.p2.push(`[数据疑似未填] ${tid}: c=0 u=null rp=one-time`);
+  }
+
+  // P2: credits 有值但 unit=null（字段填错位置）
+  if (ft.credits && Number(ft.credits) > 0 && !ft.creditUnit) {
+    issues.p2.push(`[unit 缺失] ${tid}: credits=${ft.credits} 但 creditUnit 为空`);
+  }
+
+  // 字段类型（保留原逻辑）
+  for (const [key, val] of Object.entries(ft)) {
+    if (val !== null && val !== undefined && typeof val !== 'string' && typeof val !== 'boolean' && typeof val !== 'number') {
+      issues.p2.push(`[字段类型] ${tid}.freeTier.${key}: ${typeof val} -> 应为 string/boolean/number`);
     }
   }
 }
