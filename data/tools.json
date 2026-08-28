@@ -562,7 +562,10 @@
         "models": "MiMo-V2.5（免费通道）/ V2.5-Pro（付费）",
         "dailyLimit": "无明确日限",
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "paidFrom": "Token Plan Lite起步",
       "paidFromEn": "Token Plan Lite and up",
@@ -713,7 +716,10 @@
         "credits": 0,
         "commercialUse": false,
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "paidFrom": "API $0.14/百万token",
       "paidFromEn": "API $0.14/million tokens",
@@ -799,7 +805,10 @@
         "creditUnit": "Max generates watermark-free images and videos for free",
         "commercialUse": false,
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "tongyi.aliyun.com: chat is text primary, image gen via 通义万相 has its own watermark policy"
       },
       "paidFrom": "API $0.12/百万token",
       "paidFromEn": "API $0.12/million tokens",
@@ -884,7 +893,10 @@
         "credits": 0,
         "commercialUse": false,
         "requiresCreditCard": false,
-        "resolution": "1024x1024"
+        "resolution": "1024x1024",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "paidFrom": "API $0.12/百万token",
       "paidFromEn": "API $0.12/million tokens",
@@ -965,7 +977,10 @@
         "credits": 0,
         "commercialUse": false,
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "paidFrom": "API $0.12/百万token",
       "paidFromEn": "API $0.12/million tokens",
@@ -1066,7 +1081,10 @@
         "credits": 0,
         "commercialUse": false,
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "doubao.com: chat is text primary, AI image gen is separate feature"
       },
       "paidFrom": "¥68/月",
       "paidFromEn": "¥68/month",
@@ -1148,12 +1166,14 @@
       "rating": 4,
       "freeTier": {
         "refreshPeriod": "unlimited",
-        "credits": 999999,
+        "credits": 0,
         "commercialUse": true,
         "creditUnit": "unlimited",
         "watermark": false,
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "source": "github.com/Exafunction/windsurf.vim README: \"Free, ultrafast Copilot alternative\" (Codeium rebranded to Windsurf)",
+        "lastVerifiedDate": "2026-08-27"
       },
       "paidFrom": "免费（个人版）",
       "paidFromEn": "Free (Personal)",
@@ -1237,12 +1257,14 @@
       "rating": 4,
       "freeTier": {
         "refreshPeriod": "unlimited",
-        "credits": 999999,
+        "credits": 0,
         "commercialUse": true,
         "creditUnit": "unlimited",
         "watermark": false,
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "source": "lingma.aliyun.com/lingma: 个人版免费使用，企业版收费",
+        "lastVerifiedDate": "2026-08-27"
       },
       "paidFrom": "免费（个人版）",
       "paidFromEn": "Free (Personal)",
@@ -1323,7 +1345,10 @@
         "credits": 0,
         "commercialUse": false,
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "paidFrom": "API按量计费",
       "paidFromEn": "Pay-as-you-go API",
@@ -1603,7 +1628,10 @@
         "credits": 0,
         "commercialUse": false,
         "requiresCreditCard": true,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "paidFrom": "$20/月",
       "paidFromEn": "$20/month",
@@ -1690,7 +1718,10 @@
         "credits": 0,
         "commercialUse": false,
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "paidFrom": "$20/月",
       "paidFromEn": "$20/month",
@@ -1775,7 +1806,10 @@
         "credits": 0,
         "commercialUse": false,
         "requiresCreditCard": true,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "paidFrom": "$20/月",
       "paidFromEn": "$20/month",
@@ -1858,13 +1892,15 @@
       "descriptionEn": "Google's AI research tool, completely free. Up to 50 sources per notebook, auto-generates podcasts, video overviews, reports. Most underrated free AI tool of 2026.。",
       "rating": 5,
       "freeTier": {
-        "refreshPeriod": "unlimited",
-        "credits": 999999,
+        "refreshPeriod": "one-time",
+        "credits": 50,
         "commercialUse": true,
-        "creditUnit": "unlimited",
+        "creditUnit": "sources/notebook",
         "watermark": false,
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "source": "notebooklm-free-guide-2026.md: 每个Notebook最多50个来源，完全免费",
+        "lastVerifiedDate": "2026-08-27"
       },
       "paidFrom": "完全免费",
       "paidFromEn": "Completely free",
@@ -2136,7 +2172,10 @@
         "credits": 0,
         "commercialUse": false,
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "paidFrom": "$19.99/月",
       "paidFromEn": "$19.99/month",
@@ -3089,13 +3128,15 @@
       "descriptionEn": "Open-source AI coding assistant for VS Code, JetBrains, and CLI. Supports 200+ models including Claude, GPT, Gemini. Launched。",
       "rating": 4.5,
       "freeTier": {
-        "refreshPeriod": "none",
-        "credits": 999999,
+        "refreshPeriod": "unlimited",
+        "credits": 0,
         "watermark": false,
         "commercialUse": true,
         "creditUnit": "unlimited",
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "source": "cline.bot/pricing: \"Cline is free for individual developers\" (BYOK or ClineProvider)",
+        "lastVerifiedDate": "2026-08-27"
       },
       "paidFrom": "免费（自备API Key）",
       "paidFromEn": "Free (BYOK)",
@@ -3665,7 +3706,10 @@
         "models": "Qwen3.5-35B-A3B、DeepSeek-V3.2、GLM-4.7-Flash、GLM-4、MiniMax-M2.5、Kimi-K2.5",
         "dailyLimit": "请求次数不限，有速率限制",
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "paidFrom": "首购3.9元/月，续费19元/月",
       "paidFromEn": "First purchase ¥3.9/month, renewal ¥19/month",
@@ -3769,9 +3813,13 @@
         "refreshPeriod": "daily",
         "credits": 50,
         "creditUnit": "credits daily, 10 songs",
-        "commercialUse": true,
+        "commercialUse": false,
         "requiresCreditCard": true,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "suno.com/pricing: free tier no audio watermark",
+        "commercialUseSource": "suno.com/pricing: Commercial rights only on Pro/Premier plans"
       },
       "paidFrom": "8美元/月（Pro版）",
       "paidFromEn": "$8/month (Pro)",
@@ -3859,7 +3907,10 @@
         "creditUnit": "monthly credits, 7 messages/day",
         "commercialUse": true,
         "requiresCreditCard": false,
-        "resolution": "1280x720"
+        "resolution": "1280x720",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "paidFrom": "30美元/月（团队版）",
       "paidFromEn": "$30/month (Team)",
@@ -4158,7 +4209,10 @@
         "models": "Grok 4.2, Grok 4.3",
         "dailyLimit": "有但够用",
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "paidFrom": "$8/月",
       "paidFromEn": "$8/month",
@@ -4234,14 +4288,16 @@
       "rating": 5,
       "freeTier": {
         "refreshPeriod": "unlimited",
-        "credits": 999999,
+        "credits": 0,
         "resolution": "1080p",
         "watermark": false,
         "commercialUse": true,
         "models": "Seedance 2.0 完整版",
         "dailyLimit": "无限制",
-        "creditUnit": "daily free generations",
-        "requiresCreditCard": false
+        "creditUnit": "free trial",
+        "requiresCreditCard": false,
+        "source": "seed.bytedance.com/en + seedance-2.0-free-unlimited-2026.md: 目前免费体验期",
+        "lastVerifiedDate": "2026-08-27"
       },
       "paidFrom": "N/A",
       "paidFromEn": "N/A",
@@ -4410,7 +4466,10 @@
         "models": "Jules 1.5",
         "dailyLimit": "充足",
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "paidFrom": "N/A",
       "paidFromEn": "N/A",
@@ -4486,14 +4545,16 @@
       "rating": 5,
       "freeTier": {
         "refreshPeriod": "unlimited",
-        "credits": 999999,
+        "credits": 0,
         "resolution": "取决于显卡，最高4K+",
         "watermark": false,
         "commercialUse": true,
         "models": "SD 1.5, SDXL, SD 3.0, Flux",
         "dailyLimit": "无限制",
-        "creditUnit": "self-hosted, no limit",
-        "requiresCreditCard": false
+        "creditUnit": "unlimited (self-hosted)",
+        "requiresCreditCard": false,
+        "source": "stablediffusion-free-local-deploy-2026.md: 本地部署完全免费开源",
+        "lastVerifiedDate": "2026-08-27"
       },
       "paidFrom": "免费（需要显卡）",
       "paidFromEn": "Free (requires GPU)",
@@ -5007,7 +5068,10 @@
         "models": "GLM-4.7-Flash、GLM-4.5-Flash、GLM-4.6V-Flash、CogView-3-Flash、CogVideoX-Flash",
         "dailyLimit": "无限制",
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "paidFrom": "Lite $30/季（约¥72/月）",
       "paidFromEn": "Lite $30/quarter (~$10/mo)",
@@ -5133,7 +5197,10 @@
         "models": "SenseNova-6.7-Flash-Lite、SenseNova-U1-Fast、DeepSeek-V4-Flash",
         "dailyLimit": "每5小时1500次（滚动窗口，各模型独立计算）",
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "paidFrom": "公测结束后将推出Lite/Pro付费档位，具体时间未官宣",
       "paidFromEn": "None yet (free beta, Lite/Pro coming soon)",
@@ -5233,7 +5300,10 @@
         "models": "Qwen、DeepSeek、GLM、百川、零一万物、LLaMA等",
         "dailyLimit": "2000次/天",
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "paidFrom": "免费（超出后按量付费）",
       "paidFromEn": "Free (pay-per-use after quota)",
@@ -5329,7 +5399,10 @@
         "models": "FRE-5.4、FRE-5.5",
         "dailyLimit": "无每日限制（按额度消耗）",
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "paidFrom": "Pro套餐（具体价格未公开）",
       "paidFromEn": "Pro plan (pricing not publicly shown)",
@@ -5426,7 +5499,10 @@
         "models": "Agnes 2.0 Flash（文本）、Agnes Image 2.0/2.1 Flash（图片）、Agnes Video V2.0（视频）",
         "dailyLimit": "公平使用配额（无明确上限）",
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "Agnes AI: text/image/video API - per Sapiens AI docs free tier"
       },
       "paidFrom": "Token Plan（按月/年订阅，更高TPS和额度）",
       "paidFromEn": "Token Plan (monthly/yearly, higher TPS and quotas)",
@@ -5538,7 +5614,10 @@
         "models": "minimax/minimax-m3、xiaomi/mimo-v2.5、deepseek/deepseek-v4-flash",
         "dailyLimit": "无限制",
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "paidFrom": "注册送$0.5（付费模型用）",
       "paidFromEn": "$0.5 on signup (for paid models)",
@@ -5635,7 +5714,10 @@
         "models": "Qwen3.6-Flash、Qwen-VL-OCR、通义万相、DeepSeek等130+模型",
         "dailyLimit": "无每日限制（按额度消耗）",
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "bailian.console.aliyun.com: API platform, watermark depends on model (Qwen/Wan etc)"
       },
       "paidFrom": "免费额度用完后按量付费",
       "paidFromEn": "Pay-per-use after free credits consumed",
@@ -5734,7 +5816,10 @@
         "models": "GPT-5/4.1/4o、Claude 4.5/4/3.7 Sonnet、DeepSeek R1/V3、Gemini 3.0/2.5 Flash、Grok 4/3等50+",
         "dailyLimit": "无每日限制（速率限制30次/分钟）",
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "paidFrom": "完全免费",
       "paidFromEn": "Completely free",
@@ -5830,14 +5915,16 @@
       "rating": 4,
       "freeTier": {
         "refreshPeriod": "unlimited",
-        "credits": 999999,
+        "credits": 0,
         "commercialUse": true,
         "models": "GLM-4.6 Free",
         "dailyLimit": "无限制",
-        "creditUnit": "free tier available",
+        "creditUnit": "unlimited (GLM-5.1 built-in)",
         "watermark": false,
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "source": "huawei-deveco-code-free-coding.md: 内置GLM-5.1免费模型",
+        "lastVerifiedDate": "2026-08-27"
       },
       "paidFrom": "免费",
       "paidFromEn": "Free",
@@ -5928,7 +6015,10 @@
         "models": "混元HY2.0",
         "dailyLimit": "无明确限制",
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "paidFrom": "15元/月",
       "paidFromEn": "~$2/month",
@@ -6013,7 +6103,10 @@
         "models": "通义千问3.7",
         "dailyLimit": "无明确限制",
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "paidFrom": "12元/月",
       "paidFromEn": "~$1.7/month",
@@ -6266,7 +6359,10 @@
         "creditUnit": "minutes free transcription per month",
         "commercialUse": true,
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "paidFrom": "300元/人/年",
       "paidFromEn": "~$42/person/year",
@@ -6351,7 +6447,10 @@
         "credits": 7,
         "commercialUse": true,
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "paidFrom": "198元/年",
       "paidFromEn": "~$28/year",
@@ -6435,7 +6534,10 @@
         "commercialUse": true,
         "dailyLimit": "有限",
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "paidFrom": "10元/月",
       "paidFromEn": "~$1.4/month",
@@ -6610,7 +6712,10 @@
         "models": "支持100+模型接入",
         "dailyLimit": "云免费版5个应用",
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "paidFrom": "$59/月",
       "paidFromEn": "$59/month",
@@ -6786,12 +6891,14 @@
       "rating": 4,
       "freeTier": {
         "refreshPeriod": "unlimited",
-        "credits": 999999,
-        "creditUnit": "unlimited",
+        "credits": 0,
+        "creditUnit": "unlimited (open source)",
         "resolution": "N/A",
         "watermark": false,
         "commercialUse": true,
-        "requiresCreditCard": false
+        "requiresCreditCard": false,
+        "source": "github.com/epiral/bb-browser: AGPL开源, 6.1k stars",
+        "lastVerifiedDate": "2026-08-27"
       },
       "paidFrom": "完全免费",
       "paidFromEn": "Completely free",
@@ -6878,9 +6985,11 @@
         "rpm": 30,
         "tpm": 30000,
         "resolution": null,
-        "watermark": null,
+        "watermark": false,
         "commercialUse": true,
-        "requiresCreditCard": false
+        "requiresCreditCard": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "paidFrom": "Pay-as-you-go",
       "paidFromEn": "Pay-as-you-go",
@@ -6963,14 +7072,17 @@
       "rating": 5,
       "freeTier": {
         "refreshPeriod": "daily",
-        "credits": null,
+        "credits": 0,
         "creditUnit": "developer program free",
         "rpm": 60,
         "tpm": null,
         "resolution": null,
-        "watermark": null,
+        "watermark": false,
         "commercialUse": true,
-        "requiresCreditCard": false
+        "requiresCreditCard": false,
+        "watermarkSource": "inferred:api-returns-json",
+        "lastVerifiedDate": "2026-08-27",
+        "freeTierSource": "developer.nvidia.com/nim: NVIDIA Developer Program free NIM API access"
       },
       "paidFrom": "Pay-as-you-go",
       "paidFromEn": "Pay-as-you-go",
@@ -7056,9 +7168,11 @@
         "rpm": 20,
         "tpm": null,
         "resolution": null,
-        "watermark": null,
+        "watermark": false,
         "commercialUse": true,
-        "requiresCreditCard": false
+        "requiresCreditCard": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "paidFrom": "$10 top-up",
       "paidFromEn": "$10 top-up",
@@ -7144,9 +7258,11 @@
         "rpm": null,
         "tpm": null,
         "resolution": null,
-        "watermark": null,
+        "watermark": false,
         "commercialUse": true,
-        "requiresCreditCard": false
+        "requiresCreditCard": false,
+        "watermarkSource": "inferred:api-returns-json",
+        "lastVerifiedDate": "2026-08-27"
       },
       "paidFrom": "$0.011/1000 Neurons",
       "paidFromEn": "$0.011/1000 Neurons",
@@ -7227,14 +7343,17 @@
       "rating": 3.5,
       "freeTier": {
         "refreshPeriod": "per-minute",
-        "credits": null,
+        "credits": 0,
         "creditUnit": "RPM 500, TPM 2,000,000",
         "rpm": 500,
         "tpm": 2000000,
         "resolution": null,
-        "watermark": null,
+        "watermark": false,
         "commercialUse": true,
-        "requiresCreditCard": false
+        "requiresCreditCard": false,
+        "watermarkSource": "inferred:api-returns-json",
+        "lastVerifiedDate": "2026-08-27",
+        "freeTierSource": "siliconflow.cn: pure API platform, rate-limited"
       },
       "paidFrom": "¥0.006/千tokens起",
       "paidFromEn": "From ¥0.006/1K tokens",
@@ -7321,9 +7440,11 @@
         "rpm": 15,
         "tpm": null,
         "resolution": null,
-        "watermark": null,
+        "watermark": false,
         "commercialUse": false,
-        "requiresCreditCard": false
+        "requiresCreditCard": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "paidFrom": null,
       "paidFromEn": null,
@@ -7402,14 +7523,17 @@
       "rating": 3.5,
       "freeTier": {
         "refreshPeriod": "monthly",
-        "credits": null,
+        "credits": 0,
         "creditUnit": "monthly variable credits by account tier",
         "rpm": null,
         "tpm": null,
         "resolution": null,
-        "watermark": null,
+        "watermark": false,
         "commercialUse": false,
-        "requiresCreditCard": false
+        "requiresCreditCard": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output",
+        "freeTierSource": "huggingface.co: serverless inference, monthly variable credits"
       },
       "paidFrom": "Pro $9/月",
       "paidFromEn": "Pro $9/month",
@@ -7489,14 +7613,17 @@
       "rating": 4,
       "freeTier": {
         "refreshPeriod": "per-second",
-        "credits": null,
+        "credits": 0,
         "creditUnit": "1 req/s, 500K tokens/min",
         "rpm": 60,
         "tpm": 500000,
         "resolution": null,
-        "watermark": null,
+        "watermark": false,
         "commercialUse": false,
-        "requiresCreditCard": false
+        "requiresCreditCard": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output",
+        "freeTierSource": "mistral.ai: 1 req/s, 500K tokens/min rate limit"
       },
       "paidFrom": "Pay-as-you-go",
       "paidFromEn": "Pay-as-you-go",
@@ -7575,14 +7702,17 @@
       "rating": 3,
       "freeTier": {
         "refreshPeriod": "per-minute",
-        "credits": null,
+        "credits": 0,
         "creditUnit": "30 RPM, 60K tokens/min",
         "rpm": 30,
         "tpm": 60000,
         "resolution": null,
-        "watermark": null,
+        "watermark": false,
         "commercialUse": false,
-        "requiresCreditCard": false
+        "requiresCreditCard": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output",
+        "freeTierSource": "cerebras.net: 30 RPM, 60K tokens/min rate limit"
       },
       "paidFrom": "Pay-as-you-go",
       "paidFromEn": "Pay-as-you-go",
@@ -7658,14 +7788,17 @@
       "rating": 3,
       "freeTier": {
         "refreshPeriod": "daily",
-        "credits": null,
+        "credits": 0,
         "creditUnit": "limited free tier",
         "rpm": null,
         "tpm": null,
         "resolution": null,
-        "watermark": null,
+        "watermark": false,
         "commercialUse": false,
-        "requiresCreditCard": false
+        "requiresCreditCard": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output",
+        "freeTierSource": "together.ai: limited free tier"
       },
       "paidFrom": "Pay-as-you-go",
       "paidFromEn": "Pay-as-you-go",
@@ -7743,9 +7876,11 @@
         "rpm": null,
         "tpm": null,
         "resolution": null,
-        "watermark": null,
+        "watermark": false,
         "commercialUse": true,
-        "requiresCreditCard": false
+        "requiresCreditCard": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "paidFrom": "Pay-as-you-go",
       "paidFromEn": "Pay-as-you-go",
@@ -7822,9 +7957,11 @@
         "rpm": null,
         "tpm": null,
         "resolution": null,
-        "watermark": null,
+        "watermark": false,
         "commercialUse": false,
-        "requiresCreditCard": false
+        "requiresCreditCard": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "paidFrom": "Pay-as-you-go",
       "paidFromEn": "Pay-as-you-go",
@@ -7896,14 +8033,17 @@
       "rating": 3,
       "freeTier": {
         "refreshPeriod": "per-minute",
-        "credits": null,
+        "credits": 0,
         "creditUnit": "20 RPM",
         "rpm": 20,
         "tpm": null,
         "resolution": null,
-        "watermark": null,
+        "watermark": false,
         "commercialUse": false,
-        "requiresCreditCard": false
+        "requiresCreditCard": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output",
+        "freeTierSource": "cohere.com: 20 RPM rate limit"
       },
       "paidFrom": "Pay-as-you-go",
       "paidFromEn": "Pay-as-you-go",
@@ -7980,14 +8120,17 @@
       "rating": 3,
       "freeTier": {
         "refreshPeriod": "per-minute",
-        "credits": null,
+        "credits": 0,
         "creditUnit": "100 RPM, 200K tokens/min (beta)",
         "rpm": 100,
         "tpm": 200000,
         "resolution": null,
-        "watermark": null,
+        "watermark": false,
         "commercialUse": false,
-        "requiresCreditCard": false
+        "requiresCreditCard": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output",
+        "freeTierSource": "scaleway.com: 100 RPM, 200K tokens/min"
       },
       "paidFrom": "TBD (beta)",
       "paidFromEn": "TBD (beta)",
@@ -8064,14 +8207,17 @@
       "rating": 2,
       "freeTier": {
         "refreshPeriod": "per-minute",
-        "credits": null,
+        "credits": 0,
         "creditUnit": "12 RPM",
         "rpm": 12,
         "tpm": null,
         "resolution": null,
-        "watermark": null,
+        "watermark": false,
         "commercialUse": false,
-        "requiresCreditCard": false
+        "requiresCreditCard": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output",
+        "freeTierSource": "ovh.com: 12 RPM rate limit"
       },
       "paidFrom": "Pay-as-you-go",
       "paidFromEn": "Pay-as-you-go",
@@ -8144,14 +8290,17 @@
       "rating": 3,
       "freeTier": {
         "refreshPeriod": "per-minute",
-        "credits": null,
+        "credits": 0,
         "creditUnit": "10 RPM, key valid 6 months",
         "rpm": 10,
         "tpm": null,
         "resolution": null,
-        "watermark": null,
+        "watermark": false,
         "commercialUse": false,
-        "requiresCreditCard": false
+        "requiresCreditCard": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "intern-ai.org.cn: text API primary (InternVL3 is multimodal but API returns JSON)",
+        "freeTierSource": "intern-ai.org.cn: 10 RPM, key valid 6 months"
       },
       "paidFrom": null,
       "paidFromEn": null,
@@ -8233,7 +8382,10 @@
         "credits": 0,
         "commercialUse": false,
         "requiresCreditCard": true,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "rating": 4.2
     },
@@ -8255,7 +8407,10 @@
         "credits": 0,
         "commercialUse": false,
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "rating": 4.0
     },
@@ -8277,7 +8432,10 @@
         "credits": 0,
         "commercialUse": false,
         "requiresCreditCard": true,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "rating": 4.0
     },
@@ -8299,7 +8457,10 @@
         "credits": 0,
         "commercialUse": false,
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "longcat.ai: text API only (no visual output)"
       },
       "rating": 4.1
     },
@@ -8321,7 +8482,10 @@
         "credits": 0,
         "commercialUse": false,
         "requiresCreditCard": true,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "rating": 4.0
     },
@@ -8343,7 +8507,10 @@
         "credits": 0,
         "commercialUse": false,
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "rating": 4.0
     },
@@ -8365,7 +8532,10 @@
         "credits": 0,
         "commercialUse": false,
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "rating": 4.1
     },
@@ -8387,7 +8557,10 @@
         "credits": 0,
         "commercialUse": false,
         "requiresCreditCard": true,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "watermark": false,
+        "lastVerifiedDate": "2026-08-27",
+        "watermarkSource": "inferred:no-visual-output"
       },
       "rating": 4.0
     }

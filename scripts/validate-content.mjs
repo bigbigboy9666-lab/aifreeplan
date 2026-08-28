@@ -49,6 +49,31 @@ const issues = { p1: [], p2: [] };
 console.log('📝 审计 guides.json...');
 const guides = readJson(path.join(repoRoot, 'public/data/guides.json'));
 
+/**
+ * Count FAQ items in static HTML guide (zh/guides/{slug}.html or en/guides/{slug}.html).
+ * Supports two coexisting structures:
+ *   - <div class="faq-item"><details><summary>Q</summary><p>A</p></details></div>
+ *   - <div class="faq-q">Q</div><div class="faq-a">A</div>
+ * Returns count of Q/A pairs.
+ */
+function countFaqInHtml(lang, slug) {
+  const candidates = [
+    path.join(repoRoot, lang, 'guides', `${slug}.html`),
+    path.join(repoRoot, lang, 'guides', `${slug}.md`),
+  ];
+  let html = null;
+  for (const p of candidates) {
+    if (fs.existsSync(p)) { html = fs.readFileSync(p, 'utf-8'); break; }
+  }
+  if (!html) return 0;
+  // Count <div class="faq-item"> blocks (each holds one Q+A in <details>)
+  const faqItem = (html.match(/<div class="faq-item">/g) || []).length;
+  // Count faq-q/qa-a pairs
+  const faqQ = (html.match(/<div class="faq-q">/g) || []).length;
+  // Take max — files usually use one structure, but a few mix both
+  return Math.max(faqItem, faqQ);
+}
+
 for (const g of guides.guides || []) {
   const slug = g.slug;
   const contentEn = g.content_en || '';
@@ -78,9 +103,23 @@ for (const g of guides.guides || []) {
     }
   }
 
-  // P2: FAQ为空
-  if ((g.faq_zh || []).length < 2) issues.p2.push(`[FAQ中文不足] ${slug}`);
-  if ((g.faq_en || []).length < 2) issues.p2.push(`[FAQ英文不足] ${slug}`);
+  // P2: FAQ 不足 — 看 guides.json 字段 + HTML 文件，双重保险
+  // 静态 HTML 是真源（页面渲染用），JSON 字段是 SEO/sitemap 用
+  const faqZhInJson = (g.faq_zh || []).length;
+  const faqEnInJson = (g.faq_en || []).length;
+  const faqZhInHtml = countFaqInHtml('zh', slug);
+  const faqEnInHtml = countFaqInHtml('en', slug);
+  if (faqZhInJson < 2 && faqZhInHtml < 2) {
+    issues.p2.push(`[FAQ中文不足] ${slug} (json=${faqZhInJson}, html=${faqZhInHtml})`);
+  } else if (faqZhInJson < 2 && faqZhInHtml >= 2) {
+    // 字段没同步但 HTML 里有 — 提示同步，不阻断
+    issues.p2.push(`[FAQ中文未同步] ${slug}: html有${faqZhInHtml}条但guides.json为空，建议运行 scripts/sync-guide-faq.mjs`);
+  }
+  if (faqEnInJson < 2 && faqEnInHtml < 2) {
+    issues.p2.push(`[FAQ英文不足] ${slug} (json=${faqEnInJson}, html=${faqEnInHtml})`);
+  } else if (faqEnInJson < 2 && faqEnInHtml >= 2) {
+    issues.p2.push(`[FAQ英文未同步] ${slug}: html有${faqEnInHtml}条但guides.json为空，建议运行 scripts/sync-guide-faq.mjs`);
+  }
 }
 
 // === 2. tools.json 审计 ===

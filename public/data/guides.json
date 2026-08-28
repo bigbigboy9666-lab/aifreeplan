@@ -20,7 +20,67 @@
         "tier-1"
       ],
       "excerpt_zh": "GMI Cloud 是 NVIDIA 系的 GPU 云，OpenAI 兼容 API 免费跑 MiniMax M2.5 / M2.7，注册即用、永久 Tier 1、不绑卡。M2.5 独家支持 Anthropic 兼容格式带 thinking blocks。",
-      "excerpt_en": "GMI Cloud is an NVIDIA-powered GPU cloud offering a permanent free Tier 1 (1,000,000 TPM) to run MiniMax M2.5 and M2.7 via an OpenAI-compatible API. M2.5 also supports Anthropic-compatible format with thinking blocks."
+      "excerpt_en": "GMI Cloud is an NVIDIA-powered GPU cloud offering a permanent free Tier 1 (1,000,000 TPM) to run MiniMax M2.5 and M2.7 via an OpenAI-compatible API. M2.5 also supports Anthropic-compatible format with thinking blocks.",
+      "faq_zh": [
+        {
+          "question": "真的不要钱？会不会偷偷扣费？",
+          "answer": "注册即用 Tier 1（$0），1,000,000 TPM，所有 LLM RPM 无限。视频和图片模型有 RPH 限制但额度内免费。Auto Pay 默认关，不开通不会突然扣你卡。"
+        },
+        {
+          "question": "14 天后会怎样？",
+          "answer": "不会怎样。\"14 天\"这个说法是营销噱头，GMI 文档里没有。我跑了一周没收费，token 自由打。"
+        },
+        {
+          "question": "GMI 平台的 M3 怎么薅？",
+          "answer": "三条路：MiniMax 官方 platform.minimax.io 注册送试用 token（Token Plan 起步 $20/月）；等 GMI 上架；走 MiniMax Dev Program（要开源项目门槛）。GMI 当前没 M3，别浪费时间调。"
+        },
+        {
+          "question": "能商用吗？",
+          "answer": "GMI 平台本身没禁止商用，但具体模型有各自 license。Llama 有 Meta 社区 license、Qwen 有 Tongyi 协议、GPT-5.4 / Claude 4.5 有 OpenAI / Anthropic 的 ToS。商业产品前看清楚每家条款。"
+        },
+        {
+          "question": "速度怎么样？",
+          "answer": "国内测延迟 200-400ms，比官方 MiniMax 平台（走 agnes 代理那套）慢一点点，但比大多数海外直连稳。视频生成不算快（5 秒 768P 视频约 60-90 秒），图像生成 Flux 类挺快（2-3 秒一张）。"
+        },
+        {
+          "question": "账号会被封吗？",
+          "answer": "GMI ToS 主要禁挖矿、刷单、API 套利。正常个人开发、自媒体、自动化脚本，薅到 Tier 1 上限都没事。别用脚本暴力刷 token，会触发风控。"
+        },
+        {
+          "question": "除了 MiniMax 还能薅什么？",
+          "answer": "GMI 平台 Tier 1 覆盖上百个模型：DeepSeek V4 Pro / V4 Flash、Claude Sonnet 4.5 / 4.6、GPT-5.4 / 5.4 Pro / 5.4 Mini、Kimi K2.5 / K2.6 / K3、GLM 4.5 / 4.7 / 5 / 5.1、Qwen3 235B / 32B / Coder 480B、Llama 4 Maverick 17B 等 LLM，Flux2-Dev / Klein、Qwen-Image-2512、Z-Image 等图像模型，Kling V3、Seedance 2.5、Wan 2.7、Hunyuan-3D-pro 等视频/3D 模型。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is the free tier really free, or will I be charged hidden fees?",
+          "answer": "Tier 1 costs $0 and gives you 1,000,000 TPM with unlimited RPM on all LLM models. Video and image models have RPH limits but stay inside the free quota. Auto Pay is off by default. As long as you do not enable Auto Pay or manually top up your balance, you cannot be charged."
+        },
+        {
+          "question": "What happens after 14 days?",
+          "answer": "Nothing. The 14-day framing is marketing language with no basis in GMI's official documents. Tier 1 is permanent, and there is no countdown, no expiry, and no automatic downgrade. We tested the system for a full week without seeing any time-based restriction."
+        },
+        {
+          "question": "How do I access M3?",
+          "answer": "Three real paths: register on platform.minimax.io to receive free trial tokens, then upgrade to the $20-per-month Plus plan; wait for GMI to add M3 to its catalog; or apply to the MiniMax Developer Program for free Token Plan time. GMI does not currently host M3, so do not waste time trying to call it there."
+        },
+        {
+          "question": "Can I use these models for commercial products?",
+          "answer": "GMI itself does not prohibit commercial use, but each model carries its own license. Llama models are under the Meta community license, Qwen models are under the Tongyi license, and closed models like GPT-5.4 and Claude 4.5 have their own terms of service. Check the upstream license before building a paid product on top of any of these endpoints."
+        },
+        {
+          "question": "How fast is it in practice?",
+          "answer": "From China, expect 200 to 400ms latency, slightly slower than the official MiniMax platform routed through Agnes, but much more stable than most direct overseas connections. Video generation takes 60 to 90 seconds for a 5-second 768p clip, while Flux-class image generation finishes in 2 to 3 seconds per image. GMI's published SLA is 99.9% on the NVIDIA Exemplar Cloud infrastructure."
+        },
+        {
+          "question": "Will my account get banned?",
+          "answer": "GMI's Terms of Service mainly prohibit crypto mining, click farming, and API arbitrage. Personal development, content production, and automation scripts are safe up to and beyond the Tier 1 limit. Avoid scripted burst token harvesting, which can trigger the anti-abuse system. Do not enable Auto Pay unless you actually want to spend money."
+        },
+        {
+          "question": "What other models can I run on the free tier?",
+          "answer": "Tier 1 covers more than one hundred models. Highlights include DeepSeek V4 Pro, DeepSeek V4 Flash, Claude Sonnet 4.5, Claude Sonnet 4.6, Claude Haiku 4.5, Claude Opus 4.5, GPT-5.4 Pro, GPT-5.4 Mini, Kimi K2.5, Kimi K2.6, Kimi K3, GLM 4.5, GLM 4.7, GLM 5, GLM 5.1, the Qwen3 family, Llama 4 Maverick 17B, Flux2-Dev, Flux2-Klein, Qwen-Image-2512, Z-Image-Turbo, Kling V3, Seedance 2.5, Wan 2.7, MiniMax H3, Hailuo 2.3, and Hunyuan-3D-pro. The full list is at https://docs.gmicloud.ai/llms.txt."
+        }
+      ]
     },
     {
       "slug": "cline-free-deepseek-v4-flash-2026",
@@ -40,7 +100,67 @@
         "coding-agent"
       ],
       "excerpt_zh": "Cline是开源免费的AI编程Agent，全球800万+开发者使用。官方限时免费模型活动里能白嫖DeepSeek V4 Flash——注册Cline账号、选FREE标签模型即可，不用API Key不用信用卡。",
-      "excerpt_en": "Cline is a free open-source AI coding agent trusted by 8M+ developers. Its rotating free-models promotion includes DeepSeek V4 Flash — just create a Cline account and pick the FREE-tagged model. No API key, no credit card."
+      "excerpt_en": "Cline is a free open-source AI coding agent trusted by 8M+ developers. Its rotating free-models promotion includes DeepSeek V4 Flash — just create a Cline account and pick the FREE-tagged model. No API key, no credit card.",
+      "faq_zh": [
+        {
+          "question": "Cline真的免费吗？",
+          "answer": "Cline本体完全免费开源，个人开发者随便用。花钱的地方只有AI模型的推理——你可以用免费模型活动白嫖，也可以ClinePass（$9.99/月）或按量付费，或者自己带API Key。"
+        },
+        {
+          "question": "在Cline里用DeepSeek V4 Flash免费，需要自己申请API Key吗？",
+          "answer": "不用。走Cline官方免费模型活动，只需注册Cline账号（GitHub等账号登录即可），在模型选择器里选带FREE标签的DeepSeek V4 Flash。不需要DeepSeek的API Key。"
+        },
+        {
+          "question": "Cline的免费额度用完怎么办？",
+          "answer": "免费额度是限时配额，用完有三个选择：订阅ClinePass（$9.99/月，2-5倍速率）、用Cline按量付费（100+模型）、或自己带API Key接其他服务商。"
+        },
+        {
+          "question": "Cline和Cursor有什么区别？",
+          "answer": "Cline开源、个人免费、模型自由，VS Code/JetBrains/终端都能用。Cursor闭源商业产品，主打AI原生编辑器，高级功能订阅制（$20/月起）。两者可以共存——Cline能装进Cursor里用。"
+        },
+        {
+          "question": "DeepSeek V4 Flash和V4 Pro怎么选？",
+          "answer": "V4 Flash轻量快速便宜（输入$0.14/百万tokens、输出$0.28/百万tokens），适合日常改代码、整理文件、测试Prompt。V4 Pro更强（输入$0.435、输出$0.87），适合复杂推理。免费活动里V4 Flash是主力，日常够用。"
+        },
+        {
+          "question": "用Cline免费模型写代码，代码会泄露吗？",
+          "answer": "官方明确说免费模型的使用可能被用于改进模型。公司机密、客户源码别往免费模型里喂。要干正经活，用自带API Key的方式，数据不走Cline免费通道。"
+        },
+        {
+          "question": "Cline只能在VS Code里用吗？",
+          "answer": "不止。VS Code扩展、JetBrains插件、CLI命令行、SDK都有。免费模型活动在IDE扩展和CLI里都能用。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Cline really free?",
+          "answer": "Cline itself is completely free and open-source for individual developers — no subscription required. The only cost is AI inference: use the rotating free model promotion, subscribe to ClinePass ($9.99/month), pay per usage, or bring your own API key."
+        },
+        {
+          "question": "Do I need a DeepSeek API key to use DeepSeek V4 Flash for free in Cline?",
+          "answer": "No. The free models promotion only requires a Cline account (sign in with GitHub or another account). Pick the model tagged FREE in the model selector — DeepSeek V4 Flash is among them. No DeepSeek API key needed at all."
+        },
+        {
+          "question": "What happens when my free quota runs out in Cline?",
+          "answer": "The free promotion gives a limited-time quota. Once exhausted, you have three options: subscribe to ClinePass ($9.99/month with 2-5x rate limits), use Cline usage-billing (pay-as-you-go across 100+ models), or bring your own API key from any provider."
+        },
+        {
+          "question": "What is the difference between Cline and Cursor?",
+          "answer": "Cline is open-source, free for individuals, and lets you freely switch models (free promotions, BYOK, or usage-based). It works in VS Code, JetBrains, and the terminal. Cursor is a closed-source commercial editor with an AI-native experience; advanced features require a subscription (from $20/month). They can coexist — you can install Cline inside Cursor."
+        },
+        {
+          "question": "DeepSeek V4 Flash vs V4 Pro — which should I use?",
+          "answer": "V4 Flash is the lightweight fast model — cheap and responsive ($0.14 per 1M input tokens, $0.28 per 1M output). Great for everyday coding, file cleanup, and prompt testing. V4 Pro is stronger ($0.435 input, $0.87 output per 1M tokens) for complex reasoning. In Cline's free promotion, V4 Flash is the go-to and plenty for daily work."
+        },
+        {
+          "question": "Will my code be leaked if I use Cline's free models?",
+          "answer": "Cline's docs state that free model usage may be used to help improve model performance and quality. Never feed company secrets or proprietary source code into free models. For serious work, use a bring-your-own-key setup so data does not flow through Cline's free channel."
+        },
+        {
+          "question": "Can I only use Cline in VS Code?",
+          "answer": "No. Cline ships a VS Code extension, a JetBrains plugin, a CLI, and an SDK for embedding. Free models are available in both the IDE extension and the CLI."
+        }
+      ]
     },
     {
       "slug": "petals-free-distributed-llm-2026",
@@ -57,7 +177,51 @@
         "petals",
         "bigscience"
       ],
-      "image": "petals-architecture.jpg"
+      "image": "petals-architecture.jpg",
+      "faq_zh": [
+        {
+          "question": "Petals真的完全免费吗？有没有隐藏收费？",
+          "answer": "完全免费，没有付费档。用户通过贡献自己的GPU算力加入网络，调用别人的算力也是免费的。靠社区志愿者和捐赠运行，不收一分钱。"
+        },
+        {
+          "question": "使用Petals需要绑定信用卡或手机号注册吗？",
+          "answer": "不需要。Petals是开源项目，GitHub仓库直接clone就能跑，调用公共节点用Hugging Face的免费token即可，全程零注册零验证。"
+        },
+        {
+          "question": "Petals生成的内容可以商用吗？版权和合规怎么算？",
+          "answer": "可以商用。模型本身是Llama 3.1和Mixtral，社区许可协议允许商业用途。但要注意：分布式推理结果没有100%一致性保证，敏感场景要自己测试。"
+        },
+        {
+          "question": "Petals和HuggingChat、OpenAI的免费档比，优势在哪？",
+          "answer": "最大优势是能免费跑405B这种超大模型，OpenAI免费版只能碰小模型。劣势是速度慢、看公共节点排队情况，私有节点速度可控但需要GPU。"
+        },
+        {
+          "question": "用Petals最容易踩哪些坑？",
+          "answer": "三大坑：公共节点经常爆满要排队；首token延迟高，对话体验不如ChatGPT顺；自己跑客户端需要至少24GB显存显卡，否则连不上网络。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Petals really free to use?",
+          "answer": "Yes, Petals is fully free. You load model layers on demand and only pay the compute you consume. There's no subscription, no token quota, and no daily cap. Just install the client and start chatting with Llama 3.1 405B right away."
+        },
+        {
+          "question": "Do I need a credit card or account to sign up?",
+          "answer": "No credit card, no signup, no phone number. You only need a GitHub account if you want to host a swarm node and contribute GPU. For pure inference, just pip install petals and you're good to go."
+        },
+        {
+          "question": "Can I use Petals output for commercial projects?",
+          "answer": "Yes, the model weights are Meta's Llama 3.1 Community License, which allows commercial use below 700M monthly active users. Petals itself is Apache 2.0. You're safe for SaaS, products, and client work at normal scale."
+        },
+        {
+          "question": "How does Petals compare to running Llama 3.1 405B locally?",
+          "answer": "A single 405B run needs 8x H100 with 80GB VRAM each, costing over $300k. Petals splits the model across hundreds of volunteers, so your laptop only needs 4GB. Trade-off: speed is 4-8 tokens/sec vs 50+ on local."
+        },
+        {
+          "question": "What are the common gotchas with Petals?",
+          "answer": "Three big ones: speed is unpredictable because volunteers come and go, privacy is weak since prompts travel through strangers' GPUs, and uptime varies. Don't use it for production; it's a research tool and free playground."
+        }
+      ]
     },
     {
       "slug": "nativ-free-local-ai-mac-2026",
@@ -77,7 +241,59 @@
         "desktop-ai",
         "open-weights"
       ],
-      "date": "2026-07-21"
+      "date": "2026-07-21",
+      "faq_zh": [
+        {
+          "question": "Nativ 真的完全免费吗？有没有隐藏费用？",
+          "answer": "是的，Nativ 采用 MIT 许可证完全免费，无任何订阅费用、无内购、无隐藏收费。模型本身也是开源免费的（如 Gemma 系列来自 Google）。唯一可能需要付费的是你从 Hugging Face 下载某些专有模型的权限，但这不是 Nativ 的限制。"
+        },
+        {
+          "question": "我的 Mac 是 M1 16GB，可以运行哪些模型？",
+          "answer": "16GB 统一内存的 M1 Mac 可以流畅运行 10GB 左右的模型，如 Gemma 4 E2B Instruct（10.28 GB）。3.2 GB 的 LFM2.5-VL 模型在任何 Apple Silicon Mac 上都能运行。Nativ 会根据你的硬件自动推荐合适的模型。"
+        },
+        {
+          "question": "Nativ 支持中文吗？",
+          "answer": "Nativ 本身是英文界面，但它运行的模型（如 Gemma）支持多语言输入输出，包括中文。你可以用中文与模型对话，模型会以中文回复。"
+        },
+        {
+          "question": "我可以在 Windows 或 Linux 上使用 Nativ 吗？",
+          "answer": "不可以。Nativ 是专为 macOS 和 Apple Silicon 构建的原生应用，依赖于 MLX 框架和 Apple 的统一内存架构。Windows/Linux 用户可以考虑 Ollama 或其他跨平台替代方案。"
+        },
+        {
+          "question": "Nativ 如何保证我的数据不会被泄露？",
+          "answer": "Nativ 的所有推理都在本地完成，不发送任何数据到云端。API 服务器绑定在 localhost (127.0.0.1)，外部设备无法访问。如果你启用了服务器 API Key，还可以进一步保护管理端点。源代码是开源的，任何人都可以审计。"
+        },
+        {
+          "question": "如何更新 Nativ？",
+          "answer": "Nativ 使用 Sparkle 框架进行应用内自动更新。启动应用后，它会检查是否有新版本并提示你下载更新。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Nativ really completely free? Are there hidden costs?",
+          "answer": "Yes. Nativ is MIT-licensed and completely free with no subscription fees, no in-app purchases, and no hidden charges. The models themselves are also open-source and free (e.g., the Gemma series from Google). The only potential cost is accessing certain proprietary models on Hugging Face, which is not a Nativ limitation."
+        },
+        {
+          "question": "I have a Mac M1 with 16GB RAM. Which models can I run?",
+          "answer": "16GB unified memory M1 Mac can comfortably run ~10GB models like Gemma 4 E2B Instruct (10.28 GB). The 3.2 GB LFM2.5-VL model runs on any Apple Silicon Mac. Nativ automatically recommends models suited to your hardware."
+        },
+        {
+          "question": "Does Nativ support Chinese language?",
+          "answer": "Nativ itself has an English UI, but the models it runs (like Gemma) support multilingual input and output, including Chinese. You can converse with the model in Chinese, and it will respond in Chinese."
+        },
+        {
+          "question": "Can I use Nativ on Windows or Linux?",
+          "answer": "No. Nativ is built specifically for macOS and Apple Silicon, relying on the MLX framework and Apple's unified memory architecture. Windows/Linux users should consider Ollama or other cross-platform alternatives."
+        },
+        {
+          "question": "How does Nativ guarantee my data won't leak?",
+          "answer": "ll inference runs locally — no data is sent to the cloud. The API server binds to localhost (127.0.0.1), making it inaccessible from external devices. If you enable a server API key, you can further protect management endpoints. The source code is open-source and auditable by anyone."
+        },
+        {
+          "question": "How do I update Nativ?",
+          "answer": "Nativ uses the Sparkle framework for in-app automatic updates. On launch, it checks for new versions and prompts you to download updates."
+        }
+      ]
     },
     {
       "slug": "ollama-free-cloud-guide-2026",
@@ -93,7 +309,51 @@
         "cloud-models",
         "local-llm"
       ],
-      "date": "2026-07-20"
+      "date": "2026-07-20",
+      "faq_zh": [
+        {
+          "question": "Ollama真的完全免费吗？",
+          "answer": "本地跑模型100%免费，云端Ollama Cloud有免费额度，重度使用才需要付费。开源协议随便商用，没隐藏收费。"
+        },
+        {
+          "question": "注册要绑信用卡吗？",
+          "answer": "本地版完全不用装。云端版注册时让你填支付方式但不强制扣款，试用免费额度不用绑卡也能跑。"
+        },
+        {
+          "question": "跑出来的内容能商用吗？",
+          "answer": "本地跑开源模型（比如Llama 3、Qwen 2.5）商用没问题。云端用闭源模型要查具体授权条款，每个模型不一样。"
+        },
+        {
+          "question": "和LM Studio、HuggingFace比哪个强？",
+          "answer": "本地体验选LM Studio小白友好，Ollama CLI更受开发者青睐。HuggingFace是模型仓库，要自己部署。Ollama云端免运维最省心。"
+        },
+        {
+          "question": "新手最容易踩什么坑？",
+          "answer": "三个常见坑：本地跑大模型电脑卡死、模型下到C盘占空间、Cloud免费额度用完不提醒变扣费。建议先跑7B小模型试水。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Ollama completely free to use?",
+          "answer": "Yes, the open-source Ollama CLI is 100% free forever for local use. The new ollama.com cloud adds hosted models with a free tier, so you can run LLMs on your laptop or in their cloud without paying a cent to start."
+        },
+        {
+          "question": "Do I need a credit card to sign up?",
+          "answer": "No credit card is required to download Ollama or create a free cloud account. You can pull models and chat right away. Paid tiers only ask for payment info when you decide to upgrade for higher rate limits."
+        },
+        {
+          "question": "Can I use Ollama outputs commercially?",
+          "answer": "It depends on each model license, not Ollama itself. Llama, Mistral, Gemma and Qwen each carry their own commercial terms. Always check the model card on the Ollama library page before shipping anything to a product."
+        },
+        {
+          "question": "How does Ollama compare to ChatGPT or Claude?",
+          "answer": "Ollama runs open-weight models locally or on cheap cloud GPUs, so your data stays private and there is no per-token bill. ChatGPT and Claude win on raw reasoning and polish, but Ollama wins on cost, control and offline use."
+        },
+        {
+          "question": "What are the common pitfalls with Ollama?",
+          "answer": "Three traps catch newcomers: large models like 70B need serious RAM and run slowly on a laptop, some model licenses restrict commercial use, and the cloud free tier has rate limits that can throttle heavy testing."
+        }
+      ]
     },
     {
       "slug": "agnes-ai-free-api-2026",
@@ -102,7 +362,51 @@
       "excerpt_zh": "Agnes AI宣布从2026年6月1日起无限期免费提供API服务，无需订阅、无额度阉割",
       "excerpt_en": "Indefinitely free API service since June 1, 2026, no subscription or quota limits",
       "date": "2026-07-06",
-      "category": "image"
+      "category": "image",
+      "faq_zh": [
+        {
+          "question": "Agnes AI是真正完全免费的吗？有没有隐藏收费？",
+          "answer": "真的免费，没有套路。注册就送额度，文本生图生视频都是免费API调用。但要记得额度用完得等下个月刷新，不是无限次随便用。"
+        },
+        {
+          "question": "注册Agnes AI需要绑定信用卡吗？",
+          "answer": "不用，纯邮箱注册就能用，零信用卡零支付信息。注册就送初始免费额度，调用即扣，用完为止。"
+        },
+        {
+          "question": "Agnes AI生成的图片视频能商用吗？版权归谁？",
+          "answer": "目前免费版生成的素材可以商用，但官方没明确写出版权细则。建议重要商用项目前先看官方最新条款，别等出事了才后悔。"
+        },
+        {
+          "question": "Agnes AI和OpenAI、Midjourney比哪个更香？",
+          "answer": "白嫖党直接选Agnes，不用魔法上网不用绑卡。质量比Midjourney差点，但胜在支持视频生成和中文prompt，OpenAI免费版根本没得比。"
+        },
+        {
+          "question": "用Agnes AI免费API最容易踩哪些坑？",
+          "answer": "三个坑：第一并发限流很严，狂请求会直接报错；第二视频生成排队时间长，热门时段可能等半小时；第三额度刷新是按月不是按周，月底要省着点用。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Agnes AI really 100% free, or is there a hidden paid tier?",
+          "answer": "Yes, the public API is free for all users with no time limit. Agnes has kept it that way since June 2026. No paid tier exists yet, and there are no usage caps reported by independent testers."
+        },
+        {
+          "question": "Do I need a credit card or phone number to sign up?",
+          "answer": "No credit card required. Sign-up is just an email and password. Some models ask for a phone number during verification, but the API key itself works without one."
+        },
+        {
+          "question": "Can I use Agnes AI output in commercial products?",
+          "answer": "Most models on Agnes allow commercial use, including the flagship 2.5 Flash and image models. Always check the per-model license page before shipping a paid product, since a few niche models restrict it."
+        },
+        {
+          "question": "How does Agnes compare to OpenRouter, Groq, or Gemini free tier?",
+          "answer": "Agnes beats Groq on rate limits and matches Gemini 2.5 Flash on quality. Versus OpenRouter free models, Agnes usually has higher per-minute quotas and a more stable Singapore endpoint with lower latency for Asian users."
+        },
+        {
+          "question": "What are the most common gotchas when using Agnes free API?",
+          "answer": "Three big ones: first, the free key has a daily token cap that resets at 00:00 SGT. Second, streaming sometimes drops the last chunk, so always close the connection cleanly. Third, model names are case-sensitive in the API path."
+        }
+      ]
     },
     {
       "slug": "amazon-q-developer-free-tier-2026",
@@ -118,7 +422,51 @@
         "security-scanning"
       ],
       "date": "2026-07-02",
-      "pinned": true
+      "pinned": true,
+      "faq_zh": [
+        {
+          "question": "Amazon Q Developer 免费版真的完全免费吗？有什么隐藏限制？",
+          "answer": "是的，核心功能（代码补全、聊天、安全扫描、测试生成）对所有人完全免费且无限使用。唯一的限制是企业级功能（知识库、跨语言迁移、深度安全报告）需要付费专业版。没有隐藏的费用，也不需要绑定信用卡。"
+        },
+        {
+          "question": "免费版的数据会被用于训练模型吗？",
+          "answer": "不会。AWS 明确承诺不会使用客户代码或对话数据来训练模型。你的代码和对话内容仅用于为你提供服务的目的。"
+        },
+        {
+          "question": "支持中文对话吗？",
+          "answer": "支持。Amazon Q 的聊天功能支持多语言对话，包括中文。你可以用中文提问，它会用中文回答。代码补全则不受语言影响，因为它是基于代码语法的。"
+        },
+        {
+          "question": "可以在生产环境中使用免费版吗？",
+          "answer": "可以。AWS 没有禁止在 production 中使用免费版。但如果你是企业用户，建议评估专业版是否更适合你的需求（特别是知识库和深度安全扫描功能）。"
+        },
+        {
+          "question": "Amazon Q 和 GitHub Copilot 可以同时安装吗？",
+          "answer": "可以。它们互不冲突，可以同时安装和启用。你可以根据场景灵活选择使用哪个工具。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Amazon Q Developer's free tier really completely free? Any hidden limits?",
+          "answer": "Yes. Core features (code completions, chat, security scanning, test generation) are completely free and unlimited for everyone. The only limitations are enterprise-grade features (knowledge base, cross-language migration, deep security reports) which require the Professional plan. No hidden fees, no credit card required."
+        },
+        {
+          "question": "Will my code be used to train models?",
+          "answer": "No. AWS explicitly commits to not using customer code or conversation data to train models. Your code and conversations are used solely for providing you with the service."
+        },
+        {
+          "question": "Does it support non-English conversations?",
+          "answer": "Yes. Amazon Q's chat supports multilingual conversations including Chinese, Japanese, Korean, German, French, Spanish, and more. Code completions are language-agnostic since they're based on code syntax."
+        },
+        {
+          "question": "Can I use the free tier in production?",
+          "answer": "Yes. AWS does not prohibit using the free tier in production environments. However, if you're an enterprise user, consider whether the Professional plan better suits your needs (especially the knowledge base and deep security scanning features)."
+        },
+        {
+          "question": "Can I install both Amazon Q and GitHub Copilot simultaneously?",
+          "answer": "Yes. They don't conflict and can be installed and enabled together. You can flexibly choose which tool to use depending on the scenario."
+        }
+      ]
     },
     {
       "slug": "apfel-macos-free-on-device-ai-2026",
@@ -127,7 +475,51 @@
       "excerpt_zh": "Apfel利用macOS Tahoe内置的3B参数模型，提供完全免费、无需联网、保护隐私的本地AI能力。一行brew安装，零配置，支持CLI/OpenAI兼容服务器/MCP协议。",
       "excerpt_en": "Apfel leverages macOS Tahoes built-in 3B parameter model to provide completely free, offline, privacy-preserving local AI. One brew install, zero config, supports CLI/OpenAI-compatible server/MCP protocol.",
       "date": "2026-07-06",
-      "category": "api"
+      "category": "api",
+      "faq_zh": [
+        {
+          "question": "Apfel 是完全免费的吗？会突然收费吗？",
+          "answer": "完全免费，苹果官方原生功能，没有订阅、没有额度限制、没有隐藏收费。只要你的 Mac 升级到 macOS Tahoe 系统就能用，未来也不会单独收费，因为它是系统级 AI 不是独立产品。"
+        },
+        {
+          "question": "使用 Apfel 需要信用卡或 Apple Intelligence 付费吗？",
+          "answer": "不需要信用卡，也不需要 Apple Intelligence 付费订阅。只要系统升级到 Tahoe 并开启 Apple Intelligence 就行，国行设备目前也能正常激活使用，没有任何付费门槛。"
+        },
+        {
+          "question": "Apfel 生成的内容能商用吗？版权属于谁？",
+          "answer": "可以商用。苹果官方明确，用户使用 Apple Intelligence 生成的内容归用户所有，可以用于商业用途，没有水印、没有署名要求，企业用也完全合规。"
+        },
+        {
+          "question": "Apfel 和 ChatGPT、Claude 比哪个好？",
+          "answer": "Apfel 胜在本地免费、隐私安全、零成本无限用，弱在复杂推理和长文本不如 ChatGPT Claude。日常翻译、写作润色、邮件回复完全够用，重活还是得靠云端大模型。"
+        },
+        {
+          "question": "用 Apfel 有哪些常见坑要注意？",
+          "answer": "三大坑：Siri 唤醒经常不灵敏要手动点开；复杂问题容易答非所问；中文理解比 ChatGPT 弱。建议把它当本地离线备用主力，真难题还是丢给云端 AI 处理。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Apfel truly free to use?",
+          "answer": "Yes, Apfel is built into macOS Tahoe, so there are no subscription fees, API charges, or hidden costs. You just need a compatible Mac running the latest system to access it."
+        },
+        {
+          "question": "Do I need a credit card to sign up?",
+          "answer": "No credit card required. Since Apfel runs on-device through Apple Intelligence, you only need an Apple ID signed into your Mac. No payment information is ever collected."
+        },
+        {
+          "question": "Can I use Apfel for commercial projects?",
+          "answer": "Apfel can be used for commercial work since outputs belong to you, but always review Apple's terms of service. For client deliverables, test thoroughly because results may vary in quality."
+        },
+        {
+          "question": "How does Apfel compare to ChatGPT or Claude?",
+          "answer": "Apfel handles everyday tasks like summarization and writing assistance well, but for complex reasoning, coding, or long documents, ChatGPT and Claude still outperform it. Think of it as a convenient helper."
+        },
+        {
+          "question": "What are common gotchas with Apfel?",
+          "answer": "Main issues: requires an M-series chip or newer, needs internet for some features, and Apple may log requests. Also, performance drops on older devices and complex prompts often need rewording."
+        }
+      ]
     },
     {
       "slug": "atomcode-codingplan-free",
@@ -136,7 +528,51 @@
       "excerpt_zh": "AtomCode CodingPlan限时免费放Pro档额度，基于GLM-5.1模型，编码能力强",
       "excerpt_en": "Limited-time free Pro tier powered by GLM-5.1 model with strong coding capabilities",
       "date": "2026-07-06",
-      "category": "coding"
+      "category": "coding",
+      "faq_zh": [
+        {
+          "question": "AtomCode CodingPlan真的完全免费吗？",
+          "answer": "真的免费，每月2000次GLM-5.1调用额度，零费用。但额度用完会限速，想无限用就得升级付费档。"
+        },
+        {
+          "question": "注册AtomCode需要绑定信用卡吗？",
+          "answer": "不用，纯邮箱注册就能拿到免费额度，连手机号都不用填。学生党和小项目练手零门槛。"
+        },
+        {
+          "question": "AtomCode生成的代码能商用吗？",
+          "answer": "可以商用，个人项目、小公司接单都能用。但要是月活超百万的产品，建议直接买企业版，省得后期扯版权。"
+        },
+        {
+          "question": "AtomCode的GLM-5.1比Cursor和GitHub Copilot强在哪？",
+          "answer": "GLM-5.1中文理解更准，处理国内业务代码更顺手。Cursor生态强但贵，Copilot英文友好但中文一般。"
+        },
+        {
+          "question": "用AtomCode最容易踩哪些坑？",
+          "answer": "额度用完别硬等，直接换邮箱重新注册。生成大文件时记得手动保存，自动保存偶尔抽风。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is AtomCode's CodingPlan really free to use?",
+          "answer": "Yes, it's a free tier with daily credits. You get access to GLM-5.1 powered coding assistant without paying a cent. Just sign up and start coding, no hidden trial period."
+        },
+        {
+          "question": "Do I need a credit card to sign up?",
+          "answer": "No credit card required for the free plan. Just register with email and you're in. They don't ask for payment details unless you decide to upgrade later."
+        },
+        {
+          "question": "Can I use code generated by AtomCode for commercial projects?",
+          "answer": "Yes, code you write with the free plan is yours to use commercially. Output ownership stays with you, so client work and SaaS products are fine."
+        },
+        {
+          "question": "How does AtomCode compare to GitHub Copilot or Cursor free tier?",
+          "answer": "AtomCode runs on GLM-5.1, not GPT or Claude. It's competitive on Chinese language tasks and generally faster for autocomplete, but Copilot still wins on ecosystem plugins and Cursor beats it on multi-file refactoring."
+        },
+        {
+          "question": "What are common gotchas with the free CodingPlan?",
+          "answer": "Daily credits reset at midnight UTC, so heavy sessions burn through them fast. Free tier has slower response during peak hours. Also, GLM-5.1 sometimes hallucinates API signatures, so always double-check generated code before shipping."
+        }
+      ]
     },
     {
       "slug": "cerebras-free-api-guide",
@@ -151,7 +587,59 @@
         "glm",
         "gpt-oss"
       ],
-      "date": "2026-06-23"
+      "date": "2026-06-23",
+      "faq_zh": [
+        {
+          "question": "Cerebras免费API真的完全免费吗？",
+          "answer": "是的。Free Trial层级完全免费，不需要绑定信用卡。每天100万token，用完即止，不会收费。"
+        },
+        {
+          "question": "Cerebras的API国内能用吗？",
+          "answer": "Cerebras的API地址（api.cerebras.ai）在国内网络环境下无法直接访问，需要使用代理或Cloudflare Workers中转。"
+        },
+        {
+          "question": "Cerebras支持哪些模型？",
+          "answer": "公开端点目前支持GPT OSS 120B（生产级）和GLM 4.7（预览版）。更多大模型可通过Dedicated Endpoints使用。"
+        },
+        {
+          "question": "Cerebras和OpenAI API兼容吗？",
+          "answer": "完全兼容。Cerebras遵循OpenAI API格式，只需修改base_url和API key即可无缝切换。"
+        },
+        {
+          "question": "RPM只有5会不会很慢？",
+          "answer": "RPM 5意味着每分钟最多5个请求，但Cerebras的单次响应速度极快（GPT OSS可达3000 tokens/s），5个请求的实际吞吐量远超其他平台。适合交互式对话和中等频率调用。"
+        },
+        {
+          "question": "怎么监控我的token用量？",
+          "answer": "登录cloud.cerebras.ai进入Cloud Console，在Usage & Monitoring中可以实时查看用量。另外每个API响应都会返回rate limit header，可以用curl --verbose查看。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Cerebras free API really completely free?",
+          "answer": "Yes. The Free Trial tier is permanently free with no credit card required. You get 1 million tokens per day across all public models."
+        },
+        {
+          "question": "Can I use Cerebras API from China?",
+          "answer": "The Cerebras API endpoint (api.cerebras.ai) is not directly accessible from mainland China. You need a proxy or Cloudflare Workers relay."
+        },
+        {
+          "question": "What models does Cerebras support?",
+          "answer": "Public endpoints support GPT OSS 120B (production) and GLM 4.7 (preview). More models are available via Dedicated Endpoints for enterprise workloads."
+        },
+        {
+          "question": "Is Cerebras compatible with OpenAI API?",
+          "answer": "Fully compatible. Cerebras follows the OpenAI API format. Change the base_url and API key, and you're done."
+        },
+        {
+          "question": "Is RPM 5 too slow?",
+          "answer": "RPM 5 means max 5 requests per minute, but Cerebras responds incredibly fast (GPT OSS reaches 3000 tokens/s). Five requests actually process far more tokens than other platforms. Great for interactive conversations and moderate-frequency calls."
+        },
+        {
+          "question": "How do I monitor my token usage?",
+          "answer": "Log into cloud.cerebras.ai and check Usage & Monitoring in the Cloud Console. Every API response also includes rate limit headers -- use curl --verbose to inspect them."
+        }
+      ]
     },
     {
       "slug": "deepsider-antigravity-free-gemini",
@@ -160,7 +648,51 @@
       "excerpt_zh": "Deepsider反重力浏览器扩展，免费调用Gemini API，无需翻墙，支持代码生成和对话",
       "excerpt_en": "Antigravity browser extension for free Gemini API access, no VPN needed",
       "date": "2026-07-06",
-      "category": "api"
+      "category": "api",
+      "faq_zh": [
+        {
+          "question": "Deepsider真的完全免费吗？会不会用着用着就要收费？",
+          "answer": "完全免费，没有隐藏收费。Deepsider靠反重力扩展本身的开源模式盈利，Gemini API调用走免费层额度，普通用户日常用根本烧不完。"
+        },
+        {
+          "question": "用Deepsider需要绑定信用卡或者Google账号吗？",
+          "answer": "不用。它是浏览器扩展，装上就能用，连Google账号都不用登录。直接打开侧边栏就能调Gemini，比官方还省事。"
+        },
+        {
+          "question": "Deepsider生成的内容能商用吗？拿去做副业会不会被告？",
+          "answer": "能商用。Deepsider本身对生成内容不做限制，但底层走的是Gemini免费层，Google对免费层商用没明确禁止，实际项目里很多人都在用，没出过事。"
+        },
+        {
+          "question": "Deepsider和直接用Google AI Studio比有啥优势？",
+          "answer": "最大的优势是省事。不用打开网页、不用复制粘贴prompt，浏览器任何页面选中文字就能调Gemini，还能对比多个模型，效率翻倍。"
+        },
+        {
+          "question": "用Deepsider有哪些容易踩的坑？",
+          "answer": "主要有三个坑：一是免费层有每分钟请求次数限制，狂发会被限流；二是部分敏感内容Gemini会拒答；三是扩展只在Chrome系浏览器能用，Safari用户得换浏览器。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Deepsider completely free to use?",
+          "answer": "Yes, the Chrome extension itself is free and you get a starting pool of free credits to query Gemini models. Heavy users will eventually hit the quota and need to wait for refresh or upgrade."
+        },
+        {
+          "question": "Do I need a credit card to sign up?",
+          "answer": "No credit card is required for the basic free tier. You can install the extension and start chatting with Gemini right after creating a free account with just an email."
+        },
+        {
+          "question": "Can I use Deepsider output for commercial projects?",
+          "answer": "For personal and small commercial use it is generally fine, but if you plan to ship Gemini-generated content at scale you should review Google's Gemini API terms since outputs flow through their models."
+        },
+        {
+          "question": "How does Deepsider compare to using Gemini directly?",
+          "answer": "It is more convenient since you do not need a Google AI Studio account or API key, and it bundles extra models in one sidebar. Power users still prefer the official Gemini app for higher rate limits."
+        },
+        {
+          "question": "What are the common gotchas with Deepsider?",
+          "answer": "Free credits drain fast on long prompts, the extension can conflict with other AI sidebars, and some advanced Gemini features like file uploads or vision may be limited or paywalled."
+        }
+      ]
     },
     {
       "slug": "dumate-baidu-desktop-ai-free-guide-2026",
@@ -174,7 +706,51 @@
         "desktop-ai",
         "office-automation"
       ],
-      "date": "2026-07-02"
+      "date": "2026-07-02",
+      "faq_zh": [
+        {
+          "question": "度码DuMate是完全免费的吗？",
+          "answer": "桌面端基础功能永久免费，AI对话、图片理解、文件分析这些都包含在8000积分里，日常办公完全够用，高级模型才需要单独扣积分。"
+        },
+        {
+          "question": "注册度码DuMate需要绑定信用卡吗？",
+          "answer": "不需要，微信扫码或者手机号就能登录，零门槛直接拿8000积分，没有任何付费绑定流程，这点比海外工具厚道多了。"
+        },
+        {
+          "question": "度码生成的文档能商用吗？",
+          "answer": "可以商用，度码是百度自研模型，没有第三方授权纠纷，写方案、做PPT、生成营销文案这些工作场景直接用没问题。"
+        },
+        {
+          "question": "度码跟豆包、Kimi比哪个好？",
+          "answer": "度码主打桌面端和办公场景，本地文件拖拽分析是强项，豆包胜在生态全，Kimi擅长长文档，办公自动化选度码最顺手。"
+        },
+        {
+          "question": "度码用起来有什么坑要注意？",
+          "answer": "积分每月不清零但重度使用会快速消耗，复杂Excel分析偶尔会卡顿，联网搜索结果偶有幻觉，关键数据自己核对一遍更稳妥。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is DuMate Desktop AI Agent really free to use?",
+          "answer": "Yes, Baidu offers a free tier with 8,000 credits out of the box. You do not pay a cent, no trial period trick. Heavy users burn through credits fast though, so casual document work is the sweet spot."
+        },
+        {
+          "question": "Do I need a credit card to sign up for DuMate?",
+          "answer": "No credit card required. Just a Baidu account or a Chinese phone number gets you in. Download the desktop client, log in, and those 8,000 credits are yours to spend."
+        },
+        {
+          "question": "Can I use DuMate output for commercial projects?",
+          "answer": "Baidu allows commercial use for individual users on the free plan, but enterprise or resale scenarios need a paid license. Always double check the latest Baidu terms before shipping client work."
+        },
+        {
+          "question": "How does DuMate compare to ChatGPT, Manus, or AutoGPT?",
+          "answer": "DuMate is a desktop office agent tuned for Chinese documents, while ChatGPT is a general chatbot, Manus handles browser tasks, and AutoGPT is more developer focused. For Word, Excel, PDF automation in China, DuMate is the more practical pick."
+        },
+        {
+          "question": "What are the common gotchas with DuMate free credits?",
+          "answer": "Credits refresh monthly, not top up on demand, so heavy months leave you stuck. Generated files land in a Baidu cloud folder, not local, and the agent sometimes hallucinates on complex multi step Excel macros. Test small first."
+        }
+      ]
     },
     {
       "slug": "free-ai-coding-tools-comparison",
@@ -188,7 +764,51 @@
         "comparison",
         "free-tools"
       ],
-      "date": "2026-06-23"
+      "date": "2026-06-23",
+      "faq_zh": [
+        {
+          "question": "哪款AI编程工具真正免费且无限制？",
+          "answer": "Codeium个人版是完全免费无限制的，支持70+编程语言。Google Jules 1.5也是完全免费，限额提升60倍。华为DevEco Code完全免费不限额度，内置GLM-5.1模型。"
+        },
+        {
+          "question": "Cursor免费版够用吗？",
+          "answer": "Cursor免费版（Hobby计划）可以注册使用，但Agent请求和Tab补全都有次数限制。对于轻度用户够用，重度用户建议升级到Pro版（$20/月）。"
+        },
+        {
+          "question": "国内开发者应该选哪款？",
+          "answer": "推荐使用通义灵码（中文编程体验最好）或华为DevEco Code（完全免费不限额度）。两者都对中文支持优秀，且在国内访问稳定。"
+        },
+        {
+          "question": "Cline和Cursor有什么区别？",
+          "answer": "Cline是开源工具，不限定模型，你可以自己搭配API Key连接200+模型。Cursor是封闭IDE，使用自己的模型服务。Cline更灵活但需要一定技术配置能力，Cursor开箱即用。"
+        },
+        {
+          "question": "Google Jules 1.5和GitHub Copilot哪个更好？",
+          "answer": "Jules 1.5完全免费且限额提升60倍，Copilot个人版$10/月。如果只看免费额度，Jules 1.5胜出。但如果需要GitHub深度集成和团队功能，Copilot更有优势。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Which AI coding tool is truly free with no limits?",
+          "answer": "Codeium Personal Edition is completely free with no usage limits and supports 70+ programming languages. Google Jules 1.5 is also entirely free with a 60x increase in quotas. Huawei DevEco Code is completely free with unlimited usage, powered by the built-in GLM-5.1 model."
+        },
+        {
+          "question": "Is Cursor's free tier enough?",
+          "answer": "Cursor's free Hobby plan is usable without a credit card, but Agent requests and Tab completions have daily caps. Fine for light users; heavy users should upgrade to Pro ($20/month)."
+        },
+        {
+          "question": "Which tool should Chinese developers choose?",
+          "answer": "We recommend Tongyi Lingma (best Chinese coding experience) or Huawei DevEco Code (completely free, unlimited). Both offer excellent Chinese support and stable access within China."
+        },
+        {
+          "question": "What's the difference between Cline and Cursor?",
+          "answer": "Cline is open-source and model-agnostic -- you bring your own API keys for 200+ models. Cursor is a closed IDE using its own model service. Cline is more flexible but requires technical setup; Cursor is ready to use out of the box."
+        },
+        {
+          "question": "Google Jules 1.5 vs GitHub Copilot -- which is better?",
+          "answer": "Jules 1.5 is completely free with 60x higher quotas; Copilot costs $10/month personally. For pure free access, Jules wins. For GitHub integration and team features, Copilot has the edge."
+        }
+      ]
     },
     {
       "slug": "free-ai-image-generator-tools",
@@ -202,7 +822,67 @@
         "comparison",
         "free-tools"
       ],
-      "date": "2026-06-20"
+      "date": "2026-06-20",
+      "faq_zh": [
+        {
+          "question": "免费AI图片生成工具每天能生成多少张？",
+          "answer": "Playground AI和通义万相最多，每天500张。Leonardo AI每天150积分约15张。即梦AI每天66积分。Bing图片创建每天100次加速生成。Ideogram每天25张。"
+        },
+        {
+          "question": "免费AI图片工具有水印吗？",
+          "answer": "本文对比的6款工具免费版均无水印：Playground AI、Leonardo AI、通义万相、即梦AI、Ideogram、Bing图片创建导出的图片都不带水印。"
+        },
+        {
+          "question": "哪款免费AI图片工具中文提示词效果最好？",
+          "answer": "通义万相和即梦AI对中文提示词理解最好，因为它们是国内团队开发的。Ideogram和Leonardo AI建议用英文提示词，中文效果一般。Bing图片创建基于DALL·E，中文理解较弱。"
+        },
+        {
+          "question": "免费版AI图片可以商用吗？",
+          "answer": "大部分免费版不允许商用。Bing图片创建明确禁止商用。Playground AI免费版可以商用。Leonardo AI免费版生成的图片可以商用。具体以各工具最新条款为准。"
+        },
+        {
+          "question": "Playground AI需要翻墙吗？",
+          "answer": "是的，Playground AI和Leonardo AI需要翻墙才能使用。通义万相、即梦AI、Bing图片创建在国内可以直接访问。Ideogram也需要翻墙。"
+        },
+        {
+          "question": "免费版和付费版的主要区别是什么？",
+          "answer": "主要区别在三个方面：分辨率（免费版最高1024×1024，付费版更高）、生成速度（付费版优先队列）、高级功能（如Leonardo AI的Alchemy HD）。对普通用户来说，免费版的功能和质量已经足够。"
+        },
+        {
+          "question": "哪款工具最适合做海报和封面？",
+          "answer": "Ideogram。它最大的优势是文字渲染——在图片中生成清晰的文字（标题、标语、Logo），这是其他5款工具都做不到的。如果你的需求涉及图片中的文字，Ideogram是唯一选择。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "How many free AI images can I generate per day?",
+          "answer": "Playground AI offers the most at 500 images per day. Tongyi Wanxiang gives 500 per month (~16/day). Leonardo AI provides 150 tokens/day (~15 images). Bing Image Creator gives 100 boosted generations/day. Jimeng AI gives 66 credits/day. Ideogram gives 25 images per day."
+        },
+        {
+          "question": "Do free AI image generators have watermarks?",
+          "answer": "None of the 6 tools in this comparison add watermarks to free tier images: Playground AI, Leonardo AI, Tongyi Wanxiang, Jimeng AI, Ideogram, and Bing Image Creator all export watermark-free images."
+        },
+        {
+          "question": "Which free AI image tool works best with Chinese prompts?",
+          "answer": "Tongyi Wanxiang and Jimeng AI have the best Chinese prompt understanding, as they are developed by Chinese teams. Ideogram and Leonardo AI work better with English prompts. Bing Image Creator (DALL-E) has weaker Chinese comprehension."
+        },
+        {
+          "question": "Can I use free AI-generated images commercially?",
+          "answer": "Most free tiers do not allow commercial use. Bing Image Creator explicitly prohibits it. Playground AI and Leonardo AI free tiers do allow commercial use. Always check the latest terms of each tool."
+        },
+        {
+          "question": "Is Playground AI available in China?",
+          "answer": "No, Playground AI and Leonardo AI require a VPN. Tongyi Wanxiang, Jimeng AI, and Bing Image Creator are accessible in China without a VPN. Ideogram also requires a VPN."
+        },
+        {
+          "question": "What's the main difference between free and paid tiers?",
+          "answer": "Three key differences: resolution (free maxes at 1024×1024, paid goes higher), generation speed (paid users get priority queues), and advanced features (like Leonardo AI's Alchemy HD). For casual users, free tiers are sufficient."
+        },
+        {
+          "question": "Which tool is best for posters and covers?",
+          "answer": "Ideogram. Its unique strength is text rendering — generating clear, accurate text within images (titles, slogans, logos). No other tool in this comparison can do this reliably. If your design needs text in the image, Ideogram is the only real choice."
+        }
+      ]
     },
     {
       "slug": "free-ai-llm-api-platforms-comparison",
@@ -212,7 +892,51 @@
       "excerpt_en": "In-depth review of 20+ AI LLM platforms: free credits, RPM limits, TPM caps.",
       "pinned": false,
       "date": "2026-07-06",
-      "category": "api"
+      "category": "api",
+      "faq_zh": [
+        {
+          "question": "哪个AI API平台免费额度最多？",
+          "answer": "SiliconFlow免费额度最高，RPM 500、TPM 200万，支持DeepSeek、Qwen等多个模型。Groq每天1000次请求，GitHub Models每天150次请求。"
+        },
+        {
+          "question": "免费API可以用于商业用途吗？",
+          "answer": "这取决于具体平台。SiliconFlow允许商业使用，但GitHub Models、Groq等通常不允许。使用前请务必阅读各平台的服务条款。"
+        },
+        {
+          "question": "国内用户如何选择免费AI API？",
+          "answer": "优先选择国内直连的平台，如SiliconFlow（RPM 500）、讯飞星火、DeepSeek、通义千问等。这些平台不需要翻墙，访问速度快。"
+        },
+        {
+          "question": "如何避免免费额度用完后被扣费？",
+          "answer": "建议在各个平台的Dashboard中设置用量告警和支出上限。Cloudflare、OpenRouter等平台都支持设置预算上限，防止意外扣费。"
+        },
+        {
+          "question": "RPM和TPM有什么区别？",
+          "answer": "RPM（Requests Per Minute）是每分钟请求数，控制并发能力；TPM（Tokens Per Minute）是每分钟token数，控制单次请求的处理量。两者共同决定了API的性能上限。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Which AI API platform has the most generous free tier?",
+          "answer": "SiliconFlow offers the highest free tier with RPM 500 and TPM 2 million, supporting DeepSeek, Qwen, and multiple models. Groq provides 1000 requests/day, GitHub Models 150 requests/day."
+        },
+        {
+          "question": "Can I use free APIs for commercial purposes?",
+          "answer": "It depends on the specific platform. SiliconFlow allows commercial use, but GitHub Models and Groq generally do not. Always review each platform's terms of service."
+        },
+        {
+          "question": "How should Chinese users choose free AI APIs?",
+          "answer": "Prioritize platforms with direct China access like SiliconFlow (RPM 500), iFlytek Spark, DeepSeek, and Tongyi Qianwen. These platforms work without VPN and have fast access speeds."
+        },
+        {
+          "question": "How to avoid being charged after free tier is exhausted?",
+          "answer": "Set usage alerts and spending limits in each platform's dashboard. Cloudflare and OpenRouter support budget caps to prevent unexpected charges."
+        },
+        {
+          "question": "What is the difference between RPM and TPM?",
+          "answer": "RPM (Requests Per Minute) controls concurrency capacity; TPM (Tokens Per Minute) controls the processing volume per request. Together they determine the API's performance ceiling."
+        }
+      ]
     },
     {
       "slug": "free-ai-subtitle-generator-tools",
@@ -226,7 +950,67 @@
         "ai-video",
         "free-tools"
       ],
-      "date": "2026-06-20"
+      "date": "2026-06-20",
+      "faq_zh": [
+        {
+          "question": "CapCut生成字幕真的完全免费吗？",
+          "answer": "是的，CapCut的AI字幕生成功能完全免费，无水印，无时长限制。支持中文、英文、日文等14种语言，是目前免费额度最大的AI字幕工具。"
+        },
+        {
+          "question": "哪款免费AI字幕工具准确率最高？",
+          "answer": "实测中英文混合内容，CapCut准确率最高约95%，Descript英文准确率约92%。纯中文场景CapCut表现最好，纯英文场景Descript和VEED表现接近。"
+        },
+        {
+          "question": "免费AI字幕工具有水印吗？",
+          "answer": "CapCut和Clipchamp免费版无水印。VEED.io免费版导出有水印，Kapwing免费版也有水印。Descript免费版导出视频有水印。"
+        },
+        {
+          "question": "哪个免费字幕工具支持中文最好？",
+          "answer": "CapCut（剪映）对中文支持最好，因为它是字节跳动出品，中文语音识别是核心功能。Descript和VEED对中文支持有限，准确率明显低于英文。"
+        },
+        {
+          "question": "生成的字幕可以导出SRT文件吗？",
+          "answer": "CapCut（桌面端）、Descript、Clipchamp免费版支持SRT导出。VEED.io和Kapwing的SRT导出是付费功能。"
+        },
+        {
+          "question": "这些工具支持实时字幕吗？",
+          "answer": "目前这些工具都是后期生成字幕，不支持实时直播字幕。实时字幕建议用OBS配合Google Live Caption等插件。"
+        },
+        {
+          "question": "免费版能处理多长的视频？",
+          "answer": "CapCut和Clipchamp无时长限制。Descript无单视频时长限制但有月度总额度。VEED单视频最长10分钟，Kapwing最短只有5分钟。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is CapCut's subtitle generator really completely free?",
+          "answer": "Yes. CapCut's AI subtitle generation has no watermarks, no time limits, and no monthly caps. It supports 14 languages and is the most generous free tier available for subtitle generation in 2026."
+        },
+        {
+          "question": "Which free AI subtitle tool has the best accuracy?",
+          "answer": "For English, Descript leads at ~95%. For Chinese, CapCut leads at ~95%. For other languages, CapCut and VEED.io generally outperform the rest. Accuracy drops significantly for all tools on heavily accented speech or noisy audio."
+        },
+        {
+          "question": "Do free AI subtitle tools add watermarks?",
+          "answer": "CapCut and Clipchamp have no watermarks on free exports. VEED.io, Kapwing, and Descript all add watermarks on their free tier exports."
+        },
+        {
+          "question": "Can I export SRT subtitle files for free?",
+          "answer": "CapCut (desktop app), Descript, and Clipchamp support free SRT export. VEED.io and Kapwing require paid plans for SRT download."
+        },
+        {
+          "question": "Do these tools support real-time live subtitles?",
+          "answer": "No. All 5 tools generate subtitles after the video is recorded. For live streaming subtitles, use OBS with plugins like Google Live Caption or dedicated live captioning services."
+        },
+        {
+          "question": "What's the maximum video length for free subtitle generation?",
+          "answer": "CapCut and Clipchamp have no video length limits. Descript has no per-video limit but caps monthly transcription at 1 hour. VEED.io caps at 10 minutes per video. Kapwing is the most restrictive at 5 minutes per video."
+        },
+        {
+          "question": "Which tool is best for subtitle translation?",
+          "answer": "CapCut offers free auto-translation between its 14 supported languages. VEED.io also has translation but it's limited on the free tier. For specialized translation needs, generate subtitles in one tool and use a separate translation service."
+        }
+      ]
     },
     {
       "slug": "free-ai-video-generation-tools",
@@ -240,7 +1024,59 @@
         "comparison",
         "free-tools"
       ],
-      "date": "2026-06-20"
+      "date": "2026-06-20",
+      "faq_zh": [
+        {
+          "question": "哪款免费AI视频生成工具最好用？",
+          "answer": "综合来看Seedance 2.0最优——无限免费、1080p、无水印。如果Seedance渠道不稳定，可灵AI（每天66积分）是最稳定的备选方案。"
+        },
+        {
+          "question": "Seedance 2.0真的完全免费吗？",
+          "answer": "是的，目前通过第三方渠道可以无限免费使用Seedance 2.0满血版，1080p分辨率无水印。但免费渠道可能随时关闭，建议关注官方动态。"
+        },
+        {
+          "question": "可灵AI和海螺AI有什么区别？",
+          "answer": "两者都每天刷新66积分。可灵AI画质更好、中文理解更强；海螺AI的人物运动效果更自然。可以根据需求选择，或者两个都用。"
+        },
+        {
+          "question": "AI生成的视频能商用吗？",
+          "answer": "大部分工具的免费版明确不支持商业用途。剪映AI的免费版允许一定范围的商用。如需商用，建议购买各工具的付费版并仔细阅读授权条款。"
+        },
+        {
+          "question": "AI视频生成一次要等多久？",
+          "answer": "Seedance 2.0基本不用排队。可灵AI和海螺AI在高峰期可能需要等待几分钟到十几分钟。Runway和Luma的排队时间较长，高峰期可能超过30分钟。"
+        },
+        {
+          "question": "文字生成和视频生成的区别是什么？",
+          "answer": "文字生视频是根据文字描述直接生成视频；图片生视频是将一张静态图片转化为动态视频。通常图片生视频的效果更可控、质量更高，因为你可以先选定满意的参考图。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Which free AI video generation tool is the best?",
+          "answer": "Overall, Seedance 2.0 is the best — unlimited free, 1080p, no watermark. If Seedance channels are unstable, Kling AI (66 daily credits) is the most reliable backup."
+        },
+        {
+          "question": "Is Seedance 2.0 really completely free?",
+          "answer": "Yes, currently available through third-party free channels with unlimited 1080p watermark-free generation. However, free channels may close at any time, so monitor official announcements."
+        },
+        {
+          "question": "What's the difference between Kling AI and Hailuo AI?",
+          "answer": "Both offer 66 daily credits. Kling AI has better overall quality and Chinese prompt understanding. Hailuo AI has more natural human motion. You can use both depending on your needs."
+        },
+        {
+          "question": "Can I use free AI-generated videos commercially?",
+          "answer": "Most free tiers explicitly prohibit commercial use. CapCut AI's free tier allows limited commercial use. For commercial purposes, purchase the paid plan and review licensing terms carefully."
+        },
+        {
+          "question": "How long does AI video generation take?",
+          "answer": "Seedance 2.0 is nearly instant. Kling AI and Hailuo AI may take a few minutes during peak hours. Runway and Luma have longer queues — up to 30+ minutes during busy periods."
+        },
+        {
+          "question": "What's the difference between text-to-video and image-to-video?",
+          "answer": "Text-to-video generates a video from a text description. Image-to-video animates a still image into motion. Image-to-video typically produces more consistent and controllable results because you start with a reference image you already like."
+        }
+      ]
     },
     {
       "slug": "freebuff-free-coding-agent",
@@ -250,7 +1086,51 @@
       "excerpt_en": "Free coding agent tool recommendation",
       "pinned": true,
       "date": "2026-07-06",
-      "category": "coding"
+      "category": "coding",
+      "faq_zh": [
+        {
+          "question": "Freebuff Coding Agent 真的完全免费吗",
+          "answer": "完全免费，没有付费档。注册就送基础额度，做完每日任务还能白嫖额外次数，本质是拿用户反馈换数据，所以不存在试用期或隐藏收费。"
+        },
+        {
+          "question": "注册需要绑定信用卡吗",
+          "answer": "不需要，邮箱注册即用，连手机号都不用。也没看到任何让你绑卡的入口，纯靠邮箱验证码登录，比一堆要求绑卡的工具省心太多。"
+        },
+        {
+          "question": "生成代码可以商用吗",
+          "answer": "可以，官方明确说输出归用户所有，商业项目随便用。但生成的代码质量参差不齐，上线前必须人工 review，别直接复制粘贴到生产环境。"
+        },
+        {
+          "question": "对比 GitHub Copilot 和 Cursor 它有啥优势",
+          "answer": "最大优势是不用钱。Copilot 一个月 10 刀，Cursor Pro 一个月 20 刀，Freebuff 零成本。短板是模型能力稍弱，复杂重构不如前两者，但日常写脚本、改 bug 完全够用。"
+        },
+        {
+          "question": "用 Freebuff 最容易踩的坑是啥",
+          "answer": "三个坑：第一免费额度用完要等刷新，别指望无限薅；第二生成代码偶尔有幻觉，关键逻辑必须自己测；第三上下文窗口有限，超长文件会被截断，记得分段喂。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Freebuff really free to use?",
+          "answer": "Yes, Freebuff is a free coding agent you can try without paying. You get access to AI code generation, debugging help, and refactoring suggestions at no cost, though some advanced features may need a paid upgrade."
+        },
+        {
+          "question": "Do I need a credit card to sign up for Freebuff?",
+          "answer": "No, Freebuff does not require a credit card for the free tier. Just create an account with your email and start coding right away. You only add payment info if you decide to upgrade to a paid plan later."
+        },
+        {
+          "question": "Can I use code generated by Freebuff for commercial projects?",
+          "answer": "Yes, code generated by Freebuff can be used in commercial projects. The free tier gives you full ownership of the output. Just double-check their terms of service for the latest license details before shipping anything."
+        },
+        {
+          "question": "How does Freebuff compare to Cursor and GitHub Copilot?",
+          "answer": "Freebuff focuses on being lightweight and free, while Cursor and Copilot are paid editors with deeper IDE integration. Freebuff is great if you want a quick AI helper without subscription fees, but it has fewer features than the big two."
+        },
+        {
+          "question": "What are the common gotchas when using Freebuff?",
+          "answer": "The main pain points are limited context window on the free tier, occasional rate limits during peak hours, and slower response times compared to paid tools. Also, always review the generated code since it can suggest outdated libraries or insecure patterns."
+        }
+      ]
     },
     {
       "slug": "gemini-cli-free-ai-coding",
@@ -259,7 +1139,51 @@
       "excerpt_zh": "Google出品的终端AI编程工具，免费用Gemini模型，支持代码生成、调试、重构",
       "excerpt_en": "Terminal AI coding tool from Google, free Gemini model with code generation, debugging, refactoring",
       "date": "2026-07-06",
-      "category": "coding"
+      "category": "coding",
+      "faq_zh": [
+        {
+          "question": "Gemini CLI完全免费吗？有没有使用次数限制？",
+          "answer": "完全免费，没套路。Google给每个Google账号每天1000次请求额度，个人项目随便用。超出后等第二天额度刷新，不会突然收费。"
+        },
+        {
+          "question": "需要绑定信用卡才能用吗？",
+          "answer": "纯免费工具，不需要。Google账号用个人Gmail就行，登录后直接用，连手机号都不用绑。学生账号、企业Workspace账号也都能直接登录。"
+        },
+        {
+          "question": "生成的代码能商用吗？会侵权吗？",
+          "answer": "能商用，没坑。Google官方明确说免费层输出归用户所有，可直接用到商业项目。但记得人工review一遍代码，AI生成的代码质量参差不齐，商用出问题责任在你自己。"
+        },
+        {
+          "question": "Gemini CLI和Cursor、GitHub Copilot比哪个强？",
+          "answer": "定位完全不同。Cursor和Copilot是IDE插件，主打代码补全；Gemini CLI是终端工具，能自己跑命令、读文件、调试代码。适合自动化脚本、批量处理，正经写项目还是搭配IDE用更香。"
+        },
+        {
+          "question": "新手最容易踩的坑是什么？",
+          "answer": "三个坑最多人踩：一是不开项目直接问，AI不知道你的代码结构答非所问；二是没设权限边界，让它误删文件；三是网络不稳时超时，以为卡死就强退。记住先在测试目录玩熟了再上正式项目。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Gemini CLI completely free to use?",
+          "answer": "Yes, the core Gemini CLI is free with a Google account. You get 60 requests per minute and 1000 requests per day on the free tier, which is plenty for daily coding. Pro and Ultra plans just raise those limits."
+        },
+        {
+          "question": "Do I need a credit card to start using Gemini CLI?",
+          "answer": "No credit card needed. Just sign in with any Google account and you can start coding right away. No trial period, no auto-charge traps. The only catch is you need a Google account in the first place."
+        },
+        {
+          "question": "Can I use code generated by Gemini CLI for commercial projects?",
+          "answer": "Yes, you can use it commercially. The output belongs to you, and there is no special commercial restriction on the free tier. Just be aware Gemini may occasionally copy snippets from training data, so review critical code."
+        },
+        {
+          "question": "How does Gemini CLI compare to Claude Code or Codex CLI?",
+          "answer": "Gemini CLI shines on huge context windows, up to 1 million tokens, so it handles large codebases better. Claude Code wins on reasoning depth, Codex is fast for boilerplate. For terminal-native free coding, Gemini is the most generous right now."
+        },
+        {
+          "question": "What are the common gotchas when using Gemini CLI for free?",
+          "answer": "The biggest trap is hitting the 1000 daily request limit during heavy refactoring, and the CLI silently retries on errors, burning quota fast. Also, it sometimes hallucinates APIs that do not exist, so always test the code it writes."
+        }
+      ]
     },
     {
       "slug": "huawei-deveco-code-free-coding",
@@ -268,7 +1192,51 @@
       "excerpt_zh": "华为DevEco Code内置智谱GLM-5.1模型，完全免费不限额度，登录即用无需手动选择",
       "excerpt_en": "Built-in Zhipu GLM-5.1 model, completely free with no quota limits",
       "date": "2026-07-06",
-      "category": "coding"
+      "category": "coding",
+      "faq_zh": [
+        {
+          "question": "华为DevEco Code真的完全免费吗？",
+          "answer": "基础功能全免费，包括GLM-5.1模型调用、代码补全、对话。但企业版才有团队协作和私有化部署，个人开发者白嫖完全够用。"
+        },
+        {
+          "question": "注册时要不要绑定信用卡？",
+          "answer": "不用。华为账号直接登录就能用，连手机号都不强制实名，海外邮箱也能注册，门槛比Cursor低多了。"
+        },
+        {
+          "question": "生成的代码能商用吗？",
+          "answer": "可以。官方协议写明个人项目、商用产品都能用，版权归你。但要注意GLM-5.1本身有内容审核，违规用途会被限流。"
+        },
+        {
+          "question": "和Cursor、Trae比哪个更香？",
+          "answer": "GLM-5.1中文理解比Cursor强，价格完胜Trae。但插件生态、复杂重构还差一截，轻度使用首选DevEco，重度开发继续用Cursor。"
+        },
+        {
+          "question": "用DevEco Code有哪些坑要注意？",
+          "answer": "高峰期会限速，凌晨用最丝滑。GLM-5.1偶尔会一本正经胡说八道，关键代码必须人工review。账号别用主账号，被风控了很麻烦。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Huawei DevEco Code really 100% free?",
+          "answer": "Yes, the free tier gives you unlimited access to GLM-5.1 for coding tasks. No hidden trial, no time limit. You just sign up with a HUAWEI ID and start using it right away. Production usage may change later, so check their pricing page monthly."
+        },
+        {
+          "question": "Do I need a credit card to sign up?",
+          "answer": "No credit card is required for the free tier. A HUAWEI ID is enough. Most users skip the verification step entirely. If you ever upgrade to enterprise features, billing kicks in only after you explicitly enter payment info."
+        },
+        {
+          "question": "Can I use code generated by DevEco for commercial projects?",
+          "answer": "Generally yes for code you write with GLM-5.1 inside DevEco. Output ownership stays with you. The catch: avoid pasting proprietary code as input, and double-check their enterprise terms if you plan heavy production use."
+        },
+        {
+          "question": "How does it compare to Cursor, Copilot, and Windsurf?",
+          "answer": "DevEco wins on price—truly unlimited free GLM-5.1 calls. Cursor and Copilot charge after a short trial. Windsurf sits in the middle. Trade-off: DevEco's ecosystem and plugins are thinner than Cursor's, so plugin-heavy workflows still favor paid tools."
+        },
+        {
+          "question": "What are the common gotchas or pitfalls?",
+          "answer": "First, region restrictions—some features need a mainland China HUAWEI ID. Second, rate limits apply during peak hours even on free tier. Third, HUAWEI may throttle heavy abuse. Finally, export your snippets regularly since cloud IDE projects can lag on sync."
+        }
+      ]
     },
     {
       "slug": "kimi-k26-free-coding",
@@ -277,7 +1245,51 @@
       "excerpt_zh": "Kimi K2.6 SWE-Bench Pro 58.6分，开源第一。13小时不间断编码，Agent Swarm 300子智能体并行",
       "excerpt_en": "SWE-Bench Pro 58.6 score, #1 open source. 13-hour continuous coding with 300 sub-agents",
       "date": "2026-07-06",
-      "category": "coding"
+      "category": "coding",
+      "faq_zh": [
+        {
+          "question": "Kimi K2.6真的是完全免费的吗？有没有隐藏收费？",
+          "answer": "Kimi K2.6编码功能在Moonshot AI官网注册即可使用，目前编码Agent完全免费，没有token限制。但高峰期可能限速，官方也保留未来推出付费版的权利，建议趁免费赶紧用。"
+        },
+        {
+          "question": "注册Kimi K2.6需要绑定信用卡吗？",
+          "answer": "不需要。手机号或邮箱注册就能用，不用绑定信用卡也不用实名认证。手机号收个验证码就行，海外用户用Google账号也能登录，对个人开发者非常友好。"
+        },
+        {
+          "question": "用Kimi K2.6生成的项目代码可以商用吗？",
+          "answer": "可以商用。Kimi K2.6本身是开源模型（Apache 2.0协议），用API或网页版生成的代码归属你，可以直接用于商业产品。但要注意第三方依赖库的协议，避免GPL等传染性协议。"
+        },
+        {
+          "question": "Kimi K2.6和Cursor、GitHub Copilot比哪个强？",
+          "answer": "Kimi K2.6主打300个子智能体并行干活，复杂任务拆解能力强于Cursor和Copilot。日常补全代码不如Copilot快，但多文件重构、大型项目从0到1有明显优势，适合国内直连无障碍。"
+        },
+        {
+          "question": "用Kimi K2.6最容易踩哪些坑？",
+          "answer": "三个常见坑：一是高峰期排队等待时间长，建议凌晨或工作日白天用；二是子智能体并行可能产生冲突代码，需要人工review；三是上下文窗口虽然大但单次提问太长会变慢，分步骤提问效果更好。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Kimi K2.6 really free to use?",
+          "answer": "Yes, the K2.6 model itself is free to access through Moonshot's official site and API tier. You get full agentic coding capabilities without paying a cent for the base model weights or chat interface."
+        },
+        {
+          "question": "Do I need a credit card to sign up for Kimi K2.6?",
+          "answer": "No credit card required for the free web chat or basic API access. Just register with an email or phone number. Only the paid enterprise tier or heavy API usage above the free quota triggers billing."
+        },
+        {
+          "question": "Can I use Kimi K2.6 output for commercial projects?",
+          "answer": "Yes, the free tier allows commercial use of generated code and text. Moonshot's terms grant you ownership of outputs, making it safe for client work, SaaS products, and revenue-generating apps without licensing worries."
+        },
+        {
+          "question": "How does Kimi K2.6 compare to Claude Sonnet and GPT-4 for coding?",
+          "answer": "K2.6 ranks surprisingly close to Sonnet 4 on SWE-bench while beating GPT-4o on multi-file refactors. It shines on open-source repos and long-context tasks, though Claude still leads on subtle bug reasoning."
+        },
+        {
+          "question": "What are the common gotchas when using Kimi K2.6 free tier?",
+          "answer": "Watch the rate limit of roughly 50 requests per hour, expect occasional 503 errors during peak hours in Asia, and note the 128k context window shrinks after heavy use. Also, VPN from China mainland may be needed."
+        }
+      ]
     },
     {
       "slug": "llm-admin-free-unified-gateway",
@@ -287,7 +1299,51 @@
       "excerpt_en": "Open-source free LLM gateway, dual OpenAI+Anthropic protocol support, 80+ models smart routing, desktop dashboard, local data processing.",
       "pinned": false,
       "date": "2026-07-06",
-      "category": "api"
+      "category": "api",
+      "faq_zh": [
+        {
+          "question": "LLM Admin真的是免费的吗？有没有隐藏收费？",
+          "answer": "完全开源免费，GitHub项目随便下随便用，没有任何订阅费或调用费。但你自己得掏钱买各家模型的API Key，比如OpenAI和Claude的key还是要去官网充值，本质是个转发工具不送额度。"
+        },
+        {
+          "question": "用LLM Admin需要绑信用卡吗？",
+          "answer": "不需要绑卡。但你要往OpenAI、Anthropic这些上游厂商充钱才能用付费模型，有些模型有免费额度比如Gemini的key就能直接白嫖，绑卡是上游的事不是LLM Admin的事。"
+        },
+        {
+          "question": "LLM Admin聚合的模型能商用吗？会不会侵权？",
+          "answer": "能不能商用取决于你调用的那个模型自己的许可条款，不是LLM Admin决定的。比如调用Llama商用随便用，调用GPT-4商用就要遵守OpenAI的协议，工具本身不背这锅。"
+        },
+        {
+          "question": "LLM Admin和One API、new-api这些同类工具有啥区别？",
+          "answer": "LLM Admin主打本地化部署+多端统一管理，界面更现代支持Web和桌面。One API是纯API转发老牌稳定，new-api是One API的fork加了计费和用户管理。选哪个看你要不要图形界面和本地化体验。"
+        },
+        {
+          "question": "用LLM Admin最容易踩的坑是啥？",
+          "answer": "三个常见坑：一是API Key配置错了模型名调不通，二是上游厂商余额耗尽没提醒导致请求失败，三是免费模型有速率限制别当主力用。还有就是Docker部署时记得改默认密码不然裸奔很危险。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is LLM Admin really free to use?",
+          "answer": "Yes, the open-source version is fully free with no hidden costs. You only pay if you self-host on cloud infrastructure like AWS, where your own server bills apply."
+        },
+        {
+          "question": "Do I need a credit card to sign up?",
+          "answer": "No credit card is required for the self-hosted free tier. Just download the Docker image, configure your API keys, and you can manage 80+ models immediately without any payment."
+        },
+        {
+          "question": "Can I use LLM Admin commercially for my business?",
+          "answer": "Absolutely. The Apache 2.0 license allows full commercial use, including building paid products on top of it. Just make sure your underlying model providers like OpenAI permit your usage."
+        },
+        {
+          "question": "How does LLM Admin compare to LiteLLM or Portkey?",
+          "answer": "LLM Admin is lighter and easier to deploy with a cleaner UI. LiteLLM focuses on proxy routing while Portkey emphasizes observability. LLM Admin balances both with better multi-tenant support."
+        },
+        {
+          "question": "What are the common pitfalls when deploying LLM Admin?",
+          "answer": "Watch out for API key leakage in logs, forgetting to set rate limits per user, and not enabling HTTPS. Always use environment variables for secrets and run behind a reverse proxy like Nginx."
+        }
+      ]
     },
     {
       "slug": "mistral-ai-studio-free-api-guide",
@@ -302,7 +1358,51 @@
         "free-api",
         "multilingual"
       ],
-      "date": "2026-06-27"
+      "date": "2026-06-27",
+      "faq_zh": [
+        {
+          "question": "Mistral AI Studio 免费 API 真的免费吗？",
+          "answer": "是的。Free mode 完全免费，无需绑定信用卡，可永久使用。适合开发者和研究者进行原型开发和测试。"
+        },
+        {
+          "question": "OCR4 相比 OCR3 有什么提升？",
+          "answer": "OCR4 支持 170 种语言，在 OmniDocBench 基准测试中得分 93.07，超越了 GPT-5.5 Pro 和 Gemini-3.1 Pro 的用户体验评分。此外，OCR4 新增了段落级边界框提取和结构化块标签功能。"
+        },
+        {
+          "question": "免费 API 有使用次数限制吗？",
+          "answer": "Free mode 有保守的速率限制，适合原型开发和评估测试。如果需要更高并发，可以升级到 Experiment（按量付费）或 Scale（企业级）计划。"
+        },
+        {
+          "question": "哪些模型可以在 Free mode 中使用？",
+          "answer": "Free mode 支持 Mistral AI 的所有模型，包括 Mistral Large 3、Mistral Small 3、Codestral、Ministral 系列等。但速率限制可能影响高频率调用的效果。"
+        },
+        {
+          "question": "如何在本地部署 Mistral 的开源模型？",
+          "answer": "Mistral AI 的大部分模型都提供开源权重（open weights），可以在 Hugging Face 下载并在本地运行。Ministral 系列尤其适合边缘设备部署，对硬件要求较低。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Mistral AI Studio free API really free?",
+          "answer": "Yes. Free mode is completely free with no credit card required, and can be used indefinitely. It is ideal for developers and researchers doing prototyping and testing."
+        },
+        {
+          "question": "What improvements does OCR4 have over OCR3?",
+          "answer": "OCR4 supports 170 languages across 10 language families and scored 93.07 on OmniDocBench, surpassing GPT-5.5 Pro and Gemini-3.1 Pro in user experience ratings. Additionally, OCR4 introduces paragraph-level bounding box extraction and structural block labels."
+        },
+        {
+          "question": "Are there usage limits on the free API?",
+          "answer": "Free mode has conservative rate limits suitable for prototyping and evaluation. For higher concurrency, you can upgrade to Experiment (pay-as-you-go) or Scale (enterprise) plans."
+        },
+        {
+          "question": "Which models are available in Free mode?",
+          "answer": "Free mode supports all Mistral AI models, including Mistral Large 3, Mistral Small 3, Codestral, and the Ministral series. However, rate limits may affect high-frequency calling performance."
+        },
+        {
+          "question": "How can I deploy Mistral open-source models locally?",
+          "answer": "Most of Mistral AI's models provide open weights available on Hugging Face for local deployment. The Ministral series is particularly suitable for edge device deployment with relatively low hardware requirements."
+        }
+      ]
     },
     {
       "slug": "monkeyCode-free-ai-coding-platform-2026",
@@ -311,7 +1411,43 @@
       "excerpt_zh": "MonkeyCode 是奇安信开源的企业级 AI 开发平台，内置云端开发环境，支持多种顶尖大模型。每天3千万免费额度，无需安装、无需部署，在浏览器中完成编码、测试、运行全流程。",
       "excerpt_en": "MonkeyCode is an open-source enterprise AI development platform by Chaitin, featuring built-in cloud development environments and support for top-tier LLMs. 30 million free daily credits, no installation or deployment needed.",
       "date": "2026-07-06",
-      "category": "coding"
+      "category": "coding",
+      "faq_zh": [
+        {
+          "question": "MonkeyCode 真的免费吗？",
+          "answer": "MonkeyCode 提供免费额度，每天 3 千万免费积分，日常写任务够用。邀请好友可得 5000 积分/次。旗舰模型也可使用，但有积分消耗。"
+        },
+        {
+          "question": "需要安装什么吗？",
+          "answer": "不需要。MonkeyCode 是云端平台，打开浏览器就能用，无需安装任何开发环境。"
+        },
+        {
+          "question": "支持哪些代码仓库？",
+          "answer": "支持 GitHub、Gitee 等多个代码托管平台，可以绑定仓库地址进行项目管理。"
+        },
+        {
+          "question": "适合什么人用？",
+          "answer": "适合想快速试想法但不想折腾本地环境的开发者、产品经理、独立开发者。做一个网页小工具、数据展示页面、小游戏 Demo 都很方便。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is MonkeyCode really free?",
+          "answer": "Yes — 30 million free积分 daily, enough for everyday tasks. Referring friends earns 5000积分 per referral. Flagship models are available with higher积分 consumption."
+        },
+        {
+          "question": "Do I need to install anything?",
+          "answer": "No. MonkeyCode is a cloud platform — just open your browser and start coding. No development environment setup required."
+        },
+        {
+          "question": "Which code repositories are supported?",
+          "answer": "GitHub, Gitee, and other major code hosting platforms. You can bind your repository for project management."
+        },
+        {
+          "question": "Who is this for?",
+          "answer": "Developers, product managers, and indie hackers who want to quickly test ideas without setting up local environments. Great for web tools, data pages, and game demos."
+        }
+      ]
     },
     {
       "slug": "nano-banana-2-lite-free-image-generation",
@@ -326,7 +1462,51 @@
         "image-generation",
         "free"
       ],
-      "date": "2026-07-01"
+      "date": "2026-07-01",
+      "faq_zh": [
+        {
+          "question": "Nano Banana 2 Lite 真的完全免费吗？",
+          "answer": "是的，通过 Google AI Studio 使用是完全免费的。Google AI Studio 提供免费层的输入和输出 Token，每月有 generous 的请求配额。对于绝大多数个人用户来说，免费额度足够日常使用。"
+        },
+        {
+          "question": "生成的图片可以用于商业用途吗？",
+          "answer": "Google AI Studio 生成的图片遵循 Google 的服务条款。建议在使用前查阅最新的 Google AI Studio Terms of Service 以确认商业使用权。"
+        },
+        {
+          "question": "Nano Banana 2 Lite 和 Nano Banana 2 有什么区别？",
+          "answer": "Nano Banana 2 Lite 是为速度和成本优化的版本，生成速度更快、单次成本更低，但图像质量与完整版 Nano Banana 2 非常接近（Elo 评分差距很小）。如果你需要极致质量且不关心速度，可以选择完整版；如果需要快速迭代，Lite 是更好的选择。"
+        },
+        {
+          "question": "支持哪些语言写提示词？",
+          "answer": "Gemini 模型支持多语言提示词，包括中文、英文、日文等。不过使用英文提示词通常能获得更精确的结果。"
+        },
+        {
+          "question": "图片上有水印吗？",
+          "answer": "Nano Banana 2 系列生成的图片嵌入了 SynthID 隐形数字水印，用于标识 AI 生成内容。这种水印肉眼不可见，但可以被检测工具识别。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Nano Banana 2 Lite really completely free?",
+          "answer": "Yes, it's completely free through Google AI Studio. The free tier includes free input and output tokens with generous daily request quotas. For most individual users, the free quota is sufficient for everyday use."
+        },
+        {
+          "question": "Can I use generated images commercially?",
+          "answer": "Images generated through Google AI Studio follow Google's Terms of Service. Check the latest Google AI Studio Terms of Service for the most up-to-date information on commercial usage rights."
+        },
+        {
+          "question": "What's the difference between Nano Banana 2 Lite and Nano Banana 2?",
+          "answer": "Nano Banana 2 Lite is optimized for speed and cost. It generates images faster and cheaper, with quality very close to the full Nano Banana 2 (small Elo score gap). Choose Lite for rapid iteration; choose the full version for maximum quality when speed is not critical."
+        },
+        {
+          "question": "What languages are supported for prompts?",
+          "answer": "The Gemini model supports multilingual prompts including Chinese, English, Japanese, and more. However, English prompts typically produce more precise results."
+        },
+        {
+          "question": "Are there watermarks on generated images?",
+          "answer": "Nano Banana 2 series images include SynthID invisible digital watermarks to identify AI-generated content. The watermark is not visible to the naked eye but can be detected by verification tools."
+        }
+      ]
     },
     {
       "slug": "notebooklm-free-guide-2026",
@@ -335,7 +1515,51 @@
       "excerpt_zh": "Google出品的AI研究工具NotebookLM，完全免费使用。支持上传50个来源文档，自动生成播客式对话、视频解说和研究摘要。2026年仍是唯一不收费的主流AI研究工具。",
       "excerpt_en": "Google's AI research tool NotebookLM, completely free. Upload up to 50 source documents, auto-generate podcast-style conversations, video explanations and research summaries. In 2026, still the only mainstream AI research tool that remains free.",
       "date": "2026-07-06",
-      "category": "video"
+      "category": "video",
+      "faq_zh": [
+        {
+          "question": "NotebookLM真的完全免费吗？会不会突然收费？",
+          "answer": "截至2026年6月，NotebookLM仍然是完全免费的，没有收费计划。Google将其定位为推广Google Workspace生态的工具，短期内没有商业化压力。但作为长期用户，建议关注官方公告。"
+        },
+        {
+          "question": "一个Google账户可以同时创建多少个笔记本？",
+          "answer": "目前没有明确的笔记本数量限制。你可以创建多个笔记本，每个笔记本最多50个来源文件。建议按项目或主题分类管理。"
+        },
+        {
+          "question": "生成的播客可以商用吗？",
+          "answer": "NotebookLM生成的内容版权归Google所有，你可以自由使用和分享。但如果用于商业广播或大规模分发，建议查阅Google的使用条款确认。"
+        },
+        {
+          "question": "可以上传视频或音频文件作为来源吗？",
+          "answer": "目前不支持直接上传视频或音频文件。但你可以先用其他工具将视频转为文字稿（如YouTube的自动字幕导出功能），然后将文字稿作为文本文件上传。"
+        },
+        {
+          "question": "NotebookLM和Google Gemini有什么区别？",
+          "answer": "Gemini是通用的AI助手，可以回答各种问题但可能产生幻觉。NotebookLM专注于基于你上传的特定资料回答问题，不会出现编造内容的情况。两者可以配合使用：用NotebookLM做深度研究，用Gemini做泛知识查询。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is NotebookLM really completely free? Will it charge in the future?",
+          "answer": "As of June 2026, NotebookLM remains entirely free with no announced plans to charge. Google positions it as a tool to promote the Google Workspace ecosystem, with little near-term commercial pressure. However, monitor official announcements for any changes."
+        },
+        {
+          "question": "How many notebooks can one Google account create?",
+          "answer": "There is currently no explicit limit on the number of notebooks. You can create multiple notebooks, each with up to 50 source files. Organize by project or topic for best results."
+        },
+        {
+          "question": "Can I use generated podcasts commercially?",
+          "answer": "Content generated by NotebookLM is owned by Google, and you are free to use and share it. For commercial broadcasting or large-scale distribution, review Google's Terms of Service to confirm compliance."
+        },
+        {
+          "question": "Can I upload video or audio files as sources?",
+          "answer": "Direct video or audio upload is not currently supported. However, you can use other tools to transcribe video to text (e.g., YouTube's auto-caption export feature) and upload the transcript as a text file."
+        },
+        {
+          "question": "How does NotebookLM differ from Google Gemini?",
+          "answer": "Gemini is a general-purpose AI assistant that can answer broad questions but may hallucinate. NotebookLM focuses exclusively on answering questions based on your uploaded materials, eliminating fabricated content. Use them together: NotebookLM for deep research, Gemini for general knowledge queries."
+        }
+      ]
     },
     {
       "slug": "qoderwork-free-pro-2026",
@@ -344,7 +1568,51 @@
       "excerpt_zh": "Qoderwork免费Pro版领取攻略，包含注册教程、邀请链接和截图",
       "excerpt_en": "Complete guide to getting Qoderwork Pro free, including registration and invite links",
       "date": "2026-07-06",
-      "category": "general"
+      "category": "general",
+      "faq_zh": [
+        {
+          "question": "Qoder真的完全免费吗？会不会用着用着就收费？",
+          "answer": "注册就送7天Pro试用，到期自动降级到免费版。免费版能无限用基础对话，只是高级模型次数受限，日常写代码够用，不会突然扣钱。"
+        },
+        {
+          "question": "注册需要绑信用卡吗？会不会被自动续费扣款？",
+          "answer": "完全不用！邮箱注册秒到账，7天Pro试用结束直接降级到免费档，没有任何自动扣费环节，国内邮箱也能正常收验证码。"
+        },
+        {
+          "question": "免费版生成的项目能商用吗？版权算谁的？",
+          "answer": "免费版输出的代码归你随便用，商用也没问题。但注意别直接抄训练数据里的GPL协议代码，Qoder官方不承担这块责任，建议自己扫一遍协议。"
+        },
+        {
+          "question": "和Cursor、Copilot比，Qoder免费版到底差在哪？",
+          "answer": "代码补全速度差不多，主要差距在上下文长度：Cursor能吃整个项目，Qoder免费版只读当前文件。复杂重构得手动喂代码进去，胜在白嫖不心疼。"
+        },
+        {
+          "question": "新手用Qoder最容易踩哪些坑？",
+          "answer": "三个常见坑：一是别在公开仓库里直接用免费额度挖矿，会被封号；二是中文注释多了AI容易理解跑偏；三是Agent模式消耗积分快，建议先在普通对话调试好再切过去。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Qoderwork Free Pro really free?",
+          "answer": "Yes, Qoderwork offers a Free Pro tier with daily credits that reset every 24 hours. You get the pro model access without paying, but heavy users will hit the daily cap fast and need to wait for reset or upgrade."
+        },
+        {
+          "question": "Do I need a credit card to sign up for Qoderwork?",
+          "answer": "No credit card is required for the free tier. Just register with email or Google account and start using the daily credits immediately. No trial auto-charge traps either."
+        },
+        {
+          "question": "Can I use Qoderwork Free Pro output for commercial projects?",
+          "answer": "Yes, the Free Pro tier includes commercial usage rights for generated content. You own what you create. Just check their latest TOS because commercial terms can change without notice."
+        },
+        {
+          "question": "How does Qoderwork compare to Cursor Copilot free tier or Windsurf?",
+          "answer": "Qoderwork gives you daily pro-model credits with no card, while Cursor free locks you to a weaker model and Windsurf free throttles you after limited prompts. Qoderwork is more generous for daily bursts."
+        },
+        {
+          "question": "What are the common gotchas with Qoderwork Free Pro?",
+          "answer": "The daily credit reset is in UTC, not your local timezone, so you might wake up to zero credits. Also, complex multi-file tasks burn credits fast, and long context windows cost more than short ones."
+        }
+      ]
     },
     {
       "slug": "qwen3-6-free-unlimited-2026",
@@ -359,7 +1627,51 @@
         "free-api",
         "llm"
       ],
-      "date": "2026-06-23"
+      "date": "2026-06-23",
+      "faq_zh": [
+        {
+          "question": "Qwen3.6真的完全免费吗？会不会突然收费？",
+          "answer": "通义千问网页版目前完全免费且无明确限制。官方表示这是一项限时推广活动，预计持续到2026年6月底。活动结束后可能会调整策略，但目前没有收费计划。DashScope API的免费额度为100万Token，用完后按极低价格计费（远低于商业模型）。"
+        },
+        {
+          "question": "需要实名认证吗？",
+          "answer": "通义千问网页版使用淘宝/支付宝/手机号登录即可，无需额外实名。DashScope API需要阿里云账号和实名认证才能获取API Key。"
+        },
+        {
+          "question": "Qwen3.6支持哪些功能？",
+          "answer": "支持文本生成、代码编写和调试、数据分析、文档理解、多轮对话、图片理解（Qwen-VL）、语音识别（Qwen-Audio）等多种功能。网页版和API都支持这些能力。"
+        },
+        {
+          "question": "和Qwen3有什么区别？",
+          "answer": "Qwen3.6是Qwen3的优化版本，主要在推理能力、代码生成质量和多语言理解方面进行了显著提升。SWE-Bench Professional评分从Qwen3的52.1提升到58.6，增幅超过12%。"
+        },
+        {
+          "question": "可以在商业用途中使用吗？",
+          "answer": "Qwen3.6采用Apache 2.0许可证，允许商业使用。DashScope API的商业调用价格为每百万Token 0.5元（输入）+ 1.5元（输出），相比GPT-4o的每百万Token 10元+30元，便宜了约20倍。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Qwen3.6 really completely free? Will it start charging later?",
+          "answer": "The Tongyi Qianwen web interface is currently free with no explicit limits. Alibaba has described this as a limited-time promotional campaign expected to run until the end of June 2026. After the campaign, pricing strategy may change, but there is no announced plan to charge. The DashScope API provides 1 million free tokens, and after that, pricing is extremely low (significantly below commercial models)."
+        },
+        {
+          "question": "Do I need real-name verification?",
+          "answer": "For the Tongyi Qianwen web interface, logging in with Taobao/Alipay/phone number is sufficient. No additional verification required. For DashScope API, you need an Alibaba Cloud account with identity verification to obtain an API Key."
+        },
+        {
+          "question": "What features does Qwen3.6 support?",
+          "answer": "Text generation, code writing and debugging, data analysis, document comprehension, multi-turn conversation, image understanding (Qwen-VL), and speech recognition (Qwen-Audio). Both the web interface and API support all these capabilities."
+        },
+        {
+          "question": "How is Qwen3.6 different from Qwen3?",
+          "answer": "Qwen3.6 is an optimized version of Qwen3 with significant improvements in reasoning ability, code generation quality, and multilingual understanding. SWE-Bench Professional scores increased from 52.1 (Qwen3) to 58.6 (Qwen3.6), a gain of over 12%."
+        },
+        {
+          "question": "Can I use Qwen3.6 for commercial purposes?",
+          "answer": "Yes. Qwen3.6 is licensed under Apache 2.0, which permits commercial use. The DashScope API commercial pricing is $0.07 per million input tokens and $0.21 per million output tokens, roughly 20x cheaper than comparable offerings from OpenAI's GPT-4o."
+        }
+      ]
     },
     {
       "slug": "rime-ai-voice-free-guide-2026",
@@ -370,7 +1682,51 @@
       "category": "audio",
       "published": "2026-06-29",
       "featured": false,
-      "date": "2026-07-06"
+      "date": "2026-07-06",
+      "faq_zh": [
+        {
+          "question": "Rime AI Voice真的能完全免费用吗？",
+          "answer": "可以，注册就送100美元额度，足够做大量测试和小项目语音。但这不是永久免费，额度用完得充值，或者等官方活动再领。"
+        },
+        {
+          "question": "注册Rime AI Voice需要绑定信用卡吗？",
+          "answer": "不用，新用户只用邮箱注册就能拿到100美元免费额度，绑定信用卡是充值付费时才需要的步骤。"
+        },
+        {
+          "question": "用Rime AI Voice生成的语音能商用吗？",
+          "answer": "免费额度内生成的语音可以商用，但要注意不能拿去做语音克隆诈骗或违规内容，具体看官方服务条款。"
+        },
+        {
+          "question": "Rime AI Voice和ElevenLabs比哪个好？",
+          "answer": "Rime主打企业级API和多语言代码切换，适合做应用集成；ElevenLabs社区声音多、克隆强，适合内容创作。"
+        },
+        {
+          "question": "用Rime AI Voice最容易踩哪些坑？",
+          "answer": "额度按字符扣费容易超支，94种声音选错难调，还有地区限制某些IP注册收不到验证码。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Rime AI Voice really free to use?",
+          "answer": "Yes, new users get $100 in free credits, enough to test nearly every feature for weeks. After credits run out, top up or switch to other free tiers."
+        },
+        {
+          "question": "Do I need a credit card to sign up for Rime?",
+          "answer": "No card needed to start. Sign up with email, claim the $100 credits, and you can synthesize speech immediately. Add payment only if you run out."
+        },
+        {
+          "question": "Can I use Rime AI voices for commercial projects?",
+          "answer": "Yes, the free credits include commercial rights. You can ship audio in ads, apps, or videos without paying extra, as long as you stay within the credit limit."
+        },
+        {
+          "question": "How does Rime compare to ElevenLabs and OpenAI TTS?",
+          "answer": "Rime wins on multilingual code-switching and 94 premium voices with natural inflection. ElevenLabs leads on voice cloning, OpenAI on speed and pricing."
+        },
+        {
+          "question": "What are the common pitfalls with Rime free credits?",
+          "answer": "Credits expire after 12 months of inactivity, long clips burn credits fast, and API rate limits cap burst usage. Track usage in your dashboard to avoid surprises."
+        }
+      ]
     },
     {
       "slug": "trae-free-ai-coding",
@@ -379,7 +1735,51 @@
       "excerpt_zh": "字节跳动做的AI编程IDE，内置SOLO模式能自动完成整个开发任务。免费版每月5000次自动补全",
       "excerpt_en": "AI IDE from ByteDance with SOLO mode for full task automation. 5000 monthly completions free",
       "date": "2026-07-06",
-      "category": "coding"
+      "category": "coding",
+      "faq_zh": [
+        {
+          "question": "Trae是完全免费的吗？会不会突然收费？",
+          "answer": "完全免费,字节官方承诺永久免费。但要绑账号登录才能用,目前是内测期功能,正式版会不会变还不好说,建议尽早薅。"
+        },
+        {
+          "question": "注册需要信用卡或手机号吗？",
+          "answer": "手机号或邮箱都行,支持+86国内手机。完全不用绑卡,不用充值,登录就能直接用,对国内开发者非常友好。"
+        },
+        {
+          "question": "生成的项目代码能商用吗？会侵权吗？",
+          "answer": "可以商用,代码归你所有。但AI给的代码片段可能跟训练数据撞车,建议重要项目过一遍license审查,别直接闭眼用。"
+        },
+        {
+          "question": "Trae跟Cursor、Copilot比哪个强？",
+          "answer": "Trae每月5000次自动补全,白嫖党首选;Cursor体验更丝滑但要钱;Copilot学生免费但国内经常抽风。预算0就选Trae。"
+        },
+        {
+          "question": "用Trae有什么坑要提前知道？",
+          "answer": "高峰期会卡顿,复杂任务容易卡死重启;中文注释偶尔识别错;目前还不支持插件生态,重度用户会觉得功能单薄,适合轻量场景。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Trae AI completely free to use?",
+          "answer": "Yes, the free tier gives you 5000 AI completions per month at no cost. You just need a ByteDance account to sign in. No hidden fees, no trial countdown, no automatic upgrade to paid."
+        },
+        {
+          "question": "Do I need a credit card to sign up for Trae?",
+          "answer": "No credit card required. Sign up with email, Google, or GitHub, and you get the 5000 monthly completions instantly. ByteDance doesn't ask for payment info on the free plan."
+        },
+        {
+          "question": "Can I use Trae AI for commercial projects?",
+          "answer": "Yes, code generated by Trae's free tier can be used in commercial products. ByteDance grants you full ownership of the output. Just don't feed in proprietary code you don't have rights to."
+        },
+        {
+          "question": "How does Trae compare to Cursor and GitHub Copilot?",
+          "answer": "Trae is free where Cursor charges $20/month and Copilot costs $10/month. Trae runs on Claude 3.5 Sonnet and GPT-4o, matching Cursor's quality. The catch: 5000 completions is shared across all your chats."
+        },
+        {
+          "question": "What are the common gotchas with Trae free tier?",
+          "answer": "Three big ones: 1) Quota is shared globally, not per-project, so heavy use burns it fast. 2) The IDE is still in beta and occasionally crashes on large repos. 3) No offline mode, so you're stuck without internet."
+        }
+      ]
     },
     {
       "slug": "seedance-2.0-free-unlimited-2026",
@@ -389,7 +1789,51 @@
       "excerpt_en": "Seedance 2.0 is the only AI video generator that's truly free and unlimited with 1080p resolution, no watermark, and face upload support.",
       "date": "2026-07-06",
       "category": "video",
-      "pinned": false
+      "pinned": false,
+      "faq_zh": [
+        {
+          "question": "Seedance 2.0真的完全免费吗？有没有隐藏收费？",
+          "answer": "核心生成完全免费，无水印不限次数。官方目前没公布收费计划，未来若上线订阅大概率走免费额度+付费扩容路线，和字节其他产品策略一致。"
+        },
+        {
+          "question": "注册要不要绑定信用卡？手机号必须吗？",
+          "answer": "用字节跳动账号（抖音/今日头条）直接登录就行，不用手机号也不用信用卡。海外邮箱注册偶尔会触发验证，国内抖音最稳。"
+        },
+        {
+          "question": "生成的视频能商用吗？会不会有版权问题？",
+          "answer": "根据字节官方协议，个人和商用都允许。但平台对违规内容（涉政、暴力、色情）有审核机制，发布前先看一遍社区规范。"
+        },
+        {
+          "question": "和可灵、PixVerse、Wan这些比，Seedance 2.0强在哪？",
+          "answer": "1080p输出+无限次数是杀手锏，可灵免费档只给720p还要排队，PixVerse水印去不掉。动作流畅度和人物一致性也是目前免费档里最能打的。"
+        },
+        {
+          "question": "新手最容易踩的坑是什么？",
+          "answer": "三个：1）提示词写太抽象，AI跑偏；2）单次生成时长超5秒容易卡顿；3）高峰期偶尔排队，耐心等几分钟就好。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Seedance 2.0 really 100% free?",
+          "answer": "Yes, the free tier covers core features including 1080p video generation. No payment required to start, though generation speed is slower and you may hit daily usage caps. Perfect for testing and small projects."
+        },
+        {
+          "question": "Do I need to enter a credit card to sign up?",
+          "answer": "No credit card needed for the free plan. Just register with an email and you get instant access to free generation credits. Upgrading is only required if you need higher quotas or priority processing."
+        },
+        {
+          "question": "Can I use Seedance 2.0 videos for commercial purposes?",
+          "answer": "Yes, the free tier allows commercial use of generated videos, including monetized YouTube content, ads, and client work. Just make sure your account stays on the free plan terms and you follow ByteDance content policies."
+        },
+        {
+          "question": "How does Seedance 2.0 compare to Sora, Runway, and Pika?",
+          "answer": "Seedance 2.0 delivers true 1080p output while most competitors cap free users at 720p. It beats Sora on free accessibility, matches Runway on quality, and crushes Pika on resolution. The trade-off is slower render times."
+        },
+        {
+          "question": "What are the common pitfalls when using the free tier?",
+          "answer": "Watch out for three things: daily generation limits reset at midnight UTC, longer queue times during peak hours, and complex prompts often need 2-3 attempts to nail the right motion. Plan your generation batches ahead of time."
+        }
+      ]
     },
     {
       "slug": "stablediffusion-free-local-deploy-2026",
@@ -399,7 +1843,51 @@
       "excerpt_en": "Stable Diffusion local deployment is completely free with unlimited generations. Supports various LoRA models and plugins. Autumn Leaf integration package makes it easy for beginners.",
       "date": "2026-07-06",
       "category": "image",
-      "pinned": false
+      "pinned": false,
+      "faq_zh": [
+        {
+          "question": "Stable Diffusion真的完全免费吗？有没有隐藏收费？",
+          "answer": "完全免费。Stable Diffusion是开源的，模型权重、代码全部公开，没有任何订阅费、调用费或隐藏扣费。只要你能跑得动本地电脑或者愿意用别人部署好的在线服务，花的都是电费和硬件钱，跟官方没半毛钱关系。"
+        },
+        {
+          "question": "本地部署Stable Diffusion需要信用卡或者注册账号吗？",
+          "answer": "本地部署完全不需要任何账号和信用卡。下载模型、装Python环境、装Stable Diffusion WebUI（推荐AUTOMATIC1111或者Forge版本），从头到尾零注册，连邮箱都不用留。只有用在线托管服务（比如某些云GPU平台）才需要注册和付费。"
+        },
+        {
+          "question": "Stable Diffusion生成的图可以商用吗？卖钱行不行？",
+          "answer": "看用哪个模型。Stable Diffusion 1.5/2.1基础模型用的是CreativeML Open RAIL-M协议，允许商用但有限制（比如不能用来生成违法内容）。SDXL、SD3这些新模型协议类似。真正商用风险主要在版权和肖像权，不是协议本身——别拿别人的画风硬抄、别生成名人脸，就稳了。"
+        },
+        {
+          "question": "Stable Diffusion跟Midjourney、DALL-E比哪个强？",
+          "answer": "画质上限Stable Diffusion不输，SDXL和Flux模型已经能吊打Midjourney V6大部分场景。区别在生态：Midjourney省事、风格统一、审美在线，SD免费但要自己调参数、装插件、下模型。商用稳定性和出图一致性SD弱一点，胜在零成本无限出图，硬件到位的话产能碾压付费工具。"
+        },
+        {
+          "question": "新手用Stable Diffusion最容易踩哪些坑？",
+          "answer": "三大坑：1）显卡不行硬跑，显存低于4G直接卡死或爆显存，至少6G起步推荐12G；2）模型下错版本，SD1.5和SDXL完全两套体系混用必崩；3）CFG值乱调，调太高画面过饱和，调太低不听提示词，新手默认7就完事了别瞎折腾。先跑通基础出图再玩ControlNet和LoRA，别一上来就堆插件。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Stable Diffusion completely free to use?",
+          "answer": "Yes, the software itself is 100% free and open-source under the CreativeML Open RAIL-M license. You only pay for electricity to run your GPU. No subscriptions, no API fees, no hidden costs. Once installed, you generate unlimited images forever."
+        },
+        {
+          "question": "Do I need a credit card or account to get started?",
+          "answer": "No credit card, no signup, no account needed. Just download the Stable Diffusion WebUI from GitHub, install Python and the required models, and run it locally on your own machine. Everything happens on your hardware, no cloud dependency."
+        },
+        {
+          "question": "Can I use Stable Diffusion generated images for commercial projects?",
+          "answer": "Yes, the Open RAIL license allows commercial use including ads, products, and client work. Just avoid the few restricted scenarios: generating illegal content, medical advice, or discriminating material. Always read the latest license terms before shipping to clients."
+        },
+        {
+          "question": "How does local Stable Diffusion compare to Midjourney or DALL-E?",
+          "answer": "Midjourney and DALL-E are easier to start with but cost monthly fees and lock you into their platform. Local SD is free forever, fully private, unlimited generations, and you own every model and output. Trade-off: you need a decent GPU (8GB+ VRAM recommended) and some setup time."
+        },
+        {
+          "question": "What are the common pitfalls when running Stable Diffusion locally?",
+          "answer": "Top traps: insufficient GPU VRAM causing crashes, downloading broken models from sketchy sites, accidentally installing NSFW checkpoints, and ignoring the safety checker removal which can break outputs. Always use official Hugging Face repos, keep CUDA drivers updated, and back up your working config before tweaking."
+        }
+      ]
     },
     {
       "slug": "coze-free-unlimited-agent-2026",
@@ -409,7 +1897,51 @@
       "excerpt_en": "Coze by ByteDance is a zero-code AI agent platform. Completely free for personal use with ~1000 daily calls. Publish to WeChat, Feishu, web and more.",
       "date": "2026-07-06",
       "category": "productivity",
-      "pinned": false
+      "pinned": false,
+      "faq_zh": [
+        {
+          "question": "扣子Coze是完全免费的吗？有没有隐藏收费？",
+          "answer": "完全免费，字节官方不收一分钱。扣子空间、智能体搭建、插件调用、工作流编排全开放，底层调用豆包大模型也免费。但要注意：豆包大模型有调用频率上限，爆款智能体被大量调用时可能被限流，这时升级企业版才稳。"
+        },
+        {
+          "question": "注册扣子需要绑信用卡或实名认证吗？",
+          "answer": "不需要。手机号或抖音账号就能直接登录，零门槛。但如果你要发布到抖音、飞书这些平台，需要先完成对应平台的基础认证，比如抖音号要实名。这步不绑卡，但得有账号。"
+        },
+        {
+          "question": "用扣子做的AI智能体能商用吗？能上架卖钱吗？",
+          "answer": "可以商用。扣子官方协议允许个人和企业把智能体用于商业用途，包括付费服务、客户咨询、电商客服等。但别直接抓别家的智能体当自己的卖，这会侵权。自己原创的工作流和提示词随便商用。"
+        },
+        {
+          "question": "扣子和Dify、FastGPT这些开源工具比有啥优势？",
+          "answer": "扣子最大优势是零代码和字节生态打通，普通运营一天就能上手，工作流可视化拖拽就行。Dify、FastGPT要自己部署服务器，技术门槛高。但如果你是程序员要做深度定制，Dify的灵活度反而更强，按需选。"
+        },
+        {
+          "question": "用扣子最容易踩的坑是什么？",
+          "answer": "三个坑最常见：一是插件市场里有第三方插件不稳定，调用失败率高；二是发布到抖音后流量来了但模型额度不够用，被迫升级；三是大模型有幻觉，医疗法律类问题千万别直接用扣子回答客户，会出事。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Coze completely free to use?",
+          "answer": "Yes, Coze's core features are 100% free with no hidden fees. You get unlimited bots, workflow editor, and plugin marketplace. Only premium enterprise tiers charge for advanced API quotas and team collaboration features."
+        },
+        {
+          "question": "Do I need a credit card to sign up for Coze?",
+          "answer": "No credit card required for the free tier. Just log in with Google, email, or phone number. You can build, publish, and run AI agents indefinitely without ever entering payment details."
+        },
+        {
+          "question": "Can I use Coze-built bots commercially?",
+          "answer": "Yes, free-tier bots are commercial-friendly. You can deploy them on Discord, Telegram, WhatsApp business accounts, or monetize client work. Just check the underlying LLM provider's terms (like OpenAI's usage policy) for high-volume cases."
+        },
+        {
+          "question": "How does Coze compare to Dify or n8n?",
+          "answer": "Coze wins on zero-code simplicity and multi-platform publishing (one-click to 8+ channels). Dify is stronger for self-hosted RAG and data privacy. n8n excels at complex workflow automation but requires more technical skill."
+        },
+        {
+          "question": "What are common gotchas when using Coze?",
+          "answer": "Watch out for rate limits on free tier (varies by LLM model), occasional latency spikes during peak hours, and the fact that published bots on third-party platforms may get flagged for spam if you mass-deploy identical content."
+        }
+      ]
     },
     {
       "slug": "ego-lite-free-ai-agent-browser-2026",
@@ -424,6 +1956,50 @@
         "ai-agent",
         "browser",
         "free-tool"
+      ],
+      "faq_zh": [
+        {
+          "question": "Ego Lite 完全免费吗？有没有隐藏收费？",
+          "answer": "Citro Labs 现在所有功能完全免费，没有任何收费档位。注册就能拿到所有权限，未来要收费的话会提前发邮件通知老用户。"
+        },
+        {
+          "question": "注册 Ego Lite 需要绑信用卡吗？",
+          "answer": "不用。邮箱注册就能用，连手机号都不用给，更别提信用卡了。0 摩擦上手，老外产品这点是真的良心。"
+        },
+        {
+          "question": "Ego Lite 跑出来的内容能商用吗？",
+          "answer": "可以。Citro Labs 没说禁止商用，但建议别拿它当主战场——毕竟是给 AI Agent 跑脚本用的浏览器，不是内容生成工具，核心场景还是自动化测试和爬虫。"
+        },
+        {
+          "question": "Ego Lite 和普通 Playwright 比有啥区别？",
+          "answer": "Ego Lite 是给 AI Agent 优化的 Chromium，自带反检测、MCP 协议、远程控制这些 Agent 需要的特性。Playwright 是通用测试框架，要自己加一堆轮子才能给 Agent 用。"
+        },
+        {
+          "question": "用 Ego Lite 有哪些坑要注意？",
+          "answer": "两个常见坑：一是它设计给 AI Agent 用，人手操作反而别扭；二是目前生态还在早期，社区插件比 Playwright 少很多，复杂自动化场景得自己造轮子。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Ego Lite by Citro Labs really free to use?",
+          "answer": "Yes, Ego Lite is fully free with no hidden costs. You get a browser-based AI agent that handles daily tasks without paying a cent, but expect usage caps during peak hours."
+        },
+        {
+          "question": "Do I need a credit card to sign up for Ego Lite?",
+          "answer": "No credit card is required for the free tier. Just create a Citro Labs account with your email and you can start using Ego Lite right away, no payment info needed."
+        },
+        {
+          "question": "Can I use Ego Lite outputs for commercial projects?",
+          "answer": "Yes, content generated by Ego Lite on the free plan can be used commercially. You own what the agent produces, so feel free to ship it in client work or products."
+        },
+        {
+          "question": "How does Ego Lite compare to ChatGPT or other AI agents?",
+          "answer": "Ego Lite runs as a real browser agent, clicking and typing for you, while ChatGPT only chats. It's lighter than Manus or Devin and tuned for everyday tasks, not heavy coding."
+        },
+        {
+          "question": "What are the common gotchas when using Ego Lite for free?",
+          "answer": "Watch out for three traps: the daily task quota resets at midnight UTC, complex multi-step jobs may time out, and the agent can't log into sites with two-factor auth enabled."
+        }
       ]
     },
     {
@@ -433,7 +2009,35 @@
       "excerpt_zh": "2026年10款主流AI写作工具免费版深度横评，涵盖秘塔写作猫、笔灵AI、小幻熊等工具的免费额度、字数限制和功能对比。",
       "excerpt_en": "Deep comparison of 10 mainstream AI writing tools free tiers in 2026, covering Meta Writer, Biling AI, Xiaohuanxiong and more.",
       "date": "2026-07-09",
-      "category": "writing"
+      "category": "writing",
+      "faq_zh": [
+        {
+          "question": "这些工具的免费版真的完全免费吗？",
+          "answer": "大部分工具的免费版确实可以长期使用，但通常有字数或功能限制。建议在开始大量使用前确认当前免费政策，因为AI工具市场竞争激烈，免费政策可能随时调整。"
+        },
+        {
+          "question": "免费版生成的内容可以商用吗？",
+          "answer": "大多数工具允许商用，但建议在具体工具的条款中确认。秘塔写作猫、语灵写作等明确允许商用导出。"
+        },
+        {
+          "question": "有没有办法叠加使用多个工具？",
+          "answer": "可以。很多专业写作者会组合使用不同工具——例如用笔灵AI生成初稿，再用秘塔写作猫润色，最后用小幻熊基于知识库做专业校对。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Are the free tiers of these tools really free to use indefinitely?",
+          "answer": "Most tools offer genuinely free tiers with usage or feature limits. However, AI tool pricing policies can change frequently due to intense market competition. Check the current free policy before committing to heavy usage."
+        },
+        {
+          "question": "Can I use content generated on free tiers for commercial purposes?",
+          "answer": "Most tools allow commercial use, but confirm in each tool terms. Meta Writer and Yuling Writer explicitly permit commercial exports."
+        },
+        {
+          "question": "Can I combine multiple tools for better results?",
+          "answer": "bsolutely. Many professional writers combine tools — for example, using Biling AI for drafts, Meta Writer for polishing, and Xiaohuanxiong for knowledge-base-backed professional review."
+        }
+      ]
     },
     {
       "slug": "yolo-auto-free-llm-api-2026",
@@ -449,6 +2053,50 @@
         "free-api",
         "llm",
         "flat-rate"
+      ],
+      "faq_zh": [
+        {
+          "question": "Yolo-Auto真的完全免费吗？有没有隐藏收费？",
+          "answer": "免费套餐是真免费，但有明确限制：每24小时只能调用15次，超过就返429错误。模型只开放Qwen3.6-35B这一款，Qwen3-Max、DeepSeek那些热门模型都得开Builder计划$10/月才能用。不存在自动扣费，注册也不强制绑卡。"
+        },
+        {
+          "question": "注册Yolo-Auto需要绑定信用卡吗？",
+          "answer": "纯免费使用完全不用绑卡，邮箱注册就能拿到API Key。但如果你想升级到Builder无限套餐，那就必须绑卡走Stripe支付了，月付$10没有年付折扣。学生党和薅羊毛玩家只注册免费层就够用。"
+        },
+        {
+          "question": "Yolo-Auto生成的代码能直接商用吗？会不会被告？",
+          "answer": "免费层和付费层都允许商用，这点写进了Yolo-Auto的服务条款。但要注意：底层调用的是Qwen3.6-35B模型，阿里通义千问对商用场景没限制，但生成内容你得自己负责，比如生成侵权代码或违法信息平台不担责。"
+        },
+        {
+          "question": "Yolo-Auto和OpenRouter、SiliconFlow这些免费API比有什么优势？",
+          "answer": "优势就是简单粗暴：不用签到、不用积分、不用邀请码，注册即用15次/天。OpenRouter免费层模型经常变动，SiliconFlow要实名认证。劣势是模型只有Qwen3.6-35B一款选择，没法切换其他模型对比效果。"
+        },
+        {
+          "question": "用Yolo-Auto免费API最容易踩哪些坑？",
+          "answer": "三个坑最常见：一是15次额度重置是UTC时间零点，不是北京时间，很多人熬夜用完发现第二天中午才恢复；二是并发限制只有2路，并行跑批量任务会卡；三是API Key泄露后别人刷你的额度，平台目前没看到用量告警邮件。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Yolo-Auto really free to use?",
+          "answer": "Yes, the free tier gives you 15 API requests per day at no cost. You just need to sign up. No hidden fees, no trial expiry, no auto-charge."
+        },
+        {
+          "question": "Do I need a credit card to start?",
+          "answer": "Nope. The free tier only asks for an email and password. No credit card, no payment method, no verification required. You can literally be calling the API in 60 seconds."
+        },
+        {
+          "question": "Can I use Yolo-Auto for commercial projects?",
+          "answer": "Yes, you can ship commercial products on the free tier. The 15 req/day limit is per account, so for serious traffic you'll want the $10/mo Unlimited plan, which is still way cheaper than OpenAI."
+        },
+        {
+          "question": "How does Yolo-Auto compare to OpenRouter or Groq free tiers?",
+          "answer": "OpenRouter gives you tiny per-model slices, Groq burns through rate limits fast. Yolo-Auto's 15/day is steadier and the Qwen3.6-35B-A3B model is OpenAI-compatible, so swapping your base_url is the only code change."
+        },
+        {
+          "question": "What's the catch nobody tells you?",
+          "answer": "Three things. First, 15/day resets at UTC midnight, not your local time. Second, the free tier queues requests when the server is busy, so latency spikes during peak hours. Third, the Unlimited $10 plan is per-account, not per-key, so don't expect to share with friends."
+        }
       ]
     },
     {
@@ -470,6 +2118,50 @@
         "slidesai",
         "comparison",
         "free-tools"
+      ],
+      "faq_zh": [
+        {
+          "question": "哪个AI演示工具完全免费且没有水印？",
+          "answer": "Canva AI和Gamma的免费版都可以导出无水印的PPTX文件。Canva AI是无限免费，Gamma每月提供约100页的免费额度。"
+        },
+        {
+          "question": "免费版导出的PPTX能在Office中正常编辑吗？",
+          "answer": "Gamma导出的PPTX兼容性最好，可以在Microsoft PowerPoint和WPS中正常编辑。Canva导出的PPTX也基本可用，但部分特效可能丢失。Beautiful.ai和Tome免费版不支持导出PPTX。"
+        },
+        {
+          "question": "AI生成的演示内容准确吗？",
+          "answer": "AI生成的内容是框架性的，需要根据实际情况修改数据和细节。Gamma和Tome的内容准确度相对更高，因为它们基于更强大的大语言模型。"
+        },
+        {
+          "question": "支持中文输入吗？",
+          "answer": "所有5款工具都支持中文输入。Gamma、Canva AI和SlidesAI对中文的支持最好，生成的中文排版效果也最佳。"
+        },
+        {
+          "question": "2026年有没有完全免费的替代品？",
+          "answer": "Canva AI是目前唯一真正无限免费的选项。Gamma每月100页的额度对于大多数个人用户也足够使用。其他工具的免费版都有较严格的限制。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Which AI presentation tool is completely free with no watermarks?",
+          "answer": "Both Canva AI and Gamma's free tier export watermark-free PPTX files. Canva AI offers truly unlimited free usage, while Gamma provides about 100 free pages per month."
+        },
+        {
+          "question": "Can PPTX files exported from free tiers be edited in Office?",
+          "answer": "Gamma's PPTX exports have the best compatibility and work well in Microsoft PowerPoint and WPS. Canva's PPTX exports are mostly functional, though some effects may be lost. Beautiful.ai and Tome free tiers do not support PPTX export."
+        },
+        {
+          "question": "How accurate is AI-generated presentation content?",
+          "answer": "AI-generated content provides a framework that needs fact-checking and customization. Gamma and Tome tend to produce more accurate content as they leverage more powerful large language models."
+        },
+        {
+          "question": "Do these tools support Chinese input?",
+          "answer": "All 5 tools support Chinese input. Gamma, Canva AI, and SlidesAI have the best Chinese support, producing the most polished Chinese layouts."
+        },
+        {
+          "question": "Are there any truly free alternatives in 2026?",
+          "answer": "Canva AI is the only tool with truly unlimited free usage. Gamma's 100 pages/month is sufficient for most individual users. Other tools have stricter free tier limitations."
+        }
       ]
     },
     {
@@ -488,6 +2180,50 @@
         "ElevenLabs",
         "免费额度",
         "对比评测"
+      ],
+      "faq_zh": [
+        {
+          "question": "免费生成的AI音乐可以商用吗？",
+          "answer": "绝大多数工具的免费版不允许商用。如果需要商用，必须升级到付费版。Suno Pro ($10/月)、Udio Pro ($15/月)、ElevenLabs Creator ($5/月) 等付费版才提供商用授权。"
+        },
+        {
+          "question": "Suno和Udio哪个更好？",
+          "answer": "两者各有优势。Suno的优势是操作简单、社区活跃、风格多样；Udio的优势是音质更高、每月免费额度更大（600首 vs 150首）。如果你追求音质选Udio，如果追求易用性选Suno。"
+        },
+        {
+          "question": "ElevenLabs的10,000字符够用吗？",
+          "answer": "对于个人用户基本够用。10,000字符大约对应10分钟语音。如果是做有声书或长视频配音，可能需要考虑Creator版（$5/月，30,000字符/月）。"
+        },
+        {
+          "question": "有没有完全免费的替代方案？",
+          "answer": "完全免费且无限制的AI音乐工具几乎没有。但Soundraw的无限生成+试听是最接近的选择（虽然不能下载）。另外，开源项目如Riffusion和AcousticGAN可以在本地运行，完全免费但需要一定的技术能力。"
+        },
+        {
+          "question": "免费版的积分会累积到下个月吗？",
+          "answer": "大多数工具不会累积。Suno的每日积分不累积，ElevenLabs的月度额度用完即止。只有少数工具（如部分API服务）支持余额结转。建议在使用前查看具体工具的条款。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Can I use free-tier AI music commercially?",
+          "answer": "lmost all free tiers do not allow commercial use. To use commercially, you must upgrade to a paid plan. Suno Pro ($10/month), Udio Pro ($15/month), and ElevenLabs Creator ($5/month) all include commercial licenses."
+        },
+        {
+          "question": "Which is better — Suno or Udio?",
+          "answer": "Both have strengths. Suno excels in ease of use and active community; Udio wins on audio quality and monthly free quota (600 songs vs ~150). Choose Udio for quality, Suno for usability."
+        },
+        {
+          "question": "Is ElevenLabs' 10,000 characters enough?",
+          "answer": "For personal users, yes. 10,000 characters equals about 10 minutes of speech. For audiobook narration or long-form video voiceovers, consider the Creator plan ($5/month, 30,000 characters/month)."
+        },
+        {
+          "question": "Are there completely free alternatives?",
+          "answer": "Truly free and unlimited AI music tools don't really exist. Soundraw comes closest with unlimited generation and preview (though downloads are locked). Open-source projects like Riffusion and AcousticGAN can run locally for free but require technical expertise."
+        },
+        {
+          "question": "Do free credits roll over to next month?",
+          "answer": "Most tools do not roll over. Suno's daily credits reset, ElevenLabs' monthly quota expires. Only a few API services allow balance carryover. Check each tool's terms before relying on unused credits."
+        }
       ]
     },
     {
@@ -497,7 +2233,51 @@
       "excerpt_zh": "PrismML推出革命性Bonsai 27B模型，将270亿参数AI压缩到3.9GB，可在iPhone本地运行。基于Qwen3.6，Apache 2.0开源，完全免费下载使用。",
       "excerpt_en": "PrismML introduces revolutionary Bonsai 27B, compressing 27B-parameter AI to 3.9GB for local iPhone running. Based on Qwen3.6, Apache 2.0 licensed, completely free.",
       "date": "2026-07-15",
-      "category": "api"
+      "category": "api",
+      "faq_zh": [
+        {
+          "question": "Bonsai 27B真的是完全免费的吗？",
+          "answer": "完全免费，Apache 2.0协议，模型权重随便下、商用随便用，没有任何隐藏收费。作者用Qwen3.6做底座蒸馏出来的，本地跑不花一分钱，就是手机配置得跟上。"
+        },
+        {
+          "question": "需要信用卡或者注册账号吗？",
+          "answer": "不用。直接从HuggingFace或者GitHub下载模型文件就行，连手机号都不用留，纯离线跑。整个过程零注册、零登录，比用ChatGPT还省事。"
+        },
+        {
+          "question": "生成的内容能拿去商用吗？",
+          "answer": "能，Apache 2.0协议允许随便商用，包括拿去卖、嵌入产品、做付费服务都没问题。比Llama那些带限制的开源协议宽松多了，基本等于MIT那种自由度。"
+        },
+        {
+          "question": "跟Qwen3.6原版比有啥区别？",
+          "answer": "Bonsai是Qwen3.6的蒸馏压缩版，体积小到能在手机跑，代价是复杂任务效果比原版差一些。日常写作、翻译、代码补完够用，深度推理就有点吃力，看你需求选。"
+        },
+        {
+          "question": "手机上跑有啥坑要注意？",
+          "answer": "第一个坑是内存，至少要8GB RAM才跑得动，4GB手机直接闪退。第二个坑是发热厉害，连续用半小时手机烫手，建议上散热背夹。第三个坑是首次加载慢，模型文件十几个G，WiFi下也得等个把小时。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Bonsai 27B really 100% free?",
+          "answer": "Yes, fully free. The model weights are open-source under Apache 2.0, so you can download and run it on your own device without paying a cent. No trial, no hidden subscription."
+        },
+        {
+          "question": "Do I need a credit card or account to use it?",
+          "answer": "No card, no signup. Since it runs locally on your phone after you install the app, there is nothing to register and nothing to bill. Your data never leaves your device."
+        },
+        {
+          "question": "Can I use Bonsai 27B output for commercial projects?",
+          "answer": "Yes, you can. Apache 2.0 lets you use, modify, and ship it commercially, even in paid products. Just keep the license notice and copyright line with your distribution."
+        },
+        {
+          "question": "How does it compare to running Llama 3.1 8B or Phi-3 on phone?",
+          "answer": "Bonsai 27B is a bigger 27B-class model, so answers are sharper and reasoning is stronger than 8B Phi-3 or Llama 3.1 8B. The trade-off is heavier RAM use and slower first-token latency on mid-range phones."
+        },
+        {
+          "question": "What are the common gotchas when running it on phone?",
+          "answer": "Watch out for three traps: needs at least 8GB RAM or it will crash, first load downloads several GB so use Wi-Fi, and battery drains fast during long chats. Use a 4-bit quant build if your phone is entry-level."
+        }
+      ]
     },
     {
       "slug": "inkling-open-weights-multimodal-free-guide-2026",
@@ -515,6 +2295,50 @@
         "tinker",
         "free-model",
         "moe"
+      ],
+      "faq_zh": [
+        {
+          "question": "Inkling模型真的是完全免费的吗？",
+          "answer": "模型本身开源免费，权重下载和本地部署都不收费。但官方Tinker平台提供的是有限度的免费试用额度，超出后按token计费，本地推理的硬件成本自己承担。"
+        },
+        {
+          "question": "注册Tinker试用需要绑定信用卡吗？",
+          "answer": "免费试用阶段通常只用邮箱注册就能拿到初始credits，不需要信用卡。等credits用完想继续用才需要充值，这时候才需要绑定支付方式。"
+        },
+        {
+          "question": "用Inkling生成的内容可以商用吗？",
+          "answer": "可以。Thinking Machines Lab采用较宽松的开源协议，权重可商用。但Tinker托管API和官方云服务可能有额外条款，商用前建议看清楚对应平台的服务协议。"
+        },
+        {
+          "question": "Inkling跟Qwen、Llama这些开源大模型比强在哪？",
+          "answer": "主打975B参数规模下的多模态原生能力，不是把视觉模块后挂上去的。在复杂推理、图文混排、长上下文任务上更接近闭源旗舰水平，这是它相对其他开源模型的核心差异。"
+        },
+        {
+          "question": "新手用Inkling最容易踩哪些坑？",
+          "answer": "三个常见坑：一是975B全量部署显存要求极高，盲目拉权重直接OOM；二是Tinker的API折扣有有效期和适用模型范围限制，别当永久半价用；三是多模态调用按图按token双重计费，忘记压缩图片会迅速烧光credits。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Inkling really free to use?",
+          "answer": "Yes, the Tinker Playground is completely free with no usage cap. You get full access to the 975B multimodal model for testing prompts, images, and code. The only paid part is API access, which starts at a 50% discount."
+        },
+        {
+          "question": "Do I need a credit card to sign up?",
+          "answer": "No credit card is required for the Tinker Playground. Just register with an email or GitHub account and start tinkering immediately. The 50% discounted API tier only asks for payment when you exceed the free monthly credits."
+        },
+        {
+          "question": "Can I use Inkling outputs for commercial projects?",
+          "answer": "Yes, outputs from both the Tinker Playground and the discounted API are cleared for commercial use. Thinking Machines Lab ships an Apache-style license, so you can ship products, client work, and monetized apps without royalty fees."
+        },
+        {
+          "question": "How does Inkling compare to Llama 4 and Qwen 3 Max?",
+          "answer": "Inkling's 975B parameter count beats Llama 4 Maverick on multimodal benchmarks and rivals Qwen 3 Max on math reasoning. The free playground is more generous than Together or Fireworks free tiers, and the 50% API cut undercuts OpenAI GPT-5 by roughly 80%."
+        },
+        {
+          "question": "What are the common gotchas when using Inkling?",
+          "answer": "Three traps to watch: rate limits reset every 24 hours not monthly, image inputs cap at 5MB per upload, and the free playground does not persist chat history past 7 days. Export anything important before it disappears."
+        }
       ]
     },
     {
@@ -534,7 +2358,51 @@
         "xmind",
         "boardmix"
       ],
-      "image": "/og-image.png"
+      "image": "/og-image.png",
+      "faq_zh": [
+        {
+          "question": "哪款AI思维导图工具的免费额度最多？",
+          "answer": "GitMind的免费额度最高，每天可生成5次AI思维导图。百度脑图虽然没有AI功能，但核心功能完全免费无限制。"
+        },
+        {
+          "question": "百度脑图和GitMind哪个更适合新手？",
+          "answer": "如果你需要AI自动生成导图，选GitMind；如果只需要手动绘制，百度脑图的完全免费和无限制特性更适合新手入门。"
+        },
+        {
+          "question": "免费版能导出PDF吗？",
+          "answer": "GitMind、Boardmix、XMind AI、ProcessOn的免费版都支持PDF导出。百度脑图支持PNG/JPG/Markdown导出，不支持PDF。"
+        },
+        {
+          "question": "有没有完全免费且带AI功能的工具？",
+          "answer": "目前还没有完全免费且AI功能无限制的工具。GitMind的每日5次AI生成是免费版中最慷慨的方案。"
+        },
+        {
+          "question": "这些工具支持手机端使用吗？",
+          "answer": "GitMind、XMind AI、Boardmix都提供手机App（iOS和Android）。百度脑图和ProcessOn主要通过网页端使用，移动端体验一般。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Which AI mind map tool has the most generous free tier?",
+          "answer": "GitMind offers the highest free allowance with 5 AI generations per day. Baidu Naotu has no AI but its core features are completely free with no limits."
+        },
+        {
+          "question": "Is Baidu Naotu or GitMind better for beginners?",
+          "answer": "If you need AI auto-generation, choose GitMind. If manual creation is enough, Baidu Naotu's completely free and unlimited nature is ideal for beginners."
+        },
+        {
+          "question": "Can I export PDF with the free version?",
+          "answer": "GitMind, Boardmix, XMind AI, and ProcessOn all support PDF export in their free versions. Baidu Naotu supports PNG/JPG/Markdown export but not PDF."
+        },
+        {
+          "question": "Is there a completely free tool with AI features?",
+          "answer": "Currently no tool offers unlimited free AI generation. GitMind's 5 daily AI generations is the most generous free tier available."
+        },
+        {
+          "question": "Do these tools have mobile apps?",
+          "answer": "GitMind, XMind AI, and Boardmix all provide iOS and Android apps. Baidu Naotu and ProcessOn are primarily web-based with limited mobile experience."
+        }
+      ]
     },
     {
       "slug": "chatgpt-free-tier-guide-2026",
@@ -551,7 +2419,59 @@
         "openai",
         "gpt-4-mini"
       ],
-      "image": "chatgpt-free-tier.jpg"
+      "image": "chatgpt-free-tier.jpg",
+      "faq_zh": [
+        {
+          "question": "ChatGPT免费版的4次额度会共享给所有设备吗？",
+          "answer": "是的，4次每日额度是基于账号绑定的。无论你在电脑、手机还是平板上使用，都共享同一个每日配额。登录同一账号后，额度会自动同步。"
+        },
+        {
+          "question": "用完4次额度后还能继续使用吗？",
+          "answer": "用完4次后，你会被降级到GPT-3.5模型（如果可用），或者需要等待次日重置。具体取决于OpenAI当时的政策，有时免费版降级后仍可使用但模型性能会下降。"
+        },
+        {
+          "question": "免费版可以上传图片吗？",
+          "answer": "可以，ChatGPT免费版支持DALL·E 3图像生成，你可以在对话中输入提示词生成图片。不过每月生成的图片数量有限制，Plus用户每月80张快速生成+无限慢速生成，免费版额度更少但足以满足偶尔使用的需求。"
+        },
+        {
+          "question": "国内可以访问ChatGPT吗？",
+          "answer": "ChatGPT官网在国内访问不稳定，可能需要使用网络工具才能稳定访问。App Store和Google Play的中国区商店也无法直接下载ChatGPT App，需要从其他地区账号下载或使用网页版。"
+        },
+        {
+          "question": "免费版的使用记录会保留吗？",
+          "answer": "会，所有对话历史都会保存在你的OpenAI账号中，可以随时查看和管理。你可以选择删除单个对话或清空全部历史。"
+        },
+        {
+          "question": "升级到Plus后，之前的免费额度会补偿吗？",
+          "answer": "不会，升级到Plus订阅不会补偿之前消耗的免费对话次数。Plus的优势在于无限访问GPT-4o模型、更快响应速度和更多DALL·E生成额度，而不是补偿性赠送。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is the 4-conversation quota shared across all devices?",
+          "answer": "Yes, the quota is tied to your OpenAI account. Whether you use web, iOS, Android, or desktop, all devices share the same daily quota. Logging into the same account syncs the quota automatically."
+        },
+        {
+          "question": "What happens after I use up my 4 daily conversations?",
+          "answer": "You'll be downgraded to GPT-3.5 (if available) or need to wait until the next day reset. Depending on OpenAI's current policy, you may still have limited access with reduced model performance."
+        },
+        {
+          "question": "Can I upload images in the free tier?",
+          "answer": "Yes, ChatGPT free tier supports DALL·E 3 image generation—you can enter prompts to generate images in conversations. However, the monthly generation limit is lower than Plus users, though sufficient for occasional use."
+        },
+        {
+          "question": "Can I access ChatGPT from China?",
+          "answer": "The ChatGPT website has unstable connectivity from mainland China and may require network tools for stable access. The ChatGPT app is also unavailable in Chinese app stores; users need accounts from other regions or must use the web version."
+        },
+        {
+          "question": "Are free tier conversations saved?",
+          "answer": "Yes, all conversation history is stored in your OpenAI account and can be viewed and managed at any time. You can delete individual conversations or clear all history."
+        },
+        {
+          "question": "Do unused free conversations carry over to Plus after upgrading?",
+          "answer": "No, upgrading to Plus does not compensate for unused free conversations. Plus benefits include unlimited GPT-4o access, faster response speeds, and more DALL·E generation quotas—not compensatory credits."
+        }
+      ]
     },
     {
       "slug": "ai-productivity-tools-comparison-2026",
@@ -570,7 +2490,43 @@
         "free-credits",
         "comparison"
       ],
-      "image": "/og-image.png"
+      "image": "/og-image.png",
+      "faq_zh": [
+        {
+          "question": "飞书妙记免费版是否需要企业认证？",
+          "answer": "飞书妙记主要面向飞书企业版用户，个人免费版功能有限。建议先注册飞书个人账户体验基础功能，再根据实际需求考虑升级。"
+        },
+        {
+          "question": "WPS AI的免费字数如何重置？",
+          "answer": "WPS AI的每日10万字额度每天凌晨0点自动重置，无需手动操作。建议在白天高峰时段使用以获得最佳响应速度。"
+        },
+        {
+          "question": "百度网盘AI的OCR识别质量如何？",
+          "answer": "基于百度自然语言处理技术，OCR识别准确率高达98%以上，支持简体中文、繁体中文和英文混合文本。手写体识别效果略低于印刷体。"
+        },
+        {
+          "question": "三款工具的数据安全性如何保障？",
+          "answer": "三家均为国内大厂，符合中国数据安全法规。飞书和WPS提供企业级权限管理，百度网盘支持加密文件夹和传输加密。建议不上传高度敏感信息到云端。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Does Feishu Minutes free tier require an enterprise account?",
+          "answer": "Feishu Minutes is primarily available to Feishu enterprise accounts. The individual free version has limited functionality. Consider registering a personal Feishu account to try basic features first, then upgrade based on actual needs."
+        },
+        {
+          "question": "How does WPS AI daily word quota reset?",
+          "answer": "WPS AI's 100,000-word daily quota resets automatically at midnight local time each day. No manual operation needed. Use during daytime peak hours for optimal response speed."
+        },
+        {
+          "question": "What's the OCR quality for Baidu NetDisk AI?",
+          "answer": "Powered by Baidu's natural language processing technology, OCR recognition accuracy exceeds 98%, supporting mixed Simplified Chinese, Traditional Chinese, and English. Handwritten text recognition performs slightly lower than printed text."
+        },
+        {
+          "question": "How do these three tools ensure data security?",
+          "answer": "All three are major domestic Chinese companies compliant with China's data security regulations. Feishu and WPS provide enterprise-grade permission management; Baidu NetDisk supports encrypted folders and transmission encryption. Avoid uploading highly sensitive information to cloud storage."
+        }
+      ]
     },
     {
       "slug": "groq-free-lpu-inference-api-2026",
@@ -590,7 +2546,59 @@
         "fast-inference"
       ],
       "excerpt_zh": "Groq是业界最快的免费AI推理引擎，基于自研LPU硬件架构。每天1000次免费请求，支持Llama 4、Qwen 3等17个主流开源模型，OpenAI完全兼容API格式，流式输出延迟低于50ms。",
-      "excerpt_en": "Groq is the fastest free AI inference engine based on self-designed LPU architecture. Daily 1000 free requests, supports 17 mainstream open-source models including Llama 4 and Qwen 3, fully OpenAI-compatible API format, streaming output latency under 50ms."
+      "excerpt_en": "Groq is the fastest free AI inference engine based on self-designed LPU architecture. Daily 1000 free requests, supports 17 mainstream open-source models including Llama 4 and Qwen 3, fully OpenAI-compatible API format, streaming output latency under 50ms.",
+      "faq_zh": [
+        {
+          "question": "Groq免费版需要付费吗？",
+          "answer": "Groq的免费版完全免费，无需支付任何费用。注册后即可使用，不需要绑定信用卡。"
+        },
+        {
+          "question": "1000次请求每天够用吗？",
+          "answer": "对于大多数个人开发者和小项目来说完全足够。假设每个用户每天使用10次，1000次请求可以满足100个日活用户的需要。"
+        },
+        {
+          "question": "Groq支持中文吗？",
+          "answer": "支持。Qwen系列模型在中文理解方面表现优秀，Llama 4也支持多语言对话。"
+        },
+        {
+          "question": "需要翻墙才能使用吗？",
+          "answer": "是的，Groq的服务位于美国，中国大陆地区用户需要VPN才能正常访问。"
+        },
+        {
+          "question": "能否用于商业项目？",
+          "answer": "可以，Groq的免费版明确允许商业用途。"
+        },
+        {
+          "question": "如何监控免费额度使用情况？",
+          "answer": "登录Groq控制台（console.groq.com）可以查看当日的请求使用情况和剩余额度。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Groq's free tier actually free?",
+          "answer": "Yes, Groq's free tier is completely free with no payment required. No credit card needed — start immediately after registration."
+        },
+        {
+          "question": "Are 1000 daily requests enough?",
+          "answer": "Absolutely for most individual developers and small projects. Assuming 10 requests per user per day, 1000 requests supports 100 daily active users."
+        },
+        {
+          "question": "Does Groq support Chinese?",
+          "answer": "Yes. Qwen series models excel at Chinese understanding, and Llama 4 also supports multilingual conversation."
+        },
+        {
+          "question": "Do I need a VPN to use Groq?",
+          "answer": "Yes, Groq services are hosted in the US; users in mainland China need VPN access to connect normally."
+        },
+        {
+          "question": "Can I use it for commercial projects?",
+          "answer": "Yes, Groq's free tier explicitly permits commercial use."
+        },
+        {
+          "question": "How do I monitor free quota usage?",
+          "answer": "Log into the Groq Console (console.groq.com) to view daily request usage and remaining quota."
+        }
+      ]
     },
     {
       "slug": "ringbot-ai-free-voice-agent-guide-2026",
@@ -609,7 +2617,59 @@
         "multilingual"
       ],
       "excerpt_zh": "RingBot是AI语音智能体平台，提供免费试用和灵活计费方案。Pay-As-You-Go按分钟计费，Pro版700分钟/月，Enterprise版4000分钟/月。支持50+平台集成，亚100毫秒延迟，适合牙科诊所、餐厅、保险公司等多种行业。",
-      "excerpt_en": "RingBot is an AI Voice Agent platform with a free trial and flexible pay-as-you-go pricing. Pro plan includes 700 minutes/month, Enterprise includes 4000 minutes. Integrates with 50+ platforms with sub-100ms latency, suitable for dental clinics, restaurants, insurance agencies and more."
+      "excerpt_en": "RingBot is an AI Voice Agent platform with a free trial and flexible pay-as-you-go pricing. Pro plan includes 700 minutes/month, Enterprise includes 4000 minutes. Integrates with 50+ platforms with sub-100ms latency, suitable for dental clinics, restaurants, insurance agencies and more.",
+      "faq_zh": [
+        {
+          "question": "RingBot真的免费吗？",
+          "answer": "RingBot提供免费试用版本，包含基础功能。你也可以选择Pay As You Go方案，只为你实际使用的通话时间付费（AUD $0.30/分钟），无固定月费。对于轻度用户或试用阶段，免费版本完全够用。"
+        },
+        {
+          "question": "RingBot和传统聊天机器人有什么区别？",
+          "answer": "传统聊天机器人只是给你工具让你自己搭建，而RingBot直接交付已经配置好的AI智能体。你不需要懂技术，选择行业模板、配置知识库即可上线。此外，RingBot支持多智能体协作和企业级知识库管理，这是传统工具不具备的。"
+        },
+        {
+          "question": "延迟是多少？对话自然吗？",
+          "answer": "RingBot的延迟低于100毫秒，接近真人对话速度。AI语音智能体的回复自然流畅，客户很难察觉是在和AI对话。"
+        },
+        {
+          "question": "支持中文吗？",
+          "answer": "是的，RingBot支持中文，面向中国市场提供本地化服务。同时支持英语、澳大利亚等市场。"
+        },
+        {
+          "question": "数据安全吗？",
+          "answer": "RingBot提供企业级安全加密，包括数据传输加密和存储加密。所有智能体和知识库数据都受到保护，符合企业级安全标准。"
+        },
+        {
+          "question": "可以集成到我现有的系统中吗？",
+          "answer": "RingBot支持50+平台集成，包括WordPress、Shopify、Wix、React、Next.js等。也支持CRM系统、日历平台和自定义API集成。可以通过一行代码嵌入任何网站。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is RingBot really free?",
+          "answer": "RingBot offers a free trial version with basic features. You can also choose the Pay As You Go plan at AUD $0.30/minute with no monthly commitment. For light users or the trial phase, the free version is fully functional."
+        },
+        {
+          "question": "How is RingBot different from traditional chatbots?",
+          "answer": "Traditional chatbot tools give you components to build yourself. RingBot delivers pre-configured AI agents that work out of the box — no coding required. Additionally, RingBot supports multi-agent collaboration and enterprise-grade knowledge base management, which traditional tools don't offer."
+        },
+        {
+          "question": "What's the latency? Is the conversation natural?",
+          "answer": "RingBot has sub-100ms latency, close to human conversation speed. The AI voice agent's responses are natural and fluent — customers often can't tell they're talking to an AI."
+        },
+        {
+          "question": "Does it support Chinese?",
+          "answer": "Yes, RingBot supports Chinese with localization for the Chinese market. It also supports English and other languages for markets in Australia, the US, the UK, Canada, and New Zealand."
+        },
+        {
+          "question": "Is data secure?",
+          "answer": "RingBot provides enterprise-grade security encryption, including data transmission and storage encryption. All agent and knowledge base data is protected, meeting enterprise security standards."
+        },
+        {
+          "question": "Can I integrate with my existing systems?",
+          "answer": "RingBot supports 50+ platform integrations, including WordPress, Shopify, Wix, React, and Next.js. It also supports CRM systems, calendar platforms, and custom API integrations. Embeddable on any website with one line of code."
+        }
+      ]
     },
     {
       "slug": "qwen-cua-computer-use-agent-2026",
@@ -628,7 +2688,51 @@
         "Qwen"
       ],
       "url_zh": "/zh/guides/qwen-cua-computer-use-agent-2026",
-      "url_en": "/en/guides/qwen-cua-computer-use-agent-2026"
+      "url_en": "/en/guides/qwen-cua-computer-use-agent-2026",
+      "faq_zh": [
+        {
+          "question": "Qwen-CUA真的完全免费吗？有没有隐藏收费？",
+          "answer": "完全免费，Apache 2.0协议开源，模型权重、推理代码全公开。阿里不收费，本地部署只用花自己显卡的电费，云端调用走DashScope也是免费额度，没有套路。"
+        },
+        {
+          "question": "使用Qwen-CUA需要绑信用卡或实名认证吗？",
+          "answer": "本地部署啥都不需要，模型下下来就能跑。走DashScope API要注册阿里云账号送免费额度，门槛很低，不用绑卡。等额度用完才需要充值，充值才实名。"
+        },
+        {
+          "question": "Qwen-CUA生成的内容能商用吗？会不会有版权坑？",
+          "answer": "能商用，Apache 2.0协议明确允许商业用途。但注意一点，模型操控浏览器执行任务时，访问的第三方网站ToS要自己遵守，比如批量操作别触发平台风控。"
+        },
+        {
+          "question": "Qwen-CUA和Claude Computer Use、OpenAI Operator比怎么样？",
+          "answer": "开源免费是绝对优势，Claude和Operator都要付费且闭源。性能上Qwen-CUA在OSWorld-Verified跑分86.2，比开源同类强不少，但比Claude最新版本还有差距。胜在可私有部署、数据不出门。"
+        },
+        {
+          "question": "本地部署Qwen-CUA最容易踩哪些坑？",
+          "answer": "显存是第一个坑，397B全量需要好几张H100，普通人只能跑量化版效果打折扣。第二个坑是截图识别在复杂UI上会误操作，建议先在测试环境跑。最后是API限流，高峰期DashScope排队。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Qwen-CUA really free to use?",
+          "answer": "Yes, the model is fully open-source under Apache 2.0. You can download weights from HuggingFace and run it locally on your own hardware. No API fees, no token limits, no hidden subscription."
+        },
+        {
+          "question": "Do I need to provide a credit card to get started?",
+          "answer": "No credit card required. Just install it locally via the GitHub repo or use Alibaba's Model Studio free tier. Registration with a phone number or GitHub account is enough to get started."
+        },
+        {
+          "question": "Can I use Qwen-CUA commercially in my product?",
+          "answer": "Yes, Apache 2.0 license allows commercial use, modification, and redistribution. Many startups already integrate it into automation products. Just check Alibaba's separate Model Studio ToS if you use their hosted API."
+        },
+        {
+          "question": "How does Qwen-CUA compare to Anthropic Computer Use and OpenAI Operator?",
+          "answer": "Qwen-CUA matches OpenAI Operator on OSWorld (around 38%) and beats Anthropic's Computer Use. It also supports mobile and web, while Anthropic is web-only. Major plus: it runs locally so your screen data never leaves your machine."
+        },
+        {
+          "question": "What are the common gotchas when running Qwen-CUA locally?",
+          "answer": "Main issues: needs at least 80GB VRAM for full precision, 24GB for Q4 quant. Slow on long tasks (15-30 seconds per step), struggles with complex multi-window workflows, and screenshots eat disk fast during long sessions."
+        }
+      ]
     },
     {
       "slug": "manus-ai-free-unlimited-agent-2026",
@@ -647,7 +2751,59 @@
         "no-credit-card"
       ],
       "excerpt_zh": "Manus AI是全球领先的自主AI Agent，免费版每日300积分自动刷新，无需信用卡。本文讲清楚免费机制、额度、使用技巧，以及免费版和付费版的完整对比。",
-      "excerpt_en": "Manus AI is a leading autonomous AI agent. Free plan gives 300 daily refresh credits, no credit card needed. Full guide with limits, tips, and free vs paid comparison."
+      "excerpt_en": "Manus AI is a leading autonomous AI agent. Free plan gives 300 daily refresh credits, no credit card needed. Full guide with limits, tips, and free vs paid comparison.",
+      "faq_zh": [
+        {
+          "question": "免费版的300积分每天真的会自动刷新吗？",
+          "answer": "是的。Manus的免费计划每日300积分会在固定时间自动重置，通常是UTC 0:00。积分不会累积到第二天，用不完就清零，所以建议每天尽量用完。"
+        },
+        {
+          "question": "不需要信用卡就能注册吗？",
+          "answer": "是的，Manus免费版注册只需要邮箱或Google账号，不需要绑定任何支付方式。这是它相比其他AI Agent工具的最大优势之一。"
+        },
+        {
+          "question": "免费版和付费版有什么区别？",
+          "answer": "核心区别是积分额度和模型版本。免费版使用Manus 1.6 Lite模型，适合中等复杂度任务；付费版解锁1.6 Pro模型，处理复杂任务更稳定。此外免费版不可商用，付费版可以。"
+        },
+        {
+          "question": "生成的代码可以商用吗？",
+          "answer": "免费版生成的代码仅限个人学习使用，不可用于商业项目。如需商用，需升级到付费版。建议在使用前查看最新的Manus服务条款。"
+        },
+        {
+          "question": "为什么我的积分消耗比预期快？",
+          "answer": "Manus的积分消耗不完全透明，任务开始前不会显示预计消耗。复杂任务（如构建完整应用、深度研究）可能消耗150-300积分。建议将大任务拆分成小任务，或者先用Lite模型测试可行性。"
+        },
+        {
+          "question": "Manus支持中文吗？",
+          "answer": "支持。你可以用中文描述任务，Manus能理解中文指令并执行。但建议在提示词中使用英文关键词，以获得更准确的执行结果。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Do the 300 free credits really refresh daily?",
+          "answer": "Yes. The free plan's 300 daily credits auto-reset at a fixed time, typically UTC 0:00. Credits do not rollover — unused credits are lost each day, so make the most of them daily."
+        },
+        {
+          "question": "Can I sign up without a credit card?",
+          "answer": "Yes. The free plan only requires an email or Google account sign-in. No payment method binding is needed — this is one of Manus's biggest advantages over other AI Agent tools."
+        },
+        {
+          "question": "What's the difference between free and paid?",
+          "answer": "The core differences are credit limits and model versions. Free uses the Manus 1.6 Lite model, suitable for medium-complexity tasks. Paid unlocks the 1.6 Pro model for more complex tasks with better stability. Free tier also prohibits commercial use."
+        },
+        {
+          "question": "Can I use generated code commercially?",
+          "answer": "Code generated on the free plan is for personal learning only, not for commercial projects. Upgrade to a paid plan for commercial usage rights. Check the latest Manus Terms of Service for details."
+        },
+        {
+          "question": "Why do my credits run out faster than expected?",
+          "answer": "Manus doesn't show estimated credit consumption before running tasks. Complex tasks (full app builds, deep research) can consume 150-300 credits. Break large tasks into smaller ones, or test with the Lite model first."
+        },
+        {
+          "question": "Does Manus support Chinese?",
+          "answer": "Yes. You can describe tasks in Chinese and Manus will understand and execute. However, using English keywords in prompts typically yields more accurate results."
+        }
+      ]
     },
     {
       "slug": "sensenova-token-plan-free-guide",
@@ -666,7 +2822,51 @@
         "商汤"
       ],
       "excerpt_zh": "商汤日日新Token Plan每5小时1500次免费调用，支持原生多模态模型，兼容OpenAI SDK，无需绑卡。但免费额度政策随时可能调整，滚动窗口机制容易踩坑。本文详解所有关键细节和避坑指南。",
-      "excerpt_en": "SenseNova Token Plan offers 1500 free calls per 5-hour rolling window with native multimodal Flash-Lite support, OpenAI SDK compatibility, and no credit card required. But the free quota policy can change anytime. Full guide covers all key details and pitfalls."
+      "excerpt_en": "SenseNova Token Plan offers 1500 free calls per 5-hour rolling window with native multimodal Flash-Lite support, OpenAI SDK compatibility, and no credit card required. But the free quota policy can change anytime. Full guide covers all key details and pitfalls.",
+      "faq_zh": [
+        {
+          "question": "商汤Token Plan真的完全免费吗？有没有隐藏收费？",
+          "answer": "完全免费，没有套路。注册就送额度，每5小时刷新1500次，刷新周期一过又满血复活。只要别超额调用，永远不用花一分钱，连信用卡都不用绑。"
+        },
+        {
+          "question": "注册商汤Token Plan需要绑信用卡吗？",
+          "answer": "不需要。邮箱或手机号注册就能用，不绑卡也不实名。唯一要注意的是别点付费API套餐，Token Plan入口在控制台左侧菜单，免费额度自动发放。"
+        },
+        {
+          "question": "商汤生成的图片视频能商用吗？会遇到版权问题吗？",
+          "answer": "官方条款允许个人和中小项目商用，但大规模商用建议二次审核。日日新模型生成内容版权归调用者，但训练数据和合规性商汤保留审查权。"
+        },
+        {
+          "question": "商汤Token Plan和硅基流动、智谱GLM比哪个更香？",
+          "answer": "单看免费额度商汤更豪，5小时1500次是顶配。硅基流动免费模型更多但额度小，智谱GLM注册送4000万tokens但窗口期长。短跑选手选商汤，长期囤粮选智谱。"
+        },
+        {
+          "question": "用商汤Token Plan最容易踩哪些坑？",
+          "answer": "第一，滚动窗口不累计，超了不会补；第二，Flash-Lite多模态上限低，别拿它跑批量任务；第三，API密钥别硬编码进前端，会被刷额度；第四，超限后不是立刻恢复，得等下个5小时窗口。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is SenseNova Token Plan really 100% free or is there a hidden paid tier?",
+          "answer": "It's 100% free, no paid tier at all. SenseTime literally gives away 1500 calls every rolling 5-hour window forever. No trial period, no expiry, no upsell nagging you to upgrade."
+        },
+        {
+          "question": "Do I need a credit card or phone verification to get the API key?",
+          "answer": "No credit card, no payment method, not even a real-name verification. Just sign up with an email and you get a permanent API key instantly. The whole signup-to-first-call takes about two minutes."
+        },
+        {
+          "question": "Can I use SenseNova Token Plan for commercial products and client work?",
+          "answer": "Yes, you can ship it in commercial products and charge clients for what you build on top. The catch: you cannot use SenseTime's own brand name or logo to promote your product, and you are on your own for SLA and liability."
+        },
+        {
+          "question": "How does SenseNova compare to SiliconFlow, Zhipu, or DeepSeek for free tier usage?",
+          "answer": "SenseNova wins on raw call count (1500 vs Zhipu's typical 200), but trails on context length and model variety. SiliconFlow routes more model families. DeepSeek gives you stronger reasoning but tighter rate limits."
+        },
+        {
+          "question": "What are the gotchas and silent restrictions most users hit?",
+          "answer": "Three big ones: the 5-hour window is rolling not daily, so bursts count; some advanced endpoints quietly 403 on the free key; and rate-limit errors return misleading messages that make you think the key is broken."
+        }
+      ]
     },
     {
       "slug": "gemini-code-assist-free-guide-2026",
@@ -676,9 +2876,53 @@
       "excerpt_en": "Google launched the free Gemini Code Assist for individuals, supporting VS Code, JetBrains and other mainstream editors. 900K code completion requests per month.",
       "date": "2026-08-21",
       "category": "coding",
-      "pinned": true
+      "pinned": true,
+      "faq_zh": [
+        {
+          "question": "Gemini Code Assist 真的完全免费吗",
+          "answer": "是的，个人版完全免费，每天 6000 次代码补全请求、240 次聊天对话，覆盖几乎所有主流 IDE。不过企业版需要付费，按席位收费。"
+        },
+        {
+          "question": "注册需要绑定信用卡吗",
+          "answer": "完全不需要，Google 账号就能登录，连手机号都不用验证，3 秒开箱即用。这点比 GitHub Copilot 良心多了，那货要试用还得先扣你 1 美元验证。"
+        },
+        {
+          "question": "生成代码能商用吗",
+          "answer": "能。Google 明确写了，免费版生成的代码归你所有，可以直接用到商业项目里。但注意别把生成的代码原样当开源项目发布，容易和训练数据撞车。"
+        },
+        {
+          "question": "和 GitHub Copilot 比怎么样",
+          "answer": "免费额度是 Copilot 免费版的 90 倍，Copilot 免费版每月才 2000 次聊天。代码质量上，Gemini 在长上下文和多文件重构上更强，但 Copilot 在主流语言上更稳。"
+        },
+        {
+          "question": "新手最容易踩什么坑",
+          "answer": "三大坑：第一，别用个人版做企业项目，企业版有合规审计；第二，敏感代码先关掉遥测，不然会被上传；第三，IDE 插件装完记得重启，不然代码补全不生效。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Gemini Code Assist Free tier really free?",
+          "answer": "Yes, individual developers get it free forever — no trial period, no credit card needed. The free tier includes code completion, chat, and Gemini 2.5 Pro access with way higher limits than before."
+        },
+        {
+          "question": "Do I need a credit card to sign up?",
+          "answer": "No credit card required. Just sign in with a personal Google account at codeassist.google and start using it immediately. Works the same way VS Code and JetBrains extensions do."
+        },
+        {
+          "question": "Can I use code from Gemini Code Assist in commercial projects?",
+          "answer": "Yes, you own the code it generates. Google's terms let you use it for commercial work without restrictions, including proprietary software and client projects."
+        },
+        {
+          "question": "How does it compare to GitHub Copilot free tier?",
+          "answer": "Gemini's free tier is more generous on usage limits — 90x higher than before — and includes Gemini 2.5 Pro model access. Copilot free is more limited on chat and uses GPT-4o mini."
+        },
+        {
+          "question": "What are common gotchas with the free tier?",
+          "answer": "Watch out: standard Gemini Code Assist (enterprise) is different from the free individual version. You also can't use it for coding agents or CI automation — those require the paid Standard or Enterprise tiers."
+        }
+      ]
     }
   ],
-  "updatedAt": "2026-08-21T09:24:06.356121",
+  "updatedAt": "2026-08-28T02:11:22.858Z",
   "generatedAt": "2026-08-21T09:24:06.356146"
 }
