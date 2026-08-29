@@ -285,7 +285,7 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)
 </div>
 
-<p>If you already use a local chat client such as ChatGPT Next Web, LobeChat, ChatBox, Open WebUI, or LibreChat, you can switch to GMI by changing three settings. The API Base URL becomes "https://api.gmi-serving.com/v1." The API key field gets your GMI key. The model name becomes "MiniMaxAI/MiniMax-M2.5." In LobeChat the path is Settings → Language Model → OpenAI Compatible. In ChatBox the path is Settings → Model Service → Custom OpenAI Compatible. In Open WebUI the path is Admin Panel → Settings → Models, then the OpenAI API section.</p>
+<p>If you already use a local chat client such as <a href="/en/tools/chatgpt/">ChatGPT</a> Next Web, LobeChat, ChatBox, Open WebUI, or LibreChat, you can switch to GMI by changing three settings. The API Base URL becomes "https://api.gmi-serving.com/v1." The API key field gets your GMI key. The model name becomes "MiniMaxAI/MiniMax-M2.5." In LobeChat the path is Settings → Language Model → OpenAI Compatible. In ChatBox the path is Settings → Model Service → Custom OpenAI Compatible. In Open WebUI the path is Admin Panel → Settings → Models, then the OpenAI API section.</p>
 
 <h3>Step 5: Use the Anthropic-compatible endpoint for thinking blocks</h3>
 
@@ -328,12 +328,12 @@ for block in message.content:
 <ul>
 <li><code>MiniMaxAI/MiniMax-M2.7</code> — MiniMax's latest sub-flagship, described as the start of their self-improvement training run</li>
 <li><code>MiniMaxAI/MiniMax-M2.5</code> — stable, ideal for daily work</li>
-<li><code>DeepSeek V4 Pro</code> and <code>DeepSeek V4 Flash</code> — DeepSeek's latest with strong chain-of-thought</li>
+<li><code><a href="/en/tools/deepseek/">DeepSeek V4</a> Pro</code> and <code>DeepSeek V4 Flash</code> — DeepSeek's latest with strong chain-of-thought</li>
 <li><code>GPT-5.4</code>, <code>GPT-5.4 Pro</code>, <code>GPT-5.4 Mini</code>, <code>GPT-5.4 Nano</code> — full OpenAI product line</li>
-<li><code>Claude Sonnet 4.5</code>, <code>Claude Sonnet 4.6</code>, <code>Claude Haiku 4.5</code>, <code>Claude Opus 4.5</code> — Anthropic product line</li>
-<li><code>Kimi K2.5</code>, <code>Kimi K2.6</code>, <code>Kimi K3</code> — Moonshot</li>
+<li><code><a href="/en/tools/claude/">Claude Sonnet</a> 4.5</code>, <code>Claude Sonnet 4.6</code>, <code>Claude Haiku 4.5</code>, <code>Claude Opus 4.5</code> — Anthropic product line</li>
+<li><code><a href="/en/tools/kimi/">Kimi K2</a>.5</code>, <code>Kimi K2.6</code>, <code>Kimi K3</code> — Moonshot</li>
 <li><code>GLM 4.5</code>, <code>GLM 4.7</code>, <code>GLM 5</code>, <code>GLM 5.1</code> — Zhipu</li>
-<li><code>Qwen3</code> family (32B, 235B, Coder 480B) — Alibaba Tongyi</li>
+<li><code><a href="/en/tools/qwen/">Qwen3</a></code> family (32B, 235B, Coder 480B) — Alibaba <a href="/en/tools/aliyun-bailian/">Tongyi</a></li>
 <li><code>Llama 4 Maverick 17B</code> — Meta</li>
 </ul>
 
@@ -348,8 +348,8 @@ for block in message.content:
 
 <h3>Image, video, audio, 3D</h3>
 <ul>
-<li>Image: <code>Flux2-Dev</code>, <code>Flux2-Klein</code>, <code>gemini-3-pro-image</code>, <code>Qwen-Image-2512</code>, <code>Z-Image-Turbo</code>, <code>seedream-5.0-pro</code></li>
-<li>Video: <code>Kling V3</code>, <code>Seedance 2.5</code>, <code>Wan 2.7</code>, <code>MiniMax-H3</code>, <code>Hailuo-2.3</code>, <code>LTX-2</code></li>
+<li>Image: <code>Flux2-Dev</code>, <code>Flux2-Klein</code>, <code><a href="/en/tools/gemini/">gemini</a>-3-pro-image</code>, <code>Qwen-Image-2512</code>, <code>Z-Image-Turbo</code>, <code>seedream-5.0-pro</code></li>
+<li>Video: <code><a href="/en/tools/kling/">Kling</a> V3</code>, <code>Seedance 2.5</code>, <code>Wan 2.7</code>, <code>MiniMax-H3</code>, <code><a href="/en/tools/hailuo/">Hailuo</a>-2.3</code>, <code>LTX-2</code></li>
 <li>Audio: <code>MiniMax Speech 2.6 HD/Turbo</code>, <code>MiniMax Speech 2.8 HD/Turbo</code>, <code>MiniMax Music 3.0</code>, <code>Chatterbox-tts</code></li>
 <li>3D: <code>Hunyuan-3D-pro</code></li>
 </ul>

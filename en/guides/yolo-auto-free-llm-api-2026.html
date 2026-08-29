@@ -99,7 +99,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
 
 <p>In an era where AI coding agents and automated workflows are becoming essential, a reliable LLM API is a must-have for many developers. But most platforms charge per-token, making costs unpredictable—a single complex code refactoring task can consume tens of thousands of tokens and spike your bill instantly.</p>
 
-<p><strong>Yolo-Auto</strong> takes a different approach: <strong>flat-rate pricing based on concurrency, not tokens</strong>. Powered by the open-source Qwen3.6-35B-A3B model, it offers a fully OpenAI-compatible API. You get free credits on signup, and no credit card is required.</p>
+<p><strong>Yolo-Auto</strong> takes a different approach: <strong>flat-rate pricing based on concurrency, not tokens</strong>. Powered by the open-source <a href="/en/tools/qwen/">Qwen3</a>.6-35B-A3B model, it offers a fully OpenAI-compatible API. You get free credits on signup, and no credit card is required.</p>
 
 <h2>1. Platform Overview</h2>
 
@@ -194,13 +194,13 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)</code></pre>
 
 <h3>Step 4: Use the Desktop Client</h3>
-<p>Yolo-Auto also provides a desktop client that supports custom OpenAI-compatible base URLs. Configure it and chat just like you would with ChatGPT—ideal for non-programming use cases.</p>
+<p>Yolo-Auto also provides a desktop client that supports custom OpenAI-compatible base URLs. Configure it and chat just like you would with <a href="/en/tools/chatgpt/">ChatGPT</a>—ideal for non-programming use cases.</p>
 
 <h2>5. Yolo-Auto vs Other Free LLM APIs</h2>
 
 <table>
 <thead>
-<tr><th>Feature</th><th>Yolo-Auto</th><th>Cerebras</th><th>Mistral AI Studio</th><th>Agnes AI</th></tr>
+<tr><th>Feature</th><th>Yolo-Auto</th><th><a href="/en/tools/cerebras/">Cerebras</a></th><th><a href="/en/tools/mistral/">Mistral</a> AI Studio</th><th><a href="/en/tools/agnes-ai/">Agnes AI</a></th></tr>
 </thead>
 <tbody>
 <tr><td>Free allowance</td><td>15 requests/day</td><td>1M tokens/day</td><td>60K/day</td><td>Signup credits</td></tr>
@@ -237,7 +237,7 @@ print(response.choices[0].message.content)</code></pre>
 <p>Yolo-Auto uses a fair scheduler rather than strict token limits. During peak times, paid users get priority, but free users can still use the service—just with potentially slower response times.</p>
 
 <h3>4. Privacy Advantage</h3>
-<p>Unlike OpenAI or Claude, Yolo-Auto explicitly promises not to store your prompts and responses, and won't use your data for model training. This matters for developers handling sensitive code and business logic.</p>
+<p>Unlike OpenAI or <a href="/en/tools/claude/">Claude</a>, Yolo-Auto explicitly promises not to store your prompts and responses, and won't use your data for model training. This matters for developers handling sensitive code and business logic.</p>
 
 <h2>7. Summary</h2>
 

@@ -108,7 +108,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
 <li><strong>Model Library:</strong> Discover installed MLX models, browse compatible models on Hugging Face, download them, inspect capabilities, switch models, or remove old ones.</li>
 <li><strong>Performance Analytics:</strong> Track request volume, token usage, time to first token, decode speed, model performance, and recent activity.</li>
 <li><strong>Local API Server:</strong> OpenAI-compatible /v1/chat/completions, /v1/responses, /v1/models, image, and audio endpoints, plus Anthropic-compatible /v1/messages endpoints.</li>
-<li><strong>Coding Tool Integrations:</strong> Configure and launch Codex, Claude Code, Pi, Hermes, and OpenCode to connect to models running locally via Nativ.</li>
+<li><strong>Coding Tool Integrations:</strong> Configure and launch Codex, <a href="/en/tools/claude/">Claude Code</a>, Pi, Hermes, and OpenCode to connect to models running locally via Nativ.</li>
 <li><strong>Menu Bar Controls:</strong> Start or stop the server, change the loaded model, check serving statistics, all without breaking focus.</li>
 <li><strong>Advanced Inference Controls:</strong> Tune sampling, thinking budgets, structured output, KV-cache quantization, prefix caching, and speculative decoding.</li>
 </ul>
@@ -126,7 +126,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
 
 <h2>Supported Models</h2>
 
-<p>Nativ ships with curated open models from Google, Cohere, and Liquid AI. Here are the currently recommended models and their hardware requirements:</p>
+<p>Nativ ships with curated open models from Google, <a href="/en/tools/cohere/">Cohere</a>, and Liquid AI. Here are the currently recommended models and their hardware requirements:</p>
 
 <table>
 <tr><th>Model</th><th>Source</th><th>Context Window</th><th>Model Size</th><th>Capabilities</th></tr>
@@ -148,7 +148,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
 
 <h3>1. True local inference — zero data leakage</h3>
 
-<p>All inference runs on your Mac. Your prompts, chat history, and image attachments <strong>never leave your device</strong>. This stands in stark contrast to ChatGPT, Claude, and other cloud services that send your inputs to their servers for processing.</p>
+<p>All inference runs on your Mac. Your prompts, chat history, and image attachments <strong>never leave your device</strong>. This stands in stark contrast to <a href="/en/tools/chatgpt/">ChatGPT</a>, Claude, and other cloud services that send your inputs to their servers for processing.</p>
 
 <h3>2. Completely free, MIT licensed</h3>
 
@@ -191,7 +191,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
 <h2>Comparison with Cloud AI Services</h2>
 
 <table>
-<tr><th>Feature</th><th>Nativ (Local)</th><th>ChatGPT</th><th>Claude</th><th>Gemini</th></tr>
+<tr><th>Feature</th><th>Nativ (Local)</th><th>ChatGPT</th><th>Claude</th><th><a href="/en/tools/gemini/">Gemini</a></th></tr>
 <tr><td>Cost</td><td>✅ Completely Free</td><td>$20/month</td><td>Pay-per-use</td><td>Partially free</td></tr>
 <tr><td>Privacy</td><td>✅ Data stays on device</td><td>❌ Data uploaded to cloud</td><td>❌ Data uploaded to cloud</td><td>❌ Data uploaded to cloud</td></tr>
 <tr><td>Offline access</td><td>✅ Fully offline</td><td>❌ Requires internet</td><td>❌ Requires internet</td><td>❌ Requires internet</td></tr>
@@ -225,7 +225,7 @@ open build/XcodeDerivedData/Build/Products/Debug/Nativ.app</code></pre>
 <p>Professionals in healthcare, legal, and finance can use Nativ to run models locally, ensuring sensitive information never leaks to third-party servers. This is especially important for compliance with regulations like GDPR and HIPAA.</p>
 
 <h3>2. Programming assistance</h3>
-<p>By pointing Codex or Claude Code to Nativ's local API endpoint, developers get GitHub Copilot-like code completion and conversational assistance locally, without paying subscription fees or sending code to the cloud.</p>
+<p>By pointing Codex or Claude Code to Nativ's local API endpoint, developers get <a href="/en/tools/github-copilot/">GitHub Copilot</a>-like code completion and conversational assistance locally, without paying subscription fees or sending code to the cloud.</p>
 
 <h3>3. Offline work</h3>
 <p>In environments without internet connectivity (on a plane, remote areas, air-gapped networks), Nativ still works — as long as the model is already downloaded locally.</p>

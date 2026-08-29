@@ -99,7 +99,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
 
 <p>In August 2026, <strong>AirLLM</strong> has become the most popular open-source large language model inference framework worldwide, with over <strong>27,205 GitHub stars</strong> and more than <strong>500,000 total downloads</strong>. Its core promise is simple yet extraordinary: <strong>run 70B parameter models on a single 4GB consumer GPU without quantization, distillation, or pruning</strong>.</p>
 
-<p>The latest version <strong>v3.1.0</strong> (released July 29, 2026) now supports <strong>Kimi K3 (2.8T)</strong> — the largest open-source model ever released — requiring only <strong>3.72GB VRAM</strong> on a single RTX 6000 Ada. It also supports DeepSeek-V3 (671B), Llama 3.1 405B, and other massive models.</p>
+<p>The latest version <strong>v3.1.0</strong> (released July 29, 2026) now supports <strong>Kimi K3 (2.8T)</strong> — the largest open-source model ever released — requiring only <strong>3.72GB VRAM</strong> on a single RTX 6000 Ada. It also supports <a href="/en/tools/deepseek/">DeepSeek-V3</a> (671B), Llama 3.1 405B, and other massive models.</p>
 
 <p>This comprehensive guide will walk you through everything you need to know about AirLLM, including installation, supported models, performance benchmarks, configuration options, and practical usage tips.</p>
 
@@ -125,7 +125,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
 
 <table>
 <tr><th>Model</th><th>Parameters</th><th>Minimum VRAM</th><th>Recommended VRAM</th><th>First Load Time</th></tr>
-<tr><td>Qwen3-32B</td><td>32B</td><td>4GB</td><td>8GB</td><td>~30 seconds</td></tr>
+<tr><td><a href="/en/tools/qwen/">Qwen3</a>-32B</td><td>32B</td><td>4GB</td><td>8GB</td><td>~30 seconds</td></tr>
 <tr><td>Llama 3.1 70B</td><td>70B</td><td>4GB</td><td>8GB</td><td>~60 seconds</td></tr>
 <tr><td>DeepSeek-V3</td><td>671B</td><td>12GB</td><td>24GB</td><td>~5 minutes</td></tr>
 <tr><td>Llama 3.1 405B</td><td>405B</td><td>8GB</td><td>16GB</td><td>~10 minutes</td></tr>
@@ -156,17 +156,17 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans S
 <li><strong>Llama Series:</strong> Llama 2, Llama 3, Llama 3.1, Llama 3.2 (including 8B, 70B, 405B versions)</li>
 <li><strong>DeepSeek Series:</strong> DeepSeek-V2, DeepSeek-V3 (671B MoE architecture)</li>
 <li><strong>Qwen Series:</strong> Qwen2, Qwen2.5, Qwen3 (including 32B, 235B versions)</li>
-<li><strong>Kimi Series:</strong> Kimi K2.5, Kimi K3 (2.8T MoE architecture, new in v3.1.0)</li>
+<li><strong>Kimi Series:</strong> <a href="/en/tools/kimi/">Kimi K2</a>.5, Kimi K3 (2.8T MoE architecture, new in v3.1.0)</li>
 <li><strong>Gemma Series:</strong> Gemma 2, Gemma 3</li>
 <li><strong>Phi Series:</strong> Phi-3, Phi-4</li>
-<li><strong>Mistral Series:</strong> Mistral 7B, Mistral Large, Mixtral 8x7B</li>
-<li><strong>Chinese Models:</strong> ChatGLM, QWen, Baichuan, InternLM</li>
+<li><strong><a href="/en/tools/mistral/">Mistral</a> Series:</strong> Mistral 7B, Mistral Large, Mixtral 8x7B</li>
+<li><strong>Chinese Models:</strong> ChatGLM, QWen, Baichuan, <a href="/en/tools/intern-ai/">InternLM</a></li>
 </ul>
 
 <h3>Multimodal Models</h3>
 
 <ul>
-<li><strong>Image Generation:</strong> Supports MiniMax H3, Stable Diffusion via ComfyUI integration</li>
+<li><strong>Image Generation:</strong> Supports MiniMax H3, <a href="/en/tools/stablediffusion/">Stable Diffusion</a> via ComfyUI integration</li>
 <li><strong>Vision-Language:</strong> Some versions support LLaVA and other multimodal models</li>
 </ul>
 
@@ -275,7 +275,7 @@ model = AutoModel.from_pretrained("garage-bAInd/Platypus2-70B-instruct",
 <h2>Practical Application Cases</h2>
 
 <h3>1. Local AI Coding Assistant</h3>
-<p>Integrate AirLLM with <strong>Codex CLI</strong>, <strong>Claude Code</strong>, <strong>OpenCode</strong> and other coding agents. Configure these tools to use AirLLM's local API endpoint for free 70B-level coding assistance without paying API fees.</p>
+<p>Integrate AirLLM with <strong>Codex CLI</strong>, <strong><a href="/en/tools/claude/">Claude Code</a></strong>, <strong>OpenCode</strong> and other coding agents. Configure these tools to use AirLLM's local API endpoint for free 70B-level coding assistance without paying API fees.</p>
 
 <h3>2. Document Analysis & Summarization</h3>
 <p>Use AirLLM to analyze and summarize long documents. The 70B model's long context capability (supporting 128K+ Token) can easily handle documents of hundreds of thousands of words.</p>
