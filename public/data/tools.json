@@ -6623,7 +6623,7 @@
         "commercialUse": true,
         "models": "豆包、云雀等多种免费模型",
         "dailyLimit": "约1000次/天调用",
-        "creditUnit": "1000 credits",
+        "creditUnit": "次/天",
         "watermark": false,
         "requiresCreditCard": false,
         "resolution": "N/A"
@@ -8565,5 +8565,5 @@
       "rating": 4.0
     }
   ],
-  "lastUpdated": "2026-08-03T16:11:22.837223"
+  "lastUpdated": "2026-08-29"
 }
