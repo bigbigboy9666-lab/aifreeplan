@@ -51,7 +51,8 @@ function extractFaqFromHtml(html) {
   const cleanQ = (s) => stripHtml(s).replace(/^Q\d*[:：]?\s*/i, '').trim();
   const cleanA = (s) => stripHtml(s).replace(/^A\d*[:：]?\s*/i, '').trim();
 
-  // Pattern 1: <div class="faq-q">Q</div><div class="faq-a">A</div>  (or <p class="faq-q/a">)
+  // Pattern 1: <(div|p) class="faq-q">Q</(div|p)><(div|p) class="faq-a">A</(div|p)>
+  //   covers both bare (outside faq-item) and nested (inside faq-item) cases
   const faqQaRegex = /<(?:div|p) class="faq-q">([\s\S]*?)<\/(?:div|p)>\s*<(?:div|p) class="faq-a">([\s\S]*?)<\/(?:div|p)>/g;
   let m;
   while ((m = faqQaRegex.exec(html)) !== null) {
@@ -62,6 +63,7 @@ function extractFaqFromHtml(html) {
   if (pairs.length > 0) return pairs;
 
   // Pattern 2: <div class="faq-item"><details><summary>Q</summary><p>A</p></details></div>
+  //   legacy structure (only gmi-cloud uses this)
   const faqItemRegex = /<div class="faq-item">\s*<details>\s*<summary>([\s\S]*?)<\/summary>\s*<p>([\s\S]*?)<\/p>\s*<\/details>\s*<\/div>/g;
   while ((m = faqItemRegex.exec(html)) !== null) {
     const q = cleanQ(m[1]);

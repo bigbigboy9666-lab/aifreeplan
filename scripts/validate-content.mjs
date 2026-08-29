@@ -66,12 +66,20 @@ function countFaqInHtml(lang, slug) {
     if (fs.existsSync(p)) { html = fs.readFileSync(p, 'utf-8'); break; }
   }
   if (!html) return 0;
-  // Count <div class="faq-item"> blocks (each holds one Q+A in <details>)
+  // Count FAQ Q markers across all four coexisting structures:
+  //   1) <div class="faq-q">Q</div>                     (bare, may be in <p> too)
+  //   2) <p class="faq-q">Q</p>                        (alt bare)
+  //   3) <div class="faq-item"><div class="faq-q">Q</div><div class="faq-a">A</div></div>
+  //   4) <div class="faq-item"><p class="faq-q">Q</p><p class="faq-a">A</p></div>
+  //   5) <div class="faq-item"><details><summary>Q</summary><p>A</p></details></div>
+  // Best signal: count faq-q occurrences (regardless of wrapping). Fallback to
+  // faq-item blocks for legacy files that use <summary> without faq-q.
+  const faqQ = (html.match(/class="faq-q"/g) || []).length;
   const faqItem = (html.match(/<div class="faq-item">/g) || []).length;
-  // Count faq-q/qa-a pairs
-  const faqQ = (html.match(/<div class="faq-q">/g) || []).length;
-  // Take max — files usually use one structure, but a few mix both
-  return Math.max(faqItem, faqQ);
+  // If file uses faq-item + details + summary but no faq-q (e.g. gmi),
+  // count <summary> as a proxy.
+  const faqSummary = (html.match(/<summary>/g) || []).length;
+  return Math.max(faqQ, faqItem, faqSummary);
 }
 
 for (const g of guides.guides || []) {
