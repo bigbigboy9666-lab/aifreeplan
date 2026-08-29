@@ -460,7 +460,8 @@
         "resolution": "最高1080p",
         "watermark": false,
         "commercialUse": false,
-        "requiresCreditCard": false
+        "requiresCreditCard": false,
+        "creditUnit": "2次生成机会"
       },
       "paidFrom": "已关停",
       "paidFromEn": "Shut Down",
@@ -557,7 +558,7 @@
       "freeTier": {
         "refreshPeriod": "one-time",
         "credits": 1,
-        "creditUnit": "month (MiMo-V2.5, 1M context). Platform signup bonus valid 40 days, invite friends for $2 each",
+        "creditUnit": "月",
         "commercialUse": false,
         "models": "MiMo-V2.5（免费通道）/ V2.5-Pro（付费）",
         "dailyLimit": "无明确日限",
@@ -712,14 +713,16 @@
       "descriptionEn": "DeepSeek's flagship model, the cost-performance king of Chinese AI. V4 is free to use, API pricing is 1/10th of GPT-4o. Excellent at coding and math, competitive with closed-source models in benchmarks.。",
       "rating": 3.5,
       "freeTier": {
-        "refreshPeriod": "one-time",
+        "refreshPeriod": "unlimited",
         "credits": 0,
         "commercialUse": false,
         "requiresCreditCard": false,
         "resolution": "N/A",
         "watermark": false,
         "lastVerifiedDate": "2026-08-27",
-        "watermarkSource": "inferred:no-visual-output"
+        "watermarkSource": "inferred:no-visual-output",
+        "creditUnit": "tokens/天",
+        "dailyLimit": "按 API 价计费，V4 免费无限用"
       },
       "paidFrom": "API $0.14/百万token",
       "paidFromEn": "API $0.14/million tokens",
@@ -802,7 +805,7 @@
       "freeTier": {
         "refreshPeriod": "one-time",
         "credits": 2.5,
-        "creditUnit": "Max generates watermark-free images and videos for free",
+        "creditUnit": "M tokens",
         "commercialUse": false,
         "requiresCreditCard": false,
         "resolution": "N/A",
@@ -889,14 +892,16 @@
       "descriptionEn": "Baidu's flagship AI assistant, one of the earliest Chinese LLM developers. ERNIE 4.5 has strong capabilities, excelling at deep search and document processing. Free tier is sufficient, deeply integrated with Baidu search.。",
       "rating": 3,
       "freeTier": {
-        "refreshPeriod": "one-time",
+        "refreshPeriod": "unlimited",
         "credits": 0,
         "commercialUse": false,
         "requiresCreditCard": false,
         "resolution": "1024x1024",
         "watermark": false,
         "lastVerifiedDate": "2026-08-27",
-        "watermarkSource": "inferred:no-visual-output"
+        "watermarkSource": "inferred:no-visual-output",
+        "creditUnit": "tokens/天",
+        "dailyLimit": "文心 4.5 基础功能免费"
       },
       "paidFrom": "API $0.12/百万token",
       "paidFromEn": "API $0.12/million tokens",
@@ -1077,14 +1082,16 @@
       "descriptionEn": "ByteDance's AI assistant. Basic features are free, but recent controversy over charging has eroded user trust. Free tier still includes AI image generation.。",
       "rating": 3,
       "freeTier": {
-        "refreshPeriod": "one-time",
+        "refreshPeriod": "unlimited",
         "credits": 0,
         "commercialUse": false,
         "requiresCreditCard": false,
         "resolution": "N/A",
         "watermark": false,
         "lastVerifiedDate": "2026-08-27",
-        "watermarkSource": "doubao.com: chat is text primary, AI image gen is separate feature"
+        "watermarkSource": "doubao.com: chat is text primary, AI image gen is separate feature",
+        "creditUnit": "tokens/天",
+        "dailyLimit": "基础功能免费，高级功能收费"
       },
       "paidFrom": "¥68/月",
       "paidFromEn": "¥68/month",
@@ -1341,14 +1348,16 @@
       "descriptionEn": "Tencent's AI coding assistant, deeply integrated with Tencent Cloud. Supports code completion, chat, and code review. Free for individuals, enterprise plans available.。",
       "rating": 3,
       "freeTier": {
-        "refreshPeriod": "one-time",
+        "refreshPeriod": "unlimited",
         "credits": 0,
         "commercialUse": false,
         "requiresCreditCard": false,
         "resolution": "N/A",
         "watermark": false,
         "lastVerifiedDate": "2026-08-27",
-        "watermarkSource": "inferred:no-visual-output"
+        "watermarkSource": "inferred:no-visual-output",
+        "creditUnit": "tokens/天",
+        "dailyLimit": "个人版完全免费"
       },
       "paidFrom": "API按量计费",
       "paidFromEn": "Pay-as-you-go API",
@@ -1529,7 +1538,8 @@
         "watermark": false,
         "commercialUse": false,
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "creditUnit": "tokens/天"
       },
       "paidFrom": "完全免费",
       "paidFromEn": "Completely free",
@@ -1631,7 +1641,9 @@
         "resolution": "N/A",
         "watermark": false,
         "lastVerifiedDate": "2026-08-27",
-        "watermarkSource": "inferred:no-visual-output"
+        "watermarkSource": "inferred:no-visual-output",
+        "creditUnit": "次/月",
+        "dailyLimit": "Hobby 计划 2000 次 Agent/月"
       },
       "paidFrom": "$20/月",
       "paidFromEn": "$20/month",
@@ -1721,7 +1733,9 @@
         "resolution": "N/A",
         "watermark": false,
         "lastVerifiedDate": "2026-08-27",
-        "watermarkSource": "inferred:no-visual-output"
+        "watermarkSource": "inferred:no-visual-output",
+        "creditUnit": "次/月",
+        "dailyLimit": "Light 用量免费"
       },
       "paidFrom": "$20/月",
       "paidFromEn": "$20/month",
@@ -2168,14 +2182,16 @@
       "descriptionEn": "Google's AI assistant with Search integration. Free tier introduced weekly percentage caps in May 2026. Paid from $19.99/month.。",
       "rating": 3.5,
       "freeTier": {
-        "refreshPeriod": "one-time",
+        "refreshPeriod": "weekly",
         "credits": 0,
         "commercialUse": false,
         "requiresCreditCard": false,
         "resolution": "N/A",
         "watermark": false,
         "lastVerifiedDate": "2026-08-27",
-        "watermarkSource": "inferred:no-visual-output"
+        "watermarkSource": "inferred:no-visual-output",
+        "creditUnit": "次/周",
+        "dailyLimit": "百分比周限额，高峰期可用次数减少"
       },
       "paidFrom": "$19.99/月",
       "paidFromEn": "$19.99/month",
@@ -2347,7 +2363,7 @@
       "freeTier": {
         "refreshPeriod": "daily",
         "credits": 66,
-        "creditUnit": "credits/day; International version has larger free quota, unlimited free image generation",
+        "creditUnit": "credits/天",
         "resolution": "1024x1024",
         "watermark": false,
         "commercialUse": false,
@@ -3709,7 +3725,8 @@
         "resolution": "N/A",
         "watermark": false,
         "lastVerifiedDate": "2026-08-27",
-        "watermarkSource": "inferred:no-visual-output"
+        "watermarkSource": "inferred:no-visual-output",
+        "creditUnit": "元/首月"
       },
       "paidFrom": "首购3.9元/月，续费19元/月",
       "paidFromEn": "First purchase ¥3.9/month, renewal ¥19/month",
@@ -4469,7 +4486,8 @@
         "resolution": "N/A",
         "watermark": false,
         "lastVerifiedDate": "2026-08-27",
-        "watermarkSource": "inferred:no-visual-output"
+        "watermarkSource": "inferred:no-visual-output",
+        "creditUnit": "任务/天"
       },
       "paidFrom": "N/A",
       "paidFromEn": "N/A",
@@ -4806,8 +4824,9 @@
         "watermark": false,
         "commercialUse": false,
         "models": "数字人视频",
-        "dailyLimit": "有限",
-        "requiresCreditCard": false
+        "dailyLimit": "免费版有额度限制",
+        "requiresCreditCard": false,
+        "creditUnit": "M tokens"
       },
       "paidFrom": "待确认",
       "paidFromEn": "TBD",
@@ -4977,7 +4996,8 @@
         "models": "Qwen3.6-35B-A3B, Qwen3.5-35B-A3B（活动期间免费）",
         "dailyLimit": "无限制",
         "requiresCreditCard": false,
-        "resolution": "N/A"
+        "resolution": "N/A",
+        "creditUnit": "M tokens"
       },
       "paidFrom": "Token Plan包月制",
       "paidFromEn": "Token Plan subscription",
@@ -5071,7 +5091,8 @@
         "resolution": "N/A",
         "watermark": false,
         "lastVerifiedDate": "2026-08-27",
-        "watermarkSource": "inferred:no-visual-output"
+        "watermarkSource": "inferred:no-visual-output",
+        "creditUnit": "元/首月"
       },
       "paidFrom": "Lite $30/季（约¥72/月）",
       "paidFromEn": "Lite $30/quarter (~$10/mo)",
@@ -5394,7 +5415,7 @@
       "freeTier": {
         "refreshPeriod": "one-time",
         "credits": 5,
-        "creditUnit": "on signup, 1 month Pro on email verify, $10 per referral",
+        "creditUnit": "美元",
         "commercialUse": true,
         "models": "FRE-5.4、FRE-5.5",
         "dailyLimit": "无每日限制（按额度消耗）",
@@ -5609,7 +5630,7 @@
       "freeTier": {
         "refreshPeriod": "unlimited",
         "credits": 3,
-        "creditUnit": "models free forever, no credit consumption, 1M context",
+        "creditUnit": "个",
         "commercialUse": true,
         "models": "minimax/minimax-m3、xiaomi/mimo-v2.5、deepseek/deepseek-v4-flash",
         "dailyLimit": "无限制",
@@ -5717,7 +5738,8 @@
         "resolution": "N/A",
         "watermark": false,
         "lastVerifiedDate": "2026-08-27",
-        "watermarkSource": "bailian.console.aliyun.com: API platform, watermark depends on model (Qwen/Wan etc)"
+        "watermarkSource": "bailian.console.aliyun.com: API platform, watermark depends on model (Qwen/Wan etc)",
+        "creditUnit": "万 tokens"
       },
       "paidFrom": "免费额度用完后按量付费",
       "paidFromEn": "Pay-per-use after free credits consumed",
@@ -5819,7 +5841,8 @@
         "resolution": "N/A",
         "watermark": false,
         "lastVerifiedDate": "2026-08-27",
-        "watermarkSource": "inferred:no-visual-output"
+        "watermarkSource": "inferred:no-visual-output",
+        "creditUnit": "M tokens"
       },
       "paidFrom": "完全免费",
       "paidFromEn": "Completely free",
@@ -6450,7 +6473,8 @@
         "resolution": "N/A",
         "watermark": false,
         "lastVerifiedDate": "2026-08-27",
-        "watermarkSource": "inferred:no-visual-output"
+        "watermarkSource": "inferred:no-visual-output",
+        "creditUnit": "天"
       },
       "paidFrom": "198元/年",
       "paidFromEn": "~$28/year",
@@ -6537,7 +6561,8 @@
         "resolution": "N/A",
         "watermark": false,
         "lastVerifiedDate": "2026-08-27",
-        "watermarkSource": "inferred:no-visual-output"
+        "watermarkSource": "inferred:no-visual-output",
+        "creditUnit": "GB"
       },
       "paidFrom": "10元/月",
       "paidFromEn": "~$1.4/month",
@@ -8385,7 +8410,9 @@
         "resolution": "N/A",
         "watermark": false,
         "lastVerifiedDate": "2026-08-27",
-        "watermarkSource": "inferred:no-visual-output"
+        "watermarkSource": "inferred:no-visual-output",
+        "creditUnit": "万 tokens",
+        "dailyLimit": "每模型 100 万 tokens，有效期 3 个月"
       },
       "rating": 4.2
     },
@@ -8410,7 +8437,9 @@
         "resolution": "N/A",
         "watermark": false,
         "lastVerifiedDate": "2026-08-27",
-        "watermarkSource": "inferred:no-visual-output"
+        "watermarkSource": "inferred:no-visual-output",
+        "creditUnit": "万 tokens",
+        "dailyLimit": "新用户注册即送 1000 万 tokens"
       },
       "rating": 4.0
     },
@@ -8435,7 +8464,9 @@
         "resolution": "N/A",
         "watermark": false,
         "lastVerifiedDate": "2026-08-27",
-        "watermarkSource": "inferred:no-visual-output"
+        "watermarkSource": "inferred:no-visual-output",
+        "creditUnit": "万 tokens",
+        "dailyLimit": "新用户 2500 万 tokens（需息壤专区领取，1-3 月有效）"
       },
       "rating": 4.0
     },
@@ -8453,14 +8484,16 @@
       "pricing": "免费: 每日5500万Tokens",
       "pricingEn": "Free: 55M tokens daily refresh",
       "freeTier": {
-        "refreshPeriod": "one-time",
+        "refreshPeriod": "daily",
         "credits": 0,
         "commercialUse": false,
         "requiresCreditCard": false,
         "resolution": "N/A",
         "watermark": false,
         "lastVerifiedDate": "2026-08-27",
-        "watermarkSource": "longcat.ai: text API only (no visual output)"
+        "watermarkSource": "longcat.ai: text API only (no visual output)",
+        "creditUnit": "万 tokens/天",
+        "dailyLimit": "每日 5500 万 tokens"
       },
       "rating": 4.1
     },
@@ -8485,7 +8518,9 @@
         "resolution": "N/A",
         "watermark": false,
         "lastVerifiedDate": "2026-08-27",
-        "watermarkSource": "inferred:no-visual-output"
+        "watermarkSource": "inferred:no-visual-output",
+        "creditUnit": "亿 tokens",
+        "dailyLimit": "百亿 tokens 免费配额"
       },
       "rating": 4.0
     },
@@ -8510,7 +8545,9 @@
         "resolution": "N/A",
         "watermark": false,
         "lastVerifiedDate": "2026-08-27",
-        "watermarkSource": "inferred:no-visual-output"
+        "watermarkSource": "inferred:no-visual-output",
+        "creditUnit": "元",
+        "dailyLimit": "注册及实名最高 450 元体验金"
       },
       "rating": 4.0
     },
@@ -8528,14 +8565,16 @@
       "pricing": "免费: 初创企业最高10万扶持 | 付费: 按量计费",
       "pricingEn": "Free: Up to ¥100K startup support | Paid: pay-per-use",
       "freeTier": {
-        "refreshPeriod": "one-time",
+        "refreshPeriod": "unlimited",
         "credits": 0,
         "commercialUse": false,
         "requiresCreditCard": false,
         "resolution": "N/A",
         "watermark": false,
         "lastVerifiedDate": "2026-08-27",
-        "watermarkSource": "inferred:no-visual-output"
+        "watermarkSource": "inferred:no-visual-output",
+        "creditUnit": "tokens/天",
+        "dailyLimit": "初创企业扶持最高 10 万元，个人按需"
       },
       "rating": 4.1
     },
@@ -8553,14 +8592,16 @@
       "pricing": "免费: 需注册查看具体额度",
       "pricingEn": "Free: Check after registration",
       "freeTier": {
-        "refreshPeriod": "one-time",
+        "refreshPeriod": "unlimited",
         "credits": 0,
         "commercialUse": false,
         "requiresCreditCard": true,
         "resolution": "N/A",
         "watermark": false,
         "lastVerifiedDate": "2026-08-27",
-        "watermarkSource": "inferred:no-visual-output"
+        "watermarkSource": "inferred:no-visual-output",
+        "creditUnit": "tokens/天",
+        "dailyLimit": "九天模型 + 主流模型聚合，按需调用"
       },
       "rating": 4.0
     }
