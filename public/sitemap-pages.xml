@@ -2,102 +2,106 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://aifreeplan.com/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-08-29</lastmod>
   </url>
   <url>
     <loc>https://aifreeplan.com/en/</loc>
-    <lastmod>2026-07-24</lastmod>
-  </url>
-  <url>
-    <loc>https://aifreeplan.com/en/agent/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-08-29</lastmod>
   </url>
   <url>
     <loc>https://aifreeplan.com/en/ai-assistant/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/api-platform/</loc>
+    <lastmod>2026-08-29</lastmod>
   </url>
   <url>
     <loc>https://aifreeplan.com/en/audio/</loc>
-    <lastmod>2026-07-24</lastmod>
-  </url>
-  <url>
-    <loc>https://aifreeplan.com/en/chat/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-08-29</lastmod>
   </url>
   <url>
     <loc>https://aifreeplan.com/en/coding/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/en/faq/</loc>
+    <lastmod>2026-08-29</lastmod>
   </url>
   <url>
     <loc>https://aifreeplan.com/en/guides/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-08-29</lastmod>
   </url>
   <url>
     <loc>https://aifreeplan.com/en/image/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-08-29</lastmod>
   </url>
   <url>
     <loc>https://aifreeplan.com/en/llm/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-08-29</lastmod>
   </url>
   <url>
     <loc>https://aifreeplan.com/en/productivity/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-08-29</lastmod>
   </url>
   <url>
     <loc>https://aifreeplan.com/en/tools/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-08-29</lastmod>
   </url>
   <url>
     <loc>https://aifreeplan.com/en/video/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/guides/</loc>
+    <lastmod>2026-08-29</lastmod>
   </url>
   <url>
     <loc>https://aifreeplan.com/zh/</loc>
-    <lastmod>2026-07-24</lastmod>
-  </url>
-  <url>
-    <loc>https://aifreeplan.com/zh/agent/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-08-29</lastmod>
   </url>
   <url>
     <loc>https://aifreeplan.com/zh/ai-assistant/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/api-platform/</loc>
+    <lastmod>2026-08-29</lastmod>
   </url>
   <url>
     <loc>https://aifreeplan.com/zh/audio/</loc>
-    <lastmod>2026-07-24</lastmod>
-  </url>
-  <url>
-    <loc>https://aifreeplan.com/zh/chat/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-08-29</lastmod>
   </url>
   <url>
     <loc>https://aifreeplan.com/zh/coding/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://aifreeplan.com/zh/faq/</loc>
+    <lastmod>2026-08-29</lastmod>
   </url>
   <url>
     <loc>https://aifreeplan.com/zh/guides/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-08-29</lastmod>
   </url>
   <url>
     <loc>https://aifreeplan.com/zh/image/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-08-29</lastmod>
   </url>
   <url>
     <loc>https://aifreeplan.com/zh/llm/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-08-29</lastmod>
   </url>
   <url>
     <loc>https://aifreeplan.com/zh/productivity/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-08-29</lastmod>
   </url>
   <url>
     <loc>https://aifreeplan.com/zh/tools/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-08-29</lastmod>
   </url>
   <url>
     <loc>https://aifreeplan.com/zh/video/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-08-29</lastmod>
   </url>
 </urlset>

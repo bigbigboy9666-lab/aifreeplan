@@ -194,6 +194,35 @@ for (const t of tools) {
       issues.p2.push(`[字段类型] ${tid}.freeTier.${key}: ${typeof val} -> 应为 string/boolean/number`);
     }
   }
+
+  // P2: SEO meta 末尾标点污染
+  //   - seoMeta.title / titleZh: 不应有末尾标点（Google SERP 不渲染）
+  //   - seoMeta.description / descriptionZh: 末尾重复标点 (..。. 等) 污染
+  //   - descriptionEn: 末尾双点 / 中文句号
+  const seo = t.seoMeta || {};
+  const TITLE_TRAILING = /[。.!?]+\s*$/;
+  for (const k of ['title', 'titleZh']) {
+    const v = (seo[k] || '').trim();
+    if (v && TITLE_TRAILING.test(v)) {
+      issues.p2.push(`[seoMeta.${k} 末尾标点] ${tid}: ${JSON.stringify(v.slice(-30))}`);
+    }
+  }
+  const DESC_DOUBLE_PUNCT = /[。.!?]([\s]*[。.!?])+\s*$/;
+  for (const k of ['description', 'descriptionZh']) {
+    const v = (seo[k] || '').trim();
+    if (v && DESC_DOUBLE_PUNCT.test(v)) {
+      issues.p2.push(`[seoMeta.${k} 末尾重复标点] ${tid}: ${JSON.stringify(v.slice(-40))}`);
+    }
+  }
+  const de = (t.descriptionEn || '').trim();
+  if (de) {
+    if (/[。.!?]([\s]*[。.!?])+\s*$/.test(de)) {
+      issues.p2.push(`[descriptionEn 末尾重复标点] ${tid}: ${JSON.stringify(de.slice(-40))}`);
+    }
+    if (/[。]\s*$/.test(de)) {
+      issues.p2.push(`[descriptionEn 中文句号] ${tid}: 英文描述应以 "." 结尾`);
+    }
+  }
 }
 
 // === 输出 ===
