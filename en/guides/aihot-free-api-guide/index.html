@@ -1,0 +1,98 @@
+<!DOCTYPE html><meta charset="utf-8"><h1 id="ai-hot-free-api-guide-no-registration-ready-to-use-ai-news-aggregation-platform">AI HOT Free API Guide: No Registration, Ready-to-Use AI News Aggregation Platform</h1>
+<p>Honestly, when I first heard about AI HOT, I was a bit confused. An AI platform that doesn’t require registration, no tokens, no payment, and you can just use it directly? That seems too good to be true.</p>
+<p>But after testing it, I found it actually works. Although the functionality is relatively simple - mainly AI news aggregation - the free GLM-5.3-Flash model access it provides is completely sufficient for lightweight applications.</p>
+<h2 id="what-is-ai-hot">What is AI HOT</h2>
+<p>AI HOT is a Chinese AI dynamic aggregation platform that does two main things:</p>
+<ol>
+<li>AI News Aggregation: Collects news, papers, and product updates from various AI platforms</li>
+<li>Free API Service: Provides free API access to models like GLM-5.3-Flash</li>
+</ol>
+<p>The key point is: completely free, no registration required, no token needed, ready to use out of the box.</p>
+<p>This sounds like charity, but the official explanation is “operating costs are covered by the platform.” Simply put, someone is willing to pay to maintain this project, and users don’t need to pay.</p>
+<h2 id="how-to-use-it---really-no-registration-needed">How to use it - really no registration needed</h2>
+<p>Using AI HOT’s API is very simple, just call it directly:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> requests</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">url </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "https://aihot.cc/api/v1/chat/completions"</span></span>
+<span class="line"><span style="color:#E1E4E8">headers </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#9ECBFF">    "Content-Type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"application/json"</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">data </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#9ECBFF">    "model"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"glm-5.3-flash"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">    "messages"</span><span style="color:#E1E4E8">: [</span></span>
+<span class="line"><span style="color:#E1E4E8">        {</span><span style="color:#9ECBFF">"role"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"user"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"content"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"What's the latest AI news today?"</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">    ]</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">response </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> requests.post(url, </span><span style="color:#FFAB70">json</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">data, </span><span style="color:#FFAB70">headers</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">headers)</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(response.json())</span></span></code></pre>
+<p>That’s it. No API key, no authentication, just a POST request and you get results.</p>
+<h2 id="what-models-are-supported">What models are supported</h2>
+<p>Currently, AI HOT mainly provides the GLM-5.3-Flash model. This is a lightweight version from Zhipu AI, with these characteristics:</p>
+<ul>
+<li>Fast response speed</li>
+<li>Strong Chinese language understanding</li>
+<li>Suitable for lightweight dialogue scenarios</li>
+<li>Not suitable for complex reasoning tasks</li>
+</ul>
+<p>If you need top-tier models like GPT-4 or Claude, AI HOT won’t meet your needs. But if you’re just doing simple Q&amp;A or news queries, GLM-5.3-Flash is completely sufficient.</p>
+<h2 id="what-i-built-with-it">What I built with it</h2>
+<p>I mainly used AI HOT for two small projects:</p>
+<ol>
+<li>AI News Aggregator: Automatically scrapes the latest AI news daily, uses GLM-5.3-Flash to generate summaries, and pushes them to my email</li>
+<li>Smart Q&amp;A Bot: Built a simple Telegram Bot that answers basic AI-related questions</li>
+</ol>
+<p>Neither of these projects requires high concurrency or complex reasoning capabilities, so AI HOT fully meets the requirements.</p>
+<h2 id="pros-and-cons-analysis">Pros and cons analysis</h2>
+<p>Pros:</p>
+<ul>
+<li>Completely free, no barriers</li>
+<li>No registration required, ready to use</li>
+<li>Direct access in China, fast speed</li>
+<li>Suitable for lightweight applications</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Limited model selection, only GLM-5.3-Flash</li>
+<li>No clear usage limit documentation (may have rate limits)</li>
+<li>Limited documentation, hard to troubleshoot issues</li>
+<li>Not suitable for commercial or high-concurrency scenarios</li>
+<li>Platform stability unknown (it’s free after all)</li>
+</ul>
+<h2 id="who-is-this-for">Who is this for</h2>
+<p>AI HOT is suitable for these types of people:</p>
+<ol>
+<li>Students: For course projects, graduation designs, no need to spend money on APIs</li>
+<li>Individual developers: For small tools, automation scripts, lightweight usage</li>
+<li>AI enthusiasts: Want to experience large models but don’t want to spend money</li>
+<li>Content creators: Need AI assistance for generating article summaries, titles, etc.</li>
+</ol>
+<p>If you’re an enterprise user, or need to build high-concurrency, complex reasoning applications, I recommend using paid platforms (like OpenAI, Zhipu official, DeepSeek official).</p>
+<h2 id="important-notes">Important notes</h2>
+<ol>
+<li>Don’t abuse it: Even though it’s free, don’t use it for high concurrency or bulk scraping - the platform will eventually shut down</li>
+<li>Don’t send sensitive information: Free platforms may not have the same privacy protection as paid ones, don’t send passwords, ID numbers, etc.</li>
+<li>Have a backup plan: Free platforms can go offline at any time, important projects should have backup APIs</li>
+<li>Follow platform updates: If the platform starts charging or goes offline, prepare in advance</li>
+</ol>
+<h2 id="ai-hot-vs-chatanywhere---which-is-better">AI HOT vs ChatAnywhere - which is better</h2>
+<p>These two platforms have different positioning:</p>
+<p>ChatAnywhere:</p>
+<ul>
+<li>Comprehensive models (GPT, DeepSeek, Claude, Gemini all available)</li>
+<li>Requires registration (GitHub binding)</li>
+<li>Clear quota limits (50,000 points per week)</li>
+<li>Suitable for developers who need multi-model switching</li>
+</ul>
+<p>AI HOT:</p>
+<ul>
+<li>Limited models (only GLM-5.3-Flash)</li>
+<li>No registration required</li>
+<li>Unclear quotas</li>
+<li>Suitable for lightweight, quick integration scenarios</li>
+</ul>
+<p>If you need top-tier models like GPT-4 or Claude, choose ChatAnywhere. If you’re just building a small tool and don’t want to register an account, choose AI HOT.</p>
+<h2 id="summary">Summary</h2>
+<p>AI HOT is quite an interesting project. The completely free, no-registration model is rare in the AI field. Although the functionality is relatively simple, it’s completely sufficient for lightweight applications.</p>
+<p>My recommendation: If you have a small project, want to quickly integrate AI capabilities, and don’t want to spend money or register, you can try AI HOT. But be mentally prepared - free platforms can go offline at any time, so important projects should have backup plans.</p>
+<p>Website: <a href="https://aihot.cc/">https://aihot.cc/</a></p>

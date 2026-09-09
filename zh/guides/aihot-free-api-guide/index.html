@@ -1,0 +1,98 @@
+<!DOCTYPE html><meta charset="utf-8"><h1 id="ai-hot免费api攻略无需注册开箱即用的ai资讯聚合平台">AI HOT免费API攻略：无需注册，开箱即用的AI资讯聚合平台</h1>
+<p>说实话，第一次听说AI HOT的时候，我是有点懵的。一个AI平台，不用注册、不用Token、不用付费，直接就能用？这也太离谱了吧。</p>
+<p>但实测下来，我发现这玩意儿还真能用。虽然功能比较单一，主要是AI资讯聚合，但它提供的GLM-5.3-Flash模型免费调用，对于轻量级应用来说完全够了。</p>
+<h2 id="ai-hot是什么">AI HOT是什么</h2>
+<p>AI HOT是一个中文AI动态聚合平台，主要做两件事：</p>
+<ol>
+<li>AI资讯聚合：把各大AI平台的新闻、论文、产品更新汇总到一起</li>
+<li>免费API服务：提供GLM-5.3-Flash等模型的免费调用接口</li>
+</ol>
+<p>关键点是：完全免费，无需注册，无需Token，开箱即用。</p>
+<p>这听起来像是做慈善，但官方说法是“运营成本由平台承担”。说白了，就是有人愿意掏钱维护这个项目，用户不用付费。</p>
+<h2 id="怎么用真的不用注册">怎么用，真的不用注册</h2>
+<p>AI HOT的API使用方式非常简单，直接调用就行：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> requests</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">url </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "https://aihot.cc/api/v1/chat/completions"</span></span>
+<span class="line"><span style="color:#E1E4E8">headers </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#9ECBFF">    "Content-Type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"application/json"</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">data </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#9ECBFF">    "model"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"glm-5.3-flash"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">    "messages"</span><span style="color:#E1E4E8">: [</span></span>
+<span class="line"><span style="color:#E1E4E8">        {</span><span style="color:#9ECBFF">"role"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"user"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"content"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"今天有什么AI新闻？"</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">    ]</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">response </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> requests.post(url, </span><span style="color:#FFAB70">json</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">data, </span><span style="color:#FFAB70">headers</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">headers)</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(response.json())</span></span></code></pre>
+<p>就这么简单。没有API Key，没有认证，直接POST请求就能拿到结果。</p>
+<h2 id="支持哪些模型">支持哪些模型</h2>
+<p>目前AI HOT主要提供GLM-5.3-Flash模型。这个模型是智谱AI出的轻量版，特点是：</p>
+<ul>
+<li>响应速度快</li>
+<li>中文理解能力强</li>
+<li>适合轻量级对话场景</li>
+<li>不适合复杂推理任务</li>
+</ul>
+<p>如果你需要GPT-4、Claude这种级别的模型，AI HOT满足不了你。但如果只是做做简单的问答、资讯查询，GLM-5.3-Flash完全够用。</p>
+<h2 id="我拿它做了什么">我拿它做了什么</h2>
+<p>我主要用AI HOT做了两个小项目：</p>
+<ol>
+<li>AI新闻聚合器：每天自动抓取AI领域的最新资讯，用GLM-5.3-Flash生成摘要，推送到我的邮箱</li>
+<li>智能问答机器人：做了一个简单的Telegram Bot，回答一些基础的AI相关问题</li>
+</ol>
+<p>这两个项目都不需要高并发，也不需要复杂的推理能力，AI HOT完全能满足需求。</p>
+<h2 id="优缺点分析">优缺点分析</h2>
+<p>优点：</p>
+<ul>
+<li>完全免费，无门槛</li>
+<li>无需注册，开箱即用</li>
+<li>国内直连，速度快</li>
+<li>适合轻量级应用</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>模型选择有限，只有GLM-5.3-Flash</li>
+<li>没有明确的调用限制说明（可能有频率限制）</li>
+<li>文档较少，遇到问题不好排查</li>
+<li>不适合商用或高并发场景</li>
+<li>平台稳定性未知（毕竟免费）</li>
+</ul>
+<h2 id="适合什么人">适合什么人</h2>
+<p>AI HOT适合这几类人：</p>
+<ol>
+<li>学生党：做课程项目、毕业设计，不需要花钱买API</li>
+<li>个人开发者：做小工具、自动化脚本，轻量级使用</li>
+<li>AI爱好者：想体验大模型，但不想花钱</li>
+<li>内容创作者：需要AI辅助生成文章摘要、标题等</li>
+</ol>
+<p>如果你是企业用户，或者需要做高并发、复杂推理的应用，建议用付费平台（比如OpenAI、智谱官方、DeepSeek官方）。</p>
+<h2 id="注意事项">注意事项</h2>
+<ol>
+<li>不要滥用：虽然是免费的，但别拿去搞高并发、批量爬取，这样平台早晚得关门</li>
+<li>不要传敏感信息：免费平台的隐私保护可能不如付费平台，别传密码、身份证号这些</li>
+<li>做好备用方案：免费平台随时可能下线，重要项目要有备用API</li>
+<li>关注平台动态：如果平台要收费或者下线，提前做准备</li>
+</ol>
+<h2 id="和chatanywhere比哪个更好">和ChatAnywhere比，哪个更好</h2>
+<p>这两个平台定位不同：</p>
+<p>ChatAnywhere：</p>
+<ul>
+<li>模型全（GPT、DeepSeek、Claude、Gemini都有）</li>
+<li>需要注册（绑定GitHub）</li>
+<li>有明确的额度限制（每周5万点）</li>
+<li>适合需要多模型切换的开发者</li>
+</ul>
+<p>AI HOT：</p>
+<ul>
+<li>模型少（只有GLM-5.3-Flash）</li>
+<li>无需注册</li>
+<li>额度不明确</li>
+<li>适合轻量级、快速接入的场景</li>
+</ul>
+<p>如果你需要GPT-4、Claude这种顶级模型，选ChatAnywhere。如果你只是做个小工具，不想注册账号，选AI HOT。</p>
+<h2 id="总结">总结</h2>
+<p>AI HOT是个挺有意思的项目，完全免费、无需注册的模式在AI领域很少见。虽然功能比较单一，但对于轻量级应用来说完全够用。</p>
+<p>我的建议是：如果你有个小项目，想快速接入AI能力，又不想花钱、不想注册，可以试试AI HOT。但要做好心理准备，免费平台随时可能下线，重要项目要有备用方案。</p>
+<p>官网：<a href="https://aihot.cc/">https://aihot.cc/</a></p>

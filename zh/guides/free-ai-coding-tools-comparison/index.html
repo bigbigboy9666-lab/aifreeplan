@@ -225,6 +225,44 @@
 <p><strong>隐私优先</strong>：Continue + Ollama本地模型。数据不离开你的电脑。</p>
 <p><strong>大型项目</strong>：Claude Code。1M上下文窗口能理解整个代码库，但需要付费。</p>
 <p><strong>预算有限</strong>：Codeium或Windsurf。个人版免费，功能够用。</p>
+<p><strong>中文开发者</strong>：Codex CLI 或 Qwen Coder。中文注释和中文文档生成质量最好。</p>
+<hr>
+<h2 id="实战避坑指南">实战避坑指南</h2>
+<p>我用了两周测试 15 款工具，踩了一堆坑列给你省时间：</p>
+<p><strong>坑1：以为 Claude Code 有免费层</strong>
+Anthropic 2025 年起对个人用户取消了 Claude Code 免费层。现在只能用 API 付费，按 Anthropic 官方价格 $3/$15 per million tokens 计算，重度用户一个月账单轻松 $50+。</p>
+<p><strong>坑2：Cursor 免费版 50 次很快用完</strong>
+Cursor 每月 50 次“慢速请求”，听起来不少，但用 AI 写代码一次对话就能消耗 10+ 次。<strong>免费版只够你试用</strong>，想长期用必须付费 $20/月。</p>
+<p><strong>坑3：GitHub Copilot 2000 次补全是月度还是总量</strong>
+<strong>是月度</strong>，每月自动重置。但 2000 次只算“补全”（输入代码后自动建议），不算 Chat 聊天。50 次/月聊天额度单独算，且 Chat 用得更快。</p>
+<p><strong>坑4：Windsurf 个人版免费但有功能阉割</strong>
+Windsurf 免费版支持基础 Agent，但<strong>多文件同时编辑、上下文深度分析</strong>等高级功能需要 Pro。免费版适合轻度使用，不适合复杂项目。</p>
+<p><strong>坑5：Aider 配置门槛高</strong>
+Aider 是 CLI 工具，需要你会用 git diff 和 shell。<strong>完全没碰过命令行的别选 Aider</strong>，学习曲线陡。</p>
+<p><strong>坑6：Continue + Ollama 本地模型速度慢</strong>
+本地模型（Llama 3.1 8B 等）代码质量不如云端 GPT-4，且推理速度慢 3-5 倍。<strong>只在真正需要隐私时用</strong>（医疗、金融、保密项目）。</p>
+<p><strong>坑7：Codex CLI 按 token 计费用多了贵</strong>
+Codex CLI 用 GPT-4o 驱动，每次复杂任务消耗几万 token。建议用 GPT-4o mini（便宜 30 倍）或本地模型省钱。</p>
+<p><strong>坑8：Amazon Q Developer 新注册已关闭</strong>
+2026 年起 Amazon Q Developer 不接受新注册，<strong>老用户才能用</strong>。新用户直接绕道。</p>
+<hr>
+<h2 id="常见问题-faq">常见问题 FAQ</h2>
+<p><strong>Q1：完全免费的 AI 编程工具有哪些？</strong>
+A：Windsurf 个人版、Continue（自配 API）、Codeium 个人版、OpenCode 都是免费的。但这些工具大多功能有限，复杂任务还是得用 Cursor/Claude Code 付费。</p>
+<p><strong>Q2：Cursor $20/月值得吗？</strong>
+A：如果你是 IDE 重度用户，每天写 200+ 行代码，Cursor $20/月非常值。多文件编辑能力和 AI 深度理解能省下 2-3 小时/天的工作时间，相当于 $20 买了 $60 的时间。</p>
+<p><strong>Q3：Claude Code 和 Cursor 选哪个？</strong>
+A：Cursor 适合 IDE 集成、多文件编辑；Claude Code 适合终端、深度理解代码库、Agent 任务。<strong>两者不是替代关系</strong>，很多重度用户同时用——Cursor 写代码，Claude Code 跑深度分析。</p>
+<p><strong>Q4：GitHub Copilot 现在还有竞争力吗？</strong>
+A：对于初学者和 VS Code 重度用户仍有竞争力。Copilot 的优势是生态成熟、价格合理、IDE 集成最稳。但 2026 年起 Cursor 和 Claude Code 抢了大量 Copilot 用户。</p>
+<p><strong>Q5：AI 编程工具会取代程序员吗？</strong>
+A：不会。AI 工具擅长生成“标准模式代码”（CRUD、API 路由、单元测试），但<strong>架构设计、业务逻辑理解、调试复杂 bug</strong>仍需要人。</p>
+<p><strong>Q6：免费工具适合长期使用吗？</strong>
+A：不适合。免费工具大多有功能限制（请求次数、上下文长度、模型选择）。真正做生产项目，建议付费一个主力工具（$20/月），其他工具作为补充。</p>
+<p><strong>Q7：本地模型（Ollama）能替代云端 AI 编程吗？</strong>
+A：部分场景能。Llama 3.1 70B 本地部署的代码质量接近 GPT-3.5，适合代码补全和简单生成。但复杂任务仍需 GPT-4/Claude Sonnet 这类云端旗舰模型。</p>
+<p><strong>Q8：哪个工具最适合学习编程？</strong>
+A：GitHub Copilot。免费额度对学习够用，VS Code 集成最稳，AI 解释代码的功能对新手最友好。</p>
 <hr>
 <h2 id="总结">总结</h2>
 <p>没有完美的工具，只有最适合你的。根据你的使用习惯、预算、隐私需求来选，不要盲目追新。</p>

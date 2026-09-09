@@ -1,0 +1,84 @@
+<!DOCTYPE html><meta charset="utf-8"><h1 id="chatanywhere免费api白嫖攻略每周5万点gpt-5deepseek随便用">ChatAnywhere免费API白嫖攻略：每周5万点，GPT-5/DeepSeek随便用</h1>
+<p>说实话，我之前对这种“免费API”平台是持怀疑态度的。毕竟天上不会掉馅饼，免费的东西要么有坑，要么用两天就收费。但ChatAnywhere这个平台，我实测了快一个月，发现还真能白嫖。</p>
+<p>先说结论：绑定GitHub就能用，每周5万点配额，每天100次请求，支持GPT-5、DeepSeek、Claude、Gemini这些主流模型。关键是国内直连，不用翻墙。</p>
+<h2 id="这平台到底什么来头">这平台到底什么来头</h2>
+<p>ChatAnywhere是个开源项目，GitHub上star数挺高的。它的本质是个API聚合转发平台，把各家大模型的API统一到一个接口上。你不用分别去OpenAI、DeepSeek、Anthropic注册账号，一个ChatAnywhere的Key就能调所有模型。</p>
+<p>免费版的额度是每周5万点，每天最多100次请求。这个额度对个人开发者来说，做做小项目、写写自动化脚本，完全够用了。我拿它跑了半个月的代码助手，每天大概用30-40次，配额还剩不少。</p>
+<h2 id="注册流程3分钟搞定">注册流程，3分钟搞定</h2>
+<p>第一步，打开 <a href="https://chatanywhere.tech/">https://chatanywhere.tech/</a></p>
+<p>第二步，点右上角“登录/注册”，选择“GitHub登录”</p>
+<p>第三步，授权GitHub访问，绑定成功</p>
+<p>第四步，进入控制台，复制你的API Key</p>
+<p>就这么简单。不需要信用卡，不需要手机号，不需要实名认证。只要你有个GitHub账号，3分钟就能拿到Key。</p>
+<h2 id="api怎么用和openai一模一样">API怎么用，和OpenAI一模一样</h2>
+<p>ChatAnywhere的API格式完全兼容OpenAI，你只需要把base_url改一下：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> openai </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> OpenAI</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">client </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> OpenAI(</span></span>
+<span class="line"><span style="color:#FFAB70">    api_key</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"你的ChatAnywhere Key"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#FFAB70">    base_url</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"https://api.chatanywhere.tech/v1"</span></span>
+<span class="line"><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">response </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> client.chat.completions.create(</span></span>
+<span class="line"><span style="color:#FFAB70">    model</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"gpt-4o"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#FFAB70">    messages</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">[{</span><span style="color:#9ECBFF">"role"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"user"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"content"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"你好"</span><span style="color:#E1E4E8">}]</span></span>
+<span class="line"><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(response.choices[</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">].message.content)</span></span></code></pre>
+<p>国内用户用 <code>api.chatanywhere.tech</code>，国外用户用 <code>api.chatanywhere.org</code>。两个地址都能用，国内那个做了动态加速，延迟更低。</p>
+<h2 id="支持哪些模型">支持哪些模型</h2>
+<p>免费版支持的模型还挺全的：</p>
+<p>文本模型：GPT-4o系列、GPT-5系列、DeepSeek-V4、Claude 3.5 Sonnet、Gemini 1.5 Pro、Qwen-Max、Kimi-Moonshot、GLM-4</p>
+<p>Embedding模型：text-embedding-3-small、text-embedding-3-large</p>
+<p>注意，免费版的GPT-5推理能力比付费版弱一些。如果你需要强推理能力，比如复杂的数学证明、代码debug，建议用DeepSeek或者Claude。</p>
+<h2 id="我遇到的几个坑">我遇到的几个坑</h2>
+<p>第一个坑：每天200次请求限制</p>
+<p>这个限制是针对同一个IP+Key组合的。也就是说，如果你在公司用同一个WiFi，和同事各用一个Key，你们俩的请求数加起来不能超过200次/天。这个我一开始没注意，结果下午就用不了了。</p>
+<p>解决办法：换个网络环境，或者用付费版（没这个限制）。</p>
+<p>第二个坑：免费Key不能商用</p>
+<p>官方文档写得很清楚：免费API Key仅限个人非商业用途，教育、非营利科研可以用，但严禁商用和大规模训练。如果你要做个产品上线，必须用付费Key。</p>
+<p>第三个坑：高峰期可能慢</p>
+<p>晚上8-10点是用量高峰期，响应速度会慢一些。我测过，平时1-2秒能返回，高峰期可能要5-8秒。如果对延迟敏感，建议避开这个时间段。</p>
+<h2 id="免费版-vs-付费版差在哪">免费版 vs 付费版，差在哪</h2>
+<p>免费版：</p>
+<ul>
+<li>每周5万点配额</li>
+<li>每天100次请求</li>
+<li>同一IP每天200次限制</li>
+<li>GPT-5推理能力较弱</li>
+<li>仅限个人非商业用途</li>
+</ul>
+<p>付费版：</p>
+<ul>
+<li>最低官方价1-2折（DeepSeek-V4-Flash只要0.0012元/1K tokens）</li>
+<li>无请求次数限制</li>
+<li>无IP限制</li>
+<li>所有模型完整能力</li>
+<li>可商用</li>
+<li>余额不过期</li>
+</ul>
+<p>如果你只是个人学习、做做小项目，免费版完全够。如果你要做产品、跑批量任务，建议充点钱用付费版。价格真的很便宜，DeepSeek-V4-Flash才0.0012元/1K tokens，1万tokens才1.2分钱。</p>
+<h2 id="常见问题解答">常见问题解答</h2>
+<p>Q1：每周5万点能用多久？
+A：看你用什么模型。GPT-4o大概1点=1 token，5万点就是5万tokens。如果每天用1000 tokens，能用50天。DeepSeek更便宜，1点可能=10 tokens，那就能用500天。</p>
+<p>Q2：Key被封了怎么办？
+A：先检查是不是违反了使用规则（商用、大规模调用）。如果确认没问题，去QQ群（1032969073）联系管理员，说明情况，一般都能解封。</p>
+<p>Q3：能不能多开几个账号薅更多？
+A：技术上可以，但同一IP下多个Key共享200次/天限制。你换个IP（比如用手机热点）就能绕过。不过这样比较麻烦，不如直接买付费版。</p>
+<p>Q4：和官方API比，稳定性怎么样？
+A：我用了快一个月，遇到过3次服务不可用，都是半夜维护。平时稳定性95%以上，对个人项目来说够用了。如果你需要99.9%的SLA，还是用官方API。</p>
+<p>Q5：数据隐私有保障吗？
+A：官方声明不会收集、记录、存储用户输入和模型输出。但OpenAI官方会保留30天数据（这是OpenAI的政策，不是ChatAnywhere的）。如果你对隐私很敏感，建议不要传敏感信息。</p>
+<h2 id="我的使用场景">我的使用场景</h2>
+<p>我主要拿ChatAnywhere干这几件事：</p>
+<ol>
+<li>写代码助手：用GPT-4o帮我review代码、写单元测试，每天大概20次调用</li>
+<li>翻译工具：用DeepSeek翻译技术文档，便宜又快</li>
+<li>自动化脚本：写了个Python脚本，每天自动抓取新闻，用GPT-4o生成摘要</li>
+</ol>
+<p>这些场景下，每周5万点完全够用。如果你也有类似的需求，ChatAnywhere值得一试。</p>
+<h2 id="总结">总结</h2>
+<p>ChatAnywhere是个良心项目，免费额度给得挺大方，模型也全。适合个人开发者、学生、做小项目的人。如果你需要商用或者高并发，建议用付费版，价格真的很便宜。</p>
+<p>最后提醒一句：免费的东西，且用且珍惜。别滥用，别拿去搞黑产，不然这个项目早晚得关门。</p>
+<p>项目地址：<a href="https://github.com/chatanywhere/GPT_API_free">https://github.com/chatanywhere/GPT_API_free</a>
+官网：<a href="https://chatanywhere.tech/">https://chatanywhere.tech/</a>
+状态监控：<a href="https://status.chatanywhere.tech/">https://status.chatanywhere.tech/</a></p>
