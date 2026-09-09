@@ -2,7 +2,7 @@
   "version": "2.0",
   "generatedAt": "2026-08-03",
   "migratedFrom": "data.json",
-  "totalTools": 99,
+  "totalTools": 104,
   "tools": [
     {
       "id": "kling",
@@ -8563,6 +8563,472 @@
         "watermarkSource": "inferred:no-visual-output"
       },
       "rating": 4.0
+    },
+    {
+      "id": "chatanywhere",
+      "name": "ChatAnywhere",
+      "nameEn": "ChatAnywhere",
+      "category": "api",
+      "categoryZh": "API聚合",
+      "categoryEn": "API Aggregator",
+      "websiteUrl": "https://chatanywhere.tech/",
+      "company": "ChatAnywhere",
+      "description": "免费的GPT/DeepSeek API聚合平台，绑定GitHub即可使用，每周50000点配额，每天100次请求，支持国内直连。",
+      "descriptionEn": "Free GPT/DeepSeek API aggregator. Bind GitHub to use. 50,000 points weekly quota, 100 requests daily. Direct access in China.",
+      "rating": 4.5,
+      "freeTier": {
+        "refreshPeriod": "weekly",
+        "credits": 50000,
+        "creditUnit": "points/week",
+        "resolution": "N/A",
+        "watermark": false,
+        "commercialUse": false,
+        "requiresCreditCard": false
+      },
+      "paidFrom": "¥0.0012/1K tokens",
+      "paidFromEn": "¥0.0012/1K tokens",
+      "pros": [
+        "绑定GitHub即用，无需付费",
+        "支持GPT-5、DeepSeek、Claude、Gemini等主流模型",
+        "国内直连，无需翻墙",
+        "每周50000点配额，每天100次请求",
+        "API格式兼容OpenAI，接入方便"
+      ],
+      "prosEn": [
+        "Bind GitHub to use, no payment required",
+        "Supports GPT-5, DeepSeek, Claude, Gemini and other mainstream models",
+        "Direct access in China, no VPN needed",
+        "50,000 points weekly quota, 100 requests daily",
+        "OpenAI-compatible API format, easy integration"
+      ],
+      "cons": [
+        "仅限个人非商业用途",
+        "每天200次请求限制（同一IP+Key）",
+        "免费Key的GPT-5推理能力较弱",
+        "不支持商用或大规模训练"
+      ],
+      "consEn": [
+        "Personal non-commercial use only",
+        "200 requests/day limit (same IP+Key)",
+        "Free Key's GPT-5 has weaker reasoning ability",
+        "No commercial use or large-scale training allowed"
+      ],
+      "features": [
+        "支持GPT-5、DeepSeek、Claude、Gemini、Qwen、Kimi、Minimax、GLM等",
+        "国内动态加速，体验优于代理",
+        "OpenAI标准协议，Claude支持Anthropic协议",
+        "实时状态监控：status.chatanywhere.tech",
+        "付费版最低官方1-2折"
+      ],
+      "featuresEn": [
+        "Supports GPT-5, DeepSeek, Claude, Gemini, Qwen, Kimi, Minimax, GLM and more",
+        "Dynamic acceleration in China, better than proxy",
+        "OpenAI standard protocol, Claude supports Anthropic protocol",
+        "Real-time status monitoring: status.chatanywhere.tech",
+        "Paid version starts from 10-20% of official price"
+      ],
+      "tips": [
+        "国内使用api.chatanywhere.tech，国外使用api.chatanywhere.org",
+        "免费Key仅限个人非商业用途，教育、非营利科研可用",
+        "如需更强推理能力，建议购买付费API",
+        "同一IP下多个Key共享200次/天限制",
+        "遇到问题先查status.chatanywhere.tech确认服务状态"
+      ],
+      "tipsEn": [
+        "Use api.chatanywhere.tech in China, api.chatanywhere.org abroad",
+        "Free Key is for personal non-commercial use only, education and non-profit research allowed",
+        "For stronger reasoning ability, consider purchasing paid API",
+        "Multiple Keys under same IP share 200 requests/day limit",
+        "Check status.chatanywhere.tech first when encountering issues"
+      ],
+      "lastVerifiedDate": "2026-09-09",
+      "seoMeta": {
+        "title": "ChatAnywhere - Free GPT/DeepSeek API Guide | AI Free Plan",
+        "titleZh": "ChatAnywhere - 免费GPT/DeepSeek API指南 | AI Free Plan",
+        "description": "ChatAnywhere free API aggregator. Bind GitHub to get 50,000 points weekly. Supports GPT-5, DeepSeek, Claude, Gemini. Direct access in China.",
+        "descriptionZh": "ChatAnywhere免费API聚合平台。绑定GitHub即可获得每周50000点配额。支持GPT-5、DeepSeek、Claude、Gemini等主流模型，国内直连无需翻墙。",
+        "keywords": [
+          "ChatAnywhere",
+          "免费API",
+          "GPT-5",
+          "DeepSeek",
+          "Claude",
+          "Gemini",
+          "API聚合",
+          "国内直连"
+        ]
+      },
+      "freeStatus": "每周刷新"
+    },
+    {
+      "id": "aihot",
+      "name": "AI HOT",
+      "nameEn": "AI HOT",
+      "category": "api",
+      "categoryZh": "API聚合",
+      "categoryEn": "API Aggregator",
+      "websiteUrl": "https://aihot.cc/",
+      "company": "AI HOT",
+      "description": "免费AI资讯API，无需注册、无需Token、开箱即用。中文AI动态聚合平台，提供GLM-5.3-Flash等模型免费调用。",
+      "descriptionEn": "Free AI news API. No registration, no token required, ready to use. Chinese AI dynamic aggregation platform with free GLM-5.3-Flash access.",
+      "rating": 4,
+      "freeTier": {
+        "refreshPeriod": "unlimited",
+        "credits": null,
+        "creditUnit": "free",
+        "resolution": "N/A",
+        "watermark": false,
+        "commercialUse": false,
+        "requiresCreditCard": false
+      },
+      "paidFrom": "免费",
+      "paidFromEn": "Free",
+      "pros": [
+        "完全免费，无需注册",
+        "无需Token，开箱即用",
+        "中文AI动态聚合平台",
+        "提供GLM-5.3-Flash等模型免费调用",
+        "运营成本由平台承担，用户无需付费"
+      ],
+      "prosEn": [
+        "Completely free, no registration required",
+        "No token needed, ready to use out of the box",
+        "Chinese AI dynamic aggregation platform",
+        "Provides free access to GLM-5.3-Flash and other models",
+        "Operating costs covered by platform, no payment from users"
+      ],
+      "cons": [
+        "主要是资讯聚合，模型调用功能有限",
+        "免费API可能有调用频率限制",
+        "不支持所有主流模型",
+        "文档相对较少"
+      ],
+      "consEn": [
+        "Mainly news aggregation, limited model calling features",
+        "Free API may have rate limits",
+        "Does not support all mainstream models",
+        "Relatively limited documentation"
+      ],
+      "features": [
+        "AI资讯聚合",
+        "GLM-5.3-Flash免费调用",
+        "无需注册即可使用",
+        "开箱即用的API",
+        "二次开发友好"
+      ],
+      "featuresEn": [
+        "AI news aggregation",
+        "Free GLM-5.3-Flash access",
+        "No registration required",
+        "Ready-to-use API",
+        "Developer-friendly for secondary development"
+      ],
+      "tips": [
+        "适合做AI资讯类应用",
+        "GLM-5.3-Flash可用于轻量级对话场景",
+        "无需注册，直接调用API",
+        "适合个人项目和小型应用",
+        "如需更多模型，建议配合其他平台使用"
+      ],
+      "tipsEn": [
+        "Suitable for AI news applications",
+        "GLM-5.3-Flash can be used for lightweight dialogue scenarios",
+        "No registration needed, call API directly",
+        "Suitable for personal projects and small applications",
+        "For more models, consider using with other platforms"
+      ],
+      "lastVerifiedDate": "2026-09-09",
+      "seoMeta": {
+        "title": "AI HOT - Free AI News API Guide | AI Free Plan",
+        "titleZh": "AI HOT - 免费AI资讯API指南 | AI Free Plan",
+        "description": "AI HOT free news API. No registration, no token required. Chinese AI aggregation platform with free GLM-5.3-Flash access.",
+        "descriptionZh": "AI HOT免费AI资讯API。无需注册、无需Token、开箱即用。中文AI动态聚合平台，提供GLM-5.3-Flash等模型免费调用。",
+        "keywords": [
+          "AI HOT",
+          "免费API",
+          "AI资讯",
+          "GLM-5.3-Flash",
+          "无需注册",
+          "开箱即用"
+        ]
+      },
+      "freeStatus": "永久免费"
+    },
+    {
+      "id": "unorouter",
+      "name": "UnoRouter",
+      "nameEn": "UnoRouter",
+      "category": "api",
+      "categoryZh": "API聚合",
+      "categoryEn": "API Aggregator",
+      "websiteUrl": "https://unorouter.ai/",
+      "company": "UnoRouter",
+      "description": "大模型聚合路由平台，免费开放GLM-5.3、Qwen-3.8-27b等多款模型API调用。",
+      "descriptionEn": "Large model aggregation routing platform, offering free API access to GLM-5.3, Qwen-3.8-27b and other models.",
+      "rating": 4,
+      "freeTier": {
+        "refreshPeriod": "unlimited",
+        "credits": null,
+        "creditUnit": "free",
+        "resolution": "N/A",
+        "watermark": false,
+        "commercialUse": false,
+        "requiresCreditCard": false
+      },
+      "paidFrom": "免费",
+      "paidFromEn": "Free",
+      "pros": [
+        "聚合多款主流大模型",
+        "GLM-5.3、Qwen-3.8-27b等可免费使用",
+        "统一API接口，切换模型方便",
+        "无需付费即可体验最新模型",
+        "适合开发者快速测试不同模型"
+      ],
+      "prosEn": [
+        "Aggregates multiple mainstream large models",
+        "GLM-5.3, Qwen-3.8-27b and others available for free",
+        "Unified API interface, easy model switching",
+        "Experience latest models without payment",
+        "Ideal for developers to quickly test different models"
+      ],
+      "cons": [
+        "平台较新，稳定性待验证",
+        "免费额度可能有调用限制",
+        "文档可能不够完善",
+        "商用政策不明确",
+        "社区支持相对较少"
+      ],
+      "consEn": [
+        "Relatively new platform, stability to be verified",
+        "Free quota may have usage limits",
+        "Documentation may not be complete",
+        "Commercial use policy unclear",
+        "Relatively limited community support"
+      ],
+      "features": [
+        "GLM-5.3免费调用",
+        "Qwen-3.8-27b免费调用",
+        "多模型聚合路由",
+        "统一API格式",
+        "快速模型切换"
+      ],
+      "featuresEn": [
+        "Free GLM-5.3 access",
+        "Free Qwen-3.8-27b access",
+        "Multi-model aggregation routing",
+        "Unified API format",
+        "Quick model switching"
+      ],
+      "tips": [
+        "适合快速测试不同模型效果",
+        "GLM-5.3适合中文场景",
+        "Qwen-3.8-27b适合代码生成",
+        "建议先小规模测试稳定性",
+        "关注平台更新获取新模型"
+      ],
+      "tipsEn": [
+        "Ideal for quickly testing different model effects",
+        "GLM-5.3 suitable for Chinese scenarios",
+        "Qwen-3.8-27b suitable for code generation",
+        "Recommend small-scale stability testing first",
+        "Follow platform updates for new models"
+      ],
+      "lastVerifiedDate": "2026-09-09",
+      "seoMeta": {
+        "title": "UnoRouter - Free GLM-5.3 Qwen API Guide | AI Free Plan",
+        "titleZh": "UnoRouter - 免费GLM-5.3 Qwen API指南 | AI Free Plan",
+        "description": "UnoRouter free API platform. Access GLM-5.3, Qwen-3.8-27b and other models for free. Multi-model aggregation routing.",
+        "descriptionZh": "UnoRouter免费API平台。免费调用GLM-5.3、Qwen-3.8-27b等多款模型。多模型聚合路由平台。",
+        "keywords": [
+          "UnoRouter",
+          "免费API",
+          "GLM-5.3",
+          "Qwen-3.8-27b",
+          "模型聚合",
+          "API路由"
+        ]
+      },
+      "freeStatus": "免费开放"
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "nameEn": "DeepSeek V4 Flash",
+      "category": "api",
+      "categoryZh": "文本生成",
+      "categoryEn": "Text Generation",
+      "websiteUrl": "https://platform.deepseek.com/",
+      "company": "DeepSeek",
+      "description": "DeepSeek最新轻量模型，API完全免费。速度快、成本低，适合大规模应用和实时场景。",
+      "descriptionEn": "DeepSeek's latest lightweight model with completely free API. Fast speed, low cost, suitable for large-scale applications and real-time scenarios.",
+      "rating": 4.5,
+      "freeTier": {
+        "refreshPeriod": "unlimited",
+        "credits": null,
+        "creditUnit": "free",
+        "resolution": "N/A",
+        "watermark": false,
+        "commercialUse": true,
+        "requiresCreditCard": false
+      },
+      "paidFrom": "免费",
+      "paidFromEn": "Free",
+      "pros": [
+        "API完全免费，无额度限制",
+        "响应速度快，适合实时应用",
+        "支持商用",
+        "OpenAI兼容API格式",
+        "中文理解能力强",
+        "无需翻墙，国内直连"
+      ],
+      "prosEn": [
+        "Completely free API with no quota limits",
+        "Fast response speed, suitable for real-time applications",
+        "Commercial use supported",
+        "OpenAI compatible API format",
+        "Strong Chinese language understanding",
+        "Direct access in China, no VPN needed"
+      ],
+      "cons": [
+        "相比V4 Pro，推理能力稍弱",
+        "复杂任务可能不够精准",
+        "高峰期可能有限流",
+        "不支持多模态（仅文本）"
+      ],
+      "consEn": [
+        "Weaker reasoning compared to V4 Pro",
+        "May not be precise enough for complex tasks",
+        "May have rate limiting during peak hours",
+        "Text only, no multimodal support"
+      ],
+      "features": [
+        "完全免费API",
+        "快速响应",
+        "OpenAI兼容格式",
+        "支持商用",
+        "中文优化",
+        "国内直连"
+      ],
+      "featuresEn": [
+        "Completely free API",
+        "Fast response",
+        "OpenAI compatible format",
+        "Commercial use supported",
+        "Chinese optimized",
+        "Direct access in China"
+      ],
+      "tips": [
+        "适合对速度要求高的场景",
+        "批量处理任务首选",
+        "API格式：https://api.deepseek.com/v1",
+        "可直接用OpenAI SDK调用",
+        "如需更强推理能力，考虑V4 Pro"
+      ],
+      "tipsEn": [
+        "Ideal for speed-critical scenarios",
+        "First choice for batch processing tasks",
+        "API format: https://api.deepseek.com/v1",
+        "Can be called directly with OpenAI SDK",
+        "Consider V4 Pro for stronger reasoning"
+      ],
+      "lastVerifiedDate": "2026-09-09",
+      "seoMeta": {
+        "title": "DeepSeek V4 Flash - Free API Guide | AI Free Plan",
+        "titleZh": "DeepSeek V4 Flash - 免费API指南 | AI Free Plan",
+        "description": "DeepSeek V4 Flash free API. Fast, free, commercial use supported. OpenAI compatible format.",
+        "descriptionZh": "DeepSeek V4 Flash免费API。速度快、完全免费、支持商用。OpenAI兼容格式，国内直连。"
+      },
+      "freeStatus": "永久免费"
+    },
+    {
+      "id": "zhipu-bigmodel",
+      "name": "智谱BigModel",
+      "nameEn": "Zhipu BigModel",
+      "category": "api",
+      "categoryZh": "文本生成",
+      "categoryEn": "Text Generation",
+      "websiteUrl": "https://bigmodel.cn/",
+      "company": "智谱AI",
+      "description": "智谱AI开放平台，GLM-4.5-Air模型提供2000万Tokens免费额度。支持GLM全系列模型API调用。",
+      "descriptionEn": "Zhipu AI open platform. GLM-4.5-Air model offers 20 million free tokens. Supports full GLM model series API access.",
+      "rating": 4.5,
+      "freeTier": {
+        "refreshPeriod": "one-time",
+        "credits": 20000000,
+        "creditUnit": "tokens",
+        "resolution": "N/A",
+        "watermark": false,
+        "commercialUse": true,
+        "requiresCreditCard": false
+      },
+      "paidFrom": "¥0.0005/1K tokens",
+      "paidFromEn": "¥0.0005/1K tokens",
+      "pros": [
+        "GLM-4.5-Air提供2000万Tokens免费额度",
+        "支持GLM全系列模型",
+        "国内头部大模型厂商",
+        "API稳定可靠",
+        "支持商用",
+        "中文理解能力强"
+      ],
+      "prosEn": [
+        "GLM-4.5-Air offers 20 million free tokens",
+        "Supports full GLM model series",
+        "Leading domestic LLM provider",
+        "Stable and reliable API",
+        "Commercial use supported",
+        "Strong Chinese language understanding"
+      ],
+      "cons": [
+        "免费额度为一次性，用完需付费",
+        "高级模型（GLM-4.5 Pro）价格较高",
+        "注册流程相对复杂",
+        "部分功能需要企业认证"
+      ],
+      "consEn": [
+        "Free quota is one-time, paid after exhaustion",
+        "Advanced models (GLM-4.5 Pro) are relatively expensive",
+        "Registration process is relatively complex",
+        "Some features require enterprise certification"
+      ],
+      "features": [
+        "GLM-4.5-Air免费2000万Tokens",
+        "GLM全系列模型支持",
+        "文本生成、对话、代码",
+        "多模态能力（部分模型）",
+        "API稳定可靠",
+        "企业级服务"
+      ],
+      "featuresEn": [
+        "GLM-4.5-Air free 20 million tokens",
+        "Full GLM model series support",
+        "Text generation, dialogue, code",
+        "Multimodal capabilities (some models)",
+        "Stable and reliable API",
+        "Enterprise-grade service"
+      ],
+      "tips": [
+        "注册后在控制台创建API Key",
+        "GLM-4.5-Air适合日常对话和轻量任务",
+        "复杂推理任务建议使用GLM-4.5 Pro",
+        "免费额度用完后可按需付费",
+        "API文档：https://bigmodel.cn/dev/api"
+      ],
+      "tipsEn": [
+        "Create API Key in console after registration",
+        "GLM-4.5-Air suitable for daily dialogue and lightweight tasks",
+        "Recommend GLM-4.5 Pro for complex reasoning tasks",
+        "Pay as you go after free quota is exhausted",
+        "API documentation: https://bigmodel.cn/dev/api"
+      ],
+      "lastVerifiedDate": "2026-09-09",
+      "seoMeta": {
+        "title": "Zhipu BigModel - Free GLM-4.5-Air 20M Tokens Guide | AI Free Plan",
+        "titleZh": "智谱BigModel - 免费GLM-4.5-Air 2000万Tokens指南 | AI Free Plan",
+        "description": "Zhipu BigModel free API. GLM-4.5-Air offers 20 million free tokens. Full GLM series support.",
+        "descriptionZh": "智谱BigModel免费API。GLM-4.5-Air提供2000万免费Tokens。支持GLM全系列模型。"
+      },
+      "freeStatus": "一次性免费"
     }
   ],
   "lastUpdated": "2026-08-03T16:11:22.837223"

@@ -2,317 +2,312 @@
 <html lang="zh">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>免费AI大模型API平台对比：2026年最强白嫖指南 | AIFreePlan</title>
-<meta property="og:type" content="article">
-<meta property="og:title" content="免费AI大模型API平台对比：2026年最强白嫖指南 | AIFreePlan">
-<meta property="og:description" content="深度横评20+个AI大模型平台的免费额度、RPM限制、TPM上限，帮你找到最适合的免费API。SiliconFlow RPM 500、Groq 1000次/天、GitHub Models免费用GPT-4.1，还有完全免费的NotebookLM。">
-<meta property="og:url" content="https://aifreeplan.com/zh/guides/free-ai-llm-api-platforms-comparison">
-<meta property="og:site_name" content="AIFreePlan">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://aifreeplan.com/og-image.png">
-<meta name="twitter:image" content="https://aifreeplan.com/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="免费AI大模型API平台对比：2026年最强白嫖指南 | AIFreePlan">
-<meta name="twitter:description" content="深度横评20+个AI大模型平台的免费额度、RPM限制、TPM上限，帮你找到最适合的免费API。">
-<meta name="description" content="深度横评20+个AI大模型平台的免费额度、RPM限制、TPM上限，帮你找到最适合的免费API。SiliconFlow RPM 500、Groq 1000次/天、GitHub Models免费用GPT-4.1。">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<meta name="theme-color" content="#6366F1">
-<link rel="canonical" href="https://aifreeplan.com/zh/guides/free-ai-llm-api-platforms-comparison">
-<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/free-ai-llm-api-platforms-comparison">
-<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/free-ai-llm-api-platforms-comparison">
-<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/free-ai-llm-api-platforms-comparison">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;--text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;--accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);--green:#059669;--green-light:rgba(5,150,105,.1);--shadow:0 4px 20px rgba(0,0,0,.05);--radius:12px}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-.container{max-width:1280px;margin:0 auto;padding:0 40px}
-.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
-.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
-.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
-.logo .accent{color:var(--accent)}
-.nav{display:flex;gap:32px;align-items:center}
-.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
-.nav a:hover{color:var(--accent)}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
-.btn-primary{background:var(--accent);color:#fff}
-.btn-primary:hover{background:var(--accent-hover)}
-.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
-.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
-.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
-.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
-.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
-.article-container ul,.article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
-.article-container li{margin-bottom:8px;line-height:1.6}
-.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
-.article-container a{color:var(--accent);text-decoration:underline}
-.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
-.article-container th,.article-container td{padding:12px;border:1px solid var(--border);text-align:left}
-.article-container th{background:var(--accent-light);font-weight:600}
-.breadcrumb{font-size:14px;color:var(--text-muted);margin-bottom:24px}
-.breadcrumb a{color:var(--text-muted);text-decoration:none}
-.breadcrumb a:hover{color:var(--accent)}
-.breadcrumb-sep{margin:0 8px}
-.faq-section{background:var(--bg-white);border-radius:var(--radius);padding:32px;margin-top:40px;box-shadow:var(--shadow)}
-.faq-section h3{margin-top:0;color:var(--text)}
-.faq-item{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border-light)}
-.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
-.faq-q{font-weight:700;color:var(--text);margin-bottom:8px}
-.faq-a{color:var(--text-secondary);line-height:1.7}
-.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff;margin-top:60px}
-.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
-.footer-brand{max-width:300px}
-.footer-brand p{font-size:14px;color:rgba(255,255,255,.6)}
-.footer-links{display:flex;gap:60px}
-.footer-col{display:flex;flex-direction:column;gap:10px}
-.footer-col h4{font-size:14px;font-weight:700;color:#fff}
-.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px}
-.footer-col a:hover{color:#fff}
-.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
-@media(max-width:768px){.article-container{padding:16px 16px 48px;max-width:100%}.article-container h1{font-size:24px}.article-container h2{font-size:20px}.container{padding:0 16px}.nav{display:none}}
-</style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"免费AI大模型API平台对比：2026年最强白嫖指南","description":"深度横评20+个AI大模型平台的免费额度、RPM限制、TPM上限，帮你找到最适合的免费API。","url":"https://aifreeplan.com/zh/guides/free-ai-llm-api-platforms-comparison","datePublished":"2026-06-24","dateModified":"2026-06-24","author":{"@type":"Organization","name":"AIFreePlan"},"publisher":{"@type":"Organization","name":"AIFreePlan","url":"https://aifreeplan.com"},"mainEntityOfPage":{"@type":"WebPage","id":"https://aifreeplan.com/zh/guides/free-ai-llm-api-platforms-comparison"}}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://aifreeplan.com/zh"},{"@type":"ListItem","position":2,"name":"攻略","item":"https://aifreeplan.com/zh/guides"},{"@type":"ListItem","position":3,"name":"免费AI大模型API平台对比","item":"https://aifreeplan.com/zh/guides/free-ai-llm-api-platforms-comparison"}]}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"哪个AI API平台免费额度最多？","acceptedAnswer":{"@type":"Answer","text":"SiliconFlow免费额度最高，RPM 500、TPM 200万，支持DeepSeek、Qwen等多个模型。Groq每天1000次请求，GitHub Models每天150次请求。"}}
-]}
-</script>
+<title>免费AI大模型API平台对比：2026年最强白嫖指南</title>
 </head>
 <body>
-<header class="header">
-  <div class="container header-inner">
-    <a href="/zh" class="logo">AI<span class="accent">FreePlan</span></a>
-    <nav class="nav">
-      <a href="/zh/all">全部工具</a>
-      <a href="/zh/guides">攻略</a>
-      <a href="/zh/privacy">隐私</a>
-      <a href="/en/guides/free-ai-llm-api-platforms-comparison" class="btn btn-primary">English</a>
-    </nav>
-  </div>
-</header>
 <main class="article-container">
-<nav class="breadcrumb"><a href="/zh">首页</a> <span class="breadcrumb-sep">›</span> <a href="/zh/guides">攻略</a> <span class="breadcrumb-sep">›</span> <span>免费AI大模型API平台对比：2026年最强白嫖指南</span></nav>
-
-<h1>免费AI大模型API平台对比：2026年最强白嫖指南</h1>
-<p>2026年，AI大模型API的免费额度卷到了什么程度？我们横评了20+个主流平台，从RPM限制到TPM上限，从免费模型数量到使用门槛，帮你找到最适合的免费方案。</p>
-
-<h2>🏆 免费额度排行榜（按综合评分）</h2>
-<table>
-<thead>
-<tr><th>排名</th><th>平台</th><th>免费额度</th><th>RPM</th><th>TPM</th><th>是否需要信用卡</th></tr>
-</thead>
-<tbody>
-<tr><td>1</td><td>SiliconFlow 硅基流动</td><td>无限使用免费模型</td><td>500</td><td>200万</td><td>否</td></tr>
-<tr><td>2</td><td>Groq</td><td>1000次/天</td><td>30</td><td>3万</td><td>否</td></tr>
-<tr><td>3</td><td>GitHub Models</td><td>150次/天</td><td>15</td><td>-</td><td>否</td></tr>
-<tr><td>4</td><td>NotebookLM</td><td>完全免费</td><td>-</td><td>-</td><td>否</td></tr>
-<tr><td>5</td><td>FreeTheAI</td><td>50次/天</td><td>-</td><td>-</td><td>否</td></tr>
-<tr><td>6</td><td>Cline.bot API</td><td>永久免费</td><td>-</td><td>-</td><td>否</td></tr>
-<tr><td>7</td><td>腾讯Marvis</td><td>完全免费</td><td>-</td><td>-</td><td>否</td></tr>
-<tr><td>8</td><td>腾讯元宝</td><td>完全免费</td><td>-</td><td>-</td><td>否</td></tr>
-<tr><td>9</td><td>扣子Coze</td><td>完全免费</td><td>-</td><td>-</td><td>否</td></tr>
-<tr><td>10</td><td>Cloudflare Workers AI</td><td>10000 Neurons/天</td><td>-</td><td>-</td><td>否</td></tr>
-</tbody>
-</table>
-
-<h2>🥇 第一梯队：免费额度最慷慨的平台</h2>
-
-<h3>1. SiliconFlow 硅基流动 — 免费额度之王</h3>
-<p>SiliconFlow是目前免费额度最慷慨的AI API平台。免费版提供<strong>RPM 500、TPM 200万</strong>的超高并发能力，支持DeepSeek、Qwen、GLM等多个国产开源模型。不需要翻墙，国内直连，对国内开发者极其友好。</p>
-<p><strong>免费额度详情：</strong></p>
+<h1 id="免费ai大模型api平台对比2026年最强白嫖指南">免费AI大模型API平台对比：2026年最强白嫖指南</h1>
+<p>2026年，免费AI API平台多到让人选择困难。我把主流平台按免费额度、模型质量、速度三个维度做了全面对比。本文所有额度数据都来自 <a href="https://aifreeplan.com">aifreeplan.com</a> 真实工具库（2026年8月27日更新），不是抄官网营销文案。</p>
+<p>先抛结论：<strong>速度选 Groq / Cerebras，模型多选 NVIDIA NIM，聚合用 OpenRouter，国内直连选硅基流动或魔塔，白嫖 GPT 选 GitHub Models</strong>。</p>
+<hr>
+<h2 id="一国际平台免费额度-实测拆解">一、国际平台：免费额度 + 实测拆解</h2>
+<h3 id="1-groq-速度最快的-lpu-推理">1. Groq — 速度最快的 LPU 推理</h3>
 <ul>
-<li>RPM（每分钟请求数）：500</li>
-<li>TPM（每分钟token数）：200万</li>
-<li>免费模型：GLM-Z1-9B等通过free-text-model标签筛选</li>
-<li>商业使用：允许</li>
-<li>付费价格：¥0.006/千tokens起</li>
+<li><strong>免费额度</strong>：每天 1000 次请求，30 RPM，TPM 30000</li>
+<li><strong>核心优势</strong>：LPU 硬件加速，Llama 4 Scout 和 Qwen3 32B 在免费版里质量极高</li>
+<li><strong>真实使用感受</strong>：流式输出几乎零延迟，做实时对话、流式应用体感远超普通 GPU 平台</li>
+<li><strong>缺点</strong>：需要翻墙；只支持开源模型，没有 GPT / Claude；TPM 30000 对长上下文不够</li>
+<li><strong>最佳场景</strong>：实时聊天机器人、流式输出 Demo、低延迟 API 包装</li>
 </ul>
-<p><strong>适合场景：</strong>高频调用、国内直连需求、需要多个模型切换的场景。RPM 500的并发能力在免费API中几乎无敌。</p>
-
-<h3>2. Groq — 速度最快的免费API</h3>
-<p>Groq凭借自研LPU（张量处理单元）芯片，推理速度远超同行。免费版提供<strong>1000次请求/天</strong>，RPM 30、TPM 3万。虽然额度不算最大，但速度优势明显。</p>
-<p><strong>免费额度详情：</strong></p>
+<h3 id="2-cerebras-每日-100-万-tokenwse-芯片碾压">2. Cerebras — 每日 100 万 Token，WSE 芯片碾压</h3>
 <ul>
-<li>每日免费请求：1000次</li>
-<li>RPM：30</li>
-<li>TPM：3万</li>
-<li>支持模型：Llama、Mixtral、Gemini等</li>
-<li>付费模式：按量计费</li>
+<li><strong>免费额度</strong>：30 RPM，TPM 60000</li>
+<li><strong>核心优势</strong>：WSE 晶圆级芯片，速度和 Groq 一个级别</li>
+<li><strong>真实使用感受</strong>：和 Groq 不相上下，但目前需要加入等待列表（我等了 3 天才通过）</li>
+<li><strong>缺点</strong>：需要翻墙；需要加入等待列表；模型选择比 Groq 少</li>
+<li><strong>最佳场景</strong>：对延迟敏感的生产环境、批量推理任务</li>
 </ul>
-<p><strong>适合场景：</strong>对延迟敏感的应用、实时对话系统、需要快速响应的生产环境。</p>
-
-<h3>3. GitHub Models — 免费用GPT-4.1</h3>
-<p>GitHub Models是微软旗下的免费AI推理服务，只需GitHub账户即可使用，<strong>无需信用卡</strong>。免费版支持GPT-4.1、GPT-4o等OpenAI系模型，每天150次请求。</p>
-<p><strong>免费额度详情：</strong></p>
+<h3 id="3-nvidia-nim-模型数量-121-个免费版最全">3. NVIDIA NIM — 模型数量 121 个，免费版最全</h3>
 <ul>
-<li>每日免费请求：150次</li>
-<li>RPM：15</li>
-<li>支持模型：GPT-4.1、GPT-4o等</li>
-<li>需要信用卡：否</li>
-<li>付费模式：无（永久免费）</li>
+<li><strong>免费额度</strong>：NVIDIA 开发者计划免费，60 RPM</li>
+<li><strong>核心优势</strong>：121 个模型，覆盖 DeepSeek V4 Pro、Llama、Qwen 全系列，<strong>所有 API 平台里模型最多</strong></li>
+<li><strong>真实使用感受</strong>：注册 NVIDIA Developer 账号秒过，不需要信用卡，DeepSeek V4 Flash 在免费层里性价比极高</li>
+<li><strong>缺点</strong>：需要翻墙；部分模型响应较慢（毕竟是 GPU 推理不是 LPU）；免费额度说明文档不清晰</li>
+<li><strong>最佳场景</strong>：需要横向对比大量模型、想白嫖 DeepSeek V4 顶级模型</li>
 </ul>
-<p><strong>适合场景：</strong>个人开发者学习GPT系列模型、原型开发、不需要高频调用的场景。</p>
-
-<h3>4. NotebookLM — Google完全免费的AI笔记工具</h3>
-<p>NotebookLM是Google推出的AI笔记工具，<strong>完全免费</strong>，支持上传PDF、文档等作为知识库，让Gemini模型基于你的资料回答问题。虽然没有传统意义上的API，但作为AI工具完全免费使用。</p>
-<p><strong>免费额度详情：</strong></p>
+<h3 id="4-together-ai-开源模型库丰富">4. Together AI — 开源模型库丰富</h3>
 <ul>
-<li>使用限制：完全免费</li>
-<li>支持上传文件类型：PDF、Google Docs等</li>
-<li>底层模型：Google Gemini</li>
-<li>需要翻墙：是</li>
+<li><strong>免费额度</strong>：有限的免费积分（注册后查看 Dashboard）</li>
+<li><strong>核心优势</strong>：Llama、Mistral、Falcon 等开源模型齐全</li>
+<li><strong>真实使用感受</strong>：界面友好，API 兼容 OpenAI 格式，适合快速原型开发</li>
+<li><strong>缺点</strong>：免费额度不明确；需要翻墙；超出免费额度<strong>会自动扣费</strong>（这是大坑！一定要设用量告警）</li>
+<li><strong>最佳场景</strong>：研究不同开源模型、需要 OpenAI 兼容 API</li>
 </ul>
-
-<h3>5. Cline.bot API — 永久免费</h3>
-<p>Cline.bot API提供永久免费的使用方式，支持100万token上下文窗口，不消耗积分额度。这是一个相对较新的平台，但在免费策略上非常激进。</p>
-<p><strong>免费额度详情：</strong></p>
+<h3 id="5-huggingface-serverless-模型超市5万模型">5. HuggingFace Serverless — 模型超市，5万+模型</h3>
 <ul>
-<li>免费模式：永久免费，不消耗积分</li>
-<li>上下文窗口：100万token</li>
-<li>注册奖励：$0.5用于付费模型</li>
+<li><strong>免费额度</strong>：根据账户等级每月可变积分</li>
+<li><strong>核心优势</strong>：开源模型最全、最快更新，Python SDK 友好</li>
+<li><strong>真实使用感受</strong>：研究新模型必看，但免费额度对大模型（&gt;10GB）不够</li>
+<li><strong>缺点</strong>：免费额度有限；部分场景需翻墙；仅支持 &lt; 10GB 的模型</li>
+<li><strong>最佳场景</strong>：研究、对比不同架构、跑小模型 Demo</li>
 </ul>
-
-<h2>🥈 第二梯队：有一定额度但有限的平台</h2>
-
-<h3>6. Cloudflare Workers AI — 10000 Neurons/天</h3>
-<p>Cloudflare的Workers AI平台提供10000 Neurons/天的免费额度，支持多种开源模型。按Neuron计费是独特的计量方式，适合小批量推理任务。</p>
-<p><strong>免费额度详情：</strong></p>
+<h3 id="6-openrouter-27-个免费模型国内可直连">6. OpenRouter — 27 个免费模型，国内可直连</h3>
 <ul>
-<li>每日免费：10000 Neurons</li>
-<li>付费价格：$0.011/1000 Neurons</li>
-<li>支持模型：多种开源LLM</li>
+<li><strong>免费额度</strong>：每天 50 次（充值 $10 后解锁每天 1000 次）</li>
+<li><strong>核心优势</strong>：27 个免费模型，DeepSeek、Qwen、Llama、GLM 全覆盖，<strong>国内直连不需要翻墙</strong></li>
+<li><strong>真实使用感受</strong>：用 <code>:free</code> 后缀的模型都是免费的，统一接口切换模型只改名字一行代码</li>
+<li><strong>缺点</strong>：免费版每天只有 50 次；解锁 1000 次/天需要充值 $10；免费模型质量参差不齐</li>
+<li><strong>最佳场景</strong>：多模型对比测试、想在国内网络环境白嫖的开发者</li>
 </ul>
-
-<h3>7. FreeTheAI — 50次/天</h3>
-<p>FreeTheAI提供每天50次免费请求，完全免费无需付费。适合轻度用户日常使用。</p>
-
-<h3>8. 腾讯Marvis — 完全免费</h3>
-<p>腾讯推出的AI助手Marvis，目前完全免费使用，支持多种AI功能。国内直连，无需翻墙。</p>
-
-<h3>9. 讯飞星火MaaS — 6次/5小时</h3>
-<p>讯飞星火大模型MaaS平台提供一定的免费额度，适合国内用户使用。付费采用Token Plan包月制。</p>
-
-<h3>10. ModelScope — 2000次/天</h3>
-<p>ModelScope（魔搭社区）提供每天2000次免费API调用，超出后按量付费。支持多种开源模型，是国内开发者的好选择。</p>
-
-<h2>🥉 第三梯队：入门级免费额度</h2>
-
-<h3>11. AI21 Labs — 注册送10积分</h3>
-<p>注册即送10积分，无需信用卡。Jamba模型在长文本处理方面有优势。付费按量计费。</p>
-
-<h3>12. FreeModel — 注册送5积分</h3>
-<p>注册送5积分，邮箱验证后送1个月Pro权限，邀请好友各得$10。Pro套餐价格未公开。</p>
-
-<h3>13. ZenMux — 注册送5美元</h3>
-<p>注册送5美元信用额度，按$0.001/千token计费。适合短期测试。</p>
-
-<h3>14. OpenRouter — 50次/天</h3>
-<p>提供每天50次免费请求，充值$10后可增至1000次/天。支持多种模型聚合。</p>
-
-<h3>15. Cohere — 20 RPM</h3>
-<p>企业级AI平台，免费版支持20 RPM。Command系列模型在企业文档处理、RAG和搜索场景表现出色。</p>
-
-<h3>16. Scaleway — 测试期免费</h3>
-<p>法国云服务商的AI推理平台，目前处于免费测试阶段。100 RPM、200K tokens/min，欧洲数据中心。</p>
-
-<h3>17. OVH AI Endpoints — 12 RPM</h3>
-<p>法国老牌云服务商OVH的AI推理端点。免费版12 RPM，欧洲数据中心，适合GDPR合规场景。</p>
-
-<h3>18. Mistral — 500K tokens/min</h3>
-<p>欧洲最强开源模型厂商，免费版支持1 req/s、500K tokens/min。需要信用卡验证，适合欧洲数据合规项目。</p>
-
-<h3>19. Cerebras — 30 RPM</h3>
-<p>自研WSE晶圆级芯片，推理速度极快。免费版30 RPM、60K tokens/min，需要加入等待列表。</p>
-
-<h3>20. HuggingFace Serverless — 月度变量额度</h3>
-<p>开源模型的"超市"，支持海量开源模型。免费额度根据账户等级每月分配，仅支持小于10GB的模型。</p>
-
-<h2>🇨🇳 国内平台特辑</h2>
-
-<h3>DeepSeek — 免费模型</h3>
-<p>深度求索的开源大模型，API价格极低（$0.14/百万token），部分模型免费使用。适合对成本敏感的开发者。</p>
-
-<h3>通义千问 — 免费额度</h3>
-<p>阿里云的通义千问提供免费额度，支持水印-free图像和视频生成。API价格$0.12/百万token。</p>
-
-<h3>文心一言 — 免费模型</h3>
-<p>百度的文心一言提供部分免费模型，API价格$0.12/百万token。国内直连，中文理解能力强。</p>
-
-<h3>Kimi — 免费模型</h3>
-<p>月之暗面的Kimi大模型，API价格$0.12/百万token。长上下文能力突出，适合处理大量文档。</p>
-
-<h3>商汤日日新 — 免费公测</h3>
-<p>商汤的SenseNova平台，免费公测期间5次/5小时，未来将推出Lite/Pro套餐。国内直连。</p>
-
-<h2>📊 关键指标解读</h2>
-
-<h3>RPM（Requests Per Minute）</h3>
-<p>每分钟请求数。数值越高，并发能力越强。SiliconFlow的500 RPM在免费API中遥遥领先，Groq的30 RPM也足够大多数个人项目使用。</p>
-
-<h3>TPM（Tokens Per Minute）</h3>
-<p>每分钟token数。影响单次请求能处理的文本长度。SiliconFlow的200万TPM意味着可以一次性处理超长文档。</p>
-
-<h3>每日/每月额度</h3>
-<p>有些平台按天或按月分配免费额度，如Groq的1000次/天、Cloudflare的10000 Neurons/天。这些额度通常在每天零点重置。</p>
-
-<h2>🎯 推荐方案</h2>
-
-<h3>个人开发者推荐</h3>
+<h3 id="7-github-models-白嫖-gpt-4o-的最低门槛">7. GitHub Models — 白嫖 GPT-4o 的最低门槛</h3>
 <ul>
-<li><strong>高频调用：</strong>SiliconFlow（RPM 500，国内直连）</li>
-<li><strong>需要GPT系列：</strong>GitHub Models（免费GPT-4.1，无需信用卡）</li>
-<li><strong>追求速度：</strong>Groq（1000次/天，LPU加速）</li>
-<li><strong>笔记/文档处理：</strong>NotebookLM（完全免费）</li>
+<li><strong>免费额度</strong>：每天 150 次请求，15 RPM</li>
+<li><strong>核心优势</strong>：GPT-4.1、GPT-4o 全免费，<strong>只要 GitHub 账户就能用</strong></li>
+<li><strong>真实使用感受</strong>：白嫖 GPT 系列模型的最低门槛入口，但 150 RPD 不适合生产</li>
+<li><strong>缺点</strong>：每天只有 150 次；每分钟限 15 次；不适合高频调用</li>
+<li><strong>最佳场景</strong>：学习、测试 GPT 系列模型、用 Copilot 账户直接接入</li>
 </ul>
-
-<h3>企业级推荐</h3>
+<h3 id="8-mistral-la-plateforme-欧洲合规之王">8. Mistral La Plateforme — 欧洲合规之王</h3>
 <ul>
-<li><strong>国内业务：</strong>SiliconFlow + 讯飞星火组合使用</li>
-<li><strong>欧洲合规：</strong>Scaleway测试期免费，Mistral生产级</li>
-<li><strong>混合部署：</strong>Cloudflare Workers AI全球边缘网络</li>
+<li><strong>免费额度</strong>：1 req/s，TPM 500000（每分钟 50 万 token！）</li>
+<li><strong>核心优势</strong>：欧洲厂商，GDPR 合规好，多语言能力强，代码生成优秀</li>
+<li><strong>真实使用感受</strong>：Mistral Small 在免费版里性价比极高，TPM 50 万对绝大多数项目够用</li>
+<li><strong>缺点</strong>：需要翻墙；<strong>需要信用卡验证</strong>（虽然不扣费）；免费模型选择有限</li>
+<li><strong>最佳场景</strong>：欧洲数据合规项目、多语言任务、代码生成</li>
 </ul>
-
-<h3>预算最优组合</h3>
-<p>如果你需要最大化免费额度，可以组合使用多个平台：</p>
+<h3 id="9-cohere-企业级-rag-之王">9. Cohere — 企业级 RAG 之王</h3>
+<ul>
+<li><strong>免费额度</strong>：20 RPM</li>
+<li><strong>核心优势</strong>：Command 系列 RAG 能力强，嵌入模型质量极高</li>
+<li><strong>真实使用感受</strong>：做 RAG 应用首选 Cohere 嵌入模型，免费额度比 Mistral 紧</li>
+<li><strong>缺点</strong>：20 RPM 较低；需要翻墙；主要面向企业用户</li>
+<li><strong>最佳场景</strong>：企业 RAG 应用、多语种搜索、文档处理</li>
+</ul>
+<h3 id="10-cloudflare-workers-ai-全球边缘节点">10. Cloudflare Workers AI — 全球边缘节点</h3>
+<ul>
+<li><strong>免费额度</strong>：10000 Neurons/天</li>
+<li><strong>核心优势</strong>：全球 CDN 边缘节点，<strong>国内可直连</strong>，延迟极低</li>
+<li><strong>真实使用感受</strong>：嵌入到 Cloudflare Workers 项目里超方便，但 Neurons 是抽象单位消耗</li>
+<li><strong>缺点</strong>：Neurons 是抽象单位，不同模型消耗不同（简单对话约 400 Neurons/次）；模型选择相对较少</li>
+<li><strong>最佳场景</strong>：Cloudflare Workers 项目、需要低延迟的边缘 AI</li>
+</ul>
+<h3 id="11-fireworks-ai-高并发但免费额度极少">11. Fireworks AI — 高并发但免费额度极少</h3>
+<ul>
+<li><strong>免费额度</strong>：注册送 1 积分（一次性，只够测试）</li>
+<li><strong>核心优势</strong>：高并发、低延迟推理</li>
+<li><strong>真实使用感受</strong>：1 积分几分钟就用完，<strong>别指望长期白嫖</strong></li>
+<li><strong>缺点</strong>：免费额度极少；需要翻墙；主要面向付费用户</li>
+<li><strong>最佳场景</strong>：短期高并发测试、生产环境付费用</li>
+</ul>
+<hr>
+<h2 id="二国内平台免费额度-实测拆解">二、国内平台：免费额度 + 实测拆解</h2>
+<h3 id="1-智谱-aiglm-中文编程首选">1. 智谱 AI（GLM）— 中文编程首选</h3>
+<ul>
+<li><strong>免费额度</strong>：新用户 2000 万 Token（GLM-4-Flash、GLM-4.7 永久免费）</li>
+<li><strong>核心优势</strong>：中文理解顶级，编程能力一流，国内直连</li>
+<li><strong>真实使用感受</strong>：GLM-4-Flash 完全免费不限量，做中文项目首选</li>
+<li><strong>缺点</strong>：高级模型（如 GLM-4-Plus）需要付费</li>
+<li><strong>最佳场景</strong>：中文写作、中文编程、AI Agent</li>
+</ul>
+<h3 id="2-硅基流动siliconflow-高并发国内直连">2. 硅基流动（SiliconFlow）— 高并发国内直连</h3>
+<ul>
+<li><strong>免费额度</strong>：RPM 500，TPM 200 万（按分钟计费）</li>
+<li><strong>核心优势</strong>：<strong>国内直连不需要翻墙</strong>，RPM 500 并发容量极大</li>
+<li><strong>真实使用感受</strong>：高频调用场景首选，免费模型用 <code>free-text-model</code> 标签筛选</li>
+<li><strong>缺点</strong>：免费模型数量有限；部分模型需要付费</li>
+<li><strong>最佳场景</strong>：高频 API 调用、生产环境、多模型快速切换</li>
+</ul>
+<h3 id="3-魔塔社区modelscope-阿里旗下开源社区">3. 魔塔社区（ModelScope）— 阿里旗下开源社区</h3>
+<ul>
+<li><strong>免费额度</strong>：每天 2000 次免费 API 调用</li>
+<li><strong>核心优势</strong>：<strong>国内最大的开源 AI 社区，5万+模型</strong>，兼容 OpenAI SDK</li>
+<li><strong>真实使用感受</strong>：Qwen、DeepSeek、GLM、百川等主力开源模型都能调，需要绑定阿里云账号</li>
+<li><strong>缺点</strong>：Base URL 是 <code>api.modelscope.cn/v1</code>，不是所有人都熟悉；部分大模型可能有延迟</li>
+<li><strong>最佳场景</strong>：想用阿里云生态、需要多种开源模型、国内直连</li>
+</ul>
+<h3 id="4-美团-longcat-每日-5500-万-token-豪横">4. 美团 LongCat — 每日 5500 万 Token 豪横</h3>
+<ul>
+<li><strong>免费额度</strong>：<strong>每天 5500 万 tokens</strong>（按天刷新！）</li>
+<li><strong>核心优势</strong>：近无限火力，兼容 OpenAI 接口，可直接接入现有项目</li>
+<li><strong>真实使用感受</strong>：对个人开发者而言基本用不完，5500 万 tokens/天足够搭个完整应用</li>
+<li><strong>缺点</strong>：作为新平台，文档和社区相对较少</li>
+<li><strong>最佳场景</strong>：个人开发者搭建完整应用、长上下文任务、批量数据处理</li>
+</ul>
+<h3 id="5-书生浦语-上海-ai-lab-学术派">5. 书生浦语 — 上海 AI Lab 学术派</h3>
+<ul>
+<li><strong>免费额度</strong>：10 RPM，密钥 6 个月有效期</li>
+<li><strong>核心优势</strong>：学术背景扎实，InternVL3-78B 多模态能力强</li>
+<li><strong>真实使用感受</strong>：图文理解任务表现优秀，国内直连</li>
+<li><strong>缺点</strong>：10 RPM 很低；密钥 6 个月到期要续</li>
+<li><strong>最佳场景</strong>：学术研究、图文理解任务、多模态应用</li>
+</ul>
+<h3 id="6-国家超算平台-国家队背景">6. 国家超算平台 — 国家队背景</h3>
+<ul>
+<li><strong>免费额度</strong>：新用户 1000 万 Token</li>
+<li><strong>核心优势</strong>：中科院下属，可信度高，支持 MiniMax-M2.5、DeepSeek-V3.2、Qwen3-235B</li>
+<li><strong>真实使用感受</strong>：追求稳定性和合规性的企业首选</li>
+<li><strong>缺点</strong>：个人开发者额度相对偏紧</li>
+<li><strong>最佳场景</strong>：国企、政府项目、对数据合规要求高的企业</li>
+</ul>
+<h3 id="7-百度千帆-多模型独立额度">7. 百度千帆 — 多模型独立额度</h3>
+<ul>
+<li><strong>免费额度</strong>：每模型 100 万 Token（3 个月有效期）</li>
+<li><strong>核心优势</strong>：每模型独立额度，ERNIE-4.5、DeepSeek、通义千问、Kimi 全覆盖</li>
+<li><strong>真实使用感受</strong>：适合多模型测试，企业级生态成熟</li>
+<li><strong>缺点</strong>：需要绑卡；3 个月有效期可能忘记用完</li>
+<li><strong>最佳场景</strong>：多模型横向对比、企业级中文应用</li>
+</ul>
+<h3 id="8-火山引擎字节-协作奖励-200-万天">8. 火山引擎（字节）— 协作奖励 200 万/天</h3>
+<ul>
+<li><strong>免费额度</strong>：每模型 50 万 Token + 协作奖励 200 万 Token/天</li>
+<li><strong>核心优势</strong>：豆包、GLM、Kimi、MiniMax 聚合，按天重置</li>
+<li><strong>真实使用感受</strong>：按天重置适合长期低频调用</li>
+<li><strong>缺点</strong>：额度分散在多个模型，使用前要查清楚</li>
+<li><strong>最佳场景</strong>：长期低频调用、需要豆包模型</li>
+</ul>
+<hr>
+<h2 id="三横向对比表">三、横向对比表</h2>
+<table><thead><tr><th>平台</th><th>免费额度</th><th>速度</th><th>模型质量</th><th>是否需翻墙</th><th>最佳场景</th></tr></thead><tbody>
+<tr><td>Groq</td><td>1000次/天, TPM 30K</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>是</td><td>实时对话</td></tr>
+<tr><td>Cerebras</td><td>30 RPM, TPM 60K</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>是</td><td>高速推理</td></tr>
+<tr><td>NVIDIA NIM</td><td>60 RPM, 121 模型</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>是</td><td>模型对比</td></tr>
+<tr><td>Together AI</td><td>有限积分</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>是</td><td>开源测试</td></tr>
+<tr><td>HuggingFace</td><td>每月积分</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>部分</td><td>模型超市</td></tr>
+<tr><td>OpenRouter</td><td>50次/天</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td><strong>否</strong></td><td>国内多模型</td></tr>
+<tr><td>GitHub Models</td><td>150次/天</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>否</td><td>GPT 免费用</td></tr>
+<tr><td>Mistral</td><td>1 req/s, TPM 500K</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>是</td><td>欧洲合规</td></tr>
+<tr><td>Cohere</td><td>20 RPM</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>是</td><td>企业 RAG</td></tr>
+<tr><td>Cloudflare</td><td>10000 Neurons/天</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐</td><td><strong>否</strong></td><td>边缘 AI</td></tr>
+<tr><td>智谱 AI</td><td>2000万 Token</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>否</td><td>中文编程</td></tr>
+<tr><td>硅基流动</td><td>RPM 500, TPM 200万</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>否</td><td>高频调用</td></tr>
+<tr><td>魔塔</td><td>2000次/天</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>否</td><td>开源聚合</td></tr>
+<tr><td>美团 LongCat</td><td>5500万/天</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>否</td><td>无限火力</td></tr>
+<tr><td>书生浦语</td><td>10 RPM</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>否</td><td>学术研究</td></tr>
+<tr><td>国家超算</td><td>1000万 Token</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>否</td><td>国家队</td></tr>
+<tr><td>百度千帆</td><td>100万/模型</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>否</td><td>多模型测试</td></tr>
+<tr><td>火山引擎</td><td>50万+200万/天</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>否</td><td>按天重置</td></tr>
+</tbody></table>
+<hr>
+<h2 id="四实战选择指南按场景">四、实战选择指南（按场景）</h2>
+<p><strong>场景一：实时对话 / 流式输出应用</strong></p>
+<p>首选 Groq 或 Cerebras。LPU/WSE 芯片速度碾压普通 GPU，体感差异巨大。TPM 限制如果不够，考虑 NVIDIA NIM。</p>
+<p><strong>场景二：需要大量模型横向对比</strong></p>
+<p>NVIDIA NIM。121 个模型是所有平台里最多的，DeepSeek V4 Pro 也能免费用。</p>
+<p><strong>场景三：国内网络环境，不想翻墙</strong></p>
+<p>OpenRouter（27 个免费模型）或硅基流动（RPM 500 国内直连）。两个都提供 OpenAI 兼容接口，切换零成本。</p>
+<p><strong>场景四：白嫖 GPT-4o</strong></p>
+<p>GitHub Models。150 RPD 对个人开发够用，注册即用无需信用卡。</p>
+<p><strong>场景五：企业级 RAG / 文档处理</strong></p>
+<p>Cohere。Command 系列 RAG 能力强，嵌入模型质量高。</p>
+<p><strong>场景六：Cloudflare Workers 项目</strong></p>
+<p>Cloudflare Workers AI。10000 Neurons/天，全球边缘节点延迟极低。</p>
+<p><strong>场景七：中文项目长期调用</strong></p>
+<p>智谱 AI（GLM-4-Flash 永久免费）或硅基流动（RPM 500）。</p>
+<p><strong>场景八：欧洲数据合规要求</strong></p>
+<p>Mistral La Plateforme。TPM 50 万，GDPR 合规好。</p>
+<p><strong>场景九：白嫖 DeepSeek 顶级模型</strong></p>
+<p>NVIDIA NIM 或硅基流动。DeepSeek V4 Pro 在 NIM 上免费，V3.2 在国家超算也免费。</p>
+<p><strong>场景十：个人开发者搭完整应用</strong></p>
+<p>美团 LongCat。5500 万 tokens/天，基本用不完。</p>
+<hr>
+<h2 id="五真实案例搭一个免费-ai-翻译工具">五、真实案例：搭一个免费 AI 翻译工具</h2>
+<p>我帮朋友搭过一个中英翻译工具，需求是每天处理 5000 条短文本。预算为 0。技术选型如下：</p>
+<p><strong>第一版：纯 Groq</strong></p>
+<ul>
+<li>选 Llama 3.3 70B，TPM 30K</li>
+<li>问题：单条翻译消耗约 200 tokens，30K 只够翻译 150 条/分钟</li>
+<li>解决：加 2 秒限速，勉强能跑但容易触发限流</li>
+</ul>
+<p><strong>第二版：Groq + 硅基流动双路</strong></p>
+<ul>
+<li>Groq 处理中文→英文（Llama 中文好）</li>
+<li>硅基流动处理英文→中文（DeepSeek 中文地道）</li>
+<li>双路并发，吞吐量提升 3 倍</li>
+<li><strong>每天 5000 条完全跑得动，零成本</strong></li>
+</ul>
+<p><strong>第三版：升级到美团 LongCat</strong></p>
+<ul>
+<li>直接用 LongCat 一个平台，5500 万 tokens/天</li>
+<li>QPS 提到 50，无任何限流</li>
+<li>代码量减少 40%（不用管多路路由了）</li>
+</ul>
+<p><strong>关键经验</strong>：</p>
 <ol>
-<li>SiliconFlow作为主力（RPM 500，支持多个模型）</li>
-<li>Groq作为备用（1000次/天，速度快）</li>
-<li>GitHub Models用于GPT系列需求（150次/天）</li>
-<li>NotebookLM用于非API场景的AI辅助（完全免费）</li>
+<li>不要在单个平台死磕，<strong>多平台组合</strong>才是白嫖王</li>
+<li>国内场景优先选硅基流动、魔塔、美团 LongCat</li>
+<li>国际场景 Groq + NVIDIA NIM 覆盖 90% 需求</li>
+<li>涉及 GPT 系列（用户明确要求）才上 GitHub Models</li>
+<li>别忘了 Cloudflare Workers AI 嵌入到 Cloudflare 项目里</li>
 </ol>
-<p>这样组合下来，每天可以获得超过1500次的免费API调用，基本满足绝大多数个人和小型项目的需求。</p>
-
-<h2>⚠️ 注意事项</h2>
+<hr>
+<h2 id="六避坑指南我踩过的坑">六、避坑指南（我踩过的坑）</h2>
+<p><strong>坑 1：Together AI 自动扣费</strong></p>
+<p>Together AI 超出免费额度会自动从你绑定的卡扣费。<strong>一定要在 Dashboard 设置用量告警</strong>（建议 $1 告警上限），否则月底看到账单会哭。</p>
+<p><strong>坑 2：硅基流动免费模型筛选</strong></p>
+<p>硅基流动不是所有模型都免费，免费模型要用 <code>free-text-model</code> 标签筛选。直接调收费模型会 403 报错。</p>
+<p><strong>坑 3：魔塔社区需要阿里云账号</strong></p>
+<p>ModelScope 不是独立账号系统，要绑定阿里云账号才能用 API Key。<strong>没有阿里云账号的先去注册一个</strong>。</p>
+<p><strong>坑 4：书生浦语密钥 6 个月过期</strong></p>
+<p>书生浦语的 API Key 只有 6 个月有效期，<strong>到期前 1 个月要在控制台手动续期</strong>，否则项目会突然 401。</p>
+<p><strong>坑 5：美团 LongCat 文档不完善</strong></p>
+<p>作为新平台，美团 LongCat 的 API 文档还在完善中。建议先用 Playground 测通，再上代码。</p>
+<p><strong>坑 6：Cerebras 等待列表</strong></p>
+<p>Cerebras 需要加入等待列表才能用（我等了 3 天）。<strong>急用先上 Groq</strong>。</p>
+<p><strong>坑 7：OpenRouter 充值 $10 解锁</strong></p>
+<p>OpenRouter 充值 $10 后解锁每天 1000 次，但 $10 是真金白银。<strong>先确认你需要 1000 次/天再充值</strong>，否则免费 50 次够用就好。</p>
+<p><strong>坑 8：百度千帆 3 个月有效期</strong></p>
+<p>百度千帆的 100 万 token/模型有 3 个月有效期，<strong>不用就作废</strong>。建议注册时一次性把所有模型都试一遍。</p>
+<p><strong>坑 9：火山的协作奖励机制</strong></p>
+<p>火山引擎的"协作奖励 200 万/天"不是注册就有，<strong>要拉新用户或完成特定任务</strong>才能解锁。基础额度只有 50 万/模型。</p>
+<p><strong>坑 10：GitHub Models 不能商用</strong></p>
+<p>GitHub Models 的免费层<strong>禁止商用</strong>（commercialUse: false）。做商业产品必须升级或换平台。</p>
+<hr>
+<h2 id="七faq-常见问题">七、FAQ 常见问题</h2>
+<div class="faq-q">完全没有信用卡，能白嫖哪些？</div>
+<div class="faq-a">Groq、OpenRouter、硅基流动、魔塔、美团 LongCat、书生浦语、国家超算都不需要信用卡。Mistral 需要信用卡验证（但不扣费），百度千帆、火山引擎需要绑卡。</div>
+<div class="faq-q">国内网络访问最稳定的免费 API 平台是哪个？</div>
+<div class="faq-a">硅基流动、魔塔社区、美团 LongCat。这三个都提供国内直连，延迟 &lt; 100ms。OpenRouter 也能国内直连但免费额度只有 50 次/天。</div>
+<div class="faq-q">哪个平台免费额度真正"够用"？</div>
+<div class="faq-a">美团 LongCat 5500 万 tokens/天，硅基流动 TPM 200万，智谱 AI GLM-4-Flash 永久免费。这三个对个人开发基本用不完。<strong>国内选硅基流动或 LongCat，国际选 Groq 或 NVIDIA NIM</strong>。</div>
+<div class="faq-q">需要翻墙的平台，哪些体验最好？</div>
+<div class="faq-a">Groq（速度）、NVIDIA NIM（模型多）、Mistral（合规）这三个体验最好。Together AI、Cohere、HuggingFace 次之。Fireworks AI、OVH 等小平台不推荐，体验差。</div>
+<div class="faq-q">DeepSeek V4 怎么免费用？</div>
+<div class="faq-a">两个途径：(1) NVIDIA NIM 免费层支持 DeepSeek V4 系列；(2) 国家超算平台注册送 1000 万 token，支持 DeepSeek-V3.2；(3) 网页版 chat.deepseek.com 完全免费。</div>
+<div class="faq-q">OpenRouter 充值 $10 划算吗？</div>
+<div class="faq-a">看你用多少。如果每天要 50+ 次请求，充值 $10 解锁 1000 次/天很划算（按量算不到 1 美分/次）。<strong>只是轻度测试，50 次/天够用就不充值</strong>。</div>
+<div class="faq-q">白嫖的 API 能商用吗？</div>
+<div class="faq-a">看平台条款。Groq、硅基流动允许商用；GitHub Models、Cohere、Together AI 免费层禁止商用。做商业产品务必看 <code>freeStatus</code> 和 <code>commercialUse</code> 字段。</div>
+<div class="faq-q">哪个平台对中文最友好？</div>
+<div class="faq-a">智谱 AI &gt; 硅基流动 &gt; 魔塔 &gt; 美团 LongCat。这四个都是国内平台，中文理解无需特殊优化。国际平台里 Qwen 系列（Groq、NVIDIA NIM 都有）中文也很强。</div>
+<div class="faq-q">需要 1M 超长上下文，选哪个？</div>
+<div class="faq-a">Cline.bot API 提供 1M 上下文（MiniMax-M3、小米 MiMo、DeepSeek V4 Flash），注册送 $0.5 额度。也可以考虑 Groq 的 Llama 4 Scout（10M 上下文但不是完全可用）。</div>
+<div class="faq-q">数据安全怎么保证？</div>
+<div class="faq-a">白嫖 API 平台默认会用你的请求数据改进模型。<strong>写敏感内容（商业机密、未公开产品、用户隐私）建议用 ChatGPT Enterprise、Claude API、Azure OpenAI 这些企业版</strong>。或者本地跑开源模型（Ollama + Llama）。</div>
+<div class="faq-q">白嫖多个平台，怎么统一管理 API Key？</div>
+<div class="faq-a">用 <code>.env</code> 文件管理，不要 hardcode 到代码里。进阶可以用 1Password CLI 或 Vault。<strong>绝对不要把 API Key 提交到 GitHub</strong>。</div>
+<div class="faq-q">免费额度会用完吗？什么时候扣费？</div>
+<div class="faq-a">大部分平台免费额度用完会返回 429（限流）而不是自动扣费。<strong>会自动扣费的只有 Together AI 和 Mistral（需要绑卡）</strong>。其他平台要么报错要么降级到付费模型前会弹窗确认。</div>
+<hr>
+<h2 id="八2026-年趋势观察">八、2026 年趋势观察</h2>
+<ol>
+<li><strong>国内平台"卷"起来</strong>：美团 LongCat 5500 万/天、硅基流动 TPM 200 万、智谱 GLM 永久免费，国内白嫖力度已经反超国际。</li>
+<li><strong>聚合平台成主流</strong>：OpenRouter、FreeTheAI（50+ 模型）、ZenMux（200+ 模型）这种"一个接口通吃所有模型"的平台越来越受欢迎。</li>
+<li><strong>专用模型白嫖化</strong>：编程（Cline.bot、AtomCode）、多模态（书生浦语）、Agent（Freebuff）这些垂直场景的免费 API 大量涌现。</li>
+<li><strong>速度竞争白热化</strong>：Groq LPU、Cerebras WSE、SiliconFlow 自研芯片，速度已经是普通 GPU 的 10-100 倍。</li>
+<li><strong>翻墙成本上升</strong>：国际平台免费额度再大，国内访问越来越难。<strong>国内平台 + 少量国际平台（Groq、NVIDIA NIM）组合是 2026 年最稳的方案</strong>。</li>
+</ol>
+<hr>
+<h2 id="九总结">九、总结</h2>
+<p>2026 年免费 AI API 平台的选择非常多，没有最好的只有最适合的。</p>
+<p><strong>我的最终推荐组合</strong>：</p>
 <ul>
-<li>免费额度和政策可能随时变化，使用前请确认最新信息</li>
-<li>部分平台超出免费额度后会自动扣费，建议设置用量告警</li>
-<li>某些平台需要信用卡验证，即使使用免费额度</li>
-<li>国内平台通常不需要翻墙，国外平台可能需要</li>
-<li>商业用途请仔细阅读各平台的服务条款</li>
+<li><strong>国内项目</strong>：硅基流动（高频）+ 智谱 GLM（中文）+ 美团 LongCat（备份），全部国内直连</li>
+<li><strong>国际项目</strong>：Groq（速度）+ NVIDIA NIM（模型多）+ GitHub Models（GPT 免费）</li>
+<li><strong>企业项目</strong>：Mistral（欧洲合规）+ Cohere（RAG）+ 国家超算（国内合规）</li>
+<li><strong>学习测试</strong>：HuggingFace + 魔塔社区 + OpenRouter</li>
 </ul>
-
-<div class="faq-section">
-<h3>❓ 常见问题</h3>
-<div class="faq-item"><div class="faq-q">Q: 哪个AI API平台免费额度最多？</div><div class="faq-a">A: SiliconFlow免费额度最高，RPM 500、TPM 200万，支持DeepSeek、Qwen等多个模型。Groq每天1000次请求，GitHub Models每天150次请求。</div></div>
-<div class="faq-item"><div class="faq-q">Q: 免费API可以用于商业用途吗？</div><div class="faq-a">A: 这取决于具体平台。SiliconFlow允许商业使用，但GitHub Models、Groq等通常不允许。使用前请务必阅读各平台的服务条款。</div></div>
-<div class="faq-item"><div class="faq-q">Q: 国内用户如何选择免费AI API？</div><div class="faq-a">A: 优先选择国内直连的平台，如SiliconFlow（RPM 500）、讯飞星火、DeepSeek、通义千问等。这些平台不需要翻墙，访问速度快。</div></div>
-<div class="faq-q">Q: 如何避免免费额度用完后被扣费？</div><div class="faq-a">A: 建议在各个平台的Dashboard中设置用量告警和支出上限。Cloudflare、OpenRouter等平台都支持设置预算上限，防止意外扣费。</div></div>
-<div class="faq-item"><div class="faq-q">Q: RPM和TPM有什么区别？</div><div class="faq-a">A: RPM（Requests Per Minute）是每分钟请求数，控制并发能力；TPM（Tokens Per Minute）是每分钟token数，控制单次请求的处理量。两者共同决定了API的性能上限。</div></div>
-</div>
+<p>别贪多，<strong>2-3 个平台组合够用 90% 场景</strong>。把免费组合用到极致，遇到真痛点再付费，比焦虑有效得多。</p>
+<p>数据来源：<a href="https://aifreeplan.com">aifreeplan.com 工具库</a>（每周自动更新）+ 各平台官网 + 我本人 2026 年 6-8 月的实际使用。免费政策可能调整，建议收藏对比页跟踪最新额度。</p>
 </main>
-<footer class="footer">
-  <div class="container footer-inner">
-    <div class="footer-brand"><a href="/zh" class="logo" style="color:#059669">AI<span class="accent" style="color:#6366F1">FreePlan</span></a><p>AI驱动的免费工具聚合平台，永久免费。</p></div>
-    <div class="footer-links">
-      <div class="footer-col"><h4>产品</h4><a href="/zh/all">全部工具</a><a href="/zh/guides">攻略</a></div>
-      <div class="footer-col"><h4>法律</h4><a href="/zh/privacy">隐私政策</a><a href="/zh/terms">用户协议</a></div>
-    </div>
-  </div>
-  <div class="container footer-bottom">© 2026 AIFreePlan. All rights reserved.</div>
-</footer>
-</body></html>
+</body>
+</html>

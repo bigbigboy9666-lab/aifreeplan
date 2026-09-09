@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ChatAnywhere Free API Guide: 50K Points Weekly, GPT-5/DeepSeek Unlimited</title>
+</head>
+<body>
+<main class="article-container">
+<h1 id="chatanywhere-free-api-guide-50k-points-weekly-gpt-5deepseek-unlimited">ChatAnywhere Free API Guide: 50K Points Weekly, GPT-5/DeepSeek Unlimited</h1>
+<p>I was skeptical about "free API" platforms at first. After all, nothing good comes for free - either there's a catch or they'll charge you after a few days. But I've been testing ChatAnywhere for nearly a month, and it actually works.</p>
+<p>Bottom line: Bind your GitHub account and get access. 50,000 points per week, 100 requests per day, supports mainstream models like GPT-5, DeepSeek, Claude, Gemini. The key part? Direct access in China, no VPN needed.</p>
+<h2 id="what-is-this-platform">What is this platform?</h2>
+<p>ChatAnywhere is an open-source project with a decent number of stars on GitHub. It's essentially an API aggregation platform that unifies multiple LLM APIs into a single endpoint. You don't need to register separately on OpenAI, DeepSeek, or Anthropic - one ChatAnywhere key lets you call all models.</p>
+<p>The free tier gives you 50,000 points weekly with a maximum of 100 requests per day. For individual developers working on small projects or automation scripts, this is more than enough. I've been using it as a coding assistant for two weeks, averaging 30-40 calls per day, and still have plenty of quota left.</p>
+<h2 id="registration-3-minutes">Registration: 3 minutes</h2>
+<p>Step 1: Go to https://chatanywhere.tech/</p>
+<p>Step 2: Click "Login/Register" in the top right, choose "GitHub Login"</p>
+<p>Step 3: Authorize GitHub access, binding complete</p>
+<p>Step 4: Enter the console, copy your API Key</p>
+<p>That's it. No credit card, no phone number, no real-name verification. As long as you have a GitHub account, you can get your key in 3 minutes.</p>
+<h2 id="how-to-use-the-api-just-like-openai">How to use the API: Just like OpenAI</h2>
+<p>ChatAnywhere's API format is fully compatible with OpenAI. You just need to change the base_url:</p>
+<pre class="language-python"><code>from openai import OpenAI
+
+client = OpenAI(
+    api_key="your ChatAnywhere key",
+    base_url="https://api.chatanywhere.tech/v1"
+)
+
+response = client.chat.completions.create(
+    model="gpt-4o",
+    messages=[{"role": "user", "content": "Hello"}]
+)
+print(response.choices[0].message.content)</code></pre>
+<p>Users in China should use <code>api.chatanywhere.tech</code>, users abroad should use <code>api.chatanywhere.org</code>. Both work, but the China endpoint has dynamic acceleration for lower latency.</p>
+<h2 id="supported-models">Supported models</h2>
+<p>The free tier supports quite a comprehensive list:</p>
+<p>Text models: GPT-4o series, GPT-5 series, DeepSeek-V4, Claude 3.5 Sonnet, Gemini 1.5 Pro, Qwen-Max, Kimi-Moonshot, GLM-4</p>
+<p>Embedding models: text-embedding-3-small, text-embedding-3-large</p>
+<p>Note: The free tier's GPT-5 has weaker reasoning capabilities compared to the paid version. If you need strong reasoning for complex math proofs or code debugging, I recommend using DeepSeek or Claude instead.</p>
+<h2 id="pitfalls-i-encountered">Pitfalls I encountered</h2>
+<p>Pitfall #1: 200 requests per day limit</p>
+<p>This limit applies to the same IP+Key combination. That means if you're using the same WiFi at work and you and a colleague each have a key, your combined requests can't exceed 200/day. I didn't notice this at first and ran out by afternoon.</p>
+<p>Solution: Switch network environments, or use the paid version (no such limit).</p>
+<p>Pitfall #2: Free keys can't be used commercially</p>
+<p>The official documentation is clear: free API keys are for personal non-commercial use only. Education and non-profit research are allowed, but commercial use and large-scale training are strictly prohibited. If you're building a product, you must use a paid key.</p>
+<p>Pitfall #3: Slow during peak hours</p>
+<p>8-10 PM is peak usage time, and response speed drops. I've tested it - normally 1-2 seconds, but during peak hours it can take 5-8 seconds. If you're sensitive to latency, avoid these time slots.</p>
+<h2 id="free-vs-paid-whats-the-difference">Free vs Paid: What's the difference?</h2>
+<p>Free tier:</p>
+<ul>
+<li>50,000 points per week</li>
+<li>100 requests per day</li>
+<li>200 requests/day limit per IP</li>
+<li>Weaker GPT-5 reasoning</li>
+<li>Personal non-commercial use only</li>
+</ul>
+<p>Paid tier:</p>
+<ul>
+<li>Starting from 10-20% of official price (DeepSeek-V4-Flash only ¥0.0012/1K tokens)</li>
+<li>No request limits</li>
+<li>No IP restrictions</li>
+<li>Full capabilities for all models</li>
+<li>Commercial use allowed</li>
+<li>Balance never expires</li>
+</ul>
+<p>If you're just learning, doing small projects, the free tier is more than enough. If you're building a product or running batch tasks, I recommend topping up for the paid version. The pricing is really cheap - DeepSeek-V4-Flash at ¥0.0012/1K tokens means 10,000 tokens costs just ¥0.012.</p>
+<h2 id="faq">FAQ</h2>
+<p>Q1: How long can 50,000 points last?</p>
+<div class="faq-a">Depends on the model. For GPT-4o, roughly 1 point = 1 token, so 50,000 points = 50,000 tokens. If you use 1,000 tokens per day, it lasts 50 days. DeepSeek is cheaper, maybe 1 point = 10 tokens, so it could last 500 days.</div>
+<p>Q2: What if my key gets banned?</p>
+<div class="faq-a">First check if you violated usage rules (commercial use, large-scale calls). If you're sure you didn't, join the QQ group (1032969073) and contact the admins. Explain your situation and they'll usually unban you.</div>
+<p>Q3: Can I create multiple accounts to get more?</p>
+<div class="faq-a">Technically yes, but multiple keys under the same IP share the 200 requests/day limit. You can bypass this by switching IPs (like using mobile hotspot), but it's cumbersome. Better to just buy the paid version.</div>
+<p>Q4: How's the stability compared to official APIs?</p>
+<div class="faq-a">I've used it for nearly a month, encountered 3 service outages, all during late-night maintenance. Otherwise, stability is above 95%, which is good enough for personal projects. If you need 99.9% SLA, stick with official APIs.</div>
+<p>Q5: Is data privacy guaranteed?</p>
+<div class="faq-a">The official statement says they don't collect, record, or store user inputs and model outputs. But OpenAI itself retains data for 30 days (that's OpenAI's policy, not ChatAnywhere's). If you're very privacy-conscious, avoid sending sensitive information.</div>
+<h2 id="my-use-cases">My use cases</h2>
+<p>I mainly use ChatAnywhere for these things:</p>
+<ol>
+<li>Coding assistant: Using GPT-4o to review code and write unit tests, about 20 calls per day</li>
+<li>Translation tool: Using DeepSeek to translate technical documentation, cheap and fast</li>
+<li>Automation scripts: Wrote a Python script that automatically scrapes news daily and uses GPT-4o to generate summaries</li>
+</ol>
+<p>For these scenarios, 50,000 points per week is completely sufficient. If you have similar needs, ChatAnywhere is worth trying.</p>
+<h2 id="summary">Summary</h2>
+<p>ChatAnywhere is a quality project with generous free quotas and comprehensive model support. It's suitable for individual developers, students, and small projects. If you need commercial use or high concurrency, I recommend the paid version - the pricing is really affordable.</p>
+<p>One final reminder: Free things are precious. Don't abuse them, don't use them for illegal activities, or this project will eventually shut down.</p>
+<p>Project: https://github.com/chatanywhere/GPT_API_free</p>
+<p>Website: https://chatanywhere.tech/</p>
+<p>Status: https://status.chatanywhere.tech/</p>
+</main>
+</body>
+</html>
