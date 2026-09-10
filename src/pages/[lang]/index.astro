@@ -390,12 +390,13 @@ const indexSchema = {
 <script>
   // Hero search redirects to tools page with query param
   const heroSearch = document.getElementById('hero-search') as HTMLInputElement;
+  const pageLang = document.documentElement.lang;
   if (heroSearch) {
     heroSearch.addEventListener('keydown', (e) => {
       if (e.key === 'Enter') {
         const q = heroSearch.value.trim();
         if (q) {
-          window.location.href = `/${lang}/tools?q=${encodeURIComponent(q)}`;
+          window.location.href = `/${pageLang}/tools?q=${encodeURIComponent(q)}`;
         }
       }
     });
@@ -406,7 +407,7 @@ const indexSchema = {
   const subscribeEmail = document.getElementById('subscribe-email') as HTMLInputElement;
   const subscribeBtn = document.getElementById('subscribe-btn') as HTMLButtonElement;
   const subscribeStatus = document.getElementById('subscribe-status') as HTMLParagraphElement;
-  const isSubZh = lang === 'zh';
+  const isSubZh = pageLang === 'zh';
 
   if (subscribeForm) {
     subscribeForm.addEventListener('submit', async (e) => {
