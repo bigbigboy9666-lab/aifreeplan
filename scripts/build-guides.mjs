@@ -243,7 +243,9 @@ let touched = 0;
 let skipped = 0;
 
 for (const lang of langs) {
-  const mdDir = path.join(repoRoot, 'src/pages', lang, 'guides');
+  // .md sources live in content/guides/ (moved out of src/pages/ so Astro
+  // doesn't register them as static routes that shadow the [slug] dynamic route).
+  const mdDir = path.join(repoRoot, 'content', 'guides', lang);
   const htmlDir = path.join(repoRoot, lang, 'guides');
   if (!fs.existsSync(mdDir)) continue;
   for (const fn of fs.readdirSync(mdDir)) {

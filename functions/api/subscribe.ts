@@ -1,8 +1,20 @@
 interface Env {
-  SUBSCRIBER_KV: KVNamespace;
+  SUBSCRIBER_KV?: KVNamespace;
 }
 
 export const onRequestPost: PagesFunction<Env> = async (context) => {
+  // Graceful degradation: if the KV binding isn't provisioned on CF Pages yet,
+  // the function previously threw and surfaced as a 500. Instead, return a
+  // 200 with a `pending` marker so the front-end shows an honest "coming soon"
+  // message rather than a broken endpoint.
+  const kv = context.env.SUBSCRIBER_KV;
+  if (!kv) {
+    return new Response(
+      JSON.stringify({ ok: true, pending: true, message: 'KV' }),
+      { status: 200, headers: { 'Content-Type': 'application/json' } }
+    );
+  }
+
   try {
     const body = await context.request.json<{ email?: string }>();
     const email = body.email?.trim();

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CodeBuddy NPC Full Guide: Summon an AI Colleague With @ to Work for You</title>
+</head>
+<body>
+<main class="article-container">
+<h1 id="codebuddy-npc-full-guide-summon-an-ai-colleague-with-to-work-for-you">CodeBuddy NPC Full Guide: Summon an AI Colleague With @ to Work for You</h1>
+<h2 id="tldr">TL;DR</h2>
+<p>Tencent Cloud's CNB platform launched CodeBuddy NPC, powered by the DeepSeek-V4-Flash engine. Just @ it in any repo comment and it starts working on its own. Three steps to summon it: open a repo → @CodeBuddy NPC → enable "work-for-me" mode, and the AI automatically handles requirement understanding → task breakdown → coding → quality verification. Free until the end of 2026.</p>
+<h2 id="what-is-codebuddy-npc">What Is CodeBuddy NPC</h2>
+<p>CodeBuddy is an AI coding assistant integrated into Tencent Cloud's CNB (Cloud Native Build) platform. It was upgraded in August 2026 to run on DeepSeek-V4-Flash, built around one idea: <strong>@ it once, and the AI does the work for you</strong>.</p>
+<p>Official certification: it has passed the CAICT (China Academy of Information and Communications Technology) certification covering five core capabilities:</p>
+<ul>
+<li>Requirement understanding</li>
+<li>Task breakdown</li>
+<li>Coding execution</li>
+<li>Quality verification</li>
+<li>Workflow collaboration</li>
+</ul>
+<h2 id="how-it-differs-from-joycode">How It Differs From JoyCode</h2>
+<p>A lot of people mix these two up. Simply put:</p>
+<ul>
+<li><strong>JoyCode</strong>: a standalone client from JD, credit-based (10,000 credits/month, burns fast)</li>
+<li><strong>CodeBuddy NPC</strong>: integrated into Tencent Cloud CNB, @-summon model, free through year-end</li>
+</ul>
+<h3 id="comparison">Comparison</h3>
+<table><thead><tr><th>Feature</th><th>CodeBuddy NPC</th><th>JoyCode</th></tr></thead><tbody>
+<tr><td>Platform</td><td>cnb.cool</td><td>joycode.jd.com</td></tr>
+<tr><td>Integration</td><td>@-summon + repo integration</td><td>Standalone client</td></tr>
+<tr><td>Model</td><td>DeepSeek-V4-Flash</td><td>Multi-model (GLM-5/DeepSeek/Kimi, etc.)</td></tr>
+<tr><td>Free policy</td><td>Free through 2026-12-31</td><td>10,000 credits/month</td></tr>
+<tr><td>Core function</td><td>Auto-completes dev tasks</td><td>AI-assisted coding</td></tr>
+<tr><td>Best for</td><td>Users who want it to "work for them"</td><td>Everyday coding</td></tr>
+</tbody></table>
+<h2 id="how-to-use-it-step-by-step">How to Use It (Step by Step)</h2>
+<h3 id="step-1-register-a-cnb-account">Step 1: Register a CNB Account</h3>
+<p>Go to https://cnb.cool and sign up. Supports phone number, WeChat, and GitHub login.</p>
+<h3 id="step-2-create-or-import-a-repo">Step 2: Create or Import a Repo</h3>
+<ul>
+<li>New repo: click "+" in the top-right to create one</li>
+<li>Import repo: bring in an existing project from GitHub/GitLab</li>
+</ul>
+<h3 id="step-3-summon-codebuddy-npc">Step 3: Summon CodeBuddy NPC</h3>
+<p>In any <strong>issue, PR, or comment</strong> in your repo, type:</p>
+<pre><code>@CodeBuddy NPC</code></pre>
+<p>Then describe what you need, for example:</p>
+<ul>
+<li>"@CodeBuddy NPC write me a user registration endpoint"</li>
+<li>"@CodeBuddy NPC how do I fix this bug?"</li>
+<li>"@CodeBuddy NPC write unit tests for this function"</li>
+</ul>
+<h3 id="step-4-enable-work-for-me-mode">Step 4: Enable "Work-For-Me" Mode</h3>
+<p>Add the trigger keyword or button in a comment (exact UI may vary by platform). Once "work-for-me" is on, CodeBuddy NPC will automatically:</p>
+<ol>
+<li>Understand your requirement</li>
+<li>Break the task down</li>
+<li>Write the code</li>
+<li>Run the tests</li>
+<li>Submit a PR or reply in the thread</li>
+</ol>
+<h2 id="real-use-cases">Real Use Cases</h2>
+<h3 id="case-1-build-a-new-feature">Case 1: Build a New Feature</h3>
+<p>Describe it in an issue:</p>
+<pre><code>@CodeBuddy NPC implement a REST API that supports user login, registration, and password change</code></pre>
+<p>CodeBuddy NPC will automatically:</p>
+<ul>
+<li>Analyze the existing code structure</li>
+<li>Generate the endpoint code</li>
+<li>Write the database model</li>
+<li>Write test cases</li>
+<li>Submit a PR for review</li>
+</ul>
+<h3 id="case-2-fix-a-bug">Case 2: Fix a Bug</h3>
+<p>In a PR comment:</p>
+<pre><code>@CodeBuddy NPC this function has a bug — it crashes when the username is empty</code></pre>
+<p>CodeBuddy NPC will:</p>
+<ul>
+<li>Locate the faulty code</li>
+<li>Analyze the root cause</li>
+<li>Generate a fix</li>
+<li>Submit a patch</li>
+</ul>
+<h3 id="case-3-code-review">Case 3: Code Review</h3>
+<pre><code>@CodeBuddy NPC review this code and check for security issues</code></pre>
+<p>CodeBuddy NPC will:</p>
+<ul>
+<li>Analyze the logic</li>
+<li>Check for vulnerabilities</li>
+<li>Give optimization suggestions</li>
+<li>Generate a review report</li>
+</ul>
+<h2 id="things-to-know">Things to Know</h2>
+<h3 id="1-free-period">1. Free Period</h3>
+<p>The offer runs through <strong>December 31, 2026</strong>. That means:</p>
+<ul>
+<li>Now is the golden window to use it for free</li>
+<li>It may be paid or restricted starting January 2027</li>
+<li>Use and test it heavily while you can</li>
+</ul>
+<h3 id="2-suitable-projects">2. Suitable Projects</h3>
+<ul>
+<li>Works for web projects (frontend + backend)</li>
+<li>Supports mainstream frameworks (React, Vue, Express, Django, etc.)</li>
+<li>Not ideal for niche areas like embedded or game dev</li>
+</ul>
+<h3 id="3-quality-assessment">3. Quality Assessment</h3>
+<ul>
+<li>DeepSeek-V4-Flash is a lightweight model; code quality is mid-to-upper</li>
+<li>Manually review complex logic</li>
+<li>Generated code may miss edge cases</li>
+</ul>
+<h3 id="4-versus-cursor">4. Versus Cursor</h3>
+<table><thead><tr><th>Feature</th><th>CodeBuddy NPC</th><th>Cursor</th></tr></thead><tbody>
+<tr><td>Free</td><td>Free through end of 2026</td><td>Free tier is limited</td></tr>
+<tr><td>Mode</td><td>@-summon, auto-executes</td><td>Manual chat</td></tr>
+<tr><td>Integration</td><td>Inside the CNB platform</td><td>Standalone IDE</td></tr>
+<tr><td>Best for</td><td>Users who want to "relax"</td><td>Users who want to control every step</td></tr>
+</tbody></table>
+<h2 id="faq">FAQ</h2>
+<div class="faq-q">Is CodeBuddy NPC actually free?</div>
+<div class="faq-a">Yes, it is free through 2026-12-31. No credit card required during the free window.</div>
+<div class="faq-q">Which model does it run on?</div>
+<div class="faq-a">DeepSeek-V4-Flash, a lightweight engine optimized for fast repo-aware coding tasks.</div>
+<div class="faq-q">Can it write tests on its own?</div>
+<div class="faq-a">Yes. In "work-for-me" mode it generates test cases and can run them before submitting a PR.</div>
+<div class="faq-q">Does it work with my existing GitHub repo?</div>
+<div class="faq-a">Import your GitHub project into CNB first, then @-summon CodeBuddy NPC in the imported repo.</div>
+<div class="faq-q">When will it start charging?</div>
+<div class="faq-a">The official free period ends 2026-12-31. After that it may move to a paid or restricted model — plan your usage before the cutoff.</div>
+<h2 id="summary">Summary</h2>
+<p>CodeBuddy NPC is Tencent Cloud CNB's AI coding assistant, powered by DeepSeek-V4-Flash, built around the "work for me" concept. Three steps to summon it: open a repo → @CodeBuddy NPC → enable work-for-me mode, and the AI does the work.</p>
+<p><strong>Best for:</strong></p>
+<ul>
+<li>Developers who don't want to type every line</li>
+<li>Builders who want to validate ideas fast</li>
+<li>Teams looking to boost throughput</li>
+</ul>
+<p><strong>Not for:</strong></p>
+<ul>
+<li>Teams that need tight control over code quality</li>
+<li>Commercial projects that demand rock-solid stability</li>
+</ul>
+<p><strong>Recommendation:</strong> while it's free, explore the use cases that fit you. Year-end may bring pricing, so get familiar early.</p>
+<h2 id="related-links">Related Links</h2>
+<ul>
+<li>CNB site: https://cnb.cool</li>
+<li>CodeBuddy entry: @-summon inside any repo on cnb.cool</li>
+<li>Compare: see the JoyCode and Cursor guides on aifreeplan.com</li>
+</ul>
+<hr>
+<p><em>More AI tool free-tier info at aifreeplan.com</em></p>
+</main>
+</body>
+</html>

@@ -198,6 +198,22 @@
         {
           "question": "用Petals最容易踩哪些坑？",
           "answer": "三大坑：公共节点经常爆满要排队；首token延迟高，对话体验不如ChatGPT顺；自己跑客户端需要至少24GB显存显卡，否则连不上网络。"
+        },
+        {
+          "question": "Petals真的完全免费吗？",
+          "answer": "是的，完全免费。无需注册、无需API Key、无需付费。唯一要求是参与分布式网络的用户可以贡献自己的GPU。"
+        },
+        {
+          "question": "速度有多快？",
+          "answer": "取决于网络状况和可用节点。Llama 2 70B约6 tokens/sec，Llama 3.1 405B约4 tokens/sec，足够聊天和交互式应用。"
+        },
+        {
+          "question": "需要自己的GPU吗？",
+          "answer": "不需要。你可以使用Google Colab免费版，或者本地如果有GPU也可以贡献算力加速网络。"
+        },
+        {
+          "question": "支持哪些模型？",
+          "answer": "支持Llama 3.1 405B、Llama 2 70B、Mixtral 8x22B、Falcon 180B、BLOOM 176B等多个大模型。"
         }
       ],
       "faq_en": [
@@ -220,6 +236,22 @@
         {
           "question": "What are the common gotchas with Petals?",
           "answer": "Three big ones: speed is unpredictable because volunteers come and go, privacy is weak since prompts travel through strangers' GPUs, and uptime varies. Don't use it for production; it's a research tool and free playground."
+        },
+        {
+          "question": "Is Petals really completely free?",
+          "answer": "Yes, completely free. No registration, no API Key, no payment. Only requirement is optional GPU contribution."
+        },
+        {
+          "question": "How fast is it?",
+          "answer": "Depends on network and available nodes. Llama 2 70B ~6 tok/sec, Llama 3.1 405B ~4 tok/sec. Enough for chat and interactive apps."
+        },
+        {
+          "question": "Do I need my own GPU?",
+          "answer": "No. Use free Google Colab, or contribute your GPU if you have one."
+        },
+        {
+          "question": "Which models are supported?",
+          "answer": "Llama 3.1 405B, Llama 2 70B, Mixtral 8x22B, Falcon 180B, BLOOM 176B, and more."
         }
       ]
     },
@@ -266,6 +298,22 @@
         {
           "question": "如何更新 Nativ？",
           "answer": "Nativ 使用 Sparkle 框架进行应用内自动更新。启动应用后，它会检查是否有新版本并提示你下载更新。"
+        },
+        {
+          "question": "Nativ 真的完全免费吗？",
+          "answer": "是的，MIT 许可，免费下载和使用，无次数限制。"
+        },
+        {
+          "question": "需要联网吗？",
+          "answer": "仅首次下载模型时需要网络，运行时完全离线。"
+        },
+        {
+          "question": "支持 Intel Mac 吗？",
+          "answer": "不支持，仅限 Apple Silicon（M1/M2/M3/M4）。"
+        },
+        {
+          "question": "可以切换不同模型吗？",
+          "answer": "可以，通过 Hugging Face 手动下载更多 MLX 格式模型。"
         }
       ],
       "faq_en": [
@@ -292,6 +340,22 @@
         {
           "question": "How do I update Nativ?",
           "answer": "Nativ uses the Sparkle framework for in-app automatic updates. On launch, it checks for new versions and prompts you to download updates."
+        },
+        {
+          "question": "Is Nativ really completely free?",
+          "answer": "Yes, MIT license. Free download and use with no usage limits."
+        },
+        {
+          "question": "Does it require internet?",
+          "answer": "Only for initial model download. Fully offline at runtime."
+        },
+        {
+          "question": "Does it support Intel Mac?",
+          "answer": "No, Apple Silicon only (M1/M2/M3/M4)."
+        },
+        {
+          "question": "Can I switch between different models?",
+          "answer": "Yes, download more MLX format models from Hugging Face."
         }
       ]
     },
@@ -330,6 +394,22 @@
         {
           "question": "新手最容易踩什么坑？",
           "answer": "三个常见坑：本地跑大模型电脑卡死、模型下到C盘占空间、Cloud免费额度用完不提醒变扣费。建议先跑7B小模型试水。"
+        },
+        {
+          "question": "Ollama免费版真的完全免费吗？",
+          "answer": "是的。本地运行所有公开模型完全免费，无次数限制、无token限制、无时间限制。云端免费层提供Level 1轻量模型访问，也无需付费。"
+        },
+        {
+          "question": "免费版有多少使用限制？",
+          "answer": "免费版云端限制为：每次会话最长5小时（超时自动重置），每周有总量限制（7天重置），同时只能运行1个云端模型。本地运行无任何限制。"
+        },
+        {
+          "question": "Ollama的云端模型支持工具调用吗？",
+          "answer": "是的。所有经过测试的云端模型都支持工具调用（tool calling）。"
+        },
+        {
+          "question": "什么时候会达到使用上限？",
+          "answer": "你可以在Ollama设置页面随时查看用量。当达到计划的90%时，Ollama会发送电子邮件提醒。"
         }
       ],
       "faq_en": [
@@ -352,6 +432,22 @@
         {
           "question": "What are the common pitfalls with Ollama?",
           "answer": "Three traps catch newcomers: large models like 70B need serious RAM and run slowly on a laptop, some model licenses restrict commercial use, and the cloud free tier has rate limits that can throttle heavy testing."
+        },
+        {
+          "question": "Is Ollama free really completely free?",
+          "answer": "Yes. Local running of all public models is completely free with no limits. Free cloud tier provides Level 1 lightweight model access."
+        },
+        {
+          "question": "What are the free tier limits?",
+          "answer": "Free cloud: max 5-hour sessions (auto-reset), weekly usage limits (7-day reset), 1 concurrent model. Local running has no limits."
+        },
+        {
+          "question": "Do cloud models support tool calling?",
+          "answer": "Yes. All tested cloud models support tool calling."
+        },
+        {
+          "question": "When will I reach usage limits?",
+          "answer": "Check usage in Ollama settings. Email notifications sent at 90% usage."
         }
       ]
     },
@@ -785,6 +881,38 @@
         {
           "question": "Google Jules 1.5和GitHub Copilot哪个更好？",
           "answer": "Jules 1.5完全免费且限额提升60倍，Copilot个人版$10/月。如果只看免费额度，Jules 1.5胜出。但如果需要GitHub深度集成和团队功能，Copilot更有优势。"
+        },
+        {
+          "question": "完全免费的 AI 编程工具有哪些？",
+          "answer": "Windsurf 个人版、Continue（自配 API）、Codeium 个人版、OpenCode 都是免费的。但这些工具大多功能有限，复杂任务还是得用 Cursor/Claude Code 付费。"
+        },
+        {
+          "question": "Cursor $20/月值得吗？",
+          "answer": "如果你是 IDE 重度用户，每天写 200+ 行代码，Cursor $20/月非常值。多文件编辑能力和 AI 深度理解能省下 2-3 小时/天的工作时间，相当于 $20 买了 $60 的时间。"
+        },
+        {
+          "question": "Claude Code 和 Cursor 选哪个？",
+          "answer": "Cursor 适合 IDE 集成、多文件编辑；Claude Code 适合终端、深度理解代码库、Agent 任务。两者不是替代关系，很多重度用户同时用——Cursor 写代码，Claude Code 跑深度分析。"
+        },
+        {
+          "question": "GitHub Copilot 现在还有竞争力吗？",
+          "answer": "对于初学者和 VS Code 重度用户仍有竞争力。Copilot 的优势是生态成熟、价格合理、IDE 集成最稳。但 2026 年起 Cursor 和 Claude Code 抢了大量 Copilot 用户。"
+        },
+        {
+          "question": "AI 编程工具会取代程序员吗？",
+          "answer": "不会。AI 工具擅长生成\"标准模式代码\"（CRUD、API 路由、单元测试），但架构设计、业务逻辑理解、调试复杂 bug仍需要人。"
+        },
+        {
+          "question": "免费工具适合长期使用吗？",
+          "answer": "不适合。免费工具大多有功能限制（请求次数、上下文长度、模型选择）。真正做生产项目，建议付费一个主力工具（$20/月），其他工具作为补充。"
+        },
+        {
+          "question": "本地模型（Ollama）能替代云端 AI 编程吗？",
+          "answer": "部分场景能。Llama 3.1 70B 本地部署的代码质量接近 GPT-3.5，适合代码补全和简单生成。但复杂任务仍需 GPT-4/Claude Sonnet 这类云端旗舰模型。"
+        },
+        {
+          "question": "哪个工具最适合学习编程？",
+          "answer": "GitHub Copilot。免费额度对学习够用，VS Code 集成最稳，AI 解释代码的功能对新手最友好。"
         }
       ],
       "faq_en": [
@@ -913,6 +1041,54 @@
         {
           "question": "RPM和TPM有什么区别？",
           "answer": "RPM（Requests Per Minute）是每分钟请求数，控制并发能力；TPM（Tokens Per Minute）是每分钟token数，控制单次请求的处理量。两者共同决定了API的性能上限。"
+        },
+        {
+          "question": "完全没有信用卡，能白嫖哪些？",
+          "answer": "Groq、OpenRouter、硅基流动、魔塔、美团 LongCat、书生浦语、国家超算都不需要信用卡。Mistral 需要信用卡验证（但不扣费），百度千帆、火山引擎需要绑卡。"
+        },
+        {
+          "question": "国内网络访问最稳定的免费 API 平台是哪个？",
+          "answer": "硅基流动、魔塔社区、美团 LongCat。这三个都提供国内直连，延迟 < 100ms。OpenRouter 也能国内直连但免费额度只有 50 次/天。"
+        },
+        {
+          "question": "哪个平台免费额度真正\"够用\"？",
+          "answer": "美团 LongCat 5500 万 tokens/天，硅基流动 TPM 200万，智谱 AI GLM-4-Flash 永久免费。这三个对个人开发基本用不完。国内选硅基流动或 LongCat，国际选 Groq 或 NVIDIA NIM。"
+        },
+        {
+          "question": "需要翻墙的平台，哪些体验最好？",
+          "answer": "Groq（速度）、NVIDIA NIM（模型多）、Mistral（合规）这三个体验最好。Together AI、Cohere、HuggingFace 次之。Fireworks AI、OVH 等小平台不推荐，体验差。"
+        },
+        {
+          "question": "DeepSeek V4 怎么免费用？",
+          "answer": "两个途径：(1) NVIDIA NIM 免费层支持 DeepSeek V4 系列；(2) 国家超算平台注册送 1000 万 token，支持 DeepSeek-V3.2；(3) 网页版 chat.deepseek.com 完全免费。"
+        },
+        {
+          "question": "OpenRouter 充值 $10 划算吗？",
+          "answer": "看你用多少。如果每天要 50+ 次请求，充值 $10 解锁 1000 次/天很划算（按量算不到 1 美分/次）。只是轻度测试，50 次/天够用就不充值。"
+        },
+        {
+          "question": "白嫖的 API 能商用吗？",
+          "answer": "看平台条款。Groq、硅基流动允许商用；GitHub Models、Cohere、Together AI 免费层禁止商用。做商业产品务必看 freeStatus 和 commercialUse 字段。"
+        },
+        {
+          "question": "哪个平台对中文最友好？",
+          "answer": "智谱 AI > 硅基流动 > 魔塔 > 美团 LongCat。这四个都是国内平台，中文理解无需特殊优化。国际平台里 Qwen 系列（Groq、NVIDIA NIM 都有）中文也很强。"
+        },
+        {
+          "question": "需要 1M 超长上下文，选哪个？",
+          "answer": "Cline.bot API 提供 1M 上下文（MiniMax-M3、小米 MiMo、DeepSeek V4 Flash），注册送 $0.5 额度。也可以考虑 Groq 的 Llama 4 Scout（10M 上下文但不是完全可用）。"
+        },
+        {
+          "question": "数据安全怎么保证？",
+          "answer": "白嫖 API 平台默认会用你的请求数据改进模型。写敏感内容（商业机密、未公开产品、用户隐私）建议用 ChatGPT Enterprise、Claude API、Azure OpenAI 这些企业版。或者本地跑开源模型（Ollama + Llama）。"
+        },
+        {
+          "question": "白嫖多个平台，怎么统一管理 API Key？",
+          "answer": "用 .env 文件管理，不要 hardcode 到代码里。进阶可以用 1Password CLI 或 Vault。绝对不要把 API Key 提交到 GitHub。"
+        },
+        {
+          "question": "免费额度会用完吗？什么时候扣费？",
+          "answer": "大部分平台免费额度用完会返回 429（限流）而不是自动扣费。会自动扣费的只有 Together AI 和 Mistral（需要绑卡）。其他平台要么报错要么降级到付费模型前会弹窗确认。"
         }
       ],
       "faq_en": [
@@ -935,6 +1111,46 @@
         {
           "question": "What is the difference between RPM and TPM?",
           "answer": "RPM (Requests Per Minute) controls concurrency capacity; TPM (Tokens Per Minute) controls the processing volume per request. Together they determine the API's performance ceiling."
+        },
+        {
+          "question": "Which platform has the most generous free tier overall?",
+          "answer": "It depends on what \"generous\" means. By raw tokens/day, Cerebras (1M tokens/day) and SiliconFlow (TPM 2M) lead. By permanent no-rate-limit allowance, Zhipu GLM-4-Flash is unbeatable. By request count, OpenRouter's $10 top-up tier (1,000/day) is the most practical. There's no single winner."
+        },
+        {
+          "question": "Can I use GPT-4o for free legitimately?",
+          "answer": "Yes, via GitHub Models. You get 150 requests/day on GPT-4o with just a GitHub account, no credit card. It's the only legit way to use GPT-4o for free. OpenRouter also hosts free GPT-4-class models but routes to smaller variants."
+        },
+        {
+          "question": "Which is faster — Groq or Cerebras?",
+          "answer": "On small prompts (under 1K tokens), Groq's LPU is slightly faster. On large prompts (over 4K tokens), Cerebras's WSE chip pulls ahead. For typical chat workloads, both feel instant. The difference matters more for streaming than first-token latency."
+        },
+        {
+          "question": "Do I need a VPN from China to use international platforms?",
+          "answer": "For Groq, Cerebras, Mistral, Together AI, Fireworks AI, Cohere — yes, VPN required. For OpenRouter, GitHub Models, HuggingFace, DeepSeek, Zhipu, SiliconFlow, ModelScope — no VPN needed. Chinese platforms are often the better choice for Chinese developers for this reason alone."
+        },
+        {
+          "question": "Is OpenRouter's $10 top-up really worth it?",
+          "answer": "Yes, it's the best value in AI right now. You get 1,000 requests/day, access to 27 free models including DeepSeek V3 and Kimi K2, and any unused credits stay in your account. It's not a subscription — you top up $10 once and use it until depleted. For serious development, this is mandatory."
+        },
+        {
+          "question": "Can I use these free tiers commercially?",
+          "answer": "Most platforms' free tiers allow commercial use but prohibit resale/redistribution. Check each platform's ToS — Groq, GitHub Models, OpenRouter, Zhipu, SiliconFlow all explicitly allow commercial use of free-tier outputs. HuggingFace and Together AI are more restrictive. Always read the actual ToS, not the marketing page."
+        },
+        {
+          "question": "What's the cheapest paid API if I outgrow free?",
+          "answer": "DeepSeek at $0.14 per million input tokens (V3.2 model) is the cheapest serious option globally. SiliconFlow at ¥0.006/1K tokens (~$0.85 per million) is competitive for Chinese models. Groq paid tier is roughly $0.20-0.60 per million tokens depending on model. Avoid GPT-4o at $2.50/million unless you specifically need that quality."
+        },
+        {
+          "question": "Which platform has the best function calling / tool use support?",
+          "answer": "OpenAI-compatible platforms (GitHub Models, OpenRouter for OpenAI-hosted models, Together AI) have the most reliable function calling. Zhipu GLM-4.6 has surprisingly good function calling support. Cerebras function calling was buggy in my testing. HuggingFace is hit-or-miss depending on the model."
+        },
+        {
+          "question": "Should I host open-source models locally instead?",
+          "answer": "Only if you're running 10M+ tokens/day. Hardware costs (a single A100 is ~$1.50/hour on cloud) make local hosting uneconomical below that volume. The free tiers from Groq, Cerebras, Zhipu, and OpenRouter cover most indie projects entirely."
+        },
+        {
+          "question": "How do I handle rate limits across multiple platforms?",
+          "answer": "Build an abstraction layer in your code. I use a simple wrapper that tries platform A, falls back to platform B on 429, then platform C. With OpenRouter + Groq + Zhipu + DeepSeek as fallbacks, I haven't hit a hard outage in two months. This is the real production-grade approach."
         }
       ]
     },
@@ -1182,6 +1398,22 @@
         {
           "question": "What are the common gotchas when using Gemini CLI for free?",
           "answer": "The biggest trap is hitting the 1000 daily request limit during heavy refactoring, and the CLI silently retries on errors, burning quota fast. Also, it sometimes hallucinates APIs that do not exist, so always test the code it writes."
+        },
+        {
+          "question": "Is Gemini CLI really free?",
+          "answer": "Yes, basic usage with Gemini 2.0 Flash is free."
+        },
+        {
+          "question": "Do I need a Google account?",
+          "answer": "Yes, you need to authenticate with your Google account."
+        },
+        {
+          "question": "What languages are supported?",
+          "answer": "Python, JavaScript, TypeScript, Go, Rust, Java, C++, and more."
+        },
+        {
+          "question": "Can I use it for commercial projects?",
+          "answer": "Yes, generated code can be used commercially."
         }
       ]
     },
@@ -1611,6 +1843,14 @@
         {
           "question": "What are the common gotchas with Qoderwork Free Pro?",
           "answer": "The daily credit reset is in UTC, not your local timezone, so you might wake up to zero credits. Also, complex multi-file tasks burn credits fast, and long context windows cost more than short ones."
+        },
+        {
+          "question": "Is Qoderwork Pro really free?",
+          "answer": "Yes, with invite links and daily quotas."
+        },
+        {
+          "question": "How much free quota do I get?",
+          "answer": "Daily free requests vary, check official website."
         }
       ]
     },
@@ -1778,6 +2018,22 @@
         {
           "question": "What are the common gotchas with Trae free tier?",
           "answer": "Three big ones: 1) Quota is shared globally, not per-project, so heavy use burns it fast. 2) The IDE is still in beta and occasionally crashes on large repos. 3) No offline mode, so you're stuck without internet."
+        },
+        {
+          "question": "Is Trae really free?",
+          "answer": "Yes, 5000 completions/month free. SOLO mode has limited daily uses."
+        },
+        {
+          "question": "Do I need a ByteDance account?",
+          "answer": "Yes, sign in with ByteDance account or phone number."
+        },
+        {
+          "question": "What languages are supported?",
+          "answer": "Python, JavaScript, TypeScript, Go, Java, C++, and more."
+        },
+        {
+          "question": "Can I use it commercially?",
+          "answer": "Yes, free tier allows commercial use."
         }
       ]
     },
@@ -1886,6 +2142,22 @@
         {
           "question": "What are the common pitfalls when running Stable Diffusion locally?",
           "answer": "Top traps: insufficient GPU VRAM causing crashes, downloading broken models from sketchy sites, accidentally installing NSFW checkpoints, and ignoring the safety checker removal which can break outputs. Always use official Hugging Face repos, keep CUDA drivers updated, and back up your working config before tweaking."
+        },
+        {
+          "question": "Is Stable Diffusion really free?",
+          "answer": "Yes, completely free when running locally. Only cost is electricity and hardware."
+        },
+        {
+          "question": "Do I need a powerful GPU?",
+          "answer": "Minimum GTX 1060, but RTX 3060+ recommended for best experience."
+        },
+        {
+          "question": "Can I use it commercially?",
+          "answer": "Yes, Stable Diffusion is open-source and allows commercial use."
+        },
+        {
+          "question": "How do I install custom models?",
+          "answer": "Download LoRA and checkpoint models from Civitai or HuggingFace, place in respective folders."
         }
       ]
     },
@@ -1940,6 +2212,22 @@
         {
           "question": "What are common gotchas when using Coze?",
           "answer": "Watch out for rate limits on free tier (varies by LLM model), occasional latency spikes during peak hours, and the fact that published bots on third-party platforms may get flagged for spam if you mass-deploy identical content."
+        },
+        {
+          "question": "Is Coze really free?",
+          "answer": "Yes, completely free for personal use with ~1000 daily calls. Paid plans available for higher limits."
+        },
+        {
+          "question": "Can I use it commercially?",
+          "answer": "Free tier is for personal use only. Commercial use requires paid plan."
+        },
+        {
+          "question": "How many agents can I create?",
+          "answer": "Unlimited agents can be created on free tier."
+        },
+        {
+          "question": "What plugins are available?",
+          "answer": "1000+ plugins including search, coding, image generation, and more."
         }
       ]
     },
@@ -1999,6 +2287,22 @@
         {
           "question": "What are the common gotchas when using Ego Lite for free?",
           "answer": "Watch out for three traps: the daily task quota resets at midnight UTC, complex multi-step jobs may time out, and the agent can't log into sites with two-factor auth enabled."
+        },
+        {
+          "question": "Is Ego Lite really free?",
+          "answer": "Yes, completely free and open-source under MIT license."
+        },
+        {
+          "question": "Does it require technical knowledge?",
+          "answer": "Basic understanding of AI agents and browser automation helps, but documentation guides users."
+        },
+        {
+          "question": "Can I use it for commercial purposes?",
+          "answer": "Yes, MIT license allows commercial use."
+        },
+        {
+          "question": "What browsers are supported?",
+          "answer": "Chromium-based browsers (Chrome, Edge, Brave, etc.)"
         }
       ]
     },
@@ -2022,6 +2326,10 @@
         {
           "question": "有没有办法叠加使用多个工具？",
           "answer": "可以。很多专业写作者会组合使用不同工具——例如用笔灵AI生成初稿，再用秘塔写作猫润色，最后用小幻熊基于知识库做专业校对。"
+        },
+        {
+          "question": "哪个工具最适合中文写作？",
+          "answer": "秘塔写作猫和语灵写作在中文写作方面表现最佳，支持中文语法纠错和地道表达。"
         }
       ],
       "faq_en": [
@@ -2036,6 +2344,18 @@
         {
           "question": "Can I combine multiple tools for better results?",
           "answer": "bsolutely. Many professional writers combine tools — for example, using Biling AI for drafts, Meta Writer for polishing, and Xiaohuanxiong for knowledge-base-backed professional review."
+        },
+        {
+          "question": "Are these free tiers really free?",
+          "answer": "Most tools' free tiers can be used long-term, but usually with word or feature limits. Confirm current free policies before heavy use."
+        },
+        {
+          "question": "Can free tier content be used commercially?",
+          "answer": "Most tools allow commercial use, but check each tool's Terms of Service."
+        },
+        {
+          "question": "Which tool is best for Chinese writing?",
+          "answer": "Meta Writer and Yuling Writing excel in Chinese writing, supporting grammar correction and natural expressions."
         }
       ]
     },
@@ -2139,6 +2459,46 @@
         {
           "question": "2026年有没有完全免费的替代品？",
           "answer": "Canva AI是目前唯一真正无限免费的选项。Gamma每月100页的额度对于大多数个人用户也足够使用。其他工具的免费版都有较严格的限制。"
+        },
+        {
+          "question": "零基础做 PPT 选哪个？",
+          "answer": "Canva AI。100 万+ 模板，拖拽编辑最友好，零基础 30 分钟上手。"
+        },
+        {
+          "question": "完全免费能做到客户级演示吗？",
+          "answer": "能。Gamma 免费版 + 手动微调 + 导出 PDF 后裁剪水印，可以做到客户级。"
+        },
+        {
+          "question": "Gamma 免费版水印能去掉吗？",
+          "answer": "能。三种方法：付费去除（$8/月起）、导出 PDF 后用 PDF 编辑器裁剪、截图后用图片编辑工具裁剪。"
+        },
+        {
+          "question": "Tome 现在还能免费用吗？",
+          "answer": "能，但只有一次性 500 积分（约 5-8 份演示文稿）。用完就没了，必须付费。"
+        },
+        {
+          "question": "Google Slides 用户必须用 SlidesAI 吗？",
+          "answer": "不是。SlidesAI 只是 Google Slides 的 AI 插件之一。如果你不想用插件，直接用 Gamma 生成后导出 PPT，再上传到 Google Slides 也可以。"
+        },
+        {
+          "question": "AI 生成的演示文稿会被识别为 AI 做的吗？",
+          "answer": "现在 AI 演示工具的设计感已经接近人类水平，识别不出来。关键是内容要有你自己的判断和案例，这是 AI 最弱的地方。"
+        },
+        {
+          "question": "哪个工具生成的中文质量最好？",
+          "answer": "Gamma 和 Canva AI 中文生成质量最好。Tome 和 Beautiful.ai 中文偏弱。"
+        },
+        {
+          "question": "付费 Beautiful.ai 值得吗？",
+          "answer": "如果你每月做 5+ 份客户级演示，$12/月值得。如果是偶尔做做，建议用 Gamma 免费版。"
+        },
+        {
+          "question": "AI 演示工具会取代设计师吗？",
+          "answer": "不会。AI 工具擅长生成\"标准模板\"演示文稿，但独特品牌设计、定制插画、复杂动画仍需要设计师。"
+        },
+        {
+          "question": "怎么判断该用 AI 演示工具还是传统 PPT？",
+          "answer": "内容驱动、时间紧 → AI 演示工具。设计驱动、需要独特品牌 → 传统 PPT 或付费 AI 工具 + 设计师微调。"
         }
       ],
       "faq_en": [
@@ -2161,6 +2521,46 @@
         {
           "question": "Are there any truly free alternatives in 2026?",
           "answer": "Canva AI is the only tool with truly unlimited free usage. Gamma's 100 pages/month is sufficient for most individual users. Other tools have stricter free tier limitations."
+        },
+        {
+          "question": "Which tool for absolute beginners?",
+          "answer": "Canva AI. 1M+ templates, most beginner-friendly drag-and-drop, 30 minutes from zero to first deck."
+        },
+        {
+          "question": "Can client-grade presentations be done completely free?",
+          "answer": "Yes. Gamma free tier plus manual polish plus watermark cropping after PDF export can deliver client-grade quality."
+        },
+        {
+          "question": "Can Gamma's free tier watermark be removed?",
+          "answer": "Yes. Three options: pay for removal ($8/month starting), crop the watermark with a PDF editor after export, or use screenshot + image editor cropping."
+        },
+        {
+          "question": "Is Tome still free to use?",
+          "answer": "Yes, but only one-time 500 credits (about 5-8 presentations). After that, you must pay."
+        },
+        {
+          "question": "Do Google Slides users have to use SlidesAI?",
+          "answer": "No. SlidesAI is just one of Google Slides' AI plugins. If you don't want a plugin, generate with Gamma and export to PPT, then upload to Google Slides."
+        },
+        {
+          "question": "Can AI-generated presentations be detected as AI-made?",
+          "answer": "Modern AI presentation tools' design sense is close to human-level and basically undetectable. The key is content with your own judgment and cases — that's where AI is still weakest."
+        },
+        {
+          "question": "Which tool generates the best Chinese?",
+          "answer": "Gamma and Canva AI have the best Chinese generation quality. Tome and Beautiful.ai have weaker Chinese."
+        },
+        {
+          "question": "Is paid Beautiful.ai worth it?",
+          "answer": "If you're making 5+ client-grade decks per month, $12/month is worth it. For occasional use, Gamma free tier is enough."
+        },
+        {
+          "question": "Will AI presentation tools replace designers?",
+          "answer": "No. AI tools excel at generating \"standard template\" presentations, but unique brand design, custom illustrations, complex animations still need designers."
+        },
+        {
+          "question": "How to decide between AI presentation tools and traditional PPT?",
+          "answer": "Content-driven, time-pressed → AI presentation tools. Design-driven, needs unique branding → traditional PPT or paid AI + designer polish."
         }
       ]
     },
@@ -2201,6 +2601,46 @@
         {
           "question": "免费版的积分会累积到下个月吗？",
           "answer": "大多数工具不会累积。Suno的每日积分不累积，ElevenLabs的月度额度用完即止。只有少数工具（如部分API服务）支持余额结转。建议在使用前查看具体工具的条款。"
+        },
+        {
+          "question": "AI 生成的免费音乐可以商用吗？",
+          "answer": "绝大多数工具的免费版不允许商用。如果需要商用，必须升级到付费版。Suno Pro ($10/月)、Udio Pro ($15/月)、ElevenLabs Creator ($5/月) 等付费版才提供商用授权。"
+        },
+        {
+          "question": "Suno 和 Udio 哪个更好？",
+          "answer": "两者各有优势。Suno 的优势是操作简单、社区活跃、风格多样；Udio 的优势是音质更高、每月免费额度更大（600 首 vs 300 首）。如果你追求音质选 Udio，如果追求易用性选 Suno。"
+        },
+        {
+          "question": "ElevenLabs 的 10,000 字符够用吗？",
+          "answer": "对于个人用户基本够用。10,000 字符大约对应 10 分钟语音。如果是做有声书或长视频配音，可能需要考虑 Creator 版（$5/月，30,000 字符/月）。"
+        },
+        {
+          "question": "哪个工具支持中文最好？",
+          "answer": "Suno 和 ElevenLabs 中文支持最好。Udio、Stable Audio、Mubert、AIVA 中文支持较弱。"
+        },
+        {
+          "question": "AI 音乐会被 Spotify/Apple Music 下架吗？",
+          "answer": "如果用免费版发布，有可能被下架（平台会检测 AI 生成标记）。建议商用场合用付费版（提供完整商用授权）。"
+        },
+        {
+          "question": "游戏音效用哪个工具？",
+          "answer": "Stable Audio 或 Mubert。前者 API 友好适合开发者，后者更适合视频内容。"
+        },
+        {
+          "question": "实时变声有免费工具吗？",
+          "answer": "有。Voicemod 基础功能免费，足够游戏和直播用。"
+        },
+        {
+          "question": "AI 生成的歌曲会重复吗？",
+          "answer": "理论上不会，因为每次生成都是基于随机种子。但如果你用完全相同的提示词，生成的歌曲会非常相似。"
+        },
+        {
+          "question": "Suno v4 值得升级吗？",
+          "answer": "如果你是音乐创作者，v4 提升很大（音质、人声、结构都升级）。但对业余玩家，免费版 v3 已经够用。"
+        },
+        {
+          "question": "商用 AI 音乐最便宜的方案是什么？",
+          "answer": "Suno Pro $10/月，是性价比最高的商用方案。Udio Pro $15/月音质更好但更贵。"
         }
       ],
       "faq_en": [
@@ -2223,6 +2663,42 @@
         {
           "question": "Do free credits roll over to next month?",
           "answer": "Most tools do not roll over. Suno's daily credits reset, ElevenLabs' monthly quota expires. Only a few API services allow balance carryover. Check each tool's terms before relying on unused credits."
+        },
+        {
+          "question": "Can AI-generated free music be used commercially?",
+          "answer": "For most tools, no. Commercial use requires paid upgrade. Suno Pro ($10/month), Udio Pro ($15/month), ElevenLabs Creator ($5/month) all provide commercial licensing."
+        },
+        {
+          "question": "Suno or Udio — which is better?",
+          "answer": "Both have strengths. Suno excels at ease of use, active community, genre variety. Udio excels at cleaner audio, more monthly free generations (600 vs 300). Prioritize Udio for quality, Suno for ease of use."
+        },
+        {
+          "question": "Which tool has the best Chinese support?",
+          "answer": "Suno and ElevenLabs have the best Chinese support. Udio, Stable Audio, Mubert, AIVA have weaker Chinese support."
+        },
+        {
+          "question": "Will AI-generated songs get taken down on Spotify/Apple Music?",
+          "answer": "If published using the free tier, yes, possibly (platforms detect AI generation markers). For commercial scenarios, use paid tiers (provides full commercial licensing)."
+        },
+        {
+          "question": "Which tool for game sound effects?",
+          "answer": "Stable Audio or Mubert. Former has developer-friendly API, latter is better for video content."
+        },
+        {
+          "question": "Any free real-time voice changer?",
+          "answer": "Yes. Voicemod basic features are free, enough for gaming and livestreaming."
+        },
+        {
+          "question": "Will AI-generated songs repeat?",
+          "answer": "Theoretically no, since each generation uses a random seed. But identical prompts generate very similar songs."
+        },
+        {
+          "question": "Is Suno v4 worth the upgrade?",
+          "answer": "If you're a music creator, v4 brings significant improvements (audio, vocals, structure). For hobbyists, free tier v3 is sufficient."
+        },
+        {
+          "question": "What's the cheapest commercial AI music option?",
+          "answer": "Suno Pro at $10/month is the best value. Udio Pro at $15/month has better audio but costs more."
         }
       ]
     },
@@ -2571,6 +3047,18 @@
         {
           "question": "如何监控免费额度使用情况？",
           "answer": "登录Groq控制台（console.groq.com）可以查看当日的请求使用情况和剩余额度。"
+        },
+        {
+          "question": "每天1000次请求够用吗？",
+          "answer": "对于个人开发者和轻度使用来说完全够用。假设每次对话消耗2次请求，每天可以完成500轮对话。"
+        },
+        {
+          "question": "支持流式输出吗？",
+          "answer": "支持，而且流式输出是发挥LPU速度优势的关键。"
+        },
+        {
+          "question": "可以用于商业用途吗？",
+          "answer": "可以，免费版允许商业用途。"
         }
       ],
       "faq_en": [
@@ -2597,6 +3085,22 @@
         {
           "question": "How do I monitor free quota usage?",
           "answer": "Log into the Groq Console (console.groq.com) to view daily request usage and remaining quota."
+        },
+        {
+          "question": "Is Groq free tier really free?",
+          "answer": "Yes, completely free. No payment required. Register and start using immediately."
+        },
+        {
+          "question": "Is 1000 requests/day enough?",
+          "answer": "For individual developers and light usage, yes. Assuming 2 requests per conversation, that's 500 conversations daily."
+        },
+        {
+          "question": "Does it support streaming?",
+          "answer": "Yes, and streaming is key to leveraging LPU speed advantage."
+        },
+        {
+          "question": "Can I use it for commercial purposes?",
+          "answer": "Yes, free tier allows commercial use."
         }
       ]
     },
@@ -2997,8 +3501,445 @@
         "免费额度"
       ],
       "icon": "🇨🇳"
+    },
+    {
+      "slug": "ai-search-engines-free-comparison-2026",
+      "title_zh": "AI搜索引擎免费额度对比：5款主流工具2026年免费版横评",
+      "title_en": "AI Search Engines Free Tier Comparison 2026: Perplexity, You.com, Phind, Komo, Andi, Brave Search",
+      "description_zh": "2026年AI搜索引擎赛道越来越卷。秘塔、夸克、Perplexity、开搜AI、Bohrium这5款工具各有特色，免费版政策也各不相同。",
+      "description_en": "If you've tried replacing Google with an AI search engine in 2026, you've probably noticed two things: the \"ask a question, get an answer\" promise is finally real, and free tiers vary wildly in generosity and behavior. A",
+      "excerpt_zh": "2026年AI搜索引擎赛道越来越卷。秘塔、夸克、Perplexity、开搜AI、Bohrium这5款工具各有特色，免费版政策也各不相同。",
+      "excerpt_en": "If you've tried replacing Google with an AI search engine in 2026, you've probably noticed two things: the \"ask a question, get an answer\" promise is finally real, and free tiers vary wildly in generosity and behavior. A",
+      "category": "ai-search",
+      "tags": [],
+      "date_published": "",
+      "faq_zh": [
+        {
+          "question": "哪个AI搜索引擎最好用？",
+          "answer": "没有绝对答案。秘塔AI搜索综合体验最好，Perplexity深度研究能力最强，开搜AI语义理解精准。建议根据使用场景选择。"
+        },
+        {
+          "question": "免费版够用吗？",
+          "answer": "秘塔、夸克、开搜AI的免费版已经非常实用，基本没有明显限制。Perplexity免费版每天约25次搜索，对大多数人足够。"
+        },
+        {
+          "question": "可以同时使用多个吗？",
+          "answer": "完全可以。不同AI搜索引擎各有侧重，组合使用能获得更全面的结果。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Which AI search engine should I use as my daily driver?",
+          "answer": "Perplexity for most people. Unlimited quick searches, decent citations, occasional Pro access. It's the most balanced tool in 2026."
+        },
+        {
+          "question": "Is Perplexity Pro worth the $20/mo?",
+          "answer": "If you're doing serious research 10+ hours per week, yes. The unlimited Pro access and best-model selection save hours. For casual use, the free tier is enough."
+        },
+        {
+          "question": "Can I use multiple AI search engines?",
+          "answer": "bsolutely recommended. I use Perplexity for general research, Phind for code questions, Brave Search for privacy-sensitive queries. Different tools for different jobs."
+        },
+        {
+          "question": "Which tool has the best citations?",
+          "answer": "Perplexity and Brave Search are roughly tied. Both reliably link to the specific claim being made. You.com and Andi have weaker citation quality."
+        },
+        {
+          "question": "Which tool is best for developers?",
+          "answer": "Phind, by a wide margin. It's fine-tuned on developer content and handles code questions better than any other tool in this list."
+        },
+        {
+          "question": "Are free tiers enough for most users?",
+          "answer": "Yes, for casual research. If you're doing professional research, multi-hour investigations, or need consistent access to the best models, you'll hit limits and want to pay."
+        },
+        {
+          "question": "Which tool is most private?",
+          "answer": "Brave Search. No tracking, no search history, anonymous mode by default. Andi is also privacy-focused but has weaker answers."
+        },
+        {
+          "question": "Will AI search engines replace Google?",
+          "answer": "Not fully. For research and learning, AI search wins. For local queries, breaking news, shopping, and image/video search, traditional search still wins. Expect hybrid tools (Brave Search's approach) to dominate."
+        },
+        {
+          "question": "Do these tools work outside English?",
+          "answer": "Perplexity, You.com, and Brave Search handle major European and Asian languages reasonably well. Phind is mostly English-only. Komo and Andi have weaker multilingual support."
+        },
+        {
+          "question": "How do these tools make money?",
+          "answer": "Subscription tiers (Perplexity Pro, YouPro, Brave Premium), API access for developers, and partnerships. Free tiers are subsidized by paying users — expect free limits to shrink as costs rise."
+        }
+      ]
+    },
+    {
+      "slug": "ai-writing-tools-free-tier-comparison-2026",
+      "title_zh": "AI写作工具免费额度对比：10款主流工具2026年免费版深度横评",
+      "title_en": "AI Writing Tools Free Tier Comparison: 10 Popular Tools Deep Dive 2026",
+      "description_zh": "2026年AI写作工具多到让人头大。我花了三周把市面上10款主流写作工具的免费额度都测了一遍，从英文SEO老牌工具到国产新势力，从\"完全免费不限量\"到\"送15元代金券还得抢\"，这篇帮你一次理清。",
+      "description_en": "If you've tried to pick an AI writing tool in 2026, you've probably noticed two things: there are too many of them, and almost every \"free\" tier is smaller than the marketing page suggests. After three weeks of registeri",
+      "excerpt_zh": "2026年AI写作工具多到让人头大。我花了三周把市面上10款主流写作工具的免费额度都测了一遍，从英文SEO老牌工具到国产新势力，从\"完全免费不限量\"到\"送15元代金券还得抢\"，这篇帮你一次理清。",
+      "excerpt_en": "If you've tried to pick an AI writing tool in 2026, you've probably noticed two things: there are too many of them, and almost every \"free\" tier is smaller than the marketing page suggests. After three weeks of registeri",
+      "category": "writing",
+      "tags": [],
+      "date_published": "",
+      "faq_zh": [
+        {
+          "question": "纯中文写作，到底选通义千问还是 Kimi？",
+          "answer": "写小红书/知乎/公众号选通义千问（网感强）。读资料写综述选 Kimi（长上下文无敌）。两个都免费，都注册不冲突。"
+        },
+        {
+          "question": "英文 SEO 写作完全免费能做到吗？",
+          "answer": "不能。Writesonic 10K 字/月是上限额度，超过必须付费。完全免费的替代方案是用 ChatGPT 4o mini + Surfer SEO 插件（插件要付费）。"
+        },
+        {
+          "question": "Writesonic 免费版能商用吗？",
+          "answer": "能。生成的文字版权归你。但 ChatGPT-4 引擎驱动的高级 SEO 功能需要付费，免费版只能用 GPT-3.5 引擎。"
+        },
+        {
+          "question": "Claude 真的完全没免费层了吗？",
+          "answer": "2025 年起 Claude.ai 网页版取消免费层。现在只能用 API 付费。但偶尔 Anthropic 会搞营销活动送免费额度，盯紧官网。"
+        },
+        {
+          "question": "ChatGPT 免费版 GPT-4o 每天能用几次？",
+          "answer": "2026 年 7 月实测，每天大约 10-20 次提问（按消息复杂度浮动），图片生成每天 2 次。重度使用建议直接付 Plus $20/月。"
+        },
+        {
+          "question": "国产工具的数据会拿去训练吗？",
+          "answer": "通义千问、文心一言、Kimi 默认都会。用户协议里写了\"有权使用改进模型\"。写敏感内容（商业机密、未公开产品）建议用 ChatGPT/Claude 企业版。"
+        },
+        {
+          "question": "怎么判断一篇内容是 AI 写的？",
+          "answer": "现在的检测工具越来越不准。AI 写得好的内容检测器基本认不出来。关键是人要改一遍——加个人经历、加真实案例、加主观判断，这是 AI 最弱的地方。"
+        },
+        {
+          "question": "AI 写作会被搜索引擎惩罚吗？",
+          "answer": "Google 官方明确说不会惩罚 AI 内容，只惩罚\"低质量内容\"。AI 写完必须人工编辑+加 E-E-A-T 信号（经验、专业、权威、可信），否则会被算法降权。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Pure Chinese writing — Tongyi Qianwen or Kimi?",
+          "answer": "For Xiaohongshu / Zhihu / WeChat public account style, Tongyi Qianwen (stronger style mimicry). For \"read source material then write\" workflows, Kimi (200k context wins). Both are free, register both, no conflict."
+        },
+        {
+          "question": "Can you do English SEO writing completely free?",
+          "answer": "No. Writesonic's 10K words/month is the realistic ceiling. The fully free alternative is ChatGPT 4o mini + Surfer SEO plugin (plugin is paid)."
+        },
+        {
+          "question": "Can Writesonic free tier be used commercially?",
+          "answer": "Yes. Generated text copyright is yours. But the GPT-4 engine for advanced SEO features requires payment — free tier is GPT-3.5 only."
+        },
+        {
+          "question": "Does Claude really have no free tier at all?",
+          "answer": "Correct since late 2025. Claude.ai web free tier was cancelled. API only now. Anthropic occasionally runs marketing promos with free credits — watch their official page."
+        },
+        {
+          "question": "How many times per day can I use ChatGPT free GPT-4o?",
+          "answer": "s of July 2026, roughly 10-20 messages per day (varies by complexity), plus 2 image generations. Heavy users should just pay for Plus at $20/month."
+        },
+        {
+          "question": "Do Chinese tools train on my data?",
+          "answer": "Tongyi Qianwen, ERNIE, Kimi all default to using user data for model improvement (it's in their ToS). For sensitive content (trade secrets, unreleased products), use ChatGPT/Claude enterprise tiers."
+        },
+        {
+          "question": "How do you tell if content is AI-written?",
+          "answer": "Detection tools are increasingly unreliable. Well-edited AI content consistently fools detectors. The real defense is human editing — adding personal experience, real case studies, subjective judgment. That's where AI is still weakest."
+        },
+        {
+          "question": "Will Google penalize AI-written content?",
+          "answer": "Google officially says no — they only penalize low-quality content. AI output must be human-edited plus include E-E-A-T signals (Experience, Expertise, Authoritativeness, Trustworthiness), or algorithms will downrank it."
+        },
+        {
+          "question": "What's the cheapest paid option if I outgrow free?",
+          "answer": "ChatGPT Plus at $20/month is the best value. DeepSeek API at 1 yuan per million input tokens is even cheaper if you can write code. Avoid Jasper ($49/month minimum) unless you specifically need team collaboration."
+        },
+        {
+          "question": "Should I pay for multiple AI tools?",
+          "answer": "No. Most users only need one paid tool (ChatGPT Plus covers 90% of paid use cases). The Chinese free tools cover the other 90%. Subscription stacking is a trap most people fall into without using half the tools."
+        }
+      ]
+    },
+    {
+      "slug": "baidu-unlimited-ocr-mit-free-commercial",
+      "title_zh": "百度开源 Unlimited OCR：MIT协议免费商用，一次扫几十页",
+      "title_en": "Baidu's Unlimited OCR: MIT Licensed, Free for Commercial Use, Scans Dozens of Pages at Once",
+      "description_zh": "Unlimited OCR，开源，MIT协议，免费商用。GitHub 5天1万星，现在14.3k。",
+      "description_en": "Baidu dropped a bomb on June 22.",
+      "excerpt_zh": "Unlimited OCR，开源，MIT协议，免费商用。GitHub 5天1万星，现在14.3k。",
+      "excerpt_en": "Baidu dropped a bomb on June 22.",
+      "category": "api",
+      "tags": [],
+      "date_published": "",
+      "faq_zh": [],
+      "faq_en": []
+    },
+    {
+      "slug": "claude-opus-5-free-tier-guide-2026",
+      "title_zh": "Claude Opus 5免费完全攻略：Anthropic新一代旗舰，编程SOTA，价格只有Fable 5一半",
+      "title_en": "Claude Opus 5 Free Guide: Anthropic New Flagship, Programming SOTA at Half Fable 5 Price",
+      "description_zh": "Claude Opus 5是Anthropic于2026年7月发布的新一代旗舰大模型，兼顾深思熟虑与主动响应特点，在编程与知识工作评估中实现SOTA。定价为输入每百万Token 5美元、输出每百万Token 25美元，仅为Fable 5的一半。作为Claude Max新默认模型，也是Claude Pro中性能最强的模型。",
+      "description_en": "Claude Opus 5 is Anthropic's new flagship model released in July 2026. It achieves State-of-the-Art (SOTA) in programming and knowledge work evaluations, with deliberate thinking and proactive response capabilities. Pric",
+      "excerpt_zh": "Claude Opus 5是Anthropic于2026年7月发布的新一代旗舰大模型，兼顾深思熟虑与主动响应特点，在编程与知识工作评估中实现SOTA。定价为输入每百万Token 5美元、输出每百万Token 25美元，仅为Fable 5的一半。作为Claude Max新默认模型，也是Claude Pro中性能最强的模型。",
+      "excerpt_en": "Claude Opus 5 is Anthropic's new flagship model released in July 2026. It achieves State-of-the-Art (SOTA) in programming and knowledge work evaluations, with deliberate thinking and proactive response capabilities. Pric",
+      "category": "coding",
+      "tags": [],
+      "date_published": "",
+      "faq_zh": [
+        {
+          "question": "Claude Opus 5真的完全免费吗？",
+          "answer": "不完全免费。Claude.ai有免费版但额度有限，API新用户有免费试用额度。重度用户需要付费。"
+        },
+        {
+          "question": "免费版能使用多少次？",
+          "answer": "具体额度以官网最新政策为准。一般来说，免费版每天有几到几十次不等的免费请求。"
+        },
+        {
+          "question": "Claude Opus 5和Fable 5有什么区别？",
+          "answer": "Opus 5是更轻量的旗舰模型，价格仅为Fable 5的一半，但性能在某些任务上更优。Fable 5是更重的模型，适合需要极致性能的场景。"
+        },
+        {
+          "question": "可以在商业用途中使用吗？",
+          "answer": "是的，Claude Opus 5允许商业用途。但免费版的使用条款可能有额外限制，建议查看最新条款。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Claude Opus 5 really completely free?",
+          "answer": "Not completely free. Claude.ai has a free tier with limited quota. API new users receive free trial credits. Heavy users need to pay."
+        },
+        {
+          "question": "How many times can I use it for free?",
+          "answer": "Specific quotas are subject to the latest official policy. Generally, the free tier provides a few to dozens of free requests per day."
+        },
+        {
+          "question": "What's the difference between Claude Opus 5 and Fable 5?",
+          "answer": "Opus 5 is a lighter flagship model priced at half of Fable 5, but outperforms it on certain tasks. Fable 5 is a heavier model suited for scenarios requiring extreme performance."
+        },
+        {
+          "question": "Can I use it for commercial purposes?",
+          "answer": "Yes, Claude Opus 5 allows commercial use. However, free tier usage terms may have additional restrictions. Check the latest terms of service."
+        }
+      ]
+    },
+    {
+      "slug": "cursor-origin-free-code-hosting-guide-2026",
+      "title_zh": "Cursor Origin 免费代码托管：2026年最佳AI原生代码托管平台完全攻略",
+      "title_en": "Cursor Origin Free Code Hosting: The Best AI-Native Code Host in 2026 - Complete Guide",
+      "description_zh": "Cursor Origin 是 Cursor（Anysphere公司）于2026年8月17日正式推出的代码托管平台，被业界称为\"第一个为AI Agent时代设计的Git替代方案\"。Hacker News上线首日即获476个upvote，引发开发者热烈讨论。本文将全面解析 Origin 的功能、定价、使用方法，帮助你充分利用这个全新工具。",
+      "description_en": "Cursor Origin is an AI-native code hosting platform launched by Cursor (Anysphere) on August 17, 2026, widely regarded as \"the first Git alternative designed for the AI Agent era.\" It garnered 476 upvotes on Hacker News ",
+      "excerpt_zh": "Cursor Origin 是 Cursor（Anysphere公司）于2026年8月17日正式推出的代码托管平台，被业界称为\"第一个为AI Agent时代设计的Git替代方案\"。Hacker News上线首日即获476个upvote，引发开发者热烈讨论。本文将全面解析 Origin 的功能、定价、使用方法，帮助你充分利用这个全新工具。",
+      "excerpt_en": "Cursor Origin is an AI-native code hosting platform launched by Cursor (Anysphere) on August 17, 2026, widely regarded as \"the first Git alternative designed for the AI Agent era.\" It garnered 476 upvotes on Hacker News ",
+      "category": "coding",
+      "tags": [],
+      "date_published": "",
+      "faq_zh": [],
+      "faq_en": []
+    },
+    {
+      "slug": "free-ai-compute-platforms-july-2026",
+      "title_zh": "2026年7月最新免费AI算力平台全攻略（8个新平台实测）",
+      "title_en": "August 2026 Guide to Free AI Compute Platforms (8 New Platforms Tested)",
+      "description_zh": "AI圈的价格战打得太凶了。2026年刚过半，就有8个新平台杀进来抢用户，免费额度一个比一个猛。",
+      "description_en": "The AI price war is brutal. In the first half of 2026 alone, 8 new platforms have entered the market competing for users with free tier offers that keep getting more generous.",
+      "excerpt_zh": "AI圈的价格战打得太凶了。2026年刚过半，就有8个新平台杀进来抢用户，免费额度一个比一个猛。",
+      "excerpt_en": "The AI price war is brutal. In the first half of 2026 alone, 8 new platforms have entered the market competing for users with free tier offers that keep getting more generous.",
+      "category": "api",
+      "tags": [],
+      "date_published": "",
+      "faq_zh": [],
+      "faq_en": []
+    },
+    {
+      "slug": "libtv-free-ai-video-guide-2026",
+      "title_zh": "LibTV免费使用攻略：一站式AI视频创作平台，每日赠送积分，集成15+模型",
+      "title_en": "LibTV Free Guide: All-in-One AI Video Creation Platform with Daily Credits and 15+ Models",
+      "description_zh": "LibTV是LiblibAI推出的一站式AI视频创作平台，支持从剧本到成片的完整创作流程。登录后每日赠送20积分，集成Veo 3.1、Sora 2 Pro、可灵3.0等15+顶级模型。",
+      "description_en": "LibTV is an all-in-one AI video creation platform by LiblibAI supporting complete workflows from script to final product. Logged-in users get 20 free daily credits, integrating 15+ top models including Veo 3.1, Sora 2 Pr",
+      "excerpt_zh": "LibTV是LiblibAI推出的一站式AI视频创作平台，支持从剧本到成片的完整创作流程。登录后每日赠送20积分，集成Veo 3.1、Sora 2 Pro、可灵3.0等15+顶级模型。",
+      "excerpt_en": "LibTV is an all-in-one AI video creation platform by LiblibAI supporting complete workflows from script to final product. Logged-in users get 20 free daily credits, integrating 15+ top models including Veo 3.1, Sora 2 Pr",
+      "category": "video",
+      "tags": [],
+      "date_published": "",
+      "faq_zh": [],
+      "faq_en": []
+    },
+    {
+      "slug": "monkeycode-free-ai-coding-platform-2026",
+      "title_zh": "MonkeyCode：奇安信出品的免费开源AI开发平台，云端编程零门槛",
+      "title_en": "MonkeyCode Free Open-Source AI Coding Platform: Zero-T门槛 Cloud Development",
+      "description_zh": "MonkeyCode 是奇安信开源的企业级 AI 开发平台，内置云端开发环境，支持多种顶尖大模型。每天3千万免费额度，无需安装、无需部署，在浏览器中完成编码、测试、运行全流程。",
+      "description_en": "MonkeyCode is an open-source enterprise AI development platform by Chaitin, featuring built-in cloud development environments and support for top-tier LLMs. 30 million free daily credits, no installation or deployment ne",
+      "excerpt_zh": "MonkeyCode 是奇安信开源的企业级 AI 开发平台，内置云端开发环境，支持多种顶尖大模型。每天3千万免费额度，无需安装、无需部署，在浏览器中完成编码、测试、运行全流程。",
+      "excerpt_en": "MonkeyCode is an open-source enterprise AI development platform by Chaitin, featuring built-in cloud development environments and support for top-tier LLMs. 30 million free daily credits, no installation or deployment ne",
+      "category": "coding",
+      "tags": [],
+      "date_published": "",
+      "faq_zh": [
+        {
+          "question": "MonkeyCode 真的免费吗？",
+          "answer": "提供免费额度，每天3千万免费积分，日常写任务够用。邀请好友可得5000积分/次。旗舰模型也可使用，但有积分消耗。"
+        },
+        {
+          "question": "需要安装什么吗？",
+          "answer": "不需要。MonkeyCode 是云端平台，打开浏览器就能用。"
+        },
+        {
+          "question": "支持哪些代码仓库？",
+          "answer": "支持 GitHub、Gitee 等多个代码托管平台。"
+        },
+        {
+          "question": "适合什么人用？",
+          "answer": "适合想快速试想法但不想折腾本地环境的开发者、产品经理、独立开发者。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is MonkeyCode really free?",
+          "answer": "Provides free quota, 30 million daily credits. Friend invites give 5,000 credits each. Flagship models also available with higher credit consumption."
+        },
+        {
+          "question": "Do I need to install anything?",
+          "answer": "No. MonkeyCode is a cloud platform, use directly in browser."
+        },
+        {
+          "question": "Which code repositories are supported?",
+          "answer": "GitHub, Gitee, and other major code hosting platforms."
+        },
+        {
+          "question": "Who is this for?",
+          "answer": "Developers, product managers, and independent developers who want to快速试 ideas without local environment hassle."
+        }
+      ]
+    },
+    {
+      "slug": "codebuddy-npc-free-ai-coding-guide-2026",
+      "title_zh": "CodeBuddy NPC完全攻略：@召唤AI同事替我上班",
+      "title_en": "CodeBuddy NPC Full Guide: Summon an AI Colleague With @ to Work for You",
+      "description_zh": "腾讯云CNB平台推出的CodeBuddy NPC，接入DeepSeek-V4-Flash引擎，在仓库评论里@它就能自动干活。限时免费到2026年底。",
+      "description_en": "Tencent Cloud's CNB platform launched CodeBuddy NPC, powered by DeepSeek-V4-Flash. Just @ it in a repo comment and it starts working on its own. Free through end of 2026.",
+      "category": "coding",
+      "icon": "🤖",
+      "date_published": "2026-08-20",
+      "tags": [
+        "codebuddy",
+        "cnb",
+        "tencent",
+        "deepseek",
+        "ai-coding",
+        "free"
+      ],
+      "excerpt_zh": "三步召唤CodeBuddy NPC：打开仓库→@它→开启替我上班，AI自动完成需求理解、任务拆解、编码执行、质量验证。限时免费到2026年底。",
+      "excerpt_en": "Three steps to summon CodeBuddy NPC: open repo → @ it → enable work-for-me mode. AI auto-handles requirement understanding, task breakdown, coding and quality checks. Free through end of 2026.",
+      "faq_zh": [
+        {
+          "question": "CodeBuddy NPC 真的免费吗？",
+          "answer": "是的，限时免费到2026年12月31日。免费期内不需要绑定信用卡。"
+        },
+        {
+          "question": "它跑的是什么模型？",
+          "answer": "DeepSeek-V4-Flash，一个面向仓库级编码任务的轻量级引擎。"
+        },
+        {
+          "question": "它能自动写测试吗？",
+          "answer": "可以。开启\"替我上班\"模式后，它会自动生成测试用例，并在提交PR前运行。"
+        },
+        {
+          "question": "能直接用我现有的GitHub仓库吗？",
+          "answer": "需要先把GitHub项目导入CNB，然后在导入的仓库里@召唤CodeBuddy NPC。"
+        },
+        {
+          "question": "什么时候开始收费？",
+          "answer": "官方免费期到2026年12月31日结束，之后可能转为付费或受限，建议赶在截止前把需要的场景都跑一遍。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is CodeBuddy NPC actually free?",
+          "answer": "Yes, it is free through 2026-12-31. No credit card required during the free window."
+        },
+        {
+          "question": "Which model does it run on?",
+          "answer": "DeepSeek-V4-Flash, a lightweight engine optimized for fast repo-aware coding tasks."
+        },
+        {
+          "question": "Can it write tests on its own?",
+          "answer": "Yes. In \"work-for-me\" mode it generates test cases and can run them before submitting a PR."
+        },
+        {
+          "question": "Does it work with my existing GitHub repo?",
+          "answer": "Import your GitHub project into CNB first, then @-summon CodeBuddy NPC in the imported repo."
+        },
+        {
+          "question": "When will it start charging?",
+          "answer": "The official free period ends 2026-12-31. After that it may move to a paid or restricted model — plan your usage before the cutoff."
+        }
+      ]
+    },
+    {
+      "slug": "jd-joycode-free-ai-coding-guide-2026",
+      "title_zh": "京东JoyCode全面攻略：限时免费领10000积分，GLM-5全家桶白嫖",
+      "title_en": "JD JoyCode Full Guide: Claim 10,000 Free Credits Monthly, Use GLM-5 Suite at Zero Cost",
+      "description_zh": "京东2026年8月推出的AI编程工具JoyCode，团队版限时免费每月送10000积分，自家JoyAI模型不消耗积分。GLM-5、DeepSeek、Kimi等顶级模型可用。",
+      "description_en": "JD's new AI coding tool JoyCode: team edition limited-time free with 10,000 credits monthly, and the in-house JoyAI model costs zero credits. GLM-5, DeepSeek, Kimi and more available.",
+      "category": "coding",
+      "icon": "🛒",
+      "date_published": "2026-08-15",
+      "tags": [
+        "jd",
+        "joycode",
+        "glm-5",
+        "deepseek",
+        "kimi",
+        "ai-coding",
+        "free"
+      ],
+      "excerpt_zh": "实测10000积分半月见底。真正白嫖的是JoyAI自研模型，不扣积分够日常用；GLM-5、DeepSeek留给复杂任务。",
+      "excerpt_en": "In practice 10,000 credits burn in half a month. The real freebie is the in-house JoyAI model — zero credit cost, plenty for daily dev. Save GLM-5 and DeepSeek for complex tasks.",
+      "faq_zh": [
+        {
+          "question": "JoyCode真的免费吗？会不会突然收费？",
+          "answer": "目前团队版限时免费是官方政策。但京东这模式大家都懂——先补贴抢用户，后面肯定收费。建议趁现在免费多薅羊毛，等有收费通知再决定要不要付费。"
+        },
+        {
+          "question": "个人版什么时候出来？",
+          "answer": "目前只有团队版免费。个人版可能后面开放，也可能只收费。建议先注册团队版，等个人版出来了再迁过去。"
+        },
+        {
+          "question": "积分用完了怎么办？",
+          "answer": "等下个月刷新（每月10000积分）；邀请团队成员（可能额外送积分）；等官方活动（京东可能会发积分券）。"
+        },
+        {
+          "question": "JoyAI和GLM-5谁好用？",
+          "answer": "日常开发推荐JoyAI，不扣积分。复杂任务用GLM-5.1，智谱的模型逻辑更强。两个模型切换很方便，不用重新配置。"
+        },
+        {
+          "question": "JoyCode能用在商业项目吗？",
+          "answer": "能用。免费版没有代码所有权限制。但建议关注官方政策变化，别等收费了才发现问题。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is JoyCode really free? Will it suddenly start charging?",
+          "answer": "The limited-time free team edition is official policy. But we all know JD's playbook — subsidize first to grab users, then charge. Ride the free wave now and decide on paid later when the notice comes."
+        },
+        {
+          "question": "When does the personal edition ship?",
+          "answer": "Only the team edition is free right now. The personal edition may open later or stay paid-only. Register for the team edition first and migrate when the personal one is available."
+        },
+        {
+          "question": "What if I run out of credits?",
+          "answer": "Wait for next month's refresh (10,000/month), invite team members (may earn bonus credits), or wait for official credit campaigns."
+        },
+        {
+          "question": "Which is better, JoyAI or GLM-5?",
+          "answer": "For daily dev use JoyAI — it costs no credits. For complex tasks use GLM-5.1; Zhipu's models have stronger logic. Switching between them is easy with no reconfiguration."
+        },
+        {
+          "question": "Can JoyCode be used in commercial projects?",
+          "answer": "Yes. The free tier has no code-ownership restrictions. But keep an eye on policy changes so you are not caught off guard when pricing arrives."
+        }
+      ]
     }
   ],
-  "updatedAt": "2026-09-01T02:11:06.110Z",
+  "updatedAt": "2026-09-13T14:11:40.014Z",
   "generatedAt": "2026-08-21T09:24:06.356146"
 }

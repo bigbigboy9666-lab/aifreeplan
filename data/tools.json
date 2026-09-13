@@ -8674,8 +8674,8 @@
       "rating": 4,
       "freeTier": {
         "refreshPeriod": "unlimited",
-        "credits": null,
-        "creditUnit": "free",
+        "credits": 0,
+        "creditUnit": "unlimited",
         "resolution": "N/A",
         "watermark": false,
         "commercialUse": false,
@@ -8768,8 +8768,8 @@
       "rating": 4,
       "freeTier": {
         "refreshPeriod": "unlimited",
-        "credits": null,
-        "creditUnit": "free",
+        "credits": 0,
+        "creditUnit": "unlimited",
         "resolution": "N/A",
         "watermark": false,
         "commercialUse": false,
@@ -8864,8 +8864,8 @@
       "rating": 4.5,
       "freeTier": {
         "refreshPeriod": "unlimited",
-        "credits": null,
-        "creditUnit": "free",
+        "credits": 0,
+        "creditUnit": "unlimited",
         "resolution": "N/A",
         "watermark": false,
         "commercialUse": true,

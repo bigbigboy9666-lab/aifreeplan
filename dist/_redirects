@@ -1,3 +1,10 @@
+# Root → Chinese home (301 so crawlers get a real redirect, not meta-refresh)
+/ /zh/ 301
+
+# Legacy language-less guide URLs → localized versions (old static /guides/ pages removed)
+/guides /zh/guides/ 301
+/guides/:slug /zh/guides/:slug 301
+
 /zh/video/kling /zh/tools/kling 301
 /en/video/kling /en/tools/kling 301
 /zh/video/hailuo /zh/tools/hailuo 301

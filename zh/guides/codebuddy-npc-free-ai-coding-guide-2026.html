@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>CodeBuddy NPC 完全攻略：@召唤 AI 同事替我上班</title>
+</head>
+<body>
+<main class="article-container">
+<h1 id="codebuddy-npc-完全攻略召唤-ai-同事替我上班">CodeBuddy NPC 完全攻略：@召唤 AI 同事替我上班</h1>
+<h2 id="一句话总结">一句话总结</h2>
+<p>腾讯云CNB平台推出的CodeBuddy NPC，接入DeepSeek-V4-Flash引擎，在仓库评论里@它就能自动干活。三步召唤：打开仓库→@CodeBuddy NPC→开启"替我上班"，AI自动完成需求理解→任务拆解→编码执行→质量验证。限时免费到2026年底。</p>
+<h2 id="什么是codebuddy-npc">什么是CodeBuddy NPC</h2>
+<p>CodeBuddy是腾讯云CNB（Cloud Native Build）平台集成的AI编程助手。2026年8月重磅升级，接入DeepSeek-V4-Flash引擎，主打一个概念：<strong>你@一下，AI帮你干活</strong>。</p>
+<p>官方认证：已通过中国信通院CAICT权威认证，覆盖五大核心能力：</p>
+<ul>
+<li>需求理解</li>
+<li>任务拆解</li>
+<li>编码执行</li>
+<li>质量验证</li>
+<li>流程协作</li>
+</ul>
+<h2 id="和joycode的区别">和JoyCode的区别</h2>
+<p>很多人会混淆这两个产品。简单说：</p>
+<ul>
+<li><strong>JoyCode</strong>：京东出的独立客户端，积分制（每月10000积分，不经花）</li>
+<li><strong>CodeBuddy NPC</strong>：腾讯云CNB平台集成，@召唤模式，年底免费</li>
+</ul>
+<h3 id="对比表">对比表</h3>
+<table><thead><tr><th>特性</th><th>CodeBuddy NPC</th><th>JoyCode</th></tr></thead><tbody>
+<tr><td>平台</td><td>cnb.cool</td><td>joycode.jd.com</td></tr>
+<tr><td>接入方式</td><td>@召唤 + 仓库集成</td><td>独立客户端</td></tr>
+<tr><td>模型</td><td>DeepSeek-V4-Flash</td><td>多模型（GLM-5/DeepSeek/Kimi等）</td></tr>
+<tr><td>免费政策</td><td>到2026-12-31免费</td><td>每月10000积分</td></tr>
+<tr><td>核心功能</td><td>自动完成开发任务</td><td>AI辅助编程</td></tr>
+<tr><td>适合场景</td><td>想"替我上班"的用户</td><td>日常代码开发</td></tr>
+</tbody></table>
+<h2 id="怎么用详细步骤">怎么用（详细步骤）</h2>
+<h3 id="第一步注册cnb账号">第一步：注册CNB账号</h3>
+<p>打开 https://cnb.cool 注册账号。支持手机号、微信、GitHub登录。</p>
+<h3 id="第二步创建或导入仓库">第二步：创建或导入仓库</h3>
+<ul>
+<li>新建仓库：点击右上角"+"创建新仓库</li>
+<li>导入仓库：从GitHub/GitLab导入已有项目</li>
+</ul>
+<h3 id="第三步召唤codebuddy-npc">第三步：召唤CodeBuddy NPC</h3>
+<p>在仓库的 <strong>Issue、PR或评论</strong> 中输入：</p>
+<pre><code>@CodeBuddy NPC</code></pre>
+<p>然后描述你的需求，比如：</p>
+<ul>
+<li>"@CodeBuddy NPC 帮我写一个用户注册接口"</li>
+<li>"@CodeBuddy NPC 这个bug怎么修？"</li>
+<li>"@CodeBuddy NPC 为这个函数写单元测试"</li>
+</ul>
+<h3 id="第四步开启替我上班模式">第四步：开启"替我上班"模式</h3>
+<p>在评论里添加关键词或按钮（具体看平台UI）：</p>
+<ul>
+<li>开启"替我上班"后，CodeBuddy NPC会自动：</li>
+</ul>
+<ol>
+<li>理解你的需求</li>
+<li>拆解任务</li>
+<li>编写代码</li>
+<li>执行测试</li>
+<li>提交PR或评论回复</li>
+</ol>
+<h2 id="实际使用场景">实际使用场景</h2>
+<h3 id="场景1写新功能">场景1：写新功能</h3>
+<p>你在Issue里描述：</p>
+<pre><code>@CodeBuddy NPC 帮我实现一个REST API，支持用户登录、注册、修改密码</code></pre>
+<p>CodeBuddy NPC会自动：</p>
+<ul>
+<li>分析现有代码结构</li>
+<li>生成接口代码</li>
+<li>写数据库模型</li>
+<li>写测试用例</li>
+<li>提交PR等待审核</li>
+</ul>
+<h3 id="场景2修复bug">场景2：修复Bug</h3>
+<p>在PR评论里：</p>
+<pre><code>@CodeBuddy NPC 这个函数有bug，当用户名为空时会崩溃</code></pre>
+<p>CodeBuddy NPC会：</p>
+<ul>
+<li>定位问题代码</li>
+<li>分析原因</li>
+<li>生成修复方案</li>
+<li>提交补丁</li>
+</ul>
+<h3 id="场景3代码审查">场景3：代码审查</h3>
+<pre><code>@CodeBuddy NPC 帮我review这段代码，看看有没有安全问题</code></pre>
+<p>CodeBuddy NPC会：</p>
+<ul>
+<li>分析代码逻辑</li>
+<li>检查安全漏洞</li>
+<li>给出优化建议</li>
+<li>生成审查报告</li>
+</ul>
+<h2 id="注意事项">注意事项</h2>
+<h3 id="1-免费期限">1. 免费期限</h3>
+<p>限时免费到 <strong>2026年12月31日</strong>。这意味着：</p>
+<ul>
+<li>现在是白嫖黄金期</li>
+<li>2027年1月起可能收费或限制</li>
+<li>建议趁现在多用多测</li>
+</ul>
+<h3 id="2-适用项目">2. 适用项目</h3>
+<ul>
+<li>适合Web项目（前端+后端）</li>
+<li>支持主流框架（React、Vue、Express、Django等）</li>
+<li>不适合嵌入式、游戏开发等小众领域</li>
+</ul>
+<h3 id="3-质量评估">3. 质量评估</h3>
+<ul>
+<li>DeepSeek-V4-Flash是轻量版模型，代码质量中等偏上</li>
+<li>复杂逻辑建议人工审核</li>
+<li>生成的代码可能有边界情况遗漏</li>
+</ul>
+<h3 id="4-和cursor对比">4. 和Cursor对比</h3>
+<table><thead><tr><th>特性</th><th>CodeBuddy NPC</th><th>Cursor</th></tr></thead><tbody>
+<tr><td>免费</td><td>到2026年底免费</td><td>免费版有限</td></tr>
+<tr><td>模式</td><td>@召唤，自动执行</td><td>手动对话</td></tr>
+<tr><td>集成</td><td>CNB平台内</td><td>独立IDE</td></tr>
+<tr><td>适合</td><td>想"偷懒"的用户</td><td>想控制每一步的用户</td></tr>
+</tbody></table>
+<h2 id="常见问题">常见问题</h2>
+<div class="faq-q">CodeBuddy NPC 真的免费吗？</div>
+<div class="faq-a">是的，限时免费到2026年12月31日。免费期内不需要绑定信用卡。</div>
+<div class="faq-q">它跑的是什么模型？</div>
+<div class="faq-a">DeepSeek-V4-Flash，一个面向仓库级编码任务的轻量级引擎。</div>
+<div class="faq-q">它能自动写测试吗？</div>
+<div class="faq-a">可以。开启"替我上班"模式后，它会自动生成测试用例，并在提交PR前运行。</div>
+<div class="faq-q">能直接用我现有的GitHub仓库吗？</div>
+<div class="faq-a">需要先把GitHub项目导入CNB，然后在导入的仓库里@召唤CodeBuddy NPC。</div>
+<div class="faq-q">什么时候开始收费？</div>
+<div class="faq-a">官方免费期到2026年12月31日结束，之后可能转为付费或受限，建议赶在截止前把需要的场景都跑一遍。</div>
+<h2 id="总结">总结</h2>
+<p>CodeBuddy NPC是腾讯云CNB的AI编程助手，接入DeepSeek-V4-Flash，主打"替我上班"概念。三步召唤：打开仓库→@CodeBuddy NPC→开启替我上班，AI自动干活。</p>
+<p><strong>适合谁：</strong></p>
+<ul>
+<li>不想手动敲代码的懒人</li>
+<li>想快速验证想法的开发者</li>
+<li>想提升效率的团队</li>
+</ul>
+<p><strong>不适合谁：</strong></p>
+<ul>
+<li>需要精细控制代码质量的团队</li>
+<li>追求极致稳定性的商业项目</li>
+</ul>
+<p><strong>建议：</strong></p>
+<p>趁现在免费多试试，找到适合自己的使用场景。年底可能要收费，早点体验早点上手。</p>
+<h2 id="相关链接">相关链接</h2>
+<ul>
+<li>CNB官网：https://cnb.cool</li>
+<li>CodeBuddy入口：cnb.cool任意仓库内@召唤</li>
+<li>对比：可以参考aifreeplan.com上的JoyCode攻略、Cursor攻略等</li>
+</ul>
+<hr>
+<p><em>本文由猫哥撰写，更多AI工具免费额度信息请访问 aifreeplan.com</em></p>
+</main>
+</body>
+</html>
