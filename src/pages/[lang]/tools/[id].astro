@@ -48,6 +48,24 @@ const seoDesc = lang === 'zh'
 
 const canonicalUrl = `${siteUrl}/${lang}/tools/${tool.id}/`;
 
+// UTM tracking for outbound tool links (so we can see which tool pages drive clicks)
+const UTM_SOURCE = 'aifreeplan.com';
+const UTM_MEDIUM = 'referral';
+const UTM_CAMPAIGN = 'tool-directory';
+function withUtm(url: string): string {
+  if (!url) return url;
+  try {
+    const p = new URL(url);
+    p.searchParams.set('utm_source', UTM_SOURCE);
+    p.searchParams.set('utm_medium', UTM_MEDIUM);
+    p.searchParams.set('utm_campaign', UTM_CAMPAIGN);
+    p.searchParams.set('utm_content', tool.id);
+    return p.toString();
+  } catch {
+    return url;
+  }
+}
+
 // Rating stars
 const fullStars = Math.floor(tool.rating);
 const hasHalf = tool.rating % 1 >= 0.5;
@@ -248,7 +266,7 @@ const jsonLd = [softwareSchema, breadcrumbSchema, faqSchema];
 
     <div class="mt-4 flex flex-wrap gap-3">
       <a
-        href={tool.websiteUrl}
+        href={withUtm(tool.websiteUrl)}
         target="_blank"
         rel="nofollow noopener noreferrer"
         class="inline-flex items-center gap-2 bg-primary text-white text-sm font-medium rounded-lg px-5 py-2.5 hover:bg-primary-dark transition-colors"
