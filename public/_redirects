@@ -1,10 +1,6 @@
 # Root → Chinese home (301 so crawlers get a real redirect, not meta-refresh)
 / /zh/ 301
 
-# Legacy language-less guide URLs → localized versions (old static /guides/ pages removed)
-/guides /zh/guides/ 301
-/guides/:slug /zh/guides/:slug 301
-
 /zh/video/kling /zh/tools/kling 301
 /en/video/kling /en/tools/kling 301
 /zh/video/hailuo /zh/tools/hailuo 301
@@ -152,3 +148,56 @@
 /zh/agent/dify /zh/tools/dify 301
 /en/agent/dify /en/tools/dify 301
 
+# Legacy static /guides/*.html pages (deleted, 48 files) → precise 301s
+
+/guides/agnes-ai-free-api-2026.html /zh/guides/agnes-ai-free-api-2026/ 301
+/guides/ai-mindmap-tools-free-comparison-2026.html /zh/guides/ai-mindmap-tools-free-comparison-2026/ 301
+/guides/ai-music-audio-generation-free-comparison-2026.en.html /en/guides/ai-music-audio-generation-free-comparison-2026/ 301
+/guides/ai-music-audio-generation-free-comparison-2026.html /zh/guides/ai-music-audio-generation-free-comparison-2026/ 301
+/guides/ai-presentation-tools-free-comparison-2026.html /zh/guides/ai-presentation-tools-free-comparison-2026/ 301
+/guides/ai-search-engines-free-comparison-2026.html /zh/guides/ai-search-engines-free-comparison-2026/ 301
+/guides/amazon-q-developer-free-tier-2026.html /zh/guides/amazon-q-developer-free-tier-2026/ 301
+/guides/apfel-macos-free-on-device-ai-2026.html /zh/guides/apfel-macos-free-on-device-ai-2026/ 301
+/guides/atomcode-codingplan-free.html /zh/guides/atomcode-codingplan-free/ 301
+/guides/bolt-gives-free-agentic-coding-platform-2026.html /zh/guides/ 301
+/guides/bonsai-27b-free-on-device-2026.html /zh/guides/bonsai-27b-free-on-device-2026/ 301
+/guides/cerebras-free-api-guide.html /zh/guides/cerebras-free-api-guide/ 301
+/guides/codebuddy-npc-free-ai-coding-guide-2026.html /zh/guides/codebuddy-npc-free-ai-coding-guide-2026/ 301
+/guides/coze-free-unlimited-agent-2026.html /zh/guides/coze-free-unlimited-agent-2026/ 301
+/guides/deepsider-antigravity-free-gemini.html /zh/guides/deepsider-antigravity-free-gemini/ 301
+/guides/dumate-baidu-desktop-ai-free-guide-2026.html /zh/guides/dumate-baidu-desktop-ai-free-guide-2026/ 301
+/guides/ego-lite-free-ai-agent-browser-2026.html /zh/guides/ego-lite-free-ai-agent-browser-2026/ 301
+/guides/free-ai-coding-tools-comparison.html /zh/guides/free-ai-coding-tools-comparison/ 301
+/guides/free-ai-image-generator-tools.html /zh/guides/free-ai-image-generator-tools/ 301
+/guides/free-ai-llm-api-platforms-comparison.html /zh/guides/free-ai-llm-api-platforms-comparison/ 301
+/guides/free-ai-subtitle-generator-tools.html /zh/guides/free-ai-subtitle-generator-tools/ 301
+/guides/free-ai-video-generation-tools.html /zh/guides/free-ai-video-generation-tools/ 301
+/guides/free-ai-writing-tools-comparison-2026.html /zh/guides/free-ai-writing-tools-comparison-2026/ 301
+/guides/freebuff-free-coding-agent.html /zh/guides/freebuff-free-coding-agent/ 301
+/guides/gemini-cli-free-ai-coding.html /zh/guides/gemini-cli-free-ai-coding/ 301
+/guides/gpt-5-6-free-tier-guide-2026.html /zh/guides/ 301
+/guides/huawei-deveco-code-free-coding.html /zh/guides/huawei-deveco-code-free-coding/ 301
+/guides/inkling-open-weights-multimodal-free-guide-2026.html /zh/guides/inkling-open-weights-multimodal-free-guide-2026/ 301
+/guides/jd-joycode-free-ai-coding-guide-2026.html /zh/guides/jd-joycode-free-ai-coding-guide-2026/ 301
+/guides/kimi-k26-free-coding.html /zh/guides/kimi-k26-free-coding/ 301
+/guides/kimi-k3-free-tier-2026.html /zh/guides/ 301
+/guides/llm-admin-free-unified-gateway.html /zh/guides/llm-admin-free-unified-gateway/ 301
+/guides/lm-studio-bionic-free-ai-desktop-agent-2026.html /zh/guides/ 301
+/guides/mistral-ai-studio-free-api-guide.html /zh/guides/mistral-ai-studio-free-api-guide/ 301
+/guides/monkeyCode-free-ai-coding-platform-2026.html /zh/guides/monkeyCode-free-ai-coding-platform-2026/ 301
+/guides/nano-banana-2-lite-free-image-generation.html /zh/guides/nano-banana-2-lite-free-image-generation/ 301
+/guides/nativ-free-local-ai-mac-2026.html /zh/guides/nativ-free-local-ai-mac-2026/ 301
+/guides/notebooklm-free-guide-2026.html /zh/guides/notebooklm-free-guide-2026/ 301
+/guides/ollama-free-cloud-guide-2026.html /zh/guides/ollama-free-cloud-guide-2026/ 301
+/guides/petals-free-distributed-llm-2026.html /zh/guides/petals-free-distributed-llm-2026/ 301
+/guides/qoderwork-free-pro-2026.html /zh/guides/qoderwork-free-pro-2026/ 301
+/guides/qwen3-6-free-unlimited-2026.html /zh/guides/qwen3-6-free-unlimited-2026/ 301
+/guides/rime-ai-voice-free-guide-2026.html /zh/guides/rime-ai-voice-free-guide-2026/ 301
+/guides/seedance-2.0-free-unlimited-2026.html /zh/guides/seedance-2.0-free-unlimited-2026/ 301
+/guides/stablediffusion-free-local-deploy-2026.html /zh/guides/stablediffusion-free-local-deploy-2026/ 301
+/guides/trae-free-ai-coding.html /zh/guides/trae-free-ai-coding/ 301
+/guides/yolo-auto-free-llm-api-2026.html /zh/guides/yolo-auto-free-llm-api-2026/ 301
+
+# Fallback: bare /guides and /guides/ dir → guide listing
+/guides/ /zh/guides/ 301
+/guides /zh/guides/ 301
