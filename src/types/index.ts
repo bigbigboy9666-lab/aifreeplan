@@ -25,6 +25,9 @@ export interface AITool {
   categoryEn: string;
   websiteUrl: string;
   affiliateUrl?: string;
+  affiliateProgramUrl?: string;
+  affiliateNote?: string;
+  affiliateNoteEn?: string;
   company: string;
   rating: number;
   freeTier: FreeTierDetails;

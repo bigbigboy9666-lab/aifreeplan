@@ -278,12 +278,22 @@ const jsonLd = [softwareSchema, breadcrumbSchema, faqSchema];
       </a>
       {tool.affiliateUrl && (
         <a
-          href={tool.affiliateUrl}
+          href={withUtm(tool.affiliateUrl)}
           target="_blank"
-          rel="nofollow noopener noreferrer"
+          rel="sponsored nofollow noopener noreferrer"
           class="inline-flex items-center gap-2 bg-secondary text-white text-sm font-medium rounded-lg px-5 py-2.5 hover:opacity-90 transition-opacity"
         >
           {lang === 'zh' ? '专属链接' : 'Affiliate Link'}
+        </a>
+      )}
+      {tool.affiliateProgramUrl && !tool.affiliateUrl && (
+        <a
+          href={withUtm(tool.affiliateProgramUrl)}
+          target="_blank"
+          rel="sponsored nofollow noopener noreferrer"
+          class="inline-flex items-center gap-2 border border-primary text-primary text-sm font-medium rounded-lg px-5 py-2.5 hover:bg-primary hover:text-white transition-colors"
+        >
+          {lang === 'zh' ? '加入联盟计划' : 'Join Affiliate Program'}
         </a>
       )}
       {paidFrom && (
@@ -292,6 +302,11 @@ const jsonLd = [softwareSchema, breadcrumbSchema, faqSchema];
         </span>
       )}
     </div>
+    {(tool.affiliateProgramUrl || tool.affiliateNote) && (
+      <p class="mt-2 text-xs text-text-muted">
+        {lang === 'zh' ? tool.affiliateNote : tool.affiliateNoteEn}
+      </p>
+    )}
   </div>
 
   <!-- Free Tier Details -->

@@ -179,7 +179,10 @@
         ]
       },
       "freeStatus": "每日刷新",
-      "descriptionZh": ""
+      "descriptionZh": "",
+      "affiliateProgramUrl": "https://hailuoai.com/affiliate",
+      "affiliateNote": "官方联盟计划：加入海螺视频联盟，推广赚取佣金（已查证）",
+      "affiliateNoteEn": "Official affiliate program: promote Hailuo video & earn commission (verified)"
     },
     {
       "id": "luma",
@@ -266,7 +269,10 @@
         ]
       },
       "freeStatus": "每月刷新",
-      "descriptionZh": ""
+      "descriptionZh": "",
+      "affiliateProgramUrl": "https://lumalabs.ai/affiliate",
+      "affiliateNote": "官方Partner Program：佣金可用PayPal/Stripe结算（已查证）",
+      "affiliateNoteEn": "Official Partner Program: cash-out commissions via PayPal or Stripe (verified)"
     },
     {
       "id": "runway",
@@ -3995,7 +4001,10 @@
         ]
       },
       "freeStatus": "每月刷新",
-      "descriptionZh": ""
+      "descriptionZh": "",
+      "affiliateProgramUrl": "https://v0.dev/affiliate",
+      "affiliateNote": "Vercel V0 联盟计划：有专属注册入口（已查证）",
+      "affiliateNoteEn": "Vercel V0 affiliate program: dedicated signup (verified)"
     },
     {
       "id": "gamma",
