@@ -83,52 +83,63 @@ const isToolsIndex = normalizedPath === '/tools/' || normalizedPath === '/zh/too
     <!-- Homepage: WebSite + Organization + CollectionSchema -->
     {isHomepage && (
       <>
-        <script type="application/ld+json">
-          {JSON.stringify({
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebSite",
-            "name": lang === 'zh' ? 'AIFreePlan' : 'AIFreePlan',
-            "url": siteUrl + '/',
-            "description": lang === 'zh' ? '全球首个AI工具免费额度聚合平台' : "The world's first AI free tier aggregation platform",
-            "potentialAction": {
+            name: "AIFreePlan",
+            url: siteUrl + '/',
+            description:
+              lang === 'zh'
+                ? '全球首个AI工具免费额度聚合平台'
+                : "The world's first AI free tier aggregation platform",
+            potentialAction: {
               "@type": "SearchAction",
-              "target": {
+              target: {
                 "@type": "EntryPoint",
-                "urlTemplate": siteUrl + '/{search_term_string}'
+                urlTemplate: siteUrl + '/{search_term_string}'
               },
               "query-input": "required name=search_term_string"
             },
-            "inLanguage": [lang === 'zh' ? 'zh-CN' : 'en-US', lang === 'zh' ? 'en-US' : 'zh-CN'],
-            "publisher": {
+            inLanguage: [
+              lang === 'zh' ? 'zh-CN' : 'en-US',
+              lang === 'zh' ? 'en-US' : 'zh-CN'
+            ],
+            publisher: {
               "@type": "Organization",
-              "name": "AIFreePlan",
-              "url": siteUrl + '/',
-              "logo": {
-                "@type": "ImageObject",
-                "url": siteUrl + '/favicon.svg'
-              },
-              "sameAs": []
+              name: "AIFreePlan",
+              url: siteUrl + '/',
+              logo: { "@type": "ImageObject", url: siteUrl + '/favicon.svg' },
+              sameAs: []
             }
           })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
+        />
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Collection",
-            "name": lang === 'zh' ? 'AI免费额度聚合' : 'AI Free Tier Aggregation',
-            "description": lang === 'zh' ? '收录99款AI工具的免费额度和使用限制对比' : 'Comparing free tiers and usage limits across 99+ AI tools',
-            "numberOfItems": 99,
-            "url": siteUrl + '/',
-            "inLanguage": [lang === 'zh' ? 'zh-CN' : 'en-US', lang === 'zh' ? 'en-US' : 'zh-CN'],
-            "datePublished": "2026-01-01",
-            "dateModified": new Date().toISOString().split('T')[0],
-            "publisher": {
+            name: lang === 'zh' ? 'AI免费额度聚合' : 'AI Free Tier Aggregation',
+            description:
+              lang === 'zh'
+                ? '收录99款AI工具的免费额度和使用限制对比'
+                : 'Comparing free tiers and usage limits across 99+ AI tools',
+            numberOfItems: 99,
+            url: siteUrl + '/',
+            inLanguage: [
+              lang === 'zh' ? 'zh-CN' : 'en-US',
+              lang === 'zh' ? 'en-US' : 'zh-CN'
+            ],
+            datePublished: "2026-01-01",
+            dateModified: new Date().toISOString().split('T')[0],
+            publisher: {
               "@type": "Organization",
-              "name": "AIFreePlan",
-              "url": siteUrl + '/'
+              name: "AIFreePlan",
+              url: siteUrl + '/'
             }
           })}
-        </script>
+        />
       </>
     )}
   </head>
