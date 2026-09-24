@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MiniMax Code CLI Open Source: Run a Terminal AI Coding Agent for $0 (MIT + BYOK) | AIFreePlan</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="MiniMax Code CLI Open Source: Run a Terminal AI Coding Agent for $0 (MIT + BYOK) | AIFreePlan">
+<meta property="og:description" content="MiniMax open-sourced its Code terminal client (v0.4.12) under the MIT license. The tool itself is free, and the real free play is BYOK: point the CLI at free LLM APIs like Cerebras (1M tokens/day), Groq (1,000 req/day) or GMI Cloud M2.5 (1M TPM free) to run a full coding agent for $0. Full guide covering install, login, quotas, BYOK config, and pitfalls.">
+<meta property="og:url" content="https://aifreeplan.com/en/guides/minimax-code-cli-mit-free-agent-2026">
+<meta property="og:site_name" content="AIFreePlan">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MiniMax Code CLI Open Source: Run a Terminal AI Coding Agent for $0 (MIT + BYOK) | AIFreePlan">
+<meta name="twitter:description" content="MiniMax open-sourced its Code terminal client (v0.4.12) under the MIT license. The tool itself is free, and the real free play is BYOK: point the CLI at free LLM APIs like Cerebras (1M tokens/day), Groq (1,000 req/day) or GMI Cloud M2.5 (1M TPM free) to run a full coding agent for $0. Full guide covering install, login, quotas, BYOK config, and pitfalls.">
+<meta name="description" content="MiniMax open-sourced its Code terminal client (v0.4.12) under the MIT license. The tool itself is free, and the real free play is BYOK: point the CLI at free LLM APIs like Cerebras (1M tokens/day), Groq (1,000 req/day) or GMI Cloud M2.5 (1M TPM free) to run a full coding agent for $0. Full guide covering install, login, quotas, BYOK config, and pitfalls.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<link rel="canonical" href="https://aifreeplan.com/en/guides/minimax-code-cli-mit-free-agent-2026">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/minimax-code-cli-mit-free-agent-2026">
+<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/minimax-code-cli-mit-free-agent-2026">
+<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/minimax-code-cli-mit-free-agent-2026">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;--text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;--accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);--green:#059669;--green-light:rgba(5,150,105,.1);--shadow:0 4px 20px rgba(0,0,0,.05);--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover)}
+.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
+.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
+.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
+.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
+.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
+.article-container ul,.article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
+.article-container li{margin-bottom:8px;line-height:1.6}
+.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
+.article-container a{color:var(--accent);text-decoration:underline}
+.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-container th,.article-container td{padding:12px;border:1px solid var(--border);text-align:left}
+.article-container th{background:var(--accent-light);font-weight:600}
+.breadcrumb{font-size:14px;color:var(--text-muted);margin-bottom:24px}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb-sep{margin:0 8px}
+.faq-section{background:var(--bg-white);border-radius:var(--radius);padding:32px;margin-top:40px;box-shadow:var(--shadow)}
+.faq-section h3{margin-top:0;color:var(--text)}
+.faq-item{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border-light)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-weight:700;color:var(--text);margin-bottom:8px}
+.faq-a{color:var(--text-secondary);line-height:1.7}
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff;margin-top:60px}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6)}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col h4{font-size:14px;font-weight:700;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+@media(max-width:768px){.article-container{padding:16px 16px 48px;max-width:100%}.article-container h1{font-size:24px}.article-container h2{font-size:20px}.container{padding:0 16px}.nav{display:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"MiniMax Code CLI Open Source: Run a Terminal AI Coding Agent for $0 (MIT + BYOK)","description":"MiniMax open-sourced its Code terminal client (v0.4.12) under the MIT license. The tool itself is free, and the real free play is BYOK: point the CLI at free LLM APIs like Cerebras (1M tokens/day), Groq (1,000 req/day) or GMI Cloud M2.5 (1M TPM free) to run a full coding agent for $0. Full guide covering install, login, quotas, BYOK config, and pitfalls.","url":"https://aifreeplan.com/en/guides/minimax-code-cli-mit-free-agent-2026","datePublished":"2026-09-23","dateModified":"2026-09-23","author":{"@type":"Organization","name":"AIFreePlan"},"publisher":{"@type":"Organization","name":"AIFreePlan","url":"https://aifreeplan.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aifreeplan.com/en/guides/minimax-code-cli-mit-free-agent-2026"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aifreeplan.com/en"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://aifreeplan.com/en/guides"},{"@type":"ListItem","position":3,"name":"MiniMax Code CLI Open Source: Run a Terminal AI Coding Agent for $0 (MIT + BYOK)","item":"https://aifreeplan.com/en/guides/minimax-code-cli-mit-free-agent-2026"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[[{"@type":"Question","name":"Is MiniMax Code CLI really completely free?","acceptedAnswer":{"@type":"Answer","text":"The tool is: v0.4.12 is MIT open source, so install, run, and modify are all $0. But running the model costs tokens — official runs bill via Token Plan / API key. To run for $0, use BYOK against a free API (Cerebras 1M tokens/day, Groq 1,000 req/day, GMI Cloud M2.5 1M TPM free)."}},{"@type":"Question","name":"How do I run a full coding agent for $0?","acceptedAnswer":{"@type":"Answer","text":"Three steps: one-line installer (auto-provisions Node); mcode provider add against a free API; /goal ... budget=50K to cap spend. $0 end-to-end, and it reads repos, edits code, and runs tests."}},{"@type":"Question","name":"Which API formats does BYOK support?","acceptedAnswer":{"@type":"Answer","text":"openai-completions, openai-responses, and anthropic-messages. Use the first for OpenAI-compatible free APIs (Cerebras, Groq, GMI) and the third for Anthropic-compatible ones; add --context-limit 32768 --output-limit 4096 for local/self-hosted."}},{"@type":"Question","name":"How does it compare to Gemini CLI and Kimi Code Desktop?","acceptedAnswer":{"@type":"Answer","text":"For pure $0, Gemini CLI's built-in free quota is easiest. For direct access in China with MiniMax models, use GMI Cloud M2.5. For a more flexible open-source + BYOK terminal tool, choose MiniMax Code CLI."}},{"@type":"Question","name":"What is a 76.7% pass rate?","acceptedAnswer":{"@type":"Answer","text":"A third-party FrontierHarness Eval single round: 23 of 30 passed, 4 failed, 3 timed out, 4m 33s median success time. It handles mainstream coding tasks but is not an official leaderboard ranking."}}]]}
+</script>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="/en" class="logo">AI<span class="accent">FreePlan</span></a>
+    <nav class="nav">
+      <a href="/en/all">All Tools</a>
+      <a href="/en/guides">Guides</a>
+      <a href="/en/privacy">Privacy</a>
+      <a href="/zh/guides/minimax-code-cli-mit-free-agent-2026" class="btn btn-primary">中文</a>
+    </nav>
+  </div>
+</header>
+<main class="article-container">
+<nav class="breadcrumb"><a href="/en">Home</a> <span class="breadcrumb-sep">›</span> <a href="/en/guides">Guides</a> <span class="breadcrumb-sep">›</span> <span>MiniMax Code CLI Open Source: Run a Terminal AI Coding Agent for $0 (MIT + BYOK)</span></nav>
+<h1>MiniMax Code CLI Open Source: Run a Terminal AI Coding Agent for $0 (MIT + BYOK)</h1>
+<p>MiniMax open-sourced its terminal AI coding tool, <strong>MiniMax Code CLI v0.4.12</strong>, under the <strong>MIT</strong> license. That means two things: the tool itself is free, the code is auditable and modifiable; and more importantly it ships native <strong>BYOK (Bring Your Own Key)</strong> support — you can point the CLI at any OpenAI / Anthropic-compatible API, including ones with a <strong>free tier</strong>.</p>
+<p>Bottom line: <strong>MiniMax Code CLI is free (MIT open source), but running it burns tokens.</strong> To run it for $0, go BYOK against a free LLM API — Cerebras (1M tokens/day), Groq (1,000 req/day), or GMI Cloud M2.5 (1M TPM free, no card) — and you get a full terminal coding agent that reads repos, edits code, and runs tests, at zero cost.</p>
+
+<h2>Free-Quota Snapshot (official data, Sep 2026)</h2>
+<table>
+<tr><th>Item</th><th>Detail</th><th>Free?</th></tr>
+<tr><td>CLI tool itself</td><td>v0.4.12, MIT open source (npm <code>@minimax-ai/code</code>)</td><td>✅ Free</td></tr>
+<tr><td>Official quota</td><td>MiniMax Token Plan / API Key, <strong>5-hour + weekly</strong> quota windows</td><td>Paid / subscription</td></tr>
+<tr><td>BYOK free API</td><td>Cerebras (1M tok/day), Groq (1,000 req/day), GMI Cloud M2.5 (1M TPM free)</td><td>✅ $0</td></tr>
+<tr><td>Eval score</td><td>FrontierHarness Eval <strong>76.7%</strong> task pass, median success time <strong>4m 33s</strong></td><td>—</td></tr>
+<tr><td>Runtime</td><td>Node.js 22.19+ / 24.2+ / 25 / 26 (one-line installer auto-provisions a compatible runtime, no sudo)</td><td>—</td></tr>
+</table>
+<p>Key note: MiniMax's own quota is not "free on signup" — it bills via Token Plan or API key. The genuinely $0 route is BYOK against a free API. Here's how.</p>
+
+<h2>Three install paths (all $0)</h2>
+<h3>1. Official one-line installer (recommended)</h3>
+<p>macOS / Linux / WSL:</p>
+<pre><code>curl -fsSL https://filecdn.minimax.chat/public/install.sh | bash</code></pre>
+<p>Windows (PowerShell):</p>
+<pre><code>irm https://filecdn.minimax.chat/public/install.ps1 | iex</code></pre>
+<p>It installs to <code>~/.minimax-code</code> (or <code>%USERPROFILE%\.minimax-code</code> on Windows), needs no sudo / admin, and provisions a compatible Node.js runtime on demand. Reopen your terminal and run <code>mcode --version</code> to verify.</p>
+<h3>2. npm (if you already have Node)</h3>
+<p>Requires Node.js <strong>22.19+, 24.2+, 25, or 26</strong>:</p>
+<pre><code>npm install -g @minimax-ai/code@latest --registry=https://registry.npmjs.org/</code></pre>
+<h3>3. Alpine / musl Linux is not supported by the installer</h3>
+<p>Use a manual Node install plus npm on those systems.</p>
+
+<h2>Sign-in and official quota</h2>
+<p>In a project dir, run <code>mcode login</code> (mainland China) or <code>mcode login --region global</code>; finish auth in the browser, then check <code>/status</code>.</p>
+<p>Official quota runs on two windows: a <strong>rolling 5-hour window + a weekly window</strong>. <code>/status</code> shows the remaining percentage and reset countdown for each; <code>/usage</code> gives detail. This is the MiniMax account / Token Plan quota — the free Go/Adagio tiers carry <strong>no coding quota</strong>, so for $0 go BYOK below.</p>
+
+<h2>The free play: BYOK against a free API</h2>
+<p>This is the core. The CLI natively supports <code>openai-completions</code>, <code>openai-responses</code>, and <code>anthropic-messages</code> API formats — plug in any free LLM API and the whole coding agent runs for $0:</p>
+<pre><code>export MCODE_PROVIDER_API_KEY="***"
+mcode provider add --name free-src --base-url https://api.example.com/v1   --api-format openai-completions --model model-id   --context-limit 32768 --output-limit 4096 --use
+mcode</code></pre>
+<p><strong>Three $0 free sources (hands-on, see the linked guides):</strong></p>
+<table>
+<tr><th>Free API</th><th>Free quota</th><th>Refresh</th><th>Access</th><th>Best for</th></tr>
+<tr><td>Cerebras</td><td>1M tokens/day</td><td>daily reset</td><td>openai-completions, no credit card</td><td>highest volume coding / tests</td></tr>
+<tr><td>Groq</td><td>1,000 req/day, RPM 30, TPM 30,000</td><td>daily at UTC 00:00</td><td>openai-completions, first-token &lt;50ms</td><td>low latency, interactive</td></tr>
+<tr><td>GMI Cloud M2.5/M2.7</td><td>1M TPM (Tier 1, permanent, no card)</td><td>per-minute metering</td><td>OpenAI-compatible, direct in CN</td><td>Chinese scenarios, MiniMax models</td></tr>
+</table>
+<p>Point the CLI at any of these and use <code>/provider</code> to switch and <code>/model</code> to filter, and you run a full coding agent for $0. To stagger across vendors, add several providers (e.g., Cerebras for volume by day, Groq for latency-sensitive work overnight).</p>
+
+<h2>Three entry points, three use cases</h2>
+<table>
+<tr><th>Entry</th><th>Command</th><th>For</th></tr>
+<tr><td>Interactive TUI</td><td><code>mcode [prompt]</code></td><td>read repos, converse, edit code, review diffs, permission prompts</td></tr>
+<tr><td>Headless</td><td><code>mcode exec [prompt]</code></td><td>scripts / CI / batch / evals; text / json / stream-json output</td></tr>
+<tr><td>ACP</td><td><code>mcode acp</code></td><td>serve the agent to editors that speak the Agent Client Protocol</td></tr>
+</table>
+<p>All three share sessions, models, providers, plugins, and permission controls. For CI, headless <code>mcode exec</code> is the cleanest — bake "fix this failing test" into the pipeline and get one-shot results.</p>
+
+<h2>Tips (save tokens, work faster)</h2>
+<ul>
+<li><strong>Plan Mode before acting</strong>: <code>Shift+Tab</code> to toggle, <code>/plan on|off|status|view</code> to manage. Let it plan on complex tasks to avoid burning tokens going the wrong way.</li>
+<li><strong>Permission modes</strong>: <code>/permission</code> offers Ask (confirm each) / Auto (auto-classify risk) / Full access (skip checks). Use Auto day-to-day; Full only in workspaces you fully trust.</li>
+<li><strong>Set a task budget</strong>: <code>/goal "finish the migration and run tests" budget=50K</code> — K/M suffixes cap spend; a must for free-tier users.</li>
+<li><strong>Side questions while the main task runs</strong>: <code>/btw why this implementation?</code> without interrupting the main task.</li>
+<li><strong>@ to reference files/dirs, Ctrl+V to paste images/video</strong> into context.</li>
+<li><strong>Plugin marketplace</strong>: <code>mcode plugin marketplace list</code> / <code>mcode plugin add name@official</code> for search, MCP, and more.</li>
+</ul>
+
+<h2>Eval numbers, with caveats</h2>
+<p>Official FrontierHarness Eval report: <strong>76.7% task pass rate</strong> (23 passed, 4 failed, 3 timed out unscored of 30) with a <strong>4m 33s median</strong> success time — both ahead of the public baselines listed. This is a third-party eval; its scoring and task-time windows differ from public leaderboards, so treat the number as a reference, not an official ranking.</p>
+
+<h2>Limits and traps</h2>
+<ul>
+<li><strong>"Free" is two-layered</strong>: the tool (MIT) is permanently $0; but running the model costs tokens. Official execution is billed via Token Plan / API key. For $0, go BYOK against a free API — don't expect free coding quota from signing up.</li>
+<li><strong>Free Go/Adagio tiers have no coding quota</strong> (same as Kimi Code Desktop's Go tier). For $0 coding, use Gemini CLI / DeepSeek-TUI / Tongyi Lingma, or this BYOK route.</li>
+<li><strong>Quota drains on rolling windows</strong> (5-hour + weekly); free API BYOK instead is capped by that API's own daily limit (Cerebras 1M/day, Groq 1,000/day, GMI per-minute TPM).</li>
+<li><strong>Alpine / musl Linux can't use the one-line installer</strong> — manual Node + npm.</li>
+<li><strong>Data dir defaults to <code>~/.minimax</code></strong>; BYOK custom providers live here, so multiple CLI installs sharing it will cross-contaminate config.</li>
+</ul>
+
+<h2>FAQ</h2>
+<div class="faq-section">
+<div class="faq-item"><div class="faq-q">Is MiniMax Code CLI really completely free?</div><div class="faq-a">The tool is: v0.4.12 is MIT open source, so install, run, and modify are all $0. But "running the model" costs tokens — official runs bill via Token Plan / API key. To run for $0, use BYOK against a free API (Cerebras 1M tokens/day, Groq 1,000 req/day, GMI Cloud M2.5 1M TPM free).</div></div>
+<div class="faq-item"><div class="faq-q">How do I run a full coding agent for $0?</div><div class="faq-a">Three steps: ① one-line installer (auto-provisions Node); ② <code>mcode provider add</code> against a free API; ③ <code>/goal ... budget=50K</code> to cap spend and go. $0 end-to-end, and it reads repos, edits code, and runs tests.</div></div>
+<div class="faq-item"><div class="faq-q">Which API formats does BYOK support?</div><div class="faq-a"><code>openai-completions</code>, <code>openai-responses</code>, and <code>anthropic-messages</code>. Use the first for OpenAI-compatible free APIs (Cerebras, Groq, GMI) and the third for Anthropic-compatible ones. For local/self-hosted models, add <code>--context-limit 32768 --output-limit 4096</code>.</div></div>
+<div class="faq-item"><div class="faq-q">How does it compare to Gemini CLI and Kimi Code Desktop?</div><div class="faq-a">For pure $0 with no model choice, Gemini CLI's built-in free quota is easiest. For direct access in China with MiniMax models, use GMI Cloud M2.5. Kimi Code Desktop is a desktop GUI with four subscription tiers (from ¥49); for terminal users, MiniMax Code CLI (open source + BYOK) is more flexible.</div></div>
+<div class="faq-item"><div class="faq-q">What's a 76.7% pass rate?</div><div class="faq-a">A third-party FrontierHarness Eval single round: 23 of 30 passed, 4 failed, 3 timed out, 4m 33s median success time. It handles mainstream coding tasks, but don't read it as an official leaderboard ranking — scoring and time limits differ from public boards.</div></div>
+</div>
+
+<h2>Bottom line</h2>
+<p>Now that MiniMax Code CLI is open source, "terminal AI coding agent" — something that used to mean paying or heavy setup — becomes a <strong>zero-cost</strong> thing to run: an MIT tool + BYOK against a free API. To get the most value, stagger Cerebras for volume with Groq for latency, and cap spend with <code>/goal budget</code>. The tool is permanently free, and the free API quotas reset daily / weekly / per-minute — a small project runs for essentially nothing.</p>
+<p>Related free sources: <a href="/en/guides/cerebras-free-api-guide">Cerebras free API</a>, <a href="/en/guides/groq-free-lpu-inference-api-2026">Groq free LPU</a>, <a href="/en/guides/gmi-cloud-minimax-free-guide">GMI Cloud with MiniMax</a>, <a href="/en/guides/free-ai-coding-tools-comparison">Free AI coding tools compared</a>, <a href="/en/guides/kimi-code-desktop-free-guide-2026">Kimi Code Desktop</a>.</p>
+<p><em>Figures updated 2026-09-23; versions and free quotas may change — check the official site / repo for the latest.</em></p>
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="/en" class="logo" style="color:#059669">AI<span class="accent" style="color:#6366F1">FreePlan</span></a><p>AI-powered free tools aggregator. Free forever.</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h4>Product</h4><a href="/en/all">All Tools</a><a href="/en/guides">Guides</a></div>
+      <div class="footer-col"><h4>Legal</h4><a href="/en/privacy">Privacy</a><a href="/en/terms">Terms</a></div>
+    </div>
+  </div>
+  <div class="container footer-bottom">&copy; 2026 AIFreePlan. All rights reserved.</div>
+</footer>
+</body></html>
