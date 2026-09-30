@@ -1,1 +1,17 @@
-{"lastChecked": "2026-07-09", "toolCount": 91, "buildStatus": "pass", "allExternalLinksHealthy": true}
+{
+  "lastChecked": "2026-09-29",
+  "toolCount": 208,
+  "buildStatus": "pass",
+  "allExternalLinksHealthy": true,
+  "guideCount": 70,
+  "history": [
+    {
+      "date": "2026-09-29",
+      "event": "deploy real-time-ai-voice-models-free-comparison-2026 (69->70 guides)",
+      "commit_main": "e4a2adaf01",
+      "commit_deploy_static": "5a26b8c64b",
+      "build": "pass",
+      "validate": "P1=0 P2=18 (all pre-existing, none on new guide)"
+    }
+  ]
+}

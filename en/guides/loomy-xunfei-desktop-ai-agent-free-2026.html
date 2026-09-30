@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loomy Free Guide: iFlytek's Desktop AI Work Agent — 5,000 Free Credits on Download (~50 Tasks) | AIFreePlan</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="Loomy Free Guide: iFlytek's Desktop AI Work Agent — 5,000 Free Credits on Download (~50 Tasks) | AIFreePlan">
+<meta property="og:description" content="iFlytek's Loomy is a desktop AI work agent (loomy.xunfei.cn): free to download, with 5,000 trial credits granted on download — the official docs say that covers roughly 50 typical office tasks. Invite-code login, +5,000 credits for you and each friend who joins via your share, and BYO API key uses no Loomy credits at all. This guide covers the free entry points, credit rules, default model list (MiniMax-M2.5 / Doubao / DeepSeek-v3.2 / Qwen3.5-Plus), and the gotchas.">
+<meta property="og:url" content="https://aifreeplan.com/en/guides/loomy-xunfei-desktop-ai-agent-free-2026">
+<meta property="og:site_name" content="AIFreePlan">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Loomy Free Guide: iFlytek's Desktop AI Work Agent — 5,000 Free Credits on Download (~50 Tasks) | AIFreePlan">
+<meta name="twitter:description" content="iFlytek's Loomy is a desktop AI work agent (loomy.xunfei.cn): free to download, with 5,000 trial credits granted on download — the official docs say that covers roughly 50 typical office tasks. Invite-code login, +5,000 credits for you and each friend who joins via your share, and BYO API key uses no Loomy credits at all. This guide covers the free entry points, credit rules, default model list (MiniMax-M2.5 / Doubao / DeepSeek-v3.2 / Qwen3.5-Plus), and the gotchas.">
+<meta name="description" content="iFlytek's Loomy is a desktop AI work agent (loomy.xunfei.cn): free to download, with 5,000 trial credits granted on download — the official docs say that covers roughly 50 typical office tasks. Invite-code login, +5,000 credits for you and each friend who joins via your share, and BYO API key uses no Loomy credits at all. This guide covers the free entry points, credit rules, default model list (MiniMax-M2.5 / Doubao / DeepSeek-v3.2 / Qwen3.5-Plus), and the gotchas.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<link rel="canonical" href="https://aifreeplan.com/en/guides/loomy-xunfei-desktop-ai-agent-free-2026">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/loomy-xunfei-desktop-ai-agent-free-2026">
+<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/loomy-xunfei-desktop-ai-agent-free-2026">
+<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/loomy-xunfei-desktop-ai-agent-free-2026">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;--text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;--accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);--green:#059669;--green-light:rgba(5,150,105,.1);--shadow:0 4px 20px rgba(0,0,0,.05);--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover)}
+.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
+.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
+.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
+.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
+.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
+.article-container ul,.article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
+.article-container li{margin-bottom:8px;line-height:1.6}
+.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
+.article-container a{color:var(--accent);text-decoration:underline}
+.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-container th,.article-container td{padding:12px;border:1px solid var(--border);text-align:left}
+.article-container th{background:var(--accent-light);font-weight:600}
+.breadcrumb{font-size:14px;color:var(--text-muted);margin-bottom:24px}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb-sep{margin:0 8px}
+.faq-section{background:var(--bg-white);border-radius:var(--radius);padding:32px;margin-top:40px;box-shadow:var(--shadow)}
+.faq-section h3{margin-top:0;color:var(--text)}
+.faq-item{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border-light)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-weight:700;color:var(--text);margin-bottom:8px}
+.faq-a{color:var(--text-secondary);line-height:1.7}
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff;margin-top:60px}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6)}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col h4{font-size:14px;font-weight:700;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+@media(max-width:768px){.article-container{padding:16px 16px 48px;max-width:100%}.article-container h1{font-size:24px}.article-container h2{font-size:20px}.container{padding:0 16px}.nav{display:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Loomy Free Guide: iFlytek's Desktop AI Work Agent — 5,000 Free Credits on Download (~50 Tasks)","description":"iFlytek's Loomy is a desktop AI work agent (loomy.xunfei.cn): free to download, with 5,000 trial credits granted on download — the official docs say that covers roughly 50 typical office tasks. Invite-code login, +5,000 credits for you and each friend who joins via your share, and BYO API key uses no Loomy credits at all. This guide covers the free entry points, credit rules, default model list (MiniMax-M2.5 / Doubao / DeepSeek-v3.2 / Qwen3.5-Plus), and the gotchas.","url":"https://aifreeplan.com/en/guides/loomy-xunfei-desktop-ai-agent-free-2026","datePublished":"2026-09-30","dateModified":"2026-09-30","author":{"@type":"Organization","name":"AIFreePlan"},"publisher":{"@type":"Organization","name":"AIFreePlan","url":"https://aifreeplan.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aifreeplan.com/en/guides/loomy-xunfei-desktop-ai-agent-free-2026"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aifreeplan.com/en"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://aifreeplan.com/en/guides"},{"@type":"ListItem","position":3,"name":"Loomy Free Guide: iFlytek's Desktop AI Work Agent — 5,000 Free Credits on Download (~50 Tasks)","item":"https://aifreeplan.com/en/guides/loomy-xunfei-desktop-ai-agent-free-2026"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[[{"question": "Is Loomy free to download and use?", "answer": "Yes. The client downloads free (macOS Apple Silicon / Windows x64 Beta) and grants 5,000 trial credits on download — the official docs say that covers roughly 50 typical office tasks. When you run out: share with friends (both of you +5,000 each), official events, waiting-list approval, or credit packs (prices in-app). Configuring your own model API key makes model calls cost zero Loomy credits."}, {"question": "Do I absolutely need an invite code to log in?", "answer": "Yes. The quick-start doc says: open the client, enter an invite code, and you're in. Sources include the dedicated code on the ai-bot.cn listing (claimed extra 10,000 credits — verify actual distribution) and share links; the waiting-list approval path is another channel."}, {"question": "Do model calls burn credits if I use my own API key?", "answer": "No. The docs are explicit: when you configure your own model-provider API key, related model calls typically do not consume Loomy credits. Keys are stored on your device only — Loomy never hosts or uploads them."}, {"question": "How is '50 tasks for 5,000 credits' calculated?", "answer": "The official example pipeline: search and organize multiple information categories for a topic, compile a report saved locally, email a budget request, then roughly 10 rounds of follow-up email. That entire chain counts as one task; 5,000 credits supports about 50 of them. Longer tasks, bigger context and more model calls raise per-task cost, so real counts land below 50."}, {"question": "Does Loomy upload my files to the cloud?", "answer": "No. Loomy uses directory-level authorization: files stay local, the AI only operates inside authorized directories, and it asks consent before touching anything else. Custom API keys are stored locally too."}]]}
+</script>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="/en" class="logo">AI<span class="accent">FreePlan</span></a>
+    <nav class="nav">
+      <a href="/en/all">All Tools</a>
+      <a href="/en/guides">Guides</a>
+      <a href="/en/privacy">Privacy</a>
+      <a href="/zh/guides/loomy-xunfei-desktop-ai-agent-free-2026" class="btn btn-primary">中文</a>
+    </nav>
+  </div>
+</header>
+<main class="article-container">
+<nav class="breadcrumb"><a href="/en">Home</a> <span class="breadcrumb-sep">›</span> <a href="/en/guides">Guides</a> <span class="breadcrumb-sep">›</span> <span>Loomy Free Guide: iFlytek's Desktop AI Work Agent — 5,000 Free Credits on Download (~50 Tasks)</span></nav>
+<h1>Loomy Free Guide: iFlytek's Desktop AI Work Agent — 5,000 Free Credits on Download (~50 Tasks)</h1>
+
+<p>iFlytek (Hefei Keyu Chuangxiang Software) just shipped a desktop AI agent called <strong>Loomy</strong>, and it's the most number-transparent free-tier offer in China's desktop-agent space. Key figures (verified 2026-09-30): <strong>the client is free to download and grants 5,000 trial credits on download; the official docs state 5,000 credits covers roughly 50 typical office tasks</strong>; login requires an invite code (the ai-bot.cn listing advertises a dedicated code for an extra 10,000 credits — a channel claim, subject to actual in-app distribution); sharing Loomy with a friend earns <strong>both of you 5,000 credits each</strong>; and hooking up your own model API key means model calls <strong>consume zero Loomy credits</strong> — so after the free pool runs out, you can keep using it at near-zero marginal cost. It's built around "low barrier, high security, strong fit, proactive collaboration": files stay local, it only operates inside authorized directories, and it's deeply integrated with Chinese office stacks (Feishu, DingTalk, WeChat). Bottom line up front: for free office automation on a personal machine, Loomy is the most specific free-credit offer among domestic desktop agents; heavy users should just BYO API key to sidestep the credit cap entirely.</p>
+
+<h2>Free Credits &amp; Rules at a Glance</h2>
+
+<table>
+<tr><th>Item</th><th>Number / Rule</th><th>Source</th></tr>
+<tr><td>Client download</td><td>Free, $0; macOS (Apple Silicon, 14+) / Windows 10+ x64 (Beta, installer + portable green build)</td><td>loomy.xunfei.cn/download</td></tr>
+<tr><td>Download trial credits</td><td><strong>5,000 credits</strong> ("get trial credits the moment you download")</td><td>Official download page</td></tr>
+<tr><td>What 5,000 credits buys</td><td>About <strong>50 typical office tasks</strong> (e.g. one full pipeline: search &amp; organize → write a report saved locally → email your boss for budget → ~10 rounds of email follow-up counts as 1 task; consumption scales with task length, context size, and model-call count)</td><td>Official docs, user-guide/credits</td></tr>
+<tr><td>Invite-code login</td><td>Open the client and enter an invite code to log in; the ai-bot.cn listing claims a dedicated code grants an extra 10,000 credits (channel figure, verify in-app)</td><td>quick-start docs + ai-bot.cn</td></tr>
+<tr><td>Referral bonus</td><td>When a friend joins via your share link, <strong>both of you get 5,000 credits</strong> (repeatable)</td><td>Official docs, credits</td></tr>
+<tr><td>Other ways to earn</td><td>Waiting-list approval, official events / beta programs, credit-pack purchases (prices shown live in-app)</td><td>Official docs, credits</td></tr>
+<tr><td>BYO model API key</td><td>Connect your own model-provider key: model calls <strong>cost no Loomy credits</strong>; keys are stored on your device only, never uploaded</td><td>Official docs, credits / custom-models</td></tr>
+</table>
+
+<h2>Free Path: From Download to ~50 Tasks</h2>
+
+<ol>
+<li>Go to <a href="https://loomy.xunfei.cn/">loomy.xunfei.cn</a> (download page) and pick macOS (M-series chips, macOS 14 or later) or Windows (10+ x64; Beta — if the installer misbehaves, grab the portable "green" build and run it unzipped; keep install paths free of CJK characters);</li>
+<li>Launch the client and log in with an invite code — login is invite-code based, not email registration;</li>
+<li>The <strong>5,000 trial credits</strong> land on login; authorize one working directory as guided (unauthorized directories are never read — that's its directory-level authorization model);</li>
+<li>Drop natural-language tasks into the chat box, e.g. "Make a 10-page business-style PPT on 2026 AI industry trends, with data charts and a conclusion slide" — it decomposes the goal, chains tools, runs the multi-step flow, and delivers a local artifact;</li>
+<li>Stack more credits: share Loomy with a friend — when they join through your link, you both get 5,000;</li>
+<li>When the free pool is exhausted: open Settings → Models and plug in your own API key (MiniMax / DeepSeek / Qwen, etc.) — model calls then skip Loomy's credit meter entirely.</li>
+</ol>
+
+<h2>Default Models: No Key Needed (They Do Burn Credits)</h2>
+
+<p>Loomy ships with four domestic model services you can switch to immediately after login — no key required, though each call <strong>consumes Loomy credits</strong>:</p>
+
+<ul>
+<li><strong>MiniMax-M2.5</strong> (MiniMax)</li>
+<li><strong>doubao-seed-2.0-pro</strong> (Doubao, ByteDance)</li>
+<li><strong>DeepSeek-v3.2</strong></li>
+<li><strong>qwen3.5-plus</strong> (Qwen / Tongyi, Alibaba)</li>
+</ul>
+
+<p>Switching is Settings → Models → save, takes effect instantly, no restart. The default lineup tracks version updates, so check the in-app list for the current models.</p>
+
+<h2>What's Included Free (No Separate Charges)</h2>
+
+<p>These core capabilities all ship in the free client — nothing below is paywalled separately; task execution just draws from your credit pool:</p>
+
+<ul>
+<li><strong>AI chat + task execution</strong>: one-instruction goal decomposition, tool chaining, multi-step execution;</li>
+<li><strong>Skill plaza</strong>: ready-to-install official skills (HTML presentations, e-magazines/PPT, web design, more);</li>
+<li><strong>"Dazi-tuan" agent teams</strong>: multiple specialist agents collaborate on complex jobs (content growth, product launch, business proposals, data analysis);</li>
+<li><strong>Remote control</strong>: bind a WeChat / QQ / Feishu / DingTalk bot and drive your computer from your phone — check progress, open files, push tasks forward; Feishu / DingTalk / WeCom CLIs are also configurable;</li>
+<li><strong>Scheduled tasks</strong>: recurring or one-shot jobs (reminders, trending-topics polling) that fire on time;</li>
+<li><strong>Knowledge base</strong>: unified local document management with fast large-scale loading and search;</li>
+<li><strong>Desktop pet</strong>: a desktop mascot that "works" and earns credits for you (visible in the credit ledger).</li>
+</ul>
+
+<h2>Credit Consumption: What Burns Fast</h2>
+
+<p>The official docs are blunt about the four fast-burn categories: <strong>multi-step tasks, long-context tasks, frequent model calls, and multi-tool chaining</strong>. Practical advice:</p>
+
+<ul>
+<li>Confirm the goal and flow before firing a task — avoid "run it, then re-run it" waste;</li>
+<li>5,000 credits ≈ 50 typical tasks, but complex cross-tool pipelines cost more per run, so real-world counts run below 50;</li>
+<li>If you already have a stable model provider, BYO key and stop paying for default-model credits;</li>
+<li>Your credit balance and full ledger (when, how earned, how consumed) are viewable inside the client.</li>
+</ul>
+
+<h2>Competitive Free-Tier Comparison</h2>
+
+<table>
+<tr><th>Dimension</th><th>Loomy (iFlytek)</th><th>Office Raccoon (SenseTime)</th><th>TRAE Work (ByteDance)</th></tr>
+<tr><td>Positioning</td><td>Desktop AI work partner, local agent</td><td>AI office assistant, data analysis + creation space</td><td>AI-native workbench, evolved from the TRAE SOLO coding agent</td></tr>
+<tr><td>Free credits</td><td><strong>5,000 on download (~50 tasks); +5,000 per friend referral (both sides); BYO key = no credit burn</strong></td><td>SaaS cloud or on-prem enterprise deploy (check its site for free-tier specifics)</td><td>Tasks run on the cloud; coding-oriented — TRAE's domestic personal tier is free with Chinese models</td></tr>
+<tr><td>Data safety</td><td>Directory-level authorization; files stay local; consent before touching unauthorized folders</td><td>SaaS cloud + private enterprise deployment</td><td>Cloud sync</td></tr>
+<tr><td>Remote control</td><td>WeChat/QQ/Feishu/DingTalk bots drive the local machine</td><td>Mobile + cloud sync</td><td>Voice dispatch from phone to cloud or a designated PC, three-end coordination</td></tr>
+<tr><td>Fit</td><td>Feishu/DingTalk/WeChat/Xiaohongshu office workflows</td><td>Million-row data analysis, reports, PPT</td><td>Content creation, data analysis, web apps, code</td></tr>
+</table>
+
+<p>(Competitor rows come from the ai-bot.cn listing. Note: "5,000 free credits every day" is that listing's headline; the official download page and credit docs currently describe "5,000 trial credits on download" plus earn-by-sharing / events / packs. Whether the 5,000 refreshes daily — check the in-app rules.)</p>
+
+<h2>FAQ</h2>
+
+<div class="faq-section">
+<div class="faq-item">
+<div class="faq-q">Q: Is Loomy free to download and use?</div>
+<div class="faq-a">Yes. The client downloads free (macOS Apple Silicon / Windows x64 Beta) and grants 5,000 trial credits on download — the official docs say that covers roughly 50 typical office tasks. When you run out: share with friends (both of you +5,000 each), official events / beta programs, waiting-list approval, or credit packs (prices shown in-app). Configuring your own model API key makes model calls cost zero Loomy credits.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: Do I absolutely need an invite code to log in?</div>
+<div class="faq-a">Yes. The quick-start doc says: open Loomy, enter an invite code, and you're in. Code sources include the dedicated code on the ai-bot.cn listing (claimed extra 10,000 credits — verify actual distribution) and share links. The waiting-list approval path is another channel if you can't find a code.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: Do model calls burn credits if I use my own API key?</div>
+<div class="faq-a">No. The docs are explicit: when you configure your own model-provider API key, the related model calls typically do not consume Loomy credits (other capability charges follow in-app rules). Keys are stored on your device only — Loomy never hosts or uploads them. So after the free 5,000 credits are spent, a cheap provider key keeps you going at near-zero marginal cost.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: How is "50 tasks for 5,000 credits" calculated?</div>
+<div class="faq-a">The official example pipeline: for a "project kickoff" topic, search and organize multiple information categories → compile a report saved locally → email your boss for a budget request → roughly 10 rounds of follow-up email. That entire chain counts as one task, and 5,000 credits supports about 50 of them. Longer tasks, bigger context, and more frequent model calls raise the per-task cost, so real counts land below 50.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: Does Loomy upload my files to the cloud?</div>
+<div class="faq-a">No. Loomy uses directory-level authorization: files stay on your machine, the AI only operates inside authorized directories, and it asks for consent before touching anything else. Custom API keys are also stored locally. "Data risk stays controllable" is its main pitch versus overseas agent products.</div>
+</div>
+</div>
+
+<h2>Bottom Line</h2>
+
+<p>Loomy's free policy is refreshingly numeric for a domestic desktop agent: <strong>$0 download + 5,000 trial credits (≈50 tasks) + 5,000 per friend referral (both sides) + zero credit burn on BYO API keys</strong>. Office workers, self-media creators, e-commerce operators and small teams can spend the 5,000 on high-frequency work like file organization, PPT generation and data reviews; power users who bring their own key run at essentially zero marginal cost. Platform support: macOS (Apple Silicon, 14+) and Windows 10+ x64 (Beta). Free tiers and credit rules change with each release — verify on loomy.xunfei.cn before committing.</p>
+
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="/en" class="logo" style="color:#059669">AI<span class="accent" style="color:#6366F1">FreePlan</span></a><p>AI-powered free tools aggregator. Free forever.</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h4>Product</h4><a href="/en/all">All Tools</a><a href="/en/guides">Guides</a></div>
+      <div class="footer-col"><h4>Legal</h4><a href="/en/privacy">Privacy</a><a href="/en/terms">Terms</a></div>
+    </div>
+  </div>
+  <div class="container footer-bottom">&copy; 2026 AIFreePlan. All rights reserved.</div>
+</footer>
+</body></html>
