@@ -1,6 +1,74 @@
 {
   "guides": [
     {
+      "slug": "loomy-xunfei-desktop-ai-agent-free-2026",
+      "title_zh": "讯飞Loomy免费攻略：桌面AI工作搭子，下载即领5000积分（可白嫖约50次任务）",
+      "title_en": "Loomy Free Guide: iFlytek's Desktop AI Work Agent — 5,000 Free Credits on Download (~50 Tasks)",
+      "description_zh": "科大讯飞推出桌面AI智能体Loomy（loomy.xunfei.cn），免费下载、下载即送5000体验积分，官方文档写明5000积分约够执行50次典型办公任务；邀请码登录、分享好友双方再各得5000积分；接自己的API Key跑模型不扣积分。本文给全免费入口、积分规则、默认模型清单（MiniMax-M2.5/豆包/DeepSeek-v3.2/Qwen3.5-Plus）和避坑点。",
+      "description_en": "iFlytek's Loomy is a desktop AI work agent (loomy.xunfei.cn): free to download, with 5,000 trial credits granted on download — the official docs say that covers roughly 50 typical office tasks. Invite-code login, +5,000 credits for you and each friend who joins via your share, and BYO API key uses no Loomy credits at all. This guide covers the free entry points, credit rules, default model list (MiniMax-M2.5 / Doubao / DeepSeek-v3.2 / Qwen3.5-Plus), and the gotchas.",
+      "category": "ai-agent",
+      "date_published": "2026-09-30",
+      "tags": [
+        "Loomy",
+        "科大讯飞",
+        "桌面AI智能体",
+        "AI Agent",
+        "办公自动化",
+        "免费积分",
+        "远程控制",
+        "飞书",
+        "钉钉",
+        "AI工作搭子"
+      ],
+      "icon": "🦦",
+      "excerpt_zh": "科大讯飞桌面AI智能体Loomy免费下载：下载即送5000体验积分（官方口径约50次办公任务），分享好友双方各+5000，配自有API Key不扣积分；内置MiniMax-M2.5/豆包/DeepSeek-v3.2/Qwen3.5-Plus，目录级授权文件留本地，微信/飞书/钉钉远程操控。",
+      "excerpt_en": "iFlytek's Loomy desktop AI agent, free to download: 5,000 trial credits on download (official docs: ~50 office tasks), +5,000 per friend referral (both sides), BYO API key costs zero credits. Ships MiniMax-M2.5/Doubao/DeepSeek-v3.2/Qwen3.5-Plus; directory-level auth keeps files local; remote control via WeChat/Feishu/DingTalk.",
+      "faq_zh": [
+        {
+          "question": "Loomy 下载和使用要钱吗？",
+          "answer": "客户端免费下载（macOS Apple Silicon / Windows x64 Beta），下载即送 5,000 体验积分，官方文档写明约够执行 50 次典型办公任务。超额后可通过分享好友（双方各得 5,000）、官方活动、Waiting List 审核或积分包充值获取；配置自己的模型 API Key 则模型调用不扣积分。"
+        },
+        {
+          "question": "登录一定要邀请码吗？",
+          "answer": "是。官方快速开始文档写明：打开客户端输入邀请码即可登录使用。渠道包括 ai-bot.cn 收录页专属码（宣称额外领 10,000 积分，以实际发放为准）和分享链接等；也可以走 Waiting List 审核通道。"
+        },
+        {
+          "question": "用自己的 API Key 还会扣积分吗？",
+          "answer": "不会。官方文档明确：配置并使用自己的模型服务提供商 API Key 时，相关模型调用通常不消耗 Loomy 积分。Key 只保存在本地设备，Loomy 不托管、不上传。免费 5,000 积分烧完后配个便宜模型商的 Key 就能近乎零成本继续跑。"
+        },
+        {
+          "question": "5,000 积分的 50 次任务怎么算的？",
+          "answer": "官方示例链路：围绕一个主题搜索整理多类信息→汇总成报告存本地→写邮件申请预算→后续约 10 次邮件往来，整条算 1 次任务，5,000 积分约支持 50 次。任务越长、上下文越大、模型调用越频繁，单次消耗越高，实际次数会低于 50。"
+        },
+        {
+          "question": "我的文件会被上传到云端吗？",
+          "answer": "不会。Loomy 采用目录级授权：文件留在本地，AI 只在授权目录内操作，访问未授权目录前会征求同意；自定义 API Key 也仅存本地。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Loomy free to download and use?",
+          "answer": "Yes. The client downloads free (macOS Apple Silicon / Windows x64 Beta) and grants 5,000 trial credits on download — the official docs say that covers roughly 50 typical office tasks. When you run out: share with friends (both of you +5,000 each), official events, waiting-list approval, or credit packs (prices in-app). Configuring your own model API key makes model calls cost zero Loomy credits."
+        },
+        {
+          "question": "Do I absolutely need an invite code to log in?",
+          "answer": "Yes. The quick-start doc says: open the client, enter an invite code, and you're in. Sources include the dedicated code on the ai-bot.cn listing (claimed extra 10,000 credits — verify actual distribution) and share links; the waiting-list approval path is another channel."
+        },
+        {
+          "question": "Do model calls burn credits if I use my own API key?",
+          "answer": "No. The docs are explicit: when you configure your own model-provider API key, related model calls typically do not consume Loomy credits. Keys are stored on your device only — Loomy never hosts or uploads them."
+        },
+        {
+          "question": "How is '50 tasks for 5,000 credits' calculated?",
+          "answer": "The official example pipeline: search and organize multiple information categories for a topic, compile a report saved locally, email a budget request, then roughly 10 rounds of follow-up email. That entire chain counts as one task; 5,000 credits supports about 50 of them. Longer tasks, bigger context and more model calls raise per-task cost, so real counts land below 50."
+        },
+        {
+          "question": "Does Loomy upload my files to the cloud?",
+          "answer": "No. Loomy uses directory-level authorization: files stay local, the AI only operates inside authorized directories, and it asks consent before touching anything else. Custom API keys are stored locally too."
+        }
+      ]
+    },
+    {
       "slug": "real-time-ai-voice-models-free-comparison-2026",
       "title_zh": "实时语音AI三强免费额度对比2026：Gemini 3.8 Live、GPT-Live-1、StepAudio 3 谁最值得白嫖",
       "title_en": "Free Real-Time AI Voice Models Compared (2026): Gemini 3.8 Live vs GPT-Live-1 vs StepAudio 3",
@@ -4336,6 +4404,6 @@
       ]
     }
   ],
-  "updatedAt": "2026-09-28T10:34:53.886466",
+  "updatedAt": "2026-09-30T10:13:07.470138",
   "generatedAt": "2026-08-21T09:24:06.356146"
 }
