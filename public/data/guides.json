@@ -1,6 +1,82 @@
 {
   "guides": [
     {
+      "slug": "meta-muse-free-personal-ai-agent-2026",
+      "title_zh": "Meta Muse 免费攻略：个人AI智能体每周免费最高约1亿Token，$20/$100两档订阅",
+      "title_en": "Meta Muse Free Guide: Personal AI Agent with Up to ~100M Free Tokens/Week, $20/$100 Tiers",
+      "description_zh": "Meta 于 2026-09-08 推出个人 AI 智能体 Muse（muse.ai），由 Muse Spark 1.3 模型驱动，每个用户在云端独立安全虚拟机里 24/7 后台跑任务（整理邮件、比价、订旅行、取消闲置订阅）。免费档每周最高约 1 亿 Token，付费 Power $20/月、Maximum $100/月；敏感操作由独立 Sentinel 代理审批，支付卡号 AI 读不到。本文给全免费额度、注册门槛、地区限制、Amazon 封禁争议和避坑点。",
+      "description_en": "Meta's Muse (muse.ai), released 2026-09-08, is a personal AI agent powered by Muse Spark 1.3 that runs tasks 24/7 on a per-user cloud Secure VM (email triage, price comparison, trip booking, cancel idle subscriptions). Free tier: up to ~100M tokens/week; paid Power $20/mo and Maximum $100/mo. Sensitive actions are gated by an independent Sentinel approver; card numbers are unreadable to the model. This guide covers the free allowance, sign-up requirements, region limits, the Amazon takedown, and the gotchas.",
+      "category": "ai-agent",
+      "date_published": "2026-10-01",
+      "tags": [
+        "Meta",
+        "Muse",
+        "Muse Spark 1.3",
+        "个人AI智能体",
+        "AI Agent",
+        "免费Token额度",
+        "Secure VM",
+        "后台执行",
+        "WhatsApp",
+        "AI工作智能体"
+      ],
+      "icon": "🤖",
+      "excerpt_zh": "Meta 个人AI智能体 Muse（muse.ai，2026-09-08 上线）：免费版每周最高约1亿Token，付费 Power $20/月、Maximum $100/月；每用户独立 Secure VM 后台24/7跑任务，敏感操作由 Sentinel 审批、支付卡号 AI 读不到；需绑卡、首发限美/加18+；已被亚马逊封禁。",
+      "excerpt_en": "Meta's personal AI agent Muse (muse.ai, launched 2026-09-08): free tier up to ~100M tokens/week; Power $20/mo, Maximum $100/mo. Per-user Secure VM runs 24/7; Sentinel-gated sensitive actions, card numbers unreadable to the AI. Card required; US/Canada 18+ at launch; blocked by Amazon.",
+      "faq_zh": [
+        {
+          "question": "Muse 是免费的吗？每周能跑多少？",
+          "answer": "免费版有每周 Token 额度，媒体普遍引用\"最多约 1 亿 Token/周\"（引 Mark Zuckerberg 口径）；早期 Threads 出现过\"每周 100 万输入 Token\"的低口径表述，实际以产品内实时额度为准。用尽后升 Power（$20/月）或 Maximum（$100/月）。"
+        },
+        {
+          "question": "注册要什么条件？",
+          "answer": "用手机号或邮箱注册 Meta 账号并验证即可；有报道指出开通需绑定一张信用卡（即便只用免费档）。首发仅面向美国、加拿大 18 岁以上用户，其他地区暂未开放。"
+        },
+        {
+          "question": "关掉 App，任务会中断吗？",
+          "answer": "不会。Muse 运行在每用户独立的云端 Secure VM 里，可 24/7 后台持续执行（监控票价、等放号、追退款），关键节点推送通知让你确认，随时在 App/网页/WhatsApp 里查进度、改计划或终止。"
+        },
+        {
+          "question": "我的密码和支付卡安全吗？",
+          "answer": "官方口径：每用户独立 Secure VM 隔离数据；敏感操作由独立安全代理 Sentinel 审批；密码与支付卡号 AI 无法直接读取，且 muse.ai 提供完整审计日志。但开通需绑卡，Meta 可访问部分数据（可用隐私开关关闭），动手前核对开关。"
+        },
+        {
+          "question": "为什么亚马逊封了 Muse？",
+          "answer": "亚马逊认为 Muse 未经授权访问其网站、未标识 AI 代理身份、并抓取并存储用户凭证，违反平台使用条款。因此用 Muse 代下单/比价时部分平台会拦截，别默认它\"全网无碍\"。"
+        },
+        {
+          "question": "适合谁？",
+          "answer": "在美国/加拿大、想用 0 元档体验\"AI 真替你干活\"（邮件整理、比价、订旅行、退订）的人最划算；重度用户会很快撞 1 亿 Token 上限，转 Power/Maximum 更顺。开发者/深度研究向可看 Manus 等竞品。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Muse free? How much can I run weekly?",
+          "answer": "The free tier has a weekly token allowance, widely cited as 'up to ~100M tokens/week' (per Mark Zuckerberg's announcement). An early Threads post referenced a lower '1M input tokens/week' figure, so trust the live in-app allowance. When you run out, move to Power ($20/mo) or Maximum ($100/mo)."
+        },
+        {
+          "question": "What do I need to sign up?",
+          "answer": "Create and verify a Meta account with a phone number or email. Reporting says a credit card is required to activate, even on the free tier. At launch it is US & Canada only, for users 18+."
+        },
+        {
+          "question": "Does a task stop if I close the app?",
+          "answer": "No. Muse runs on a per-user cloud Secure VM and executes 24/7 in the background (watching prices, waiting for slots, chasing refunds). It pings you at milestones; you can check progress, adjust the plan, or stop it any time from the app, web, or WhatsApp."
+        },
+        {
+          "question": "Are my password and payment card safe?",
+          "answer": "Officially: a dedicated Secure VM isolates your data, an independent Sentinel agent approves sensitive actions, and the AI cannot read passwords or card numbers. muse.ai also provides a full audit log. Caveats: activation requires a card, and some reporting notes Meta can access certain data (privacy toggle) - check the switches first."
+        },
+        {
+          "question": "Why did Amazon block Muse?",
+          "answer": "Amazon claimed Muse accessed the site without authorization, did not identify itself as an AI agent, and scraped/stored user credentials, violating its ToS. So platform checkout/price-compare via Muse may be intercepted - don't assume it works unimpeded everywhere."
+        },
+        {
+          "question": "Who is it best for?",
+          "answer": "If you're in the US/Canada and want a $0 way to try 'AI that actually does things' (email triage, price comparison, travel booking, subscription cancellation), Muse fits best. Heavy users will hit the ~100M-token cap quickly and should subscribe. Developers and deep-research users may prefer competitors like Manus."
+        }
+      ]
+    },
+    {
       "slug": "loomy-xunfei-desktop-ai-agent-free-2026",
       "title_zh": "讯飞Loomy免费攻略：桌面AI工作搭子，下载即领5000积分（可白嫖约50次任务）",
       "title_en": "Loomy Free Guide: iFlytek's Desktop AI Work Agent — 5,000 Free Credits on Download (~50 Tasks)",
@@ -4404,6 +4480,6 @@
       ]
     }
   ],
-  "updatedAt": "2026-09-30T10:13:07.470138",
+  "updatedAt": "2026-10-02T10:08:53.680428",
   "generatedAt": "2026-08-21T09:24:06.356146"
 }
