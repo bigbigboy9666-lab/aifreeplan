@@ -1,6 +1,84 @@
 {
   "guides": [
     {
+      "slug": "space-bunny-alpha-free-openrouter-2026",
+      "title_zh": "Space Bunny 免费攻略：OpenRouter匿名模型$0/0，100万上下文多模态，免费预览到2026-10-05",
+      "title_en": "Space Bunny Free Guide: $0/$0 Anonymous Model on OpenRouter, 1M-Context Multimodal, Free Until 2026-10-05",
+      "description_zh": "Space Bunny（stealth/space-bunny-alpha）是2026年9月匿名上线OpenRouter与OpenCode的大模型：输入/输出都是$0，100万Token上下文，支持文本+图像+视频多模态输入，low~max五档推理可调，支持工具调用。上线3天冲上两平台单日调用量榜首，社区评价'约等于GLM 5.3 Flash但更快'。免费预览窗口到2026-10-05。本文给全调用方法、免费限制、身份猜测与竞品对比。",
+      "description_en": "Space Bunny (stealth/space-bunny-alpha) is an anonymous model launched on OpenRouter and OpenCode in Sept 2026: $0 input and $0 output, 1M-token context, native text+image+video multimodal input, adjustable low~max reasoning, and tool-calling support. It hit #1 in daily calls on both platforms within 3 days; the community rates it 'roughly GLM 5.3 Flash but faster.' The free preview window runs until 2026-10-05. This guide covers how to call it, the free limits, the identity guess, and a competitor comparison.",
+      "category": "llm",
+      "date_published": "2026-10-03",
+      "tags": [
+        "Space Bunny",
+        "stealth/space-bunny-alpha",
+        "OpenRouter",
+        "免费模型",
+        "1M上下文",
+        "多模态",
+        "推理强度",
+        "工具调用",
+        "MiniMax M3.1",
+        "GLM-5.3",
+        "LLM API",
+        "Agent"
+      ],
+      "icon": "🐇",
+      "excerpt_zh": "OpenRouter 匿名模型 Space Bunny（stealth/space-bunny-alpha）：$0/$0，100万 Token 上下文、524K 最大输出，文本+图像+视频多模态，low~max 五档推理 + 工具调用；上线 3 天冲上单日调用量榜首，社区评'约等于 GLM 5.3 Flash 但更快'，身份疑为 MiniMax M3.1；免费窗口到 2026-10-05。",
+      "excerpt_en": "Anonymous model Space Bunny (stealth/space-bunny-alpha) on OpenRouter: $0/$0, 1M-token context, 524K max output, text+image+video multimodal, low~max reasoning + tool-calling; hit #1 daily calls in 3 days, rated 'roughly GLM 5.3 Flash but faster', suspected MiniMax M3.1; free window to 2026-10-05.",
+      "faq_zh": [
+        {
+          "question": "Space Bunny 现在免费吗？怎么收费？",
+          "answer": "窗口内 $0 输入 / $0 输出，免充值即可调。API 的 expiration_date 是 2026-10-05，到期后大概率转按 token 计费或下架——白嫖要赶在 10-05 前。"
+        },
+        {
+          "question": "上下文和输出上限是多少？",
+          "answer": "上下文 1,000,000 Token，单次最大输出 524,288 Token，支持文本+图像+视频多模态输入。"
+        },
+        {
+          "question": "它比 GLM 5.3 Flash 强在哪？",
+          "answer": "社区实测评价'约等于 GLM 5.3 Flash 但更快'，编程完成度'略胜'；且最大输出 524K（GLM 是 128K）。但它是匿名模型，身份与架构未公开。"
+        },
+        {
+          "question": "它到底是谁做的？",
+          "answer": "匿名上线，官方未认领。最主流猜测是 MiniMax M3.1（Flash 版），因 MiniMax 同期官宣的 M3.1-Flash-Preview 配置（MoE、1M 上下文、五档推理）与它高度重合。"
+        },
+        {
+          "question": "免费会有限速吗？",
+          "answer": "会。OpenRouter 对免费模型按账户累计充值额分档限速，当日免费请求计数与上限见 GET /api/v1/key 的 free_model_daily_requests，超了撞 429；BYOK 与被豁免账户不受该计数器限制。"
+        },
+        {
+          "question": "适合谁、能跑什么？",
+          "answer": "适合窗口内 0 元跑长文档/大代码库/多模态理解、快速原型与 Agent 自动化的开发者。别拿它跑生产关键链路（匿名、无官方 SLA）。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Space Bunny free now? How is it priced?",
+          "answer": "$0 input / $0 output inside the window, no credit required. The API expiration_date is 2026-10-05, so it most likely flips to pay-per-token or delists - grab the free window before 10-05."
+        },
+        {
+          "question": "What's the context and output cap?",
+          "answer": "1,000,000-token context, 524,288 max output tokens, with text + image + video multimodal input."
+        },
+        {
+          "question": "Is it better than GLM 5.3 Flash?",
+          "answer": "Community testing says 'roughly GLM 5.3 Flash but faster,' with coding completion rated slightly ahead; max output is 524K (GLM is 128K). But it is an anonymous model with an undisclosed identity and architecture."
+        },
+        {
+          "question": "Who actually built it?",
+          "answer": "Anonymous launch, unclaimed. The leading guess is MiniMax M3.1 (Flash), because MiniMax's separately announced M3.1-Flash-Preview (MoE, 1M context, five reasoning tiers) overlaps heavily with its config."
+        },
+        {
+          "question": "Are there rate limits on the free access?",
+          "answer": "Yes. OpenRouter rate-limits free models by all-time credits; the daily counter and cap are in free_model_daily_requests on GET /api/v1/key - exceeding it returns 429. BYOK and exempt accounts aren't gated by that counter."
+        },
+        {
+          "question": "Who is it for, and what can I run?",
+          "answer": "Developers who want a $0 way to run long documents, big codebases, multimodal understanding, fast prototyping, and agentic automation inside the window. Don't run production-critical paths on it (anonymous, no official SLA)."
+        }
+      ]
+    },
+    {
       "slug": "meta-muse-free-personal-ai-agent-2026",
       "title_zh": "Meta Muse 免费攻略：个人AI智能体每周免费最高约1亿Token，$20/$100两档订阅",
       "title_en": "Meta Muse Free Guide: Personal AI Agent with Up to ~100M Free Tokens/Week, $20/$100 Tiers",
@@ -4480,6 +4558,6 @@
       ]
     }
   ],
-  "updatedAt": "2026-10-02T10:08:53.680428",
+  "updatedAt": "2026-10-03T10:12:10.337072",
   "generatedAt": "2026-08-21T09:24:06.356146"
 }
