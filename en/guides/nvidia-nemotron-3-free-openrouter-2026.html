@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NVIDIA Nemotron 3 Free Guide: Call $0 on OpenRouter, 550B Flagship + 30B Multimodal, up to 1M Context | AIFreePlan</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="NVIDIA Nemotron 3 Free Guide: Call $0 on OpenRouter, 550B Flagship + 30B Multimodal, up to 1M Context | AIFreePlan">
+<meta property="og:description" content="NVIDIA's Nemotron 3 family has landed in OpenRouter's :free pool: Ultra 550B (55B active), Super 120B, Nano Omni 30B (text/audio/image/video multimodal), 3.5 Lightning, all $0 in / $0 out with up to 1M-token context and no expiration. This guide covers the exact free allowance, OpenRouter's free rate limits (50/1000 req/day), Nemotron 3 architecture and specs, and five ways to use it.">
+<meta property="og:url" content="https://aifreeplan.com/en/guides/nvidia-nemotron-3-free-openrouter-2026">
+<meta property="og:site_name" content="AIFreePlan">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NVIDIA Nemotron 3 Free Guide: Call $0 on OpenRouter, 550B Flagship + 30B Multimodal, up to 1M Context | AIFreePlan">
+<meta name="twitter:description" content="NVIDIA's Nemotron 3 family has landed in OpenRouter's :free pool: Ultra 550B (55B active), Super 120B, Nano Omni 30B (text/audio/image/video multimodal), 3.5 Lightning, all $0 in / $0 out with up to 1M-token context and no expiration. This guide covers the exact free allowance, OpenRouter's free rate limits (50/1000 req/day), Nemotron 3 architecture and specs, and five ways to use it.">
+<meta name="description" content="NVIDIA's Nemotron 3 family has landed in OpenRouter's :free pool: Ultra 550B (55B active), Super 120B, Nano Omni 30B (text/audio/image/video multimodal), 3.5 Lightning, all $0 in / $0 out with up to 1M-token context and no expiration. This guide covers the exact free allowance, OpenRouter's free rate limits (50/1000 req/day), Nemotron 3 architecture and specs, and five ways to use it.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<link rel="canonical" href="https://aifreeplan.com/en/guides/nvidia-nemotron-3-free-openrouter-2026">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/nvidia-nemotron-3-free-openrouter-2026">
+<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/nvidia-nemotron-3-free-openrouter-2026">
+<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/nvidia-nemotron-3-free-openrouter-2026">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;--text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;--accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);--green:#059669;--green-light:rgba(5,150,105,.1);--shadow:0 4px 20px rgba(0,0,0,.05);--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover)}
+.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
+.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
+.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
+.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
+.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
+.article-container ul,.article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
+.article-container li{margin-bottom:8px;line-height:1.6}
+.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
+.article-container a{color:var(--accent);text-decoration:underline}
+.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-container th,.article-container td{padding:12px;border:1px solid var(--border);text-align:left}
+.article-container th{background:var(--accent-light);font-weight:600}
+.breadcrumb{font-size:14px;color:var(--text-muted);margin-bottom:24px}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb-sep{margin:0 8px}
+.faq-section{background:var(--bg-white);border-radius:var(--radius);padding:32px;margin-top:40px;box-shadow:var(--shadow)}
+.faq-section h3{margin-top:0;color:var(--text)}
+.faq-item{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border-light)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-weight:700;color:var(--text);margin-bottom:8px}
+.faq-a{color:var(--text-secondary);line-height:1.7}
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff;margin-top:60px}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6)}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col h4{font-size:14px;font-weight:700;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+@media(max-width:768px){.article-container{padding:16px 16px 48px;max-width:100%}.article-container h1{font-size:24px}.article-container h2{font-size:20px}.container{padding:0 16px}.nav{display:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"NVIDIA Nemotron 3 Free Guide: Call $0 on OpenRouter, 550B Flagship + 30B Multimodal, up to 1M Context","description":"NVIDIA's Nemotron 3 family has landed in OpenRouter's :free pool: Ultra 550B (55B active), Super 120B, Nano Omni 30B (text/audio/image/video multimodal), 3.5 Lightning, all $0 in / $0 out with up to 1M-token context and no expiration. This guide covers the exact free allowance, OpenRouter's free rate limits (50/1000 req/day), Nemotron 3 architecture and specs, and five ways to use it.","url":"https://aifreeplan.com/en/guides/nvidia-nemotron-3-free-openrouter-2026","datePublished":"2026-10-04","dateModified":"2026-10-04","author":{"@type":"Organization","name":"AIFreePlan"},"publisher":{"@type":"Organization","name":"AIFreePlan","url":"https://aifreeplan.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aifreeplan.com/en/guides/nvidia-nemotron-3-free-openrouter-2026"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aifreeplan.com/en"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://aifreeplan.com/en/guides"},{"@type":"ListItem","position":3,"name":"NVIDIA Nemotron 3 Free Guide: Call $0 on OpenRouter, 550B Flagship + 30B Multimodal, up to 1M Context","item":"https://aifreeplan.com/en/guides/nvidia-nemotron-3-free-openrouter-2026"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[[{"question": "Is Nemotron 3 free on OpenRouter? Do I need to pay?", "answer": "The :free variants are $0 in / $0 out and do not force a top-up. But free-model requests are tiered by all-time credits: under $10 accounts get 50 requests/day, $10+ accounts get 1,000/day, and there is a 20/min cap."}, {"question": "Which tier should I pick?", "answer": "For 1M long context and complex agents/reasoning use Ultra 550B; for quota-saving everyday Q&A use Super 120B; for video/audio/image/text multimodal use Nano Omni 30B; for speed use 3.5 Lightning."}, {"question": "Is the context really 1M?", "answer": "Ultra 550B and 3.5 Lightning both expose 1,000,000 tokens on their :free variants; Super 120B is 262,144; Nano Omni 30B is 256,000 (per its model card)."}, {"question": "Will it vanish suddenly?", "answer": "These :free variants have no expiration today. The free pool is dynamic, Space Bunny retired on 10/05, so keep Nemotron 3 as the primary and Gemma 4 / Qwen3.8 / cohere as fallbacks."}, {"question": "Can I dodge the cap by making more accounts?", "answer": "No. OpenRouter states extra accounts/keys do not change rate limits; capacity is governed globally. On a 429, back off exponentially, honor Retry-After, or switch to a lighter variant."}]]}
+</script>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="/en" class="logo">AI<span class="accent">FreePlan</span></a>
+    <nav class="nav">
+      <a href="/en/all">All Tools</a>
+      <a href="/en/guides">Guides</a>
+      <a href="/en/privacy">Privacy</a>
+      <a href="/zh/guides/nvidia-nemotron-3-free-openrouter-2026" class="btn btn-primary">中文</a>
+    </nav>
+  </div>
+</header>
+<main class="article-container">
+<nav class="breadcrumb"><a href="/en">Home</a> <span class="breadcrumb-sep">›</span> <a href="/en/guides">Guides</a> <span class="breadcrumb-sep">›</span> <span>NVIDIA Nemotron 3 Free Guide: Call $0 on OpenRouter, 550B Flagship + 30B Multimodal, up to 1M Context</span></nav>
+<h1>NVIDIA Nemotron 3 Free Guide: Call $0 on OpenRouter, 550B Flagship + 30B Multimodal, up to 1M Context</h1>
+
+<p>NVIDIA's <strong>Nemotron 3</strong> model family has just landed in <strong>OpenRouter</strong>'s <code>:free</code> pool, and this is not a toy model, it is a flagship 550B-parameter one. The key numbers (verified 2026-10-04 against the live OpenRouter API): <strong>$0 input / $0 output</strong>, up to <strong>1,000,000-token context</strong>, and these <code>:free</code> variants currently have <strong>no expiration date</strong> (expiration is empty), unlike Space Bunny, which went down on 10/05. The family spans four tiers: <strong>Ultra 550B (55B active)</strong> is the flagship reasoning/agent tier, <strong>Super 120B (12B active)</strong> is the balanced tier, <strong>Nano Omni 30B (~3B active)</strong> is the <strong>only multimodal</strong> tier (ingests video/audio/image/text directly), and <strong>3.5 Lightning</strong> is a fast 1M-context tier. Bottom line up front: if you want a $0 way to run NVIDIA's newest Mamba-2 + MoE hybrid architecture with million-scale long context, OpenRouter's Nemotron 3 free pool is the most concrete entry right now, but mind OpenRouter's <strong>hard daily request cap for free tiers</strong> (a never-topped-up account gets only <strong>50 requests/day</strong>); do not mistake "free" for "unlimited". Below are all the measured numbers, usage, and the gotchas.</p>
+
+<h2>Free Allowance &amp; Specs at a Glance</h2>
+
+<table>
+<tr><th>OpenRouter variant</th><th>Total / active params</th><th>Context</th><th>Input modality</th><th>Multimodal</th></tr>
+<tr><td><code>nvidia/nemotron-3-ultra-550b-a55b:free</code></td><td>550B / 55B</td><td><strong>1,000,000</strong></td><td>text</td><td>No</td></tr>
+<tr><td><code>nvidia/nemotron-3-super-120b-a12b:free</code></td><td>120B / 12B</td><td>262,144</td><td>text</td><td>No</td></tr>
+<tr><td><code>nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free</code></td><td>31B / ~3B</td><td>256,000</td><td>text+audio+image+video</td><td><strong>Yes</strong></td></tr>
+<tr><td><code>nvidia/nemotron-3.5-lightning:free</code></td><td>Fast tier</td><td><strong>1,000,000</strong></td><td>text</td><td>No</td></tr>
+<tr><td><code>nvidia/nemotron-3.5-content-safety:free</code></td><td>Safety tier</td><td>128,000</td><td>text+image</td><td>Yes</td></tr>
+</table>
+
+<p>All five variants are <strong>$0 in / $0 out</strong> and currently have <strong>no expiration</strong>. Other free models sharing the same free pool you can mix across: <code>google/gemma-4-26b-a4b-it:free</code> and <code>google/gemma-4-31b-it:free</code> (262K context, image/text/video input), <code>qwen/qwen3.8-27b:free</code> (image/text/video input), <code>cohere/north-mini-code:free</code> (256K, coding-focused), and <code>dots-studio/dots-3-note-preview:free</code> (512K, image in, <strong>expires 2026-12-31</strong>).</p>
+
+<h2>OpenRouter Free Rate Limits: The Real Barrier</h2>
+
+<p>"$0" does not mean "unlimited". OpenRouter gates <code>:free</code> variants by your <strong>all-time top-up credits</strong> in two tiers (2026-10-04 docs):</p>
+
+<table>
+<tr><th>Your account state</th><th>Free-model request ceiling</th></tr>
+<tr><td>All-time top-up <strong>&lt; $10</strong> (fresh free account)</td><td><strong>50 requests/day</strong> + 20/min</td></tr>
+<tr><td>All-time top-up <strong>≥ $10</strong></td><td><strong>1,000 requests/day</strong> + 20/min</td></tr>
+</table>
+
+<ul>
+<li>The ceiling applies to <strong>free-model</strong> requests, not paid ones; the 20 req/min cap applies to all free requests;</li>
+<li>To see your live allowance, call <code>GET /api/v1/key</code> and read the <code>free_model_daily_requests</code> counter and ceiling;</li>
+<li>A never-topped-up account gets 50/day; heavy Ultra 550B long-context use will hit that fast, and <strong>extra accounts do not help</strong>, OpenRouter governs capacity globally per account/key;</li>
+<li>On a 429, back off exponentially and honor the <code>Retry-After</code> header.</li>
+</ul>
+
+<h2>How to Use It at $0 (From Key to Call)</h2>
+
+<ol>
+<li>Register at <a href="https://openrouter.ai/">openrouter.ai</a> and create an API key (free, no card required);</li>
+<li>Write the model id with the <code>:free</code> suffix, e.g. <code>nvidia/nemotron-3-ultra-550b-a55b:free</code>;</li>
+<li>Minimal call (OpenAI-compatible, Python): <code>curl https://openrouter.ai/api/v1/chat/completions -H "Authorization: Bearer YOUR_KEY" -d '{"model":"nvidia/nemotron-3-ultra-550b-a55b:free","messages":[{"role":"user","content":"..."}]}'</code></li>
+<li>For long context: drop an entire codebase / paper / log into the 1M-token window and let Ultra do cross-file analysis;</li>
+<li>For multimodal: send <strong>video + audio + image + text</strong> to Nano Omni 30B and get transcription / document intelligence / GUI analysis back;</li>
+<li>When you are tight on quota, switch the same job across <code>nemotron-3-super-120b</code>, <code>gemma-4-31b</code>, and <code>nemotron-3.5-lightning</code> as fallbacks to preserve the flagship tier's 50/day.</li>
+</ol>
+
+<h2>Nemotron 3 Architecture: Why 550B Is Given Away</h2>
+
+<ul>
+<li><strong>LatentMoE</strong>: interleaved Mamba-2 and MoE layers plus selective Attention, with <strong>Multi-Token Prediction (MTP)</strong> heads doing shared-weight speculative decoding for faster inference;</li>
+<li><strong>NVFP4 pre-training recipe</strong>: weights/activations/gradients mostly in NVFP4 quantization-aware training to cut compute;</li>
+<li>Ultra 550B was pre-trained on roughly <strong>20T tokens</strong> and refined via <strong>Multi-Domain On-Policy Distillation (MOPD)</strong>, distilling strong teachers onto its own rollouts to lift code / math / tool-use / agentic behavior;</li>
+<li>Nano Omni 30B is a <strong>Mamba2-Transformer hybrid MoE</strong> that unifies video/audio/image/text understanding for enterprise Q&amp;A, transcription, OCR, document intelligence, and GUI agents.</li>
+</ul>
+
+<h2>Five $0 Use Cases (Pick by Scenario)</h2>
+
+<ol>
+<li><strong>Million-token document / codebase analysis</strong>: Ultra 550B's 1M window + switchable reasoning for cross-file RAG and whole-repo review;</li>
+<li><strong>Multimodal content understanding</strong>: Nano Omni 30B eats video/audio/image/text for meeting transcription, dense captions, GUI analysis;</li>
+<li><strong>Fast long-context iteration</strong>: 3.5 Lightning shares the 1M context but is lighter, good for multi-turn agents;</li>
+<li><strong>Balanced value</strong>: Super 120B (12B active) at 262K for everyday Q&amp;A and instruction following, uses less quota;</li>
+<li><strong>Safety pre-check</strong>: the content-safety variant (128K, text+image) for input filtering and risk assessment.</li>
+</ol>
+
+<h2>Free-Entry Comparison</h2>
+
+<table>
+<tr><th>Entry</th><th>Free allowance</th><th>Where Nemotron 3 fits</th></tr>
+<tr><td>OpenRouter <code>:free</code></td><td>$0 in / $0 out, 50~1000 req/day (depends on top-up) + 20/min</td><td><strong>Primary</strong>: all five tiers, up to 1M context</td></tr>
+<tr><td>HuggingFace (model cards)</td><td>Open weights, $0 inference if you self-host (use your own compute)</td><td>When you need 1M context / multimodal without the 50/day cap, self-host</td></tr>
+<tr><td>Space Bunny (retired)</td><td>Was $0/$0, 1M context, <strong>expired 2026-10-05</strong></td><td>The same "anonymous/limited-time" slot, Nemotron 3 is a more stable long-term stand-in</td></tr>
+</table>
+
+<p>(All figures from the OpenRouter models API, its docs, and NVIDIA HuggingFace model cards; allowances and expiration dates follow OpenRouter's live in-app display.)</p>
+
+<h2>FAQ</h2>
+
+<div class="faq-section">
+<div class="faq-item">
+<div class="faq-q">Q: Is Nemotron 3 free on OpenRouter? Do I need to pay?</div>
+<div class="faq-a">The <code>:free</code> variants are $0 in / $0 out and do not force a top-up. But free-model requests are tiered by all-time credits: accounts under $10 get 50 requests/day, $10+ accounts get 1,000/day, and there is a 20/min cap.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: Which tier should I pick?</div>
+<div class="faq-a">For 1M long context and complex agents/reasoning use Ultra 550B; for quota-saving everyday Q&amp;A use Super 120B; for video/audio/image/text multimodal use Nano Omni 30B; for speed use 3.5 Lightning.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: Is the context really 1M?</div>
+<div class="faq-a">Ultra 550B and 3.5 Lightning both expose 1,000,000 tokens on their <code>:free</code> variants; Super 120B is 262,144; Nano Omni 30B is 256,000 (per its model card).</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: Will it vanish suddenly?</div>
+<div class="faq-a">These <code>:free</code> variants have no expiration today. The free pool is dynamic, though, Space Bunny retired on 10/05, so keep Nemotron 3 as the primary and Gemma 4 / Qwen3.8 / cohere as fallbacks.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: Can I dodge the cap by making more accounts?</div>
+<div class="faq-a">No. OpenRouter states extra accounts/keys do not change rate limits; capacity is governed globally. On a 429, back off exponentially, honor Retry-After, or switch to a lighter variant.</div>
+</div>
+</div>
+
+<h2>Bottom Line</h2>
+
+<p>Nemotron 3's free policy is refreshingly numeric: <strong>five OpenRouter tiers all $0 (Ultra 550B / Super 120B / Nano Omni 30B multimodal / 3.5 Lightning / content-safety), up to 1M context, no expiration today</strong>; the real constraint is the <strong>free request ceiling</strong> (under $10 top-up: 50/day; $10+: 1000/day; 20/min). If you want a $0 1M-context or $0 multimodal run, this is the most stable entry; for unlimited self-hosting, use NVIDIA's open weights. Allowances and expiration dates are in flux, verify in OpenRouter's app before committing.</p>
+
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="/en" class="logo" style="color:#059669">AI<span class="accent" style="color:#6366F1">FreePlan</span></a><p>AI-powered free tools aggregator. Free forever.</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h4>Product</h4><a href="/en/all">All Tools</a><a href="/en/guides">Guides</a></div>
+      <div class="footer-col"><h4>Legal</h4><a href="/en/privacy">Privacy</a><a href="/en/terms">Terms</a></div>
+    </div>
+  </div>
+  <div class="container footer-bottom">&copy; 2026 AIFreePlan. All rights reserved.</div>
+</footer>
+</body></html>
