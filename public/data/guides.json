@@ -1,6 +1,74 @@
 {
   "guides": [
     {
+      "slug": "nvidia-nemotron-3-free-openrouter-2026",
+      "title_zh": "NVIDIA Nemotron 3 免费攻略：OpenRouter上$0调用，550B旗舰+30B多模态，最高100万上下文",
+      "title_en": "NVIDIA Nemotron 3 Free Guide: Call $0 on OpenRouter, 550B Flagship + 30B Multimodal, up to 1M Context",
+      "description_zh": "NVIDIA Nemotron 3 家族的多档变体已在 OpenRouter 的 :free 免费池上线：Ultra 550B（55B激活）、Super 120B、Nano Omni 30B（文本/音频/图像/视频多模态）、3.5 Lightning，输入输出全 $0，最高 100 万 Token 上下文，无到期日。本文给精确免费额度、OpenRouter 免费限速（50/1000 次每天）、Nemotron 3 架构与规格、和 5 种用法。",
+      "description_en": "NVIDIA's Nemotron 3 family has landed in OpenRouter's :free pool: Ultra 550B (55B active), Super 120B, Nano Omni 30B (text/audio/image/video multimodal), 3.5 Lightning, all $0 in / $0 out with up to 1M-token context and no expiration. This guide covers the exact free allowance, OpenRouter's free rate limits (50/1000 req/day), Nemotron 3 architecture and specs, and five ways to use it.",
+      "category": "llm",
+      "date_published": "2026-10-04",
+      "tags": [
+        "NVIDIA",
+        "Nemotron 3",
+        "Nemotron 3 Ultra 550B",
+        "Nemotron 3 Nano Omni",
+        "OpenRouter",
+        "免费API",
+        "1M上下文",
+        "多模态",
+        "Mamba-2 MoE",
+        "免费池"
+      ],
+      "icon": "⚡",
+      "excerpt_zh": "NVIDIA Nemotron 3 家族 5 档变体上 OpenRouter :free 免费池：Ultra 550B(55B激活)/Super 120B/Nano Omni 30B(视频/音频/图像/文本多模态)/3.5 Lightning/content-safety，输入输出全 $0，最高 100 万 Token 上下文、目前无到期日。免费限速：充值<10美元50次/天、≥10美元1000次/天、20次/分。",
+      "excerpt_en": "NVIDIA Nemotron 3 family lands in OpenRouter's :free pool: Ultra 550B (55B active), Super 120B, Nano Omni 30B (video/audio/image/text multimodal), 3.5 Lightning, content-safety. All $0 in / $0 out, up to 1M-token context, no expiration yet. Free rate limits: < $10 top-up = 50 req/day, $10+ = 1000 req/day, 20/min.",
+      "faq_zh": [
+        {
+          "question": "Nemotron 3 在 OpenRouter 上免费吗？要充值吗？",
+          "answer": "带 :free 后缀的变体输入/输出全 $0，不强制充值。但免费模型请求按累计充值分档限速：<10 美元账号 50 次/天，≥10 美元账号 1000 次/天，分钟级 20 次/分。"
+        },
+        {
+          "question": "这几档怎么选？",
+          "answer": "跑 1M 长上下文、复杂智能体/推理选 Ultra 550B；要省配额的日常问答选 Super 120B；需要视频/音频/图像/文本多模态选 Nano Omni 30B；追求快选 3.5 Lightning。"
+        },
+        {
+          "question": "上下文真的 100 万吗？",
+          "answer": "Ultra 550B 与 3.5 Lightning 的 :free 上下文都是 1,000,000；Super 120B 是 262,144；Nano Omni 30B 是 256,000（以模型卡 256k 为准）。"
+        },
+        {
+          "question": "会突然下架吗？",
+          "answer": "目前这几个 :free 变体都没有到期日。同类里 Space Bunny 10 月 5 日已下架，说明 OpenRouter 免费池是动态的——建议把 Nemotron 3 当主力、同时把 Gemma 4 / Qwen3.8 / cohere 当 fallback。"
+        },
+        {
+          "question": "额度不够能多注册账号绕过吗？",
+          "answer": "不能。OpenRouter 明确说多开账号/Key 不改变限速，容量全局统一管；撞 429 应指数退避 + 遵守 Retry-After，或切更轻的变体。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is Nemotron 3 free on OpenRouter? Do I need to pay?",
+          "answer": "The :free variants are $0 in / $0 out and do not force a top-up. But free-model requests are tiered by all-time credits: under $10 accounts get 50 requests/day, $10+ accounts get 1,000/day, and there is a 20/min cap."
+        },
+        {
+          "question": "Which tier should I pick?",
+          "answer": "For 1M long context and complex agents/reasoning use Ultra 550B; for quota-saving everyday Q&A use Super 120B; for video/audio/image/text multimodal use Nano Omni 30B; for speed use 3.5 Lightning."
+        },
+        {
+          "question": "Is the context really 1M?",
+          "answer": "Ultra 550B and 3.5 Lightning both expose 1,000,000 tokens on their :free variants; Super 120B is 262,144; Nano Omni 30B is 256,000 (per its model card)."
+        },
+        {
+          "question": "Will it vanish suddenly?",
+          "answer": "These :free variants have no expiration today. The free pool is dynamic, Space Bunny retired on 10/05, so keep Nemotron 3 as the primary and Gemma 4 / Qwen3.8 / cohere as fallbacks."
+        },
+        {
+          "question": "Can I dodge the cap by making more accounts?",
+          "answer": "No. OpenRouter states extra accounts/keys do not change rate limits; capacity is governed globally. On a 429, back off exponentially, honor Retry-After, or switch to a lighter variant."
+        }
+      ]
+    },
+    {
       "slug": "space-bunny-alpha-free-openrouter-2026",
       "title_zh": "Space Bunny 免费攻略：OpenRouter匿名模型$0/0，100万上下文多模态，免费预览到2026-10-05",
       "title_en": "Space Bunny Free Guide: $0/$0 Anonymous Model on OpenRouter, 1M-Context Multimodal, Free Until 2026-10-05",
@@ -4558,6 +4626,6 @@
       ]
     }
   ],
-  "updatedAt": "2026-10-03T10:12:10.337072",
+  "updatedAt": "2026-10-04T10:13:58.942114",
   "generatedAt": "2026-08-21T09:24:06.356146"
 }
