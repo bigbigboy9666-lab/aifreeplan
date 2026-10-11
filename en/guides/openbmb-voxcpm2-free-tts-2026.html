@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OpenBMB VoxCPM2 Free TTS Guide: Apache-2.0 at Zero Cost, 30 Languages + 48kHz Studio Audio on an 8GB GPU | AIFreePlan</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="OpenBMB VoxCPM2 Free TTS Guide: Apache-2.0 at Zero Cost, 30 Languages + 48kHz Studio Audio on an 8GB GPU | AIFreePlan">
+<meta property="og:description" content="VoxCPM2 is OpenBMB's open-source 2B-parameter TTS model under Apache-2.0 (weights + code, commercial-ready), trained on 2.36M hours of speech, covering 30 languages + 9 Chinese dialects with 48kHz studio output and RTF down to 0.13. This guide covers free deployment (8GB GPU + pip install voxcpm), Voice Design and three cloning modes, plus a free open-source comparison against CosyVoice3 and Fish Audio S2.">
+<meta property="og:url" content="https://aifreeplan.com/en/guides/openbmb-voxcpm2-free-tts-2026">
+<meta property="og:site_name" content="AIFreePlan">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OpenBMB VoxCPM2 Free TTS Guide: Apache-2.0 at Zero Cost, 30 Languages + 48kHz Studio Audio on an 8GB GPU | AIFreePlan">
+<meta name="twitter:description" content="VoxCPM2 is OpenBMB's open-source 2B-parameter TTS model under Apache-2.0 (weights + code, commercial-ready), trained on 2.36M hours of speech, covering 30 languages + 9 Chinese dialects with 48kHz studio output and RTF down to 0.13. This guide covers free deployment (8GB GPU + pip install voxcpm), Voice Design and three cloning modes, plus a free open-source comparison against CosyVoice3 and Fish Audio S2.">
+<meta name="description" content="VoxCPM2 is OpenBMB's open-source 2B-parameter TTS model under Apache-2.0 (weights + code, commercial-ready), trained on 2.36M hours of speech, covering 30 languages + 9 Chinese dialects with 48kHz studio output and RTF down to 0.13. This guide covers free deployment (8GB GPU + pip install voxcpm), Voice Design and three cloning modes, plus a free open-source comparison against CosyVoice3 and Fish Audio S2.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<link rel="canonical" href="https://aifreeplan.com/en/guides/openbmb-voxcpm2-free-tts-2026">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/openbmb-voxcpm2-free-tts-2026">
+<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/openbmb-voxcpm2-free-tts-2026">
+<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/openbmb-voxcpm2-free-tts-2026">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;--text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;--accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);--green:#059669;--green-light:rgba(5,150,105,.1);--shadow:0 4px 20px rgba(0,0,0,.05);--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover)}
+.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
+.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
+.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
+.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
+.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
+.article-container ul,.article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
+.article-container li{margin-bottom:8px;line-height:1.6}
+.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
+.article-container a{color:var(--accent);text-decoration:underline}
+.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-container th,.article-container td{padding:12px;border:1px solid var(--border);text-align:left}
+.article-container th{background:var(--accent-light);font-weight:600}
+.breadcrumb{font-size:14px;color:var(--text-muted);margin-bottom:24px}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb-sep{margin:0 8px}
+.faq-section{background:var(--bg-white);border-radius:var(--radius);padding:32px;margin-top:40px;box-shadow:var(--shadow)}
+.faq-section h3{margin-top:0;color:var(--text)}
+.faq-item{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border-light)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-weight:700;color:var(--text);margin-bottom:8px}
+.faq-a{color:var(--text-secondary);line-height:1.7}
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff;margin-top:60px}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6)}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col h4{font-size:14px;font-weight:700;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+@media(max-width:768px){.article-container{padding:16px 16px 48px;max-width:100%}.article-container h1{font-size:24px}.article-container h2{font-size:20px}.container{padding:0 16px}.nav{display:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"OpenBMB VoxCPM2 Free TTS Guide: Apache-2.0 at Zero Cost, 30 Languages + 48kHz Studio Audio on an 8GB GPU","description":"VoxCPM2 is OpenBMB's open-source 2B-parameter TTS model under Apache-2.0 (weights + code, commercial-ready), trained on 2.36M hours of speech, covering 30 languages + 9 Chinese dialects with 48kHz studio output and RTF down to 0.13. This guide covers free deployment (8GB GPU + pip install voxcpm), Voice Design and three cloning modes, plus a free open-source comparison against CosyVoice3 and Fish Audio S2.","url":"https://aifreeplan.com/en/guides/openbmb-voxcpm2-free-tts-2026","datePublished":"2026-10-06","dateModified":"2026-10-06","author":{"@type":"Organization","name":"AIFreePlan"},"publisher":{"@type":"Organization","name":"AIFreePlan","url":"https://aifreeplan.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aifreeplan.com/en/guides/openbmb-voxcpm2-free-tts-2026"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aifreeplan.com/en"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://aifreeplan.com/en/guides"},{"@type":"ListItem","position":3,"name":"OpenBMB VoxCPM2 Free TTS Guide: Apache-2.0 at Zero Cost, 30 Languages + 48kHz Studio Audio on an 8GB GPU","item":"https://aifreeplan.com/en/guides/openbmb-voxcpm2-free-tts-2026"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[[{"question": "Is VoxCPM2 really free?", "answer": "The Apache-2.0 license is $0, including commercial use (open weights + code). Inference only costs your own 8GB GPU — no platform billing, no request cap, no expiry. No GPU? The free HF online demo covers it."}, {"question": "How strong a GPU do I need?", "answer": "About 8GB VRAM to start (RTX 3060/4070, A10 class), ~4GB model download. A $0.1–0.5/hr cloud GPU instance works too; add nano-vllm-voxcpm in production to push RTF to 0.13."}, {"question": "What does 48kHz mean, and is it worth it?", "answer": "It is the output sample rate — 16kHz in, 48kHz studio-grade out via built-in super-resolution, far above the 16/24kHz of typical TTS. It matters for audiobooks, brand voice, and ADR; for chat / customer service 16kHz is plenty."}, {"question": "How is Voice Design different from cloning?", "answer": "Voice Design needs no reference audio — a single text description invents a voice from scratch. Cloning needs a reference; controllable cloning keeps timbre while text tags adjust emotion / speed, ultimate cloning adds a transcript for continuation-style replication."}, {"question": "VoxCPM2 vs CosyVoice3 vs Fish Audio — which?", "answer": "Pick VoxCPM2 for top 48kHz audio + text-to-voice; Fish S2 for 80+ languages; CosyVoice3 when you only have 4–6GB VRAM and want Chinese emotion instructions. All three are $0 to self-host."}]]}
+</script>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="/en" class="logo">AI<span class="accent">FreePlan</span></a>
+    <nav class="nav">
+      <a href="/en/all">All Tools</a>
+      <a href="/en/guides">Guides</a>
+      <a href="/en/privacy">Privacy</a>
+      <a href="/zh/guides/openbmb-voxcpm2-free-tts-2026" class="btn btn-primary">中文</a>
+    </nav>
+  </div>
+</header>
+<main class="article-container">
+<nav class="breadcrumb"><a href="/en">Home</a> <span class="breadcrumb-sep">›</span> <a href="/en/guides">Guides</a> <span class="breadcrumb-sep">›</span> <span>OpenBMB VoxCPM2 Free TTS Guide: Apache-2.0 at Zero Cost, 30 Languages + 48kHz Studio Audio on an 8GB GPU</span></nav>
+<h1>OpenBMB VoxCPM2 Free TTS Guide: Apache-2.0 at Zero Cost, 30 Languages + 48kHz Studio Audio on an 8GB GPU</h1>
+
+<p>OpenBMB has open-sourced <strong>VoxCPM2</strong>, a 2B-parameter text-to-speech model. <strong>Weights + code are fully open under Apache-2.0, commercial-ready.</strong> Key figures (verified 2026-10-06 against the official GitHub README and the AI-tools-set entry): trained on <strong>2.36M hours</strong> of multilingual speech, covers <strong>30 languages + 9 Chinese dialects</strong> (Cantonese, Northeast, Sichuan, etc. — you feed in any supported language and it synthesizes directly, no language tag), outputs <strong>48kHz studio audio</strong> (16kHz in, 48kHz out via built-in super-resolution), with <strong>RTF 0.30 (RTX 4090 standard) / 0.13 (Nano-vLLM accelerated)</strong> and first-chunk latency ~150ms / ~80ms. The deployment bar is low: <strong>Python 3.10 + PyTorch 2.5 + CUDA 12.0, ~8GB VRAM, ~4GB model download, and it starts with a single <code>pip install voxcpm</code></strong>. The free conclusion up front: the license is <strong>$0</strong> (Apache-2.0, commercial use included), and inference costs <strong>only your own GPU</strong> — no per-token billing, no daily quota, no expiration. If you have no GPU, the official <strong>HuggingFace online demo (OpenBMB/VoxCPM-Demo)</strong> is free to try Voice Design and cloning. Below are all the verified numbers, deploy steps, four use cases, and an open-source head-to-head.</p>
+
+<h2>The Free Bottom Line</h2>
+
+<ul>
+<li><strong>License is free</strong>: Apache-2.0, open weights + code, commercial use is fine;</li>
+<li><strong>$0 platform fee to run</strong>: it runs on your own 8GB GPU — no per-token pricing, no request caps, no expiry date;</li>
+<li><strong>Zero-barrier trial</strong>: no GPU? The <a href="https://huggingface.co/spaces/OpenBMB/VoxCPM-Demo">free HF online demo</a> covers it;</li>
+<li><strong>Cost floor</strong>: any 8GB card (RTX 3060/4070, A10, or a $0.1–0.5/hr cloud instance) runs it — self-hosting beats every paid TTS API on cost;</li>
+<li><strong>Free fine-tuning</strong>: LoRA / SFT needs just <strong>5–10 minutes of audio</strong> to lock in a custom voice.</li>
+</ul>
+
+<h2>Specs at a Glance (every figure is real)</h2>
+
+<table>
+<tr><th>Item</th><th>Number</th><th>Notes</th></tr>
+<tr><td>Params</td><td><strong>2B</strong></td><td>MiniCPM-4 base, tokenizer-free diffusion-autoregressive (DiTAR)</td></tr>
+<tr><td>Training data</td><td><strong>2,360,000 hours</strong></td><td>Multilingual speech; natural cross-language timbre transfer</td></tr>
+<tr><td>Languages</td><td><strong>30 + 9 Chinese dialects</strong></td><td>Feed any supported language, no language tag</td></tr>
+<tr><td>Output quality</td><td><strong>48kHz</strong> (16kHz in → 48kHz out)</td><td>AudioVAE V2 built-in super-resolution, broadcast grade</td></tr>
+<tr><td>RTF</td><td><strong>0.30</strong> (standard) / <strong>0.13</strong> (Nano-vLLM)</td><td>RTX 4090; RTF&lt;1 means faster-than-realtime, streamable</td></tr>
+<tr><td>First-chunk latency</td><td>~<strong>150ms</strong> / ~<strong>80ms</strong> (accelerated)</td><td>Good for live dialogue / voice interaction</td></tr>
+<tr><td>Accuracy</td><td>zh CER ~<strong>0.97%</strong> · en WER ~<strong>1.84%</strong></td><td>Seed-TTS-Eval (tools-set figures)</td></tr>
+<tr><td>VRAM / download</td><td>~<strong>8GB</strong> VRAM · ~<strong>4GB</strong> model</td><td>RTX 3060/4070 / A10 class is enough</td></tr>
+<tr><td>Runtime</td><td>Python <strong>3.10+</strong> · PyTorch <strong>2.5+</strong> · CUDA <strong>12.0+</strong></td><td>Starts with <code>pip install voxcpm</code></td></tr>
+<tr><td>License</td><td><strong>Apache-2.0</strong></td><td>Open weights + code, commercial OK</td></tr>
+</table>
+
+<p>Four capabilities (what separates it from CosyVoice3 / Fish S2): <strong>Voice Design</strong> creates a brand-new voice from a single text description (e.g. "a gentle middle-aged woman, slightly husky"), <strong>no reference audio needed</strong> — the official "first-of-its-kind"; <strong>Controllable Cloning</strong> keeps the reference timbre while adjusting emotion / speed via text tags; <strong>Ultimate Cloning</strong> takes reference audio + its transcript for continuation-style replication down to breath and rhythm; <strong>Real-Time Streaming</strong> emits audio in chunks with 80ms first-chunk.</p>
+
+<h2>How to Deploy for $0 (install to first sound)</h2>
+
+<ol>
+<li><strong>Prepare the runtime</strong>: Python 3.10+ / PyTorch 2.5+ / CUDA 12.0+, leave ~8GB VRAM free;</li>
+<li><strong>Install</strong>: <code>pip install voxcpm</code> (first run auto-downloads ~4GB of model weights);</li>
+<li><strong>Make it talk from the CLI</strong> (no code needed):<br><code>voxcpm design "gentle middle-aged woman, slow pace" -t "Welcome" -o out.wav</code><br><code>voxcpm clone ref.wav -t "Hello" -o clone.wav</code> (pair <code>VoxCPM2-BaseLM-Q8_0.gguf</code> + <code>VoxCPM2-Acoustic-F16.gguf</code>);</li>
+<li><strong>Browser UI</strong>: run the project's <code>app.py</code> for a Gradio web interface;</li>
+<li><strong>Production throughput</strong>: install <code>nano-vllm-voxcpm</code>, RTF drops to 0.13 and it handles concurrency;</li>
+<li><strong>No GPU?</strong> Use the <a href="https://huggingface.co/spaces/OpenBMB/VoxCPM-Demo">free HF online demo</a>, zero install.</li>
+</ol>
+
+<h2>Four $0 Use Cases (Pick by Scenario)</h2>
+
+<ol>
+<li><strong>Multilingual dubbing</strong>: 30 languages + 9 dialects; one Chinese script straight out in Cantonese / Sichuan / Japanese / English — courseware, short video, overseas content, no cast needed;</li>
+<li><strong>Audiobook / podcast at scale</strong>: design one host voice with Voice Design, freeze the timbre with a LoRA on 5–10 min of audio, then synthesize infinitely — marginal cost ≈ 0;</li>
+<li><strong>Voice agents / hardware</strong>: RTF 0.13 + 80ms first-chunk make live streaming viable; self-hosting means no data leaves your infra and no metered bill;</li>
+<li><strong>Game / VTuber localization</strong>: Ultimate Cloning replicates a character's original voice detail, keeps timbre consistent across shots, and drives 40+ distinct expressions in real time.</li>
+</ol>
+
+<h2>Free Open-Source Head-to-Head: VoxCPM2 vs CosyVoice3 vs Fish Audio S2</h2>
+
+<p>All three are open-source and self-hostable, so "free" holds for every one of them; the differences are audio quality, language count, and cloning depth. Figures from the tools-set comparison table + the official README:</p>
+
+<table>
+<tr><th>Axis</th><th>VoxCPM2</th><th>Fish Audio S2</th><th>CosyVoice3</th></tr>
+<tr><td>Params</td><td><strong>2B</strong></td><td>4B</td><td>0.5B / 1.5B</td></tr>
+<tr><td>Architecture</td><td>Tokenizer-free diffusion-AR</td><td>Dual-AR + DAC</td><td>AR + Flow Matching + HiFi-GAN</td></tr>
+<tr><td>Output audio</td><td><strong>48kHz</strong></td><td>24kHz</td><td>16kHz</td></tr>
+<tr><td>Voice Design (text→voice)</td><td><strong>✅ first-of-kind</strong></td><td>❌</td><td>❌</td></tr>
+<tr><td>Controllable cloning</td><td>✅ text tags</td><td>⚠️ limited</td><td>✅ emotion instructions</td></tr>
+<tr><td>Accuracy</td><td>zh CER 0.97% · en WER 1.84%</td><td>zh CER 0.54% · en WER 0.99%</td><td>zh CER 1.12% · en WER 2.02%</td></tr>
+<tr><td>Languages</td><td><strong>30 + 9 dialects</strong></td><td>80+</td><td>9 + dialects</td></tr>
+<tr><td>First-chunk latency</td><td>~150ms / ~80ms</td><td>—</td><td>~100ms</td></tr>
+<tr><td>RTF (RTX 4090)</td><td>0.30 / <strong>0.13</strong></td><td>—</td><td>~0.15</td></tr>
+<tr><td>VRAM</td><td>~8GB</td><td>~8GB</td><td>~4–6GB</td></tr>
+</table>
+
+<p>Picking: <strong>want top audio (48kHz broadcast) + text-to-voice</strong> → VoxCPM2; <strong>want language breadth (80+)</strong> → Fish S2; <strong>only 4–6GB VRAM + Chinese emotion instructions</strong> → CosyVoice3. All three are $0 to self-host — the only real cost is the card you point it at.</p>
+
+<h2>FAQ</h2>
+
+<div class="faq-section">
+<div class="faq-item">
+<div class="faq-q">Q: Is VoxCPM2 really free?</div>
+<div class="faq-a">The Apache-2.0 license is $0, including commercial use (open weights + code). Inference only costs your own 8GB GPU — no platform billing, no request cap, no expiry. No GPU? The free HF online demo covers it.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: How strong a GPU do I need?</div>
+<div class="faq-a">About 8GB VRAM to start (RTX 3060/4070, A10 class), ~4GB model download. A $0.1–0.5/hr cloud GPU instance works too; add nano-vllm-voxcpm in production to push RTF to 0.13.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: What does 48kHz mean, and is it worth it?</div>
+<div class="faq-a">It is the output sample rate — 16kHz reference in, 48kHz studio-grade out via built-in super-resolution, far above the 16/24kHz of typical TTS. It matters for audiobooks, brand voice, and ADR (voice-over repair); for chat / customer service 16kHz is plenty.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: How is Voice Design different from cloning?</div>
+<div class="faq-a">Voice Design needs no reference audio — a single text description invents a voice from scratch (the official "first-of-kind"). Cloning needs a reference audio; controllable cloning keeps the timbre while text tags adjust emotion / speed, and ultimate cloning adds a transcript for continuation-style replication.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: VoxCPM2 vs CosyVoice3 vs Fish Audio — which?</div>
+<div class="faq-a">Pick VoxCPM2 for top 48kHz audio + text-to-voice; Fish S2 for language breadth (80+); CosyVoice3 when you only have 4–6GB VRAM and want Chinese emotion instructions. All three are $0 to self-host; the difference is quality / languages / cloning depth.</div>
+</div>
+</div>
+
+<h2>Bottom Line</h2>
+
+<p>VoxCPM2 is the most complete "free open-source TTS" option right now: <strong>Apache-2.0 zero license cost + 2B params + 30 languages / 9 dialects + 48kHz studio audio + RTF 0.13 + runs on 8GB VRAM + first-of-kind Voice Design</strong>. It does not rely on "register-and-get-credits" freebies — it hands you the full weights and code, commercial use included. The only real barrier is your 8GB GPU. Have one, self-host; don't have one, and the free HF online demo is enough to master Voice Design and cloning first. Figures follow the official GitHub README and the HuggingFace model card; verify live.</p>
+
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="/en" class="logo" style="color:#059669">AI<span class="accent" style="color:#6366F1">FreePlan</span></a><p>AI-powered free tools aggregator. Free forever.</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h4>Product</h4><a href="/en/all">All Tools</a><a href="/en/guides">Guides</a></div>
+      <div class="footer-col"><h4>Legal</h4><a href="/en/privacy">Privacy</a><a href="/en/terms">Terms</a></div>
+    </div>
+  </div>
+  <div class="container footer-bottom">&copy; 2026 AIFreePlan. All rights reserved.</div>
+</footer>
+</body></html>

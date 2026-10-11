@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TalkLikeYou Free Open-Source Guide: CAS Real-Time Talking Head — 1-Step Sampling at 32.43 FPS, Talks from a Photo on 4GB VRAM | AIFreePlan</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="TalkLikeYou Free Open-Source Guide: CAS Real-Time Talking Head — 1-Step Sampling at 32.43 FPS, Talks from a Photo on 4GB VRAM | AIFreePlan">
+<meta property="og:description" content="TalkLikeYou is a real-time talking-head framework open-sourced by MAIS at the Institute of Automation, Chinese Academy of Sciences — MIT code with all weights on HuggingFace. One photo plus one audio clip makes the photo talk; one-step Flow Matching hits 32.43 FPS with under 4GB VRAM on an RTX 3090, and it can imitate a specific person's speaking habits. Includes the free browser streaming demo, Linux deploy steps, and a comparison vs SoulX-LiveAct.">
+<meta property="og:url" content="https://aifreeplan.com/en/guides/cas-talklikeyou-free-talking-head-2026">
+<meta property="og:site_name" content="AIFreePlan">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TalkLikeYou Free Open-Source Guide: CAS Real-Time Talking Head — 1-Step Sampling at 32.43 FPS, Talks from a Photo on 4GB VRAM | AIFreePlan">
+<meta name="twitter:description" content="TalkLikeYou is a real-time talking-head framework open-sourced by MAIS at the Institute of Automation, Chinese Academy of Sciences — MIT code with all weights on HuggingFace. One photo plus one audio clip makes the photo talk; one-step Flow Matching hits 32.43 FPS with under 4GB VRAM on an RTX 3090, and it can imitate a specific person's speaking habits. Includes the free browser streaming demo, Linux deploy steps, and a comparison vs SoulX-LiveAct.">
+<meta name="description" content="TalkLikeYou is a real-time talking-head framework open-sourced by MAIS at the Institute of Automation, Chinese Academy of Sciences — MIT code with all weights on HuggingFace. One photo plus one audio clip makes the photo talk; one-step Flow Matching hits 32.43 FPS with under 4GB VRAM on an RTX 3090, and it can imitate a specific person's speaking habits. Includes the free browser streaming demo, Linux deploy steps, and a comparison vs SoulX-LiveAct.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<link rel="canonical" href="https://aifreeplan.com/en/guides/cas-talklikeyou-free-talking-head-2026">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/cas-talklikeyou-free-talking-head-2026">
+<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/cas-talklikeyou-free-talking-head-2026">
+<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/cas-talklikeyou-free-talking-head-2026">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;--text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;--accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);--green:#059669;--green-light:rgba(5,150,105,.1);--shadow:0 4px 20px rgba(0,0,0,.05);--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover)}
+.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
+.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
+.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
+.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
+.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
+.article-container ul,.article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
+.article-container li{margin-bottom:8px;line-height:1.6}
+.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
+.article-container a{color:var(--accent);text-decoration:underline}
+.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-container th,.article-container td{padding:12px;border:1px solid var(--border);text-align:left}
+.article-container th{background:var(--accent-light);font-weight:600}
+.breadcrumb{font-size:14px;color:var(--text-muted);margin-bottom:24px}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb-sep{margin:0 8px}
+.faq-section{background:var(--bg-white);border-radius:var(--radius);padding:32px;margin-top:40px;box-shadow:var(--shadow)}
+.faq-section h3{margin-top:0;color:var(--text)}
+.faq-item{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border-light)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-weight:700;color:var(--text);margin-bottom:8px}
+.faq-a{color:var(--text-secondary);line-height:1.7}
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff;margin-top:60px}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6)}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col h4{font-size:14px;font-weight:700;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+@media(max-width:768px){.article-container{padding:16px 16px 48px;max-width:100%}.article-container h1{font-size:24px}.article-container h2{font-size:20px}.container{padding:0 16px}.nav{display:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"TalkLikeYou Free Open-Source Guide: CAS Real-Time Talking Head — 1-Step Sampling at 32.43 FPS, Talks from a Photo on 4GB VRAM","description":"TalkLikeYou is a real-time talking-head framework open-sourced by MAIS at the Institute of Automation, Chinese Academy of Sciences — MIT code with all weights on HuggingFace. One photo plus one audio clip makes the photo talk; one-step Flow Matching hits 32.43 FPS with under 4GB VRAM on an RTX 3090, and it can imitate a specific person's speaking habits. Includes the free browser streaming demo, Linux deploy steps, and a comparison vs SoulX-LiveAct.","url":"https://aifreeplan.com/en/guides/cas-talklikeyou-free-talking-head-2026","datePublished":"2026-10-11","dateModified":"2026-10-11","author":{"@type":"Organization","name":"AIFreePlan"},"publisher":{"@type":"Organization","name":"AIFreePlan","url":"https://aifreeplan.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aifreeplan.com/en/guides/cas-talklikeyou-free-talking-head-2026"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aifreeplan.com/en"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://aifreeplan.com/en/guides"},{"@type":"ListItem","position":3,"name":"TalkLikeYou Free Open-Source Guide: CAS Real-Time Talking Head — 1-Step Sampling at 32.43 FPS, Talks from a Photo on 4GB VRAM","item":"https://aifreeplan.com/en/guides/cas-talklikeyou-free-talking-head-2026"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[[{"question": "Where exactly is TalkLikeYou free?", "answer": "MIT code, HuggingFace weights — one hf download, $0 licensing for download/inference/self-host, no per-call billing or expiry. Your only cost is the GPU (an RTX 3090 holds the streaming demo under 4GB). Weights follow their third-party terms; check THIRD_PARTY_NOTICES before commercial use."}, {"question": "Can I run it without a 12GB card?", "answer": "Yes. The 12GB is a reservation for the full path; the browser streaming demo runs under 4GB at 30+ FPS on an RTX 3090. Start on an 8GB card for photo-to-speech, scale up for long/high-concurrency jobs."}, {"question": "How do I use speaking-habit imitation?", "answer": "Two ways: --person-id picks an official preset (192/166/202) with zero assets, or --habit-reference points at a >=100-frame reference video to learn habits on the fly. Both interpolate into a new habit. PLAD similarity hits 0.62, above MimicTalk 0.48 and PC-Talk 0.39."}, {"question": "What does 32.43 FPS mean?", "answer": "Renders 32.43 frames of talking video per second on one RTX 3090, clearing the 24-30 FPS real-time bar via one-step Flow Matching, ~100x faster than Sonic's image-diffusion route, with low enough latency to drive off a live mic."}, {"question": "TalkLikeYou or SoulX-LiveAct?", "answer": "TalkLikeYou for talking like a specific person, low-VRAM real-time, photo-to-speech. SoulX-LiveAct for hour-level stability, full-body motion, text-instruction control — but it needs dual H100/H200 for 20 FPS, a higher bar."}]]}
+</script>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="/en" class="logo">AI<span class="accent">FreePlan</span></a>
+    <nav class="nav">
+      <a href="/en/all">All Tools</a>
+      <a href="/en/guides">Guides</a>
+      <a href="/en/privacy">Privacy</a>
+      <a href="/zh/guides/cas-talklikeyou-free-talking-head-2026" class="btn btn-primary">中文</a>
+    </nav>
+  </div>
+</header>
+<main class="article-container">
+<nav class="breadcrumb"><a href="/en">Home</a> <span class="breadcrumb-sep">›</span> <a href="/en/guides">Guides</a> <span class="breadcrumb-sep">›</span> <span>TalkLikeYou Free Open-Source Guide: CAS Real-Time Talking Head — 1-Step Sampling at 32.43 FPS, Talks from a Photo on 4GB VRAM</span></nav>
+<h1>TalkLikeYou Free Open-Source Guide: CAS Real-Time Talking Head — 1-Step Sampling at 32.43 FPS, Talks from a Photo on 4GB VRAM</h1>
+
+<p>MAIS at the Institute of Automation, Chinese Academy of Sciences has open-sourced <strong>TalkLikeYou</strong>. Give it one portrait photo and one audio clip and the person in the photo starts talking, with lip motion that can imitate a specific real person's speaking habits. The code is MIT-licensed and every model weight is on HuggingFace: <strong>downloading, inference, and self-hosting all cost $0 in licensing</strong> — no per-call billing.</p>
+
+<h2>The free verdict, up front</h2>
+
+<ul>
+<li><strong>Free code</strong>: the GitHub repo is MIT-licensed, so you can build and ship commercial products on top of it. Model weights live on <a href="https://huggingface.co/doubi-killer/TalkLikeYou">HuggingFace</a> and pull down in one <code>hf download</code> (the weights themselves follow their third-party terms — see THIRD_PARTY_NOTICES).</li>
+<li><strong>Zero platform fee</strong>: it runs on your own GPU — no metered billing, no request cap, no expiry. A single RTX 3090 is enough; the official streaming demo holds <strong>&lt; 4GB</strong> of VRAM.</li>
+<li><strong>Zero-barrier trial</strong>: no big GPU? Start with the official <a href="https://github.com/BQ-Wang0511/TalkLikeYou-Streaming-RealTime-Demo">browser streaming demo</a> — real-time, mic-driven, 30+ FPS on an RTX 3090.</li>
+<li><strong>Recommended stack</strong>: Linux + Python <strong>3.10</strong> + CUDA <strong>12.1</strong> + cuDNN <strong>9</strong> + FFmpeg, with <strong>&ge; 12GB</strong> VRAM recommended for the full inference path (the streaming demo scenario is fine at 4GB).</li>
+</ul>
+
+<h2>Spec sheet (every figure is measured)</h2>
+
+<table>
+<tr><th>Item</th><th>Number</th><th>What it means</th></tr>
+<tr><td>Generation speed</td><td><strong>32.43 FPS</strong></td><td>One-step Flow Matching sampling, ~100x faster than Sonic's image-diffusion route</td></tr>
+<tr><td>VRAM footprint</td><td><strong>&lt; 4GB</strong> (RTX 3090 streaming demo)</td><td>Recommended env reserves 12GB; actual usage is lower</td></tr>
+<tr><td>Sampling steps</td><td><strong>1</strong> (paper default)</td><td>One step reaches near-50-step lip-sync quality</td></tr>
+<tr><td>Lip-sync Sync-C</td><td><strong>8.73</strong> (highest of all)</td><td>How tightly the mouth tracks the audio</td></tr>
+<tr><td>Image quality FID</td><td><strong>7.71</strong></td><td>Less than a third of the runner-up's score</td></tr>
+<tr><td>Habit similarity PLAD</td><td><strong>0.62</strong></td><td>vs MimicTalk 0.48 and PC-Talk 0.39 — clearly ahead</td></tr>
+<tr><td>Reference video</td><td><strong>&ge; 100 frames</strong></td><td>Used to imitate a specific person's speaking habit; overrides --person-id</td></tr>
+<tr><td>Input frame rate</td><td><strong>25 FPS</strong></td><td>Source / reference videos are all 25 FPS</td></tr>
+<tr><td>License / weights</td><td><strong>MIT (code)</strong> + HuggingFace weights</td><td>Weights used under their third-party terms</td></tr>
+</table>
+
+<p>What separates it from the usual "make a photo talk" tools is that it <strong>treats "speaking habit" as a first-class citizen</strong>: it is the first open framework that models an individual's lip-speaking habits as a designable object. You have two entry points — a preset habit ID (recommended <code>192</code> / <code>166</code> / <code>202</code>) to switch styles at zero cost, or a &ge;100-frame reference video so it learns that person's habits on the fly. The two can be blended by interpolation to mint a "new" habit.</p>
+
+<h2>Four capabilities (four ways to ride it for free)</h2>
+
+<ul>
+<li><strong>Photo talks</strong>: drop in a portrait photo + one audio clip, get a video of the person speaking.</li>
+<li><strong>Habit imitation</strong>: imitate a specific person's lip habits via a preset ID or a short reference video, escaping the "average mouth" of everyone else.</li>
+<li><strong>Video dubbing</strong>: point <code>--source</code> at a video and add <code>--pose-mode source</code> to swap only the lip motion while preserving the original head motion and timing — great for multilingual localization and cross-border content.</li>
+<li><strong>Conversational avatar</strong>: wire up an LLM + ASR/TTS for a real-time, interactive digital twin; the official browser demo already drives off a live microphone.</li>
+</ul>
+
+<h2>Five-minute start (Linux)</h2>
+
+<ol>
+<li><strong>Set up the env</strong>: on Linux, install Python 3.10, CUDA 12.1, cuDNN 9, make sure FFmpeg is on PATH, and use an NVIDIA GPU with &ge; 12GB VRAM.</li>
+<li><strong>Clone the code</strong>: <a href="https://github.com/BQ-Wang0511/TalkLikeYou">GitHub</a> main repo, <code>git clone</code>, then <code>conda env create -f environment.yaml</code> (or install a CUDA PyTorch build and <code>pip install -r requirements.txt</code>).</li>
+<li><strong>Pull the weights</strong>: <code>hf download doubi-killer/TalkLikeYou --include "checkpoints/**" --local-dir .</code>; keep the checkpoint directory layout intact.</li>
+<li><strong>Run inference</strong>: prepare one 25 FPS portrait photo/video plus an audio clip, then
+<code>python -m talklikeyou --source photo --audio audio --person-id 192 --stage0 --neutral --sampling-steps 1 --output out.mp4</code>. To change the "speaking habit," swap <code>--person-id</code>, or switch to <code>--habit-reference reference-video</code>.</li>
+</ol>
+
+<h2>Competitor table: TalkLikeYou vs SoulX-LiveAct</h2>
+
+<table>
+<tr><th>Dimension</th><th>TalkLikeYou (Institute of Automation, CAS)</th><th>SoulX-LiveAct (Soul AI Lab)</th></tr>
+<tr><td>Core focus</td><td>Real-time talking head + personal speaking-habit imitation</td><td>Real-time digital human + hour-level stable long generation</td></tr>
+<tr><td>Route</td><td>Two-stage motion-space (light params + renderer)</td><td>Autoregressive diffusion, pixel-level</td></tr>
+<tr><td>Generation speed</td><td><strong>32.43 FPS</strong> (single 3090)</td><td>20 FPS (dual H100/H200)</td></tr>
+<tr><td>End-to-end latency</td><td>Streaming buffer is tunable</td><td>0.94 s</td></tr>
+<tr><td>Duration limit</td><td>Clip-level (no long-horizon optimization)</td><td>Hour-level or infinite, constant VRAM (ConvKV Memory)</td></tr>
+<tr><td>Speaking habit</td><td>Yes (ID / reference video / interpolation)</td><td>No personal-habit modeling</td></tr>
+<tr><td>Motion range</td><td>Lips + head pose</td><td>Full body, expression, gestures, emotion (heart hands, face-palm, big laugh)</td></tr>
+<tr><td>Drive input</td><td>Audio (photo / video)</td><td>Image + audio + text instruction</td></tr>
+</table>
+
+<p><strong>How to choose</strong>: you want "talk like a specific person," low-VRAM real-time, and photo-to-speech → TalkLikeYou. You want "hours without collapse, full-body motion, text-instruction control" → SoulX-LiveAct, but it needs dual H100s to hit 20 FPS, a step up in cost.</p>
+
+<h2>Four scenarios you can ship right away</h2>
+
+<ul>
+<li><strong>Virtual streamer / live commerce</strong>: run real-time locally on 4GB VRAM, no real person on camera, and it can clone the host's own speaking style.</li>
+<li><strong>Multilingual video dubbing</strong>: swap the lip motion while keeping the original head pose and timing, so localized / cross-border content lip-matches the target language naturally.</li>
+<li><strong>Digital twin / virtual customer service</strong>: attach an LLM + speech to build a real-time conversational avatar for live support or smart guides.</li>
+<li><strong>Personalized education / training</strong>: replicate a teacher's or trainer's distinct speaking style for recorded courses or remote teaching.</li>
+</ul>
+
+<h2>Links</h2>
+
+<ul>
+<li>Project page: <a href="https://bq-wang0511.github.io/TalkLikeYou/">bq-wang0511.github.io/TalkLikeYou</a></li>
+<li>GitHub code (MIT): <a href="https://github.com/BQ-Wang0511/TalkLikeYou">github.com/BQ-Wang0511/TalkLikeYou</a></li>
+<li>HuggingFace weights: <a href="https://huggingface.co/doubi-killer/TalkLikeYou">huggingface.co/doubi-killer/TalkLikeYou</a></li>
+<li>arXiv paper: <a href="https://arxiv.org/pdf/2610.06658">arXiv:2610.06658</a></li>
+<li>Streaming real-time demo: <a href="https://github.com/BQ-Wang0511/TalkLikeYou-Streaming-RealTime-Demo">TalkLikeYou-Streaming-RealTime-Demo</a></li>
+</ul>
+
+<div class="faq-section">
+<h3>FAQ</h3>
+<div class="faq-item"><div class="faq-q">Where exactly is TalkLikeYou free?</div><div class="faq-a">The code is MIT and the weights are on HuggingFace — one hf download, $0 in licensing for downloading, inference, and self-hosting, with no per-call billing and no expiry. Your only cost is the GPU itself (an RTX 3090 holds the streaming demo under 4GB). The weights follow their third-party terms, so glance at THIRD_PARTY_NOTICES before commercial use.</div></div>
+<div class="faq-item"><div class="faq-q">Can I run it without a 12GB card?</div><div class="faq-a">Yes. The recommended 12GB reservation is for the full inference path; the browser streaming demo runs under 4GB at 30+ FPS on an RTX 3090. Start on an 8GB card for photo-to-speech and scale up for long or high-concurrency workloads.</div></div>
+<div class="faq-item"><div class="faq-q">How do I actually use "speaking-habit imitation"?</div><div class="faq-a">Two ways: <code>--person-id</code> picks an official preset (192/166/202) with zero assets, or <code>--habit-reference</code> points at a &ge; 100-frame real-person reference video so it learns that person's habits on the fly. Both can be interpolated into a "new" habit. Under the PLAD metric the habit similarity reaches 0.62, ahead of MimicTalk's 0.48 and PC-Talk's 0.39.</div></div>
+<div class="faq-item"><div class="faq-q">What does 32.43 FPS mean in practice?</div><div class="faq-a">It renders 32.43 frames of talking video per second on a single RTX 3090, clearing the 24-30 FPS real-time bar. One-step Flow Matching gets there, ~100x faster than the image-diffusion route (Sonic), with low first-chunk latency so it can drive off a live microphone.</div></div>
+<div class="faq-item"><div class="faq-q">TalkLikeYou or SoulX-LiveAct?</div><div class="faq-a">Pick TalkLikeYou to "talk like a specific person," stay low-VRAM and real-time, and do photo-to-speech. Pick SoulX-LiveAct for hour-level stability, full-body motion, and text-instruction control — but it needs dual H100/H200 for 20 FPS, a higher bar. TalkLikeYou wins on habit modeling + single-card real-time; SoulX-LiveAct wins on long-horizon stability + full-body control.</div></div>
+</div>
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="/en" class="logo" style="color:#059669">AI<span class="accent" style="color:#6366F1">FreePlan</span></a><p>AI-powered free tools aggregator. Free forever.</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h4>Product</h4><a href="/en/all">All Tools</a><a href="/en/guides">Guides</a></div>
+      <div class="footer-col"><h4>Legal</h4><a href="/en/privacy">Privacy</a><a href="/en/terms">Terms</a></div>
+    </div>
+  </div>
+  <div class="container footer-bottom">&copy; 2026 AIFreePlan. All rights reserved.</div>
+</footer>
+</body></html>

@@ -1,6 +1,285 @@
 {
   "guides": [
     {
+      "slug": "cas-talklikeyou-free-talking-head-2026",
+      "title_zh": "TalkLikeYou 免费开源攻略：中科院自动化所实时数字人，1 步采样 32.43 FPS，4GB 显存让照片开口",
+      "title_en": "TalkLikeYou Free Open-Source Guide: CAS Real-Time Talking Head — 1-Step Sampling at 32.43 FPS, Talks from a Photo on 4GB VRAM",
+      "description_zh": "中科院自动化所 MAIS 团队开源的实时数字人框架 TalkLikeYou：代码 MIT、权重全放 HuggingFace。一张照片加一段音频就能让照片开口，1 步 Flow Matching 采样跑出 32.43 FPS、RTX 3090 显存不到 4GB，还能模仿指定真人的说话习惯。含免费浏览器流式 Demo、Linux 部署步骤、与 SoulX-LiveAct 的对比表。",
+      "description_en": "TalkLikeYou is a real-time talking-head framework open-sourced by MAIS at the Institute of Automation, Chinese Academy of Sciences — MIT code with all weights on HuggingFace. One photo plus one audio clip makes the photo talk; one-step Flow Matching hits 32.43 FPS with under 4GB VRAM on an RTX 3090, and it can imitate a specific person's speaking habits. Includes the free browser streaming demo, Linux deploy steps, and a comparison vs SoulX-LiveAct.",
+      "category": "video",
+      "date_published": "2026-10-11",
+      "tags": [
+        "TalkLikeYou",
+        "数字人",
+        "实时说话",
+        "talking-head",
+        "中科院自动化所",
+        "MIT",
+        "开源",
+        "口型同步",
+        "视频配音",
+        "免费",
+        "自托管",
+        "digital-human",
+        "real-time",
+        "faceless-video"
+      ],
+      "icon": "🗣️",
+      "excerpt_zh": "中科院自动化所 MAIS 开源的实时数字人框架 TalkLikeYou，代码 MIT + 权重全放 HuggingFace，0 许可费。一张照片 + 一段音频让照片开口，1 步 Flow Matching 采样 32.43 FPS、RTX 3090 显存 <4GB，可模仿指定真人说话习惯（PLAD 0.62），含免费浏览器流式 Demo。",
+      "excerpt_en": "TalkLikeYou is a real-time talking-head framework open-sourced by MAIS (Institute of Automation, CAS) — MIT code, all weights on HuggingFace, $0 licensing. One photo + one audio clip makes the photo talk; one-step Flow Matching reaches 32.43 FPS under 4GB VRAM on an RTX 3090 and imitates a specific person's habits (PLAD 0.62), with a free browser streaming demo.",
+      "faq_zh": [
+        {
+          "question": "TalkLikeYou 到底哪里免费？",
+          "answer": "代码 MIT 协议，权重放 HuggingFace，一条 hf download 拉下来，下载/推理/本地部署 0 许可费，不按次计费、无过期。唯一成本是你自己的显卡（RTX 3090 显存 <4GB 即可跑流式 Demo）。权重本身走第三方条款，商用前看一眼 THIRD_PARTY_NOTICES。"
+        },
+        {
+          "question": "没有 12GB 大卡能不能跑？",
+          "answer": "能。官方 12GB 是完整推理链路的预留值；浏览器流式 Demo 在 RTX 3090 上实测 <4GB、30+ FPS。入门可先用 8GB 卡跑照片开口，长时/高并发再上大卡。"
+        },
+        {
+          "question": "习惯模仿具体怎么用？",
+          "answer": "两种：--person-id 选官方预设（192/166/202）零素材切风格；--habit-reference 指向 ≥100 帧的真人参考视频现学习惯。两种可插值混合出新习惯。PLAD 指标习惯相似度 0.62，高于 MimicTalk 0.48、PC-Talk 0.39。"
+        },
+        {
+          "question": "32.43 FPS 是什么概念？",
+          "answer": "单张 RTX 3090 每秒渲染 32.43 帧说话视频，超过 24–30 FPS 实时播放门槛。靠一步 Flow Matching 采样，比 Sonic 图像扩散路线快近百倍，首包延迟低到可对着麦克风实时驱动。"
+        },
+        {
+          "question": "跟 SoulX-LiveAct 选哪个？",
+          "answer": "要像特定的人说、低显存实时、照片开口选 TalkLikeYou；要小时级不崩、全身动作、文本指令控制选 SoulX-LiveAct，但它要双卡 H100/H200 才 20 FPS，门槛高一档。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Where exactly is TalkLikeYou free?",
+          "answer": "MIT code, HuggingFace weights — one hf download, $0 licensing for download/inference/self-host, no per-call billing or expiry. Your only cost is the GPU (an RTX 3090 holds the streaming demo under 4GB). Weights follow their third-party terms; check THIRD_PARTY_NOTICES before commercial use."
+        },
+        {
+          "question": "Can I run it without a 12GB card?",
+          "answer": "Yes. The 12GB is a reservation for the full path; the browser streaming demo runs under 4GB at 30+ FPS on an RTX 3090. Start on an 8GB card for photo-to-speech, scale up for long/high-concurrency jobs."
+        },
+        {
+          "question": "How do I use speaking-habit imitation?",
+          "answer": "Two ways: --person-id picks an official preset (192/166/202) with zero assets, or --habit-reference points at a >=100-frame reference video to learn habits on the fly. Both interpolate into a new habit. PLAD similarity hits 0.62, above MimicTalk 0.48 and PC-Talk 0.39."
+        },
+        {
+          "question": "What does 32.43 FPS mean?",
+          "answer": "Renders 32.43 frames of talking video per second on one RTX 3090, clearing the 24-30 FPS real-time bar via one-step Flow Matching, ~100x faster than Sonic's image-diffusion route, with low enough latency to drive off a live mic."
+        },
+        {
+          "question": "TalkLikeYou or SoulX-LiveAct?",
+          "answer": "TalkLikeYou for talking like a specific person, low-VRAM real-time, photo-to-speech. SoulX-LiveAct for hour-level stability, full-body motion, text-instruction control — but it needs dual H100/H200 for 20 FPS, a higher bar."
+        }
+      ]
+    },
+    {
+      "slug": "binkbink-rosebud-ai-game-maker-free-comparison-2026",
+      "title_zh": "BinkBink（虎牙）vs Rosebud AI：AI 做游戏工具免费额度对比（2026），0 元能做出几款可玩小游戏",
+      "title_en": "BinkBink (Huya) vs Rosebud AI: Free-Tier Comparison of 2 AI Game-Maker Tools (2026)",
+      "description_zh": "虎牙 BinkBink（安卓 App）和 Rosebud AI（网页端）是两款「一句话生成完整可玩游戏」的 AI 做游戏工具，2026 年免费玩法差别很大：BinkBink 免登录直接用、无公开积分门槛、好友免安装免注册即玩、初期 1000+ 下载；Rosebud 免费版每周 8,000 积分（免绑卡、每周刷新），付费从 $15/月 起、230 万+ 社区游戏可 Remix。本文列清两家的免费额度、积分消耗、商用与导出权限，帮你在 0 元起步阶段选对工具。",
+      "description_en": "Huya's BinkBink (Android app) and Rosebud AI (web) are two 'one line to a playable game' AI game-makers with very different free plays in 2026: BinkBink is no-login with no published credit gate, friends play install-free / register-free, 1,000+ initial downloads; Rosebud's free tier gives 8,000 credits/week (no card, weekly refill) and paid starts at $15/mo over 2.3M+ remixable community games. This guide lists both free allowances, credit costs, and commercial / export rights so you pick the right tool at zero cost.",
+      "category": "general",
+      "date_published": "2026-10-09",
+      "tags": [
+        "BinkBink",
+        "虎牙",
+        "Huya",
+        "Rosebud AI",
+        "Rosebud",
+        "AI做游戏",
+        "游戏制作",
+        "AI Game Maker",
+        "免费额度",
+        "积分",
+        "对比",
+        "Remix",
+        "Steam",
+        "休闲游戏",
+        "免费"
+      ],
+      "icon": "🎮",
+      "excerpt_zh": "虎牙 BinkBink（安卓 App，免登录、免安装免注册分享、初期 1000+ 下载）vs Rosebud AI（网页端，免费版每周 8,000 积分免绑卡、2.3M+ 社区游戏可 Remix、付费 $15/月起、Pro $50/月含代码导出 + Steam、10x Dev 起商用 0 抽成）——0 元起步选哪款。",
+      "excerpt_en": "Huya's BinkBink (Android app, no login, install-free / register-free sharing, 1,000+ initial downloads) vs Rosebud AI (web, free 8,000 credits/week no card, 2.3M+ remixable games, paid from $15/mo, Pro $50/mo code export + Steam, 10x Dev full commercial rights with 0 commission) - which zero-cost start wins.",
+      "faq_zh": [
+        {
+          "question": "哪家免费额度更大方？",
+          "answer": "看维度。Rosebud 白纸黑字给「免费版每周 8,000 积分、免绑卡、可用地区每周刷新」，规则清楚可预期；BinkBink 免费创作且免登录，但没公布公开积分/次数门槛（早期，1000+ 下载）。要长期稳定免费池选 Rosebud；要手机零门槛随玩随分享选 BinkBink。"
+        },
+        {
+          "question": "Rosebud 的 8,000 免费积分能干多少事？",
+          "answer": "默认模型 Rosie 一次编辑约 2,000 积分、premium 约 20,000/回合；生成图/精灵动画 200–2,000、音效约 1,000。8,000 积分≈3–4 次 premium 大改，或几十次默认小改 + 若干资产生成，够把小游戏从零做到能玩。"
+        },
+        {
+          "question": "做出来的游戏能商用吗？",
+          "answer": "Rosebud 可以：10x Dev（$30/月）及以上含完整商用授权，可卖游戏/素材、任意平台发布，Rosebud 不收分成；Pro 起能下载代码、导出 Windows 包发 Steam。BinkBink 未明确公示商用条款，以官方最新协议为准。"
+        },
+        {
+          "question": "BinkBink 一定要注册登录吗？",
+          "answer": "不用。进入 App 后无需注册登录即可在首页创作、试玩别人的游戏；生成后一键分享链接，好友免安装免注册直接玩。账号功能（关注、社区互动）才需要登录。"
+        },
+        {
+          "question": "需要很强的电脑配置吗？",
+          "answer": "都不需要。Rosebud 是网页平台，浏览器打开即可，生成在云端跑；BinkBink 是安卓 App，手机直接玩，分享出去的游戏也是浏览器即玩，不占本地算力。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Which has the more generous free tier?",
+          "answer": "Depends on the axis. Rosebud spells it out: free plan, 8,000 credits/week, no credit card, weekly refill in eligible regions. BinkBink is free to create and needs no login, but has no published credit/usage cap (early stage, 1,000+ downloads). For a stable free pool choose Rosebud; for a zero-barrier phone experience choose BinkBink."
+        },
+        {
+          "question": "What can Rosebud's 8,000 free credits do?",
+          "answer": "Default Rosie edit turn ~2,000 credits, premium model ~20,000/turn; an image / sprite animation is 200-2,000; a sound is ~1,000. So 8,000 credits is about 3-4 premium big edits, or dozens of default small edits plus asset generation - enough to take a small game from scratch to playable."
+        },
+        {
+          "question": "Can I sell or commercially use the games I make?",
+          "answer": "On Rosebud, yes: 10x Dev ($30/mo) and above include full commercial rights - sell games and assets, publish anywhere, Rosebud takes no commission; Pro and above also give code download and a Windows export for Steam. BinkBink has not published commercial terms yet, so check its latest agreement."
+        },
+        {
+          "question": "Does BinkBink require an account?",
+          "answer": "No. You can create from the home screen with no registration or login and play others' games; a generated game shares as a link your friends open install-free and register-free. An account is only needed for following creators and community features."
+        },
+        {
+          "question": "Do I need a powerful computer?",
+          "answer": "No. Rosebud is a web platform - open it in a browser and generation runs in the cloud. BinkBink is an Android app played on your phone, and its shared games run in a browser too, so no local compute is required."
+        }
+      ]
+    },
+    {
+      "slug": "seko-updream-xiaoyunque-free-comparison-2026",
+      "title_zh": "Seko、updream、小云雀三大 AI 短剧/视频创作 Agent 免费额度对比（2026）：0 元起步谁最划算",
+      "title_en": "Seko vs updream vs Xiaoyunque: Free-Tier Comparison of 3 AI Short-Drama / Video Creation Agents (2026)",
+      "description_zh": "商汤 Seko、B站 updream、字节剪映小云雀——三个刚火起来的 AI 视频/短剧创作 Agent，免费额度差别很大。本文列出三家的注册礼、每日登录赠积分、付费入门价（¥39/月起 vs 注册送 5000 积分 vs 每天 120 积分）、支持的视频模型和数字人数量，帮你在 0 元起步阶段挑到最划算的那个。",
+      "description_en": "SenseTime Seko, Bilibili updream, and ByteDance Jianying's Xiaoyunque are three newly popular AI short-drama / video-creation agents with very different free tiers. This guide lists signup bonuses, daily-login credits, entry pricing (from CNY 39/mo vs 5,000 signup credits vs 120 credits/day), supported video models, and digital-human counts, so you can pick the best zero-cost start.",
+      "category": "video",
+      "date_published": "2026-10-08",
+      "tags": [
+        "Seko",
+        "updream",
+        "小云雀",
+        "Xiaoyunque",
+        "AI短剧",
+        "视频创作Agent",
+        "数字人",
+        "免费额度",
+        "对比",
+        "SenseTime",
+        "Bilibili",
+        "ByteDance",
+        "Seedance",
+        "免费"
+      ],
+      "icon": "🎬",
+      "excerpt_zh": "商汤 Seko、B站 updream、字节剪映小云雀三大 AI 短剧/视频创作 Agent 免费额度对比：小云雀每天 120 积分≈12 个视频、updream 注册送 5000 积分、Seko ¥39/月起，0 元起步谁最划算。",
+      "excerpt_en": "Free-tier comparison of three AI short-drama / video-creation agents: Xiaoyunque gives 120 credits/day (~12 videos), updream gives 5,000 signup credits, Seko starts at CNY 39/mo. Which zero-cost start is best?",
+      "faq_zh": [
+        {
+          "question": "三家哪个免费额度最划算？",
+          "answer": "看用途。纯免费日产短视频/数字人口播，小云雀每天 120 积分（≈12 个视频）最香；想要一次性大额积分池，updream 注册送 5000 积分；想连载短剧且接受付费入门，Seko ¥39/月（500 积分）起步。三家都能 0 元开账号。"
+        },
+        {
+          "question": "updream 一定要 B站账号和邀请码吗？",
+          "answer": "是的，updream 目前是内测，注册需要 B站账号 + 邀请码，这也是它「注册送 5000 积分」的门槛。没有邀请码就先蹲小云雀或 Seko。"
+        },
+        {
+          "question": "生成的视频/短剧可以商用吗？",
+          "answer": "小云雀提供 200+ 可商用数字人；Seko 付费会员通常带商用授权、企业版更全；updream 以 B站投稿为主要场景。具体以各自官网/会员协议为准。"
+        },
+        {
+          "question": "需要很强的电脑配置吗？",
+          "answer": "不需要。三家都是云端在线平台（小云雀另有安卓 APP），浏览器打开即可，生成在云端跑，不占本地算力。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Which of the three has the best free tier?",
+          "answer": "Depends on use. For pure free daily short-video / digital-human output, Xiaoyunque's 120 credits/day (~12 videos) wins. For a one-time large credit pool, updream gives 5,000 on signup. For serialized short-dramas and you accept paying to start, Seko from CNY 39/mo (500 credits). All three open free accounts."
+        },
+        {
+          "question": "Does updream require a Bilibili account and an invite code?",
+          "answer": "Yes. updream is in beta; signup needs a Bilibili account plus an invite code, which gates its 5,000-credit signup bonus. Without an invite code, start with Xiaoyunque or Seko."
+        },
+        {
+          "question": "Can the generated videos be used commercially?",
+          "answer": "Xiaoyunque offers 200+ commercial digital humans; Seko paid tiers usually include commercial licensing (Enterprise more complete); updream centers on posting to Bilibili. Follow each site's terms."
+        },
+        {
+          "question": "Do I need a powerful computer?",
+          "answer": "No. All three are cloud platforms (Xiaoyunque also has an Android app). Open in a browser; generation runs in the cloud, no local GPU needed."
+        }
+      ]
+    },
+    {
+      "slug": "openbmb-voxcpm2-free-tts-2026",
+      "title_zh": "OpenBMB VoxCPM2 免费开源 TTS 攻略：Apache-2.0 零成本，8GB 显存跑 30 语种 + 48kHz 录音室音质",
+      "title_en": "OpenBMB VoxCPM2 Free TTS Guide: Apache-2.0 at Zero Cost, 30 Languages + 48kHz Studio Audio on an 8GB GPU",
+      "description_zh": "OpenBMB（面壁智能）开源的 2B 参数语音合成模型 VoxCPM2，Apache-2.0 权重+代码全开放、可商用，训练数据 236 万小时，支持 30 种语言 + 9 种中文方言，48kHz 录音室级输出，RTF 低至 0.13。本文给全免费部署步骤（8GB 显存 + pip install voxcpm）、Voice Design / 三种克隆玩法、和与 CosyVoice3 / Fish Audio S2 的免费开源横评。",
+      "description_en": "VoxCPM2 is OpenBMB's open-source 2B-parameter TTS model under Apache-2.0 (weights + code, commercial-ready), trained on 2.36M hours of speech, covering 30 languages + 9 Chinese dialects with 48kHz studio output and RTF down to 0.13. This guide covers free deployment (8GB GPU + pip install voxcpm), Voice Design and three cloning modes, plus a free open-source comparison against CosyVoice3 and Fish Audio S2.",
+      "category": "audio",
+      "date_published": "2026-10-06",
+      "tags": [
+        "OpenBMB",
+        "VoxCPM2",
+        "语音合成",
+        "TTS",
+        "开源",
+        "Apache-2.0",
+        "声音克隆",
+        "Voice Design",
+        "多语言",
+        "免费",
+        "自托管",
+        "faceless-audio"
+      ],
+      "icon": "🎙️",
+      "excerpt_zh": "面壁 OpenBMB 开源 2B 参数 TTS 模型 VoxCPM2，Apache-2.0 权重+代码全开放可商用，236 万小时训练、30 语种 + 9 方言、48kHz 录音室级、RTF 低至 0.13，8GB 显存即可自托管 0 元，首创文字造声(Voice Design)。",
+      "excerpt_en": "OpenBMB's open-source 2B TTS model VoxCPM2: Apache-2.0 weights + code, commercial-ready. 2.36M hours trained, 30 languages + 9 dialects, 48kHz studio audio, RTF down to 0.13, self-host on an 8GB GPU at $0, first-of-kind Voice Design.",
+      "faq_zh": [
+        {
+          "question": "VoxCPM2 真的全免费吗？",
+          "answer": "License 层 Apache-2.0 全免费、可商用（权重 + 代码开放）；推理层只花你自己 8GB 显卡的电，没有平台计费、没有次数上限、没有到期日。没卡的话 HuggingFace 免费在线 Demo 也白嫖。"
+        },
+        {
+          "question": "需要多强的显卡？",
+          "answer": "约 8GB 显存起步（RTX 3060/4070、A10 级别），模型下载约 4GB。云端租 $0.1–0.5/时的 GPU 实例也能跑；生产加 nano-vllm-voxcpm 可把 RTF 压到 0.13。"
+        },
+        {
+          "question": "48kHz 是什么意思？值得吗？",
+          "answer": "指输出采样率——16kHz 参考进来、内部超分直出 48kHz 录音室级，远高于普通 TTS 的 16/24kHz。做有声书、品牌声音、影视补录这种对音质敏感的场景才用得上，普通聊天/客服 16kHz 就够。"
+        },
+        {
+          "question": "Voice Design 和克隆到底差在哪？",
+          "answer": "Voice Design 不用任何参考音频，一句话描述就能凭空造一个声音（官方称全球首创）；克隆需要一段参考音频，可控克隆能在保留音色的同时用文本标签调情感/语速，终极克隆加一份转录文本做延续式复刻。"
+        },
+        {
+          "question": "和 CosyVoice3、Fish Audio 怎么选？",
+          "answer": "要 48kHz 顶音质 + 文字造声选 VoxCPM2；语种要多（80+）选 Fish S2；显存只 4–6GB、要中文情感指令选 CosyVoice3。三家都能自托管 0 元，差别在音质 / 语种 / 克隆深度。"
+        }
+      ],
+      "faq_en": [
+        {
+          "question": "Is VoxCPM2 really free?",
+          "answer": "The Apache-2.0 license is $0, including commercial use (open weights + code). Inference only costs your own 8GB GPU — no platform billing, no request cap, no expiry. No GPU? The free HF online demo covers it."
+        },
+        {
+          "question": "How strong a GPU do I need?",
+          "answer": "About 8GB VRAM to start (RTX 3060/4070, A10 class), ~4GB model download. A $0.1–0.5/hr cloud GPU instance works too; add nano-vllm-voxcpm in production to push RTF to 0.13."
+        },
+        {
+          "question": "What does 48kHz mean, and is it worth it?",
+          "answer": "It is the output sample rate — 16kHz in, 48kHz studio-grade out via built-in super-resolution, far above the 16/24kHz of typical TTS. It matters for audiobooks, brand voice, and ADR; for chat / customer service 16kHz is plenty."
+        },
+        {
+          "question": "How is Voice Design different from cloning?",
+          "answer": "Voice Design needs no reference audio — a single text description invents a voice from scratch. Cloning needs a reference; controllable cloning keeps timbre while text tags adjust emotion / speed, ultimate cloning adds a transcript for continuation-style replication."
+        },
+        {
+          "question": "VoxCPM2 vs CosyVoice3 vs Fish Audio — which?",
+          "answer": "Pick VoxCPM2 for top 48kHz audio + text-to-voice; Fish S2 for 80+ languages; CosyVoice3 when you only have 4–6GB VRAM and want Chinese emotion instructions. All three are $0 to self-host."
+        }
+      ]
+    },
+    {
       "slug": "nvidia-nemotron-3-free-openrouter-2026",
       "title_zh": "NVIDIA Nemotron 3 免费攻略：OpenRouter上$0调用，550B旗舰+30B多模态，最高100万上下文",
       "title_en": "NVIDIA Nemotron 3 Free Guide: Call $0 on OpenRouter, 550B Flagship + 30B Multimodal, up to 1M Context",
@@ -4626,6 +4905,6 @@
       ]
     }
   ],
-  "updatedAt": "2026-10-04T10:13:58.942114",
+  "updatedAt": "2026-10-11T10:06:29.866915",
   "generatedAt": "2026-08-21T09:24:06.356146"
 }

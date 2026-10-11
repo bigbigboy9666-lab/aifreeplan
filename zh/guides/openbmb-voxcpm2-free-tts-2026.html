@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OpenBMB VoxCPM2 免费开源 TTS 攻略：Apache-2.0 零成本，8GB 显存跑 30 语种 + 48kHz 录音室音质 | AIFreePlan</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="OpenBMB VoxCPM2 免费开源 TTS 攻略：Apache-2.0 零成本，8GB 显存跑 30 语种 + 48kHz 录音室音质 | AIFreePlan">
+<meta property="og:description" content="OpenBMB（面壁智能）开源的 2B 参数语音合成模型 VoxCPM2，Apache-2.0 权重+代码全开放、可商用，训练数据 236 万小时，支持 30 种语言 + 9 种中文方言，48kHz 录音室级输出，RTF 低至 0.13。本文给全免费部署步骤（8GB 显存 + pip install voxcpm）、Voice Design / 三种克隆玩法、和与 CosyVoice3 / Fish Audio S2 的免费开源横评。">
+<meta property="og:url" content="https://aifreeplan.com/zh/guides/openbmb-voxcpm2-free-tts-2026">
+<meta property="og:site_name" content="AIFreePlan">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OpenBMB VoxCPM2 免费开源 TTS 攻略：Apache-2.0 零成本，8GB 显存跑 30 语种 + 48kHz 录音室音质 | AIFreePlan">
+<meta name="twitter:description" content="OpenBMB（面壁智能）开源的 2B 参数语音合成模型 VoxCPM2，Apache-2.0 权重+代码全开放、可商用，训练数据 236 万小时，支持 30 种语言 + 9 种中文方言，48kHz 录音室级输出，RTF 低至 0.13。本文给全免费部署步骤（8GB 显存 + pip install voxcpm）、Voice Design / 三种克隆玩法、和与 CosyVoice3 / Fish Audio S2 的免费开源横评。">
+<meta name="description" content="OpenBMB（面壁智能）开源的 2B 参数语音合成模型 VoxCPM2，Apache-2.0 权重+代码全开放、可商用，训练数据 236 万小时，支持 30 种语言 + 9 种中文方言，48kHz 录音室级输出，RTF 低至 0.13。本文给全免费部署步骤（8GB 显存 + pip install voxcpm）、Voice Design / 三种克隆玩法、和与 CosyVoice3 / Fish Audio S2 的免费开源横评。">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<link rel="canonical" href="https://aifreeplan.com/zh/guides/openbmb-voxcpm2-free-tts-2026">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/openbmb-voxcpm2-free-tts-2026">
+<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/openbmb-voxcpm2-free-tts-2026">
+<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/openbmb-voxcpm2-free-tts-2026">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;--text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;--accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);--green:#059669;--green-light:rgba(5,150,105,.1);--shadow:0 4px 20px rgba(0,0,0,.05);--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover)}
+.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
+.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
+.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
+.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
+.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
+.article-container ul,.article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
+.article-container li{margin-bottom:8px;line-height:1.6}
+.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
+.article-container a{color:var(--accent);text-decoration:underline}
+.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-container th,.article-container td{padding:12px;border:1px solid var(--border);text-align:left}
+.article-container th{background:var(--accent-light);font-weight:600}
+.breadcrumb{font-size:14px;color:var(--text-muted);margin-bottom:24px}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb-sep{margin:0 8px}
+.faq-section{background:var(--bg-white);border-radius:var(--radius);padding:32px;margin-top:40px;box-shadow:var(--shadow)}
+.faq-section h3{margin-top:0;color:var(--text)}
+.faq-item{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border-light)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-weight:700;color:var(--text);margin-bottom:8px}
+.faq-a{color:var(--text-secondary);line-height:1.7}
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff;margin-top:60px}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6)}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col h4{font-size:14px;font-weight:700;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+@media(max-width:768px){.article-container{padding:16px 16px 48px;max-width:100%}.article-container h1{font-size:24px}.article-container h2{font-size:20px}.container{padding:0 16px}.nav{display:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"OpenBMB VoxCPM2 免费开源 TTS 攻略：Apache-2.0 零成本，8GB 显存跑 30 语种 + 48kHz 录音室音质","description":"OpenBMB（面壁智能）开源的 2B 参数语音合成模型 VoxCPM2，Apache-2.0 权重+代码全开放、可商用，训练数据 236 万小时，支持 30 种语言 + 9 种中文方言，48kHz 录音室级输出，RTF 低至 0.13。本文给全免费部署步骤（8GB 显存 + pip install voxcpm）、Voice Design / 三种克隆玩法、和与 CosyVoice3 / Fish Audio S2 的免费开源横评。","url":"https://aifreeplan.com/zh/guides/openbmb-voxcpm2-free-tts-2026","datePublished":"2026-10-06","dateModified":"2026-10-06","author":{"@type":"Organization","name":"AIFreePlan"},"publisher":{"@type":"Organization","name":"AIFreePlan","url":"https://aifreeplan.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aifreeplan.com/zh/guides/openbmb-voxcpm2-free-tts-2026"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://aifreeplan.com/zh"},{"@type":"ListItem","position":2,"name":"攻略","item":"https://aifreeplan.com/zh/guides"},{"@type":"ListItem","position":3,"name":"OpenBMB VoxCPM2 免费开源 TTS 攻略：Apache-2.0 零成本，8GB 显存跑 30 语种 + 48kHz 录音室音质","item":"https://aifreeplan.com/zh/guides/openbmb-voxcpm2-free-tts-2026"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[[{"question": "VoxCPM2 真的全免费吗？", "answer": "License 层 Apache-2.0 全免费、可商用（权重 + 代码开放）；推理层只花你自己 8GB 显卡的电，没有平台计费、没有次数上限、没有到期日。没卡的话 HuggingFace 免费在线 Demo 也白嫖。"}, {"question": "需要多强的显卡？", "answer": "约 8GB 显存起步（RTX 3060/4070、A10 级别），模型下载约 4GB。云端租 $0.1–0.5/时的 GPU 实例也能跑；生产加 nano-vllm-voxcpm 可把 RTF 压到 0.13。"}, {"question": "48kHz 是什么意思？值得吗？", "answer": "指输出采样率——16kHz 参考进来、内部超分直出 48kHz 录音室级，远高于普通 TTS 的 16/24kHz。做有声书、品牌声音、影视补录这种对音质敏感的场景才用得上，普通聊天/客服 16kHz 就够。"}, {"question": "Voice Design 和克隆到底差在哪？", "answer": "Voice Design 不用任何参考音频，一句话描述就能凭空造一个声音（官方称全球首创）；克隆需要一段参考音频，可控克隆能在保留音色的同时用文本标签调情感/语速，终极克隆加一份转录文本做延续式复刻。"}, {"question": "和 CosyVoice3、Fish Audio 怎么选？", "answer": "要 48kHz 顶音质 + 文字造声选 VoxCPM2；语种要多（80+）选 Fish S2；显存只 4–6GB、要中文情感指令选 CosyVoice3。三家都能自托管 0 元，差别在音质 / 语种 / 克隆深度。"}]]}
+</script>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="/zh" class="logo">AI<span class="accent">FreePlan</span></a>
+    <nav class="nav">
+      <a href="/zh/all">全部工具</a>
+      <a href="/zh/guides">攻略</a>
+      <a href="/zh/privacy">隐私</a>
+      <a href="/en/guides/openbmb-voxcpm2-free-tts-2026" class="btn btn-primary">English</a>
+    </nav>
+  </div>
+</header>
+<main class="article-container">
+<nav class="breadcrumb"><a href="/zh">首页</a> <span class="breadcrumb-sep">›</span> <a href="/zh/guides">攻略</a> <span class="breadcrumb-sep">›</span> <span>OpenBMB VoxCPM2 免费开源 TTS 攻略：Apache-2.0 零成本，8GB 显存跑 30 语种 + 48kHz 录音室音质</span></nav>
+<h1>OpenBMB VoxCPM2 免费开源 TTS 攻略：Apache-2.0 零成本，8GB 显存跑 30 语种 + 48kHz 录音室音质</h1>
+
+<p>面壁智能 OpenBMB 团队把 <strong>VoxCPM2</strong> 直接开源了——2B 参数的语音合成（TTS）模型，<strong>权重 + 代码全开放，Apache-2.0 协议，可商用</strong>。关键数字（2026-10-06 实测 GitHub 官方 README + ai-bot.cn 条目）：训练数据 <strong>236 万小时</strong>多语言语音，支持 <strong>30 种语言 + 9 种中文方言</strong>（粤语、东北话、川话等，直接输入任意语种文本就合成、不用标语言），输出 <strong>48kHz 录音室级</strong>（吃 16kHz 参考、内部超分辨率直出 48kHz），实时率 <strong>RTF 0.30（4090 标准）/ 0.13（Nano-vLLM 加速）</strong>，首包延迟 ~150ms / ~80ms。部署门槛低得离谱：<strong>Python 3.10 + PyTorch 2.5 + CUDA 12.0，约 8GB 显存，模型下载约 4GB，一条 <code>pip install voxcpm</code> 起步</strong>。先给免费结论：License <strong>0 元</strong>（Apache-2.0，商用的也行），推理成本<strong>只吃你自己的显存</strong>——没有按 Token 计费、没有每日额度、没有到期日；没 GPU 的话官方还挂了 <strong>HuggingFace 免费在线 Demo（OpenBMB/VoxCPM-Demo）</strong>，白嫖体验 Voice Design 和克隆。下面是全部实测数字、部署步骤、四种玩法和开源横评。</p>
+
+<h2>免费结论先给</h2>
+
+<ul>
+<li><strong>License 免费</strong>：Apache-2.0，权重 + 代码开放，商用不收费；</li>
+<li><strong>推理 0 平台费</strong>：跑在你自己的 8GB 显卡上，不按 Token / 按量计费，无次数上限、无到期日；</li>
+<li><strong>零门槛体验</strong>：没 GPU 也能用 <a href="https://huggingface.co/spaces/OpenBMB/VoxCPM-Demo">HF 免费在线 Demo</a>；</li>
+<li><strong>成本下限</strong>：有 8GB 显存（RTX 3060/4070、A10、云端 $0.1–0.5/时的实例）就能跑，单机自托管比任何付费 TTS API 都便宜；</li>
+<li><strong>微调免费</strong>：LoRA / SFT 只需 <strong>5–10 分钟音频</strong>就能定制专属声音。</li>
+</ul>
+
+<h2>规格速览（全部实测数字）</h2>
+
+<table>
+<tr><th>项目</th><th>数字</th><th>说明</th></tr>
+<tr><td>参数规模</td><td><strong>2B</strong></td><td>MiniCPM-4 基座，无分词器扩散自回归（DiTAR）</td></tr>
+<tr><td>训练数据</td><td><strong>2,360,000 小时</strong></td><td>多语言语音，跨语言音色迁移自然</td></tr>
+<tr><td>语言覆盖</td><td><strong>30 种 + 9 种中文方言</strong></td><td>直接输入任意语种文本合成，无需语言标签</td></tr>
+<tr><td>输出音质</td><td><strong>48kHz</strong>（16kHz 进 → 48kHz 出）</td><td>AudioVAE V2 内置超分，广播级</td></tr>
+<tr><td>实时率 RTF</td><td><strong>0.30</strong>（标准）/ <strong>0.13</strong>（Nano-vLLM）</td><td>RTX 4090；RTF&lt;1 即比实时快，可流式</td></tr>
+<tr><td>首包延迟</td><td>~<strong>150ms</strong>（标准）/ ~<strong>80ms</strong>（加速）</td><td>适合实时对话 / 语音交互</td></tr>
+<tr><td>发音准确度</td><td>中文 CER ~<strong>0.97%</strong> · 英文 WER ~<strong>1.84%</strong></td><td>Seed-TTS-Eval（AI工具集口径）</td></tr>
+<tr><td>显存 / 下载</td><td>~<strong>8GB</strong> VRAM · ~<strong>4GB</strong> 模型</td><td>RTX 3060/4070 / A10 级别即可</td></tr>
+<tr><td>环境</td><td>Python <strong>3.10+</strong> · PyTorch <strong>2.5+</strong> · CUDA <strong>12.0+</strong></td><td><code>pip install voxcpm</code> 起步</td></tr>
+<tr><td>协议</td><td><strong>Apache-2.0</strong></td><td>权重 + 代码开放，可商用</td></tr>
+</table>
+
+<p>四个能力（这是它跟 CosyVoice3 / Fish 拉开差距的地方）：<strong>Voice Design</strong> 只用一句文字描述（比如"温柔的中年女性，略带沙哑"）凭空造一个声音，<strong>无需任何参考音频</strong>——这是官方定位的"全球首创"；<strong>可控克隆</strong> 保留参考音色的同时用文本标签实时调情感 / 语速；<strong>终极克隆</strong> 给参考音频 + 它的转录文本，做"延续式"复刻，连气息节奏都还原；<strong>实时流式</strong> 逐块出音频、首包 80ms。</p>
+
+<h2>怎么 0 元部署（从装到出声）</h2>
+
+<ol>
+<li><strong>准备环境</strong>：Python 3.10+ / PyTorch 2.5+ / CUDA 12.0+，显存留够 ~8GB；</li>
+<li><strong>装依赖</strong>：<code>pip install voxcpm</code>（首次自动下载约 4GB 模型权重）；</li>
+<li><strong>命令行直接出声</strong>（不用写代码）：<br><code>voxcpm design "温柔的中年女性，语速偏慢" -t "欢迎使用" -o out.wav</code><br><code>voxcpm clone ref.wav -t "你好" -o clone.wav</code>（配 <code>VoxCPM2-BaseLM-Q8_0.gguf</code> + <code>VoxCPM2-Acoustic-F16.gguf</code>）；</li>
+<li><strong>浏览器可视化</strong>：跑项目里的 <code>app.py</code>，Gradio 网页界面点一点就能合成；</li>
+<li><strong>生产并发</strong>：装 <code>nano-vllm-voxcpm</code>，RTF 压到 0.13，扛并发；</li>
+<li><strong>没 GPU？</strong>：直接用 <a href="https://huggingface.co/spaces/OpenBMB/VoxCPM-Demo">HF 免费在线 Demo</a>，零安装体验 Voice Design + 克隆。</li>
+</ol>
+
+<h2>四种 0 元玩法（按场景挑）</h2>
+
+<ol>
+<li><strong>多语种内容配音</strong>：30 种语言 + 9 方言，一句中文脚本直出粤语 / 川话 / 日语 / 英语版，做课程、短视频、出海素材，不用真人演员；</li>
+<li><strong>有声书 / 播客批量生产</strong>：Voice Design 一次设计好主播声音，LoRA 用 5–10 分钟音频固定音色，之后无限次合成，边际成本 ≈ 0；</li>
+<li><strong>智能客服 / 硬件交互</strong>：RTF 0.13 + 首包 80ms，能上实时流式，本地部署无数据出境、无按量账单；</li>
+<li><strong>游戏 / 虚拟主播多语言本地化</strong>：终极克隆复刻角色原声细节，多镜头间音色一致，按 40+ 种表情实时调情感。</li>
+</ol>
+
+<h2>和 CosyVoice3 / Fish Audio S2 免费开源横评</h2>
+
+<p>三款都是开源可自托管，"免费"都成立，差在音质、语种数和克隆体系。数据来自 ai-bot.cn 竞品表 + 官方 README：</p>
+
+<table>
+<tr><th>维度</th><th>VoxCPM2</th><th>Fish Audio S2</th><th>CosyVoice3</th></tr>
+<tr><td>参数</td><td><strong>2B</strong></td><td>4B</td><td>0.5B / 1.5B</td></tr>
+<tr><td>架构</td><td>无分词器扩散自回归</td><td>Dual-AR + DAC</td><td>AR + Flow Matching + HiFi-GAN</td></tr>
+<tr><td>输出音质</td><td><strong>48kHz</strong></td><td>24kHz</td><td>16kHz</td></tr>
+<tr><td>Voice Design（文字造声）</td><td><strong>✅ 首创</strong></td><td>❌</td><td>❌</td></tr>
+<tr><td>可控克隆（调情感/语速）</td><td>✅ 文本标签</td><td>⚠️ 有限</td><td>✅ 情感指令</td></tr>
+<tr><td>发音准确度</td><td>中文 CER 0.97% · 英文 WER 1.84%</td><td>中文 CER 0.54% · 英文 WER 0.99%</td><td>中文 CER 1.12% · 英文 WER 2.02%</td></tr>
+<tr><td>语言覆盖</td><td><strong>30 种 + 9 方言</strong></td><td>80+ 种</td><td>9 种 + 多方言</td></tr>
+<tr><td>首包延迟</td><td>~150ms / ~80ms</td><td>—</td><td>~100ms</td></tr>
+<tr><td>RTF（RTX 4090）</td><td>0.30 / <strong>0.13</strong></td><td>—</td><td>~0.15</td></tr>
+<tr><td>显存</td><td>~8GB</td><td>~8GB</td><td>~4–6GB</td></tr>
+</table>
+
+<p>怎么选：<strong>音质要顶、要 48kHz 广播级、要"文字造声"</strong>→ VoxCPM2；<strong>语种要多（80+）</strong>→ Fish S2；<strong>显存吃紧（4–6GB 就够）+ 中文情感指令</strong>→ CosyVoice3。三家都能自托管 0 元，真正的成本只是你那张卡。</p>
+
+<h2>FAQ</h2>
+
+<div class="faq-section">
+<div class="faq-item">
+<div class="faq-q">Q: VoxCPM2 真的全免费吗？</div>
+<div class="faq-a">License 层 Apache-2.0 全免费、可商用（权重 + 代码开放）；推理层只花你自己 8GB 显卡的电，没有平台计费、没有次数上限、没有到期日。没卡的话 HuggingFace 免费在线 Demo 也白嫖。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: 需要多强的显卡？</div>
+<div class="faq-a">约 8GB 显存起步（RTX 3060/4070、A10 级别），模型下载约 4GB。云端租 $0.1–0.5/时的 GPU 实例也能跑；生产加 nano-vllm-voxcpm 可把 RTF 压到 0.13。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: 48kHz 是什么意思？值得吗？</div>
+<div class="faq-a">指输出采样率——16kHz 参考进来、内部超分直出 48kHz 录音室级，远高于普通 TTS 的 16/24kHz。做有声书、品牌声音、影视补录这种对音质敏感的场景才用得上，普通聊天/客服 16kHz 就够。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: Voice Design 和克隆到底差在哪？</div>
+<div class="faq-a">Voice Design 不用任何参考音频，一句话描述就能凭空造一个声音（官方称全球首创）；克隆则需要一段参考音频，可控克隆能在保留音色的同时用文本标签调情感/语速，终极克隆加一份转录文本做延续式复刻。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: 和 CosyVoice3、Fish Audio 怎么选？</div>
+<div class="faq-a">要 48kHz 顶音质 + 文字造声选 VoxCPM2；语种要多（80+）选 Fish S2；显存只 4–6GB、要中文情感指令选 CosyVoice3。三家都能自托管 0 元，差别在音质 / 语种 / 克隆深度。</div>
+</div>
+</div>
+
+<h2>总结</h2>
+
+<p>VoxCPM2 是"免费开源 TTS"里目前配置最齐的一档：<strong>Apache-2.0 零 License 成本 + 2B 参数 + 30 语种 / 9 方言 + 48kHz 录音室级 + RTF 0.13 + 8GB 显存可跑 + 首创 Voice Design</strong>。它不靠"注册送积分"那种白嫖，而是把整套权重和代码直接给你，商用的也行——真正的门槛只有你那张 8GB 显卡。有卡就本地自托管，没卡就 HF 免费在线 Demo 先把 Voice Design 和克隆玩明白。数据以官方 GitHub README 与 HF 模型卡实时信息为准。</p>
+
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="/zh" class="logo" style="color:#059669">AI<span class="accent" style="color:#6366F1">FreePlan</span></a><p>AI驱动的免费工具聚合平台，永久免费。</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h4>产品</h4><a href="/zh/all">全部工具</a><a href="/zh/guides">攻略</a></div>
+      <div class="footer-col"><h4>法律</h4><a href="/zh/privacy">隐私政策</a><a href="/zh/terms">用户协议</a></div>
+    </div>
+  </div>
+  <div class="container footer-bottom">&copy; 2026 AIFreePlan. All rights reserved.</div>
+</footer>
+</body></html>

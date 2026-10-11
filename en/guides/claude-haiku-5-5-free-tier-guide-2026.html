@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Haiku 5.5 Free/Zero-Cost Guide: $0.10/1M input under 100k tokens, first Claude with 5-level effort control | AIFreePlan</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="Claude Haiku 5.5 Free/Zero-Cost Guide: $0.10/1M input under 100k tokens, first Claude with 5-level effort control | AIFreePlan">
+<meta property="og:description" content="Anthropic shipped Claude Haiku 5.5 on 2026-10-07: 1M context, 128k max output, and the first Claude with adjustable 5-level effort. Under 100k-token prompts cost just $0.10/1M input and $0.50/1M output, 20x cheaper than Sonnet 5.5; the Batch API cuts that 50% more, new API accounts get free credits, and code execution grants 1,550 free hours a month. Here are the exact numbers, the zero-cost entry points, effort tuning, rate limits, and gotchas.">
+<meta property="og:url" content="https://aifreeplan.com/en/guides/claude-haiku-5-5-free-tier-guide-2026">
+<meta property="og:site_name" content="AIFreePlan">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Claude Haiku 5.5 Free/Zero-Cost Guide: $0.10/1M input under 100k tokens, first Claude with 5-level effort control | AIFreePlan">
+<meta name="twitter:description" content="Anthropic shipped Claude Haiku 5.5 on 2026-10-07: 1M context, 128k max output, and the first Claude with adjustable 5-level effort. Under 100k-token prompts cost just $0.10/1M input and $0.50/1M output, 20x cheaper than Sonnet 5.5; the Batch API cuts that 50% more, new API accounts get free credits, and code execution grants 1,550 free hours a month. Here are the exact numbers, the zero-cost entry points, effort tuning, rate limits, and gotchas.">
+<meta name="description" content="Anthropic shipped Claude Haiku 5.5 on 2026-10-07: 1M context, 128k max output, and the first Claude with adjustable 5-level effort. Under 100k-token prompts cost just $0.10/1M input and $0.50/1M output, 20x cheaper than Sonnet 5.5; the Batch API cuts that 50% more, new API accounts get free credits, and code execution grants 1,550 free hours a month. Here are the exact numbers, the zero-cost entry points, effort tuning, rate limits, and gotchas.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<link rel="canonical" href="https://aifreeplan.com/en/guides/claude-haiku-5-5-free-tier-guide-2026">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/claude-haiku-5-5-free-tier-guide-2026">
+<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/claude-haiku-5-5-free-tier-guide-2026">
+<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/claude-haiku-5-5-free-tier-guide-2026">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;--text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;--accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);--green:#059669;--green-light:rgba(5,150,105,.1);--shadow:0 4px 20px rgba(0,0,0,.05);--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover)}
+.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
+.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
+.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
+.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
+.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
+.article-container ul,.article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
+.article-container li{margin-bottom:8px;line-height:1.6}
+.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
+.article-container a{color:var(--accent);text-decoration:underline}
+.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-container th,.article-container td{padding:12px;border:1px solid var(--border);text-align:left}
+.article-container th{background:var(--accent-light);font-weight:600}
+.breadcrumb{font-size:14px;color:var(--text-muted);margin-bottom:24px}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb-sep{margin:0 8px}
+.faq-section{background:var(--bg-white);border-radius:var(--radius);padding:32px;margin-top:40px;box-shadow:var(--shadow)}
+.faq-section h3{margin-top:0;color:var(--text)}
+.faq-item{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border-light)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-weight:700;color:var(--text);margin-bottom:8px}
+.faq-a{color:var(--text-secondary);line-height:1.7}
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff;margin-top:60px}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6)}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col h4{font-size:14px;font-weight:700;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+@media(max-width:768px){.article-container{padding:16px 16px 48px;max-width:100%}.article-container h1{font-size:24px}.article-container h2{font-size:20px}.container{padding:0 16px}.nav{display:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Claude Haiku 5.5 Free/Zero-Cost Guide: $0.10/1M input under 100k tokens, first Claude with 5-level effort control","description":"Anthropic shipped Claude Haiku 5.5 on 2026-10-07: 1M context, 128k max output, and the first Claude with adjustable 5-level effort. Under 100k-token prompts cost just $0.10/1M input and $0.50/1M output, 20x cheaper than Sonnet 5.5; the Batch API cuts that 50% more, new API accounts get free credits, and code execution grants 1,550 free hours a month. Here are the exact numbers, the zero-cost entry points, effort tuning, rate limits, and gotchas.","url":"https://aifreeplan.com/en/guides/claude-haiku-5-5-free-tier-guide-2026","datePublished":"2026-10-10","dateModified":"2026-10-10","author":{"@type":"Organization","name":"AIFreePlan"},"publisher":{"@type":"Organization","name":"AIFreePlan","url":"https://aifreeplan.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aifreeplan.com/en/guides/claude-haiku-5-5-free-tier-guide-2026"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aifreeplan.com/en"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://aifreeplan.com/en/guides"},{"@type":"ListItem","position":3,"name":"Claude Haiku 5.5 Free/Zero-Cost Guide: $0.10/1M input under 100k tokens, first Claude with 5-level effort control","item":"https://aifreeplan.com/en/guides/claude-haiku-5-5-free-tier-guide-2026"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[[{"question": "Does Haiku 5.5 have a free tier?", "answer": "New API accounts get a small amount of free credits to test the API. At $0.10/$0.50 on the short tier that is hundreds of thousands to over a million tokens, plus 1,550 free code-execution hours a month and no separate charge when web_search/web_fetch are included."}, {"question": "How cheap is it really?", "answer": "Under 100k-token prompts: $0.10/1M input, $0.50/1M output; about $0.05/$0.25 with the 50% Batch discount; cache reads $0.01/1M. 20x cheaper than Sonnet 5.5 and 40x cheaper than Opus 5.5."}, {"question": "What are the five effort levels for?", "answer": "Haiku 5.5 is the first Claude model with per-task effort, so simple jobs run cheaply at low effort. Anthropic measured OSWorld, GDPval-AA, and Humanity's Last Exam at each level. It is a same-model-different-price cost switch."}, {"question": "What breaks when migrating from Haiku 4.5?", "answer": "budget_tokens, temperature, top_p, top_k, assistant prefill, the old computer_20250124 tool, and returning old thinking blocks all 400. The new tokenizer counts ~30% more tokens, and Bedrock lacks structured outputs."}, {"question": "Can I use it for real $0?", "answer": "Haiku 5.5 is a paid API with no official free pool. For true $0 use OpenRouter free models like Nemotron 3; for the cheapest Claude-ecosystem option combine Haiku 5.5 with the 50% Batch discount, $0.01 cache reads, and new-account credits."}]]}
+</script>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="/en" class="logo">AI<span class="accent">FreePlan</span></a>
+    <nav class="nav">
+      <a href="/en/all">All Tools</a>
+      <a href="/en/guides">Guides</a>
+      <a href="/en/privacy">Privacy</a>
+      <a href="/zh/guides/claude-haiku-5-5-free-tier-guide-2026" class="btn btn-primary">中文</a>
+    </nav>
+  </div>
+</header>
+<main class="article-container">
+<nav class="breadcrumb"><a href="/en">Home</a> <span class="breadcrumb-sep">›</span> <a href="/en/guides">Guides</a> <span class="breadcrumb-sep">›</span> <span>Claude Haiku 5.5 Free/Zero-Cost Guide: $0.10/1M input under 100k tokens, first Claude with 5-level effort control</span></nav>
+<h1>Claude Haiku 5.5 Free/Zero-Cost Guide: $0.10/1M input under 100k tokens, first Claude with 5-level effort control</h1>
+
+<p>On 2026-10-07, Anthropic shipped <strong>Claude Haiku 5.5</strong> (model ID <code>claude-haiku-5-5</code>). It is not just another small model, it is the <strong>first Claude to ship with a 5-level adjustable effort control</strong>, a 1,000,000-token context, and 128,000 max output tokens. The key numbers (verified 2026-10-10 against Anthropic's pricing page and release notes): for short prompts (under 100k tokens, roughly 90% of typical requests) it costs <strong>$0.10 / 1M input and $0.50 / 1M output</strong>, which is <strong>20x cheaper</strong> than same-generation Sonnet 5.5 ($2/$10). Stack the <strong>Batch API 50% discount</strong>, <strong>free credits for new API accounts</strong>, and <strong>1,550 free hours of code execution per month</strong> on top, and the bill gets close to zero. Bottom line up front: if your job is <strong>classification, extraction, routing, or bulk subagent work</strong>, Haiku 5.5 is the cheapest and most cost-controllable tier in the whole Claude lineup, and it has the most near-zero-cost entry points. Here are all the measured numbers, the free entries, and the gotchas.</p>
+
+<h2>Core Specs &amp; Pricing at a Glance</h2>
+
+<table>
+<tr><th>Item</th><th>Value</th></tr>
+<tr><td>Model ID</td><td><code>claude-haiku-5-5</code></td></tr>
+<tr><td>Released</td><td>2026-10-07</td></tr>
+<tr><td>Context window</td><td><strong>1,000,000 tokens</strong></td></tr>
+<tr><td>Max output</td><td><strong>128,000 tokens</strong> (up to 300,000 in Batch)</td></tr>
+<tr><td>Thinking</td><td>Adaptive thinking (on by default) + the <strong>first Haiku with 5-level effort</strong></td></tr>
+<tr><td>Positioning</td><td>High-volume, latency-sensitive: classification / extraction / routing / subagents</td></tr>
+<tr><td>Platforms</td><td>Claude API, Amazon Bedrock, AWS Claude Platform, Google Cloud, Microsoft Foundry</td></tr>
+</table>
+
+<h2>Pricing (USD per 1M tokens, official 2026-10-10 figures)</h2>
+
+<table>
+<tr><th>Item</th><th>prompt &lt;= 100k</th><th>prompt &gt; 100k</th></tr>
+<tr><td><strong>Input</strong></td><td><strong>$0.10</strong></td><td>$0.50</td></tr>
+<tr><td><strong>Output</strong></td><td><strong>$0.50</strong></td><td>$2.50</td></tr>
+<tr><td>Cache write (5 min)</td><td>$0.125</td><td>$0.625</td></tr>
+<tr><td>Cache read</td><td><strong>$0.01</strong></td><td>$0.05</td></tr>
+</table>
+
+<p>For the sibling tiers: <strong>Sonnet 5.5 is $2/$10, Opus 5.5 is $4/$20, Fable 5.1 is $10/$50</strong>. So Haiku 5.5's short-prompt input price is <strong>1/20</strong> of Sonnet's and <strong>1/40</strong> of Opus's. Anthropic states that prompts under 100k tokens make up about <strong>90%</strong> of prior Haiku request volume, so most workloads land in the cheapest row. Add the <strong>50% Batch API discount</strong> (roughly $0.05/$0.25 on the short tier) and non-realtime jobs get to near-nominal cost.</p>
+
+<h2>The four real zero-cost / near-zero entries</h2>
+
+<ol>
+<li><strong>Free credits for new API accounts</strong>: Anthropic's FAQ states new users get a small amount of free credits to test the API. At $0.10/$0.50 on the short tier, that grant lets you push hundreds of thousands to over a million tokens of classification / routing work for effectively nothing.</li>
+<li><strong>Code execution tool free + 1,550 free hours/month</strong>: when your request includes <code>web_search_20260209</code> (or later) / <code>web_fetch_20260209</code>, code-execution calls are billed only on standard token cost, no separate charge. Without those tools it bills by execution time, and each organization gets <strong>1,550 free hours of code execution per month</strong>. Haiku 5.5 subagent + code execution is largely free in this path.</li>
+<li><strong>Cache reads at $0.01 / 1M</strong>: keep stable system prompts and tool definitions cached; a hit is $0.01 (Sonnet 5.5 cache reads were also cut from $0.20 to $0.10 on 2026-10-07, now 0.05x base). For high-volume repeated-prefix work the effective price drops sharply.</li>
+<li><strong>effort five tiers</strong>: Haiku 5.5 is the first model where you pick effort per task, so cheap jobs run at low effort and only critical ones run high. This is a same-model-different-price saver, and it hits hardest combined with the Batch 50%.</li>
+</ol>
+
+<h2>Measured performance: cheap, not weak</h2>
+
+<table>
+<tr><th>Benchmark</th><th>Haiku 5.5</th><th>Haiku 4.5</th><th>Sonnet 5.5</th><th>Opus 5.5</th></tr>
+<tr><td>OSWorld 2.1 (offline subset, computer use)</td><td><strong>72.4%</strong></td><td>15.7%</td><td>48.9%</td><td>83.9%</td></tr>
+<tr><td>GDPval-AA v2.1 (knowledge work)</td><td><strong>1620</strong></td><td>735</td><td>1437</td><td>1840</td></tr>
+<tr><td>Humanity's Last Exam (no tools)</td><td>45.9%</td><td>10.2%</td><td>56.9%</td><td>64.5%</td></tr>
+<tr><td>Terminal-Bench 4.0 (agentic coding)</td><td><strong>39.2%</strong></td><td>0.0%</td><td>16.4%</td><td>70.5%</td></tr>
+</table>
+
+<p>The standout is <strong>OSWorld 2.1 offline at 72.4%</strong>: a $0.10/$0.50 lightweight model beats Sonnet 5.5 (48.9%) on computer use and sits just under Opus 5.5 (83.9%). GDPval-AA jumps from Haiku 4.5's 735 to 1620. The catch is the <strong>newer tokenizer</strong>: the same text counts about <strong>30% more tokens</strong> on Claude 4.7 and later (including Haiku 5.5) than on Haiku 4.5, so bake that 30% into any cost model rather than copying old-model usage.</p>
+
+<h2>Rate limits (Claude Console tiers)</h2>
+
+<table>
+<tr><th>Tier</th><th>RPM</th><th>ITPM</th><th>OTPM</th></tr>
+<tr><td>Start</td><td>1,000</td><td>2,000,000</td><td>400,000</td></tr>
+<tr><td>Build</td><td><strong>5,000</strong></td><td>5,000,000</td><td>1,000,000</td></tr>
+</table>
+
+<p>Note that <strong>limits are per model</strong>: you can push Haiku 5.5 to its 5,000 RPM on the Build tier while simultaneously pushing Sonnet 5.5 against its own separate ceiling. OTPM is settled in real time on generated tokens, so a large <code>max_tokens</code> does not itself consume limit.</p>
+
+<h2>Getting started (from key to call)</h2>
+
+<ol>
+<li>Register at <a href="https://console.anthropic.com/">console.anthropic.com</a> and grab your API key (new accounts carry a small free credit to test the API);</li>
+<li>Set the model to <code>claude-haiku-5-5</code>. Minimal call: <code>curl https://api.anthropic.com/v1/messages -H "x-api-key: ***" -H "anthropic-version: 2023-06-01" -H "content-type: application/json" -d '{"model":"claude-haiku-5-5","max_tokens":1024,"messages":[{"role":"user","content":"..."}]}'</code></li>
+<li>Saver trio: <strong>cache your system prompt / tools</strong> (read $0.01) + <strong>set effort per task</strong> (low for simple jobs) + <strong>use the Batch API for non-realtime</strong> (50% off);</li>
+<li>For high-volume subagents, run Haiku 5.5 as the execution layer at Build-tier 5,000 RPM and escalate only the critical decisions to Opus / Sonnet;</li>
+<li>Code execution + search: include <code>web_search_20260209</code> / <code>web_fetch_20260209</code> so code execution stops being billed separately.</li>
+</ol>
+
+<h2>Gotchas (migrating from Haiku 4.5)</h2>
+
+<ul>
+<li><code>budget_tokens</code> (manual extended thinking), <code>temperature</code> / <code>top_p</code> / <code>top_k</code>, and assistant-message prefill all return <strong>400 errors</strong> on Haiku 5.5; use adaptive thinking + effort instead;</li>
+<li>The old <code>computer_20250124</code> tool returns 400: use <code>computer_toolset_20260801</code> on the Claude API / Google Cloud, or <code>computer_20251124</code> on Amazon Bedrock;</li>
+<li>Sending back thinking blocks after you change system / tools / earlier turns also 400s;</li>
+<li><strong>On Amazon Bedrock, Haiku 5.5 does not yet support structured outputs</strong>; if you need strict JSON-schema mode, use the Claude API or Google Cloud;</li>
+<li>The new tokenizer counts about 30% more tokens, so do not reuse old-model usage for cost budgeting.</li>
+</ul>
+
+<h2>Compared to other cheap lightweight flagships</h2>
+
+<table>
+<tr><th>Model</th><th>Short input price</th><th>Short output price</th><th>Note</th></tr>
+<tr><td><strong>Claude Haiku 5.5</strong></td><td><strong>$0.10 / 1M</strong></td><td><strong>$0.50 / 1M</strong></td><td>1M context, first 5-level effort, OSWorld 72.4%</td></tr>
+<tr><td>Claude Sonnet 5.5</td><td>$2 / 1M</td><td>$10 / 1M</td><td>Everyday value tier</td></tr>
+<tr><td>DeepSeek V4.1 Flash / GLM-5.3 Flash</td><td>lower (open pricing)</td><td>lower (open pricing)</td><td>Haiku 5.5 scores above these two Flash models in the 10/8 news round-up</td></tr>
+<tr><td>OpenRouter <code>:free</code> pool (Nemotron 3 etc.)</td><td>$0</td><td>$0</td><td>Truly free but 50~1,000 req/day cap, non-Claude ecosystem</td></tr>
+</table>
+
+<p>(All figures from Anthropic's pricing page, release notes, rate-limit docs, and the ai-bot.cn Oct 8 news; allowances, prices, and limits follow Anthropic's live Console display.)</p>
+
+<h2>FAQ</h2>
+
+<div class="faq-section">
+<div class="faq-item">
+<div class="faq-q">Q: Does Haiku 5.5 have a free tier?</div>
+<div class="faq-a">New API accounts receive a small amount of free credits to test the API (per Anthropic's FAQ). At $0.10/$0.50 on the short tier that grant runs hundreds of thousands to over a million tokens. Separately, code execution grants 1,550 free hours/month, and code execution is billed only on token cost when web_search / web_fetch are in the request.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: How cheap is it really?</div>
+<div class="faq-a">For prompts under 100k tokens: $0.10/1M input, $0.50/1M output. With the 50% Batch discount it is about $0.05/$0.25; cache reads are $0.01/1M. That is 20x cheaper than Sonnet 5.5 ($2/$10) and 40x cheaper than Opus 5.5 ($4/$20).</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: What are the five effort levels for?</div>
+<div class="faq-a">Haiku 5.5 is the first Claude model where you pick effort per task, so simple jobs run cheaper at low effort and only critical ones run high. Anthropic measured OSWorld, GDPval-AA, and Humanity's Last Exam at each effort level. It is a same-model-different-price cost switch.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: What breaks when I migrate from Haiku 4.5?</div>
+<div class="faq-a">budget_tokens, temperature, top_p, top_k, assistant prefill, the old computer_20250124 tool, and returning old thinking blocks after a system change all return 400. The new tokenizer counts ~30% more tokens, and Bedrock does not yet support structured outputs.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: Can I use it for real $0?</div>
+<div class="faq-a">Haiku 5.5 is a paid API (there is no official Claude :free pool). For genuinely $0 long-context / multimodal, use OpenRouter's free models like Nemotron 3. For the cheapest Claude-ecosystem option, combine Haiku 5.5 with the 50% Batch discount, $0.01 cache reads, and new-account free credits.</div>
+</div>
+</div>
+
+<h2>Bottom Line</h2>
+
+<p>Haiku 5.5 in one sentence: <strong>the cheapest tier in the Claude lineup (short tier $0.10/$0.50, 1/20 of Sonnet), with a 1M context, the first 5-level effort control, plus a 50% Batch discount, $0.01 cache reads, and 1,550 free code-execution hours a month</strong>. It is the default choice for execution layers, subagents, and high-volume classification / extraction, keeping heavy work on Opus while pushing the 90% of routine requests to Haiku 5.5 and cutting the bill sharply. Allowances, prices, and limits are in flux, verify them in Anthropic's Console before you commit.</p>
+
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="/en" class="logo" style="color:#059669">AI<span class="accent" style="color:#6366F1">FreePlan</span></a><p>AI-powered free tools aggregator. Free forever.</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h4>Product</h4><a href="/en/all">All Tools</a><a href="/en/guides">Guides</a></div>
+      <div class="footer-col"><h4>Legal</h4><a href="/en/privacy">Privacy</a><a href="/en/terms">Terms</a></div>
+    </div>
+  </div>
+  <div class="container footer-bottom">&copy; 2026 AIFreePlan. All rights reserved.</div>
+</footer>
+</body></html>

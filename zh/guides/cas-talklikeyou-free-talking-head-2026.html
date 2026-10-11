@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TalkLikeYou 免费开源攻略：中科院自动化所实时数字人，1 步采样 32.43 FPS，4GB 显存让照片开口 | AIFreePlan</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="TalkLikeYou 免费开源攻略：中科院自动化所实时数字人，1 步采样 32.43 FPS，4GB 显存让照片开口 | AIFreePlan">
+<meta property="og:description" content="中科院自动化所 MAIS 团队开源的实时数字人框架 TalkLikeYou：代码 MIT、权重全放 HuggingFace。一张照片加一段音频就能让照片开口，1 步 Flow Matching 采样跑出 32.43 FPS、RTX 3090 显存不到 4GB，还能模仿指定真人的说话习惯。含免费浏览器流式 Demo、Linux 部署步骤、与 SoulX-LiveAct 的对比表。">
+<meta property="og:url" content="https://aifreeplan.com/zh/guides/cas-talklikeyou-free-talking-head-2026">
+<meta property="og:site_name" content="AIFreePlan">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TalkLikeYou 免费开源攻略：中科院自动化所实时数字人，1 步采样 32.43 FPS，4GB 显存让照片开口 | AIFreePlan">
+<meta name="twitter:description" content="中科院自动化所 MAIS 团队开源的实时数字人框架 TalkLikeYou：代码 MIT、权重全放 HuggingFace。一张照片加一段音频就能让照片开口，1 步 Flow Matching 采样跑出 32.43 FPS、RTX 3090 显存不到 4GB，还能模仿指定真人的说话习惯。含免费浏览器流式 Demo、Linux 部署步骤、与 SoulX-LiveAct 的对比表。">
+<meta name="description" content="中科院自动化所 MAIS 团队开源的实时数字人框架 TalkLikeYou：代码 MIT、权重全放 HuggingFace。一张照片加一段音频就能让照片开口，1 步 Flow Matching 采样跑出 32.43 FPS、RTX 3090 显存不到 4GB，还能模仿指定真人的说话习惯。含免费浏览器流式 Demo、Linux 部署步骤、与 SoulX-LiveAct 的对比表。">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<link rel="canonical" href="https://aifreeplan.com/zh/guides/cas-talklikeyou-free-talking-head-2026">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/cas-talklikeyou-free-talking-head-2026">
+<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/cas-talklikeyou-free-talking-head-2026">
+<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/cas-talklikeyou-free-talking-head-2026">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;--text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;--accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);--green:#059669;--green-light:rgba(5,150,105,.1);--shadow:0 4px 20px rgba(0,0,0,.05);--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover)}
+.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
+.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
+.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
+.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
+.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
+.article-container ul,.article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
+.article-container li{margin-bottom:8px;line-height:1.6}
+.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
+.article-container a{color:var(--accent);text-decoration:underline}
+.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-container th,.article-container td{padding:12px;border:1px solid var(--border);text-align:left}
+.article-container th{background:var(--accent-light);font-weight:600}
+.breadcrumb{font-size:14px;color:var(--text-muted);margin-bottom:24px}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb-sep{margin:0 8px}
+.faq-section{background:var(--bg-white);border-radius:var(--radius);padding:32px;margin-top:40px;box-shadow:var(--shadow)}
+.faq-section h3{margin-top:0;color:var(--text)}
+.faq-item{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border-light)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-weight:700;color:var(--text);margin-bottom:8px}
+.faq-a{color:var(--text-secondary);line-height:1.7}
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff;margin-top:60px}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6)}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col h4{font-size:14px;font-weight:700;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+@media(max-width:768px){.article-container{padding:16px 16px 48px;max-width:100%}.article-container h1{font-size:24px}.article-container h2{font-size:20px}.container{padding:0 16px}.nav{display:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"TalkLikeYou 免费开源攻略：中科院自动化所实时数字人，1 步采样 32.43 FPS，4GB 显存让照片开口","description":"中科院自动化所 MAIS 团队开源的实时数字人框架 TalkLikeYou：代码 MIT、权重全放 HuggingFace。一张照片加一段音频就能让照片开口，1 步 Flow Matching 采样跑出 32.43 FPS、RTX 3090 显存不到 4GB，还能模仿指定真人的说话习惯。含免费浏览器流式 Demo、Linux 部署步骤、与 SoulX-LiveAct 的对比表。","url":"https://aifreeplan.com/zh/guides/cas-talklikeyou-free-talking-head-2026","datePublished":"2026-10-11","dateModified":"2026-10-11","author":{"@type":"Organization","name":"AIFreePlan"},"publisher":{"@type":"Organization","name":"AIFreePlan","url":"https://aifreeplan.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aifreeplan.com/zh/guides/cas-talklikeyou-free-talking-head-2026"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://aifreeplan.com/zh"},{"@type":"ListItem","position":2,"name":"攻略","item":"https://aifreeplan.com/zh/guides"},{"@type":"ListItem","position":3,"name":"TalkLikeYou 免费开源攻略：中科院自动化所实时数字人，1 步采样 32.43 FPS，4GB 显存让照片开口","item":"https://aifreeplan.com/zh/guides/cas-talklikeyou-free-talking-head-2026"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[[{"question": "TalkLikeYou 到底哪里免费？", "answer": "代码 MIT 协议，权重放 HuggingFace，一条 hf download 拉下来，下载/推理/本地部署 0 许可费，不按次计费、无过期。唯一成本是你自己的显卡（RTX 3090 显存 <4GB 即可跑流式 Demo）。权重本身走第三方条款，商用前看一眼 THIRD_PARTY_NOTICES。"}, {"question": "没有 12GB 大卡能不能跑？", "answer": "能。官方 12GB 是完整推理链路的预留值；浏览器流式 Demo 在 RTX 3090 上实测 <4GB、30+ FPS。入门可先用 8GB 卡跑照片开口，长时/高并发再上大卡。"}, {"question": "习惯模仿具体怎么用？", "answer": "两种：--person-id 选官方预设（192/166/202）零素材切风格；--habit-reference 指向 ≥100 帧的真人参考视频现学习惯。两种可插值混合出新习惯。PLAD 指标习惯相似度 0.62，高于 MimicTalk 0.48、PC-Talk 0.39。"}, {"question": "32.43 FPS 是什么概念？", "answer": "单张 RTX 3090 每秒渲染 32.43 帧说话视频，超过 24–30 FPS 实时播放门槛。靠一步 Flow Matching 采样，比 Sonic 图像扩散路线快近百倍，首包延迟低到可对着麦克风实时驱动。"}, {"question": "跟 SoulX-LiveAct 选哪个？", "answer": "要像特定的人说、低显存实时、照片开口选 TalkLikeYou；要小时级不崩、全身动作、文本指令控制选 SoulX-LiveAct，但它要双卡 H100/H200 才 20 FPS，门槛高一档。"}]]}
+</script>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="/zh" class="logo">AI<span class="accent">FreePlan</span></a>
+    <nav class="nav">
+      <a href="/zh/all">全部工具</a>
+      <a href="/zh/guides">攻略</a>
+      <a href="/zh/privacy">隐私</a>
+      <a href="/en/guides/cas-talklikeyou-free-talking-head-2026" class="btn btn-primary">English</a>
+    </nav>
+  </div>
+</header>
+<main class="article-container">
+<nav class="breadcrumb"><a href="/zh">首页</a> <span class="breadcrumb-sep">›</span> <a href="/zh/guides">攻略</a> <span class="breadcrumb-sep">›</span> <span>TalkLikeYou 免费开源攻略：中科院自动化所实时数字人，1 步采样 32.43 FPS，4GB 显存让照片开口</span></nav>
+<h1>TalkLikeYou 免费开源攻略：中科院自动化所实时数字人，1 步采样 32.43 FPS，4GB 显存让照片开口</h1>
+
+<p>中科院自动化所 MAIS 团队把 <strong>TalkLikeYou</strong> 直接开源了——给一张人像照片和一段音频，照片里的人就能开口说话，嘴部动作还能模仿指定真人的"说话习惯"。代码走 MIT 协议，模型权重全放在 HuggingFace 上，<strong>下载、推理、本地部署 0 许可费</strong>，不按次计费。</p>
+
+<h2>免费结论先给</h2>
+
+<ul>
+<li><strong>代码免费</strong>：GitHub 仓库 MIT 协议，可自研可商用；模型权重放 <a href="https://huggingface.co/doubi-killer/TalkLikeYou">HuggingFace</a>，一条 <code>hf download</code> 就能拉下来（权重本身遵循其第三方条款，见 THIRD_PARTY_NOTICES）。</li>
+<li><strong>推理 0 平台费</strong>：跑在你自己的显卡上，无按量计费、无次数上限、无过期。一张 RTX 3090 即可，<strong>显存 &lt; 4GB</strong>（官方流式 Demo 实测）。</li>
+<li><strong>零门槛体验</strong>：没有高端显卡也能先用官方的 <a href="https://github.com/BQ-Wang0511/TalkLikeYou-Streaming-RealTime-Demo">浏览器流式 Demo</a>——对着麦克风实时驱动，RTX 3090 上 30+ FPS。</li>
+<li><strong>推荐环境</strong>：Linux + Python <strong>3.10</strong> + CUDA <strong>12.1</strong> + cuDNN <strong>9</strong> + FFmpeg，官方建议显存 <strong>&ge; 12GB</strong> 跑完整推理（流式 Demo 场景 4GB 就够）。</li>
+</ul>
+
+<h2>规格速览（全部实测数字）</h2>
+
+<table>
+<tr><th>项目</th><th>数字</th><th>说明</th></tr>
+<tr><td>生成速度</td><td><strong>32.43 FPS</strong></td><td>一步 Flow Matching 采样，比图像扩散路线的 Sonic 快近百倍</td></tr>
+<tr><td>显存占用</td><td><strong>&lt; 4GB</strong>（RTX 3090 流式 Demo）</td><td>推荐环境按 12GB 预留，实际占用更低</td></tr>
+<tr><td>采样步数</td><td><strong>1 步</strong>（论文默认）</td><td>一步即可达到接近 50 步的唇同步质量</td></tr>
+<tr><td>唇同步 Sync-C</td><td><strong>8.73</strong>（全场最高）</td><td>嘴型与音频对齐度</td></tr>
+<tr><td>画质 FID</td><td><strong>7.71</strong></td><td>不到第二名成绩的三分之一</td></tr>
+<tr><td>习惯相似度 PLAD</td><td><strong>0.62</strong></td><td>MimicTalk 0.48、PC-Talk 0.39，显著领先</td></tr>
+<tr><td>参考视频要求</td><td><strong>&ge; 100 帧</strong></td><td>用于模仿指定真人说话习惯，可覆盖 --person-id</td></tr>
+<tr><td>输入帧率</td><td><strong>25 FPS</strong></td><td>源视频 / 参考视频统一 25 FPS</td></tr>
+<tr><td>协议 / 权重</td><td><strong>MIT（代码）</strong> + HuggingFace 权重</td><td>权重按第三方条款使用</td></tr>
+</table>
+
+<p>它跟一般"照片说话"工具拉开差距的，是<strong>把"说话习惯"做成了一等公民</strong>：业内首个把个人嘴部说话习惯作为可建模对象的开源框架。你有两种入口——用官方预设编号（推荐 <code>192</code> / <code>166</code> / <code>202</code>）零成本切换风格，或丢一段 &ge;100 帧的参考视频让它现学那个人的嘴部习惯，两种入口还能插值混合出"新习惯"。</p>
+
+<h2>四个能力（对应四类白嫖场景）</h2>
+
+<ul>
+<li><strong>照片开口</strong>：上传一张人像照片 + 一段音频，生成人物开口说话的视频。</li>
+<li><strong>习惯模仿</strong>：模仿指定真人的嘴部说话习惯，预设编号或 4 秒级参考视频指定，避免"千人一面"的平均嘴。</li>
+<li><strong>视频配音</strong>：把 <code>--source</code> 指向视频并加 <code>--pose-mode source</code>，只替换嘴部动作、保留原视频的头部动作与时序，适合多语言译制 / 出海内容口型对齐。</li>
+<li><strong>对话数字分身</strong>：接入大模型 + 语音识别合成，做实时对话交互的数字人；官方浏览器 Demo 已支持对着麦克风实时驱动。</li>
+</ul>
+
+<h2>五分钟上手（Linux）</h2>
+
+<ol>
+<li><strong>建环境</strong>：Linux 系统，装 Python 3.10、CUDA 12.1、cuDNN 9，确保 FFmpeg 在 PATH 里，NVIDIA 显卡显存 &ge; 12GB。</li>
+<li><strong>克隆代码</strong>：<a href="https://github.com/BQ-Wang0511/TalkLikeYou">GitHub</a> 主仓库 <code>git clone</code>，然后 <code>conda env create -f environment.yaml</code> 建环境（或自装 CUDA 版 PyTorch 后 <code>pip install -r requirements.txt</code>）。</li>
+<li><strong>拉权重</strong>：<code>hf download doubi-killer/TalkLikeYou --include "checkpoints/**" --local-dir .</code>，权重目录结构别动。</li>
+<li><strong>跑推理</strong>：准备一张 25 FPS 的人像照片/视频 + 一段音频，然后
+<code>python -m talklikeyou --source 照片 --audio 音频 --person-id 192 --stage0 --neutral --sampling-steps 1 --output out.mp4</code>。想换"说话习惯"就换 <code>--person-id</code>，或改用 <code>--habit-reference 参考视频</code>。</li>
+</ol>
+
+<h2>竞品对比：TalkLikeYou vs SoulX-LiveAct</h2>
+
+<table>
+<tr><th>维度</th><th>TalkLikeYou（中科院自动化所）</th><th>SoulX-LiveAct（Soul AI Lab）</th></tr>
+<tr><td>核心定位</td><td>实时说话头生成 + 个人说话习惯模仿</td><td>实时数字人 + 小时级长时稳定生成</td></tr>
+<tr><td>技术路线</td><td>运动空间两阶段（轻量参数 + 渲染）</td><td>自回归扩散（AR Diffusion），像素级生成</td></tr>
+<tr><td>生成速度</td><td><strong>32.43 FPS</strong>（单卡 3090）</td><td>20 FPS（双卡 H100/H200）</td></tr>
+<tr><td>端到端延迟</td><td>流式缓冲可调</td><td>0.94 秒</td></tr>
+<tr><td>时长上限</td><td>片段级（无长时优化）</td><td>小时级甚至无限时长，显存恒定（ConvKV Memory）</td></tr>
+<tr><td>说话习惯</td><td>✅ 支持（编号 / 参考视频 / 插值）</td><td>❌ 不建模个人嘴部习惯</td></tr>
+<tr><td>动作范围</td><td>嘴部 + 头部姿态</td><td>全身动作、表情、手势、情绪（比心、捂脸、大笑）</td></tr>
+<tr><td>驱动方式</td><td>音频驱动（照片/视频）</td><td>图像 + 音频 + 文本指令</td></tr>
+</table>
+
+<p><strong>怎么选</strong>：要"像某个人那样说话"、要低显存实时跑、要照片开口 → TalkLikeYou。要"小时级不崩、全身动作、文指令控制" → SoulX-LiveAct，但它上双卡 H100 才 20 FPS，成本高一档。</p>
+
+<h2>四个能直接落地的白嫖场景</h2>
+
+<ul>
+<li><strong>虚拟主播 / 直播带货</strong>：4GB 显存本地实时跑，无需真人出镜，还能复刻主播自己的说话风格。</li>
+<li><strong>多语言视频配音</strong>：替换嘴部动作、保留原头动时序，让译制片 / 出海内容口型跟目标语言自然对齐。</li>
+<li><strong>数字分身 / 虚拟客服</strong>：接大模型 + 语音合成做实时对话分身，用于在线客服、智能导览。</li>
+<li><strong>个性化教学 / 培训</strong>：复刻老师 / 培训师的独特说话风格，录课程、做远程教学。</li>
+</ul>
+
+<h2>链接汇总</h2>
+
+<ul>
+<li>项目官网：<a href="https://bq-wang0511.github.io/TalkLikeYou/">bq-wang0511.github.io/TalkLikeYou</a></li>
+<li>GitHub 代码（MIT）：<a href="https://github.com/BQ-Wang0511/TalkLikeYou">github.com/BQ-Wang0511/TalkLikeYou</a></li>
+<li>HuggingFace 权重：<a href="https://huggingface.co/doubi-killer/TalkLikeYou">huggingface.co/doubi-killer/TalkLikeYou</a></li>
+<li>arXiv 论文：<a href="https://arxiv.org/pdf/2610.06658">arXiv:2610.06658</a></li>
+<li>流式实时 Demo：<a href="https://github.com/BQ-Wang0511/TalkLikeYou-Streaming-RealTime-Demo">TalkLikeYou-Streaming-RealTime-Demo</a></li>
+</ul>
+
+<div class="faq-section">
+<h3>常见问题</h3>
+<div class="faq-item"><div class="faq-q">TalkLikeYou 到底哪里免费？</div><div class="faq-a">代码是 MIT 协议，权重放 HuggingFace，一条 hf download 拉下来，下载 / 推理 / 本地部署 0 许可费，不按次计费、无过期。唯一的成本是你自己那张显卡（RTX 3090 显存 &lt; 4GB 就能跑流式 Demo）。权重本身走第三方条款，商用前看一眼 THIRD_PARTY_NOTICES。</div></div>
+<div class="faq-item"><div class="faq-q">没有 12GB 大卡能不能跑？</div><div class="faq-a">能。官方推荐环境按 12GB 预留是为了跑完整推理链路；但浏览器流式 Demo 在 RTX 3090 上实测显存 &lt; 4GB、30+ FPS。入门可以先在 8GB 卡上拉权重跑照片开口，长时 / 高并发再上大卡。</div></div>
+<div class="faq-item"><div class="faq-q">"说话习惯模仿"具体怎么用？</div><div class="faq-a">两种方式：一是 <code>--person-id</code> 选官方预设（192/166/202），零素材直接切风格；二是 <code>--habit-reference</code> 指向一段 &ge; 100 帧的真人参考视频，让它现学那个人的嘴部习惯。两种还能插值混合出"新习惯"。PLAD 指标下习惯相似度做到 0.62，高于 MimicTalk 0.48、PC-Talk 0.39。</div></div>
+<div class="faq-item"><div class="faq-q">32.43 FPS 是什么概念？</div><div class="faq-a">指每秒能渲染 32.43 帧说话视频，单张 RTX 3090 就能达到，满足实时 / 流式（超过 24–30 FPS 的播放门槛）。它靠一步 Flow Matching 采样实现，比走图像扩散路线的 Sonic 快近百倍，首包延迟低到可以对着麦克风实时驱动。</div></div>
+<div class="faq-item"><div class="faq-q">跟 SoulX-LiveAct 选哪个？</div><div class="faq-a">要"像特定的人那样说、低显存实时跑、照片开口"选 TalkLikeYou。要"小时级不崩、全身动作、文本指令控制"选 SoulX-LiveAct，但它要双卡 H100/H200 才 20 FPS，门槛高一档。前者胜在个人习惯建模 + 单卡实时，后者胜在长时稳定 + 全身控制。</div></div>
+</div>
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="/zh" class="logo" style="color:#059669">AI<span class="accent" style="color:#6366F1">FreePlan</span></a><p>AI驱动的免费工具聚合平台，永久免费。</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h4>产品</h4><a href="/zh/all">全部工具</a><a href="/zh/guides">攻略</a></div>
+      <div class="footer-col"><h4>法律</h4><a href="/zh/privacy">隐私政策</a><a href="/zh/terms">用户协议</a></div>
+    </div>
+  </div>
+  <div class="container footer-bottom">&copy; 2026 AIFreePlan. All rights reserved.</div>
+</footer>
+</body></html>

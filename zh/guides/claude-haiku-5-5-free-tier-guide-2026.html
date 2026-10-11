@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Haiku 5.5 免费白嫖攻略：10万Token内输入$0.10/百万，首个支持effort五档的Claude轻量旗舰 | AIFreePlan</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="Claude Haiku 5.5 免费白嫖攻略：10万Token内输入$0.10/百万，首个支持effort五档的Claude轻量旗舰 | AIFreePlan">
+<meta property="og:description" content="Anthropic 于 2026-10-07 上线 Claude Haiku 5.5：100 万上下文、12.8 万最大输出、首个支持 effort 五档调节的 Claude 轻量模型。短提示（≤10 万 Token）输入仅 $0.10/百万、输出 $0.50/百万，比 Sonnet 5.5 便宜 20 倍；Batch API 再打 5 折，新人 API 送免费额度，代码执行每月送 1550 小时。本文给全实测数字、白嫖入口、effort 调档、限速与避坑。">
+<meta property="og:url" content="https://aifreeplan.com/zh/guides/claude-haiku-5-5-free-tier-guide-2026">
+<meta property="og:site_name" content="AIFreePlan">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:image" content="https://aifreeplan.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Claude Haiku 5.5 免费白嫖攻略：10万Token内输入$0.10/百万，首个支持effort五档的Claude轻量旗舰 | AIFreePlan">
+<meta name="twitter:description" content="Anthropic 于 2026-10-07 上线 Claude Haiku 5.5：100 万上下文、12.8 万最大输出、首个支持 effort 五档调节的 Claude 轻量模型。短提示（≤10 万 Token）输入仅 $0.10/百万、输出 $0.50/百万，比 Sonnet 5.5 便宜 20 倍；Batch API 再打 5 折，新人 API 送免费额度，代码执行每月送 1550 小时。本文给全实测数字、白嫖入口、effort 调档、限速与避坑。">
+<meta name="description" content="Anthropic 于 2026-10-07 上线 Claude Haiku 5.5：100 万上下文、12.8 万最大输出、首个支持 effort 五档调节的 Claude 轻量模型。短提示（≤10 万 Token）输入仅 $0.10/百万、输出 $0.50/百万，比 Sonnet 5.5 便宜 20 倍；Batch API 再打 5 折，新人 API 送免费额度，代码执行每月送 1550 小时。本文给全实测数字、白嫖入口、effort 调档、限速与避坑。">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#6366F1">
+<link rel="canonical" href="https://aifreeplan.com/zh/guides/claude-haiku-5-5-free-tier-guide-2026">
+<link rel="alternate" hreflang="zh" href="https://aifreeplan.com/zh/guides/claude-haiku-5-5-free-tier-guide-2026">
+<link rel="alternate" hreflang="en" href="https://aifreeplan.com/en/guides/claude-haiku-5-5-free-tier-guide-2026">
+<link rel="alternate" hreflang="x-default" href="https://aifreeplan.com/en/guides/claude-haiku-5-5-free-tier-guide-2026">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#F8FAFC;--bg-white:#fff;--border:#E2E8F0;--border-light:#F1F5F9;--text:#1E1B4B;--text-secondary:#64748B;--text-muted:#94A3B8;--accent:#6366F1;--accent-hover:#4F46E5;--accent-light:rgba(99,102,241,.1);--green:#059669;--green-light:rgba(5,150,105,.1);--shadow:0 4px 20px rgba(0,0,0,.05);--radius:12px}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1280px;margin:0 auto;padding:0 40px}
+.header{background:var(--bg-white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);font-size:24px;font-weight:700}
+.logo .accent{color:var(--accent)}
+.nav{display:flex;gap:32px;align-items:center}
+.nav a{color:var(--text);text-decoration:none;font-size:15px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-hover)}
+.article-container{max-width:800px;margin:0 auto;padding:40px 20px 80px}
+.article-container h1{font-size:36px;font-weight:700;margin-bottom:16px;line-height:1.3}
+.article-container h2{font-size:24px;font-weight:700;margin-top:40px;margin-bottom:16px;padding-top:24px;border-top:1px solid var(--border)}
+.article-container h3{font-size:20px;font-weight:600;margin-top:32px;margin-bottom:12px}
+.article-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.8}
+.article-container ul,.article-container ol{margin-bottom:16px;padding-left:24px;color:var(--text-secondary)}
+.article-container li{margin-bottom:8px;line-height:1.6}
+.article-container img{max-width:100%;height:auto;border-radius:12px;margin:24px 0;box-shadow:var(--shadow)}
+.article-container a{color:var(--accent);text-decoration:underline}
+.article-container table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.article-container th,.article-container td{padding:12px;border:1px solid var(--border);text-align:left}
+.article-container th{background:var(--accent-light);font-weight:600}
+.breadcrumb{font-size:14px;color:var(--text-muted);margin-bottom:24px}
+.breadcrumb a{color:var(--text-muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb-sep{margin:0 8px}
+.faq-section{background:var(--bg-white);border-radius:var(--radius);padding:32px;margin-top:40px;box-shadow:var(--shadow)}
+.faq-section h3{margin-top:0;color:var(--text)}
+.faq-item{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border-light)}
+.faq-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.faq-q{font-weight:700;color:var(--text);margin-bottom:8px}
+.faq-a{color:var(--text-secondary);line-height:1.7}
+.footer{background:#1a1a2e;padding:50px 0 30px;color:#fff;margin-top:60px}
+.footer-inner{display:flex;justify-content:space-between;gap:60px;flex-wrap:wrap}
+.footer-brand{max-width:300px}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.6)}
+.footer-links{display:flex;gap:60px}
+.footer-col{display:flex;flex-direction:column;gap:10px}
+.footer-col h4{font-size:14px;font-weight:700;color:#fff}
+.footer-col a{color:rgba(255,255,255,.6);text-decoration:none;font-size:14px}
+.footer-col a:hover{color:#fff}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.4)}
+@media(max-width:768px){.article-container{padding:16px 16px 48px;max-width:100%}.article-container h1{font-size:24px}.article-container h2{font-size:20px}.container{padding:0 16px}.nav{display:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Claude Haiku 5.5 免费白嫖攻略：10万Token内输入$0.10/百万，首个支持effort五档的Claude轻量旗舰","description":"Anthropic 于 2026-10-07 上线 Claude Haiku 5.5：100 万上下文、12.8 万最大输出、首个支持 effort 五档调节的 Claude 轻量模型。短提示（≤10 万 Token）输入仅 $0.10/百万、输出 $0.50/百万，比 Sonnet 5.5 便宜 20 倍；Batch API 再打 5 折，新人 API 送免费额度，代码执行每月送 1550 小时。本文给全实测数字、白嫖入口、effort 调档、限速与避坑。","url":"https://aifreeplan.com/zh/guides/claude-haiku-5-5-free-tier-guide-2026","datePublished":"2026-10-10","dateModified":"2026-10-10","author":{"@type":"Organization","name":"AIFreePlan"},"publisher":{"@type":"Organization","name":"AIFreePlan","url":"https://aifreeplan.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://aifreeplan.com/zh/guides/claude-haiku-5-5-free-tier-guide-2026"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://aifreeplan.com/zh"},{"@type":"ListItem","position":2,"name":"攻略","item":"https://aifreeplan.com/zh/guides"},{"@type":"ListItem","position":3,"name":"Claude Haiku 5.5 免费白嫖攻略：10万Token内输入$0.10/百万，首个支持effort五档的Claude轻量旗舰","item":"https://aifreeplan.com/zh/guides/claude-haiku-5-5-free-tier-guide-2026"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[[{"question": "Haiku 5.5 有免费额度吗？", "answer": "新 API 账号会送一小笔免费额度试 API（官方 FAQ 原文）。Haiku 5.5 短档 $0.10/$0.50，能跑几十万到上百万 Token。另有代码执行工具每月 1,550 小时免费、带 web_search/web_fetch 时不单独计费。"}, {"question": "到底多便宜？", "answer": "短提示（≤10 万 Token）输入 $0.10/百万、输出 $0.50/百万；Batch 五折约 $0.05/$0.25；缓存读 $0.01/百万。比 Sonnet 5.5 便宜 20 倍，比 Opus 5.5 便宜 40 倍。"}, {"question": "effort 五档是干嘛的？", "answer": "Haiku 5.5 是首个支持按任务切 effort 的 Claude 模型——简单任务低档省钱、复杂任务拉高。官方用它实测 OSWorld、GDPval-AA、Humanity's Last Exam。"}, {"question": "从 Haiku 4.5 迁移要注意什么？", "answer": "budget_tokens、temperature、top_p、top_k、assistant 预填、旧 computer_20250124、以及改 system 后回传旧 thinking 都会 400；新分词器多计约 30% Token；Bedrock 暂不支持结构化输出。"}, {"question": "能不能真 0 元？", "answer": "Haiku 5.5 本身是付费 API，无官方 :free 池。想要 $0 走 OpenRouter 的 Nemotron 3 等免费模型；想要 Claude 生态低成本，Haiku 5.5 + Batch 五折 + 缓存 + 新账号免费额度是最贴 0 的组合。"}]]}
+</script>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="/zh" class="logo">AI<span class="accent">FreePlan</span></a>
+    <nav class="nav">
+      <a href="/zh/all">全部工具</a>
+      <a href="/zh/guides">攻略</a>
+      <a href="/zh/privacy">隐私</a>
+      <a href="/en/guides/claude-haiku-5-5-free-tier-guide-2026" class="btn btn-primary">English</a>
+    </nav>
+  </div>
+</header>
+<main class="article-container">
+<nav class="breadcrumb"><a href="/zh">首页</a> <span class="breadcrumb-sep">›</span> <a href="/zh/guides">攻略</a> <span class="breadcrumb-sep">›</span> <span>Claude Haiku 5.5 免费白嫖攻略：10万Token内输入$0.10/百万，首个支持effort五档的Claude轻量旗舰</span></nav>
+<h1>Claude Haiku 5.5 免费白嫖攻略：10万Token内输入$0.10/百万，首个支持effort五档的Claude轻量旗舰</h1>
+
+<p>2026 年 10 月 7 日，Anthropic 上线了 <strong>Claude Haiku 5.5</strong>（模型 ID <code>claude-haiku-5-5</code>）。它不是又一个普通小模型，而是 <strong>Claude 家族里第一个支持 effort 五档调节</strong>的轻量旗舰，100 万 Token 上下文、12.8 万最大输出。关键数字（2026-10-10 核过 Anthropic 官方价目与发布说明）：短提示（≤10 万 Token，覆盖约 90% 的常规请求）<strong>输入 $0.10/百万、输出 $0.50/百万</strong>，比同代 Sonnet 5.5（$2/$10）便宜 <strong>20 倍</strong>；再叠加 <strong>Batch API 五折</strong>、<strong>新 API 账号免费额度</strong>、<strong>代码执行工具每月 1,550 小时免费</strong>，实际账单可以压到接近 0。先给结论：如果你的任务是<strong>分类、抽取、路由、批量子任务</strong>这类高并发、低延迟场景，Haiku 5.5 是目前 Claude 全家桶里<strong>单价最低、还能用 effort 省成本</strong>的一档，白嫖/低成本入口最多。下面是全部实测数字、入口和避坑点。</p>
+
+<h2>核心规格与价格速览</h2>
+
+<table>
+<tr><th>项</th><th>数值</th></tr>
+<tr><td>模型 ID</td><td><code>claude-haiku-5-5</code></td></tr>
+<tr><td>发布日期</td><td>2026-10-07</td></tr>
+<tr><td>上下文窗口</td><td><strong>1,000,000 Token</strong></td></tr>
+<tr><td>最大输出</td><td><strong>128,000 Token</strong>（Batch 可到 300,000）</td></tr>
+<tr><td>思考模式</td><td>自适应思考（默认开启）+ <strong>首个支持 effort 五档</strong>的 Haiku</td></tr>
+<tr><td>定位</td><td>高并发、延迟敏感：分类 / 抽取 / 路由 / 子智能体</td></tr>
+<tr><td>可用平台</td><td>Claude API、Amazon Bedrock、AWS Claude Platform、Google Cloud、Microsoft Foundry</td></tr>
+</table>
+
+<h2>价格表（美元/百万 Token，2026-10-10 官方口径）</h2>
+
+<table>
+<tr><th>项目</th><th>≤100k 提示</th><th>&gt;100k 提示</th></tr>
+<tr><td><strong>输入</strong></td><td><strong>$0.10</strong></td><td>$0.50</td></tr>
+<tr><td><strong>输出</strong></td><td><strong>$0.50</strong></td><td>$2.50</td></tr>
+<tr><td>缓存写入（5 分钟）</td><td>$0.125</td><td>$0.625</td></tr>
+<tr><td>缓存读取</td><td><strong>$0.01</strong></td><td>$0.05</td></tr>
+</table>
+
+<p>对照同代兄弟档：<strong>Sonnet 5.5 是 $2/$10，Opus 5.5 是 $4/$20，Fable 5.1 是 $10/$50</strong>。也就是说 Haiku 5.5 短档输入价只有 Sonnet 的 <strong>1/20</strong>、Opus 的 <strong>1/40</strong>。Anthropic 自己说 ≤10 万 Token 的短提示约占之前 Haiku 请求量的 <strong>90%</strong>——绝大多数用例会落在最便宜的这一档。再叠 <strong>Batch API 五折</strong>（短档落到约 $0.05/$0.25），非实时任务基本是「象征性收费」。</p>
+
+<h2>白嫖 / 近 0 元入口（真实存在的 4 个）</h2>
+
+<ol>
+<li><strong>新 API 账号免费额度</strong>：Anthropic 官方明确「新用户会送一小笔免费额度试 API」（extended enterprise 试用找 sales）。首次充值/试用阶段，Haiku 5.5 短档 $0.10/$0.50 意味着这笔小钱能跑上<strong>几十万到上百万</strong> Token 的请求量，几乎 0 成本把分类 / 路由管道跑通。</li>
+<li><strong>代码执行工具免费 + 每月 1,550 小时免费</strong>：只要请求里带了 <code>web_search_20260209</code>（或更新）/ <code>web_fetch_20260209</code>，<strong>代码执行调用不再单独计费</strong>；没带这两个工具时按执行时长计费，每个组织<strong>每月 1,550 小时免费</strong>，超出才计费。跑 Haiku 5.5 子智能体 + 代码执行，这块基本白送。</li>
+<li><strong>缓存读 $0.01/百万</strong>：把稳定系统提示 / 工具定义放缓存，命中读取只有 $0.01（Sonnet 5.5 缓存读 10 月 7 日也刚从 $0.20 降到 $0.10，$0.05x 基数）。高并发 + 重复前缀的场景，实际单价能再砍一大截。</li>
+<li><strong>effort 五档省钱</strong>：Haiku 5.5 首次支持按任务切 effort——简单任务用低 effort 省输出 Token 和推理成本，关键任务才拉高档。这是「同一个模型、不同价格」的省钱开关，配合 Batch 五折最狠。</li>
+</ol>
+
+<h2>实测性能：便宜但不拉胯</h2>
+
+<table>
+<tr><th>基准</th><th>Haiku 5.5</th><th>Haiku 4.5</th><th>Sonnet 5.5</th><th>Opus 5.5</th></tr>
+<tr><td>OSWorld 2.1（离线子集，计算机操作）</td><td><strong>72.4%</strong></td><td>15.7%</td><td>48.9%</td><td>83.9%</td></tr>
+<tr><td>GDPval-AA v2.1（知识工作）</td><td><strong>1620</strong></td><td>735</td><td>1437</td><td>1840</td></tr>
+<tr><td>Humanity's Last Exam（无工具）</td><td>45.9%</td><td>10.2%</td><td>56.9%</td><td>64.5%</td></tr>
+<tr><td>Terminal-Bench 4.0（Agent 编程）</td><td><strong>39.2%</strong></td><td>0.0%</td><td>16.4%</td><td>70.5%</td></tr>
+</table>
+
+<p>最扎眼的是 <strong>OSWorld 2.1 离线子集 72.4%</strong>：一个 $0.10/$0.50 的轻量模型，计算机操作跑到了 Sonnet 5.5（48.9%）之上、Opus 5.5（83.9%）之下。GDPval-AA 从上一代 Haiku 4.5 的 735 直接跳到 1620。代价是<strong>新分词器</strong>：同样一段文本，Claude 4.7 之后的模型（含 Haiku 5.5）比 Haiku 4.5 <strong>多计约 30% Token</strong>——估算成本时要把这 30% 补上，别照搬老模型用量。</p>
+
+<h2>限速（Claude Console 各档）</h2>
+
+<table>
+<tr><th>档</th><th>RPM（请求/分）</th><th>ITPM（输入Token/分）</th><th>OTPM（输出Token/分）</th></tr>
+<tr><td>Start</td><td>1,000</td><td>2,000,000</td><td>400,000</td></tr>
+<tr><td>Build</td><td><strong>5,000</strong></td><td>5,000,000</td><td>1,000,000</td></tr>
+</table>
+
+<p>注意 <strong>各模型限速独立</strong>：你可以同时用 Haiku 5.5 顶满 5,000 RPM，再同时用 Sonnet 5.5 顶它自己的额度，互不占用。OTPM 按实际生成量实时结算，设大 <code>max_tokens</code> 本身不额外吃额度。</p>
+
+<h2>怎么上手（从建 Key 到调用）</h2>
+
+<ol>
+<li>去 <a href="https://console.anthropic.com/">console.anthropic.com</a> 注册，拿 API Key（新账号自带一笔免费额度试 API）；</li>
+<li>模型写 <code>claude-haiku-5-5</code>；最小调用（Python）：<br><code>curl https://api.anthropic.com/v1/messages -H "x-api-key: ***" -H "anthropic-version: 2023-06-01" -H "content-type: application/json" -d '{"model":"claude-haiku-5-5","max_tokens":1024,"messages":[{"role":"user","content":"..."}]}'</code></li>
+<li>省钱三连：<strong>把系统提示/工具放缓存</strong>（读 $0.01）+ <strong>按任务设 effort</strong>（简单任务低档）+ <strong>非实时走 Batch API</strong>（五折）；</li>
+<li>高并发子智能体：Haiku 5.5 顶 Build 档 5,000 RPM 当执行层，关键决策再上 Opus/Sonnet；</li>
+<li>代码执行 + 搜索：请求里带 <code>web_search_20260209</code>/<code>web_fetch_20260209</code>，代码执行就不再单独计费。</li>
+</ol>
+
+<h2>避坑（从 Haiku 4.5 迁移会报错的地方）</h2>
+
+<ul>
+<li><code>budget_tokens</code>（手动扩展思考）、<code>temperature</code> / <code>top_p</code> / <code>top_k</code>、assistant 消息预填，在 Haiku 5.5 上都会返回 <strong>400 错误</strong>——改用自适应思考 + effort；</li>
+<li>旧 <code>computer_20250124</code> 工具返回 400：Claude API / Google Cloud 改用 <code>computer_toolset_20260801</code>，Amazon Bedrock 用 <code>computer_20251124</code>；</li>
+<li>改了 system / tools / 历史轮次后再回传旧 thinking block，也会 400；</li>
+<li><strong>Amazon Bedrock 上 Haiku 5.5 暂不支持结构化输出（structured outputs）</strong>，要 JSON schema 严格模式就上 Claude API 或 Google Cloud；</li>
+<li>新分词器多计约 30% Token，做成本预算时别用老模型的老用量直接套。</li>
+</ul>
+
+<h2>和同类「低价轻量旗舰」对比</h2>
+
+<table>
+<tr><th>模型</th><th>短档输入价</th><th>短档输出价</th><th>特点</th></tr>
+<tr><td><strong>Claude Haiku 5.5</strong></td><td><strong>$0.10/百万</strong></td><td><strong>$0.50/百万</strong></td><td>1M 上下文，首个 effort 五档，OSWorld 72.4%</td></tr>
+<tr><td>Claude Sonnet 5.5</td><td>$2/百万</td><td>$10/百万</td><td>日常任务性价比档</td></tr>
+<tr><td>DeepSeek V4.1 Flash / GLM-5.3 Flash</td><td>更低（开源价）</td><td>更低（开源价）</td><td>新闻里 Haiku 5.5 跑分已超这两家 Flash</td></tr>
+<tr><td>OpenRouter <code>:free</code> 池（Nemotron 3 等）</td><td>$0</td><td>$0</td><td>真 0 元，但 50~1000 次/天限速、非 Claude 生态</td></tr>
+</table>
+
+<p>（各数字来自 Anthropic 价目页、发布说明、限速文档与 ai-bot.cn 10 月 8 日快讯；额度、价格与限速以 Anthropic Console 内实时展示为准。）</p>
+
+<h2>常见问题</h2>
+
+<div class="faq-section">
+<div class="faq-item">
+<div class="faq-q">Q: Haiku 5.5 有免费额度吗？</div>
+<div class="faq-a">新 API 账号会送一小笔免费额度试 API（官方 FAQ 原文）。Haiku 5.5 短档 $0.10/$0.50，这笔额度能跑几十万到上百万 Token。另有代码执行工具每月 1,550 小时免费、带 web_search/web_fetch 时代码执行不单独计费。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: 到底多便宜？</div>
+<div class="faq-a">短提示（≤10 万 Token）输入 $0.10/百万、输出 $0.50/百万；Batch 五折后约 $0.05/$0.25；缓存读 $0.01/百万。比 Sonnet 5.5（$2/$10）便宜 20 倍，比 Opus 5.5（$4/$20）便宜 40 倍。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: effort 五档是干嘛的？</div>
+<div class="faq-a">Haiku 5.5 是 Claude 首个支持按任务切 effort 档的模型——简单任务低 effort 省成本，复杂任务拉高。官方用它实测 OSWorld、GDPval-AA、Humanity's Last Exam 三个基准在不同 effort 下的表现，是「同模型不同价」的省钱开关。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: 从 Haiku 4.5 迁移要注意什么？</div>
+<div class="faq-a">budget_tokens、temperature、top_p、top_k、assistant 预填、旧 computer_20250124 工具、以及改 system 后回传旧 thinking 都会 400；新分词器多计约 30% Token；Bedrock 上暂不支持结构化输出。详见官方迁移指南。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Q: 能不能真 0 元？</div>
+<div class="faq-a">Haiku 5.5 本身是付费 API（无 Claude 官方 :free 池）。想要 $0 长上下文/多模态，走 OpenRouter 的 Nemotron 3 等 :free 模型；想要 Claude 生态的低成本，Haiku 5.5 + Batch 五折 + 缓存 + 新账号免费额度是当前最贴 0 的组合。</div>
+</div>
+</div>
+
+<h2>总结</h2>
+
+<p>Haiku 5.5 的价值一句话：<strong>Claude 全家桶里单价最低（短档 $0.10/$0.50，Sonnet 的 1/20）、100 万上下文、首个 effort 五档、还能 Batch 五折 + 缓存 $0.01 + 每月 1,550 小时免费代码执行</strong>。它是执行层 / 子智能体 / 分类抽取这类高并发场景的默认选项——把重活留给 Opus，把 90% 的常规请求压到 Haiku 5.5，账单一落一大截。额度、价格、限速都在变，动手前以 Anthropic Console 实时数字为准。</p>
+
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="/zh" class="logo" style="color:#059669">AI<span class="accent" style="color:#6366F1">FreePlan</span></a><p>AI驱动的免费工具聚合平台，永久免费。</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h4>产品</h4><a href="/zh/all">全部工具</a><a href="/zh/guides">攻略</a></div>
+      <div class="footer-col"><h4>法律</h4><a href="/zh/privacy">隐私政策</a><a href="/zh/terms">用户协议</a></div>
+    </div>
+  </div>
+  <div class="container footer-bottom">&copy; 2026 AIFreePlan. All rights reserved.</div>
+</footer>
+</body></html>
